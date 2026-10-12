@@ -13,6 +13,7 @@ import {
 	seconds,
 	showHref,
 	showOf,
+	topicSpans,
 	withTerms,
 } from '../../lib/podcasts';
 import '../../styles/podcasts.css';
@@ -37,6 +38,7 @@ const entries = outline(episode).map((entry) => ({
 	pointParts: entry.points.map((point) => withTerms(point, episode.glossary, seenTerms)),
 }));
 const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at < episode.duration);
+const topics = topicSpans(episode);
 ---
 
 <BaseLayout
@@ -206,6 +208,76 @@ const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at <
 		}
 
 		{
+			topics.length > 0 && (
+				<section class="podcast-topics" aria-labelledby="podcast-topics" data-podcast-topics>
+					<p class="podcast-topics__head">
+						<span class="podcast-section__title" id="podcast-topics">
+							时间花在哪
+						</span>
+						<span>{`共 ${durationLabel(episode.duration)}`}</span>
+					</p>
+					<ol class="podcast-topics__list">
+						{topics.map((topic) => (
+							<li
+								style={`flex-grow: ${topic.end - topic.start}; --share: ${(((topic.end - topic.start) / episode.duration) * 100).toFixed(1)}%`}
+							>
+								<button
+									class="podcast-topics__item"
+									type="button"
+									data-podcast-at={topic.start}
+									data-podcast-topic-from={topic.start}
+									data-podcast-topic-to={topic.end}
+									aria-label={`从 ${topic.stamp} 开始播放：${topic.title}`}
+								>
+									<span class="podcast-topics__bar" aria-hidden="true" />
+									<span class="podcast-topics__name">{topic.title}</span>
+									<span class="podcast-topics__len">{topic.minutes} 分钟</span>
+								</button>
+							</li>
+						))}
+					</ol>
+				</section>
+			)
+		}
+
+		{
+			episode.stances && (
+				<section class="podcast-stances" aria-labelledby="podcast-stances">
+					<h2 class="podcast-section__title" id="podcast-stances">
+						两位嘉宾在哪里不一样
+					</h2>
+					<p class="podcast-stances__question">{episode.stances.question}</p>
+					<div class="podcast-stances__sides">
+						{episode.stances.sides.map((side) => (
+							<div class="podcast-stances__side">
+								<p class="podcast-stances__who">
+									{side.name}
+									<span> · {side.org}</span>
+								</p>
+								<p class="podcast-stances__view">
+									<strong>{side.verdict}</strong>
+									{side.view}
+								</p>
+								<button
+									class="podcast-stances__play"
+									type="button"
+									data-podcast-at={seconds(side.at)}
+									aria-label={`从 ${side.at} 开始播放：${side.name}`}
+								>
+									▶ {side.at}
+								</button>
+							</div>
+						))}
+					</div>
+					<p class="podcast-stances__agree">
+						<span>都同意：</span>
+						{episode.stances.agree}
+					</p>
+				</section>
+			)
+		}
+
+		{
 			episode.quote && (
 				<figure class="podcast-quote">
 					<p class="podcast-quote__label">原话</p>
@@ -264,7 +336,7 @@ const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at <
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				原文与文字稿 ↗
+				{episode.sourceLabel ?? '原文与文字稿'} ↗
 			</a>
 		</footer>
 	</article>

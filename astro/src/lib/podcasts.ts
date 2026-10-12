@@ -73,6 +73,31 @@ export function outline(episode: PodcastEpisode): OutlineEntry[] {
 	});
 }
 
+export interface TopicSpan {
+	title: string;
+	stamp: Timestamp;
+	start: number;
+	end: number;
+	/** Rounded, at least one. */
+	minutes: number;
+}
+
+/** 时间花在哪: each topic runs from its start to the next one's, the last to the episode's end. */
+export function topicSpans(episode: PodcastEpisode): TopicSpan[] {
+	const topics = episode.topics ?? [];
+	return topics.map((topic, index) => {
+		const start = seconds(topic.at);
+		const end = index + 1 < topics.length ? seconds(topics[index + 1].at) : episode.duration;
+		return {
+			title: topic.title,
+			stamp: topic.at,
+			start,
+			end,
+			minutes: Math.max(1, Math.round((end - start) / 60)),
+		};
+	});
+}
+
 /** A run of outline text, or a glossary word in it with what it means. */
 export type TextPart = string | { term: string; meaning: string };
 
@@ -238,6 +263,15 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 		if (seconds(point.at) < firstChapter) problems.push(`${point.at} is before the first chapter`);
 	if (episode.quote && episode.quote.text.split(/\s+/).length > 15)
 		problems.push('quote is too long');
+	const topicTimes = (episode.topics ?? []).map((topic) => seconds(topic.at));
+	if (
+		topicTimes.some((at, index) => Number.isNaN(at) || (index > 0 && at <= topicTimes[index - 1]))
+	)
+		problems.push('topics out of order');
+	if (topicTimes.some((at) => at > episode.duration)) problems.push('a topic is past the end');
+	for (const side of episode.stances?.sides ?? [])
+		if (!(seconds(side.at) <= episode.duration))
+			problems.push(`${side.name}'s ${side.at} is past the end`);
 	// The brief is one glance: a card per reason, two to four of them; the questions stay a few.
 	const reasons = episode.brief?.reasons.length;
 	if (reasons !== undefined && (reasons < 2 || reasons > 4)) problems.push(`${reasons} reasons`);

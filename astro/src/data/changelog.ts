@@ -19,6 +19,27 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-12',
 		tag: '播客',
+		type: 'content',
+		title: '新增播客：两位 Grok Bot 设计师，怎么用自己的产品干活',
+		summary:
+			'收录第二档节目 How I AI。这期两位 Grok Bot 设计师现场演示：发一张照片，个人网站就自己更新；在健身房录一段语音，就改完了 Figma；洗澡时的点子，回来就成了能点的原型。附一图读懂、时间花在哪和中文要点，站内直接收听。',
+		links: [
+			{ label: '收听这一期', href: '/podcasts/how-i-ai-grok-bot-designers/' },
+			{ label: 'How I AI', href: '/podcasts/shows/how-i-ai/' },
+		],
+	},
+	{
+		date: '2026-10-12',
+		tag: '播客',
+		type: 'polish',
+		title: '播客单集页加上「时间花在哪」和两位嘉宾的分歧',
+		summary:
+			'一图读懂下面多了一条时间条：这期 32 分钟分成五个话题，每段有多长一眼就能看到，点一段就从那里听，正在听的那段会变黑。再往下是两位嘉宾在哪里不一样：要不要看懂模型内部，各自的回答和原声时间点，以及两人都同意的地方。',
+		links: [{ label: '看第一期', href: '/podcasts/latent-space-alphafold/' }],
+	},
+	{
+		date: '2026-10-12',
+		tag: '播客',
 		type: 'polish',
 		title: '播客单集页能看到进度，生词有解释',
 		summary:
