@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PodcastTerms from '../../components/PodcastTerms.astro';
+import PodcastOutline from '../../components/PodcastOutline.astro';
 import { podcastEpisodes, type PodcastEpisode } from '../../data/podcasts';
 import {
 	clock,
@@ -13,6 +13,7 @@ import {
 	seconds,
 	showHref,
 	showOf,
+	topicSpans,
 	withTerms,
 } from '../../lib/podcasts';
 import '../../styles/podcasts.css';
@@ -37,6 +38,18 @@ const entries = outline(episode).map((entry) => ({
 	pointParts: entry.points.map((point) => withTerms(point, episode.glossary, seenTerms)),
 }));
 const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at < episode.duration);
+const video = episode.video;
+const videoChapters = (video?.chapters ?? []).map((chapter, index, all) => {
+	const start = seconds(chapter.at);
+	const end = index + 1 < all.length ? seconds(all[index + 1].at) : (video?.duration ?? start);
+	return { ...chapter, start, end };
+});
+const topics = topicSpans(episode);
+// Reasons with the guest's own words read as rows; without them, as the cards of 一图读懂.
+const rows = Boolean(episode.brief?.reasons.some((reason) => reason.quote));
+const guestLine = guests
+	.map((person) => (person.org ? `${person.name}（${person.org}）` : person.name))
+	.join('、');
 ---
 
 <BaseLayout
@@ -44,115 +57,229 @@ const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at <
 	description={episode.lede}
 	canonicalPath={episodeHref(episode)}
 >
-	<article class="rr-page podcast-episode" data-podcast-episode={JSON.stringify(player)}>
+	<article
+		class:list={['rr-page', 'podcast-episode', { 'podcast-episode--video': video }]}
+		data-podcast-episode={JSON.stringify(player)}
+	>
 		<nav class="podcast-crumbs" aria-label="位置">
 			<a href={PODCASTS_HREF}>播客</a>
 			<span aria-hidden="true">/</span>
 			<a href={showHref(show)}>{show.name}</a>
 		</nav>
 
-		<header class="podcast-head">
-			<img class="podcast-head__cover" src={show.cover} alt="" width="88" height="88" />
-			<div class="podcast-head__text">
-				<h1 class="podcast-head__title">{episode.title}</h1>
-				<p class="podcast-head__meta">
-					<a href={showHref(show)}>{show.name}</a>
-					{
-						` · ${[dateLabel(episode.date), durationLabel(episode.duration), episode.language].join(' · ')}`
-					}
-				</p>
-			</div>
-		</header>
-		<p class="podcast-head__original" lang="en">{episode.originalTitle}</p>
-
-		<p class="podcast-lede">{episode.lede}</p>
-
-		<div class="podcast-actions">
-			<button
-				class="podcast-play podcast-play--pill"
-				type="button"
-				aria-pressed="false"
-				data-podcast-play
-			>
-				<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true"
-					><path d="M8 5v14l11-7z"></path></svg
-				>
-				<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true"
-					><path d="M6 4h4v16H6zM14 4h4v16h-4z"></path></svg
-				>
-				<span data-podcast-play-label>播放</span>
-			</button>
-			<div class="podcast-progress" data-podcast-progress>
-				<span class="podcast-progress__time" data-podcast-progress-elapsed>0:00</span>
-				<span class="podcast-player__track">
-					<span class="podcast-player__ticks" aria-hidden="true">
-						{
-							ticks.map((chapter) => (
-								<span style={`left: ${(chapter.at / episode.duration) * 100}%`} />
-							))
-						}
-					</span>
-					<input
-						class="podcast-player__seek"
-						type="range"
-						min="0"
-						max={episode.duration}
-						step="1"
-						value="0"
-						aria-label="播放进度"
-						data-podcast-progress-seek
-					/>
-				</span>
-				<span class="podcast-progress__time">{clock(episode.duration)}</span>
-			</div>
-		</div>
-
-		<dl class="podcast-people">
-			{
-				guests.length > 0 && (
-					<>
-						<dt>嘉宾</dt>
-						<dd>
-							{guests.map((person, index) => (
-								<>
-									{index > 0 && (
-										<span class="podcast-people__sep" aria-hidden="true">
-											{' '}
-											·{' '}
+		{
+			video ? (
+				<>
+					<h1 class="podcast-video-title">{episode.title}</h1>
+					<p class="podcast-video-meta">
+						<a href={showHref(show)}>{show.name}</a>
+						{` · ${dateLabel(episode.date)}${guestLine ? ` · 嘉宾 ${guestLine}` : ''}`}
+					</p>
+					<section class="podcast-video" aria-label="中文科普视频" data-podcast-video>
+						<video
+							class="podcast-video__player"
+							src={video.src}
+							poster={video.poster}
+							controls
+							playsinline
+							preload="metadata"
+							width="1920"
+							height="1080"
+							data-podcast-video-player
+						/>
+						<ol class="podcast-video__chapters" aria-label="视频章节">
+							{videoChapters.map((chapter) => (
+								<li style={`flex-grow: ${chapter.end - chapter.start}`}>
+									<button
+										class="podcast-video__chapter"
+										type="button"
+										data-podcast-video-at={chapter.start}
+										data-podcast-video-end={chapter.end}
+										aria-label={`从视频 ${chapter.at} 开始看：${chapter.title}`}
+									>
+										<span class="podcast-video__bar" aria-hidden="true">
+											<span class="podcast-video__fill" />
 										</span>
-									)}
-									{person.name}
-									{person.org && <span class="podcast-people__org"> {person.org}</span>}
-								</>
+										<span class="podcast-video__at">{chapter.at}</span>
+										<span class="podcast-video__name">{chapter.title}</span>
+									</button>
+								</li>
 							))}
-						</dd>
-					</>
+						</ol>
+					</section>
+				</>
+			) : (
+				<>
+					<header class="podcast-head">
+						<img class="podcast-head__cover" src={show.cover} alt="" width="88" height="88" />
+						<div class="podcast-head__text">
+							<h1 class="podcast-head__title">{episode.title}</h1>
+							<p class="podcast-head__meta">
+								<a href={showHref(show)}>{show.name}</a>
+								{` · ${[dateLabel(episode.date), durationLabel(episode.duration), episode.language].join(' · ')}`}
+							</p>
+						</div>
+					</header>
+					<p class="podcast-head__original" lang="en">
+						{episode.originalTitle}
+					</p>
+				</>
+			)
+		}
+
+		<div class="podcast-episode__body">
+			<p class="podcast-lede">{episode.lede}</p>
+			{
+				video && (
+					<p class="podcast-video__note">
+						视频由 AI 根据原节目整理、配音和制作，观点以原节目为准。
+					</p>
 				)
 			}
-			{
-				hosts.map((person) => (
-					<>
-						<dt>{person.role}</dt>
-						<dd>{person.name}</dd>
-					</>
-				))
-			}
-		</dl>
 
-		{
-			(episode.brief || episode.questions) && (
-				<section class="podcast-brief" aria-labelledby="podcast-brief" data-podcast-brief>
-					<h2 class="podcast-section__title" id="podcast-brief">
-						{episode.brief ? '一图读懂' : '听完你能回答'}
-					</h2>
-					<div class="podcast-brief__card">
-						{episode.brief && (
+			<div class:list={['podcast-actions', { 'podcast-original': video }]}>
+				{
+					video && (
+						<p class="podcast-original__label">
+							<strong>英文原版</strong>
+							<span>{` · ${durationLabel(episode.duration)}音频 · ${show.name}`}</span>
+						</p>
+					)
+				}
+				<button
+					class:list={['podcast-play', video ? 'podcast-play--quiet' : 'podcast-play--pill']}
+					type="button"
+					aria-pressed="false"
+					data-podcast-play
+					data-podcast-play-idle={video ? '听原声' : undefined}
+				>
+					<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true"
+						><path d="M8 5v14l11-7z"></path></svg
+					>
+					<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true"
+						><path d="M6 4h4v16H6zM14 4h4v16h-4z"></path></svg
+					>
+					<span data-podcast-play-label>{video ? '听原声' : '播放'}</span>
+				</button>
+				<div class="podcast-progress" data-podcast-progress>
+					<span class="podcast-progress__time" data-podcast-progress-elapsed>0:00</span>
+					<span class="podcast-player__track">
+						<span class="podcast-player__ticks" aria-hidden="true">
+							{
+								ticks.map((chapter) => (
+									<span style={`left: ${(chapter.at / episode.duration) * 100}%`} />
+								))
+							}
+						</span>
+						<input
+							class="podcast-player__seek"
+							type="range"
+							min="0"
+							max={episode.duration}
+							step="1"
+							value="0"
+							aria-label="原声播放进度"
+							data-podcast-progress-seek
+						/>
+					</span>
+					<span class="podcast-progress__time">{clock(episode.duration)}</span>
+				</div>
+				{
+					video && (
+						<a
+							class="podcast-foot__source"
+							href={episode.source}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							原文与文字稿 ↗
+						</a>
+					)
+				}
+			</div>
+
+			{
+				!video && (
+					<dl class="podcast-people">
+						{guests.length > 0 && (
 							<>
-								<p class="podcast-brief__label">这期在回答</p>
-								<p class="podcast-brief__question">
-									<strong>{episode.brief.question}</strong>
-									<span>{episode.brief.answer}</span>
-								</p>
+								<dt>嘉宾</dt>
+								<dd>
+									{guests.map((person, index) => (
+										<>
+											{index > 0 && (
+												<span class="podcast-people__sep" aria-hidden="true">
+													{' '}
+													·{' '}
+												</span>
+											)}
+											{person.name}
+											{person.org && <span class="podcast-people__org"> {person.org}</span>}
+										</>
+									))}
+								</dd>
+							</>
+						)}
+						{hosts.map((person) => (
+							<>
+								<dt>{person.role}</dt>
+								<dd>{person.name}</dd>
+							</>
+						))}
+					</dl>
+				)
+			}
+
+			{
+				episode.brief && (
+					<section class="podcast-brief" aria-labelledby="podcast-brief" data-podcast-brief>
+						<h2 class="podcast-section__title" id="podcast-brief">
+							{video ? '不方便看视频？一分钟读完' : '一图读懂'}
+						</h2>
+						<div class:list={['podcast-brief__card', { 'podcast-brief__card--rows': rows }]}>
+							<p class="podcast-brief__label">这期在回答</p>
+							<p class="podcast-brief__question">
+								<strong>{episode.brief.question}</strong>
+								<span>{episode.brief.answer}</span>
+							</p>
+							{rows ? (
+								<ol class="podcast-brief__rows">
+									{episode.brief.reasons.map((reason) => (
+										<li class="podcast-brief__row">
+											<p class="podcast-brief__row-head">
+												<span class="podcast-brief__head">{reason.head}</span>
+												{video && reason.videoAt && (
+													<button
+														class="podcast-brief__jump"
+														type="button"
+														data-podcast-video-at={seconds(reason.videoAt)}
+														aria-label={`从视频 ${reason.videoAt} 开始看：${reason.head}`}
+													>
+														视频 {reason.videoAt}
+													</button>
+												)}
+											</p>
+											<p class="podcast-brief__text">{reason.text}</p>
+											{reason.quote && (
+												<figure class="podcast-brief__quote">
+													<blockquote lang="en">“{reason.quote.text}”</blockquote>
+													<figcaption>
+														<span>{reason.quote.translation}</span>
+														<button
+															class="podcast-brief__jump"
+															type="button"
+															data-podcast-at={seconds(reason.at)}
+															aria-label={`从原声 ${reason.at} 开始听`}
+														>
+															▶ {reason.quote.by.split(' ')[0]} 原声 {reason.at}
+														</button>
+													</figcaption>
+												</figure>
+											)}
+										</li>
+									))}
+								</ol>
+							) : (
 								<ol class="podcast-brief__reasons" data-count={episode.brief.reasons.length}>
 									{episode.brief.reasons.map((reason) => (
 										<li>
@@ -169,107 +296,168 @@ const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at <
 										</li>
 									))}
 								</ol>
-							</>
-						)}
-						{episode.questions && episode.questions.length > 0 && (
-							<div class="podcast-quiz">
-								{episode.brief && (
-									<p class="podcast-quiz__label">
-										<span>听完你能回答</span>
-										<span class="podcast-quiz__hint">先想想，再看答案</span>
+							)}
+						</div>
+					</section>
+				)
+			}
+
+			{
+				topics.length > 0 && (
+					<section class="podcast-topics" aria-labelledby="podcast-topics" data-podcast-topics>
+						<p class="podcast-topics__head">
+							<span class="podcast-section__title" id="podcast-topics">
+								原节目时间花在哪
+							</span>
+							<span>{`共 ${durationLabel(episode.duration)}`}</span>
+						</p>
+						<ol class="podcast-topics__list">
+							{topics.map((topic) => (
+								<li
+									style={`flex-grow: ${topic.end - topic.start}; --share: ${(((topic.end - topic.start) / episode.duration) * 100).toFixed(1)}%`}
+								>
+									<button
+										class="podcast-topics__item"
+										type="button"
+										data-podcast-at={topic.start}
+										data-podcast-topic-from={topic.start}
+										data-podcast-topic-to={topic.end}
+										aria-label={`从原声 ${topic.stamp} 开始听：${topic.title}`}
+									>
+										<span class="podcast-topics__bar" aria-hidden="true" />
+										<span class="podcast-topics__name">{topic.title}</span>
+										<span class="podcast-topics__len">{topic.minutes} 分钟</span>
+									</button>
+								</li>
+							))}
+						</ol>
+					</section>
+				)
+			}
+
+			{
+				episode.stances && (
+					<section class="podcast-stances" aria-labelledby="podcast-stances">
+						<h2 class="podcast-section__title" id="podcast-stances">
+							两位嘉宾在哪里不一样
+						</h2>
+						<p class="podcast-stances__question">{episode.stances.question}</p>
+						<div class="podcast-stances__sides">
+							{episode.stances.sides.map((side) => (
+								<div class="podcast-stances__side">
+									<p class="podcast-stances__who">
+										{side.name}
+										<span> · {side.org}</span>
 									</p>
-								)}
-								{episode.questions.map((item) => (
-									<details class="podcast-quiz__item">
-										<summary>
-											<span>{item.question}</span>
-											<span class="podcast-quiz__toggle" aria-hidden="true" />
-										</summary>
-										<p class="podcast-quiz__answer">
-											{item.answer}{' '}
-											<button
-												class="podcast-quiz__play"
-												type="button"
-												data-podcast-at={seconds(item.at)}
-												aria-label={`从 ${item.at} 开始播放`}
-											>
-												▶ {item.at}
-											</button>
-										</p>
-									</details>
-								))}
-							</div>
-						)}
-					</div>
-				</section>
-			)
-		}
+									<p class="podcast-stances__view">
+										<strong>{side.verdict}</strong>
+										{side.view}
+									</p>
+									<button
+										class="podcast-brief__jump"
+										type="button"
+										data-podcast-at={seconds(side.at)}
+										aria-label={`从原声 ${side.at} 开始听 ${side.name}`}
+									>
+										▶ 原声 {side.at}
+									</button>
+								</div>
+							))}
+						</div>
+						<p class="podcast-stances__agree">
+							<span>都同意：</span>
+							{episode.stances.agree}
+						</p>
+					</section>
+				)
+			}
 
-		{
-			episode.quote && (
-				<figure class="podcast-quote">
-					<p class="podcast-quote__label">原话</p>
-					<blockquote lang="en">“{episode.quote.text}”</blockquote>
-					<p class="podcast-quote__translation">{episode.quote.translation}</p>
-					<figcaption>
-						{episode.quote.by}
-						<button
-							class="podcast-quote__play"
-							type="button"
-							data-podcast-at={seconds(episode.quote.at)}
-							aria-label={`从 ${episode.quote.at} 开始播放`}
-						>
-							▶ {episode.quote.at}
-						</button>
-					</figcaption>
-				</figure>
-			)
-		}
+			{
+				episode.questions && episode.questions.length > 0 && (
+					<section class="podcast-quiz-section" aria-labelledby="podcast-quiz">
+						<p class="podcast-quiz__label">
+							<span class="podcast-section__title" id="podcast-quiz">
+								{video ? '看完你能回答' : '听完你能回答'}
+							</span>
+							<span class="podcast-quiz__hint">先想想，再看答案</span>
+						</p>
+						<div class="podcast-quiz">
+							{episode.questions.map((item) => (
+								<details class="podcast-quiz__item">
+									<summary>
+										<span>{item.question}</span>
+										<span class="podcast-quiz__toggle" aria-hidden="true" />
+									</summary>
+									<p class="podcast-quiz__answer">
+										{item.answer}{' '}
+										<button
+											class="podcast-quiz__play"
+											type="button"
+											data-podcast-at={seconds(item.at)}
+											aria-label={`从 ${item.at} 开始播放`}
+										>
+											▶ {item.at}
+										</button>
+									</p>
+								</details>
+							))}
+						</div>
+					</section>
+				)
+			}
 
-		<section class="podcast-outline" aria-labelledby="podcast-outline">
-			<h2 class="podcast-section__title" id="podcast-outline">听什么</h2>
-			<ol>
-				{
-					entries.map((entry) => (
-						<li class:list={['podcast-outline__entry', { 'has-points': entry.points.length > 0 }]}>
+			{
+				!video && episode.quote && (
+					<figure class="podcast-quote">
+						<p class="podcast-quote__label">原话</p>
+						<blockquote lang="en">“{episode.quote.text}”</blockquote>
+						<p class="podcast-quote__translation">{episode.quote.translation}</p>
+						<figcaption>
+							{episode.quote.by}
 							<button
-								class="podcast-outline__at"
+								class="podcast-quote__play"
 								type="button"
-								data-podcast-at={entry.at}
-								data-podcast-chapter-at={entry.start}
-								aria-label={`从 ${entry.stamp} 开始播放：${entry.chapter}`}
+								data-podcast-at={seconds(episode.quote.at)}
+								aria-label={`从 ${episode.quote.at} 开始播放`}
 							>
-								{entry.stamp}
+								▶ {episode.quote.at}
 							</button>
-							<div class="podcast-outline__body">
-								<span class="podcast-outline__chapter">
-									<PodcastTerms parts={entry.chapterParts} />
-								</span>
-								{entry.pointParts.map((parts) => (
-									<p class="podcast-outline__point">
-										<PodcastTerms parts={parts} />
-									</p>
-								))}
-							</div>
-						</li>
-					))
-				}
-			</ol>
-		</section>
+						</figcaption>
+					</figure>
+				)
+			}
 
-		<footer class="podcast-foot">
-			<a
-				class="podcast-foot__source"
-				href={episode.source}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				原文与文字稿 ↗
-			</a>
-		</footer>
+			{
+				video ? (
+					<details class="podcast-outline podcast-outline--folded">
+						<summary class="podcast-section__title">{`英文原版完整章节（${entries.length} 章）`}</summary>
+						<PodcastOutline entries={entries} />
+					</details>
+				) : (
+					<section class="podcast-outline" aria-labelledby="podcast-outline">
+						<h2 class="podcast-section__title" id="podcast-outline">
+							听什么
+						</h2>
+						<PodcastOutline entries={entries} />
+					</section>
+				)
+			}
+
+			<footer class="podcast-foot">
+				<a
+					class="podcast-foot__source"
+					href={episode.source}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{video ? `${show.name} 原节目 ↗` : '原文与文字稿 ↗'}
+				</a>
+			</footer>
+		</div>
 	</article>
 </BaseLayout>
 
 <script>
 	import '../../scripts/podcastTerms';
+	import '../../scripts/podcastVideo';
 </script>

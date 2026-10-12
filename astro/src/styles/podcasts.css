@@ -1,5 +1,5 @@
 /* 播客: the list (P4), a show's page (P5), all shows (P6) and an episode's page (P8, with P15's
-   一图读懂 and 听完你能回答). The player
+   一图读懂 and 听完你能回答; with our video, P22). The player
    is styles/podcast-player.css. */
 
 .podcasts-head {
@@ -576,6 +576,370 @@
 	text-underline-offset: 4px;
 }
 
+/* An episode with our video (P22): the video runs wider than the text under it. */
+.podcast-episode--video {
+	width: min(880px, calc(100% - 32px));
+}
+.podcast-episode--video .podcast-episode__body {
+	max-width: 680px;
+	margin: 0 auto;
+}
+.podcast-video-title {
+	margin: 18px 0 0;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+.podcast-video-meta {
+	margin: 8px 0 0;
+	color: var(--ink-faint);
+	font-size: 13px;
+	line-height: 1.7;
+}
+.podcast-video-meta a {
+	color: var(--ink-faint);
+	text-decoration: none;
+}
+.podcast-video {
+	margin-top: 22px;
+}
+.podcast-video__player {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	border-radius: 14px;
+	background: #f4f3ee;
+}
+.podcast-video__chapters {
+	display: flex;
+	gap: 4px;
+	margin: 12px 0 0;
+	padding: 0;
+	list-style: none;
+}
+.podcast-video__chapters li {
+	flex: 1 1 0;
+	min-width: 0;
+}
+.podcast-video__chapter {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	width: 100%;
+	padding: 0 0 4px;
+	border: 0;
+	background: none;
+	color: var(--ink-soft);
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+.podcast-video__bar {
+	position: relative;
+	display: block;
+	height: 4px;
+	overflow: hidden;
+	border-radius: 2px;
+	background: var(--rule-strong);
+}
+.podcast-video__fill {
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: var(--played, 0%);
+	background: var(--ink);
+}
+.podcast-video__at {
+	color: #9a9a9a;
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+}
+.podcast-video__name {
+	overflow: hidden;
+	margin-top: -5px;
+	font-size: 13.5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.podcast-video__chapter:hover .podcast-video__name {
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 4px;
+}
+.podcast-video__chapter[aria-current] .podcast-video__name {
+	color: var(--ink);
+	font-weight: 600;
+}
+.podcast-video__note {
+	margin: 12px 0 0;
+	color: var(--ink-faint);
+	font-size: 12.5px;
+}
+/* 英文原版: one row under the lede, the show's audio with its own progress. */
+.podcast-original {
+	margin-top: 22px;
+	padding: 14px 0;
+	border-top: 1px solid var(--rule);
+	border-bottom: 1px solid var(--rule);
+}
+.podcast-original__label {
+	flex: 1 0 100%;
+	margin: 0;
+	font-size: 14px;
+}
+.podcast-original__label span {
+	color: var(--ink-faint);
+}
+.podcast-play--quiet {
+	height: 34px;
+	padding: 0 14px 0 12px;
+	border-radius: 999px;
+	background: var(--paper);
+	box-shadow: inset 0 0 0 1px #d4d4d4;
+	color: var(--ink);
+	font-size: 13px;
+}
+.podcast-play--quiet svg {
+	width: 11px;
+	height: 11px;
+}
+.podcast-play--quiet:hover,
+.podcast-play--quiet.is-playing {
+	background: var(--ink);
+	box-shadow: none;
+	color: var(--paper);
+}
+/* 一分钟读完: reasons as rows, each with the guest's own words and a way into each version. */
+.podcast-brief__card--rows {
+	padding-bottom: 6px;
+}
+.podcast-brief__rows {
+	margin: 14px 0 0;
+	padding: 0;
+	list-style: none;
+}
+.podcast-brief__row {
+	padding: 16px 0;
+	border-top: 1px solid var(--rule);
+}
+.podcast-brief__row-head {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 0 0 4px;
+}
+.podcast-brief__row .podcast-brief__text {
+	display: block;
+	margin: 0;
+	font-size: 14.5px;
+	line-height: 1.7;
+}
+.podcast-brief__quote {
+	margin: 10px 0 0;
+}
+.podcast-brief__quote blockquote {
+	margin: 0;
+	font-size: 14.5px;
+	line-height: 1.65;
+}
+.podcast-brief__quote figcaption {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 4px 12px;
+	margin-top: 3px;
+	color: var(--ink-soft);
+	font-size: 13.5px;
+	line-height: 1.7;
+}
+.podcast-brief__jump {
+	flex: 0 0 auto;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--ink-faint);
+	font: inherit;
+	font-size: 12.5px;
+	font-variant-numeric: tabular-nums;
+	cursor: pointer;
+}
+.podcast-brief__jump:hover {
+	color: var(--ink);
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+/* 原节目时间花在哪 (P10): a bar per topic, as wide as the time spent on it. */
+.podcast-topics {
+	margin-top: 40px;
+}
+.podcast-topics__head {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	margin: 0 0 12px;
+	color: var(--ink-faint);
+	font-size: 12.5px;
+}
+.podcast-topics__head .podcast-section__title {
+	margin: 0;
+	color: var(--ink);
+}
+.podcast-topics__list {
+	display: flex;
+	gap: 3px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.podcast-topics__list li {
+	flex: 1 1 0;
+	min-width: 0;
+}
+.podcast-topics__item {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--ink);
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+.podcast-topics__bar {
+	display: block;
+	height: 10px;
+	border-radius: 3px;
+	background: #d9d9d9;
+	transition: background-color 160ms ease;
+}
+.podcast-topics__item:hover .podcast-topics__bar {
+	background: #9a9a9a;
+}
+.podcast-topics__item[aria-current] .podcast-topics__bar {
+	background: var(--ink);
+}
+.podcast-topics__name {
+	color: #333333;
+	font-size: 13px;
+	line-height: 1.4;
+}
+.podcast-topics__item[aria-current] .podcast-topics__name {
+	color: var(--ink);
+	font-weight: 600;
+}
+.podcast-topics__len {
+	margin-top: -6px;
+	color: var(--ink-faint);
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+}
+/* 两位嘉宾在哪里不一样 (P11) */
+.podcast-stances {
+	margin-top: 40px;
+}
+.podcast-stances__question {
+	margin: 8px 0 12px;
+	font-size: 17px;
+	font-weight: 600;
+}
+.podcast-stances__sides {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+}
+.podcast-stances__side {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 14px 16px;
+	border-radius: 12px;
+	background: var(--paper-muted);
+}
+.podcast-stances__who {
+	margin: 0;
+	font-size: 13px;
+}
+.podcast-stances__who span {
+	color: var(--ink-faint);
+}
+.podcast-stances__view {
+	flex: 1 1 auto;
+	margin: 0;
+	color: #333333;
+	font-size: 14.5px;
+	line-height: 1.7;
+}
+.podcast-stances__view strong {
+	margin-right: 4px;
+	color: var(--ink);
+}
+.podcast-stances__side .podcast-brief__jump {
+	align-self: flex-start;
+}
+.podcast-stances__agree {
+	margin: 12px 0 0;
+	color: var(--ink-soft);
+	font-size: 13.5px;
+	line-height: 1.7;
+}
+.podcast-stances__agree span {
+	color: var(--ink-faint);
+}
+.podcast-quiz-section {
+	margin-top: 40px;
+}
+.podcast-quiz-section .podcast-quiz {
+	margin-top: 0;
+	border-bottom: 1px solid var(--rule);
+}
+.podcast-quiz-section .podcast-quiz__label .podcast-section__title {
+	margin: 0;
+	color: var(--ink);
+}
+/* The show's whole outline, folded away under the video. */
+.podcast-outline--folded > summary {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	padding: 14px 0;
+	border-top: 1px solid var(--rule);
+	border-bottom: 1px solid var(--rule);
+	list-style: none;
+	cursor: pointer;
+}
+.podcast-outline--folded > summary::-webkit-details-marker {
+	display: none;
+}
+.podcast-outline--folded > summary::after {
+	content: '展开';
+	color: var(--ink-faint);
+	font-size: 12.5px;
+	font-weight: 400;
+}
+.podcast-outline--folded[open] > summary::after {
+	content: '收起';
+}
+.podcast-outline--folded > summary:hover::after {
+	color: var(--ink);
+}
+.podcast-outline--folded > summary:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 2px;
+}
+.podcast-outline--folded > ol {
+	margin-top: 6px;
+}
+.podcast-outline--folded + .podcast-foot {
+	margin-top: 20px;
+	padding-top: 0;
+	border-top: 0;
+}
+
 .podcast-section__title {
 	margin: 0 0 8px;
 	font-size: 15px;
@@ -765,6 +1129,78 @@
 	.podcast-progress {
 		flex-basis: 100%;
 		max-width: none;
+	}
+	.podcast-episode--video {
+		width: 100%;
+	}
+	.podcast-episode--video .podcast-crumbs,
+	.podcast-video-title,
+	.podcast-video-meta,
+	.podcast-episode--video .podcast-episode__body {
+		padding: 0 16px;
+	}
+	.podcast-video-title {
+		font-size: 21px;
+		line-height: 1.4;
+	}
+	.podcast-video__player {
+		border-radius: 0;
+	}
+	/* Six chapters don't fit side by side on a phone: a list, the playing one in bold. */
+	.podcast-video__chapters {
+		flex-direction: column;
+		gap: 0;
+		margin: 6px 16px 0;
+	}
+	.podcast-video__chapters li {
+		flex: none !important;
+		border-top: 1px solid var(--rule);
+	}
+	.podcast-video__chapter {
+		display: grid;
+		grid-template-columns: 40px minmax(0, 1fr);
+		column-gap: 10px;
+		min-height: 44px;
+		align-items: center;
+		padding: 0;
+	}
+	.podcast-video__bar {
+		display: none;
+	}
+	.podcast-video__name {
+		margin-top: 0;
+		font-size: 14px;
+	}
+	.podcast-stances__sides {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	/* On a phone the topics stack, each bar as long as its share of the episode (P12). */
+	.podcast-topics__list {
+		flex-direction: column;
+		gap: 0;
+	}
+	.podcast-topics__list li {
+		flex: none !important;
+		border-bottom: 1px solid var(--rule);
+	}
+	.podcast-topics__item {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		row-gap: 6px;
+		align-items: baseline;
+		padding: 10px 0;
+	}
+	.podcast-topics__bar {
+		grid-row: 2;
+		grid-column: 1 / -1;
+		width: var(--share);
+		height: 6px;
+	}
+	.podcast-topics__name {
+		font-size: 14px;
+	}
+	.podcast-topics__len {
+		margin-top: 0;
 	}
 	.podcast-brief__card {
 		padding: 16px 14px 4px;

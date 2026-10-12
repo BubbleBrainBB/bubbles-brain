@@ -1,0 +1,42 @@
+---
+/**
+ * 听什么: the show's chapters with our takeaways under them, glossary words marked. A time plays the
+ * show's audio from there; the player marks the chapter playing now.
+ */
+import PodcastTerms from './PodcastTerms.astro';
+import type { OutlineEntry, TextPart } from '../lib/podcasts';
+
+interface Props {
+	entries: (OutlineEntry & { chapterParts: TextPart[]; pointParts: TextPart[][] })[];
+}
+
+const { entries } = Astro.props;
+---
+
+<ol>
+	{
+		entries.map((entry) => (
+			<li class:list={['podcast-outline__entry', { 'has-points': entry.points.length > 0 }]}>
+				<button
+					class="podcast-outline__at"
+					type="button"
+					data-podcast-at={entry.at}
+					data-podcast-chapter-at={entry.start}
+					aria-label={`从 ${entry.stamp} 开始播放：${entry.chapter}`}
+				>
+					{entry.stamp}
+				</button>
+				<div class="podcast-outline__body">
+					<span class="podcast-outline__chapter">
+						<PodcastTerms parts={entry.chapterParts} />
+					</span>
+					{entry.pointParts.map((parts) => (
+						<p class="podcast-outline__point">
+							<PodcastTerms parts={parts} />
+						</p>
+					))}
+				</div>
+			</li>
+		))
+	}
+</ol>

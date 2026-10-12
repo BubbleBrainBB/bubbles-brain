@@ -14,6 +14,7 @@ import {
 	showsByRecent,
 	peopleLine,
 	withTerms,
+	topicSpans,
 	playerEpisode,
 	seconds,
 } from './podcasts';
@@ -77,6 +78,32 @@ describe('times', () => {
 			'1 reasons',
 			'more than three questions',
 		]);
+	});
+});
+
+describe('the video and the topics', () => {
+	it('runs each topic to the next one, the last to the end', () => {
+		expect(topicSpans(alphafold).map((topic) => [topic.title, topic.minutes])).toEqual([
+			['数据与扩展定律', 10],
+			['模型怎么设计', 5],
+			['AlphaFold 的局限', 6],
+			['理解与可信', 7],
+			['药物研发与未来', 4],
+		]);
+		expect(topicSpans({ ...alphafold, topics: undefined })).toEqual([]);
+	});
+
+	it('flags video times past the video and topics out of order', () => {
+		const broken = {
+			...alphafold,
+			video: { ...alphafold.video!, chapters: [{ at: '9:00', title: 'x' }] },
+			topics: [
+				{ at: '10:00', title: 'b' },
+				{ at: '05:00', title: 'a' },
+			],
+		};
+		expect(episodeProblems(broken)).toContain('video 9:00 is past its end');
+		expect(episodeProblems(broken)).toContain('topics out of order');
 	});
 });
 

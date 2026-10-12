@@ -84,7 +84,19 @@ function setup() {
 			button.classList.toggle('is-playing', mine && playing);
 			button.setAttribute('aria-pressed', String(mine && playing));
 			const label = button.querySelector<HTMLElement>('[data-podcast-play-label]');
-			if (label) label.textContent = mine && playing ? '暂停' : mine ? '继续播放' : '播放';
+			// A button can name what it plays when idle (听原声 beside our video); 暂停 while playing.
+			const idle = button.dataset.podcastPlayIdle ?? '播放';
+			if (label) label.textContent = mine && playing ? '暂停' : mine ? `继续${idle}` : idle;
+		}
+		// 时间花在哪: the topic the show's audio is in now.
+		for (const item of document.querySelectorAll<HTMLElement>('[data-podcast-topic-from]')) {
+			const episode = item.closest<HTMLElement>('[data-podcast-episode]');
+			const mine = current && parseEpisode(episode?.dataset.podcastEpisode)?.id === current.id;
+			const at = audio.currentTime;
+			const inside =
+				at >= Number(item.dataset.podcastTopicFrom) && at < Number(item.dataset.podcastTopicTo);
+			if (mine && inside) item.setAttribute('aria-current', 'true');
+			else item.removeAttribute('aria-current');
 		}
 		const now = chapterAt(audio.currentTime);
 		for (const item of document.querySelectorAll<HTMLElement>('[data-podcast-chapter-at]')) {

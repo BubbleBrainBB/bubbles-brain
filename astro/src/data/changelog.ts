@@ -19,6 +19,15 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-12',
 		tag: '播客',
+		type: 'feature',
+		title: '播客单集页有了中文科普视频',
+		summary:
+			'第一期配了一支 3 分钟的中文科普视频，把这期节目讲到的四处卡点画给你看，视频下面的章节点哪里就从哪里看。不方便看视频，下面一分钟读完：每处卡点附一句嘉宾原话和中文翻译，点一下就听英文原声。还加了原节目的时间分布和两位嘉宾的分歧。视频由 AI 根据原节目整理、配音和制作。',
+		links: [{ label: '看第一期', href: '/podcasts/latent-space-alphafold/' }],
+	},
+	{
+		date: '2026-10-12',
+		tag: '播客',
 		type: 'polish',
 		title: '播客单集页能看到进度，生词有解释',
 		summary:
