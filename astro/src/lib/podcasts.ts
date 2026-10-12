@@ -6,7 +6,6 @@ import {
 	type PodcastShow,
 	type Timestamp,
 } from '../data/podcasts';
-import { getVibeCodingConcepts } from '../data/vibeCodingTerms';
 
 export const PODCASTS_HREF = '/podcasts/';
 
@@ -154,16 +153,6 @@ export function episodesByMonth(episodes: PodcastEpisode[] = podcastEpisodes): E
 		}
 	}
 	return months;
-}
-
-/** The episode's site terms as links; an id the site does not have fails the build. */
-export function termLinks(episode: PodcastEpisode): { label: string; href: string }[] {
-	const concepts = getVibeCodingConcepts();
-	return episode.terms.map((id) => {
-		const concept = concepts.find((entry) => entry.id === id);
-		if (!concept) throw new Error(`Podcast episode ${episode.id} links an unknown term: ${id}`);
-		return { label: concept.chineseName, href: `/vibe-coding/terms/${id}/` };
-	});
 }
 
 /** What a play button hands the player: enough to show, play and seek without the episode page. */

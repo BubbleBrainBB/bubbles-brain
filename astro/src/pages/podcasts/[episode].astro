@@ -11,7 +11,6 @@ import {
 	seconds,
 	showHref,
 	showOf,
-	termLinks,
 } from '../../lib/podcasts';
 import '../../styles/podcasts.css';
 
@@ -24,7 +23,6 @@ export function getStaticPaths() {
 
 const { episode } = Astro.props as { episode: PodcastEpisode };
 const show = showOf(episode);
-const terms = termLinks(episode);
 const guests = episode.people.filter((person) => !person.role);
 const hosts = episode.people.filter((person) => person.role);
 ---
@@ -158,18 +156,6 @@ const hosts = episode.people.filter((person) => person.role);
 		</section>
 
 		<footer class="podcast-foot">
-			{
-				terms.length > 0 && (
-					<>
-						<span class="podcast-foot__label">相关知识</span>
-						{terms.map((term) => (
-							<a class="podcast-foot__term" href={term.href}>
-								{term.label}
-							</a>
-						))}
-					</>
-				)
-			}
 			<a
 				class="podcast-foot__source"
 				href={episode.source}

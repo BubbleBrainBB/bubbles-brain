@@ -57,8 +57,6 @@ export interface PodcastEpisode {
 	points: { at: Timestamp; text: string }[];
 	/** The show's chapters, translated. */
 	chapters: { at: Timestamp; title: string }[];
-	/** Site terms the episode touches (ids under /vibe-coding/terms/). */
-	terms: string[];
 }
 
 export const podcastShows: PodcastShow[] = [
@@ -147,6 +145,5 @@ export const podcastEpisodes: PodcastEpisode[] = [
 			{ at: '27:43', title: 'AI 什么时候真正改变药物研发' },
 			{ at: '29:47', title: '治愈所有疾病需要十倍级的突破' },
 		],
-		terms: ['llm', 'parameters', 'confidence-interval', 'open-source'],
 	},
 ];
