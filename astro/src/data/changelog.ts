@@ -19,6 +19,15 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-12',
 		tag: '播客',
+		type: 'polish',
+		title: '播客单集页加上「一图读懂」和「听完你能回答」',
+		summary:
+			'单集页开头多了一张卡：这期在回答什么问题、答案卡在哪几处，每处都能点了从那里听；下面是听完能回答的几个问题，先想想再点开看答案。单集页也更简单了，去掉了其他收听方式和相关知识。',
+		links: [{ label: '看第一期', href: '/podcasts/latent-space-alphafold/' }],
+	},
+	{
+		date: '2026-10-12',
+		tag: '播客',
 		type: 'feature',
 		title: '新增播客：挑过的 AI 播客单集，附中文要点',
 		summary:

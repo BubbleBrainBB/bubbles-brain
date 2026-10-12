@@ -1,4 +1,5 @@
-/* 播客: the list (P4), a show's page (P5), all shows (P6) and an episode's page (P8). The player
+/* 播客: the list (P4), a show's page (P5), all shows (P6) and an episode's page (P8, with P15's
+   一图读懂 and 听完你能回答). The player
    is styles/podcast-player.css. */
 
 .podcasts-head {
@@ -124,6 +125,9 @@
 	display: block;
 }
 .podcast-play:focus-visible,
+.podcast-brief__reason:focus-visible,
+.podcast-quiz__item summary:focus-visible,
+.podcast-quiz__play:focus-visible,
 .podcast-outline__at:focus-visible,
 .podcast-quote__play:focus-visible {
 	outline: 2px solid var(--focus);
@@ -386,6 +390,172 @@
 	text-underline-offset: 4px;
 }
 
+/* 一图读懂: the question, its answer, a card per reason; 听完你能回答 below it, in the same card. */
+.podcast-brief {
+	margin-top: 40px;
+}
+.podcast-brief__card {
+	padding: 22px 22px 8px;
+	border: 1px solid var(--rule-strong);
+	border-radius: 16px;
+}
+.podcast-brief__label,
+.podcast-quiz__label {
+	margin: 0;
+	color: var(--ink-faint);
+	font-size: 13px;
+}
+.podcast-brief__question {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 6px 14px;
+	margin: 6px 0 0;
+}
+.podcast-brief__question strong {
+	font-size: 19px;
+	font-weight: 600;
+	line-height: 1.45;
+}
+.podcast-brief__question span {
+	color: var(--ink-soft);
+	font-size: 15px;
+}
+.podcast-brief__reasons {
+	display: grid;
+	grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr));
+	gap: 10px;
+	margin: 16px 0 0;
+	padding: 0;
+	list-style: none;
+}
+.podcast-brief__reasons[data-count='2'],
+.podcast-brief__reasons[data-count='4'] {
+	--columns: 2;
+}
+.podcast-brief__reason {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 14px 14px 16px;
+	border: 0;
+	border-radius: 12px;
+	background: var(--paper-muted);
+	color: var(--ink);
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+	transition: background-color 160ms ease;
+}
+.podcast-brief__reason:hover {
+	background: var(--seal-soft);
+}
+.podcast-brief__at {
+	color: var(--ink-faint);
+	font-size: 12.5px;
+	font-variant-numeric: tabular-nums;
+}
+.podcast-brief__head {
+	font-size: 15px;
+	font-weight: 600;
+}
+.podcast-brief__text {
+	color: #333333;
+	font-size: 14px;
+	line-height: 1.65;
+}
+.podcast-quiz {
+	margin-top: 22px;
+}
+.podcast-brief__card > .podcast-quiz:first-child {
+	margin-top: -14px;
+}
+.podcast-quiz__label {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 4px;
+}
+.podcast-quiz__hint {
+	color: #9a9a9a;
+	font-size: 12.5px;
+}
+.podcast-quiz__item {
+	border-top: 1px solid var(--rule);
+}
+.podcast-quiz__item:first-of-type:first-child {
+	border-top: 0;
+}
+.podcast-quiz__item summary {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 13px 0;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+	list-style: none;
+	cursor: pointer;
+}
+.podcast-quiz__item summary::-webkit-details-marker {
+	display: none;
+}
+.podcast-quiz__toggle {
+	flex: 0 0 auto;
+	color: var(--ink-faint);
+	font-size: 12.5px;
+	font-weight: 400;
+}
+.podcast-quiz__toggle::after {
+	content: '看答案';
+}
+.podcast-quiz__item[open] .podcast-quiz__toggle::after {
+	content: '收起';
+}
+.podcast-quiz__item summary:hover .podcast-quiz__toggle {
+	color: var(--ink);
+}
+.podcast-quiz__answer {
+	margin: -2px 0 14px;
+	color: #333333;
+	font-size: 14.5px;
+	line-height: 1.8;
+}
+.podcast-quiz__item[open] .podcast-quiz__answer {
+	animation: podcast-answer 220ms ease-out;
+}
+@keyframes podcast-answer {
+	from {
+		opacity: 0;
+		transform: translateY(-4px);
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.podcast-quiz__item[open] .podcast-quiz__answer {
+		animation: none;
+	}
+}
+.podcast-quiz__play {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--ink-faint);
+	font: inherit;
+	font-size: 12.5px;
+	font-variant-numeric: tabular-nums;
+	cursor: pointer;
+}
+.podcast-quiz__play:hover {
+	color: var(--ink);
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
 .podcast-section__title {
 	margin: 0 0 8px;
 	font-size: 15px;
@@ -513,6 +683,41 @@
 	}
 	.podcast-quote blockquote {
 		font-size: 17px;
+	}
+	.podcast-brief__card {
+		padding: 16px 14px 4px;
+		border-radius: 14px;
+	}
+	.podcast-brief__question strong {
+		font-size: 17px;
+	}
+	.podcast-brief__question span {
+		font-size: 14px;
+	}
+	.podcast-brief__reasons,
+	.podcast-brief__reasons[data-count] {
+		--columns: 1;
+		gap: 8px;
+		margin-top: 12px;
+	}
+	.podcast-brief__reason {
+		padding: 12px;
+		border-radius: 10px;
+	}
+	.podcast-brief__text {
+		font-size: 13.5px;
+		line-height: 1.6;
+	}
+	.podcast-quiz {
+		margin-top: 18px;
+	}
+	.podcast-quiz__item summary {
+		padding: 12px 0;
+		font-size: 14.5px;
+	}
+	.podcast-quiz__answer {
+		font-size: 13.5px;
+		line-height: 1.75;
 	}
 	.podcast-outline__entry {
 		grid-template-columns: 44px minmax(0, 1fr);

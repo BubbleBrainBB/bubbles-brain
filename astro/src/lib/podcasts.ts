@@ -191,6 +191,8 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 		...episode.points,
 		...episode.chapters,
 		...(episode.quote ? [episode.quote] : []),
+		...(episode.brief?.reasons ?? []),
+		...(episode.questions ?? []),
 	].map((entry) => entry.at);
 	for (const stamp of stamps) {
 		const at = seconds(stamp);
@@ -206,6 +208,10 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 		if (seconds(point.at) < firstChapter) problems.push(`${point.at} is before the first chapter`);
 	if (episode.quote && episode.quote.text.split(/\s+/).length > 15)
 		problems.push('quote is too long');
+	// The brief is one glance: a card per reason, two to four of them; the questions stay a few.
+	const reasons = episode.brief?.reasons.length;
+	if (reasons !== undefined && (reasons < 2 || reasons > 4)) problems.push(`${reasons} reasons`);
+	if ((episode.questions?.length ?? 0) > 3) problems.push('more than three questions');
 	if (!/^\d{4}-\d{2}-\d{2}$/.test(episode.date)) problems.push(`bad date ${episode.date}`);
 	if (!/^https:\/\//.test(episode.audio)) problems.push('audio is not https');
 	return problems;

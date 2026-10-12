@@ -61,6 +61,21 @@ describe('times', () => {
 		};
 		expect(episodeProblems(broken)).toEqual(['40:00 is past the end', 'chapters out of order']);
 	});
+
+	it('keeps the brief to a glance and the questions to a few', () => {
+		const reason = { at: '01:00', head: 'h', text: 't' };
+		const question = { question: 'q', answer: 'a', at: '50:00' };
+		const crowded = {
+			...alphafold,
+			brief: { question: 'q', answer: 'a', reasons: [reason] },
+			questions: [question, question, question, question],
+		};
+		expect(episodeProblems(crowded)).toEqual([
+			...Array(4).fill('50:00 is past the end'),
+			'1 reasons',
+			'more than three questions',
+		]);
+	});
 });
 
 describe('the AlphaFold episode', () => {
