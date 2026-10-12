@@ -22,7 +22,7 @@ export const changelog: ChangelogItem[] = [
 		type: 'feature',
 		title: '新增播客：挑过的 AI 播客单集，附中文要点',
 		summary:
-			'新开播客栏目。每期有中文标题、为什么值得听、带时间点的要点和章节，点时间点就从那里开始播；站内直接收听，换页面也不中断。第一期是 Latent Space 的《AlphaFold 为什么没有真正解决蛋白质折叠》。',
+			'新开播客栏目。每期有中文标题、两句导语、一句原话，以及章节和要点合成的一份大纲，点时间点就从那里开始播；站内直接收听，换页面也不中断。每档节目有自己的页面。第一期是 Latent Space 的《AlphaFold 为什么没有真正解决蛋白质折叠》。',
 		links: [
 			{ label: '播客', href: '/podcasts/' },
 			{ label: '第一期', href: '/podcasts/latent-space-alphafold/' },

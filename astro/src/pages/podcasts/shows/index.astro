@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { PODCASTS_HREF, showEpisodes, showHref, showsByRecent } from '../../../lib/podcasts';
+import '../../../styles/podcasts.css';
+
+const shows = showsByRecent();
+---
+
+<BaseLayout title="节目 · 播客 · Bubble's Brain" description="播客栏目收录的节目，按最近收录排序。">
+	<div class="rr-page podcast-shows-page" data-podcast-shows>
+		<nav class="podcast-crumbs" aria-label="位置">
+			<a href={PODCASTS_HREF}>播客</a>
+			<span aria-hidden="true">/</span>
+			<span>节目</span>
+		</nav>
+		<h1 class="podcast-page-title">节目</h1>
+		<p class="podcast-page-note">{shows.length} 档节目，按最近收录排序</p>
+		<ul class="podcast-wall">
+			{
+				shows.map((show) => (
+					<li>
+						<a class="podcast-wall__show" href={showHref(show)}>
+							<img src={show.cover} alt="" width="160" height="160" loading="lazy" />
+							<span class="podcast-wall__name">{show.name}</span>
+							<span class="podcast-wall__meta">
+								{show.language} · {showEpisodes(show).length} 期
+							</span>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</BaseLayout>

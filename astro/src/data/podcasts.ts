@@ -1,17 +1,24 @@
 /**
- * 播客: AI podcast episodes picked by hand, each with a Chinese headline, a reason to listen, the
- * takeaways at the minute they are said, the show's own chapters, and links into the site's terms.
+ * 播客: AI podcast episodes picked by hand. Each has a Chinese headline, a two-sentence lede, one
+ * line quoted from the episode, and an outline: the show's own chapters with our takeaways under
+ * the chapters they come from, each at the minute it is said.
  * The audio is the show's own file from its public RSS feed, played as podcast apps play it: never
- * copied here. Only free, public episodes; text is our own summary, never the transcript.
+ * copied here. Only free, public episodes; the text is our own summary, never the transcript, and
+ * a quote is one short line.
  */
 
 export interface PodcastShow {
 	id: string;
 	name: string;
+	/** One line on what the show is about. */
+	description: string;
+	language: '英文' | '中文';
 	/** Square artwork from the show's feed. */
 	cover: string;
 	/** The show's podcast RSS: where episode facts and audio come from. */
 	feed: string;
+	/** The show's own site, then where to subscribe. */
+	site: string;
 	links: { label: string; url: string }[];
 }
 
@@ -28,8 +35,9 @@ export type Timestamp = string;
 export interface PodcastEpisode {
 	id: string;
 	show: PodcastShow['id'];
-	/** Our Chinese headline; the show's own title follows it. */
+	/** Our Chinese headline. */
 	title: string;
+	/** The show's own title. */
 	originalTitle: string;
 	/** Publication day in Beijing time (YYYY-MM-DD). */
 	date: string;
@@ -41,10 +49,11 @@ export interface PodcastEpisode {
 	audio: string;
 	/** The episode page on the show's site, with show notes and transcript. */
 	source: string;
-	/** One line for the list: who talks about what. */
-	pitch: string;
-	/** Why it is worth the time, and for whom. */
-	why: string;
+	/** Two sentences: what the episode finds, and who is talking. */
+	lede: string;
+	/** One short line from the episode, with our translation. */
+	quote?: { text: string; translation: string; by: string; at: Timestamp };
+	/** One sentence each, at the minute it is said. */
 	points: { at: Timestamp; text: string }[];
 	/** The show's chapters, translated. */
 	chapters: { at: Timestamp; title: string }[];
@@ -56,8 +65,11 @@ export const podcastShows: PodcastShow[] = [
 	{
 		id: 'latent-space',
 		name: 'Latent Space',
+		description: '写给 AI 工程师的播客：顶尖实验室怎么做 agent、模型、基础设施和 AI for Science。',
+		language: '英文',
 		cover: 'https://substackcdn.com/feed/podcast/1084089/ca7468da5614a246d2906ee8926f6de7.jpg',
 		feed: 'https://api.substack.com/feed/podcast/1084089.rss',
+		site: 'https://www.latent.space',
 		links: [
 			{
 				label: 'Apple Podcasts',
@@ -85,41 +97,36 @@ export const podcastEpisodes: PodcastEpisode[] = [
 		language: '英文',
 		audio: 'https://api.substack.com/feed/podcast/219666029/8fefb52482ab31b6be94745a76cff81f.mp3',
 		source: 'https://www.latent.space/p/biohub-deepmind',
-		pitch:
-			'DeepMind 的 Pushmeet Kohli 和 Biohub 的 Sal Candido 聊：AlphaFold 之后，AI 做生物学真正卡在哪里。',
-		why: 'AlphaFold 拿了诺奖，新闻里常说蛋白质结构预测已经被解决。这期是 Biohub 一场活动上的圆桌，Google DeepMind 负责科学研究的 Pushmeet Kohli 自己出来降温：AlphaFold 做到的，是复现别人测出来、存进蛋白质数据库的那一个结构，蛋白质真实怎么动还远没搞懂。另一位嘉宾 Sal Candido 补上做模型的人的视角：扩展定律要靠找，数据要选对。半小时出头，没有生物背景也能听懂，适合想知道 AI 在科学里真实进展、而不只是看标题的人。',
+		lede: 'AlphaFold 做到的，是复现数据库里那一个已知结构；蛋白质怎么动、整个细胞怎么运作，还远没搞懂。DeepMind 和 Biohub 的两位科学家讲清了 AI 做生物学真正卡在哪。',
+		quote: {
+			text: "Proteins aren't blocks, and they don't act as blocks.",
+			translation: '蛋白质不是积木，也不像积木那样运作。',
+			by: 'Pushmeet Kohli',
+			at: '15:28',
+		},
 		points: [
 			{
 				at: '01:00',
-				text: '扩展定律不是哪里都有，大部分功夫花在「找到」它：找到一个多投算力、多喂数据就稳定变好的设定，之后才变成可以一直往里加资源的工程问题。',
+				text: '扩展定律要靠「找」：先找到多投算力、多喂数据就稳定变好的设定，之后才是工程问题。',
 			},
-			{
-				at: '04:54',
-				text: 'Pushmeet 对「苦涩的教训」的理解：别抱着「我是做模型的」或「我是造数据的」的身份做事，问题先行。AlphaFold 只能用现成的数据，所以押在建模上；做细胞基因组时发现，数据还撑不起「虚拟细胞」。',
-			},
+			{ at: '04:54', text: '问题先行，别困在「我是做模型的」「我是造数据的」的身份里。' },
 			{
 				at: '10:48',
-				text: 'AlphaFold 2 的手工设计不是偶然：把生物物理里的直觉（氨基酸残基会互相影响）预先写进模型，它就不用从头学，更省数据。而且关键是好数据，不是更多的数据。',
+				text: 'AlphaFold 2 把生物物理直觉预先写进模型，所以更省数据；好数据比多数据重要。',
 			},
-			{
-				at: '15:28',
-				text: '「蛋白质是生命的积木」这句话，Pushmeet 说他自己都不信。蛋白质会无序，形状随环境变化；AlphaFold 做的只是复现数据库里那一个已知结构，恰好很有用。',
-			},
+			{ at: '15:28', text: 'AlphaFold 复现的是数据库里那一个已知结构，蛋白质真实怎么动还没搞懂。' },
 			{
 				at: '19:09',
-				text: 'Sal 的比喻：现在的模型像是想弄懂自行车，却在给一根辐条建模。下一步要从辐条走到轮子、再到整辆车，也就是从单个蛋白质走到整个生物系统。',
+				text: '现在的模型像在给自行车的一根辐条建模，下一步是整辆车：整个生物系统。',
 			},
-			{
-				at: '22:18',
-				text: '蛋白质语言模型里装的东西比我们知道的多：除了结构，还能从里面挖出功能和运动方面的信息。',
-			},
+			{ at: '22:18', text: '蛋白质语言模型里藏着功能、运动等还没被读出来的信息。' },
 			{
 				at: '23:53',
-				text: '比起完全的可解释性，更要紧的是可信：AlphaFold 给出的置信分必须校准，否则信心满满地给错答案，科学家可能白干一年。至于「解释给谁听」，将来也许是更大的模型来解释 AlphaFold。',
+				text: '比可解释更要紧的是可信：模型给出的置信分必须校准，否则会让人白干一年。',
 			},
 			{
 				at: '28:08',
-				text: '「AI 什么时候进临床」问错了：AI 已经用在药物研发的每个环节。真正十倍、百倍的加速，要先解决生物学本身的硬问题。',
+				text: 'AI 早已用在药物研发各环节；十倍级的加速，要先解决生物学本身的硬问题。',
 			},
 		],
 		chapters: [

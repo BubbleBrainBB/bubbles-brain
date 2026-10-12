@@ -14,6 +14,66 @@ export function episodeHref(episode: Pick<PodcastEpisode, 'id'>): string {
 	return `${PODCASTS_HREF}${episode.id}/`;
 }
 
+/** Every show, as a wall of covers. */
+export const SHOWS_HREF = `${PODCASTS_HREF}shows/`;
+
+export function showHref(show: Pick<PodcastShow, 'id'>): string {
+	return `${SHOWS_HREF}${show.id}/`;
+}
+
+/** A show's picked episodes, newest first. */
+export function showEpisodes(
+	show: Pick<PodcastShow, 'id'>,
+	episodes: PodcastEpisode[] = podcastEpisodes,
+): PodcastEpisode[] {
+	return episodes
+		.filter((episode) => episode.show === show.id)
+		.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+/** Shows by their newest picked episode, newest first; shows with none are left out. */
+export function showsByRecent(
+	shows: PodcastShow[] = podcastShows,
+	episodes: PodcastEpisode[] = podcastEpisodes,
+): PodcastShow[] {
+	const newest = (show: PodcastShow) => showEpisodes(show, episodes)[0]?.date ?? '';
+	return shows.filter((show) => newest(show)).sort((a, b) => (newest(a) < newest(b) ? 1 : -1));
+}
+
+export interface OutlineEntry {
+	/** Where a click plays from: the first takeaway's minute, else the chapter's start. */
+	at: number;
+	stamp: Timestamp;
+	/** The chapter's own start, in seconds: how the player knows which chapter is playing. */
+	start: number;
+	chapter: string;
+	points: string[];
+}
+
+/**
+ * 听什么: the show's chapters in order, each takeaway under the chapter it falls in. A chapter
+ * with takeaways plays from the first of them; one without is just its start and title.
+ */
+export function outline(episode: PodcastEpisode): OutlineEntry[] {
+	const starts = episode.chapters.map((chapter) => seconds(chapter.at));
+	return episode.chapters.map((chapter, index) => {
+		const from = starts[index];
+		const to = starts[index + 1] ?? Infinity;
+		const points = episode.points.filter((point) => {
+			const at = seconds(point.at);
+			return at >= from && at < to;
+		});
+		const stamp = points[0]?.at ?? chapter.at;
+		return {
+			at: seconds(stamp),
+			stamp,
+			start: from,
+			chapter: chapter.title,
+			points: points.map((point) => point.text),
+		};
+	});
+}
+
 /** 14:38 or 1:02:03 as seconds; NaN for anything else. */
 export function seconds(stamp: Timestamp): number {
 	if (!/^\d{1,2}(:\d{2}){1,2}$/.test(stamp)) return Number.NaN;
@@ -138,7 +198,11 @@ export function playerEpisode(episode: PodcastEpisode): PlayerEpisode {
 /** Problems a new episode can have, so a typo fails the tests rather than the page. */
 export function episodeProblems(episode: PodcastEpisode): string[] {
 	const problems: string[] = [];
-	const stamps = [...episode.points, ...episode.chapters].map((entry) => entry.at);
+	const stamps = [
+		...episode.points,
+		...episode.chapters,
+		...(episode.quote ? [episode.quote] : []),
+	].map((entry) => entry.at);
 	for (const stamp of stamps) {
 		const at = seconds(stamp);
 		if (Number.isNaN(at)) problems.push(`bad timestamp ${stamp}`);
@@ -147,6 +211,12 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 	const chapterTimes = episode.chapters.map((chapter) => seconds(chapter.at));
 	if (chapterTimes.some((at, index) => index > 0 && at <= chapterTimes[index - 1]))
 		problems.push('chapters out of order');
+	// Every takeaway must sit under a chapter, or the outline would drop it.
+	const firstChapter = chapterTimes[0] ?? 0;
+	for (const point of episode.points)
+		if (seconds(point.at) < firstChapter) problems.push(`${point.at} is before the first chapter`);
+	if (episode.quote && episode.quote.text.split(/\s+/).length > 15)
+		problems.push('quote is too long');
 	if (!/^\d{4}-\d{2}-\d{2}$/.test(episode.date)) problems.push(`bad date ${episode.date}`);
 	if (!/^https:\/\//.test(episode.audio)) problems.push('audio is not https');
 	return problems;

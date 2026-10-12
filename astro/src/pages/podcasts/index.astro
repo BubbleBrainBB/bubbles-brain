@@ -1,40 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { podcastShows } from '../../data/podcasts';
-import {
-	episodeHref,
-	episodesByMonth,
-	guestNames,
-	playerEpisode,
-	shortDateLabel,
-	showOf,
-} from '../../lib/podcasts';
+import PodcastEpisodeRow from '../../components/PodcastEpisodeRow.astro';
+import { episodesByMonth, SHOWS_HREF, showsByRecent } from '../../lib/podcasts';
 import '../../styles/podcasts.css';
 
 const months = episodesByMonth();
+const shows = showsByRecent();
 ---
 
 <BaseLayout
 	title="播客 · Bubble's Brain"
 	description="挑过的 AI 播客单集，附中文要点，站内就能听。"
 >
-	<div class="rr-page rr-page--narrow podcasts" data-podcasts>
-		<header class="rr-head">
+	<div class="rr-page podcasts" data-podcasts>
+		<header class="rr-head podcasts-head">
 			<h1 class="rr-title">播客</h1>
 			<p class="podcasts-lede">挑过的 AI 播客单集，附中文要点，站内就能听</p>
+			<a class="podcasts-shows-link" href={SHOWS_HREF}>收录 {shows.length} 档节目 →</a>
 		</header>
-
-		<div class="podcast-shows" role="group" aria-label="按节目">
-			<button type="button" aria-pressed="true" data-podcast-filter="">全部</button>
-			{
-				podcastShows.map((show) => (
-					<button type="button" aria-pressed="false" data-podcast-filter={show.id}>
-						<img src={show.cover} alt="" width="24" height="24" loading="lazy" />
-						{show.name}
-					</button>
-				))
-			}
-		</div>
 
 		{
 			months.map((month) => (
@@ -43,59 +26,12 @@ const months = episodesByMonth();
 						{month.label}
 					</h2>
 					<ol class="podcast-list">
-						{month.episodes.map((episode) => {
-							const show = showOf(episode);
-							const guests = guestNames(episode);
-							return (
-								<li
-									class="podcast-row"
-									data-podcast-show={show.id}
-									data-podcast-episode={JSON.stringify(playerEpisode(episode))}
-								>
-									<img
-										class="podcast-row__cover"
-										src={show.cover}
-										alt=""
-										width="72"
-										height="72"
-										loading="lazy"
-									/>
-									<a class="podcast-row__body" href={episodeHref(episode)}>
-										<span class="podcast-row__title">{episode.title}</span>
-										<span class="podcast-row__original" lang="en">
-											{episode.originalTitle}
-										</span>
-										<span class="podcast-row__pitch">{episode.pitch}</span>
-										<span class="podcast-row__meta">
-											{[show.name, guests, shortDateLabel(episode.date)]
-												.filter(Boolean)
-												.join(' · ')}
-										</span>
-									</a>
-									<button
-										class="podcast-play podcast-play--round"
-										type="button"
-										aria-pressed="false"
-										aria-label={`播放：${episode.title}`}
-										data-podcast-play
-									>
-										<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true">
-											<path d="M8 5v14l11-7z" />
-										</svg>
-										<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true">
-											<path d="M6 4h4v16H6zM14 4h4v16h-4z" />
-										</svg>
-									</button>
-								</li>
-							);
-						})}
+						{month.episodes.map((episode) => (
+							<PodcastEpisodeRow episode={episode} />
+						))}
 					</ol>
 				</section>
 			))
 		}
 	</div>
 </BaseLayout>
-
-<script>
-	import '../../scripts/podcasts';
-</script>

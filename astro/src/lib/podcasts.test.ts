@@ -8,6 +8,10 @@ import {
 	episodeProblems,
 	episodesByMonth,
 	guestNames,
+	outline,
+	showEpisodes,
+	showHref,
+	showsByRecent,
 	peopleLine,
 	playerEpisode,
 	seconds,
@@ -98,5 +102,51 @@ describe('the list', () => {
 			['2026年10月', ['b', 'c']],
 			['2026年9月', ['a']],
 		]);
+	});
+});
+
+describe('听什么', () => {
+	it('puts each takeaway under the chapter it falls in, and plays from it', () => {
+		const entries = outline(alphafold);
+		expect(entries).toHaveLength(alphafold.chapters.length);
+		const folding = entries.find(
+			(entry) => entry.chapter === '为什么 AlphaFold 还没解决蛋白质折叠',
+		)!;
+		expect(folding).toMatchObject({ stamp: '15:28', at: 928 });
+		expect(folding.points).toHaveLength(1);
+		const quiet = entries.find((entry) => entry.chapter === 'Transformer 之后的架构')!;
+		expect(quiet).toEqual({
+			at: 819,
+			stamp: '13:39',
+			start: 819,
+			chapter: 'Transformer 之后的架构',
+			points: [],
+		});
+		expect(entries.flatMap((entry) => entry.points)).toHaveLength(alphafold.points.length);
+	});
+
+	it('flags a takeaway before the first chapter and an overlong quote', () => {
+		const broken = {
+			...alphafold,
+			chapters: [{ at: '05:00', title: 'a' }],
+			points: [{ at: '01:00', text: 'x' }],
+			quote: {
+				...alphafold.quote!,
+				text: 'one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen',
+			},
+		};
+		expect(episodeProblems(broken)).toEqual([
+			'01:00 is before the first chapter',
+			'quote is too long',
+		]);
+	});
+});
+
+describe('shows', () => {
+	it('lists shows with picked episodes, newest first, each with its own page', () => {
+		const shows = showsByRecent();
+		expect(shows.map((show) => show.id)).toContain('latent-space');
+		expect(showHref(shows[0])).toBe(`/podcasts/shows/${shows[0].id}/`);
+		expect(showEpisodes(shows[0]).every((episode) => episode.show === shows[0].id)).toBe(true);
 	});
 });
