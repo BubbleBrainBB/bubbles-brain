@@ -2029,6 +2029,18 @@
 				"/_responsive/media/showcase/claude-opus-5.5-ozymandias-1280.webp"
 			]
 		},
+		"/media/showcase/claude-opus-5.5-paper-plane.webp": {
+			"source_sha256": "e69bd6b7f03e1ccc6f01638e3327d9754c2d42322513b0243c686060820eee48",
+			"width": 1920,
+			"variants": [
+				"/_responsive/media/showcase/claude-opus-5.5-paper-plane-640.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-paper-plane-640.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-paper-plane-960.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-paper-plane-960.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-paper-plane-1440.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-paper-plane-1440.webp"
+			]
+		},
 		"/media/showcase/claude-opus-5.5-pixel-heat-film.webp": {
 			"source_sha256": "a371bf9a2812915e9f9665cbf2bfdc4aeb60a254dad4c3f9274eb116c7b743d4",
 			"width": 1440,

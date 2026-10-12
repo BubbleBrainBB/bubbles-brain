@@ -1329,6 +1329,25 @@ Generic AI clichés (brains, robots, neural nets, sparkles), soft gradients, bou
 			platform: 'X',
 		},
 	},
+	{
+		id: 'claude-opus-5.5-paper-plane',
+		title: '纸飞机的旅程',
+		category: 'demo',
+		medium: 'code-to-video',
+		model: 'Claude Opus 5.5',
+		video: '/media/showcase/claude-opus-5.5-paper-plane.mp4',
+		poster: '/media/showcase/claude-opus-5.5-paper-plane.webp',
+		width: 1920,
+		height: 1080,
+		duration: 30,
+		added: '2026-10-12',
+		note: '一张红纸折成纸飞机，飞过剪纸做的海浪、田野和风车小镇，钻进一圈圈彩虹色的纸洞，最后落回一朵彩纸花上。整支动画都是 Claude Opus 5.5 用代码做的纸艺风格，配乐也是它自己挑的。',
+		source: {
+			author: '@LexnLin',
+			url: 'https://x.com/LexnLin/status/2108567673890111948',
+			platform: 'X',
+		},
+	},
 ];
 
 export const showcaseHref = (work: Pick<ShowcaseWork, 'id'>) => `/vibe-coding/showcase/${work.id}/`;
