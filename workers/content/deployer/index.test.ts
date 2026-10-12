@@ -1070,6 +1070,43 @@ describe("automatic code release boundary", () => {
     ).toHaveLength(2);
   });
 
+  it("accepts the podcast section, its data file included", () => {
+    const releasePaths = [
+      "astro/route-ownership.json",
+      "astro/src/components/PodcastEpisodeRow.astro",
+      "astro/src/components/PodcastPlayer.astro",
+      "astro/src/data/changelog.ts",
+      "astro/src/data/podcasts.ts",
+      "astro/src/layouts/BaseLayout.astro",
+      "astro/src/lib/podcasts.test.ts",
+      "astro/src/lib/podcasts.ts",
+      "astro/src/lib/siteManifest.ts",
+      "astro/src/lib/siteSections.ts",
+      "astro/src/pages/podcasts/[episode].astro",
+      "astro/src/pages/podcasts/index.astro",
+      "astro/src/pages/podcasts/shows/[show].astro",
+      "astro/src/pages/podcasts/shows/index.astro",
+      "astro/src/scripts/podcastPlayer.ts",
+      "astro/src/styles/podcast-player.css",
+      "astro/src/styles/podcasts.css",
+      "scripts/verify-site.mjs",
+    ];
+    expect(
+      validateCodeReleaseChangeSet(
+        comparison(
+          releasePaths.map((filename) => ({ filename, status: "added" })),
+        ),
+        { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+      ),
+    ).toHaveLength(releasePaths.length);
+    expect(() =>
+      validateCodeReleaseChangeSet(
+        comparison([{ filename: "astro/src/data/podcasts.draft.ts", status: "added" }]),
+        { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+      ),
+    ).toThrow("Code release contains forbidden or unknown path: astro/src/data/podcasts.draft.ts");
+  });
+
   it("accepts the eval case ledger, demos, thumbnails and vendor logos only", () => {
     const releasePaths = [
       "data/eval-cases/cases.json",
