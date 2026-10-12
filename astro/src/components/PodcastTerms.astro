@@ -1,0 +1,33 @@
+---
+/**
+ * Outline text with its glossary words marked: a dotted underline, and what the word means on
+ * hover, focus or tap (scripts/podcastTerms.ts keeps the note inside the screen).
+ */
+import type { TextPart } from '../lib/podcasts';
+
+interface Props {
+	parts: TextPart[];
+}
+
+const { parts } = Astro.props;
+const noteId = (term: string) => `podcast-term-${term.replace(/\s+/g, '-')}`;
+---
+
+{
+	parts.map((part) =>
+		typeof part === 'string' ? (
+			part
+		) : (
+			<span class="podcast-term" data-podcast-term>
+				<>
+					<span class="podcast-term__word" tabindex="0" aria-describedby={noteId(part.term)}>
+						{part.term}
+					</span>
+					<span class="podcast-term__note" id={noteId(part.term)} role="tooltip">
+						{part.term}：{part.meaning}
+					</span>
+				</>
+			</span>
+		),
+	)
+}

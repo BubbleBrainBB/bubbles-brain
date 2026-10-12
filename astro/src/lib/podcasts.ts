@@ -73,6 +73,36 @@ export function outline(episode: PodcastEpisode): OutlineEntry[] {
 	});
 }
 
+/** A run of outline text, or a glossary word in it with what it means. */
+export type TextPart = string | { term: string; meaning: string };
+
+/**
+ * Splits text at the glossary words it contains, each word only the first time it appears on the
+ * page: `seen` carries the words already explained from one call to the next, in reading order.
+ */
+export function withTerms(
+	text: string,
+	glossary: PodcastEpisode['glossary'] = [],
+	seen: Set<string> = new Set(),
+): TextPart[] {
+	const parts: TextPart[] = [];
+	let rest = text;
+	for (;;) {
+		const next = glossary
+			.filter((entry) => !seen.has(entry.term))
+			.map((entry) => ({ entry, index: rest.indexOf(entry.term) }))
+			.filter((found) => found.index >= 0)
+			.sort((a, b) => a.index - b.index || b.entry.term.length - a.entry.term.length)[0];
+		if (!next) break;
+		if (next.index > 0) parts.push(rest.slice(0, next.index));
+		parts.push({ term: next.entry.term, meaning: next.entry.meaning });
+		seen.add(next.entry.term);
+		rest = rest.slice(next.index + next.entry.term.length);
+	}
+	if (rest) parts.push(rest);
+	return parts;
+}
+
 /** 14:38 or 1:02:03 as seconds; NaN for anything else. */
 export function seconds(stamp: Timestamp): number {
 	if (!/^\d{1,2}(:\d{2}){1,2}$/.test(stamp)) return Number.NaN;
@@ -212,6 +242,14 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 	const reasons = episode.brief?.reasons.length;
 	if (reasons !== undefined && (reasons < 2 || reasons > 4)) problems.push(`${reasons} reasons`);
 	if ((episode.questions?.length ?? 0) > 3) problems.push('more than three questions');
+	// A glossary word nobody reads in the outline is never shown.
+	const outlineText = [
+		...episode.chapters.map((c) => c.title),
+		...episode.points.map((p) => p.text),
+	];
+	for (const entry of episode.glossary ?? [])
+		if (!outlineText.some((text) => text.includes(entry.term)))
+			problems.push(`${entry.term} is not in the outline`);
 	if (!/^\d{4}-\d{2}-\d{2}$/.test(episode.date)) problems.push(`bad date ${episode.date}`);
 	if (!/^https:\/\//.test(episode.audio)) problems.push('audio is not https');
 	return problems;

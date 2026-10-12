@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PodcastTerms from '../../components/PodcastTerms.astro';
 import { podcastEpisodes, type PodcastEpisode } from '../../data/podcasts';
 import {
+	clock,
 	dateLabel,
 	durationLabel,
 	episodeHref,
@@ -11,6 +13,7 @@ import {
 	seconds,
 	showHref,
 	showOf,
+	withTerms,
 } from '../../lib/podcasts';
 import '../../styles/podcasts.css';
 
@@ -25,6 +28,15 @@ const { episode } = Astro.props as { episode: PodcastEpisode };
 const show = showOf(episode);
 const guests = episode.people.filter((person) => !person.role);
 const hosts = episode.people.filter((person) => person.role);
+const player = playerEpisode(episode);
+// Each glossary word is explained once, where the outline first uses it.
+const seenTerms = new Set<string>();
+const entries = outline(episode).map((entry) => ({
+	...entry,
+	chapterParts: withTerms(entry.chapter, episode.glossary, seenTerms),
+	pointParts: entry.points.map((point) => withTerms(point, episode.glossary, seenTerms)),
+}));
+const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at < episode.duration);
 ---
 
 <BaseLayout
@@ -32,10 +44,7 @@ const hosts = episode.people.filter((person) => person.role);
 	description={episode.lede}
 	canonicalPath={episodeHref(episode)}
 >
-	<article
-		class="rr-page podcast-episode"
-		data-podcast-episode={JSON.stringify(playerEpisode(episode))}
-	>
+	<article class="rr-page podcast-episode" data-podcast-episode={JSON.stringify(player)}>
 		<nav class="podcast-crumbs" aria-label="位置">
 			<a href={PODCASTS_HREF}>播客</a>
 			<span aria-hidden="true">/</span>
@@ -73,6 +82,29 @@ const hosts = episode.people.filter((person) => person.role);
 				>
 				<span data-podcast-play-label>播放</span>
 			</button>
+			<div class="podcast-progress" data-podcast-progress>
+				<span class="podcast-progress__time" data-podcast-progress-elapsed>0:00</span>
+				<span class="podcast-player__track">
+					<span class="podcast-player__ticks" aria-hidden="true">
+						{
+							ticks.map((chapter) => (
+								<span style={`left: ${(chapter.at / episode.duration) * 100}%`} />
+							))
+						}
+					</span>
+					<input
+						class="podcast-player__seek"
+						type="range"
+						min="0"
+						max={episode.duration}
+						step="1"
+						value="0"
+						aria-label="播放进度"
+						data-podcast-progress-seek
+					/>
+				</span>
+				<span class="podcast-progress__time">{clock(episode.duration)}</span>
+			</div>
 		</div>
 
 		<dl class="podcast-people">
@@ -198,7 +230,7 @@ const hosts = episode.people.filter((person) => person.role);
 			<h2 class="podcast-section__title" id="podcast-outline">听什么</h2>
 			<ol>
 				{
-					outline(episode).map((entry) => (
+					entries.map((entry) => (
 						<li class:list={['podcast-outline__entry', { 'has-points': entry.points.length > 0 }]}>
 							<button
 								class="podcast-outline__at"
@@ -210,9 +242,13 @@ const hosts = episode.people.filter((person) => person.role);
 								{entry.stamp}
 							</button>
 							<div class="podcast-outline__body">
-								<span class="podcast-outline__chapter">{entry.chapter}</span>
-								{entry.points.map((point) => (
-									<p class="podcast-outline__point">{point}</p>
+								<span class="podcast-outline__chapter">
+									<PodcastTerms parts={entry.chapterParts} />
+								</span>
+								{entry.pointParts.map((parts) => (
+									<p class="podcast-outline__point">
+										<PodcastTerms parts={parts} />
+									</p>
 								))}
 							</div>
 						</li>
@@ -233,3 +269,7 @@ const hosts = episode.people.filter((person) => person.role);
 		</footer>
 	</article>
 </BaseLayout>
+
+<script>
+	import '../../scripts/podcastTerms';
+</script>
