@@ -27,7 +27,6 @@ const show = showOf(episode);
 const terms = termLinks(episode);
 const guests = episode.people.filter((person) => !person.role);
 const hosts = episode.people.filter((person) => person.role);
-const listen = [...show.links, { label: '原文与文字稿', url: episode.source }];
 ---
 
 <BaseLayout
@@ -76,18 +75,6 @@ const listen = [...show.links, { label: '原文与文字稿', url: episode.sourc
 				>
 				<span data-podcast-play-label>播放</span>
 			</button>
-			<details class="podcast-elsewhere">
-				<summary>其他收听方式</summary>
-				<p class="podcast-links">
-					{
-						listen.map((link) => (
-							<a href={link.url} target="_blank" rel="noopener noreferrer">
-								{link.label}
-							</a>
-						))
-					}
-				</p>
-			</details>
 		</div>
 
 		<dl class="podcast-people">
