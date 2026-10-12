@@ -65,6 +65,14 @@ export interface PodcastEpisode {
 		answer: string;
 		reasons: { at: Timestamp; head: string; text: string }[];
 	};
+	/** 时间花在哪: the show's chapters merged into a few topics, each from its first chapter. */
+	topics?: { at: Timestamp; title: string }[];
+	/** Where the guests disagree: one question, each side's short answer, and what they share. */
+	stances?: {
+		question: string;
+		sides: { name: string; org: string; verdict: string; view: string; at: Timestamp }[];
+		agree: string;
+	};
 	/** 听完你能回答: up to three questions the brief leaves open, each answered in a sentence or two. */
 	questions?: { question: string; answer: string; at: Timestamp }[];
 	/** Words in the outline a reader may not know, explained where they first appear. */
@@ -186,10 +194,11 @@ export const podcastEpisodes: PodcastEpisode[] = [
 				at: '04:54',
 			},
 			{
-				question: 'AI 模型需要被人看懂吗？',
+				question: 'AlphaFold 能被看懂吗？',
 				answer:
-					'两位嘉宾看法不同。Sal 认为看懂模型能挖出新的科学知识；Pushmeet 认为更要紧的是可信：置信分校准好，人才敢拿结果去做实验。',
-				at: '22:18',
+					'要看谁来看。对人脑来说，它看不懂；但 Pushmeet 猜，以后更大的模型也许能读懂它内部是怎么工作的。' +
+					'对用户来说，更要紧的是摸清它能做什么、不能做什么。',
+				at: '25:56',
 			},
 			{
 				question: 'AI 什么时候真正改变药物研发？',
@@ -198,6 +207,33 @@ export const podcastEpisodes: PodcastEpisode[] = [
 				at: '29:47',
 			},
 		],
+		topics: [
+			{ at: '00:00', title: '数据与扩展定律' },
+			{ at: '09:52', title: '模型怎么设计' },
+			{ at: '14:38', title: 'AlphaFold 的局限' },
+			{ at: '20:43', title: '理解与可信' },
+			{ at: '27:43', title: '药物研发与未来' },
+		],
+		stances: {
+			question: '要不要看懂模型内部？',
+			sides: [
+				{
+					name: 'Sal Candido',
+					org: 'Biohub',
+					verdict: '要。',
+					view: '蛋白质语言模型里藏着人还没读出来的知识，看懂它本身就是收获。',
+					at: '22:18',
+				},
+				{
+					name: 'Pushmeet Kohli',
+					org: 'Google DeepMind',
+					verdict: '不一定。',
+					view: '更要紧的是可信：置信分校准好，人才敢拿结果去做实验。',
+					at: '23:53',
+				},
+			],
+			agree: '结构预测远没做完，蛋白质动力学还要继续投入。',
+		},
 		glossary: [
 			{
 				term: '苦涩的教训',

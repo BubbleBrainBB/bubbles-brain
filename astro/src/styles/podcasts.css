@@ -1,5 +1,5 @@
 /* 播客: the list (P4), a show's page (P5), all shows (P6) and an episode's page (P8, with P15's
-   一图读懂 and 听完你能回答). The player
+   一图读懂 and 听完你能回答, P10's 时间花在哪 and P11's 嘉宾分歧). The player
    is styles/podcast-player.css. */
 
 .podcasts-head {
@@ -128,6 +128,8 @@
 .podcast-brief__reason:focus-visible,
 .podcast-quiz__item summary:focus-visible,
 .podcast-quiz__play:focus-visible,
+.podcast-stances__play:focus-visible,
+.podcast-topics__item:focus-visible,
 .podcast-outline__at:focus-visible,
 .podcast-quote__play:focus-visible {
 	outline: 2px solid var(--focus);
@@ -576,6 +578,139 @@
 	text-underline-offset: 4px;
 }
 
+/* 时间花在哪 (P10): a bar per topic, as wide as the time spent on it. */
+.podcast-topics {
+	margin-top: 40px;
+}
+.podcast-topics__head {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	margin: 0 0 12px;
+	color: var(--ink-faint);
+	font-size: 12.5px;
+}
+.podcast-topics__head .podcast-section__title {
+	margin: 0;
+	color: var(--ink);
+}
+.podcast-topics__list {
+	display: flex;
+	gap: 3px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.podcast-topics__list li {
+	flex: 1 1 0;
+	min-width: 0;
+}
+.podcast-topics__item {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--ink);
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+.podcast-topics__bar {
+	display: block;
+	height: 10px;
+	border-radius: 3px;
+	background: #d9d9d9;
+	transition: background-color 160ms ease;
+}
+.podcast-topics__item:hover .podcast-topics__bar {
+	background: #9a9a9a;
+}
+.podcast-topics__item[aria-current] .podcast-topics__bar {
+	background: var(--ink);
+}
+.podcast-topics__name {
+	color: #333333;
+	font-size: 13px;
+	line-height: 1.4;
+}
+.podcast-topics__item[aria-current] .podcast-topics__name {
+	color: var(--ink);
+	font-weight: 600;
+}
+.podcast-topics__len {
+	margin-top: -6px;
+	color: var(--ink-faint);
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+}
+/* 两位嘉宾在哪里不一样 (P11) */
+.podcast-stances {
+	margin-top: 40px;
+}
+.podcast-stances__question {
+	margin: 8px 0 12px;
+	font-size: 17px;
+	font-weight: 600;
+}
+.podcast-stances__sides {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+}
+.podcast-stances__side {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 14px 16px;
+	border-radius: 12px;
+	background: var(--paper-muted);
+}
+.podcast-stances__who {
+	margin: 0;
+	font-size: 13px;
+}
+.podcast-stances__who span {
+	color: var(--ink-faint);
+}
+.podcast-stances__view {
+	flex: 1 1 auto;
+	margin: 0;
+	color: #333333;
+	font-size: 14.5px;
+	line-height: 1.7;
+}
+.podcast-stances__view strong {
+	margin-right: 4px;
+	color: var(--ink);
+}
+.podcast-stances__play {
+	align-self: flex-start;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--ink-faint);
+	font: inherit;
+	font-size: 12.5px;
+	font-variant-numeric: tabular-nums;
+	cursor: pointer;
+}
+.podcast-stances__play:hover {
+	color: var(--ink);
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+.podcast-stances__agree {
+	margin: 12px 0 0;
+	color: var(--ink-soft);
+	font-size: 13.5px;
+	line-height: 1.7;
+}
+.podcast-stances__agree span {
+	color: var(--ink-faint);
+}
 .podcast-section__title {
 	margin: 0 0 8px;
 	font-size: 15px;
@@ -765,6 +900,80 @@
 	.podcast-progress {
 		flex-basis: 100%;
 		max-width: none;
+	}
+	.podcast-stances__sides {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	/* On a phone the topics stack, each bar as long as its share of the episode (P12). */
+	.podcast-topics__list {
+		flex-direction: column;
+		gap: 0;
+	}
+	.podcast-topics__list li {
+		flex: none !important;
+		border-bottom: 1px solid var(--rule);
+	}
+	.podcast-topics__item {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		row-gap: 6px;
+		align-items: baseline;
+		padding: 10px 0;
+	}
+	.podcast-topics__bar {
+		grid-row: 2;
+		grid-column: 1 / -1;
+		width: var(--share);
+		height: 6px;
+	}
+	.podcast-topics__name {
+		font-size: 14px;
+	}
+	.podcast-topics__len {
+		margin-top: 0;
+	}
+	.podcast-brief__card {
+		padding: 16px 14px 4px;
+		border-radius: 14px;
+	}
+	.podcast-brief__question strong {
+		font-size: 17px;
+	}
+	.podcast-brief__question span {
+		font-size: 14px;
+	}
+	.podcast-brief__reasons,
+	.podcast-brief__reasons[data-count] {
+		--columns: 1;
+		gap: 8px;
+		margin-top: 12px;
+	}
+	.podcast-brief__reason {
+		padding: 12px;
+		border-radius: 10px;
+	}
+	.podcast-brief__text {
+		font-size: 13.5px;
+		line-height: 1.6;
+	}
+	.podcast-quiz {
+		margin-top: 18px;
+	}
+	.podcast-quiz__item summary {
+		padding: 12px 0;
+		font-size: 14.5px;
+	}
+	.podcast-quiz__answer {
+		font-size: 13.5px;
+		line-height: 1.75;
+	}
+	.podcast-outline__entry {
+		grid-template-columns: 44px minmax(0, 1fr);
+		column-gap: 10px;
+	}
+	.podcast-outline__point {
+		font-size: 14px;
+		line-height: 1.7;
 	}
 	.podcast-brief__card {
 		padding: 16px 14px 4px;
