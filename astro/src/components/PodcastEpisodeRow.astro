@@ -1,0 +1,53 @@
+---
+/** One episode in a list: cover, headline, then show · length · date; a play button on the right. */
+import type { PodcastEpisode } from '../data/podcasts';
+import {
+	durationLabel,
+	episodeHref,
+	playerEpisode,
+	shortDateLabel,
+	showHref,
+	showOf,
+} from '../lib/podcasts';
+
+interface Props {
+	episode: PodcastEpisode;
+	/** Off on a show's own page, where every row is the same show. */
+	withShow?: boolean;
+}
+
+const { episode, withShow = true } = Astro.props;
+const show = showOf(episode);
+---
+
+<li class="podcast-row" data-podcast-episode={JSON.stringify(playerEpisode(episode))}>
+	<img class="podcast-row__cover" src={show.cover} alt="" width="56" height="56" loading="lazy" />
+	<div class="podcast-row__body">
+		<a class="podcast-row__title" href={episodeHref(episode)}>{episode.title}</a>
+		<p class="podcast-row__meta">
+			{
+				withShow && (
+					<>
+						<a href={showHref(show)}>{show.name}</a>
+						<span aria-hidden="true"> · </span>
+					</>
+				)
+			}
+			{durationLabel(episode.duration)} · {shortDateLabel(episode.date)}
+		</p>
+	</div>
+	<button
+		class="podcast-play podcast-play--round"
+		type="button"
+		aria-pressed="false"
+		aria-label={`播放：${episode.title}`}
+		data-podcast-play
+	>
+		<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true"
+			><path d="M8 5v14l11-7z"></path></svg
+		>
+		<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true"
+			><path d="M6 4h4v16H6zM14 4h4v16h-4z"></path></svg
+		>
+	</button>
+</li>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PodcastEpisodeRow from '../../../components/PodcastEpisodeRow.astro';
+import { podcastShows, type PodcastShow } from '../../../data/podcasts';
+import {
+	episodesByMonth,
+	PODCASTS_HREF,
+	SHOWS_HREF,
+	showEpisodes,
+	showHref,
+} from '../../../lib/podcasts';
+import '../../../styles/podcasts.css';
+
+export function getStaticPaths() {
+	return podcastShows
+		.filter((show) => showEpisodes(show).length > 0)
+		.map((show) => ({ params: { show: show.id }, props: { show } }));
+}
+
+const { show } = Astro.props as { show: PodcastShow };
+const episodes = showEpisodes(show);
+const months = episodesByMonth(episodes);
+const links = [...show.links, { label: '官网', url: show.site }];
+---
+
+<BaseLayout
+	title={`${show.name} · 播客 · Bubble's Brain`}
+	description={show.description}
+	canonicalPath={showHref(show)}
+>
+	<div class="rr-page podcasts" data-podcast-show-page>
+		<nav class="podcast-crumbs" aria-label="位置">
+			<a href={PODCASTS_HREF}>播客</a>
+			<span aria-hidden="true">/</span>
+			<a href={SHOWS_HREF}>节目</a>
+			<span aria-hidden="true">/</span>
+			<span>{show.name}</span>
+		</nav>
+		<header class="podcast-show-head">
+			<img class="podcast-show-head__cover" src={show.cover} alt="" width="120" height="120" />
+			<div class="podcast-show-head__text">
+				<h1 class="podcast-show-head__name">{show.name}</h1>
+				<p class="podcast-show-head__about">{show.description}</p>
+				<p class="podcast-show-head__meta">{show.language} · 收录 {episodes.length} 期</p>
+				<p class="podcast-links">
+					{
+						links.map((link) => (
+							<a href={link.url} target="_blank" rel="noopener noreferrer">
+								{link.label}
+							</a>
+						))
+					}
+				</p>
+			</div>
+		</header>
+		{
+			months.map((month) => (
+				<section class="podcast-month" aria-labelledby={`podcast-month-${month.key}`}>
+					<h2 class="podcast-month__label" id={`podcast-month-${month.key}`}>
+						{month.label}
+					</h2>
+					<ol class="podcast-list">
+						{month.episodes.map((episode) => (
+							<PodcastEpisodeRow episode={episode} withShow={false} />
+						))}
+					</ol>
+				</section>
+			))
+		}
+	</div>
+</BaseLayout>

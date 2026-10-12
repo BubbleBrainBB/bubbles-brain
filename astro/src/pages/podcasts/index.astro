@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PodcastEpisodeRow from '../../components/PodcastEpisodeRow.astro';
+import { episodesByMonth, SHOWS_HREF, showsByRecent } from '../../lib/podcasts';
+import '../../styles/podcasts.css';
+
+const months = episodesByMonth();
+const shows = showsByRecent();
+---
+
+<BaseLayout
+	title="播客 · Bubble's Brain"
+	description="挑过的 AI 播客单集，附中文要点，站内就能听。"
+>
+	<div class="rr-page podcasts" data-podcasts>
+		<header class="rr-head podcasts-head">
+			<h1 class="rr-title">播客</h1>
+			<p class="podcasts-lede">挑过的 AI 播客单集，附中文要点，站内就能听</p>
+			<a class="podcasts-shows-link" href={SHOWS_HREF}>收录 {shows.length} 档节目 →</a>
+		</header>
+
+		{
+			months.map((month) => (
+				<section class="podcast-month" aria-labelledby={`podcast-month-${month.key}`}>
+					<h2 class="podcast-month__label" id={`podcast-month-${month.key}`}>
+						{month.label}
+					</h2>
+					<ol class="podcast-list">
+						{month.episodes.map((episode) => (
+							<PodcastEpisodeRow episode={episode} />
+						))}
+					</ol>
+				</section>
+			))
+		}
+	</div>
+</BaseLayout>

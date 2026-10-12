@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { podcastEpisodes, type PodcastEpisode } from '../../data/podcasts';
+import {
+	dateLabel,
+	durationLabel,
+	episodeHref,
+	outline,
+	PODCASTS_HREF,
+	playerEpisode,
+	seconds,
+	showHref,
+	showOf,
+	termLinks,
+} from '../../lib/podcasts';
+import '../../styles/podcasts.css';
+
+export function getStaticPaths() {
+	return podcastEpisodes.map((episode) => ({
+		params: { episode: episode.id },
+		props: { episode },
+	}));
+}
+
+const { episode } = Astro.props as { episode: PodcastEpisode };
+const show = showOf(episode);
+const terms = termLinks(episode);
+const guests = episode.people.filter((person) => !person.role);
+const hosts = episode.people.filter((person) => person.role);
+const listen = [...show.links, { label: '原文与文字稿', url: episode.source }];
+---
+
+<BaseLayout
+	title={`${episode.title} · ${show.name} · 播客 · Bubble's Brain`}
+	description={episode.lede}
+	canonicalPath={episodeHref(episode)}
+>
+	<article
+		class="rr-page podcast-episode"
+		data-podcast-episode={JSON.stringify(playerEpisode(episode))}
+	>
+		<nav class="podcast-crumbs" aria-label="位置">
+			<a href={PODCASTS_HREF}>播客</a>
+			<span aria-hidden="true">/</span>
+			<a href={showHref(show)}>{show.name}</a>
+		</nav>
+
+		<header class="podcast-head">
+			<img class="podcast-head__cover" src={show.cover} alt="" width="88" height="88" />
+			<div class="podcast-head__text">
+				<h1 class="podcast-head__title">{episode.title}</h1>
+				<p class="podcast-head__meta">
+					<a href={showHref(show)}>{show.name}</a>
+					{
+						` · ${[dateLabel(episode.date), durationLabel(episode.duration), episode.language].join(' · ')}`
+					}
+				</p>
+			</div>
+		</header>
+		<p class="podcast-head__original" lang="en">{episode.originalTitle}</p>
+
+		<p class="podcast-lede">{episode.lede}</p>
+
+		<div class="podcast-actions">
+			<button
+				class="podcast-play podcast-play--pill"
+				type="button"
+				aria-pressed="false"
+				data-podcast-play
+			>
+				<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true"
+					><path d="M8 5v14l11-7z"></path></svg
+				>
+				<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true"
+					><path d="M6 4h4v16H6zM14 4h4v16h-4z"></path></svg
+				>
+				<span data-podcast-play-label>播放</span>
+			</button>
+			<details class="podcast-elsewhere">
+				<summary>其他收听方式</summary>
+				<p class="podcast-links">
+					{
+						listen.map((link) => (
+							<a href={link.url} target="_blank" rel="noopener noreferrer">
+								{link.label}
+							</a>
+						))
+					}
+				</p>
+			</details>
+		</div>
+
+		<dl class="podcast-people">
+			{
+				guests.length > 0 && (
+					<>
+						<dt>嘉宾</dt>
+						<dd>
+							{guests.map((person, index) => (
+								<>
+									{index > 0 && (
+										<span class="podcast-people__sep" aria-hidden="true">
+											{' '}
+											·{' '}
+										</span>
+									)}
+									{person.name}
+									{person.org && <span class="podcast-people__org"> {person.org}</span>}
+								</>
+							))}
+						</dd>
+					</>
+				)
+			}
+			{
+				hosts.map((person) => (
+					<>
+						<dt>{person.role}</dt>
+						<dd>{person.name}</dd>
+					</>
+				))
+			}
+		</dl>
+
+		{
+			episode.quote && (
+				<figure class="podcast-quote">
+					<p class="podcast-quote__label">原话</p>
+					<blockquote lang="en">“{episode.quote.text}”</blockquote>
+					<p class="podcast-quote__translation">{episode.quote.translation}</p>
+					<figcaption>
+						{episode.quote.by}
+						<button
+							class="podcast-quote__play"
+							type="button"
+							data-podcast-at={seconds(episode.quote.at)}
+							aria-label={`从 ${episode.quote.at} 开始播放`}
+						>
+							▶ {episode.quote.at}
+						</button>
+					</figcaption>
+				</figure>
+			)
+		}
+
+		<section class="podcast-outline" aria-labelledby="podcast-outline">
+			<h2 class="podcast-section__title" id="podcast-outline">听什么</h2>
+			<ol>
+				{
+					outline(episode).map((entry) => (
+						<li class:list={['podcast-outline__entry', { 'has-points': entry.points.length > 0 }]}>
+							<button
+								class="podcast-outline__at"
+								type="button"
+								data-podcast-at={entry.at}
+								data-podcast-chapter-at={entry.start}
+								aria-label={`从 ${entry.stamp} 开始播放：${entry.chapter}`}
+							>
+								{entry.stamp}
+							</button>
+							<div class="podcast-outline__body">
+								<span class="podcast-outline__chapter">{entry.chapter}</span>
+								{entry.points.map((point) => (
+									<p class="podcast-outline__point">{point}</p>
+								))}
+							</div>
+						</li>
+					))
+				}
+			</ol>
+		</section>
+
+		<footer class="podcast-foot">
+			{
+				terms.length > 0 && (
+					<>
+						<span class="podcast-foot__label">相关知识</span>
+						{terms.map((term) => (
+							<a class="podcast-foot__term" href={term.href}>
+								{term.label}
+							</a>
+						))}
+					</>
+				)
+			}
+			<a
+				class="podcast-foot__source"
+				href={episode.source}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				原文与文字稿 ↗
+			</a>
+		</footer>
+	</article>
+</BaseLayout>

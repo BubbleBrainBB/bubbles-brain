@@ -3,6 +3,8 @@ import { benchmarkLedger, benchmarkRoute, pick } from './benchmarks';
 import { legacyEntryIsRoutable, loadLegacyContent } from './legacyContent';
 import { designBrands } from '../data/designBrands';
 import { showcaseHref, showcaseWorks } from '../data/showcase';
+import { podcastEpisodes } from '../data/podcasts';
+import { episodeHref, SHOWS_HREF, showHref, showOf, showsByRecent } from './podcasts';
 import { getVibeCodingConcepts } from '../data/vibeCodingTerms';
 
 export { renderRss } from './siteRss';
@@ -133,6 +135,14 @@ export async function loadSiteManifest(): Promise<SiteRecord[]> {
 			lastmod: null,
 		},
 		{
+			route: '/podcasts/',
+			title: '播客',
+			description: '挑过的 AI 播客单集，附中文要点，站内就能听。',
+			locale: 'zh-CN',
+			section: 'podcasts',
+			lastmod: null,
+		},
+		{
 			route: '/benchmarks/',
 			title: 'Benchmarks',
 			description: '前沿模型的第三方评测成绩汇总，手工核对',
@@ -182,6 +192,35 @@ export async function loadSiteManifest(): Promise<SiteRecord[]> {
 			locale: 'zh-CN',
 			section: 'vibe-coding',
 			lastmod: null,
+		});
+	}
+
+	records.push({
+		route: SHOWS_HREF,
+		title: '节目 · 播客',
+		description: '播客栏目收录的节目，按最近收录排序。',
+		locale: 'zh-CN',
+		section: 'podcasts',
+		lastmod: null,
+	});
+	for (const show of showsByRecent()) {
+		records.push({
+			route: showHref(show),
+			title: `${show.name} · 播客`,
+			description: show.description,
+			locale: 'zh-CN',
+			section: 'podcasts',
+			lastmod: null,
+		});
+	}
+	for (const episode of podcastEpisodes) {
+		records.push({
+			route: episodeHref(episode),
+			title: `${episode.title} · ${showOf(episode).name}`,
+			description: episode.lede,
+			locale: 'zh-CN',
+			section: 'podcasts',
+			lastmod: new Date(episode.date),
 		});
 	}
 
