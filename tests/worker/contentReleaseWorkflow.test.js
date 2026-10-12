@@ -42,6 +42,22 @@ describe("fenced content release workflow", () => {
     }
   });
 
+  it("installs root packages before a resumed Preview runs its first release script", async () => {
+    const workflow = await readFile(
+      new URL("../../.github/workflows/content-release.yml", import.meta.url),
+      "utf8",
+    );
+    // A resumed run skips the build stage's install, and the R2 client imports undici.
+    const steps = workflow.split("\n      - name: ").slice(1);
+    const preview = steps.filter((step) =>
+      /if: \$\{\{ steps\.resume\.outputs\.stage == 'preview'/.test(step));
+    const install = preview.findIndex((step) => /^\s+run: npm ci$/m.test(step));
+    const firstScript = preview.findIndex((step) => step.includes("node release-control/scripts/"));
+    expect(install).toBeGreaterThanOrEqual(0);
+    expect(firstScript).toBeGreaterThan(install);
+    expect(preview[install]).not.toContain("preview-reuse");
+  });
+
   it("derives resume stages from the deployer and materializes R2 checkpoints", async () => {
     const [workflow, deployerConfig] = await Promise.all([
       readFile(
