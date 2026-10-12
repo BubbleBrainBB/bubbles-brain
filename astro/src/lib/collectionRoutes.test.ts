@@ -37,6 +37,10 @@ describe('collection directories', () => {
 		expect(collectionHome('newbie-tutorials')).toBe('/tutorials/#newbie-tutorials');
 		expect(collectionHref('/codex-tutorials/')).toBe('/tutorials/#codex-tutorials');
 	});
+	it('keeps the anchor on a link to a directory that has not moved', () => {
+		expect(collectionHref('/vibe-coding/terms/#motion')).toBe('/vibe-coding/terms/#motion');
+		expect(collectionHref('/codex-tutorials/#intro')).toBe('/tutorials/#codex-tutorials');
+	});
 	it('preserves article identities, English pages and external source links', () => {
 		for (const href of [
 			'/workbuddy-tutorials/workbuddy-feishu-workflow-guide/',

@@ -64,7 +64,10 @@ export function collectionHref(href: string): string {
 	if (room) return collectionHome(room[1]);
 	const path = href.split(/[?#]/)[0];
 	const id = collectionDirectories[path] || (yearArchive.test(path) ? 'highlights' : '');
-	return id ? collectionHome(id) : href;
+	if (!id) return href;
+	// A directory that has not moved keeps the link's anchor; a moved one drops it, as it no longer applies.
+	const home = collectionHome(id);
+	return home === path ? href : home;
 }
 
 type LinkNode = {
