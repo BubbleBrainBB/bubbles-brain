@@ -456,6 +456,8 @@ const specializedMarkers = new Map([
   ["podcasts/latent-space-alphafold/index.html", ["data-podcast-at", "api.substack.com/feed/podcast/", "data-podcast-chapter-at", "data-podcast-brief", "data-podcast-progress", "data-podcast-term", "data-podcast-topics", "podcast-stances"]],
   ["podcasts/shows/index.html", ["data-podcast-shows", "/podcasts/shows/latent-space/"]],
   ["podcasts/shows/latent-space/index.html", ["data-podcast-show-page", "data-podcast-play"]],
+  ["podcasts/how-i-ai-grok-bot-designers/index.html", ["data-podcast-brief", "data-podcast-topics", "anchor.fm/s/1035b1568/podcast/play/"]],
+  ["podcasts/shows/how-i-ai/index.html", ["data-podcast-show-page", "/podcasts/how-i-ai-grok-bot-designers/"]],
   [
     "vibe-coding/terms/frontend/index.html",
     [
