@@ -13,6 +13,7 @@ import {
 	showHref,
 	showsByRecent,
 	peopleLine,
+	withTerms,
 	playerEpisode,
 	seconds,
 } from './podcasts';
@@ -53,6 +54,7 @@ describe('times', () => {
 	it('flags timestamps past the end and chapters out of order', () => {
 		const broken = {
 			...alphafold,
+			glossary: [],
 			points: [{ at: '40:00', text: 'x' }],
 			chapters: [
 				{ at: '05:00', title: 'b' },
@@ -75,6 +77,34 @@ describe('times', () => {
 			'1 reasons',
 			'more than three questions',
 		]);
+	});
+});
+
+describe('glossary words', () => {
+	const glossary = [
+		{ term: '扩展定律', meaning: 'Scaling law' },
+		{ term: '置信分', meaning: 'pLDDT' },
+	];
+
+	it('marks each word the first time the page uses it', () => {
+		const seen = new Set<string>();
+		expect(withTerms('找扩展定律，看置信分', glossary, seen)).toEqual([
+			'找',
+			{ term: '扩展定律', meaning: 'Scaling law' },
+			'，看',
+			{ term: '置信分', meaning: 'pLDDT' },
+		]);
+		expect(withTerms('扩展定律又来了', glossary, seen)).toEqual(['扩展定律又来了']);
+	});
+
+	it('leaves text without them alone', () => {
+		expect(withTerms('没有生词', glossary)).toEqual(['没有生词']);
+		expect(withTerms('没有词表')).toEqual(['没有词表']);
+	});
+
+	it('flags a word the outline never uses', () => {
+		const stray = { ...alphafold, glossary: [{ term: '不存在的词', meaning: 'x' }] };
+		expect(episodeProblems(stray)).toEqual(['不存在的词 is not in the outline']);
 	});
 });
 
@@ -137,6 +167,7 @@ describe('听什么', () => {
 	it('flags a takeaway before the first chapter and an overlong quote', () => {
 		const broken = {
 			...alphafold,
+			glossary: [],
 			chapters: [{ at: '05:00', title: 'a' }],
 			points: [{ at: '01:00', text: 'x' }],
 			quote: {

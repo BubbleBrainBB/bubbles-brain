@@ -67,6 +67,8 @@ export interface PodcastEpisode {
 	};
 	/** 听完你能回答: up to three questions the brief leaves open, each answered in a sentence or two. */
 	questions?: { question: string; answer: string; at: Timestamp }[];
+	/** Words in the outline a reader may not know, explained where they first appear. */
+	glossary?: { term: string; meaning: string }[];
 }
 
 export const podcastShows: PodcastShow[] = [
@@ -194,6 +196,34 @@ export const podcastEpisodes: PodcastEpisode[] = [
 				answer:
 					'其实已经用在各个环节了。要的是十倍级的加速，而不是 10% 的改进，这得先解决生物学本身的硬问题。',
 				at: '29:47',
+			},
+		],
+		glossary: [
+			{
+				term: '苦涩的教训',
+				meaning:
+					'The Bitter Lesson。Rich Sutton 的观点：长远看，能随算力一起扩展的通用方法，总会胜过人手设计的巧思。',
+			},
+			{
+				term: '扩展定律',
+				meaning: 'Scaling law。投入的算力、数据、参数越多，模型效果按可预测的规律变好。',
+			},
+			{
+				term: '归纳偏置',
+				meaning: 'Inductive bias。设计模型时预先放进去的假设，让它少学一些、更省数据。',
+			},
+			{
+				term: '冷冻电镜',
+				meaning: 'Cryo-EM。把蛋白质冻住再用电子显微镜拍照，能看到它的多种形态。',
+			},
+			{
+				term: '蛋白质语言模型',
+				meaning: '把氨基酸序列当成「文字」来训练的模型，像大语言模型读文本一样读蛋白质。',
+			},
+			{
+				term: '置信分',
+				meaning:
+					'AlphaFold 给每个预测打的把握程度（pLDDT）。分数要和真实准确率对得上，才叫校准好。',
 			},
 		],
 	},

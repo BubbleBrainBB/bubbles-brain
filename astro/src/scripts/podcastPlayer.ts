@@ -1,7 +1,8 @@
 /**
  * The 播客 player (components/PodcastPlayer.astro). Any element with `data-podcast-play` plays or
  * pauses the episode described by the nearest `data-podcast-episode` (a PlayerEpisode as JSON);
- * `data-podcast-at="878"` jumps there and plays. The bar persists across in-site navigation, so
+ * `data-podcast-at="878"` jumps there and plays; a `data-podcast-progress` line on the episode's page
+ * shows how far in it is and seeks. The bar persists across in-site navigation, so
  * listening carries on page to page; each episode resumes where the reader left it.
  * The audio is the show's own file, streamed from the show's host: nothing loads until play.
  */
@@ -102,6 +103,27 @@ function setup() {
 		seek.style.setProperty('--played', `${length() ? (at / length()) * 100 : 0}%`);
 		seek.setAttribute('aria-valuetext', `${clock(at)} / ${clock(length())}`);
 		chapter.textContent = chapterAt(at)?.title ? `· ${chapterAt(at)!.title}` : '';
+		showPageProgress();
+	};
+
+	/** The progress line on an episode's page: live while it plays, else where the reader left it. */
+	const showPageProgress = () => {
+		for (const line of document.querySelectorAll<HTMLElement>('[data-podcast-progress]')) {
+			const episode = parseEpisode(
+				line.closest<HTMLElement>('[data-podcast-episode]')?.dataset.podcastEpisode,
+			);
+			const input = line.querySelector<HTMLInputElement>('[data-podcast-progress-seek]');
+			const shown = line.querySelector<HTMLElement>('[data-podcast-progress-elapsed]');
+			if (!episode || !input || !shown || input.dataset.dragging) continue;
+			const mine = current?.id === episode.id;
+			const end = mine ? length() : episode.duration;
+			const at = Math.min(mine ? audio.currentTime : readPosition(episode.id), end);
+			shown.textContent = clock(at);
+			input.max = String(Math.floor(end));
+			input.value = String(Math.floor(at));
+			input.style.setProperty('--played', `${end ? (at / end) * 100 : 0}%`);
+			input.setAttribute('aria-valuetext', `${clock(at)} / ${clock(end)}`);
+		}
 	};
 
 	const drawTicks = () => {
@@ -192,6 +214,7 @@ function setup() {
 		root.hidden = true;
 		document.documentElement.classList.remove('has-podcast-player');
 		reflect();
+		showPageProgress();
 	});
 
 	seek.addEventListener('input', () => {
@@ -202,6 +225,31 @@ function setup() {
 	seek.addEventListener('change', () => {
 		seeking = false;
 		audio.currentTime = Number(seek.value);
+	});
+
+	// Dragging the page's line shows the time under the thumb; letting go plays from there.
+	document.addEventListener('input', (event) => {
+		const input = event.target as HTMLInputElement;
+		if (!input.matches?.('[data-podcast-progress-seek]')) return;
+		input.dataset.dragging = 'true';
+		const shown = input
+			.closest('[data-podcast-progress]')
+			?.querySelector<HTMLElement>('[data-podcast-progress-elapsed]');
+		if (shown) shown.textContent = clock(Number(input.value));
+		const end = Number(input.max);
+		input.style.setProperty('--played', `${end ? (Number(input.value) / end) * 100 : 0}%`);
+	});
+	document.addEventListener('change', (event) => {
+		const input = event.target as HTMLInputElement;
+		if (!input.matches?.('[data-podcast-progress-seek]')) return;
+		delete input.dataset.dragging;
+		const episode = parseEpisode(
+			input.closest<HTMLElement>('[data-podcast-episode]')?.dataset.podcastEpisode,
+		);
+		if (!episode) return;
+		if (current?.id === episode.id && audio.paused) audio.currentTime = Number(input.value);
+		else play(episode, Number(input.value));
+		showPageProgress();
 	});
 
 	audio.addEventListener('timeupdate', () => {
@@ -251,8 +299,12 @@ function setup() {
 		if (wasPlaying && audio.paused) void audio.play().catch(() => undefined);
 	});
 	// A new page brings new buttons; show them the state of what is playing.
-	document.addEventListener('astro:page-load', reflect);
+	document.addEventListener('astro:page-load', () => {
+		reflect();
+		showPageProgress();
+	});
 	reflect();
+	showPageProgress();
 }
 
 if (typeof document !== 'undefined') {
