@@ -408,6 +408,12 @@ jobs:
           evidence="$(jq -nc --arg object_key "$ARTIFACT_OBJECT_KEY" --arg hash "$ARTIFACT_SHA256" --arg fingerprint "$artifact_fingerprint" --arg algorithm "$ARTIFACT_HASH_ALGORITHM" --arg code "$EXACT_CODE_SHA" --arg source_code "$SOURCE_CODE_SHA" --arg content "$CONTENT_ROOT_SHA256" --arg env "$BUILD_ENVIRONMENT_VERSION" --arg profile "r2-full-get-sha256-indefinite-lock-v1" --arg verified_at "$r2_verified_at" --arg lock "$lock_evidence_sha256" --arg contract "$RESUME_CONTRACT_VERSION" --argjson bytes "$ARTIFACT_BYTES" '{object_key:$object_key,byte_length:$bytes,artifact_sha256:$hash,artifact_fingerprint_sha256:$fingerprint,hash_algorithm:$algorithm,code_sha:$code,source_code_sha:($source_code | if length > 0 then . else null end),content_sha256:$content,build_environment_version:$env,verification_profile:$profile,r2_verified_at:$verified_at,lock_evidence_sha256:$lock,resume_contract_version:($contract | if length > 0 then . else null end)}')"
           node "$RUNNER_TEMP/content-release-helper.mjs" callback artifact_registered "$evidence"
 
+      # The release-control scripts import root packages (undici), and a resumed run skips the
+      # build stage's install: install them before the first script runs.
+      - name: Install release control dependencies
+        if: ${{ steps.resume.outputs.stage == 'preview' }}
+        run: npm ci
+
       - name: Materialize trusted Preview verification baseline
         if: ${{ steps.resume.outputs.stage == 'preview' }}
         env:
@@ -446,10 +452,6 @@ jobs:
             echo "reused=false" >> "$GITHUB_OUTPUT"
             echo "Existing exact Preview is not reusable; redeploying the registered artifact." >&2
           fi
-
-      - name: Install Preview deployment dependencies
-        if: ${{ steps.resume.outputs.stage == 'preview' && steps.preview-reuse.outputs.reused != 'true' }}
-        run: npm ci
 
       - name: Materialize exact registered R2 artifact
         if: ${{ steps.resume.outputs.stage == 'preview' && steps.preview-reuse.outputs.reused != 'true' }}
