@@ -11,7 +11,6 @@ import {
 	seconds,
 	showHref,
 	showOf,
-	termLinks,
 } from '../../lib/podcasts';
 import '../../styles/podcasts.css';
 
@@ -24,10 +23,8 @@ export function getStaticPaths() {
 
 const { episode } = Astro.props as { episode: PodcastEpisode };
 const show = showOf(episode);
-const terms = termLinks(episode);
 const guests = episode.people.filter((person) => !person.role);
 const hosts = episode.people.filter((person) => person.role);
-const listen = [...show.links, { label: '原文与文字稿', url: episode.source }];
 ---
 
 <BaseLayout
@@ -76,18 +73,6 @@ const listen = [...show.links, { label: '原文与文字稿', url: episode.sourc
 				>
 				<span data-podcast-play-label>播放</span>
 			</button>
-			<details class="podcast-elsewhere">
-				<summary>其他收听方式</summary>
-				<p class="podcast-links">
-					{
-						listen.map((link) => (
-							<a href={link.url} target="_blank" rel="noopener noreferrer">
-								{link.label}
-							</a>
-						))
-					}
-				</p>
-			</details>
 		</div>
 
 		<dl class="podcast-people">
@@ -121,6 +106,72 @@ const listen = [...show.links, { label: '原文与文字稿', url: episode.sourc
 				))
 			}
 		</dl>
+
+		{
+			(episode.brief || episode.questions) && (
+				<section class="podcast-brief" aria-labelledby="podcast-brief" data-podcast-brief>
+					<h2 class="podcast-section__title" id="podcast-brief">
+						{episode.brief ? '一图读懂' : '听完你能回答'}
+					</h2>
+					<div class="podcast-brief__card">
+						{episode.brief && (
+							<>
+								<p class="podcast-brief__label">这期在回答</p>
+								<p class="podcast-brief__question">
+									<strong>{episode.brief.question}</strong>
+									<span>{episode.brief.answer}</span>
+								</p>
+								<ol class="podcast-brief__reasons" data-count={episode.brief.reasons.length}>
+									{episode.brief.reasons.map((reason) => (
+										<li>
+											<button
+												class="podcast-brief__reason"
+												type="button"
+												data-podcast-at={seconds(reason.at)}
+												aria-label={`从 ${reason.at} 开始播放：${reason.head}`}
+											>
+												<span class="podcast-brief__at">▶ {reason.at}</span>
+												<span class="podcast-brief__head">{reason.head}</span>
+												<span class="podcast-brief__text">{reason.text}</span>
+											</button>
+										</li>
+									))}
+								</ol>
+							</>
+						)}
+						{episode.questions && episode.questions.length > 0 && (
+							<div class="podcast-quiz">
+								{episode.brief && (
+									<p class="podcast-quiz__label">
+										<span>听完你能回答</span>
+										<span class="podcast-quiz__hint">先想想，再看答案</span>
+									</p>
+								)}
+								{episode.questions.map((item) => (
+									<details class="podcast-quiz__item">
+										<summary>
+											<span>{item.question}</span>
+											<span class="podcast-quiz__toggle" aria-hidden="true" />
+										</summary>
+										<p class="podcast-quiz__answer">
+											{item.answer}{' '}
+											<button
+												class="podcast-quiz__play"
+												type="button"
+												data-podcast-at={seconds(item.at)}
+												aria-label={`从 ${item.at} 开始播放`}
+											>
+												▶ {item.at}
+											</button>
+										</p>
+									</details>
+								))}
+							</div>
+						)}
+					</div>
+				</section>
+			)
+		}
 
 		{
 			episode.quote && (
@@ -171,18 +222,6 @@ const listen = [...show.links, { label: '原文与文字稿', url: episode.sourc
 		</section>
 
 		<footer class="podcast-foot">
-			{
-				terms.length > 0 && (
-					<>
-						<span class="podcast-foot__label">相关知识</span>
-						{terms.map((term) => (
-							<a class="podcast-foot__term" href={term.href}>
-								{term.label}
-							</a>
-						))}
-					</>
-				)
-			}
 			<a
 				class="podcast-foot__source"
 				href={episode.source}

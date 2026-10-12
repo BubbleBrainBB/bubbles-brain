@@ -15,18 +15,16 @@ import {
 	peopleLine,
 	playerEpisode,
 	seconds,
-	termLinks,
 } from './podcasts';
 
 const alphafold = podcastEpisodes.find((episode) => episode.id === 'latent-space-alphafold')!;
 
 describe('every episode', () => {
 	it.each(podcastEpisodes.map((episode) => [episode.id, episode] as const))(
-		'%s is well formed, with a known show and real site terms',
+		'%s is well formed, with a known show',
 		(_, episode) => {
 			expect(episodeProblems(episode)).toEqual([]);
 			expect(podcastShows.some((show) => show.id === episode.show)).toBe(true);
-			expect(() => termLinks(episode)).not.toThrow();
 			expect(episode.points.length).toBeGreaterThan(0);
 		},
 	);
@@ -63,6 +61,21 @@ describe('times', () => {
 		};
 		expect(episodeProblems(broken)).toEqual(['40:00 is past the end', 'chapters out of order']);
 	});
+
+	it('keeps the brief to a glance and the questions to a few', () => {
+		const reason = { at: '01:00', head: 'h', text: 't' };
+		const question = { question: 'q', answer: 'a', at: '50:00' };
+		const crowded = {
+			...alphafold,
+			brief: { question: 'q', answer: 'a', reasons: [reason] },
+			questions: [question, question, question, question],
+		};
+		expect(episodeProblems(crowded)).toEqual([
+			...Array(4).fill('50:00 is past the end'),
+			'1 reasons',
+			'more than three questions',
+		]);
+	});
 });
 
 describe('the AlphaFold episode', () => {
@@ -82,10 +95,6 @@ describe('the AlphaFold episode', () => {
 			duration: 1916,
 		});
 		expect(player.chapters[7]).toEqual({ at: 878, title: '为什么 AlphaFold 还没解决蛋白质折叠' });
-	});
-
-	it('links terms the site has', () => {
-		expect(termLinks(alphafold).map((link) => link.href)).toContain('/vibe-coding/terms/llm/');
 	});
 });
 

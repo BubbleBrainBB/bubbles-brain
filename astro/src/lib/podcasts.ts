@@ -6,7 +6,6 @@ import {
 	type PodcastShow,
 	type Timestamp,
 } from '../data/podcasts';
-import { getVibeCodingConcepts } from '../data/vibeCodingTerms';
 
 export const PODCASTS_HREF = '/podcasts/';
 
@@ -156,16 +155,6 @@ export function episodesByMonth(episodes: PodcastEpisode[] = podcastEpisodes): E
 	return months;
 }
 
-/** The episode's site terms as links; an id the site does not have fails the build. */
-export function termLinks(episode: PodcastEpisode): { label: string; href: string }[] {
-	const concepts = getVibeCodingConcepts();
-	return episode.terms.map((id) => {
-		const concept = concepts.find((entry) => entry.id === id);
-		if (!concept) throw new Error(`Podcast episode ${episode.id} links an unknown term: ${id}`);
-		return { label: concept.chineseName, href: `/vibe-coding/terms/${id}/` };
-	});
-}
-
 /** What a play button hands the player: enough to show, play and seek without the episode page. */
 export interface PlayerEpisode {
 	id: string;
@@ -202,6 +191,8 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 		...episode.points,
 		...episode.chapters,
 		...(episode.quote ? [episode.quote] : []),
+		...(episode.brief?.reasons ?? []),
+		...(episode.questions ?? []),
 	].map((entry) => entry.at);
 	for (const stamp of stamps) {
 		const at = seconds(stamp);
@@ -217,6 +208,10 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 		if (seconds(point.at) < firstChapter) problems.push(`${point.at} is before the first chapter`);
 	if (episode.quote && episode.quote.text.split(/\s+/).length > 15)
 		problems.push('quote is too long');
+	// The brief is one glance: a card per reason, two to four of them; the questions stay a few.
+	const reasons = episode.brief?.reasons.length;
+	if (reasons !== undefined && (reasons < 2 || reasons > 4)) problems.push(`${reasons} reasons`);
+	if ((episode.questions?.length ?? 0) > 3) problems.push('more than three questions');
 	if (!/^\d{4}-\d{2}-\d{2}$/.test(episode.date)) problems.push(`bad date ${episode.date}`);
 	if (!/^https:\/\//.test(episode.audio)) problems.push('audio is not https');
 	return problems;

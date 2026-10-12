@@ -5,6 +5,8 @@
  * The audio is the show's own file from its public RSS feed, played as podcast apps play it: never
  * copied here. Only free, public episodes; the text is our own summary, never the transcript, and
  * a quote is one short line.
+ * An episode can also have a brief, 一图读懂: the question it answers and the few places that answer
+ * turns on, then 听完你能回答: a few questions it answers beyond the brief.
  */
 
 export interface PodcastShow {
@@ -57,8 +59,14 @@ export interface PodcastEpisode {
 	points: { at: Timestamp; text: string }[];
 	/** The show's chapters, translated. */
 	chapters: { at: Timestamp; title: string }[];
-	/** Site terms the episode touches (ids under /vibe-coding/terms/). */
-	terms: string[];
+	/** 一图读懂: the question the episode answers, its answer, and two to four reasons. */
+	brief?: {
+		question: string;
+		answer: string;
+		reasons: { at: Timestamp; head: string; text: string }[];
+	};
+	/** 听完你能回答: up to three questions the brief leaves open, each answered in a sentence or two. */
+	questions?: { question: string; answer: string; at: Timestamp }[];
 }
 
 export const podcastShows: PodcastShow[] = [
@@ -147,6 +155,46 @@ export const podcastEpisodes: PodcastEpisode[] = [
 			{ at: '27:43', title: 'AI 什么时候真正改变药物研发' },
 			{ at: '29:47', title: '治愈所有疾病需要十倍级的突破' },
 		],
-		terms: ['llm', 'parameters', 'confidence-interval', 'open-source'],
+		brief: {
+			question: 'AI 已经把生物学的问题解决了吗？',
+			answer: '没有，还差得远。卡在三处：',
+			reasons: [
+				{
+					at: '01:00',
+					head: '数据不够',
+					text: '扩展定律要靠「找」，生物学还没有又多又对的数据。',
+				},
+				{
+					at: '15:28',
+					head: '结构 ≠ 动态',
+					text: 'AlphaFold 复现的是数据库里那一个结构，蛋白质怎么动还没搞懂。',
+				},
+				{
+					at: '19:09',
+					head: '辐条 ≠ 整辆车',
+					text: '模型只到单个蛋白质，还没走到整个细胞、整个生物系统。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: '生物学也有「苦涩的教训」吗？',
+				answer:
+					'有，但前提是先找到能扩展的设定和对的数据。DeepMind 的做法是问题先行：缺数据就造数据，缺模型就做模型。',
+				at: '04:54',
+			},
+			{
+				question: 'AI 模型需要被人看懂吗？',
+				answer:
+					'两位嘉宾看法不同。Sal 认为看懂模型能挖出新的科学知识；Pushmeet 认为更要紧的是可信：置信分校准好，人才敢拿结果去做实验。',
+				at: '22:18',
+			},
+			{
+				question: 'AI 什么时候真正改变药物研发？',
+				answer:
+					'其实已经用在各个环节了。要的是十倍级的加速，而不是 10% 的改进，这得先解决生物学本身的硬问题。',
+				at: '29:47',
+			},
+		],
 	},
 ];
