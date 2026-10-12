@@ -23,6 +23,7 @@ const zhSections: SiteSection[] = [
 	},
 	{ id: 'highlights', label: '精选阅读', href: '/highlights/', prefixes: ['/highlights/'] },
 	{ id: 'ai-news', label: 'AI 动态', href: '/ai-news/', prefixes: ['/ai-news/'] },
+	{ id: 'podcasts', label: '播客', href: '/podcasts/', prefixes: ['/podcasts/'] },
 	{ id: 'vibe-coding', label: 'Vibe Coding', href: '/vibe-coding/', prefixes: ['/vibe-coding/'] },
 	{ id: 'benchmarks', label: 'Benchmarks', href: '/benchmarks/', prefixes: ['/benchmarks/'] },
 ];

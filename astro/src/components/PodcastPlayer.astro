@@ -1,0 +1,83 @@
+---
+/**
+ * The 播客 player: one bar at the foot of every page, hidden until something plays. It persists
+ * across in-site navigation, so an episode keeps playing while the reader moves around the site.
+ * Play buttons and timestamps anywhere drive it (scripts/podcastPlayer.ts).
+ */
+import '../styles/podcast-player.css';
+---
+
+<div class="podcast-player" data-podcast-player transition:persist="podcast-player" hidden>
+	<audio preload="none" data-podcast-audio></audio>
+	<div class="podcast-player__bar" role="region" aria-label="播客播放器">
+		<img class="podcast-player__cover" alt="" width="44" height="44" data-podcast-cover />
+		<div class="podcast-player__main">
+			<p class="podcast-player__line">
+				<a class="podcast-player__title" data-podcast-title href="/podcasts/"></a>
+				<span class="podcast-player__chapter" data-podcast-chapter></span>
+			</p>
+			<div class="podcast-player__progress">
+				<span class="podcast-player__time" data-podcast-elapsed>0:00</span>
+				<span class="podcast-player__track">
+					<span class="podcast-player__ticks" data-podcast-ticks aria-hidden="true"></span>
+					<input
+						class="podcast-player__seek"
+						type="range"
+						min="0"
+						max="0"
+						step="1"
+						value="0"
+						aria-label="播放进度"
+						data-podcast-seek
+					/>
+				</span>
+				<span class="podcast-player__time" data-podcast-total>0:00</span>
+			</div>
+			<p class="podcast-player__error" data-podcast-error hidden>
+				暂时播放不了，可以去<a data-podcast-error-link href="/podcasts/">这一期的页面</a
+				>换个地方听。
+			</p>
+		</div>
+		<div class="podcast-player__controls">
+			<button class="podcast-player__skip" type="button" aria-label="后退 15 秒" data-podcast-back>
+				-15
+			</button>
+			<button class="podcast-player__toggle" type="button" aria-label="播放" data-podcast-toggle>
+				<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true"
+					><path d="M8 5v14l11-7z"></path></svg
+				>
+				<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true"
+					><path d="M6 4h4v16H6zM14 4h4v16h-4z"></path></svg
+				>
+			</button>
+			<button
+				class="podcast-player__skip"
+				type="button"
+				aria-label="前进 30 秒"
+				data-podcast-forward
+			>
+				+30
+			</button>
+			<button
+				class="podcast-player__rate"
+				type="button"
+				aria-label="播放速度：1 倍"
+				data-podcast-rate
+			>
+				1×
+			</button>
+			<button
+				class="podcast-player__close"
+				type="button"
+				aria-label="关闭播放器"
+				data-podcast-close
+			>
+				<i class="ph ph-x" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	import '../scripts/podcastPlayer';
+</script>

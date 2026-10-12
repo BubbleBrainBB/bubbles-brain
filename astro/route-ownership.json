@@ -11,6 +11,7 @@
 		"/about/**",
 		"/changelog/**",
 		"/ai-news/**",
+		"/podcasts/**",
 		"/benchmarks/**",
 		"/en/benchmarks/**",
 		"/tutorials/**",

@@ -452,6 +452,8 @@ const specializedMarkers = new Map([
   ["vibe-coding/showcase/index.html", ["data-showcase-gallery", "showcase-tile"]],
   ["benchmarks/index.html", ['id="coding"', "实测案例"]],
   ["ai-news/index.html", ["data-ai-news", "data-news-rail", "news-api.bubblenews.today/v1/feed"]],
+  ["podcasts/index.html", ["data-podcasts", "data-podcast-play", "data-podcast-player"]],
+  ["podcasts/latent-space-alphafold/index.html", ["data-podcast-at", "api.substack.com/feed/podcast/", "data-podcast-chapter-at"]],
   [
     "vibe-coding/terms/frontend/index.html",
     [

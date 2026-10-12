@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { podcastEpisodes, type PodcastEpisode } from '../../data/podcasts';
+import {
+	dateLabel,
+	durationLabel,
+	episodeHref,
+	PODCASTS_HREF,
+	peopleLine,
+	playerEpisode,
+	seconds,
+	showOf,
+	termLinks,
+} from '../../lib/podcasts';
+import '../../styles/podcasts.css';
+
+export function getStaticPaths() {
+	return podcastEpisodes.map((episode) => ({
+		params: { episode: episode.id },
+		props: { episode },
+	}));
+}
+
+const { episode } = Astro.props as { episode: PodcastEpisode };
+const show = showOf(episode);
+const terms = termLinks(episode);
+const listen = [...show.links, { label: '原文与文字稿', url: episode.source }];
+---
+
+<BaseLayout
+	title={`${episode.title} · ${show.name} · 播客 · Bubble's Brain`}
+	description={episode.pitch}
+	canonicalPath={episodeHref(episode)}
+>
+	<article
+		class="rr-page rr-page--narrow podcast-episode"
+		data-podcast-episode={JSON.stringify(playerEpisode(episode))}
+	>
+		<nav class="podcast-crumbs" aria-label="位置">
+			<a href={PODCASTS_HREF}>播客</a>
+			<span aria-hidden="true">/</span>
+			<span>{show.name}</span>
+		</nav>
+
+		<header class="podcast-head">
+			<img class="podcast-head__cover" src={show.cover} alt="" width="140" height="140" />
+			<div class="podcast-head__text">
+				<p class="podcast-head__show">{show.name} · {dateLabel(episode.date)}</p>
+				<h1 class="podcast-head__title">{episode.title}</h1>
+				<p class="podcast-head__original" lang="en">{episode.originalTitle}</p>
+				<p class="podcast-head__people">
+					{peopleLine(episode)}<br />
+					{durationLabel(episode.duration)} · {episode.language}
+				</p>
+				<div class="podcast-head__actions">
+					<button
+						class="podcast-play podcast-play--pill"
+						type="button"
+						aria-pressed="false"
+						data-podcast-play
+					>
+						<svg class="podcast-icon-play" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M8 5v14l11-7z"></path>
+						</svg>
+						<svg class="podcast-icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M6 4h4v16H6zM14 4h4v16h-4z"></path>
+						</svg>
+						<span data-podcast-play-label>播放</span>
+					</button>
+					{
+						listen.map((link) => (
+							<a
+								class="podcast-head__link"
+								href={link.url}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{link.label}
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</header>
+
+		<section class="podcast-section" aria-labelledby="podcast-why">
+			<h2 class="podcast-section__title" id="podcast-why">为什么值得听</h2>
+			<p class="podcast-why">{episode.why}</p>
+		</section>
+
+		<section class="podcast-section" aria-labelledby="podcast-points">
+			<h2 class="podcast-section__title" id="podcast-points">要点</h2>
+			<ol class="podcast-points">
+				{
+					episode.points.map((point) => (
+						<li class="podcast-point">
+							<button
+								class="podcast-stamp"
+								type="button"
+								data-podcast-at={seconds(point.at)}
+								aria-label={`从 ${point.at} 开始播放`}
+							>
+								{point.at}
+							</button>
+							<p>{point.text}</p>
+						</li>
+					))
+				}
+			</ol>
+		</section>
+
+		<section class="podcast-section" aria-labelledby="podcast-chapters">
+			<h2 class="podcast-section__title" id="podcast-chapters">章节</h2>
+			<ol class="podcast-chapters">
+				{
+					episode.chapters.map((chapter) => (
+						<li>
+							<button
+								class="podcast-chapter"
+								type="button"
+								data-podcast-at={seconds(chapter.at)}
+								data-podcast-chapter-at={seconds(chapter.at)}
+							>
+								<span class="podcast-chapter__at">{chapter.at}</span>
+								<span class="podcast-chapter__title">{chapter.title}</span>
+							</button>
+						</li>
+					))
+				}
+			</ol>
+			<p class="podcast-note">章节来自节目自己的节目说明，要点是我们的概括；完整文字稿见原文。</p>
+		</section>
+
+		{
+			terms.length > 0 && (
+				<section class="podcast-section" aria-labelledby="podcast-terms">
+					<h2 class="podcast-section__title" id="podcast-terms">
+						相关知识
+					</h2>
+					<div class="podcast-terms">
+						{terms.map((term) => (
+							<a href={term.href}>{term.label}</a>
+						))}
+					</div>
+				</section>
+			)
+		}
+	</article>
+</BaseLayout>

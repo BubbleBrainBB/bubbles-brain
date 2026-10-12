@@ -8,6 +8,7 @@ import { ClientRouter } from 'astro:transitions';
 import SiteActions from '../components/SiteActions.astro';
 import FooterLinks from '../components/FooterLinks.astro';
 import CommandSearch from '../components/CommandSearch.astro';
+import PodcastPlayer from '../components/PodcastPlayer.astro';
 import { activeSiteSection, siteSections } from '../lib/siteSections';
 
 interface Props {
@@ -170,6 +171,7 @@ const isSearchPage = Astro.url.pathname.replace(/\/$/, '') === '/search';
 			</div>
 		</div>
 		<CommandSearch locale={lang} />
+		<PodcastPlayer />
 		{/* Read out when the AI 动态 notice appears (scripts/newsHints.ts). */}
 		<div class="sr-only" role="status" data-news-notice-status></div>
 		<script>
