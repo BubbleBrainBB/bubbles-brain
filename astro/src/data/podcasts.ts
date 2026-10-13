@@ -118,9 +118,189 @@ export const podcastShows: PodcastShow[] = [
 			{ label: 'YouTube', url: 'https://www.youtube.com/@howiaipodcast' },
 		],
 	},
+	{
+		id: 'lennys-podcast',
+		name: "Lenny's Podcast",
+		description:
+			'Lenny Rachitsky 采访顶尖的产品人和创业者：怎么做产品、怎么增长、怎么带团队，最近很多期在聊 AI。',
+		language: '英文',
+		cover:
+			'https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c7/80/a3/c780a365-a1ed-527f-365f-1bd3e51ac6d1/mza_5908526734339724450.jpg/600x600bb.jpg',
+		feed: 'https://api.substack.com/feed/podcast/10845.rss',
+		site: 'https://www.lennysnewsletter.com/podcast',
+		links: [
+			{ label: 'Apple Podcasts', url: 'https://podcasts.apple.com/us/podcast/id1627920305' },
+			{ label: 'YouTube', url: 'https://www.youtube.com/@LennysPodcast' },
+		],
+	},
 ];
 
 export const podcastEpisodes: PodcastEpisode[] = [
+	{
+		id: 'lennys-podcast-tibo-sottiaux',
+		show: 'lennys-podcast',
+		title: 'OpenAI 的 ChatGPT 负责人：我们（又一次）进入了 AI 的新时代',
+		originalTitle:
+			'OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux',
+		date: '2026-10-04',
+		people: [
+			{ name: 'Tibo Sottiaux', org: 'OpenAI' },
+			{ name: 'Lenny Rachitsky', role: '主持' },
+		],
+		duration: 2243,
+		language: '英文',
+		audio:
+			'https://pscrb.fm/rss/p/api.substack.com/feed/podcast/217274136/13e3f49711c936b294b6ef27d4160818.mp3',
+		source: 'https://www.lennysnewsletter.com/p/openais-head-of-chatgpt-were-entering',
+		sourceLabel: '节目笔记',
+		lede: '负责 ChatGPT 和 Codex 的 Tibo Sottiaux 在 DevDay 当天说，互联网上大多数操作将由智能体完成，手动搭循环、调工作流只是过渡阶段。以后你只需要一个会自己学习、随叫随到的个人智能体，比如 OpenAI 刚发布的 Dots。',
+		quote: {
+			text: 'The majority of actions on the internet will be taken by agents.',
+			translation: '互联网上的大多数操作，将由智能体来完成。',
+			by: 'Tibo Sottiaux',
+			at: '30:58',
+		},
+		points: [
+			{
+				at: '01:57',
+				text: '他几乎不再手写代码：分析趋势、理解业务、看上线效果，需要的代码都交给 Codex 来写。',
+			},
+			{
+				at: '02:52',
+				text: '他开的智能体会越开越多，等模型有了下一次突破，一个更强的智能体就能全包，团队又缩回去，就这样一胀一缩。',
+			},
+			{
+				at: '03:19',
+				text: '手动搭「循环」、调工作流只是一时的热潮；以后要的是一个会从反馈里学习的系统，比如 Dots：全天候工作，懂你的目标和偏好。',
+			},
+			{
+				at: '04:13',
+				text: '关键是摆脱设备：一个一直在线的智能，任何屏幕都能叫到它，开会时出现、记笔记，之后在邮件或短信里接着聊。',
+			},
+			{
+				at: '07:39',
+				text: 'ChatGPT 里的 Chat 和 Work 会合并，Dots 的能力最终也会放进 ChatGPT；Dots 没有模型选择器，唯一要设置的是用哪些渠道和它说话。',
+			},
+			{
+				at: '11:51',
+				text: '他眼里被低估的是开放生态：已有 16 家合作方支持用 ChatGPT 登录，用的人多的插件还能分到收入。',
+			},
+			{
+				at: '15:14',
+				text: 'Dots 背后是两年多的研究：长时间持续的任务、保持连贯的记忆，再加上 Codex 的运行框架。',
+			},
+			{
+				at: '20:31',
+				text: '他的 Dot 发现 ChatGPT 的生产环境挂了，又知道他五分钟后要在 DevDay 现场演示，就提前提醒了他。',
+			},
+			{
+				at: '21:47',
+				text: 'Dots 的运行框架不在你的电脑上：它有自己的机器，还能连上你的笔记本等很多台设备，像章鱼一样一起操控。',
+			},
+			{
+				at: '23:44',
+				text: '越来越不重要的技能是打字快；越来越重要的是品味和站在用户角度想问题。OpenAI 里有 120 多位前 YC 创业者。',
+			},
+			{
+				at: '30:58',
+				text: '很多人还没算进去的三件事：多数网上操作将由智能体完成，模型会飞快地变便宜、变快，各种模态会无缝融合。',
+			},
+			{
+				at: '34:21',
+				text: '他说控制前沿的节奏，就是在安全、对齐和防护上超前投入：越来越多算力用来盯着干活的智能体。',
+			},
+			{
+				at: '36:23',
+				text: '他最想去掉的是模型选择器：选模型、选推理强度太复杂，「像要读个博士」。',
+			},
+		],
+		chapters: [
+			{ at: '00:00', title: '介绍 Tibo Sottiaux' },
+			{ at: '01:12', title: 'Tibo 每天怎么用 AI' },
+			{ at: '03:10', title: '一直在线的智能体，愿景是什么' },
+			{ at: '06:15', title: 'AI 还会怎样改变工作' },
+			{ at: '07:32', title: '把 Codex、ChatGPT 和 Dots 合到一起' },
+			{ at: '08:20', title: '背后的科幻灵感' },
+			{ at: '09:02', title: '和社区一起做 AI' },
+			{ at: '10:13', title: 'Dots 是怎么组织的' },
+			{ at: '11:34', title: 'OpenAI 的开放生态，和插件分成' },
+			{ at: '13:39', title: '插件怎么被发现和推荐' },
+			{ at: '14:39', title: 'Dots 背后的研究' },
+			{ at: '16:20', title: '人在哪些地方依然有价值' },
+			{ at: '17:25', title: '智能体疲劳、孤独和频繁切换' },
+			{ at: '18:55', title: '用 AI 做更多事的压力' },
+			{ at: '20:09', title: '一个在现场演示前发现生产事故的智能体' },
+			{ at: '21:42', title: '智能体的防护，和连接多台设备' },
+			{ at: '23:25', title: 'AI 时代越来越值钱的技能' },
+			{ at: '25:56', title: '给职场新人的建议' },
+			{ at: '27:18', title: 'OpenAI 内部怎么做产品、怎么上线' },
+			{ at: '28:59', title: '自主、信任，和从错误里学习' },
+			{ at: '30:45', title: '为智能体主导互联网的未来做准备' },
+			{ at: '32:41', title: 'Tibo 改变了哪些看法' },
+			{ at: '33:55', title: 'OpenAI 怎么看 AI 安全和对齐' },
+			{ at: '36:15', title: '告别模型选择器，让 AI 更简单' },
+		],
+		brief: {
+			question: '智能体会让我们和 AI 打交道的方式变成什么样？',
+			answer: '从你去操作软件，变成一个随叫随到的智能体替你干活。三个变化：',
+			reasons: [
+				{
+					at: '03:19',
+					head: '不用再搭工作流',
+					text: '手动调循环只是过渡，系统会从你的反馈里自己学。',
+				},
+				{
+					at: '04:13',
+					head: '不再被设备绑住',
+					text: '任何屏幕都能叫到它，开会、邮件、短信里接着聊。',
+				},
+				{
+					at: '30:58',
+					head: '智能体成了主要用户',
+					text: '网上多数操作会由智能体完成，产品要为它们来做。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: 'Dots 是什么？',
+				answer:
+					'OpenAI 新推出的个人智能体：全天候工作，懂你的目标和偏好，会从反馈里学习，没有模型选择器。现在每人一个主 Dot，之后能建好几个，各管一摊，比如专门盯 Twitter。',
+				at: '10:55',
+			},
+			{
+				question: 'AI 时代，什么技能在升值？',
+				answer:
+					'打字快不重要了；重要的是品味、站在用户角度、知道「好」是什么样。角色也在变模糊：原来只做设计或只做工程、总觉得哪里不够的人，现在正是发挥的时候。',
+				at: '23:44',
+			},
+			{
+				question: 'OpenAI 怎么让智能体更安全？',
+				answer:
+					'在安全、对齐和防护上超前投入：越来越多算力用来监控干活的智能体，发现风险太高的操作或疑似提示注入就介入；API 上的大部分投入都花在安全上。',
+				at: '34:21',
+			},
+		],
+		topics: [
+			{ at: '00:00', title: '一直在线的智能体' },
+			{ at: '07:32', title: 'Dots 和开放生态' },
+			{ at: '16:20', title: '人和智能体' },
+			{ at: '23:25', title: '技能和团队' },
+			{ at: '30:45', title: '未来与安全' },
+		],
+		glossary: [
+			{ term: 'Codex', meaning: 'OpenAI 的 AI 编程智能体，能自己读代码、写代码、提交改动。' },
+			{
+				term: '运行框架',
+				meaning: '包在模型外面的那层程序（harness），让模型能调用工具、读写文件、长时间持续干活。',
+			},
+			{ term: 'YC', meaning: 'Y Combinator，硅谷最有名的创业孵化器，很多知名公司都从这里起步。' },
+			{
+				term: '模型选择器',
+				meaning: '用 ChatGPT 时让你自己挑用哪个模型、推理强度开多大的那个菜单。',
+			},
+		],
+	},
 	{
 		id: 'latent-space-jev',
 		show: 'latent-space',
