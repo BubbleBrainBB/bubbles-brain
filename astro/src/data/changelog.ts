@@ -19,6 +19,15 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-13',
 		tag: '播客',
+		type: 'content',
+		title: '新增播客：Meta Muse：大家真心喜欢的 AI 智能体',
+		summary:
+			'How I AI 第二期：Meta 的设计总监 Alex Cornell 讲 Muse 怎么设计得像在跟一个人发消息，以及他自己怎么用它把 Instagram 收藏变成购物目录、追踪高尔夫成绩、把 20 年前的博客变成每天的播客。附一图读懂、时间花在哪和中文要点，站内直接收听。',
+		links: [{ label: '收听这一期', href: '/podcasts/how-i-ai-meta-muse/' }],
+	},
+	{
+		date: '2026-10-13',
+		tag: '播客',
 		type: 'polish',
 		title: '播客单集页的「听什么」改成只列要点',
 		summary:
