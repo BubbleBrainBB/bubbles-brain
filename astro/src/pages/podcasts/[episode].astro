@@ -244,7 +244,7 @@ const topics = topicSpans(episode);
 			episode.stances && (
 				<section class="podcast-stances" aria-labelledby="podcast-stances">
 					<h2 class="podcast-section__title" id="podcast-stances">
-						两位嘉宾在哪里不一样
+						{episode.stances.heading ?? '两位嘉宾在哪里不一样'}
 					</h2>
 					<p class="podcast-stances__question">{episode.stances.question}</p>
 					<div class="podcast-stances__sides">
