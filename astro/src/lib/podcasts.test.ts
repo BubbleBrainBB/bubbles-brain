@@ -8,13 +8,13 @@ import {
 	episodeProblems,
 	episodesByMonth,
 	guestNames,
-	outline,
 	showEpisodes,
 	showHref,
 	showsByRecent,
 	peopleLine,
 	withTerms,
 	topicSpans,
+	takeaways,
 	playerEpisode,
 	seconds,
 } from './podcasts';
@@ -105,6 +105,20 @@ describe('时间花在哪', () => {
 	});
 });
 
+describe('听什么', () => {
+	it('lists each takeaway with its chapter, playing until the next one starts', () => {
+		const list = takeaways(alphafold);
+		expect(list).toHaveLength(alphafold.points.length);
+		expect(list[0]).toMatchObject({
+			stamp: '01:00',
+			start: 60,
+			end: 294,
+			chapter: '为生物学找扩展定律和对的数据',
+		});
+		expect(list.at(-1)!.end).toBe(alphafold.duration);
+	});
+});
+
 describe('glossary words', () => {
 	const glossary = [
 		{ term: '扩展定律', meaning: 'Scaling law' },
@@ -170,25 +184,6 @@ describe('the list', () => {
 });
 
 describe('听什么', () => {
-	it('puts each takeaway under the chapter it falls in, and plays from it', () => {
-		const entries = outline(alphafold);
-		expect(entries).toHaveLength(alphafold.chapters.length);
-		const folding = entries.find(
-			(entry) => entry.chapter === '为什么 AlphaFold 还没解决蛋白质折叠',
-		)!;
-		expect(folding).toMatchObject({ stamp: '15:28', at: 928 });
-		expect(folding.points).toHaveLength(1);
-		const quiet = entries.find((entry) => entry.chapter === 'Transformer 之后的架构')!;
-		expect(quiet).toEqual({
-			at: 819,
-			stamp: '13:39',
-			start: 819,
-			chapter: 'Transformer 之后的架构',
-			points: [],
-		});
-		expect(entries.flatMap((entry) => entry.points)).toHaveLength(alphafold.points.length);
-	});
-
 	it('flags a takeaway before the first chapter and an overlong quote', () => {
 		const broken = {
 			...alphafold,

@@ -19,6 +19,15 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-13',
 		tag: '播客',
+		type: 'polish',
+		title: '播客单集页的「听什么」改成只列要点',
+		summary:
+			'「听什么」不再把章节和要点混在一起排：现在只列要点，每条一个时间按钮加一句话，下面小字写它在哪一章，点时间就从那里听，正在播的那条时间会变黑。原节目的全部章节收进最下面，想看再展开。',
+		links: [{ label: '看一期', href: '/podcasts/lennys-podcast-tibo-sottiaux/' }],
+	},
+	{
+		date: '2026-10-13',
+		tag: '播客',
 		type: 'content',
 		title: '新增播客：OpenAI 的 ChatGPT 负责人：我们（又一次）进入了 AI 的新时代',
 		summary:

@@ -39,36 +39,31 @@ export function showsByRecent(
 	return shows.filter((show) => newest(show)).sort((a, b) => (newest(a) < newest(b) ? 1 : -1));
 }
 
-export interface OutlineEntry {
-	/** Where a click plays from: the first takeaway's minute, else the chapter's start. */
-	at: number;
+export interface Takeaway {
 	stamp: Timestamp;
-	/** The chapter's own start, in seconds: how the player knows which chapter is playing. */
+	/** Seconds: the takeaway plays from here, and counts as playing until the next one starts. */
 	start: number;
+	end: number;
+	text: string;
+	/** The chapter it is said in. */
 	chapter: string;
-	points: string[];
 }
 
-/**
- * 听什么: the show's chapters in order, each takeaway under the chapter it falls in. A chapter
- * with takeaways plays from the first of them; one without is just its start and title.
- */
-export function outline(episode: PodcastEpisode): OutlineEntry[] {
-	const starts = episode.chapters.map((chapter) => seconds(chapter.at));
-	return episode.chapters.map((chapter, index) => {
-		const from = starts[index];
-		const to = starts[index + 1] ?? Infinity;
-		const points = episode.points.filter((point) => {
-			const at = seconds(point.at);
-			return at >= from && at < to;
-		});
-		const stamp = points[0]?.at ?? chapter.at;
+/** 听什么: the takeaways in order, each with the chapter it falls in and the span it plays for. */
+export function takeaways(episode: PodcastEpisode): Takeaway[] {
+	const starts = episode.points.map((point) => seconds(point.at));
+	return episode.points.map((point, index) => {
+		const start = starts[index];
+		const chapter = episode.chapters.reduce<string>(
+			(found, entry) => (seconds(entry.at) <= start ? entry.title : found),
+			'',
+		);
 		return {
-			at: seconds(stamp),
-			stamp,
-			start: from,
-			chapter: chapter.title,
-			points: points.map((point) => point.text),
+			stamp: point.at,
+			start,
+			end: starts[index + 1] ?? episode.duration,
+			text: point.text,
+			chapter,
 		};
 	});
 }

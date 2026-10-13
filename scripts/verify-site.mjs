@@ -453,7 +453,7 @@ const specializedMarkers = new Map([
   ["benchmarks/index.html", ['id="coding"', "实测案例"]],
   ["ai-news/index.html", ["data-ai-news", "data-news-rail", "news-api.bubblenews.today/v1/feed"]],
   ["podcasts/index.html", ["data-podcasts", "data-podcast-play", "data-podcast-player"]],
-  ["podcasts/latent-space-alphafold/index.html", ["data-podcast-at", "api.substack.com/feed/podcast/", "data-podcast-chapter-at", "data-podcast-brief", "data-podcast-progress", "data-podcast-term", "data-podcast-topics", "podcast-stances"]],
+  ["podcasts/latent-space-alphafold/index.html", ["data-podcast-at", "api.substack.com/feed/podcast/", "data-podcast-chapter-at", "data-podcast-brief", "data-podcast-progress", "data-podcast-term", "data-podcast-topics", "podcast-stances", "data-podcast-outline", "podcast-takeaway"]],
   ["podcasts/shows/index.html", ["data-podcast-shows", "/podcasts/shows/latent-space/"]],
   ["podcasts/shows/latent-space/index.html", ["data-podcast-show-page", "data-podcast-play"]],
   ["podcasts/latent-space-jev/index.html", ["data-podcast-brief", "data-podcast-topics", "主持人和嘉宾在哪里不一样", "api.substack.com/feed/podcast/216783460/"]],
