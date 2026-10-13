@@ -137,6 +137,161 @@ export const podcastShows: PodcastShow[] = [
 
 export const podcastEpisodes: PodcastEpisode[] = [
 	{
+		id: 'how-i-ai-meta-muse',
+		show: 'how-i-ai',
+		title: 'Meta Muse：大家真心喜欢的 AI 智能体',
+		originalTitle: 'Meta Muse: the AI agent people actually love | How I AI',
+		date: '2026-10-12',
+		people: [
+			{ name: 'Alex Cornell', org: 'Meta' },
+			{ name: 'Claire Vo', role: '主持' },
+		],
+		duration: 2267,
+		language: '英文',
+		audio:
+			'https://anchor.fm/s/1035b1568/podcast/play/127074036/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-8%2F433648985-44100-2-570eb93190cab.mp3',
+		source: 'https://www.chatprd.ai/how-i-ai/alex-cornell-meta-muse-workflows',
+		sourceLabel: '节目笔记',
+		lede: 'Meta 的设计总监 Alex Cornell 讲他们怎么设计个人智能体 Muse：把它做得像在跟一个人发消息，而不像一个 AI 应用。他还现场演示了自己的用法：多年的 Instagram 收藏变成每天一份购物目录，20 年前的博客变成每天早上的播客。',
+		quote: {
+			text: "I don't think my mom has ever used a thing that I've made.",
+			translation: '我觉得，我妈以前从没用过我做的任何东西。',
+			by: 'Alex Cornell',
+			at: '06:56',
+		},
+		points: [
+			{
+				at: '04:29',
+				text: '最有用的出发点，是把界面想成你和一个「实体」之间的往来：很多做法照搬发消息，所以有消息气泡，它的形象就在屏幕顶部。',
+			},
+			{
+				at: '05:24',
+				text: '它能在后台干活，所以让你一眼知道它「正在忙」，是他们最重要的设计决定之一。',
+			},
+			{
+				at: '06:39',
+				text: '他妈妈跟自己的 Muse 道歉，说让它太辛苦了；做了这么多年软件，这是她第一次用他做的东西。',
+			},
+			{
+				at: '07:41',
+				text: '状态用渐进式展开：顶部只说它在忙，点一下看它在做什么，再点看完整步骤，一直能看到代码。',
+			},
+			{
+				at: '10:10',
+				text: '复杂的任务，它会先回一句或点个表情，表示收到了，再去慢慢做，像真人一样不会把你晾着。',
+			},
+			{
+				at: '13:06',
+				text: '「点子」页告诉你它能做些什么你想不到的事，而且按你聊过的内容来：他天天聊高尔夫，就收到很多高尔夫点子。',
+			},
+			{
+				at: '15:32',
+				text: '他让 Muse 把所有 Instagram 收藏分类整理，再做成一本每天更新、90 年代 SkyMall 风格的购物目录。',
+			},
+			{
+				at: '17:21',
+				text: '他最爱的用法是「帮我盯着」：喜欢的歌手出新专辑、来旧金山演出就告诉他；每周还查想买的东西有没有降价。',
+			},
+			{
+				at: '22:26',
+				text: '他把每轮高尔夫和每一杆的数据交给 Muse，它会做出每轮回顾，告诉他怎样从 84 杆打进 79 杆；目标是差点进个位数。',
+			},
+			{
+				at: '28:01',
+				text: '他让 Muse 用 Wayback Machine 找回自己 20 年前的博客，先合成一份 PDF，再做成每天早上推送的播客。',
+			},
+			{
+				at: '32:20',
+				text: '设计师最要适应的是不确定的系统：每个人的 Muse 都不一样，要多想底层框架，少纠结某个像素；输出够用就好。',
+			},
+		],
+		chapters: [
+			{ at: '00:00', title: '开场和嘉宾介绍' },
+			{ at: '02:50', title: '设计 Muse' },
+			{ at: '05:33', title: '突出哪些基本元素：角色、点子、动态' },
+			{ at: '08:50', title: '模型速度和响应时间' },
+			{ at: '11:01', title: '生成式界面和个性化' },
+			{ at: '14:25', title: 'SkyMall 演示：把 Instagram 收藏变成购物目录' },
+			{ at: '17:16', title: '用 Muse 购物、盯消息和降价提醒' },
+			{ at: '19:07', title: 'Instagram 和 Pinterest：接入图片类数据' },
+			{ at: '21:40', title: '高尔夫：每轮回顾、击球数据、练习拆解' },
+			{ at: '25:28', title: '主对话还是侧边对话' },
+			{ at: '27:56', title: '把老博客变成早上的播客：用 Wayback Machine 找回 20 年的文章' },
+			{ at: '29:39', title: '国际象棋看板：一个毒舌的教练' },
+			{ at: '30:59', title: '设计师要为 AI 学什么，哪些老办法还管用' },
+			{ at: '34:33', title: 'Muse 不听话时怎么提示' },
+			{ at: '36:31', title: '去哪里找 Alex' },
+		],
+		brief: {
+			question: '怎样把 AI 智能体做得让普通人也爱用？',
+			answer: '把它当成一个人来设计。三个做法：',
+			reasons: [
+				{
+					at: '04:29',
+					head: '像在发消息',
+					text: '照着跟人聊天的方式来做：有气泡、有形象，还会主动找你。',
+				},
+				{
+					at: '07:41',
+					head: '一层层展开',
+					text: '顶部只说它在忙，想看细节再一层层点开。',
+				},
+				{
+					at: '13:06',
+					head: '告诉你能做什么',
+					text: '按你聊过的内容推荐点子，让你发现想不到的用法。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: 'Alex 自己拿 Muse 做什么？',
+				answer:
+					'把多年的 Instagram 收藏做成每天一份购物目录；追踪高尔夫和国际象棋的成绩；盯着喜欢的歌手出新专辑、想买的东西降价；还把 20 年前的博客变成每天早上的播客。',
+				at: '15:32',
+			},
+			{
+				question: '主对话和侧边对话，该用哪个？',
+				answer:
+					'Muse 的设计是一条主对话就够用，就像跟一个人聊天，不会每次另开一个线程；侧边对话留给想单独处理的具体问题。他也承认，怎么帮大家分清两者还有很多可做。',
+				at: '25:51',
+			},
+			{
+				question: 'Muse 不听话的时候，该凶一点吗？',
+				answer:
+					'Alex 一直像对人一样客气地说，从不全大写、不狂打感叹号；不过朋友发现，生气时模型的思考会「重置」，所以强硬一点也许更有效。Claire 的经验是：多半是自己的问题。',
+				at: '34:52',
+			},
+		],
+		topics: [
+			{ at: '00:00', title: '怎么设计 Muse' },
+			{ at: '14:25', title: '购物和提醒' },
+			{ at: '21:40', title: '爱好和旧记录' },
+			{ at: '30:59', title: '给设计师的建议' },
+		],
+		glossary: [
+			{
+				term: '渐进式展开',
+				meaning:
+					'设计里的常用做法：先只给最必要的信息，想看更多再一层层点开，免得一上来就把人淹没。',
+			},
+			{
+				term: '生成式界面',
+				meaning:
+					'界面里的一部分由 AI 现场生成，比如按你的设定画出形象的各种状态、按你聊过的话推荐点子。',
+			},
+			{
+				term: 'Wayback Machine',
+				meaning:
+					'互联网档案馆的「网页时光机」，存着很多网站多年来的历史快照，能找回早已下线的网页。',
+			},
+			{
+				term: '差点',
+				meaning: '高尔夫里衡量水平的数字，越低越厉害；差点个位数，已经是相当不错的业余球手。',
+			},
+		],
+	},
+	{
 		id: 'lennys-podcast-tibo-sottiaux',
 		show: 'lennys-podcast',
 		title: 'OpenAI 的 ChatGPT 负责人：我们（又一次）进入了 AI 的新时代',
