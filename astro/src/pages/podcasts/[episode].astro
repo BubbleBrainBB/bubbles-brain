@@ -37,11 +37,6 @@ const points = takeaways(episode).map((point) => ({
 	textParts: withTerms(point.text, episode.glossary, seenTerms),
 	chapterParts: withTerms(point.chapter, episode.glossary, seenTerms),
 }));
-const chapterList = episode.chapters.map((chapter) => ({
-	...chapter,
-	start: seconds(chapter.at),
-	titleParts: withTerms(chapter.title, episode.glossary, seenTerms),
-}));
 const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at < episode.duration);
 const topics = topicSpans(episode);
 ---
@@ -340,32 +335,6 @@ const topics = topicSpans(episode);
 					))
 				}
 			</ol>
-			<details class="podcast-chapters">
-				<summary>
-					<span>{`原节目全部 ${chapterList.length} 章`}</span>
-					<span class="podcast-chapters__toggle" aria-hidden="true"></span>
-				</summary>
-				<ol>
-					{
-						chapterList.map((chapter) => (
-							<li>
-								<button
-									class="podcast-chapters__at"
-									type="button"
-									data-podcast-at={chapter.start}
-									data-podcast-chapter-at={chapter.start}
-									aria-label={`从 ${chapter.at} 开始播放：${chapter.title}`}
-								>
-									{chapter.at}
-								</button>
-								<span class="podcast-chapters__title">
-									<PodcastTerms parts={chapter.titleParts} />
-								</span>
-							</li>
-						))
-					}
-				</ol>
-			</details>
 		</section>
 
 		<footer class="podcast-foot">

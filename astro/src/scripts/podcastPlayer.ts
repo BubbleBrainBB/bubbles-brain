@@ -95,14 +95,6 @@ function setup() {
 			if (mine && inside) item.setAttribute('aria-current', 'true');
 			else item.removeAttribute('aria-current');
 		}
-		const now = chapterAt(audio.currentTime);
-		for (const item of document.querySelectorAll<HTMLElement>('[data-podcast-chapter-at]')) {
-			const episode = item.closest<HTMLElement>('[data-podcast-episode]');
-			const mine = current && parseEpisode(episode?.dataset.podcastEpisode)?.id === current.id;
-			const active = Boolean(mine && now && Number(item.dataset.podcastChapterAt) === now.at);
-			if (active) item.setAttribute('aria-current', 'true');
-			else item.removeAttribute('aria-current');
-		}
 	};
 
 	const showTime = () => {

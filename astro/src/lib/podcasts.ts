@@ -271,11 +271,8 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 	const reasons = episode.brief?.reasons.length;
 	if (reasons !== undefined && (reasons < 2 || reasons > 4)) problems.push(`${reasons} reasons`);
 	if ((episode.questions?.length ?? 0) > 3) problems.push('more than three questions');
-	// A glossary word nobody reads in the outline is never shown.
-	const outlineText = [
-		...episode.chapters.map((c) => c.title),
-		...episode.points.map((p) => p.text),
-	];
+	// A glossary word is explained in 听什么: a takeaway, or the chapter name shown under one.
+	const outlineText = takeaways(episode).flatMap((point) => [point.text, point.chapter]);
 	for (const entry of episode.glossary ?? [])
 		if (!outlineText.some((text) => text.includes(entry.term)))
 			problems.push(`${entry.term} is not in the outline`);

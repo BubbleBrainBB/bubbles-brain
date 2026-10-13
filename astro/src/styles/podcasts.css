@@ -131,8 +131,6 @@
 .podcast-stances__play:focus-visible,
 .podcast-topics__item:focus-visible,
 .podcast-takeaway__at:focus-visible,
-.podcast-chapters__at:focus-visible,
-.podcast-chapters > summary:focus-visible,
 .podcast-quote__play:focus-visible {
 	outline: 2px solid var(--focus);
 	outline-offset: 2px;
@@ -729,7 +727,7 @@
 	list-style: none;
 }
 /* 听什么 (O1): the takeaways, each a time to play from and one sentence, its chapter in small
-   type; the takeaway playing now gets a dark time. The show's whole chapter list folds below. */
+   type; the takeaway playing now gets a dark time. */
 .podcast-outline__head {
 	display: flex;
 	align-items: baseline;
@@ -754,8 +752,7 @@
 	padding: 16px 0;
 	border-top: 1px solid var(--rule);
 }
-.podcast-takeaway__at,
-.podcast-chapters__at {
+.podcast-takeaway__at {
 	display: inline-flex;
 	align-items: center;
 	justify-self: start;
@@ -780,9 +777,7 @@
 	fill: currentColor;
 }
 .podcast-takeaway__at:hover,
-.podcast-chapters__at:hover,
-.podcast-takeaway[aria-current] .podcast-takeaway__at,
-.podcast-chapters__at[aria-current] {
+.podcast-takeaway[aria-current] .podcast-takeaway__at {
 	background: var(--ink);
 	color: var(--paper);
 }
@@ -806,51 +801,6 @@
 }
 .podcast-takeaway[aria-current] .podcast-takeaway__now {
 	display: inline;
-}
-.podcast-chapters {
-	margin-top: 18px;
-	border-radius: 12px;
-	background: var(--paper-muted);
-}
-.podcast-chapters > summary {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 14px 16px;
-	font-size: 14px;
-	list-style: none;
-	cursor: pointer;
-}
-.podcast-chapters > summary::-webkit-details-marker {
-	display: none;
-}
-.podcast-chapters__toggle::after {
-	content: '展开';
-	color: var(--ink-faint);
-	font-size: 12.5px;
-}
-.podcast-chapters[open] .podcast-chapters__toggle::after {
-	content: '收起';
-}
-.podcast-chapters > summary:hover .podcast-chapters__toggle::after {
-	color: var(--ink);
-}
-.podcast-chapters ol {
-	padding: 0 16px 10px;
-}
-.podcast-chapters li {
-	display: grid;
-	grid-template-columns: 76px minmax(0, 1fr);
-	column-gap: 14px;
-	align-items: baseline;
-	padding: 6px 0;
-}
-.podcast-chapters__at {
-	background: var(--paper);
-}
-.podcast-chapters__title {
-	font-size: 14px;
-	line-height: 1.6;
 }
 /* A word explained where the outline first uses it. */
 .podcast-term {
@@ -968,8 +918,7 @@
 	.podcast-quote blockquote {
 		font-size: 17px;
 	}
-	.podcast-takeaway,
-	.podcast-chapters li {
+	.podcast-takeaway {
 		grid-template-columns: 68px minmax(0, 1fr);
 		column-gap: 10px;
 	}
