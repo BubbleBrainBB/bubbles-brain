@@ -124,9 +124,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
 	{
 		id: 'latent-space-jev',
 		show: 'latent-space',
-		title: 'InstructGPT 的作者，为什么离开 OpenAI 去做一个给程序用的模型',
-		originalTitle:
-			'Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI',
+		title: '我为什么没能在 OpenAI 做出 Jev',
+		originalTitle: "Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO",
 		date: '2026-09-22',
 		people: [
 			{ name: 'Diogo Almeida', org: 'TypeSafe AI' },
