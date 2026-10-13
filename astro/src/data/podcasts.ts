@@ -71,6 +71,8 @@ export interface PodcastEpisode {
 	topics?: { at: Timestamp; title: string }[];
 	/** Where the guests disagree: one question, each side's short answer, and what they share. */
 	stances?: {
+		/** 两位嘉宾在哪里不一样 unless the disagreement is someone else's, say the host's. */
+		heading?: string;
 		question: string;
 		sides: { name: string; org: string; verdict: string; view: string; at: Timestamp }[];
 		agree: string;
@@ -119,6 +121,194 @@ export const podcastShows: PodcastShow[] = [
 ];
 
 export const podcastEpisodes: PodcastEpisode[] = [
+	{
+		id: 'latent-space-jev',
+		show: 'latent-space',
+		title: 'InstructGPT 的作者，为什么离开 OpenAI 去做一个给程序用的模型',
+		originalTitle:
+			'Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI',
+		date: '2026-09-22',
+		people: [
+			{ name: 'Diogo Almeida', org: 'TypeSafe AI' },
+			{ name: 'Swyx', role: '主持' },
+		],
+		duration: 8453,
+		language: '英文',
+		audio: 'https://api.substack.com/feed/podcast/216783460/c2acac966e67afb7e71574f68a44a662.mp3',
+		source: 'https://www.latent.space/p/jev',
+		lede: '合写 InstructGPT 论文的 Diogo Almeida 认为，大模型被训练成了讨好人的聊天机器人，所以聪明却不可靠。他的新模型 Jev 不跟人聊天，只给程序回答：选哪一项、是或否的概率、打几分。',
+		quote: {
+			text: 'I think intelligence will be more like a database than a coworker.',
+			translation: '我觉得，智能会更像一个数据库，而不是一个同事。',
+			by: 'Diogo Almeida',
+			at: '15:54',
+		},
+		points: [
+			{
+				at: '03:52',
+				text: 'Jev 是给程序用的模型：不回一段话，而是返回程序能直接用的答案，比如选哪一项、是或否的概率、打几分。',
+			},
+			{
+				at: '07:54',
+				text: '为讨好人而训练的聊天模型会丢掉少见的答案、过分自信，给出的概率就不准了，所以不适合拿来做判断。',
+			},
+			{
+				at: '11:41',
+				text: '对一个 API 来说，拒绝回答是「类型错误」：程序依赖的模型突然拒答，软件就会莫名其妙地坏掉。',
+			},
+			{
+				at: '20:43',
+				text: '比起堆算力，数据和「练什么任务」更重要：选对训练目标，是最难也最关键的事。',
+			},
+			{ at: '29:40', text: '这期的核心问题：AI 能解数学难题，为什么连最基本的工作都还没自动化？' },
+			{
+				at: '42:19',
+				text: '他要的不是同样的输入给同样的输出，而是相近的输入给相近的输出：稳，比完全确定更重要。',
+			},
+			{
+				at: '1:01:30',
+				text: '怎么用 Jev：把一个大问题拆成很多个小问题，每个小判断都能单独检验、单独放心。',
+			},
+			{
+				at: '1:18:51',
+				text: '他不认为 AI 会造成大规模失业：AI 会隐进软件后台，订阅软件反而会被加速。',
+			},
+			{
+				at: '1:46:04',
+				text: '业界押注的 RLVR，他觉得不是对的方向：作为新的训练目标，他只打 0.2 分，「这还算客气」。',
+			},
+			{
+				at: '1:57:21',
+				text: '在 OpenAI 时他想明白了：将来调用 AI 的主要是程序，不是人，可力气都花在了讨好人上。',
+			},
+			{
+				at: '1:59:58',
+				text: '他以为一周就能做完，结果一个人在 OpenAI 试了好几年也没成；问了一圈，觉得创业更快，就出来了。',
+			},
+			{
+				at: '2:10:48',
+				text: 'KV cache 把编程助手锁在同一个模型里、只能一直往后接，这就是子智能体和上下文压缩难做的原因。',
+			},
+		],
+		chapters: [
+			{ at: '00:00', title: 'Jev 发布周，与 AI 带来的经济革命' },
+			{ at: '02:50', title: 'Jev 是什么：System One 模型与可编程的 AI' },
+			{ at: '05:54', title: 'RLHF、模式坍缩、校准，以及 Yann LeCun' },
+			{ at: '10:29', title: '可编程的 AI、拒答与安全对齐' },
+			{ at: '17:21', title: 'TypeSafe 为什么不做公开榜单' },
+			{ at: '20:43', title: '最苦涩的教训：数据、算力和对的任务' },
+			{ at: '24:59', title: 'RLCD 与 RLHF、RLVR' },
+			{ at: '28:42', title: 'AI 这么强，为什么还没把经济自动化' },
+			{ at: '39:55', title: '可靠、稳健与确定性' },
+			{ at: '48:11', title: '模型版本、长期支持、速度和每美元智能' },
+			{ at: '54:04', title: 'Jev 的 API 和编程原语' },
+			{ at: '58:28', title: '怎么用 Jev 搭东西：结构、拆解和小判断' },
+			{ at: '1:18:28', title: '反向的「SaaS 末日」：AI 隐进软件里' },
+			{ at: '1:33:21', title: '操作电脑、暗数据和 Jev 的主要用途' },
+			{ at: '1:38:48', title: 'Jev 会怎样改变编程助手' },
+			{ at: '1:41:00', title: 'AI 安全、前沿节奏与 RLVR 的局限' },
+			{ at: '1:48:03', title: '给他 10 亿美元，他也不做预训练' },
+			{ at: '1:55:19', title: 'TypeSafe 背后的 OpenAI 往事' },
+			{ at: '2:01:41', title: '为什么他觉得多数新实验室都做错了' },
+			{ at: '2:08:00', title: '摆脱 KV cache 的编程助手，与多智能体的未来' },
+		],
+		brief: {
+			question: 'AI 这么聪明，为什么还没把日常工作自动化？',
+			answer: '因为它被练成了讨好人的聊天机器人。卡在三处：',
+			reasons: [
+				{
+					at: '1:20:21',
+					head: '目标选错了',
+					text: '一个练「让人满意」，一个练「刷高分」，都不是「让程序可靠地用」。',
+				},
+				{
+					at: '1:57:21',
+					head: '调用的是程序',
+					text: '将来调用 AI 的大多是代码，力气却都花在了讨好人上。',
+				},
+				{
+					at: '07:54',
+					head: '聊天让概率失准',
+					text: '过分自信、概率不准，就没法放心拿来做判断。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: 'Jev 返回的是什么？',
+				answer:
+					'不是一段话，而是三种程序能直接用的答案：选一项（像 switch 语句）、是或否的概率（像 if 语句）、打分（用来排序或设门槛）。',
+				at: '54:10',
+			},
+			{
+				question: '他为什么反对公开榜单？',
+				answer:
+					'公开榜单太容易刷：实验室会专门收集类似的题来练，等于换个方式刷榜。他宁愿先凭感觉信任，再放进自己的流程里实测。',
+				at: '19:20',
+			},
+			{
+				question: '他觉得 AI 会抢走工作吗？',
+				answer:
+					'不会造成大规模失业。2026 年的软件和 2019 年几乎一样，只是旁边多了个聊天框；他认为 AI 会隐进软件后台，让软件变得更好用。',
+				at: '1:18:28',
+			},
+		],
+		topics: [
+			{ at: '00:00', title: '什么是 Jev' },
+			{ at: '28:42', title: '可靠和划算' },
+			{ at: '54:04', title: '怎么用 Jev' },
+			{ at: '1:18:28', title: 'AI 的去向' },
+			{ at: '1:55:19', title: 'OpenAI 往事' },
+		],
+		stances: {
+			heading: '主持人和嘉宾在哪里不一样',
+			question: '模型该不该做到同样的输入、同样的输出？',
+			sides: [
+				{
+					name: 'Swyx',
+					org: '主持',
+					verdict: '迟早得做。',
+					view: '开发者想要固定的随机种子、同样的输入给同样的输出，你会被大家逼着提供。',
+					at: '45:46',
+				},
+				{
+					name: 'Diogo Almeida',
+					org: 'TypeSafe AI',
+					verdict: '不该当目标。',
+					view: '要的是相近的输入给相近的输出；硬做到完全一样，会换来更差的性价比。',
+					at: '41:37',
+				},
+			],
+			agree: '已经上线的模型不能偷偷改动：Swyx 要他公开表态，他当场承诺了。',
+		},
+		glossary: [
+			{
+				term: 'System One',
+				meaning: '借用心理学的「系统一」：快速、凭直觉的判断；相对的是一步步慢慢推理的「系统二」。',
+			},
+			{
+				term: 'RLHF',
+				meaning:
+					'基于人类反馈的强化学习：用人的打分来训练模型。ChatGPT 这类聊天模型就是这样练出来的，目标是让人满意。',
+			},
+			{
+				term: '模式坍缩',
+				meaning: '模型只会给最常见、最讨喜的回答，少见但可能正确的答案被丢掉了。',
+			},
+			{ term: '校准', meaning: '模型说有八成把握的事，真的大约八成是对的，就叫校准得好。' },
+			{
+				term: 'RLVR',
+				meaning:
+					'用能自动判对错的题目（比如数学题、代码测试）来训练模型推理。Diogo 说它的目标其实是刷分。',
+			},
+			{ term: 'SaaS', meaning: '按月订阅的在线软件，比如 Notion、Salesforce。' },
+			{
+				term: 'KV cache',
+				meaning:
+					'模型读过的上下文会存成缓存，接着往后写就很快；代价是只能用同一个模型、只能一直往后接。',
+			},
+		],
+	},
 	{
 		id: 'how-i-ai-grok-bot-designers',
 		show: 'how-i-ai',
