@@ -17,6 +17,15 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-13',
+		tag: '精选阅读',
+		type: 'content',
+		title: '新增精选阅读：我上个月是怎么把 2,500 个 PR 发上生产环境的',
+		summary:
+			'整理 Lauren Tan（poteto）的演讲：让智能体一个月交 2,000 多个 PR，靠的是先建立信任，包括会自己验证的技能、对智能体友好的代码库，以及从代码结构、lint 到规则和技能的一层层约束。文末附新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-13-how-i-shipped-2500-prs-last-month/' }],
+	},
+	{
 		date: '2026-10-12',
 		tag: '播客',
 		type: 'content',
