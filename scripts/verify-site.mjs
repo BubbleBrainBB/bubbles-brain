@@ -457,6 +457,8 @@ const specializedMarkers = new Map([
   ["podcasts/shows/index.html", ["data-podcast-shows", "/podcasts/shows/latent-space/"]],
   ["podcasts/shows/latent-space/index.html", ["data-podcast-show-page", "data-podcast-play"]],
   ["podcasts/latent-space-jev/index.html", ["data-podcast-brief", "data-podcast-topics", "主持人和嘉宾在哪里不一样", "api.substack.com/feed/podcast/216783460/"]],
+  ["podcasts/lennys-podcast-tibo-sottiaux/index.html", ["data-podcast-brief", "data-podcast-topics", "pscrb.fm/rss/p/api.substack.com/feed/podcast/217274136/"]],
+  ["podcasts/shows/lennys-podcast/index.html", ["data-podcast-show-page", "/podcasts/lennys-podcast-tibo-sottiaux/"]],
   ["podcasts/how-i-ai-grok-bot-designers/index.html", ["data-podcast-brief", "data-podcast-topics", "anchor.fm/s/1035b1568/podcast/play/"]],
   ["podcasts/shows/how-i-ai/index.html", ["data-podcast-show-page", "/podcasts/how-i-ai-grok-bot-designers/"]],
   [

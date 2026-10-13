@@ -17,6 +17,18 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-13',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：OpenAI 的 ChatGPT 负责人：我们（又一次）进入了 AI 的新时代',
+		summary:
+			"收录第三档节目 Lenny's Podcast。负责 ChatGPT 和 Codex 的 Tibo Sottiaux 讲 OpenAI 新发布的个人智能体 Dots、为什么以后网上的多数操作会由智能体完成，以及 AI 时代哪些技能在升值。附一图读懂、时间花在哪和 24 章中文要点，站内直接收听。",
+		links: [
+			{ label: '收听这一期', href: '/podcasts/lennys-podcast-tibo-sottiaux/' },
+			{ label: "Lenny's Podcast", href: '/podcasts/shows/lennys-podcast/' },
+		],
+	},
+	{
 		date: '2026-10-12',
 		tag: '播客',
 		type: 'content',
