@@ -7,12 +7,12 @@ import {
 	dateLabel,
 	durationLabel,
 	episodeHref,
-	outline,
 	PODCASTS_HREF,
 	playerEpisode,
 	seconds,
 	showHref,
 	showOf,
+	takeaways,
 	topicSpans,
 	withTerms,
 } from '../../lib/podcasts';
@@ -32,10 +32,10 @@ const hosts = episode.people.filter((person) => person.role);
 const player = playerEpisode(episode);
 // Each glossary word is explained once, where the outline first uses it.
 const seenTerms = new Set<string>();
-const entries = outline(episode).map((entry) => ({
-	...entry,
-	chapterParts: withTerms(entry.chapter, episode.glossary, seenTerms),
-	pointParts: entry.points.map((point) => withTerms(point, episode.glossary, seenTerms)),
+const points = takeaways(episode).map((point) => ({
+	...point,
+	textParts: withTerms(point.text, episode.glossary, seenTerms),
+	chapterParts: withTerms(point.chapter, episode.glossary, seenTerms),
 }));
 const ticks = player.chapters.filter((chapter) => chapter.at > 0 && chapter.at < episode.duration);
 const topics = topicSpans(episode);
@@ -225,8 +225,8 @@ const topics = topicSpans(episode);
 									class="podcast-topics__item"
 									type="button"
 									data-podcast-at={topic.start}
-									data-podcast-topic-from={topic.start}
-									data-podcast-topic-to={topic.end}
+									data-podcast-from={topic.start}
+									data-podcast-to={topic.end}
 									aria-label={`从 ${topic.stamp} 开始播放：${topic.title}`}
 								>
 									<span class="podcast-topics__bar" aria-hidden="true" />
@@ -298,30 +298,38 @@ const topics = topicSpans(episode);
 			)
 		}
 
-		<section class="podcast-outline" aria-labelledby="podcast-outline">
-			<h2 class="podcast-section__title" id="podcast-outline">听什么</h2>
-			<ol>
+		<section class="podcast-outline" aria-labelledby="podcast-outline" data-podcast-outline>
+			<p class="podcast-outline__head">
+				<span class="podcast-section__title" id="podcast-outline">听什么</span>
+				<span>{`${points.length} 个要点 · 点时间从那里听`}</span>
+			</p>
+			<ol class="podcast-takeaways">
 				{
-					entries.map((entry) => (
-						<li class:list={['podcast-outline__entry', { 'has-points': entry.points.length > 0 }]}>
+					points.map((point) => (
+						<li
+							class="podcast-takeaway"
+							data-podcast-from={point.start}
+							data-podcast-to={point.end}
+						>
 							<button
-								class="podcast-outline__at"
+								class="podcast-takeaway__at"
 								type="button"
-								data-podcast-at={entry.at}
-								data-podcast-chapter-at={entry.start}
-								aria-label={`从 ${entry.stamp} 开始播放：${entry.chapter}`}
+								data-podcast-at={point.start}
+								aria-label={`从 ${point.stamp} 开始播放`}
 							>
-								{entry.stamp}
+								<svg viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M8 5v14l11-7z" />
+								</svg>
+								{point.stamp}
 							</button>
-							<div class="podcast-outline__body">
-								<span class="podcast-outline__chapter">
-									<PodcastTerms parts={entry.chapterParts} />
-								</span>
-								{entry.pointParts.map((parts) => (
-									<p class="podcast-outline__point">
-										<PodcastTerms parts={parts} />
-									</p>
-								))}
+							<div class="podcast-takeaway__body">
+								<p class="podcast-takeaway__text">
+									<PodcastTerms parts={point.textParts} />
+								</p>
+								<p class="podcast-takeaway__chapter">
+									<PodcastTerms parts={point.chapterParts} />
+									<span class="podcast-takeaway__now"> · 正在播</span>
+								</p>
 							</div>
 						</li>
 					))

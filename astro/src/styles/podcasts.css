@@ -130,7 +130,7 @@
 .podcast-quiz__play:focus-visible,
 .podcast-stances__play:focus-visible,
 .podcast-topics__item:focus-visible,
-.podcast-outline__at:focus-visible,
+.podcast-takeaway__at:focus-visible,
 .podcast-quote__play:focus-visible {
 	outline: 2px solid var(--focus);
 	outline-offset: 2px;
@@ -726,46 +726,81 @@
 	padding: 0;
 	list-style: none;
 }
-/* A chapter with takeaways: its title small and grey, the takeaways in full. One without: a
-   quiet line of time and title. */
-.podcast-outline__entry {
-	display: grid;
-	grid-template-columns: 52px minmax(0, 1fr);
-	column-gap: 14px;
+/* 听什么 (O1): the takeaways, each a time to play from and one sentence, its chapter in small
+   type; the takeaway playing now gets a dark time. */
+.podcast-outline__head {
+	display: flex;
 	align-items: baseline;
-	padding: 5px 0;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 0 0 4px;
+	color: var(--ink-faint);
+	font-size: 12.5px;
 }
-.podcast-outline__entry.has-points {
-	padding: 14px 0 12px;
+.podcast-outline__head .podcast-section__title {
+	margin: 0;
+	color: var(--ink);
 }
-.podcast-outline__at {
+.podcast-takeaways {
+	border-bottom: 1px solid var(--rule);
+}
+.podcast-takeaway {
+	display: grid;
+	grid-template-columns: 76px minmax(0, 1fr);
+	column-gap: 14px;
+	align-items: start;
+	padding: 16px 0;
+	border-top: 1px solid var(--rule);
+}
+.podcast-takeaway__at {
+	display: inline-flex;
+	align-items: center;
 	justify-self: start;
-	min-height: 28px;
-	padding: 0;
+	gap: 5px;
+	height: 26px;
+	padding: 0 9px;
 	border: 0;
-	background: none;
-	color: #9a9a9a;
+	border-radius: 999px;
+	background: var(--paper-muted);
+	color: var(--ink);
 	font: inherit;
 	font-size: 12.5px;
 	font-variant-numeric: tabular-nums;
 	cursor: pointer;
+	transition:
+		background-color 140ms ease,
+		color 140ms ease;
 }
-.has-points .podcast-outline__at {
-	color: var(--ink-soft);
+.podcast-takeaway__at svg {
+	width: 8px;
+	height: 8px;
+	fill: currentColor;
 }
-.podcast-outline__at:hover {
-	color: var(--ink);
-	text-decoration: underline;
-	text-underline-offset: 4px;
+.podcast-takeaway__at:hover,
+.podcast-takeaway[aria-current] .podcast-takeaway__at {
+	background: var(--ink);
+	color: var(--paper);
 }
-.podcast-outline__chapter {
-	display: block;
-	color: #9a9a9a;
-	font-size: 13px;
+.podcast-takeaway__body {
+	min-width: 0;
+}
+.podcast-takeaway__text {
+	margin: 0;
+	font-size: 15.5px;
+	line-height: 1.75;
+}
+.podcast-takeaway__chapter {
+	margin: 4px 0 0;
+	color: #8a8a8a;
+	font-size: 12.5px;
 	line-height: 1.6;
 }
-.has-points .podcast-outline__chapter {
-	color: var(--ink-faint);
+.podcast-takeaway__now {
+	display: none;
+	color: var(--ink);
+}
+.podcast-takeaway[aria-current] .podcast-takeaway__now {
+	display: inline;
 }
 /* A word explained where the outline first uses it. */
 .podcast-term {
@@ -821,20 +856,6 @@
 	.podcast-term__note {
 		transition: none !important;
 	}
-}
-
-.podcast-outline__point {
-	margin: 4px 0 0;
-	font-size: 15px;
-	line-height: 1.75;
-}
-/* The chapter playing now. */
-.podcast-outline__at[aria-current] {
-	color: var(--ink);
-	font-weight: 600;
-}
-.podcast-outline__entry:has(.podcast-outline__at[aria-current]) .podcast-outline__chapter {
-	color: var(--ink);
 }
 
 .podcast-foot {
@@ -896,6 +917,14 @@
 	}
 	.podcast-quote blockquote {
 		font-size: 17px;
+	}
+	.podcast-takeaway {
+		grid-template-columns: 68px minmax(0, 1fr);
+		column-gap: 10px;
+	}
+	.podcast-takeaway__text {
+		font-size: 14.5px;
+		line-height: 1.7;
 	}
 	.podcast-progress {
 		flex-basis: 100%;
@@ -967,14 +996,6 @@
 		font-size: 13.5px;
 		line-height: 1.75;
 	}
-	.podcast-outline__entry {
-		grid-template-columns: 44px minmax(0, 1fr);
-		column-gap: 10px;
-	}
-	.podcast-outline__point {
-		font-size: 14px;
-		line-height: 1.7;
-	}
 	.podcast-brief__card {
 		padding: 16px 14px 4px;
 		border-radius: 14px;
@@ -1009,13 +1030,5 @@
 	.podcast-quiz__answer {
 		font-size: 13.5px;
 		line-height: 1.75;
-	}
-	.podcast-outline__entry {
-		grid-template-columns: 44px minmax(0, 1fr);
-		column-gap: 10px;
-	}
-	.podcast-outline__point {
-		font-size: 14px;
-		line-height: 1.7;
 	}
 }
