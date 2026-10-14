@@ -393,3 +393,12 @@
 	gap: 8px;
 	color: var(--ink-soft);
 }
+.collection-site .reading-page .reading-meta a.reading-origin {
+	gap: 6px;
+	text-decoration: none;
+}
+.collection-site .reading-page .reading-meta a.reading-origin span {
+	text-decoration: underline;
+	text-decoration-color: #c4c4c4;
+	text-underline-offset: 3px;
+}
