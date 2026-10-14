@@ -56,6 +56,17 @@ describe('sourceMark', () => {
 		).toBeNull();
 	});
 
+	it('uses Earendil’s saved favicon for earendil.com', () => {
+		expect(sourceMark('earendil.com', 'https://earendil.com/posts/session-portability/')).toEqual({
+			vendor: 'earendil',
+			initial: 'E',
+			image: null,
+		});
+		expect(sourceMark('', 'https://www.earendil.com/posts/prompt-caching/').vendor).toBe(
+			'earendil',
+		);
+	});
+
 	it('falls back to a letter when there is no logo', () => {
 		expect(sourceMark('Awaiting Input', 'https://awaitinginput.substack.com/p/x')).toEqual({
 			vendor: null,

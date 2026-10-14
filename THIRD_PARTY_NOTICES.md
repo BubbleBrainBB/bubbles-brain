@@ -40,3 +40,6 @@ The model vendor logos in `static/images/vendors/` come from
 (`@lobehub/icons-static-svg`), distributed under the MIT License. The logos
 themselves are trademarks of their respective companies and are used only to
 identify which vendor made each model.
+
+`static/images/vendors/earendil.svg` is Earendil's own site favicon, saved
+locally and used only to identify articles from earendil.com.

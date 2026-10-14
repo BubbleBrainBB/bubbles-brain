@@ -1,6 +1,7 @@
 /**
  * Which mark a 精选阅读 source gets beside its name.
  * Companies use the LobeHub logos under static/images/vendors/ (see THIRD_PARTY_NOTICES).
+ * Earendil uses its own site favicon, saved in that same directory.
  * People use a saved X profile portrait under static/images/sources/.
  * Anything else gets a lettered circle.
  */
@@ -17,6 +18,7 @@ const HOST_VENDORS: [RegExp, string][] = [
 	[/(^|\.)(minimax\.io|minimaxi\.com)$/, 'minimax'],
 	[/(^|\.)(z\.ai|zhipuai\.cn)$/, 'zai'],
 	[/(^|\.)(xiaomi\.com|mi\.com)$/, 'xiaomi'],
+	[/(^|\.)earendil\.com$/, 'earendil'],
 ];
 
 /** Personal accounts whose posts speak for a company (the link alone cannot tell). */

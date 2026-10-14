@@ -161,6 +161,10 @@ const sourceLabel = sourceUrl
 			}
 		})()
 	: null;
+const originMark = sourceUrl ? sourceMark(sourceLabel ?? '', sourceUrl) : null;
+const showOriginMark = Boolean(
+	originMark && !articleIntro && (originMark.vendor || originMark.image),
+);
 const staticRoot = resolve(process.cwd(), '../static');
 const pageLabels: Record<string, { zh: string; en: string; kicker: string }> = {
 	about: { zh: '关于', en: 'About', kicker: 'ABOUT THE ARCHIVE' },
@@ -607,8 +611,24 @@ const libraryApi =
 							</span>
 						)}
 						{sourceUrl && (
-							<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-								{articleIntro ? (isEnglish ? 'Original ↗' : '读原文 ↗') : `${sourceLabel} ↗`}
+							<a
+								class={showOriginMark ? 'reading-origin' : undefined}
+								href={sourceUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{showOriginMark && originMark && <SourceMark mark={originMark} size={16} />}
+								{showOriginMark ? (
+									<span>{sourceLabel} ↗</span>
+								) : articleIntro ? (
+									isEnglish ? (
+										'Original ↗'
+									) : (
+										'读原文 ↗'
+									)
+								) : (
+									`${sourceLabel} ↗`
+								)}
 							</a>
 						)}
 					</div>
@@ -616,79 +636,79 @@ const libraryApi =
 
 				<div class="article-main">
 					{isStandaloneHtml ? (
-							<iframe
-								class="standalone-article"
-								title={title}
-								src={standaloneSrc ?? undefined}
-								sandbox="allow-scripts allow-same-origin"
-								loading="lazy"
-							/>
-						) : MarkdownContent ? (
-							<div class="article-content">
-								<MarkdownContent />
-							</div>
-						) : (
-							<p class="article-empty">
-								{isEnglish
-									? 'This archive entry has no body content yet.'
-									: '这条归档目前还没有正文。'}
+						<iframe
+							class="standalone-article"
+							title={title}
+							src={standaloneSrc ?? undefined}
+							sandbox="allow-scripts allow-same-origin"
+							loading="lazy"
+						/>
+					) : MarkdownContent ? (
+						<div class="article-content">
+							<MarkdownContent />
+						</div>
+					) : (
+						<p class="article-empty">
+							{isEnglish
+								? 'This archive entry has no body content yet.'
+								: '这条归档目前还没有正文。'}
+						</p>
+					)}
+
+					<footer class="article-ending">
+						{articleIntro && (
+							<p class="article-editorial-note">
+								{articleIntro.note}
+								{sourceUrl && (
+									<>
+										{' '}
+										<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+											{isEnglish ? 'Read the original ↗' : '读英文原文 ↗'}
+										</a>
+									</>
+								)}
 							</p>
 						)}
-
-						<footer class="article-ending">
-							{articleIntro && (
-								<p class="article-editorial-note">
-									{articleIntro.note}
-									{sourceUrl && (
-										<>
-											{' '}
-											<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-												{isEnglish ? 'Read the original ↗' : '读英文原文 ↗'}
-											</a>
-										</>
-									)}
-								</p>
-							)}
-							{(newer || older) && (
-								<nav
-									class="article-pagination"
-									aria-label={isEnglish ? 'Article navigation' : '文章导航'}
-								>
-									{newer && (
-										<a href={newer.route} class="article-previous" rel="prev">
-											<span>
-												←{' '}
-												{isTutorialArticle
-													? isEnglish
-														? 'Previous chapter'
-														: '上一章'
-													: isEnglish
-														? 'Previous'
-														: '上一篇'}
-											</span>
-											<strong class="article-pagination-title">{newer.title}</strong>
-										</a>
-									)}
-									{older && (
-										<a href={older.route} class="article-next" rel="next">
-											<span>
-												{isTutorialArticle
-													? isEnglish
-														? 'Next chapter'
-														: '下一章'
-													: isEnglish
-														? 'Next'
-														: '下一篇'}{' '}
-												→
-											</span>
-											<strong class="article-pagination-title">{older.title}</strong>
-										</a>
-									)}
-								</nav>
-							)}
-							{threadId && <Discussion threadId={threadId} locale={record.locale} />}
-						</footer>
-					</div>
+						{(newer || older) && (
+							<nav
+								class="article-pagination"
+								aria-label={isEnglish ? 'Article navigation' : '文章导航'}
+							>
+								{newer && (
+									<a href={newer.route} class="article-previous" rel="prev">
+										<span>
+											←{' '}
+											{isTutorialArticle
+												? isEnglish
+													? 'Previous chapter'
+													: '上一章'
+												: isEnglish
+													? 'Previous'
+													: '上一篇'}
+										</span>
+										<strong class="article-pagination-title">{newer.title}</strong>
+									</a>
+								)}
+								{older && (
+									<a href={older.route} class="article-next" rel="next">
+										<span>
+											{isTutorialArticle
+												? isEnglish
+													? 'Next chapter'
+													: '下一章'
+												: isEnglish
+													? 'Next'
+													: '下一篇'}{' '}
+											→
+										</span>
+										<strong class="article-pagination-title">{older.title}</strong>
+									</a>
+								)}
+							</nav>
+						)}
+						{threadId && <Discussion threadId={threadId} locale={record.locale} />}
+					</footer>
+				</div>
 			</article>
 		)
 	}
