@@ -453,6 +453,7 @@ function classifyCodeReleasePath(
       "static/eval-demos/",
       "static/images/eval-cases/",
       "static/images/vendors/",
+      "static/images/sources/",
       "static/images/highlights/research-acceleration/",
     ].some((prefix) => path.startsWith(prefix)) ||
     [
