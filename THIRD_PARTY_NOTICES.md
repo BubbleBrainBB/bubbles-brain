@@ -37,9 +37,12 @@ its current Content Security Policy and avoid third-party font requests.
 
 The model vendor logos in `static/images/vendors/` come from
 [LobeHub Icons](https://github.com/lobehub/lobe-icons)
-(`@lobehub/icons-static-svg`), distributed under the MIT License. The logos
-themselves are trademarks of their respective companies and are used only to
-identify which vendor made each model.
+(`@lobehub/icons-static-svg`), distributed under the MIT License. GitHub,
+Hugging Face, and Vercel marks in that directory come from the same set. The
+logos themselves are trademarks of their respective companies and are used only
+to identify the source of an article.
 
-`static/images/vendors/earendil.svg` is Earendil's own site favicon, saved
-locally and used only to identify articles from earendil.com.
+`earendil.svg`, `youtube.svg`, `ngrok.svg`, `designprompts.svg`, `skillsmp.svg`,
+and `wechat.svg` are those sites' own favicons, saved locally and used only to
+identify articles from those hosts. Portraits in `static/images/sources/` are
+public profile images, saved locally and used only to identify the author.

@@ -49,11 +49,40 @@ describe('sourceMark', () => {
 		expect(sourceMark('', 'https://sankalp.bearblog.dev/my-experience').image).toBe(
 			'/images/sources/sankalp.jpg',
 		);
-		expect(sourceMark('', 'https://x.com/HyperFrames_/status/1').image).toBeNull();
-		expect(sourceMark('', 'https://x.com/droid_35719/status/1').image).toBeNull();
+		expect(sourceMark('', 'https://x.com/HyperFrames_/status/1').image).toBe(
+			'/images/sources/hyperframes.jpg',
+		);
+		expect(sourceMark('@droid_35719', 'https://x.com/droid_35719/status/1').image).toBe(
+			'/images/sources/theo.jpg',
+		);
+		expect(sourceMark('Awaiting Input', 'https://awaitinginput.substack.com/p/x').image).toBe(
+			'/images/sources/brandon-sovran.jpg',
+		);
+		expect(sourceMark('', 'https://www.soundformovement.com/chatgpt-pro').image).toBe(
+			'/images/sources/michael-wall.jpg',
+		);
 		expect(
 			sourceMark('Anthropic Institute', 'https://www.anthropic.com/institute/x').image,
 		).toBeNull();
+	});
+
+	it('uses a saved favicon for hosts that are not in the LobeHub set', () => {
+		expect(sourceMark('github.com', 'https://github.com/org/repo')).toMatchObject({
+			vendor: 'github',
+			image: null,
+		});
+		expect(sourceMark('', 'https://www.youtube.com/watch?v=1').vendor).toBe('youtube');
+		expect(sourceMark('', 'https://youtu.be/abc').vendor).toBe('youtube');
+		expect(sourceMark('', 'https://huggingface.co/blog/x').vendor).toBe('huggingface');
+		expect(sourceMark('vercel.com', 'https://vercel.com/blog/x').vendor).toBe('vercel');
+		expect(sourceMark('', 'https://ngrok.com/blog/x').vendor).toBe('ngrok');
+		expect(sourceMark('', 'https://www.designprompts.dev/prompt').vendor).toBe('designprompts');
+		expect(sourceMark('', 'https://skillsmp.com/skills').vendor).toBe('skillsmp');
+		expect(sourceMark('', 'https://mp.weixin.qq.com/s/abc').vendor).toBe('wechat');
+		expect(sourceMark('', 'https://anthropic.skilljar.com/claude-code-in-action').vendor).toBe(
+			'anthropic',
+		);
+		expect(sourceMark('', 'https://yongzx.github.io/notes').vendor).toBeNull();
 	});
 
 	it('uses Earendil’s saved favicon for earendil.com', () => {
@@ -68,14 +97,9 @@ describe('sourceMark', () => {
 	});
 
 	it('falls back to a letter when there is no logo', () => {
-		expect(sourceMark('Awaiting Input', 'https://awaitinginput.substack.com/p/x')).toEqual({
+		expect(sourceMark('Example', 'https://example.com/post')).toEqual({
 			vendor: null,
-			initial: 'A',
-			image: null,
-		});
-		expect(sourceMark('vercel.com', 'https://vercel.com/blog/x')).toEqual({
-			vendor: null,
-			initial: 'V',
+			initial: 'E',
 			image: null,
 		});
 		expect(sourceMark('', 'not a url')).toEqual({ vendor: null, initial: '·', image: null });

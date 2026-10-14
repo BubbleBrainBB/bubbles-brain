@@ -1,14 +1,17 @@
 /**
  * Which mark a 精选阅读 source gets beside its name.
  * Companies use the LobeHub logos under static/images/vendors/ (see THIRD_PARTY_NOTICES).
- * Earendil uses its own site favicon, saved in that same directory.
+ * Sites without a LobeHub logo use their own favicon, saved in that same directory.
  * People use a saved X profile portrait under static/images/sources/.
  * Anything else gets a lettered circle.
  */
 
 /** Hosts that publish on a company's behalf. */
 const HOST_VENDORS: [RegExp, string][] = [
-	[/(^|\.)(anthropic\.com|claude\.com|claude\.dev|claude\.ai)$/, 'anthropic'],
+	[
+		/(^|\.)(anthropic\.com|claude\.com|claude\.dev|claude\.ai|anthropic\.skilljar\.com)$/,
+		'anthropic',
+	],
 	[/(^|\.)openai\.com$/, 'openai'],
 	[/(^|\.)(google|blog\.google|deepmind\.google|deepmind\.com)$/, 'google'],
 	[/(^|\.)(meta\.com|ai\.meta\.com)$/, 'meta'],
@@ -19,6 +22,14 @@ const HOST_VENDORS: [RegExp, string][] = [
 	[/(^|\.)(z\.ai|zhipuai\.cn)$/, 'zai'],
 	[/(^|\.)(xiaomi\.com|mi\.com)$/, 'xiaomi'],
 	[/(^|\.)earendil\.com$/, 'earendil'],
+	[/(^|\.)github\.com$/, 'github'],
+	[/(^|\.)(youtube\.com|youtu\.be)$/, 'youtube'],
+	[/(^|\.)huggingface\.co$/, 'huggingface'],
+	[/(^|\.)vercel\.com$/, 'vercel'],
+	[/(^|\.)ngrok\.com$/, 'ngrok'],
+	[/(^|\.)designprompts\.dev$/, 'designprompts'],
+	[/(^|\.)skillsmp\.com$/, 'skillsmp'],
+	[/(^|\.)(weixin\.qq\.com|wx\.qq\.com)$/, 'wechat'],
 ];
 
 /** Personal accounts whose posts speak for a company (the link alone cannot tell). */
@@ -64,6 +75,14 @@ const PORTRAITS: { image: string; handle?: string; hosts?: string[]; name?: RegE
 	{ hosts: ['manthanguptaa.in'], image: '/images/sources/manthan-gupta.jpg' },
 	{ hosts: ['seangoedecke.com'], image: '/images/sources/sean-goedecke.jpg' },
 	{ hosts: ['sankalp.bearblog.dev'], image: '/images/sources/sankalp.jpg' },
+	{ handle: 'droid_35719', image: '/images/sources/theo.jpg' },
+	{ handle: 'hyperframes_', image: '/images/sources/hyperframes.jpg' },
+	{
+		hosts: ['awaitinginput.substack.com'],
+		name: /^awaiting input$/i,
+		image: '/images/sources/brandon-sovran.jpg',
+	},
+	{ hosts: ['soundformovement.com'], image: '/images/sources/michael-wall.jpg' },
 ];
 
 export interface SourceMark {
