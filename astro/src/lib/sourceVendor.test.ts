@@ -27,6 +27,35 @@ describe('sourceMark', () => {
 		expect(sourceMark('@trq212', 'https://x.com/trq212/status/1').vendor).toBe('anthropic');
 	});
 
+	it('uses an X portrait for a person, and keeps company logos for organizations', () => {
+		expect(sourceMark('@trq212', 'https://x.com/trq212/status/1').image).toBe(
+			'/images/sources/trq212.jpg',
+		);
+		expect(sourceMark('', 'https://x.com/dexhorthy/status/1').image).toBe(
+			'/images/sources/dexhorthy.jpg',
+		);
+		expect(sourceMark('', 'https://x.com/AndrewYNg/status/1').image).toBe(
+			'/images/sources/andrew-ng.jpg',
+		);
+		expect(sourceMark('claude.dev · Lance Martin', 'https://claude.dev/blog/x').image).toBe(
+			'/images/sources/lance-martin.jpg',
+		);
+		expect(sourceMark('', 'https://www.philschmid.de/building-agents').image).toBe(
+			'/images/sources/philipp-schmid.jpg',
+		);
+		expect(sourceMark('', 'https://www.seangoedecke.com/how-to-keep-thinking/').image).toBe(
+			'/images/sources/sean-goedecke.jpg',
+		);
+		expect(sourceMark('', 'https://sankalp.bearblog.dev/my-experience').image).toBe(
+			'/images/sources/sankalp.jpg',
+		);
+		expect(sourceMark('', 'https://x.com/HyperFrames_/status/1').image).toBeNull();
+		expect(sourceMark('', 'https://x.com/droid_35719/status/1').image).toBeNull();
+		expect(
+			sourceMark('Anthropic Institute', 'https://www.anthropic.com/institute/x').image,
+		).toBeNull();
+	});
+
 	it('falls back to a letter when there is no logo', () => {
 		expect(sourceMark('Awaiting Input', 'https://awaitinginput.substack.com/p/x')).toEqual({
 			vendor: null,

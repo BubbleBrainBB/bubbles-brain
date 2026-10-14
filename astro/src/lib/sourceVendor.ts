@@ -1,7 +1,8 @@
 /**
- * Which company a 精选阅读 source belongs to, for the small logo beside its name.
- * Logos are the LobeHub set already under static/images/vendors/ (see THIRD_PARTY_NOTICES);
- * a source without one gets a lettered circle instead.
+ * Which mark a 精选阅读 source gets beside its name.
+ * Companies use the LobeHub logos under static/images/vendors/ (see THIRD_PARTY_NOTICES).
+ * People use a saved X profile portrait under static/images/sources/.
+ * Anything else gets a lettered circle.
  */
 
 /** Hosts that publish on a company's behalf. */
@@ -37,9 +38,30 @@ export function sourceFromUrl(sourceUrl: unknown): string {
 	}
 }
 
-/** People who have a portrait instead of a company logo or a letter. */
-const PORTRAITS = [
-	{ name: /^lauren tan\b/i, handle: 'poteto', image: '/images/sources/lauren-tan.png' },
+/** People, matched by X handle, personal site, or an exact byline. */
+const PORTRAITS: { image: string; handle?: string; hosts?: string[]; name?: RegExp }[] = [
+	{ handle: 'poteto', name: /^lauren tan\b/i, image: '/images/sources/lauren-tan.png' },
+	{ handle: 'trq212', image: '/images/sources/trq212.jpg' },
+	{ handle: 'dexhorthy', image: '/images/sources/dexhorthy.jpg' },
+	{ handle: 'vercantez', image: '/images/sources/vercantez.jpg' },
+	{ handle: 'akshay_pachaar', image: '/images/sources/akshay-pachaar.jpg' },
+	{ handle: 'andrewyng', image: '/images/sources/andrew-ng.jpg' },
+	{ handle: 'sumanth_077', image: '/images/sources/sumanth.jpg' },
+	{
+		handle: 'rlancemartin',
+		name: /^claude\.dev · lance martin$/i,
+		image: '/images/sources/lance-martin.jpg',
+	},
+	{ hosts: ['philschmid.de'], image: '/images/sources/philipp-schmid.jpg' },
+	{ hosts: ['steipete.me'], image: '/images/sources/peter-steinberger.png' },
+	{ hosts: ['nicknisi.com'], image: '/images/sources/nick-nisi.jpg' },
+	{ hosts: ['yongzx.github.io'], image: '/images/sources/yong-zhengxin.jpg' },
+	{ hosts: ['lucumr.pocoo.org'], image: '/images/sources/armin-ronacher.jpg' },
+	{ hosts: ['mariozechner.at'], image: '/images/sources/mario-zechner.jpg' },
+	{ hosts: ['minoradventures.co'], image: '/images/sources/marek-minor.jpg' },
+	{ hosts: ['manthanguptaa.in'], image: '/images/sources/manthan-gupta.jpg' },
+	{ hosts: ['seangoedecke.com'], image: '/images/sources/sean-goedecke.jpg' },
+	{ hosts: ['sankalp.bearblog.dev'], image: '/images/sources/sankalp.jpg' },
 ];
 
 export interface SourceMark {
@@ -78,11 +100,26 @@ function sourceHandle(sourceUrl: unknown): string | null {
 	}
 }
 
+function sourceHost(sourceUrl: unknown): string | null {
+	if (typeof sourceUrl !== 'string') return null;
+	try {
+		return new URL(sourceUrl).hostname.replace(/^www\./, '');
+	} catch {
+		return null;
+	}
+}
+
 function sourcePortrait(source: string, sourceUrl?: unknown): string | null {
 	const name = source.trim();
-	const handle = name.startsWith('@') ? name.slice(1).toLowerCase() : sourceHandle(sourceUrl);
+	const handle =
+		(name.startsWith('@') ? name.slice(1).toLowerCase() : sourceHandle(sourceUrl)) ?? null;
+	const host = sourceHost(sourceUrl);
 	return (
-		PORTRAITS.find((portrait) => portrait.name.test(name) || portrait.handle === handle)?.image ??
-		null
+		PORTRAITS.find(
+			(portrait) =>
+				(portrait.handle != null && portrait.handle === handle) ||
+				(portrait.name?.test(name) ?? false) ||
+				(host != null && portrait.hosts?.includes(host) === true),
+		)?.image ?? null
 	);
 }
