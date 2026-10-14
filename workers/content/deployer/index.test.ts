@@ -1107,6 +1107,32 @@ describe("automatic code release boundary", () => {
     ).toThrow("Code release contains forbidden or unknown path: astro/src/data/podcasts.draft.ts");
   });
 
+  it("accepts saved highlight source portraits", () => {
+    const releasePaths = [
+      "static/images/sources/lauren-tan.png",
+      "static/images/sources/akshay-pachaar.jpg",
+    ];
+    expect(
+      validateCodeReleaseChangeSet(
+        comparison(
+          releasePaths.map((filename) => ({ filename, status: "added" })),
+        ),
+        { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+      ),
+    ).toHaveLength(releasePaths.length);
+    for (const filename of [
+      "static/images/sources-draft/akshay-pachaar.jpg",
+      "static/images/unknown.jpg",
+    ]) {
+      expect(() =>
+        validateCodeReleaseChangeSet(
+          comparison([{ filename, status: "added" }]),
+          { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+        ),
+      ).toThrow(`Code release contains forbidden or unknown path: ${filename}`);
+    }
+  });
+
   it("accepts the eval case ledger, demos, thumbnails and vendor logos only", () => {
     const releasePaths = [
       "data/eval-cases/cases.json",
