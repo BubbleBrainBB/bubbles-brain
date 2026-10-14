@@ -11,7 +11,18 @@ const { mark, size = 14 } = Astro.props;
 ---
 
 {
-	mark.vendor ? (
+	mark.image ? (
+		<img
+			class="source-mark source-mark--portrait"
+			src={mark.image}
+			alt=""
+			width={size}
+			height={size}
+			style={`--mark-size: ${size}px`}
+			loading="lazy"
+			decoding="async"
+		/>
+	) : mark.vendor ? (
 		<img
 			class="source-mark"
 			src={`/images/vendors/${mark.vendor}.svg`}
@@ -22,7 +33,11 @@ const { mark, size = 14 } = Astro.props;
 			decoding="async"
 		/>
 	) : (
-		<span class="source-mark source-mark--letter" style={`--mark-size: ${size}px`} aria-hidden="true">
+		<span
+			class="source-mark source-mark--letter"
+			style={`--mark-size: ${size}px`}
+			aria-hidden="true"
+		>
 			{mark.initial}
 		</span>
 	)

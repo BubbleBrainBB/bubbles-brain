@@ -31,11 +31,25 @@ describe('sourceMark', () => {
 		expect(sourceMark('Awaiting Input', 'https://awaitinginput.substack.com/p/x')).toEqual({
 			vendor: null,
 			initial: 'A',
+			image: null,
 		});
 		expect(sourceMark('vercel.com', 'https://vercel.com/blog/x')).toEqual({
 			vendor: null,
 			initial: 'V',
+			image: null,
 		});
-		expect(sourceMark('', 'not a url')).toEqual({ vendor: null, initial: '·' });
+		expect(sourceMark('', 'not a url')).toEqual({ vendor: null, initial: '·', image: null });
+	});
+
+	it('uses Lauren Tan’s portrait on the highlights source and on her X post', () => {
+		const image = '/images/sources/lauren-tan.png';
+		expect(
+			sourceMark('Lauren Tan（poteto）', 'https://x.com/poteto/status/2102050467505430555'),
+		).toMatchObject({
+			vendor: null,
+			image,
+		});
+		expect(sourceMark('Lauren Tan (poteto)', 'https://x.com/poteto/status/1').image).toBe(image);
+		expect(sourceMark('@poteto', 'https://x.com/poteto/status/1').image).toBe(image);
 	});
 });

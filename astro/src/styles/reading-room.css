@@ -529,10 +529,17 @@
 	color: var(--ink-faint);
 }
 
-/* A company's logo beside a source, in black; a lettered circle when there is none. */
+/* A company's logo beside a source, in black; a portrait or a lettered circle when there is none. */
 .source-mark {
 	display: block;
 	flex-shrink: 0;
+}
+.source-mark--portrait {
+	width: var(--mark-size, 14px);
+	height: var(--mark-size, 14px);
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center 42%;
 }
 .source-mark--letter {
 	display: grid;

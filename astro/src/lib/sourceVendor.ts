@@ -37,11 +37,18 @@ export function sourceFromUrl(sourceUrl: unknown): string {
 	}
 }
 
+/** People who have a portrait instead of a company logo or a letter. */
+const PORTRAITS = [
+	{ name: /^lauren tan\b/i, handle: 'poteto', image: '/images/sources/lauren-tan.png' },
+];
+
 export interface SourceMark {
 	/** A vendor slug with a logo under /images/vendors/, or null for a lettered circle. */
 	vendor: string | null;
 	/** The letter shown when there is no logo. */
 	initial: string;
+	/** A portrait served from /images/, or null when the mark is a logo or a letter. */
+	image: string | null;
 }
 
 export function sourceMark(source: string, sourceUrl?: unknown): SourceMark {
@@ -55,5 +62,27 @@ export function sourceMark(source: string, sourceUrl?: unknown): SourceMark {
 		}
 	}
 	const initial = (source.replace(/^@/, '').trim()[0] ?? '·').toUpperCase();
-	return { vendor, initial };
+	return { vendor, initial, image: sourcePortrait(source, sourceUrl) };
+}
+
+function sourceHandle(sourceUrl: unknown): string | null {
+	if (typeof sourceUrl !== 'string') return null;
+	try {
+		const url = new URL(sourceUrl);
+		const host = url.hostname.replace(/^www\./, '');
+		if (host !== 'x.com' && host !== 'twitter.com') return null;
+		const handle = url.pathname.split('/').filter(Boolean)[0];
+		return handle ? handle.toLowerCase() : null;
+	} catch {
+		return null;
+	}
+}
+
+function sourcePortrait(source: string, sourceUrl?: unknown): string | null {
+	const name = source.trim();
+	const handle = name.startsWith('@') ? name.slice(1).toLowerCase() : sourceHandle(sourceUrl);
+	return (
+		PORTRAITS.find((portrait) => portrait.name.test(name) || portrait.handle === handle)?.image ??
+		null
+	);
 }
