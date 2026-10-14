@@ -2065,6 +2065,18 @@
 				"/_responsive/media/showcase/claude-opus-5.5-pocketsflow-promo-1280.webp"
 			]
 		},
+		"/media/showcase/claude-opus-5.5-pop-up-world.webp": {
+			"source_sha256": "120e007b40860740af3dc70536d536826fd6eaad4cbb90d73d851f6b6027ff5c",
+			"width": 1920,
+			"variants": [
+				"/_responsive/media/showcase/claude-opus-5.5-pop-up-world-640.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-pop-up-world-640.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-pop-up-world-960.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-pop-up-world-960.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-pop-up-world-1440.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-pop-up-world-1440.webp"
+			]
+		},
 		"/media/showcase/claude-opus-5.5-prettiest-apocalypse.webp": {
 			"source_sha256": "b8f51685b9402347dca03a101b57bf5a100fd8a88982ff57b7b3874aa2168d39",
 			"width": 1280,

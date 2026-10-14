@@ -1348,6 +1348,25 @@ Generic AI clichés (brains, robots, neural nets, sparkles), soft gradients, bou
 			platform: 'X',
 		},
 	},
+	{
+		id: 'claude-opus-5.5-pop-up-world',
+		title: '一本环游世界的立体书',
+		category: 'demo',
+		medium: 'code-to-video',
+		model: 'Claude Opus 5.5',
+		video: '/media/showcase/claude-opus-5.5-pop-up-world.mp4',
+		poster: '/media/showcase/claude-opus-5.5-pop-up-world.webp',
+		width: 1920,
+		height: 1080,
+		duration: 65,
+		added: '2026-10-14',
+		note: '一本贴满旅行贴纸的红书在桌上自己摊开，纸页立起一座座景点：巴黎铁塔、罗马斗兽场、金字塔、佩特拉石城、长城、悉尼歌剧院、金门大桥，最后是自由女神。合上以后，它立成一张封面。整支是 Claude Opus 5.5 用代码做的平面插画，作者说也可能是 Fable 5.5。',
+		source: {
+			author: '@devteamdrew',
+			url: 'https://x.com/devteamdrew/status/2110156508097110075',
+			platform: 'X',
+		},
+	},
 ];
 
 export const showcaseHref = (work: Pick<ShowcaseWork, 'id'>) => `/vibe-coding/showcase/${work.id}/`;
