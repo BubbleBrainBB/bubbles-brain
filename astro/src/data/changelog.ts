@@ -18,6 +18,19 @@ export interface ChangelogItem {
 export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-15',
+		tag: '精选阅读',
+		type: 'polish',
+		title: '三篇精选阅读改成贴近原文的译文',
+		summary:
+			'《给 Claude Opus 5.5 写提示词》按官方文档逐段译过，示例提示词整段译成中文，不再只说大意。《Claude Motion 上手指南》按帮助中心原文核对过。Lauren Tan 那场演讲没有公开文字稿，中文仍按她讲的顺序，这次只润色了读法。',
+		links: [
+			{ label: '写提示词', href: '/highlights/2026-10-13-prompting-claude-opus-5-5/' },
+			{ label: 'Claude Motion', href: '/highlights/2026-10-12-get-started-with-claude-motion/' },
+			{ label: '2,500 个 PR', href: '/highlights/2026-10-13-how-i-shipped-2500-prs-last-month/' },
+		],
+	},
+	{
+		date: '2026-10-15',
 		tag: 'Skills',
 		type: 'content',
 		title: 'Skills 新增 pstack',
