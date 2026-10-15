@@ -1925,6 +1925,18 @@
 				"/_responsive/media/showcase/claude-opus-5.5-fifteen-mg-styles-1280.webp"
 			]
 		},
+		"/media/showcase/claude-opus-5.5-genesis.webp": {
+			"source_sha256": "69dc646cd156f51cd92e3da52d279d50bf5a2feb0cd8f985d7849a998cf43502",
+			"width": 1920,
+			"variants": [
+				"/_responsive/media/showcase/claude-opus-5.5-genesis-640.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-genesis-640.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-genesis-960.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-genesis-960.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-genesis-1440.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-genesis-1440.webp"
+			]
+		},
 		"/media/showcase/claude-opus-5.5-hongmen-banquet.webp": {
 			"source_sha256": "45b1a97b09314b9f182b6e84a23ca5c4d64e702f217916bddb3efce43fd392ae",
 			"width": 1280,
@@ -1981,6 +1993,18 @@
 				"/_responsive/media/showcase/claude-opus-5.5-iphone-18-pro-variable-aperture-960.webp",
 				"/_responsive/media/showcase/claude-opus-5.5-iphone-18-pro-variable-aperture-1280.avif",
 				"/_responsive/media/showcase/claude-opus-5.5-iphone-18-pro-variable-aperture-1280.webp"
+			]
+		},
+		"/media/showcase/claude-opus-5.5-landing-flyover.webp": {
+			"source_sha256": "1d7298b5d926804415a5e670c235bd38b28c18799df3241946289e866f851e4c",
+			"width": 1440,
+			"variants": [
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-640.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-640.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-960.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-960.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-1440.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-1440.webp"
 			]
 		},
 		"/media/showcase/claude-opus-5.5-lightspark-promo.webp": {
