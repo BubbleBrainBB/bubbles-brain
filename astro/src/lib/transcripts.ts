@@ -3,6 +3,7 @@
  *  `transcriptFor` finds it, and the episode page then links to it. */
 import alphafold from '../data/transcripts/latent-space-alphafold.json';
 import metaMuse from '../data/transcripts/how-i-ai-meta-muse.json';
+import tibo from '../data/transcripts/lennys-podcast-tibo-sottiaux.json';
 import type { PodcastEpisode } from '../data/podcasts';
 
 export type TranscriptKind = 'turn' | 'ad' | 'clip';
@@ -46,6 +47,7 @@ export interface Transcript {
 const transcripts: Record<string, Transcript> = {
 	'how-i-ai-meta-muse': metaMuse as Transcript,
 	'latent-space-alphafold': alphafold as Transcript,
+	'lennys-podcast-tibo-sottiaux': tibo as Transcript,
 };
 
 export function transcriptFor(episode: Pick<PodcastEpisode, 'id'>): Transcript | null {
