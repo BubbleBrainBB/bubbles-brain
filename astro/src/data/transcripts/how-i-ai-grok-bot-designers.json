@@ -1,0 +1,756 @@
+{
+ "episodeId": "how-i-ai-grok-bot-designers",
+ "language": "en",
+ "source": {
+  "type": "asr-diarization",
+  "video": "https://www.youtube.com/watch?v=zJEHbvT5_Yg",
+  "note": "由节目音频自动转写并做说话人分离，未经人工校对，可能存在识别误差"
+ },
+ "speakers": [
+  {
+   "id": "host",
+   "name": "Claire Vo",
+   "role": "主持"
+  },
+  {
+   "id": "john",
+   "name": "John Bai",
+   "role": "SpaceXAI 设计师"
+  },
+  {
+   "id": "peng",
+   "name": "Peng Zheng",
+   "role": "SpaceXAI 设计师"
+  }
+ ],
+ "turns": [
+  {
+   "at": 0,
+   "end": 13.96,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I use AI to get me off my computer, not on my computer. And so the fact that you were at the gym, got asked to do something, and your disability would be like, yep, go for it, get it done, and finish your workout, it's like a much nicer way to work.",
+   "zh": "我用 AI，是为了让自己离开电脑，而不是更离不开电脑。所以你人在健身房，有人找你干个活，你的机器人就会说：好，交给我，马上搞定，你接着练你的。这种工作方式舒服太多了。"
+  },
+  {
+   "at": 13.96,
+   "end": 36.76,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "I was able to just screenshot in Figma these two separate art boards of work that was already in progress. And doing so, I just pointed to those. Had the bot do its work, I didn't even read most of this stuff, it produced three outputs, copy pasted what Ben had sent me on Slack, and said, I think we got all these covered. While I'm on this call, work is getting done, which I really love. I think the fact that I don't have to do this stuff myself is a godsend.",
+   "zh": "我只是在 Figma 里截了两个画板的图，都是已经在做的工作，然后把机器人指向它们，让它去干活。它产出的大部分东西我甚至都没细看，它给了三个方案，我把 Ben 在 Slack 上发给我的内容复制粘贴过去，说：我觉得这些都搞定了。我在开这个会的同时，活也在被干完，我真的很喜欢这一点。这些事不用我亲自动手，简直是天赐的礼物。"
+  },
+  {
+   "at": 36.76,
+   "end": 58.4,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Now when I go somewhere, I can basically just send Grokbot a photo, a screenshot, or literally just the name of the place, and then figure out what the place is, it'll look it up through Google Places API, and I get the right location, it coordinates, it'll fix the perspective and remove people, and turn it into like a 3D miniature visual style that I used on the site.",
+   "zh": "现在我去一个地方，基本上只要给 Grok Bot 发一张照片、一张截图，或者干脆只发个地名，它就会弄清楚这是哪儿，通过 Google Places API 查到正确的位置和坐标，然后校正透视、去掉路人，把它变成我网站上用的那种 3D 微缩风格的画面。"
+  },
+  {
+   "at": 58.4,
+   "end": 103.72,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "AI can feel like a threat to the creative arts. Like look, your highest calling was never to design gradient fills in Figma. And what I tell people is, welcome back to How I AI. I'm Claire Vo, product leader and AI obsessive, here on a mission to help you build better with these new tools. Today I have John and Peng from the Grokbot design team, and they're gonna show us two really awesome AI design use cases. One, how to build a beautiful custom and easy to update personal site that meets the bar of a designer, and two, how Grokbot was used to design. Grokbot, including where Figma Bro can make your life at the gym and work a lot easier.",
+   "zh": "AI 可能会让人觉得是对创意行业的威胁。我常跟大家说：你看，你人生的最高使命从来就不是在 Figma 里画渐变填充。欢迎回到 How I AI。我是 Claire Vo，产品负责人，也是 AI 重度爱好者，我的使命是帮你用好这些新工具，做出更好的东西。今天请到了 Grok Bot 设计团队的 John 和 Peng，他们会给我们展示两个非常棒的 AI 设计用例。第一，怎么搭建一个漂亮、定制、又容易更新的个人网站，而且能过设计师自己那一关；第二，Grok Bot 是怎么被用来设计 Grok Bot 本身的，包括 Figma Bro 如何让你在健身房和工作中都轻松很多。"
+  },
+  {
+   "at": 103.72,
+   "end": 104.68,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Let's get to it.",
+   "zh": "我们开始吧。"
+  },
+  {
+   "at": 104.68,
+   "end": 156.96,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "This episode is brought to you by WorkOS. AI has already changed how we work. Tools are helping teams write better code, analyze customer data, and even handle support tickets automatically. But there's a catch. These tools only work well when they have deep access to company systems. Your co-pilot needs to see your entire code base. Your chat bot needs to search across internal docs. And for enterprise buyers, that raises serious security concerns. That's why these apps face intense IT scrutiny from day one. To pass, they need secure authentication, access controls, audit logs, the whole suite of enterprise features. Building all that from scratch, it's a massive lift. That's where WorkOS comes in. WorkOS gives you drop-in APIs for enterprise features so your app can become enterprise-ready and scale up market faster.",
+   "zh": "本期节目由 WorkOS 赞助。AI 已经改变了我们的工作方式。各种工具在帮团队写出更好的代码、分析客户数据，甚至自动处理客服工单。但这里有个问题：这些工具只有在能深度访问公司系统时才好用。你的编程助手需要看到整个代码库，你的聊天机器人需要检索内部文档。对企业买家来说，这就带来了严重的安全顾虑。所以这类应用从第一天起就要接受 IT 部门的严格审查。要通过审查，它们需要安全的身份认证、访问控制、审计日志，也就是整套企业级功能。从零开始把这些全做出来，工作量巨大。这正是 WorkOS 的用武之地。WorkOS 为企业级功能提供即插即用的 API，让你的应用快速达到企业级标准，更快打进大客户市场。"
+  },
+  {
+   "at": 156.96,
+   "end": 174.48,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "Think of it like Stripe for enterprise features. OpenAI, Perplexity, and Cursor are already using WorkOS to move faster and meet enterprise demands. Join them and hundreds of other industry leaders at workos.com. Start building today.",
+   "zh": "你可以把它理解为企业级功能领域的 Stripe。OpenAI、Perplexity 和 Cursor 都已经在用 WorkOS 来加快速度、满足企业需求。加入它们和其他数百家行业领先者吧，访问 workos.com，今天就开始构建。"
+  },
+  {
+   "at": 174.48,
+   "end": 178.0,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Peng, John, thank you for joining How I AI today.",
+   "zh": "Peng、John，感谢你们今天来到 How I AI。"
+  },
+  {
+   "at": 178.0,
+   "end": 178.92,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Glad to be here.",
+   "zh": "很高兴来这里。"
+  },
+  {
+   "at": 178.92,
+   "end": 180.16,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Happy to share.",
+   "zh": "很乐意分享。"
+  },
+  {
+   "at": 180.16,
+   "end": 181.52,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Thanks for having us.",
+   "zh": "谢谢邀请。"
+  },
+  {
+   "at": 181.52,
+   "end": 225.36,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So I am a big bot girl. Actually, we were just talking before the show last night. We did a Ladies Who Grokbot Night at Andreessen Horowitz. There were 900 registrants align around the block. Grokbot is having its moment. And one of the things I love is so many people inside SpaceX AI actually sharing really practical and unique use cases of how they themselves have found new ways to get work done, build software, do awesome things with Grokbot. So how has it been the past couple of weeks just being in the middle of this sort of explosion in Grokbot interest? How does that feel shipping a product like that?",
+   "zh": "我可是 Grok Bot 的铁杆粉丝。其实我们录节目前还在聊，昨晚我们在 Andreessen Horowitz 办了一场 Ladies Who Grokbot 之夜，有 900 人报名，排队排到了街角。Grok Bot 正迎来属于它的高光时刻。我特别喜欢的一点是，SpaceXAI 内部有很多人在分享非常实用又独特的用例，讲他们自己是怎么用 Grok Bot 找到新方法来完成工作、开发软件、做各种很酷的事情。那么过去这几周，身处这波 Grok Bot 热潮的中心，感觉怎么样？发布这样一款产品是什么感受？"
+  },
+  {
+   "at": 225.36,
+   "end": 255.8,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "It's really exciting. I mean, I feel like it's rare to have this amount of attention and this amount of engagement on something that a designer gets to work on. And I think we're learning day by day also from our users. I think there's a lot of questions being asked about us as though we're experts on the product just because we're designing it. But I think we're learning just as much from the users, from people sharing their own workflows, their tips and tricks, especially on X recently, and from you as well, Claire. It's been really fun.",
+   "zh": "真的很兴奋。我觉得设计师做的东西能获得这么多关注和参与，是很少见的。而且我们也在每天向用户学习。很多人来问我们问题，好像我们因为设计了这个产品就是专家一样。但其实我们从用户那里学到的一样多，大家会分享自己的工作流、技巧和窍门，最近在 X 上尤其多，也包括从你这里学到的，Claire。整个过程特别有意思。"
+  },
+  {
+   "at": 255.8,
+   "end": 297.28,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "People don't know this, but before we started recording, we were actually scrolling through and prepping screen shares. And as we were going, all of us were like, oh, we need that feature. We need this feature. We need to make this a little bit easier. So it's fun to be able to see the process of this product evolve as it has tremendous product market fit right out the gate. Well, Peng, I know that you have a workflow that you wanna show us. And one of the things I love about Grokbot and AI agents in general, is it's just really opening up new ways to do old things and easier ways to do things that we all used to do before. So walk us through what you're gonna show us and why you think Grokbot is the right way to take on this task.",
+   "zh": "大家可能不知道，我们开始录之前，其实在一边翻看一边准备屏幕共享。过程中我们几个都在说：哎，我们需要那个功能，还需要这个功能，这里得再做得简单一点。所以能看到这个产品一边演进、一边一上来就有极强的产品市场契合度，真的很有意思。好，Peng，我知道你有一个工作流要给我们展示。我很喜欢 Grok Bot，以及整体上 AI 智能体的一点，就是它们为老事情打开了新做法，让我们以前做的那些事变得更简单。给我们讲讲你要展示什么，以及为什么你觉得 Grok Bot 是完成这件事的合适方式。"
+  },
+  {
+   "at": 297.28,
+   "end": 343.12,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Yeah, so I have this pretty personal story. I eat a lot of Chinese food. And then sometimes when you get a takeout, the rice comes with this white paper box. So there's a red Chinese temple on it. And then last weekend I was looking at it and I had this random thought like, where is this temple? Like, is it a real place? Where is it? So I searched online and I found it might be somewhere in San Francisco Chinatown. And I was like, okay, let's find it out. Like I went to Chinatown. I worked around for a while and I did not actually find the temple, but I took a bunch of photos along the way. And there was this little produce shop about setting fruits and other stuff. And I don't took a photo of it.",
+   "zh": "好，我有一个挺私人的故事。我经常吃中餐，有时候叫外卖，米饭会装在那种白色纸盒里，盒子上印着一座红色的中式庙宇。上周末我盯着它看，突然冒出一个念头：这座庙在哪儿？是真实存在的地方吗？我上网搜了一下，发现它可能在旧金山唐人街的某个地方。我就想，好，去找找看。我去了唐人街，转了好一阵，最后其实没找到那座庙，但一路上拍了不少照片。其中有一家卖水果和杂货的小店，我就拍了一张。"
+  },
+  {
+   "at": 343.12,
+   "end": 397.52,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "And later I was waiting for bus and I used AI to turn it into a 3D clay miniature. And I thought it looked pretty cool. And then later that day when I went back home, I plan to redo my personal website. I procrastinate for that for a while. And then I took that 3D grocery store and then I put it, drop it onto the homepage. So it's a little bit of whimsical, it's fun. The page is super minimal. Basically, it was just this tiny store and then some text about me. At the end, I wrote something like, last scene at JBC Market in Chinatown. And I was like, oh, this was actually kind of interesting 'cause I've always had this problem with personal website that especially as a designer, you spend all this time making one and then you launch it and people look at it for like 30 seconds.",
+   "zh": "后来我在等公交的时候，用 AI 把这张照片变成了一个 3D 黏土微缩模型，觉得挺酷的。那天晚些时候回到家，我正打算重做我的个人网站，这事我已经拖了很久。我就把那个 3D 杂货店直接放到了首页上。有点奇趣，挺好玩的。页面极其简洁，基本上就是这家小店，加上几句关于我的介绍。最后我写了一句类似「最近一次出没：唐人街 JBC Market」的话。然后我就想，这其实还挺有意思的，因为个人网站一直有个问题，尤其作为设计师，你花了大把时间做一个，上线之后，别人大概就看个 30 秒。"
+  },
+  {
+   "at": 397.52,
+   "end": 448.4,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "And then they leave. And honestly, even myself don't really go back to see it that much. So I didn't wanna make it just another personal website. Sitting there, I want it to be a little bit more alive and actually be more useful to me. 'Cause I'm also kind of person that I try to like check into places and I like this idea of having a record of where I've been, who I was with and like what I was doing. And they're having like so many apps on the market to do this, like every couple of years, there's one new check-in app and then people use it for a while and eventually disappears. So I was like, oh, why don't I make it just my personal website? Why don't I create it myself? And immediately I thought, if I'm going to do it, I don't wanna manually do it every single time.",
+   "zh": "然后就走了。说实话，连我自己都不怎么回去看。所以我不想让它只是又一个摆在那里的个人网站，我希望它更鲜活一点，对我自己也真正有用。因为我也是那种喜欢到处打卡的人，我喜欢有一份记录，知道自己去过哪儿、和谁一起、在做什么。市面上做这个的应用太多了，每隔几年就冒出一个新的打卡应用，大家用一阵子，最后它就消失了。所以我想，为什么不直接做在我的个人网站上？为什么不自己来做？紧接着我就想到，如果要做，我可不想每次都手动更新。"
+  },
+  {
+   "at": 448.4,
+   "end": 494.66,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Why can't it just update itself when I go somewhere? So that's when I started to talk to Grokbot because normally, even for this like simple small ideas, I'm not sure like what I need. Maybe I need a CMS, I need some kind of admin portal, I need to upload an image somewhere, I need to host the website, deploy it, store the code. And I'm like, I don't wanna build all of that. I don't even know like where we're getting started. So I just wanna test it, how it works with Grokbot. I basically told Grokbot here is the idea, what's the simplest way to do it? How can we make this work? And we just started building it. There's no Figma file, there's no SPAC.",
+   "zh": "为什么不能我去了哪儿，它就自己更新呢？于是我开始跟 Grok Bot 聊。因为平时哪怕是这么简单的小点子，我都不太确定自己需要什么。也许需要一个 CMS，需要某种管理后台，需要把图片传到某个地方，需要托管网站、部署、存代码。我心想，这些我都不想搭，我甚至不知道该从哪儿下手。所以我就想试试用 Grok Bot 会怎么样。我基本上就是告诉 Grok Bot：我的想法是这样的，最简单的做法是什么？怎么才能跑通？然后我们就开始动手做了。没有 Figma 文件，也没有需求文档。"
+  },
+  {
+   "at": 494.66,
+   "end": 541.32,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Honestly, I didn't really know where it was going. I was just trying to build one thing and then look at it and then think about, oh, well, what if it can do this? What if it can do that? And then implement it and then we get another idea. So it's very fun just to going with the flow and like trust the vibe. And eventually this idea turned into a checking pipeline. So now when I go somewhere, I can basically just send Grokbot a photo, a screenshot, or literally just the name of the place. And I'll figure out what the place is, it'll look it up through Google Places API and I get the right location, it coordinates, it will process the image, it will generate a light version and a dark version.",
+   "zh": "说实话，我自己都不知道它最后会变成什么样。我只是先做出一个东西，看一看，然后想：要是它还能做这个呢？还能做那个呢？然后把它实现，接着又冒出新的点子。就这样顺其自然、相信感觉，特别好玩。最后这个想法变成了一个打卡流程。现在我去一个地方，基本上只要给 Grok Bot 发一张照片、一张截图，或者干脆只发个地名，它就会弄清楚这是哪儿，通过 Google Places API 查到正确的位置和坐标，然后处理图片，生成一个亮色版本和一个暗色版本。"
+  },
+  {
+   "at": 541.32,
+   "end": 562.56,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "It'll fix the perspective and remove people. I isolate the facade of that building and turn it into like a 3D miniature visual style that I use on the site. And then I was like, okay, location is one thing, but a lot of time, more interesting part is the people, like who am I with? So I added that too.",
+   "zh": "它会校正透视、去掉路人，把那栋建筑的立面单独抠出来，变成我网站上用的那种 3D 微缩风格。然后我又想，地点只是一方面，很多时候更有意思的是人，比如我跟谁在一起。所以我把这个也加上了。"
+  },
+  {
+   "at": 562.56,
+   "end": 568.88,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I was gonna say, that looks like Twin Peaks. I was like, is it Twin Peaks? Did I get it right? It looks great.",
+   "zh": "我正想说，那看起来像双子峰。是双子峰吗？我猜对了吗？看起来很棒。"
+  },
+  {
+   "at": 568.88,
+   "end": 604.88,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Yeah, that was three days ago. So now when I hand out with a friend, I can literally send a screenshot of the place and a screenshot of my friend's social profile and the Grok bot will take over the rest. So I have this checking bot that I specifically built for this workflow. It figures everything out, it turns it into a data structure that my website expect. Maybe we can try it now. Like if three of us meet in a physical place, maybe a famous landmark or something, we can name a place.",
+   "zh": "对，那是三天前。所以现在我跟朋友出去玩，只要发一张地点的截图，再发一张朋友社交主页的截图，剩下的就全交给 Grok Bot 了。我专门为这个工作流做了一个打卡机器人，它会把一切都搞清楚，整理成我网站需要的数据结构。要不我们现在就试试？假设我们三个在某个实际地点碰面，比如某个著名地标之类的，我们可以说个地名。"
+  },
+  {
+   "at": 604.88,
+   "end": 612.8,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Oh, I'll name, 'cause I live in Bernal Heights. So why don't you say we're at Bernal Heights, I guess just called Bernal Heights Peak.",
+   "zh": "哦，我来说一个，因为我住在 Bernal Heights。不如就说我们在 Bernal Heights，我猜那里就叫 Bernal Heights Peak。"
+  },
+  {
+   "at": 612.8,
+   "end": 615.8,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Either like a specific building or like a landmark.",
+   "zh": "可以是一栋具体的建筑，也可以是一个地标。"
+  },
+  {
+   "at": 615.8,
+   "end": 620.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, it's kind of like Twin Peaks. It's just a different, it's another hill in San Francisco.",
+   "zh": "对，它有点像双子峰，只是不同的一座，是旧金山的另一座小山。"
+  },
+  {
+   "at": 620.4,
+   "end": 622.64,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Okay, since we are not there, but we can just find it.",
+   "zh": "好，虽然我们不在那儿，但可以直接找一下。"
+  },
+  {
+   "at": 622.64,
+   "end": 636.92,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Oh, at the swing, there is a clandestine swing. You see it right here? Yep, that's it. That somebody keeps putting up and the city keeps pulling down. Very, it's like a real point of contention.",
+   "zh": "哦，就在那个秋千那儿，那里有个私自挂上去的秋千。你看到了吗，就在这儿？对，就是它。总有人把它挂上去，市政府又一直把它拆下来，算是个挺有争议的地方。"
+  },
+  {
+   "at": 636.92,
+   "end": 644.9,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Okay, let's see if it works. And I'll put your social handle and John's social handle there.",
+   "zh": "好，看看能不能成。我把你的社交账号和 John 的社交账号也放进去。"
+  },
+  {
+   "at": 644.9,
+   "end": 690.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I love this pipeline. I have to take a step back while you're getting this to load. So I think the hardest thing for AI to do is build a personal site that a designer will like about themselves. So just the fact that you were able to get to that point, I mean, I've been a designer in a past life. I just avoid my personal site because I hate the idea of deciding something represents me and shipping it. So the fact that even you could get to something you like, I'm very impressed with. And then the second thing that I think is so fun is you've made it really easy and low friction for you to keep the site updated in a really unique, high quality visual way.",
+   "zh": "我太喜欢这个流程了。趁它加载的时候，我得退一步说两句。我觉得对 AI 来说最难的事情，就是做出一个让设计师本人满意的个人网站。你能做到这一步就已经很厉害了。我以前也当过设计师，我一直在逃避做个人网站，因为我很讨厌去决定某个东西能代表我，然后把它发布出去。所以连你都能做出一个自己满意的东西，我非常佩服。第二点我觉得特别好玩的是，你让更新网站这件事变得非常简单、几乎没有阻力，而且还是用一种很独特、很高质量的视觉方式。"
+  },
+  {
+   "at": 690.56,
+   "end": 732.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So I think that is really interesting. If you had to go home and download your photo and copy and paste in the X profiles and do all this stuff, you probably wouldn't keep the site updated. It's too much mental load. And so I love this idea that you've compressed all of these steps that you would have had to do, I mean, historically probably through some sort of CMS or pushing directly to the site to just a bot that has a very specific use case and does this for you. I'm curious while this is running, how did you get it to generate these 3D images so well and so high quality?",
+   "zh": "这一点我觉得很有意思。如果你得回家下载照片、把 X 主页复制粘贴进去、再做一堆别的事，你大概根本不会坚持更新网站，心智负担太重了。所以我很喜欢这个思路：你把原本必须做的所有步骤，过去大概得通过某种 CMS 或直接推送到网站来完成，全都压缩成了一个用途非常明确、替你搞定这件事的机器人。趁它还在跑，我很好奇，你是怎么让它把这些 3D 图生成得这么好、质量这么高的？"
+  },
+  {
+   "at": 732.4,
+   "end": 788.0,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Yeah, so the pipeline behind it is like figured out by Grokbot. It would generate two images, one light, one dark, 'cause when a theme turns too dark, I want the lights to turn on. I wanted two versions of the image. And then they have to be consistent and then this was baked in the prompt. And I think the interesting part for me is none of this is actually fancy. It's just a bunch of pretty simple building blocks. There's Google Places or Google Maps and then there's image generation and there's some structured data and then there's the website, just render everything. And then Grokbot is basically the thing that connects all the dots together. And I think that felt a little bit different to me because before I would have probably had this idea, I thought about all the stuff I need to do and maybe do it later and I'll never do it.",
+   "zh": "嗯，背后的流程其实是 Grok Bot 想出来的。它会生成两张图，一张亮色、一张暗色，因为切换到暗色主题时，我希望灯能亮起来，所以我想要两个版本的图，而且两张图要保持一致，这些都写进了提示词里。我觉得有意思的地方在于，这里面其实没有任何高深的东西，就是一堆很简单的积木：有 Google Places 或 Google Maps，有图像生成，有一些结构化数据，再有一个网站把这一切渲染出来。Grok Bot 基本上就是把所有点串起来的那个东西。这让我感觉有点不一样，因为以前我可能会冒出这个想法，然后想到要做的那一大堆事，就想着以后再说，结果永远不会去做。"
+  },
+  {
+   "at": 788.0,
+   "end": 807.54,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "But here, I didn't really have to know what the final system was going to be. I just started with this random photo from a produce store. And then one thing just led to another and Grokbot helped me along the way. At the end of the day, somehow I had this like check-in system running.",
+   "zh": "但这次，我根本不需要事先知道最终的系统会是什么样。我只是从一张杂货店的随手照片开始，然后一件事引出另一件事，Grok Bot 一路帮着我。到最后，不知不觉我就有了这么一套跑起来的打卡系统。"
+  },
+  {
+   "at": 807.54,
+   "end": 849.36,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I really love this. I'll give you kind of a really chaos reigns idea, which is we had this woman, Maddie Reese, on our podcast recently. And she opened up a personal API so that people could pull information about her and also post to hers. You could give very select friends some programmatic access to update on your behalf in case you forget. You can make this a little bit of a social experience. You can decide who you trust to do it, but this pipeline is so nice. It seems like very fun to kind of make a social experience as well.",
+   "zh": "我真的很喜欢这个。我给你出一个有点混乱邪恶的主意。我们最近请过一位嘉宾 Maddie Reese，她开放了一个个人 API，别人既可以从中拉取她的信息，也可以往里面发内容。你可以给几个精挑细选的朋友一些程序化的权限，让他们在你忘记的时候替你更新。这样能把它变成一种带点社交性质的体验。信任谁由你决定，但这个流程真的太好了，把它做成一种社交体验应该也会很好玩。"
+  },
+  {
+   "at": 849.36,
+   "end": 851.8,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "You need to come full circle and make the next check-in app.",
+   "zh": "你得来个首尾呼应，去做下一个打卡应用。"
+  },
+  {
+   "at": 851.8,
+   "end": 883.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You are, we are. I have a very funny, my husband and I have been together for a long time. We've started a lot of businesses and probably 20 years ago, he was trying to do a social check-in app and he would literally, I would be at bars. We would be friends, he'd be at bars. He's like, \"Can you please check in on my app at this bar?\" It's like true, true bootstrap, gorilla marketing back in the day. And now you can just tell your AI bot to check in on your behalf.",
+   "zh": "你说得对，我们正在做。说个挺好笑的事，我和我丈夫在一起很久了，一起创过很多次业。大概 20 年前，他在做一个社交打卡应用，我们那时候都是朋友，我人在酒吧，他也在酒吧，他就会说：「能不能请你在我的应用上打卡这家酒吧？」那是名副其实的白手起家、当年的游击营销。而现在，你只要让你的 AI 机器人替你打卡就行了。"
+  },
+  {
+   "at": 883.4,
+   "end": 891.32,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Well, Peng, if you can get this connected to Swarm, I'm definitely gonna plug into this as well. I'm still an OG user of Swarm.",
+   "zh": "Peng，要是你能把它接上 Swarm，我肯定也要接进来用。我到现在还是 Swarm 的老用户。"
+  },
+  {
+   "at": 891.32,
+   "end": 912.0,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Yeah, I've been using it for a long time. I do see it as a trend that people become more expressive and become more autonomous and it can set up their unique way to doing things, to check in, to record their life, to bring this memory in the format that only adapts to their own preferences.",
+   "zh": "是啊，我也用了很久了。我确实觉得这是一个趋势：人们会变得更善于表达、更自主，可以搭建一套只属于自己的方式来做事、打卡、记录生活，把这些记忆整理成只贴合自己偏好的形式。"
+  },
+  {
+   "at": 912.0,
+   "end": 958.52,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Another thing that I wanna call out for designers, because again, in a previous life, I was a designer, is I have considered myself very creative for a very long time and have a good sense of this thing that everybody's calling taste. But what does good look like and what is high quality? But I lacked some hard skills and really struggled with a specific set of hard design skills I felt were very inaccessible to me. So look, I can like round a corner radius to the pixel, like the per, I can like, I can get kerning, right? Like I am a UI/UX designer. That I can do all day and all night. I cannot illustrate to save my life. I know what a good illustration looks like.",
+   "zh": "我还想特别跟设计师们说一件事，因为我上辈子也是做设计的。很长时间以来，我一直觉得自己挺有创意，对大家现在常说的「品味」也有不错的判断：什么样算好，什么叫高质量。但我缺一些硬技能，有一类具体的设计硬技能让我非常吃力，感觉怎么都够不着。你看，我能把圆角半径精确到像素，字距也能调得刚刚好，我是 UI/UX 设计师，这些我可以没日没夜地做。但插画我是真的画不了，打死都画不出来。我知道好的插画长什么样。"
+  },
+  {
+   "at": 958.52,
+   "end": 1005.84,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I cannot do it. It is just not in my skillset. And so one of the things that I really love about AI as somebody who has a basis of skills, maybe strategic experience, but not hard skills in specific practices is it makes my ability to be a more well-rounded designer a lot more possible because it gives me these generation tools and these computer use tools and these deep like spikes in specific skillsets that let me pair it with the things that I'm actually good at and get a better outcome in general. Do you all ever feel that where you're like, oh man, in the past life, I would have never been able to do this like 3D clay render. I would have always wanted to, but I've had to ask my awesome 3D rendering friend to do this.",
+   "zh": "可我就是画不出来，这根本不在我的技能范围里。我有一些基础技能，也许还有些战略层面的经验，但在某些具体领域缺少硬技能。作为这样的人，我特别喜欢 AI 的一点是：它让我更有可能成为一个更全面的设计师。它给了我这些生成工具、电脑操作工具，还有在特定技能上很深的专长，让我可以把它们和自己真正擅长的东西结合起来，整体做出更好的结果。你们有没有过这种感觉：天哪，放在以前，我绝对做不出这种 3D 黏土渲染。我一直想做，但每次都得去求我那位很厉害的 3D 渲染朋友帮忙。"
+  },
+  {
+   "at": 1005.84,
+   "end": 1008.72,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Like, do you all experience that? Is that just me?",
+   "zh": "你们也有这种体会吗？还是只有我这样？"
+  },
+  {
+   "at": 1008.72,
+   "end": 1029.36,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "I think many people are discovering that it unlocks a lot of the skillsets that you once thought were inaccessible. I think both of us, from my experience, it's a lot of motion work where I can describe it and kind of even use my hands to point out what's supposed to take place. But then with prompting, it becomes possible. Peng, I'm not sure about you. If there's anything beyond what you're showing.",
+   "zh": "我觉得很多人都在发现，它解锁了很多你曾经以为够不着的技能。我们俩应该都有体会。就我自己而言，主要是动效方面：我可以把它描述出来，甚至用手比划应该发生什么，然后通过写提示词，就真的能做出来了。Peng，不知道你那边除了刚才展示的，还有没有别的。"
+  },
+  {
+   "at": 1029.36,
+   "end": 1044.64,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "I think the opportunity is like the cost of making things become so low that we can't imagine something that costs a lot more in the past than how it's so easy to do. And then this opens new opportunities and combination of the things we can create.",
+   "zh": "我觉得机会在于，做东西的成本变得如此之低，以前要花很大代价的东西，现在简单到难以想象。这就打开了新的机会，我们能创造的东西也有了新的组合方式。"
+  },
+  {
+   "at": 1044.64,
+   "end": 1106.24,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, I would say the things that I'm seeing a lot, and I tell designers this, you know, I do think there is, let's call this beta spade, AI can feel like a threat to the creative arts. Like it just can, people talk about it all the time. And what I tell people is like, look, your highest calling was never to like design gradient fills in Figma. Like that was not what you were put on this earth to do. And so as a designer, being able to really go up the stack in terms of leverage, specialization, the edges of quality, the edges of delight, think about things like sound, think about things like video, think about things like illustrations and images. I just think lets people like operate at the highest level of their craft, as opposed to getting stuck in the kind of junk at the bottom that, you know, is important in the foundation of building something really great, but not the highest use of someone's like time or talent.",
+   "zh": "对，这种情况我看到很多，我也常跟设计师这么说。咱们就直说吧，AI 可能会让人觉得是对创意行业的威胁。它确实会，大家一直在讨论这个。而我会跟大家说：听着，你的最高使命从来都不是在 Figma 里做渐变填充，你来到这个世界上不是为了干这个的。所以作为设计师，能够在杠杆、专精、质量的极致、惊喜的极致上一路往上走，去考虑声音、视频、插画和图像这些东西，我觉得能让人在自己的手艺上发挥到最高水平，而不是困在底层的那些杂活里。那些活对于打造真正出色的东西来说确实是重要的基础，但并不是对一个人时间或才华的最佳利用。"
+  },
+  {
+   "at": 1106.24,
+   "end": 1151.7,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "As AI adoption grows, so do your company's security risks and requirements. New frameworks, audits and vendors keep piling on, but your team isn't getting any bigger. Most compliance tools promise automation, but you're really stuck doing all the work by hand, chasing screenshots, validated controls and playing catch up when audit season comes around again. Vanta works differently. Their agentic trust platform is built to scale with you, not slow you down. With over 1400 automated tests across 400 plus integrations, Vanta collects evidence and monitors your controls year round, cutting your audit prep by 82%. Plus you can access the Vanta agent everywhere you work, whether your team is in Vanta every day or living in tools like Claude or cursor.",
+   "zh": "随着 AI 的普及，公司的安全风险和合规要求也在增加。新的框架、审计和供应商不断叠加，但你的团队并没有变大。大多数合规工具都承诺自动化，但实际上你还是得手动做所有事：追着要截图、验证控制项，每到审计季又得手忙脚乱地追赶进度。Vanta 不一样。他们的智能体信任平台是为了陪你一起扩张而打造的，而不是拖你后腿。Vanta 拥有 1400 多项自动化测试、覆盖 400 多个集成，全年收集证据、监控你的控制项，让审计准备工作减少 82%。另外，无论你的团队是每天都在用 Vanta，还是常驻在 Claude 或 Cursor 这样的工具里，你都可以在工作的任何地方调用 Vanta 智能体。"
+  },
+  {
+   "at": 1151.7,
+   "end": 1176.68,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "Want proof? Over 16,000 fast growing companies like Ramp, Rider and Harvey save time and resources while scaling fast with Vanta. My listeners can get $1,000 off by going to vanta.com/howiai. That's V-A-N-T-A.com/howiai for $1,000 off.",
+   "zh": "想要证据？超过 16,000 家快速成长的公司，比如 Ramp、Writer 和 Harvey，都在借助 Vanta 快速扩张的同时节省了时间和资源。我的听众访问 vanta.com/howiai 可以减免 1,000 美元。再说一遍，V-A-N-T-A.com/howiai，立减 1,000 美元。"
+  },
+  {
+   "at": 1176.68,
+   "end": 1179.48,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Oh, look, it looks like it finished.",
+   "zh": "噢，看，好像已经做完了。"
+  },
+  {
+   "at": 1179.48,
+   "end": 1183.98,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Yeah, it's done. And I think it's published to the website now.",
+   "zh": "对，做好了。我想现在应该已经发布到网站上了。"
+  },
+  {
+   "at": 1183.98,
+   "end": 1187.6,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Very cute.",
+   "zh": "好可爱。"
+  },
+  {
+   "at": 1187.6,
+   "end": 1190.68,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "We have this, I'll also capture the swing.",
+   "zh": "我们有这个了，我还会把秋千也画进去。"
+  },
+  {
+   "at": 1190.68,
+   "end": 1226.96,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I love it. If you want a real Easter egg at night, you know, we have the secret guy putting up the swing and during the day the swing is gone, the swing is gone 'cause that's what's happening with the very controversial swing at the Bernal Heights park. But I love this, how fun and just something that I would have never imagined you could do before. This is so cool. You know, this is a personal use case and I think a really lovely one, but let's switch over to work stuff because John, you've been using Grokbot to design Grokbot and have some really interesting workflows you're gonna show us.",
+   "zh": "我太喜欢了。如果你想埋一个真正的彩蛋：晚上的版本里，有个神秘人在挂秋千，到了白天秋千就不见了，因为 Bernal Heights 公园那个备受争议的秋千就是这么回事。我太喜欢这个了，真好玩，以前我根本想不到能这么做。太酷了。这是一个个人用途的案例，而且我觉得非常可爱。不过我们换到工作上的事吧。John，你一直在用 Grok Bot 来设计 Grok Bot，还有一些很有意思的工作流要给我们展示。"
+  },
+  {
+   "at": 1226.96,
+   "end": 1274.58,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Yeah, happy to talk about that. I think for me, some folks have already read an article that I wrote that was how I design using, no, no, no, how I design Grokbot using Grokbot. And I go over a couple of different ideas of how it's unlocked productivity for me, how it's really made some of the tasks that used to be really inaccessible or really boring, more accessible and a little less boring. One of the ones I wanted to talk through today was on Figma bro, which I also shared out as a bot template. So other designers out there who wanna try it can use it. Hopefully you can help improve it and share it back with me and I can update it in my own Grokbot. I just wanna talk through two quick use cases and that's the first one being on the screen right here. This is an actual prompt that I gave it using voice recording, so I'll just read it.",
+   "zh": "好，很乐意聊聊。有些人可能已经读过我写的一篇文章，讲的是我怎么用 Grok Bot 来设计 Grok Bot。我在文章里讲了几个不同的思路：它怎么提升了我的效率，怎么让一些以前很难上手或者很无聊的任务，变得更容易上手，也没那么无聊了。今天我想聊的其中一个是 Figma Bro，我也把它作为机器人模板分享出去了，其他想试试的设计师都可以用。希望你们能帮忙改进它，再分享回来给我，我好更新到我自己的 Grok Bot 里。我想快速讲两个用例，第一个就在屏幕上这里。这是我用语音录下来发给它的一条真实提示词，我直接念一下。"
+  },
+  {
+   "at": 1274.58,
+   "end": 1323.04,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Okay, here's the situation. I have a link in Figma as an example. On the left, I have a screenshot of a couple of icons. That's this over here that need to be essentially placed next to each of the bots in the exact same placement. I have the second screenshot, which shows ones that don't have an icon next to them. So take the icon, scale it up, put it in the same position as the rest of the bots that I've screenshotted and ensure that they're in the same position, scale up icons so that I have a whole set of these. If anything is unclear, tell me. And the reason we needed this was because Ben was doing some community assets and asked me to put together something really quickly. It was 852, so I was wrapping up at the gym and I was able to just screenshot in Figma these two separate art boards of work that was already in progress, one being from the icon library and the other being from the brand book. And doing so, I just pointed to those, had the bot do its work.",
+   "zh": "好，情况是这样的。我在 Figma 里有一个链接作为示例。左边是几个图标的截图，就是这边这个，需要把它们放到每个机器人旁边，位置要完全一致。第二张截图里是旁边还没有图标的那些。所以把图标拿过来，放大，放到和我截图里其他机器人一样的位置上，确保位置一致，把图标放大，让我得到一整套。有任何不清楚的地方就告诉我。我们之所以需要这个，是因为 Ben 在做一些社区素材，让我很快拼一版出来。当时是 8 点 52 分，我正在健身房准备收尾，我就在 Figma 里截了这两个已经在做的画板，一个来自图标库，一个来自品牌手册。这样一来，我只要指给它看，机器人就自己去干活了。"
+  },
+  {
+   "at": 1323.04,
+   "end": 1359.56,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "I didn't even read most of this stuff, but it produced three outputs and I was like, great, copy pasted what Ben had sent me on Slack and said, think we got all these covered. And then it made this little table. I was still at the gym at the time, so this is more voice messaging. But then it kept iterating, maybe making it a little bit bigger, rounding it so it looks good and I can check that it looks good in a rounded state. And then eventually getting feedback that maybe we could play with the color and so applying that as well. And this is the type of thing that maybe wouldn't take super long in Figma, but now I'm just doing while I'm not even at my computer.",
+   "zh": "大部分内容我甚至都没看，但它产出了三个结果，我就说很好，然后把 Ben 在 Slack 上发给我的内容复制粘贴过去，说：我觉得这些我们都覆盖到了。然后它做了这个小表格。当时我还在健身房，所以更多是发语音消息。不过它一直在迭代，比如把图标再放大一点，加上圆角让它更好看，我也能检查它在圆角状态下好不好看。最后收到反馈说也许可以在颜色上做点尝试，它也照着改了。这种事在 Figma 里可能也花不了太久，但现在我根本不用坐在电脑前就能做完。"
+  },
+  {
+   "at": 1359.56,
+   "end": 1367.68,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Can you just walk us through exactly how this is hooked up to Figma for folks that kind of just don't even know how this magic happens?",
+   "zh": "你能不能给大家具体讲讲，这到底是怎么接到 Figma 上的？有些朋友完全不知道这魔法是怎么发生的。"
+  },
+  {
+   "at": 1367.68,
+   "end": 1410.68,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Yeah, so there's a Figma MCP which we use and is pretty effective, especially if you just give the, once you've made the connection, give your bot the link to it and give it some very specific set of controls. In my bot itself, it has the skills and some specifics that I request of it. I like to have my artboards laid out side by side horizontally in maybe 50 pixels apart or 100, depending on the size of them. And I tell it all these things upfront so that it doesn't give me like a messy file when I come back to it. It works really smartly with a template I found. And so from before I kind of had to direct it a few more times, but I have a second example that I can show you, which is a little bit more precise with how I set it up.",
+   "zh": "好。我们用的是 Figma MCP，效果挺好的，尤其是建立连接之后，你只要把链接给你的机器人，再给它一套非常具体的约束就行。我的机器人本身有一些技能，还有一些我对它的具体要求。我喜欢让画板水平并排摆放，间隔大概 50 或 100 像素，看画板大小而定。这些我都提前告诉它，这样我回头打开时，它不会给我一个乱七八糟的文件。配合我找到的一个模板，它用起来非常聪明。之前我还得多指挥它几次，不过我还有第二个例子可以给你看，在设置上更精确一些。"
+  },
+  {
+   "at": 1410.68,
+   "end": 1411.52,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Awesome.",
+   "zh": "太棒了。"
+  },
+  {
+   "at": 1411.52,
+   "end": 1457.28,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "And this was just earlier today. Right now it's around two. This was an hour ago where I was asked to create some marketing material for our latest bot marketplace, which is launching today. And we want to highlight some of the primary use cases. We have the bots that are being provided to us by people, yourself included, Claire. And we're highlighting some of these things in marketing material. And so what I did was I'll share you what I did in Figma. It was up here. I made one quick template and I labeled it for Shub because he asked me for it. And I told the bot using that, which I linked right here. Here's the message. Here's the template. Use our brand book backgrounds and wallpapers and match the styling that I have, but apply it to every other one.",
+   "zh": "这是今天早些时候的事。现在大概两点，这是一个小时前，我被要求为我们最新的机器人市场做一些营销物料，它今天上线。我们想突出一些主要用例。我们有大家提供给我们的机器人，Claire，也包括你的，我们要在营销物料里重点展示其中一些。我给你看看我在 Figma 里是怎么做的，在上面这里。我快速做了一个模板，标注给 Shub，因为是他找我要的。然后我用这个模板告诉机器人，链接就在这里。这是消息，这是模板。用我们品牌手册里的背景和壁纸，匹配我做的样式，然后套用到其他每一个上面。"
+  },
+  {
+   "at": 1457.28,
+   "end": 1482.56,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "And you'll notice that some of them don't have the photo fully updated. Some of them do, which means I need to go back and prod it. But this just saved me the time of needing to go manually onto each site, pull down each photo, update each one, change the instance, change the background, change the copy. It's all done for me here. So while I'm on this call, work is getting done, which I really love. I think the fact that I don't have to do this stuff myself is a godsend.",
+   "zh": "你会注意到，有些的照片没有完全更新，有些更新了，这意味着我得回头再催它一下。但这已经帮我省掉了很多时间：不用手动去每个网站、把每张照片拉下来、逐个更新、换实例、换背景、换文案。这些都替我做好了。所以在我参加这次通话的同时，活儿也在推进，我真的很喜欢这一点。不用自己做这些事，简直是天赐的礼物。"
+  },
+  {
+   "at": 1482.56,
+   "end": 1531.08,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And I have to say, look, Tradbot spotted right there, Claire's personal bot, very, very popular one that has really changed my life. I love this because, again, this stuff is so beautiful. And as designers, what you wanna spend time on is making these assets really great. You don't necessarily need to be doing production design, which is carrying it across different assets and polishing in different versions. And so your ability to spend more time, I'm presuming, on the foundations that make this system really extensible, and then letting Figma bro, love the name, let Figma bro, Figma bro and Tradbot would be friends, by the way, let Figma bro kind of do the production work, I think is really amazing.",
+   "zh": "我必须说，看，那里出现了 Tradbot，Claire 的个人机器人，非常非常受欢迎，真的改变了我的生活。我喜欢这个，因为这些东西太漂亮了。作为设计师，你想把时间花在把这些素材做得真正出色上，并不一定要去做制作类设计，也就是把它延展到各种不同的素材上、打磨各种版本。所以我猜，你能把更多时间花在那些让这个系统真正可扩展的基础上，然后让 Figma Bro，我超爱这个名字，顺便说一句，Figma Bro 和 Tradbot 肯定能成为朋友，让 Figma Bro 去做制作的活儿，我觉得真的很棒。"
+  },
+  {
+   "at": 1531.08,
+   "end": 1559.84,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And then for folks that missed it, what I tell people is, I use AI to get me off my computer, not on my computer. And so the fact that you were at the gym, got asked to do something, especially something like Figma that really does require your human fingers on a touch pad or whatever to do it, and your disability to be like, yep, go for it, get it done and finish your workout, I think is so nice. It's just like a much nicer way to work.",
+   "zh": "对于刚才没听到的朋友，我常跟大家说：我用 AI，是为了让自己离开电脑，而不是更离不开电脑。所以你当时在健身房，被叫去做一件事，尤其是像 Figma 这种真的需要你亲手在触控板之类的东西上操作的活儿，而你能说一句：好，去吧，搞定它，然后继续把训练做完，我觉得太好了。这就是一种舒服得多的工作方式。"
+  },
+  {
+   "at": 1559.84,
+   "end": 1612.04,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Yeah, and speaking of on the go, the other bot that I wanna highlight is DevBot or Experiments, both of them I kind of use interchangeably, but the high level idea behind these is a lot of times you get an idea, an interaction or a layout, a specific type of design that you want to explore. But once again, you might not be at your computer, classic shower thoughts moment where you wanna capture something and maybe even get it to a certain level of fidelity, but you don't have the time and energy just then in there to do so. Which brings me to DevBot, who works really closely with Experiments also over here. So, I mean, you're starting to see a pattern in the way that I work. This was also on the go. I took a screenshot of our actual mobile app experience, a screenshot of my bot called Slack Search and gave a voice memo to the bot saying, I wanted to make a specific type of prototype.",
+   "zh": "对，说到随时随地，我想重点介绍的另一个机器人是 DevBot，或者叫 Experiments，这两个我基本混着用。它们背后的大思路是：很多时候你会冒出一个想法，比如一个交互、一个布局，或者某种你想探索的特定设计。但同样，你可能不在电脑前，就是经典的洗澡时灵光一现，你想把它记下来，甚至做到一定的保真度，但当时没有时间和精力去做。这就要说到 DevBot 了，它和这边的 Experiments 配合得非常紧密。你应该开始看出我工作方式里的规律了。这个也是在路上做的。我截了一张我们手机 App 实际体验的图，又截了一张我那个叫 Slack Search 的机器人的图，然后给机器人发了一条语音备忘录，说我想做一种特定的原型。"
+  },
+  {
+   "at": 1612.04,
+   "end": 1662.68,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "So I described it, all using voice, kind of rambling a little bit, but in essence it was, when I share an agent, we've been using this term of a snapshot, a template. It's not the agent itself, but it's a copy of it to give to another coworker or a friend or whatever. And so the idea was, what if it would actually do a screenshot effect? If I click the share button, it takes a screenshot, strings down, zooms back to the preview template. And I just had that idea, wanted to test it, gave it to the bot to run with. And it talked to motion God, because there's a lot of things that I described that were elements on the screen that were transitioning. It had its own conversations. I barely even checked it once again, until I came back to its work. And I'll just jump to the end state, which is right here. We had to recreate some of the components within the test repo that we have, but it came up with two options of what I asked for.",
+   "zh": "我全程用语音描述，有点絮絮叨叨的，但本质上是这样：当我分享一个智能体时，我们一直用「快照」或者说「模板」这个说法。它不是智能体本身，而是一份副本，用来给另一位同事或朋友之类的人。所以我的想法是：如果它真的做一个截屏效果会怎样？我点分享按钮，它截一张图，缩小下去，再缩放回预览模板。我只是有了这个想法，想测试一下，就交给机器人去发挥。它还去找了 Motion God 沟通，因为我描述的很多东西都是屏幕上正在过渡的元素。它们自己进行了对话。我同样几乎一次都没去看，直到回来看它的成果。我直接跳到最终状态，就在这里。我们得在现有的测试仓库里重建一些组件，但它针对我的要求给出了两个方案。"
+  },
+  {
+   "at": 1662.68,
+   "end": 1717.4,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "The first being, if I click share agent here, it has a little screenshot effect, then zooms into it and shows some of the details. I could see the routines of the bot and it moves when I switch tabs, shows the plugins, and then you can copy a link and send it. And I asked for a little bit more of a subtle approach as well. And it basically took that and turned it into a version that just goes directly into the share model. And so clever idea, in the end decided not to go in this direction. I felt a little bit too derivative of kind of the iOS screenshot idea that originated this whole exploration. But I do love how easy it is to take just the concept that normally you would have to either prototype with the noodles and Figma, take the time to actually consider how it gets built if you're prototyping in code, describe it in plain words and say, run with it, do with my description of it how you will interpret it and turn it into something that I can interact with.",
+   "zh": "第一个方案是，我在这里点「分享智能体」，它会有一个小小的截屏效果，然后放大进去，展示一些细节。我能看到这个机器人的例行任务，切换标签页的时候它会跟着动，展示插件，然后你可以复制链接发出去。我还要了一个更低调一点的方案，它基本上就是把这个思路改成了一个直接进入分享弹窗的版本。所以是个很聪明的点子，不过最后我们决定不往这个方向走。我觉得它有点太像 iOS 截屏的那种效果了，而整个探索最初正是从那个想法来的。但我真的很喜欢现在这件事有多容易：一个概念，以前你要么得在 Figma 里拉连线做原型，要么如果用代码做原型，就得花时间真正考虑它怎么实现；现在只要用大白话描述出来，说一句：拿去做吧，按你对我描述的理解去做，把它变成我能交互的东西。"
+  },
+  {
+   "at": 1717.4,
+   "end": 1729.08,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "So ideas bot maybe should be the combination of what I'm using today as experiments and dev bot. But yeah, the random shower thoughts can now become a real working prototype.",
+   "zh": "所以「点子机器人」也许应该把我现在用来做实验的那个和 DevBot 合二为一。不过总之，那些洗澡时冒出来的随机想法，现在都能变成真正能用的原型了。"
+  },
+  {
+   "at": 1729.08,
+   "end": 1775.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "One thing that, you know, again, I've been in tech a million years. And so in the past, I am telling you some delightful, amazing designer would have been like, I had this great idea. We're gonna like screen, when we do share the screenshot effect, it's gonna like feel so good. It's gonna like give people a spike of dopamine. They're gonna love it. We're gonna share more things. And what would have happened is you would have hit a product manager that says, not a priority, show me the ROI, what's the OKR? And an engineer being like, I'm not gonna build that stupid thing. I have tech debt to do or like a bunch of stuff. And even if you get through the gauntlet of both of those and you get it built, and you're like, nevermind, don't love it, don't love it. People are angry. They're like, we dedicated time, we prioritize this.",
+   "zh": "有件事我得说，我在科技行业待了好多好多年。要是放在以前，我跟你说，某个特别有灵气、特别厉害的设计师会跑来说：我有个好主意，我们做个分享截图的效果，用起来会特别爽，能给人来一下多巴胺，大家会爱死它，会分享更多东西。然后会发生什么呢？你会撞上一个产品经理说：这不是优先级，给我看 ROI，对应哪个 OKR？还会撞上一个工程师说：我才不做这种蠢东西，我还有一堆技术债要还。就算你闯过了这两关、把它做出来了，结果发现：算了，不太喜欢。大家就会很生气：我们投入了时间，我们还专门排了优先级。"
+  },
+  {
+   "at": 1775.56,
+   "end": 1828.88,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "It's like you don't deprecate any of these things. And so the thing that I call this like the trash can method of software development, which is like building things with the presumption that it is totally inexpensive to throw them in the trash, whether those are prototypes or things that you get to your customers. And I think it allows you to be a lot more expansive about what the process of product development, software development looks like, because you're not always stopping yourself saying, is this enough to justify getting it into the app? Is this enough to bother somebody, to get it higher priority than this or that? And so for somebody who has built a lot of software in a lot of environments for a very long time, that is the piece of products like this that really make me excited, because you can iterate so quickly, you don't have to shut off that like creative part of your brain that says, well, what if this, what if that?",
+   "zh": "结果就是这些东西你一个都不会下线。所以我把这个叫作软件开发的「垃圾桶开发法」：做东西的时候就预设把它扔进垃圾桶几乎没有成本，不管是原型，还是已经交到客户手里的东西。我觉得这能让你对产品开发、软件开发的过程放开得多，因为你不用老是拦住自己问：这值得放进应用里吗？值得去打扰别人、把它的优先级排到这个那个前面吗？对一个在各种环境里做了很久很久软件的人来说，这类产品真正让我兴奋的就是这一点：你可以迭代得非常快，不用关掉大脑里那个爱问「要是这样呢、要是那样呢」的创意部分。"
+  },
+  {
+   "at": 1828.88,
+   "end": 1836.92,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And you don't have to be stressed that you're quote unquote racing resources. When you come up with an idea that you're not a hundred percent sure of, but wanna see what it looks like.",
+   "zh": "而且当你想到一个自己没有百分百把握、但又想看看做出来什么样的点子时，也不用焦虑自己是在「浪费资源」。"
+  },
+  {
+   "at": 1836.92,
+   "end": 1854.12,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Totally agree. And I think that makes it more fun to be a designer again, honestly. A lot of the previous constraints, the parts of the design process and working cross-functionally that were a headache before, are a little less of a problem these days, like you said.",
+   "zh": "完全同意。说实话，我觉得这让当设计师重新变得好玩了。以前很多限制，设计流程里、跨职能协作里那些让人头疼的部分，就像你说的，现在都没那么成问题了。"
+  },
+  {
+   "at": 1854.12,
+   "end": 1900.84,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Amazing. Well, I love it just to recap for folks, Figma Bro, your design spotter while you were at the gym, getting the reps in on your art boards, and then experiment in DevBot, basically like take your shower thoughts, take your walk thoughts, and the implementation is none of your business. Let them cook. You come back to an idea and then it's up to you whether or not you wanna ship it or not. Okay, so this has been so fun to recap for folks. We've shown sort of like the personal workflows and how you can do kind of amazing things that you wouldn't have been able to do before with very minimal toil, using GrokBot as sort of like a development and design pipeline. John showed us how to experiment, design, do production more efficiently with GrokBot.",
+   "zh": "太棒了。我很喜欢，给大家回顾一下：Figma Bro 是你在健身房时的设计「保护员」，帮你在画板上把次数练够；然后是 DevBot 里的实验，基本上就是把你洗澡时、散步时冒出来的想法交出去，至于怎么实现，那不关你的事，让它们去折腾。你回来就能看到一个成型的点子，要不要上线由你决定。好，给大家回顾这些真的很有意思。我们展示了个人工作流，以及怎么用 Grok Bot 当作一条开发加设计的流水线，几乎不费力气就做出以前做不到的厉害东西。John 给我们展示了怎么用 Grok Bot 更高效地做实验、做设计、做产出。"
+  },
+  {
+   "at": 1900.84,
+   "end": 1913.04,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Let's just take a step back. Let's go to lightning round questions. My first one, just very quick between you two, other than the bots you showed. I'm like, how do you think about your bots? Who are your favorites? How do you organize them?",
+   "zh": "我们稍微退后一步，进入快问快答环节。第一个问题，你们俩快速说一下，除了刚才展示的这些机器人之外，你们怎么看待自己的机器人？最喜欢哪几个？怎么组织它们？"
+  },
+  {
+   "at": 1913.04,
+   "end": 1961.62,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "A lot of my digital life has been dedicated to all different types of GrokBots. In general, I organize them in two buckets, life and work. So I have a couple of bots that are dedicated for each part of my life. For example, my chief of staff. I manage all the bots, but I sometimes do talk to other bots, but I delegate the things I don't know who to delegate it to, to the COS bot. So I think last night I was asking it to buy some 3D printing filament for me. So that's the plastic material that 3D printer use to making things. And what's interesting is not only can help you search, find and buy the item, you can actually train different tasks together.",
+   "zh": "我数字生活的很大一部分都交给了各种各样的 Grok Bot。总的来说，我把它们分成两类：生活和工作。生活的每个方面都有几个专门的机器人。比如我的幕僚长。所有机器人都由我来管，有时候我也会直接跟其他机器人对话，但遇到不知道该交给谁的事，我就交给这个幕僚长机器人。比如昨晚我让它帮我买一些 3D 打印耗材，就是 3D 打印机用来做东西的那种塑料材料。有意思的是，它不只能帮你搜索、找到并买下东西，你还能把不同的任务串在一起。"
+  },
+  {
+   "at": 1961.62,
+   "end": 2009.36,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Like I asked it once you were done, update the inventory list. 'Cause I keep this 3D printing filament inventory in motion. And I wanted to automatically add this record and purchase it for me. And I think that's truly the power of it is to like train different tasks in our daily life together and then give it like a higher task and let it figure out what the steps, what needs to do, maybe you can learn it. And then the next time you do it, just do the thing that we did last month and then even have it automatically do it. I have an email manager, which will surface all my action items. This was last night I was checking any action items from my input inbox. And then like there was some USPS delivery issue, then I asked it to help me contact them.",
+   "zh": "比如我让它买完之后更新库存清单，因为我在 Notion 里记着一份 3D 打印耗材的库存，我希望它自动帮我添加这条记录，并帮我完成购买。我觉得它真正厉害的地方就在这里：把日常生活中不同的任务串起来，然后给它一个更高层的任务，让它自己去想该走哪些步骤、需要做什么，它还能学会。下次你只要说「照上个月那样再做一遍」就行，甚至可以让它自动去做。我还有一个邮件管家，会把我所有的待办事项挑出来。昨晚我就在看收件箱里有没有待办事项，结果有个 USPS 的投递问题，我就让它帮我联系对方。"
+  },
+  {
+   "at": 2009.36,
+   "end": 2058.24,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "I have the calendar manager who is effective to become my calendar now. So I'm scheduling someone for a coffee chat next week. And then most of my time today, and I just take a screenshot of the conversation. It can be on any IM tool. This one's on LinkedIn and I just send it and then ask you to put a placeholder on my calendar. Almost never opened the calendar app anymore. You can also put bots into a group. So let's say in this example, I had this idea of designing a app that translated class mail to English. So I throw this idea into the group chat. And then in the group chat, we have a PM, we have a designer, we have a engineer.",
+   "zh": "我还有个日历管家，现在它基本上就成了我的日历。比如我要约一个人下周喝咖啡聊聊，我只要把聊天记录截个图，在哪个聊天工具上都行，这次是在 LinkedIn 上，发给它，让它在我日历上先占个位置。我现在几乎不再打开日历应用了。你还可以把机器人拉进一个群里。比如在这个例子里，我有个想法，想设计一个把猫叫声翻译成英文的应用。我把这个想法丢进群聊，群里有一个产品经理、一个设计师、一个工程师。"
+  },
+  {
+   "at": 2058.24,
+   "end": 2103.8,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "And then they started to talk about idea from their own perspective. And it's so interesting to see like how this simple seed planted in the group chat and then now like derive new ideas around it. I even use it to prepare the podcast that we're doing right now. I don't have a microphone and I asked my IT bot who's like taking care of all my IT questions. What type of microphone I need? And I only have this one, does it work? And for personal life, it's replacing my news app. So every morning, 7 a.m. I'll receive a newsletter and it's personalized. I tell it, I wanna AI information. I wanna news about AI that relevant to me.",
+   "zh": "然后它们就开始从各自的角度讨论这个想法。看着一颗简单的种子种进群聊里，然后围绕它长出新的点子，真的很有意思。我甚至用它来准备我们现在录的这期播客。我没有麦克风，就去问我的 IT 机器人，它负责处理我所有的 IT 问题：我需要什么样的麦克风？我手上只有这一个，能用吗？在个人生活方面，它取代了我的新闻应用。每天早上 7 点我会收到一份个性化的简报。我告诉它，我想要 AI 方面的信息，想要和我相关的 AI 新闻。"
+  },
+  {
+   "at": 2103.8,
+   "end": 2144.52,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "I wanted to like have it do fact check and then source the official links as much as possible. And then this one is a legal advisor. So it's taking care of a lot of repetitive tasks. For example, I'm in this wait list for I'm not playing green card. I'm in wait list for this visa bulletin and checking manually every month in a pair. So I just dedicated this task to it. And then I give the link and it will go check it every month. And then let me know, okay, where's the, you are in the queue, what's the waiting list? So data.",
+   "zh": "我还让它做事实核查，并且尽量附上官方链接作为来源。还有这个是法律顾问，它帮我处理很多重复性的事情。比如我在申请绿卡，在排签证公告的队，以前每个月都要手动去查，特别麻烦。所以我就把这件事交给了它。我给它一个链接，它每个月都会去查一次，然后告诉我：你现在排到哪了，等候情况怎么样。"
+  },
+  {
+   "at": 2144.52,
+   "end": 2191.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I love it. So it seems like you have just kind of like all the admin, all the life admin you need to do, whether it's shopping, whether it's checking in on different status, regular check-ins. And then I love the idea of like, I don't want an email anymore and I don't want a calendar anymore. I want a bot to tell me where to show up and that's it. And so just for folks watching this, again, it's like make it as easy as possible to take the task you're doing to the finish line. You knew you needed to buy 3D printing filament, but you just don't want to open up the app, click the buttons, pick the right one, get sucked into the reviews, get distracted by the associated products, you're just like buy the thing.",
+   "zh": "我太喜欢了。看起来你基本上把所有的杂务、所有生活琐事都交给它了，不管是购物、查各种状态，还是定期跟进。我也很喜欢这个想法：我不想再看邮件了，也不想再看日历了，我只想让一个机器人告诉我该去哪儿出现，就这样。所以对正在看的各位来说，还是那句话：让你手上的任务尽可能轻松地走到终点。你知道自己得买 3D 打印耗材，但就是不想打开应用、点按钮、挑对型号、被评论区吸进去、又被相关商品分了心，你只想说：把这个东西买了。"
+  },
+  {
+   "at": 2191.16,
+   "end": 2225.44,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Or even calendar events, you like pull it up and you look and I have a conflict, what do I do? And you get distracted by Slack. Like all these things I think just allow you to kick off a task and pull it all the way through without distraction and just make sure that you get a lot of stuff done. And I think the breadth of use cases here is pretty incredible. John, do you have any that are different than this? Like one or two that you think folks aren't thinking of or that are a little different than the average, you know, admin shopping one?",
+   "zh": "日历上的事也一样，你打开一看，发现有冲突，怎么办？然后又被 Slack 分了心。我觉得这些做法能让你把一个任务启动起来，然后一路推到底，不被打断，确保你能搞定一大堆事情。这里的用例覆盖面真的很惊人。John，你有没有跟这些不太一样的？有没有一两个你觉得大家想不到的，或者跟一般的杂务、购物类不太一样的？"
+  },
+  {
+   "at": 2225.44,
+   "end": 2272.8,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "I do have some that are a little bit particular and one is just, I just started a few days ago. I've been learning Japanese and the thing about Japanese as a language is there's Hiragana, there's Katakana and there's Kanji and so there's different ways of reading one language. And recently I had the thought to just maybe communicate with this bot, which is just a Japanese practice bot, both in a way to up level my reading of Kanji as much as possible, but then have the pronunciation underneath it when I need it as well as finally an English response. So I just basically told it, give me all three forms so that I can learn as I go in just regular communication with you, I was having a look for a specific book as you could tell up above, I was gonna have it translated but then it came out so I ended up buying it.",
+   "zh": "我确实有几个比较特别的，其中一个是几天前才刚开始用的。我最近在学日语，日语这门语言的特点是有平假名、片假名，还有汉字，所以同一种语言有好几种读法。最近我想到，可以跟这个机器人交流，它就是一个日语练习机器人，一方面尽可能提升我读汉字的水平，另一方面在我需要的时候在下面标上读音，最后再给一个英文回复。所以我基本上就是告诉它：每次都把这三种形式都给我，这样我在跟你日常交流时就能边用边学。你上面也能看到，我当时在找一本特定的书，本来打算让它帮我翻译，结果那本书出了，我最后就直接买了。"
+  },
+  {
+   "at": 2272.8,
+   "end": 2309.44,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "The other use case is one, maybe this very particular, I think we're all aware of how the American insurance system is set up and for me it's not even that big of a deal, it's just knowing that it's possible for me to set up the bot to know my insurance plan, take any photo of a receipt or any sort of doctor statement and just ensure that I'm getting the most bang for my buck. And this one, half the time it doesn't even, there's nothing additional that I can get out of it but it just gives me peace of mind knowing that I can send anything to it and know that I'm getting my money's worth.",
+   "zh": "另一个用例可能非常特别。我想大家都知道美国的保险体系是什么样的，对我来说这其实也不算什么大事，只是知道我可以让机器人了解我的保险方案，然后随便拍一张收据或者医生开的单据发给它，确保我每一分钱都花得值。这个嘛，一半的时候它其实也帮我多争取不到什么，但它让我很安心，因为我知道什么都可以发给它，确保自己的钱花得值。"
+  },
+  {
+   "at": 2309.44,
+   "end": 2327.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, I wanna give people, I'm guessing kind of how this is set up, which is you're like, this is my plan, here's my coverage, anytime I'm gonna get a prescription or look for a provider or go to a specialist, like reference my plan and make sure that I'm making the best decisions, is that kind of the high level what it does?",
+   "zh": "对，我想帮大家理解一下，我猜它大概是这么设置的：你告诉它，这是我的保险方案，这是我的保障范围，以后每次我要开处方、找医疗机构或者去看专科医生，都参考我的方案，确保我做出最好的决定。它大体上是做这个的吗？"
+  },
+  {
+   "at": 2327.16,
+   "end": 2335.6,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "And in addition, anytime there's an invoice or a receipt, I say, do I need to do another follow up or am I getting the maximum savings?",
+   "zh": "除此之外，每次有账单或收据，我都会问它：我还需要再跟进一下吗？我拿到最大优惠了吗？"
+  },
+  {
+   "at": 2335.6,
+   "end": 2369.44,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I love this so much, as a self-employed person who finances her own healthcare, this is gonna be one that I go set up right out the gate. Okay, last writing on question, we're almost at the end of our time, I must ask because you have so many bots and they all have these personalities and names, you have Figma Bro, I have Tradbot. When the bots are being silly, when they're not doing what you want, how do you prompt? Are you all yellers? Is there some trick to getting your bots back on track?",
+   "zh": "我太喜欢这个了，作为一个自己给自己掏医疗保险的自由职业者，这个我一结束就要去设置。好，最后一个快问快答问题，我们时间快到了，我一定得问，因为你们有这么多机器人，每个都有自己的性格和名字，你有 Figma Bro，我有 Tradbot。当机器人犯傻、不按你的意思做事的时候，你们怎么写提示词？你们都是吼它的那种人吗？有没有什么让机器人重回正轨的诀窍？"
+  },
+  {
+   "at": 2369.44,
+   "end": 2383.2,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Here's the thing about working at SpaceX AI is oftentimes when you need to troubleshoot, they ask for your session ID and I don't want my co-workers seeing how I talk to my bot, and so I've gotten nicer over time, I'll say.",
+   "zh": "在 SpaceXAI 工作有个情况：很多时候你需要排查问题，他们会要你的会话 ID，我可不想让同事看到我是怎么跟我的机器人说话的，所以我得说，我这段时间变得越来越客气了。"
+  },
+  {
+   "at": 2383.2,
+   "end": 2406.88,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Our reply was a lot of emotion sometimes, but I think a useful tip is every time you can ask the bot to memorize this, so in the future, if this happens again, then just follow the script you learned last time. So kind of distill and then iterate it itself and then the longer you use it, the better it becomes and more adapts to your needs.",
+   "zh": "我回复的时候有时候也会带很多情绪，不过有个实用的技巧：每次都可以让机器人把这件事记下来，这样以后再遇到同样的情况，就按上次学到的流程来。相当于让它自己提炼、自己迭代，你用得越久，它就越好用，也越贴合你的需求。"
+  },
+  {
+   "at": 2406.88,
+   "end": 2434.12,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I love that, great, great tips both. One, remember who's reading your transcripts and two, just ask your bot to remember how to avoid the problem in the first place. You've been so generous with showing this, you've given me so many ideas, I'm gonna go back, you're gonna get a brand new clairevo.com by the end of the afternoon, I am so psyched about this, you just gave me the best ideas. Where can we find you other than all over the timeline where bot is going wild, where can we find you and how can we be helpful?",
+   "zh": "我很喜欢，两条建议都特别好。第一，记住谁会读你的对话记录；第二，直接让你的机器人记住怎么从一开始就避免这个问题。你们这么慷慨地展示了这么多，给了我好多点子，我回去之后，今天下午结束前你们就能看到一个全新的 clairevo.com，我太兴奋了，你们给了我最棒的点子。除了在时间线上到处都是、机器人刷屏的地方之外，大家还能在哪里找到你们？我们能怎么帮到你们？"
+  },
+  {
+   "at": 2434.12,
+   "end": 2438.16,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "I'm chronically online, you can find me @JohnBai which is just my name.",
+   "zh": "我是重度网瘾患者，可以在 @JohnBai 找到我，就是我的名字。"
+  },
+  {
+   "at": 2438.16,
+   "end": 2449.12,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Yeah, same for me, I'm on X and it's lovely to be in a pretty post and talk about design of the Grok bot there.",
+   "zh": "对，我也一样，我在 X 上，很乐意在那里聊聊 Grok Bot 的设计。"
+  },
+  {
+   "at": 2449.12,
+   "end": 2463.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Awesome, well, and y'all go out and try it. Love, truly, it's been really awesome and regretfully has replaced my beloved OpenClaw, so I think it's worth a spin. Both of you, thank you so much for joining How I AI.",
+   "zh": "太好了，大家去试试吧。说真的，它特别棒，很遗憾，它已经取代了我心爱的 OpenClaw，所以我觉得值得一试。谢谢你们两位来参加 How I AI。"
+  },
+  {
+   "at": 2463.56,
+   "end": 2464.52,
+   "speaker": "john",
+   "kind": "turn",
+   "text": "Thank you.",
+   "zh": "谢谢。"
+  },
+  {
+   "at": 2464.52,
+   "end": 2466.36,
+   "speaker": "peng",
+   "kind": "turn",
+   "text": "Thank you for having us. Thank you.",
+   "zh": "谢谢邀请我们。谢谢。"
+  },
+  {
+   "at": 2466.36,
+   "end": 2494.1,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Thanks so much for watching. If you enjoyed the show, please like and subscribe here on YouTube or even better, leave us a comment with your thoughts. You can also find this podcast on Apple Podcasts, Spotify or your favorite podcast app. Please consider leaving us a rating and review which will help others find the show. You can see all our episodes and learn more about the show at howiaipod.com. See you next time.",
+   "zh": "感谢收看。如果你喜欢这期节目，请在 YouTube 上点赞并订阅，或者更好的是，留言告诉我们你的想法。你也可以在 Apple Podcasts、Spotify 或你常用的播客应用上找到这档播客。欢迎给我们打分和写评价，这能帮助更多人发现这个节目。在 howiaipod.com 可以看到我们所有的节目，了解更多信息。我们下期见。"
+  }
+ ]
+}

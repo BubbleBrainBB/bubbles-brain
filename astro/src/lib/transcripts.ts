@@ -1,6 +1,7 @@
 /** 播客文字稿: a turn per span of speech, timed to the show's own audio so the
  *  player can follow along. Transcripts are optional: an episode has one when
  *  `transcriptFor` finds it, and the episode page then links to it. */
+import grokBot from '../data/transcripts/how-i-ai-grok-bot-designers.json';
 import alphafold from '../data/transcripts/latent-space-alphafold.json';
 import jev from '../data/transcripts/latent-space-jev.json';
 import metaMuse from '../data/transcripts/how-i-ai-meta-muse.json';
@@ -46,6 +47,7 @@ export interface Transcript {
 
 /** Every transcript the site has, keyed by the episode it belongs to. */
 const transcripts: Record<string, Transcript> = {
+	'how-i-ai-grok-bot-designers': grokBot as Transcript,
 	'how-i-ai-meta-muse': metaMuse as Transcript,
 	'latent-space-alphafold': alphafold as Transcript,
 	'latent-space-jev': jev as Transcript,
