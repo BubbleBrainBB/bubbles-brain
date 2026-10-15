@@ -20,6 +20,15 @@ export const changelog: ChangelogItem[] = [
 		date: '2026-10-15',
 		tag: '播客',
 		type: 'content',
+		title: 'Jev 这一期也有文字稿了',
+		summary:
+			'Latent Space 两个多小时的 Jev 一期补上了完整文字稿：英文取自节目官方发布的文字稿，配中文翻译。打开跟随播放，正在说的那段会高亮，点时间戳就从那里听，也可以在文字稿里搜索。',
+		links: [{ label: '看文字稿', href: '/podcasts/latent-space-jev/transcript/' }],
+	},
+	{
+		date: '2026-10-15',
+		tag: '播客',
+		type: 'content',
 		title: 'Tibo Sottiaux 这一期也有文字稿了',
 		summary:
 			"Lenny's Podcast 采访 OpenAI ChatGPT 负责人 Tibo Sottiaux 的这一期补上了完整文字稿：英文取自节目公开的文字稿，配中文翻译，两段赞助口播单独标了出来。打开跟随播放，正在说的那段会高亮，点时间戳就从那里听。",
