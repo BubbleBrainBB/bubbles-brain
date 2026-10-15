@@ -20,6 +20,15 @@ export const changelog: ChangelogItem[] = [
 		date: '2026-10-15',
 		tag: '播客',
 		type: 'content',
+		title: 'Grok Bot 设计师这一期也有文字稿了',
+		summary:
+			'How I AI 两位 Grok Bot 设计师的这一期补上了完整文字稿：由节目音频自动转写并分出 Claire、John、Peng 三位说话人，配中文翻译。至此五期播客都有文字稿了，打开跟随播放，正在说的那段会高亮。',
+		links: [{ label: '看文字稿', href: '/podcasts/how-i-ai-grok-bot-designers/transcript/' }],
+	},
+	{
+		date: '2026-10-15',
+		tag: '播客',
+		type: 'content',
 		title: 'Jev 这一期也有文字稿了',
 		summary:
 			'Latent Space 两个多小时的 Jev 一期补上了完整文字稿：英文取自节目官方发布的文字稿，配中文翻译。打开跟随播放，正在说的那段会高亮，点时间戳就从那里听，也可以在文字稿里搜索。',

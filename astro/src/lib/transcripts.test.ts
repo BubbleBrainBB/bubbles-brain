@@ -6,7 +6,8 @@ const metaMuse = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-meta
 const alphafold = podcastEpisodes.find((episode) => episode.id === 'latent-space-alphafold')!;
 const tibo = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-tibo-sottiaux')!;
 const jev = podcastEpisodes.find((episode) => episode.id === 'latent-space-jev')!;
-const withTranscripts = new Set([metaMuse.id, alphafold.id, tibo.id, jev.id]);
+const grokBot = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-grok-bot-designers')!;
+const withTranscripts = new Set([metaMuse.id, alphafold.id, tibo.id, jev.id, grokBot.id]);
 
 describe('the Meta Muse transcript', () => {
 	it('is well formed against its episode', () => {
@@ -135,12 +136,47 @@ describe('the Jev transcript', () => {
 	});
 });
 
-describe('every other episode', () => {
-	it.each(
-		podcastEpisodes
-			.filter((episode) => !withTranscripts.has(episode.id))
-			.map((episode) => [episode.id, episode] as const),
-	)('%s has no transcript yet', (_, episode) => {
-		expect(transcriptFor(episode)).toBeNull();
+describe('the Grok Bot transcript', () => {
+	it('is well formed against its episode', () => {
+		const transcript = transcriptFor(grokBot);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, grokBot)).toEqual([]);
 	});
+
+	it('is our own transcription, covering the episode and translated throughout', () => {
+		const transcript = transcriptFor(grokBot)!;
+		expect(transcript.source.type).toBe('asr-diarization');
+		expect(transcript.source.video).toMatch(/^https:\/\/www\.youtube\.com\/watch\?v=/);
+		expect(transcript.turns[0].at).toBe(0);
+		expect(transcript.turns.at(-1)!.end).toBeGreaterThan(grokBot.duration - 10);
+		expect(transcript.turns.every((turn) => turn.zh)).toBe(true);
+	});
+
+	it('names the host, both guests and the sponsor read', () => {
+		const turns = transcriptFor(grokBot)!.turns;
+		expect(new Set(turns.map((turn) => turn.speaker))).toEqual(new Set(['host', 'john', 'peng']));
+		const ad = turns.find((turn) => turn.kind === 'ad')!;
+		expect(ad.speaker).toBe('host');
+		expect(ad.text).toContain('WorkOS');
+	});
+
+	it("gives the episode page's quote to the host who says it", () => {
+		// "I use AI to get me off my computer, not on my computer." is Claire summing up John's
+		// workflow at 25:33, not John; the cold open plays the same line.
+		const turns = transcriptFor(grokBot)!.turns.filter((turn) =>
+			turn.text.includes('off my computer'),
+		);
+		expect(turns.map((turn) => turn.speaker)).toEqual(['host', 'host']);
+		expect(turns[1].at).toBeLessThanOrEqual(25 * 60 + 33);
+		expect(turns[1].end).toBeGreaterThan(25 * 60 + 33);
+	});
+});
+
+describe('every episode', () => {
+	it.each(podcastEpisodes.map((episode) => [episode.id, episode] as const))(
+		'%s has its transcript only if it is one of the transcribed episodes',
+		(_, episode) => {
+			expect(transcriptFor(episode) !== null).toBe(withTranscripts.has(episode.id));
+		},
+	);
 });
