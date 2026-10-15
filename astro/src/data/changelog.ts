@@ -17,6 +17,15 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-14',
+		tag: '播客',
+		type: 'feature',
+		title: '播客单集可以看完整文字稿',
+		summary:
+			'Meta Muse 这一期加了完整文字稿：按说话人分段，中文和英文原文可以切换；打开跟随播放，正在说的那段会高亮并自动滚到眼前，点时间戳就从那里听，还能在文字稿里搜索。单集页播放键旁边的「文字稿」进入。',
+		links: [{ label: '看文字稿', href: '/podcasts/how-i-ai-meta-muse/transcript/' }],
+	},
+	{
 		date: '2026-10-13',
 		tag: '播客',
 		type: 'content',

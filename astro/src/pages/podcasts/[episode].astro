@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PodcastTerms from '../../components/PodcastTerms.astro';
 import { podcastEpisodes, type PodcastEpisode } from '../../data/podcasts';
+import { transcriptFor, transcriptHref } from '../../lib/transcripts';
 import {
 	clock,
 	dateLabel,
@@ -107,6 +108,16 @@ const topics = topicSpans(episode);
 				</span>
 				<span class="podcast-progress__time">{clock(episode.duration)}</span>
 			</div>
+			{
+				transcriptFor(episode) && (
+					<a class="podcast-transcript-link" href={transcriptHref(episode)}>
+						<svg viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M5 7h14M5 12h14M5 17h9" />
+						</svg>
+						文字稿
+					</a>
+				)
+			}
 		</div>
 
 		<dl class="podcast-people">

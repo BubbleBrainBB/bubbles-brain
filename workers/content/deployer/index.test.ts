@@ -1107,6 +1107,25 @@ describe("automatic code release boundary", () => {
     ).toThrow("Code release contains forbidden or unknown path: astro/src/data/podcasts.draft.ts");
   });
 
+  it("accepts podcast transcripts and their page", () => {
+    const releasePaths = [
+      "astro/src/data/transcripts/how-i-ai-meta-muse.json",
+      "astro/src/lib/transcripts.test.ts",
+      "astro/src/lib/transcripts.ts",
+      "astro/src/pages/podcasts/[episode]/transcript.astro",
+      "astro/src/scripts/transcriptView.ts",
+      "astro/src/styles/transcript.css",
+    ];
+    expect(
+      validateCodeReleaseChangeSet(
+        comparison(
+          releasePaths.map((filename) => ({ filename, status: "added" })),
+        ),
+        { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+      ),
+    ).toHaveLength(releasePaths.length);
+  });
+
   it("accepts saved highlight source portraits", () => {
     const releasePaths = [
       "static/images/sources/lauren-tan.png",
