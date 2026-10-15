@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { podcastEpisodes } from '../data/podcasts';
+import { seconds } from './podcasts';
 import { transcriptFor, transcriptHref, transcriptProblems, wordCount } from './transcripts';
 
 const metaMuse = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-meta-muse')!;
@@ -169,6 +170,14 @@ describe('the Grok Bot transcript', () => {
 		expect(turns.map((turn) => turn.speaker)).toEqual(['host', 'host']);
 		expect(turns[1].at).toBeLessThanOrEqual(25 * 60 + 33);
 		expect(turns[1].end).toBeGreaterThan(25 * 60 + 33);
+		// The page plays it from the turn that says it, under the name of the one who says it.
+		const transcript = transcriptFor(grokBot)!;
+		const at = seconds(grokBot.quote!.at);
+		const said = transcript.turns.find((turn) => turn.at <= at && at < turn.end)!;
+		expect(said.text).toContain(grokBot.quote!.text);
+		expect(transcript.speakers.find((speaker) => speaker.id === said.speaker)!.name).toBe(
+			grokBot.quote!.by,
+		);
 	});
 });
 
