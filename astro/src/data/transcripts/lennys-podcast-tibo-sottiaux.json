@@ -1,0 +1,1222 @@
+{
+ "episodeId": "lennys-podcast-tibo-sottiaux",
+ "language": "en",
+ "source": {
+  "type": "show-transcript",
+  "note": "英文取自 Lenny's Podcast 公开的文字稿档案，时间点与节目音频抽样核对一致，中文由 AI 翻译"
+ },
+ "speakers": [
+  {
+   "id": "host",
+   "name": "Lenny Rachitsky",
+   "role": "主持"
+  },
+  {
+   "id": "guest",
+   "name": "Tibo Sottiaux",
+   "role": "OpenAI"
+  }
+ ],
+ "turns": [
+  {
+   "at": 0,
+   "end": 13,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Often, when I look at what people are building out there, it's just like you're not quite getting it. If you were just pushing yourself and just really imagining all of this being roughly 10 times better than it is today in a year, you would build in a different way.",
+   "zh": "我经常看到外面大家在做的东西，就觉得：你们还没真正想明白。如果你逼自己一把，真正去想象一年后这一切都会比今天好上 10 倍左右，你做产品的方式就会完全不一样。"
+  },
+  {
+   "at": 13,
+   "end": 17,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What do you think people aren't pricing in in terms of where things are going?",
+   "zh": "就事情的走向而言，你觉得大家还有哪些没有预判到的？"
+  },
+  {
+   "at": 17,
+   "end": 23,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "The majority of actions on the internet will be taken by agents. If you want your product to be successful for agents, you have to build for a certain level of scale.",
+   "zh": "互联网上大部分操作将由智能体来完成。如果你希望自己的产品在智能体面前也能成功，就必须按照某种量级的规模去构建。"
+  },
+  {
+   "at": 23,
+   "end": 28,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "How many agents do you find yourself running in parallel just in your day-to-day work?",
+   "zh": "在日常工作中，你通常会同时并行跑多少个智能体？"
+  },
+  {
+   "at": 28,
+   "end": 43,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "As I'm pushing the frontier, I find myself building larger and larger teams of agents, and then, when we have the next breakthrough with models, suddenly, it's just kind of like, \"Oh. Well, a bigger agent can just do all of it.\" And so I kind of shrink the team again, and then it just goes through this expansion and shrinking expansion.",
+   "zh": "随着我不断往前沿推进，我发现自己搭建的智能体团队越来越大；然后等模型迎来下一次突破，突然就变成：「哦，其实一个更强的智能体就能把这些全包了。」于是我又把团队缩小，然后就这样不断经历扩张、收缩、再扩张。"
+  },
+  {
+   "at": 43,
+   "end": 46,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "It kind of makes me think about there's this whole loops thing, and then this little graphs thing.",
+   "zh": "这让我想到现在有一整套关于循环的东西，还有关于图的那一小套东西。"
+  },
+  {
+   "at": 46,
+   "end": 60,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Having to set up and fiddle with your loops is something that maybe people get excited about, but I don't think this is the way that it's going to work. Over time, you just want a system that learns. You don't want to necessarily think about, \"Oh. I was just thinking I've got to loop it exactly this way in order to get results.\"",
+   "zh": "要自己去搭建、去折腾你的循环，也许让一些人很兴奋，但我不认为未来会是这样运作的。随着时间推移，你想要的只是一个会学习的系统。你不一定想去琢磨：「哦，我刚在想，我得把循环精确地搭成这样才能出结果。」"
+  },
+  {
+   "at": 60,
+   "end": 64,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Do you think there's still more radical change happening to how we work?",
+   "zh": "你觉得我们的工作方式还会发生更剧烈的变化吗？"
+  },
+  {
+   "at": 64,
+   "end": 76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's going to continue to change quite radically. Even today, it still feels a bit clunky, and I think it will feel clunky until it isn't.",
+   "zh": "它还会继续发生相当剧烈的变化。哪怕是今天，用起来还是有点笨拙，而且我觉得它会一直笨拙下去，直到某一天突然不再笨拙。"
+  },
+  {
+   "at": 76,
+   "end": 78,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Tibo, thank you for doing this.",
+   "zh": "Tibo，谢谢你来做这期节目。"
+  },
+  {
+   "at": 78,
+   "end": 80,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. Thanks for having me.",
+   "zh": "嗯，谢谢你邀请我。"
+  },
+  {
+   "at": 80,
+   "end": 81,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Of course.",
+   "zh": "应该的。"
+  },
+  {
+   "at": 81,
+   "end": 82,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Nice room.",
+   "zh": "这房间不错。"
+  },
+  {
+   "at": 82,
+   "end": 86,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You launched a ton of stuff today. How's your sleep? How are you sleeping? Are you doing all right?",
+   "zh": "你今天发布了一大堆东西。睡得怎么样？最近睡眠还好吗？你还撑得住吧？"
+  },
+  {
+   "at": 86,
+   "end": 105,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I'm doing great. I'm fortunate to have a very good team. So while I sleep, they were awake most of the night. We have this amazing room at the office called the library, which we completely repurpose as a mega war room, and the vibes in there are just immaculate. People were there until very, very late.",
+   "zh": "我挺好的。我很幸运有一支非常棒的团队。所以我睡觉的时候，他们几乎通宵都醒着。我们办公室有个很棒的房间叫「图书馆」，我们把它整个改成了一个超大的作战室，里面的氛围简直无可挑剔。大家在那儿一直待到很晚很晚。"
+  },
+  {
+   "at": 105,
+   "end": 111,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So you've been a longtime engineer. Are you coding at all anymore? Are you shipping PRs, or are you mostly in docs and meetings now?",
+   "zh": "你当了很多年工程师。现在还写代码吗？还在提 PR 吗，还是现在主要在写文档、开会？"
+  },
+  {
+   "at": 111,
+   "end": 113,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "What is coding?",
+   "zh": "什么是写代码？"
+  },
+  {
+   "at": 113,
+   "end": 117,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Exactly. Yeah. Are you shipping PRs? I don't know. Is that-",
+   "zh": "没错，对。你还在提 PR 吗？我也不知道，这算是……"
+  },
+  {
+   "at": 117,
+   "end": 146,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah, yeah. Merging some code every once in a while. Technically, a lot of code is getting written for me to do all sorts of kinds of analysis, understand trends, understand the business, understand the next feature, how well our previous launches are doing. A lot of code is written by Codex for that. I'm obviously not writing it by hand anymore. Occasionally, during the weekends, I will have a little therapeutic moment where I do a little lead code just by hand, but that's the only actual hand coding that I do.",
+   "zh": "有的有的，时不时会合并一些代码。严格来说，有大量代码是为我而写的，用来做各种分析、了解趋势、了解业务、思考下一个功能，以及看我们之前的发布效果怎么样。这些代码很多都是 Codex 写的。我当然已经不再手写了。偶尔周末的时候，我会给自己来一段疗愈时光，手动刷几道 LeetCode，但这也是我唯一真正手写代码的时候。"
+  },
+  {
+   "at": 146,
+   "end": 151,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "How many agents do you find yourself running in parallel just in your day-to-day work?",
+   "zh": "在日常工作中，你通常会同时并行跑多少个智能体？"
+  },
+  {
+   "at": 151,
+   "end": 172,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I used to run a lot more in parallel, and then we were fortunate enough to get a breakthrough at Ultrafast. And so now, I feel like I'm able to be in the flow again. And so just having a faster agent helps me a lot. I'm excited that we're getting six-months-old Ultrafast out there soon. Then, yeah, I think it sort of varies.",
+   "zh": "我以前并行跑的要多得多，后来我们很幸运地在 Ultrafast 上取得了突破。所以现在我觉得自己又能重新进入心流状态了。光是有一个更快的智能体，就对我帮助很大。我很兴奋，我们很快就会把这个已经做了半年的 Ultrafast 推出去。另外，嗯，我觉得这个数量其实时多时少。"
+  },
+  {
+   "at": 172,
+   "end": 192,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "As I'm pushing the frontier, I find myself building larger and larger teams of agents. Then, when we have the next breakthrough with models, suddenly, it's just like, \"Oh. Well, a bigger agent can just do all of it, and keep everything in memory, and learn.\" And so I kind of shrink the team again, and then it just goes through this expansion and shrinking expansion.",
+   "zh": "随着我不断往前沿推进，我发现自己搭建的智能体团队越来越大。然后等模型迎来下一次突破，突然就变成：「哦，其实一个更强的智能体就能把这些全包了，还能把所有东西记在记忆里，还能学习。」于是我又把团队缩小，然后就这样不断经历扩张、收缩、再扩张。"
+  },
+  {
+   "at": 192,
+   "end": 199,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Can you say more about that? It kind of makes me think about there's this whole loop thing and then this whole graphs thing. Is this an evolution of that in some way or ...",
+   "zh": "能展开讲讲吗？这让我想到现在有一整套关于循环的东西，还有一整套关于图的东西。这在某种程度上是它们的演进吗，还是……"
+  },
+  {
+   "at": 199,
+   "end": 240,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think having to set up and fiddle with your loops and figuring that out is something that maybe people got excited about, but I don't think this is the way that it's going to work. I think the way that it's going to work is that ... how we're positioning and what we're shipping with dots, where you have an incredibly smart agent that works 24/7, understands your goals, understands your preferences, learns from feedback. What we launched is not perfect. I will learn very much from making this available to our pro users. But over time, you just want the system that learns from what you want to achieve. You don't want to necessarily think about, \"Oh. I was just thinking I've going to loop it exactly this way in order to get results.\"",
+   "zh": "我觉得，要自己去搭建、去折腾你的循环、把它摸索清楚，也许曾让一些人很兴奋，但我不认为未来会是这样运作的。我认为未来的运作方式是……就是我们在 Dots 上的定位和正在发布的东西：你拥有一个极其聪明的智能体，全天候不间断地工作，理解你的目标，理解你的偏好，能从反馈中学习。我们这次发布的东西并不完美，把它开放给 Pro 用户之后，我会从中学到很多。但长远来看，你想要的只是一个能从你想达成的目标中学习的系统。你不一定想去琢磨：「哦，我刚在想，我得把循环精确地搭成这样才能出结果。」"
+  },
+  {
+   "at": 240,
+   "end": 253,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So right now, there's Codex. There's ChatGPT Work. There's ChatGPT Consumer. There's dots. What I'm hearing is you think we're heading towards dots kind of being the primary way you talk to AI, and that kicks off all these other things?",
+   "zh": "所以现在有 Codex，有 ChatGPT Work，有面向消费者的 ChatGPT，还有 Dots。我听下来，你的意思是我们正在走向这样一个方向：Dots 会成为你和 AI 对话的主要方式，再由它去调动其他所有东西？"
+  },
+  {
+   "at": 253,
+   "end": 285,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. I think fundamentally, if you take a step back, and whether it's dots or not, it's all about breaking free from the technology and having this sort of permanent active intelligence that knows everything it needs to do and is available through any client, any screen. You can call it. Maybe you walk into a meeting room. It shows up in the meeting. It takes notes. You pick it back up on email, and then you text it if you need it.",
+   "zh": "对。我觉得从根本上说，如果你退一步看，不管是不是 Dots，关键都在于摆脱技术本身的束缚，拥有一种常驻的、主动的智能：它知道自己需要做的一切，并且可以通过任何客户端、任何屏幕找到它。你可以呼叫它。比如你走进一间会议室，它就出现在会议里，帮你做笔记。之后你在邮件里接着跟它聊，需要的时候再给它发条消息。"
+  },
+  {
+   "at": 285,
+   "end": 306,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's not that you need to be glued to a laptop or you're always on your phone. It's just like it's available when you need it, and it also gets out of the way when you don't need it. I can't wait for that to come to fruition, because I think just carrying your laptop as this brick around everywhere is just you're tied to the technology instead of the technology working for you.",
+   "zh": "你不需要一直粘在笔记本电脑前，也不用一直盯着手机。它就是在你需要的时候随时都在，不需要的时候也不会碍事。我非常期待这一天成为现实，因为我觉得走到哪儿都得扛着笔记本这块「砖头」，意味着你被技术绑住了，而不是让技术为你所用。"
+  },
+  {
+   "at": 306,
+   "end": 337,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "This episode is brought to you by our season's presenting sponsor WorkOS. What do OpenAI, Anthropic, Cursor, Replit, Sierra, Clay, and hundreds of other winning companies all have in common? They are all powered by WorkOS. If you're building a product for the enterprise, you've felt the pain of integrating single sign-on, SCIM, RBAC, audit logs, and other features required by large companies. WorkOS turns those deal blockers into drop-in APIs with a modern developer platform built specifically for B2B SaaS.",
+   "zh": "本期节目由本季冠名赞助商 WorkOS 赞助播出。OpenAI、Anthropic、Cursor、Replit、Sierra、Clay，以及数百家其他成功的公司有什么共同点？它们都在用 WorkOS。如果你在为企业客户做产品，你一定体会过接入单点登录、SCIM、RBAC、审计日志以及其他大公司必需功能的痛苦。WorkOS 把这些阻碍成交的难题变成即插即用的 API，并提供一个专为 B2B SaaS 打造的现代开发者平台。"
+  },
+  {
+   "at": 337,
+   "end": 375,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "Literally every startup that I'm an investor in that starts to expand upmarket ends up working with WorkOS, and that's because they are the best. Whether you are a seed stage startup trying to land your first enterprise customer or a unicorn expanding globally, WorkOS is the fastest path to becoming enterprise ready and unblocking growth. It's essentially Stripe for enterprise features. Visit workos.com to get started, or just hit up their Slack, where they have actual engineers waiting to answer your questions. WorkOS allows you to build faster with delightful APIs, comprehensive docs, and a smooth developer experience. Go to workos.com to make your app enterprise-ready today.",
+   "zh": "我投资的创业公司里，几乎每一家开始往高端市场扩张时，最后都会用上 WorkOS，因为它们就是最好的。无论你是正在争取第一个企业客户的种子轮公司，还是正在全球扩张的独角兽，WorkOS 都是让你最快具备企业级能力、打通增长瓶颈的路径。它基本上就是企业功能领域的 Stripe。访问 workos.com 即可开始，或者直接去他们的 Slack 问，那里有真正的工程师在等着回答你的问题。WorkOS 凭借好用的 API、全面的文档和顺畅的开发者体验，让你构建得更快。今天就去 workos.com，让你的应用具备企业级能力。"
+  },
+  {
+   "at": 375,
+   "end": 401,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I was going to ask you about this. It feels like so much has changed in how we worked over the past two years. In two years, especially engineers, but a lot of roles have just, the role, your day-to-day life has changed significantly. I'm curious if you think we're kind of settling into what work will look like in the next, I don't know, five years, let's say two years. That feels way too far to think about, or do you think there's still more radical change happening to how we work in-",
+   "zh": "我正想问你这个。感觉过去两年里，我们的工作方式变化太大了。两年时间里，尤其是工程师，但其实很多岗位都是这样，角色本身、你的日常工作都发生了巨大的变化。我很好奇，你觉得我们是不是正在逐渐定型，进入未来，我也不知道，五年的工作形态？就说两年吧，五年感觉太远了。还是说你觉得我们的工作方式还会发生更剧烈的变化？"
+  },
+  {
+   "at": 401,
+   "end": 433,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Oh. I think it's going to continue to change quite radically. Even today, it does seem like the technology is finally coming together with voice, multimodal inputs, outputs, but it still feels a bit clunky. I think it will feel clunky until it isn't, and then, you're just like, \"Wow. I can just talk to this thing the same way that we're talking right now. It just remembers things perfectly. If I want to ideate and brainstorm, it can just squiggle a thing, I have this collaborative surface.\"",
+   "zh": "哦，我觉得它还会继续发生相当剧烈的变化。哪怕是今天，技术看起来终于在语音、多模态输入和输出上汇集到了一起，但用起来还是有点笨拙。我觉得它会一直笨拙下去，直到某一天突然不再笨拙，然后你就会觉得：「哇，我可以像我们现在这样跟它聊天。它能把事情记得一清二楚。如果我想构思、头脑风暴，它可以随手画个草图，我有一个可以协作的界面。」"
+  },
+  {
+   "at": 433,
+   "end": 452,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "This is what we launched with ChatGPT Space. It's like the very start of that. You can imagine we have a shared whiteboard. We can collaborate between humans, between agents, and I think it's going to transcend conversations, transcend a lot of the clients that you have today. None of this is just really working today. So I think we're going to go through this big new transformation.",
+   "zh": "这正是我们用 ChatGPT Space 发布的东西，可以说是这一切的起点。你可以想象我们有一块共享白板，人和人之间、人和智能体之间都能在上面协作。我觉得它会超越对话本身，超越你今天用的很多客户端。这些东西今天都还没真正跑通。所以我觉得我们会经历一场新的大变革。"
+  },
+  {
+   "at": 452,
+   "end": 459,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "But I'm hearing here is dots is a big part of that future, this AI assistant that just does everything for you. You don't have to think about Codex versus ChatGPT and ...",
+   "zh": "不过我听下来，Dots 是这个未来很重要的一部分，就是这个能替你包办一切的 AI 助手。你不用去想该用 Codex 还是 ChatGPT，还有……"
+  },
+  {
+   "at": 459,
+   "end": 489,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes, and for Codex and ChatGPT, we're going to merge the ... We have Chat. We have the Work toggle. We heard the feedback loud and clear. People love the capability in Work, but then, also, sometimes you want to use Chat. Because it's a little bit faster and more pleasant to use. And so we're merging that. We're reducing that complexity. Eventually, we will ship all of the capabilities of dots straight into ChatGPT, as well, and lift the floor for our 1.2 billion users, which, at that time, we'll see how many we have.",
+   "zh": "是的，至于 Codex 和 ChatGPT，我们会把……我们有 Chat，也有 Work 开关。我们清清楚楚地听到了大家的反馈。大家很喜欢 Work 里的能力，但有时候也还是想用 Chat，因为它更快一点，用起来也更舒服。所以我们正在把两者合并，降低这种复杂度。最终，我们也会把 Dots 的全部能力直接搬进 ChatGPT，抬高我们 12 亿用户的体验底线，当然到那时我们会有多少用户，就看情况了。"
+  },
+  {
+   "at": 489,
+   "end": 500,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "We want it to be really, really seamless. One thing that I'm very excited with dots is they don't have a model picker. There's just no configuration. You just talk to it. The only thing that you have to configure is which channels you want to talk to.",
+   "zh": "我们希望它真的、真的非常顺滑。Dots 有一点让我特别兴奋：它没有模型选择器，完全不需要配置，你直接跟它说话就行。你唯一需要配置的，就是你想通过哪些渠道跟它交流。"
+  },
+  {
+   "at": 500,
+   "end": 506,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "It feels very much like the Her kind of vision of the world. I don't know. Do you think about that movie much, just this idea of this-",
+   "zh": "这感觉非常像电影《Her》里描绘的那种世界。我不知道，你会经常想起那部电影吗，就是那种……"
+  },
+  {
+   "at": 506,
+   "end": 508,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I watched it once.",
+   "zh": "我只看过一遍。"
+  },
+  {
+   "at": 508,
+   "end": 509,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "嗯。"
+  },
+  {
+   "at": 509,
+   "end": 520,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think it's interesting to think about maybe more ... What I think about more is sci-fi from 30, 40 years ago and how visionary it was at the time.",
+   "zh": "我觉得去想这个挺有意思的，也许更多是……我想得更多的是 30、40 年前的科幻作品，以及它们在当时有多么超前。"
+  },
+  {
+   "at": 520,
+   "end": 523,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Is there a specific sci-fi you think about that's most influenced you?",
+   "zh": "有没有哪部具体的科幻作品是你经常想起、对你影响最大的？"
+  },
+  {
+   "at": 523,
+   "end": 545,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Books like Neuromancer and then the original Star Trek. I think about that a lot, and there's something about Star Trek, which I think it was this technology that was very, very useful. Obviously, you're able to just talk to a computer, and it does things for you. You can talk to your spaceship, and it just moves. Right? It's like this is getting real. We're entering that era.",
+   "zh": "像《神经漫游者》这样的书，还有最早的《星际迷航》。我经常想起它们。《星际迷航》有一点很特别，我觉得它里面的技术是非常非常实用的。显然，你可以直接跟电脑说话，它就替你把事情办了。你可以跟你的飞船说话，它就开动了，对吧？这些正在变成现实。我们正在进入那个时代。"
+  },
+  {
+   "at": 545,
+   "end": 562,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So we're recording this in front of a live audience. There was this line out the door, just people waiting to see you, to hear from you. How do you just think about this, I don't know, role you're in, this responsibility you have to build what you're building and the impact it has in people's lives? I don't know. Just what does that feel like? How do you think about that?",
+   "zh": "我们这期是在现场观众面前录的。门外排了一条长队，大家都在等着见你、听你讲话。你怎么看待你现在所处的这个，我也不知道该怎么说，这个角色，以及你肩上这份责任：去打造你正在打造的东西，以及它对人们生活产生的影响？我也不知道，那是什么感觉？你是怎么看这件事的？"
+  },
+  {
+   "at": 562,
+   "end": 594,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think it's very important to be part of a community and to build with people, because in a way, we're discovering this technology and what we can do together. And so every time I talk to people, I'm reminded of you're doing this thing which I hadn't even anticipated. It's impacting real life in a certain way, and it's impacted this other person's life. Then it's just like all together, it's both very humbling, very inspiring, and I think very necessary in order to build something that is truly useful for humans. I don't know how we would do it without the community.",
+   "zh": "我觉得成为社区的一部分、和大家一起去构建，是非常重要的，因为从某种意义上说，我们是在一起探索这项技术，探索我们能共同做成什么。所以每次和大家交流，我都会被提醒：你在做一件我根本没预料到的事；它以某种方式影响着真实的生活，也影响了另一个人的人生。所有这些加在一起，既让我非常谦卑，也让我深受鼓舞，而且我觉得，要打造真正对人类有用的东西，这是非常必要的。没有社区的话，我都不知道我们该怎么做下去。"
+  },
+  {
+   "at": 594,
+   "end": 605,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "That's something I hear a lot with people building an AI, is they don't know what it is until they've launched it and they see how people use it, see what emerges. It feels like what you're saying is just to build it with people versus, \"Here's the vision. We've got it figured out.\"",
+   "zh": "这是我经常从做 AI 的人那里听到的：东西发布之前，他们其实不知道它到底是什么，要等发布后看到大家怎么用、看到会冒出什么来才知道。听起来你的意思是要和大家一起去构建，而不是「这就是愿景，我们已经全想清楚了」。"
+  },
+  {
+   "at": 605,
+   "end": 609,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. Even the Twitter community has been very nice in general. Yeah.",
+   "zh": "对。总的来说，就连 Twitter 社区也一直挺友善的。嗯。"
+  },
+  {
+   "at": 609,
+   "end": 619,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You're very good at Twitter, kind of antagonistic sometimes, but very good. How do you find time to even tweet. I don't understand how someone in your role has time to sit on Twitter, tweet, reply.",
+   "zh": "你玩 Twitter 很有一手，有时候还有点挑衅，但真的很厉害。你怎么还有时间发推？我不明白像你这样职位的人，怎么会有时间坐在那儿刷 Twitter、发推、回复。"
+  },
+  {
+   "at": 619,
+   "end": 621,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I spend maybe half an hour per day-",
+   "zh": "我每天大概花半个小时……"
+  },
+  {
+   "at": 621,
+   "end": 621.6,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Wow. Hey.",
+   "zh": "哇，可以啊。"
+  },
+  {
+   "at": 621.6,
+   "end": 628,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "... just scrolling and then doing something when I feel inspired and I have something interesting to say. Often it just comes in the moment.",
+   "zh": "……就刷一刷，等有灵感、有点有意思的话想说的时候，就发点东西。很多时候都是一时兴起。"
+  },
+  {
+   "at": 628,
+   "end": 630,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. Perfect Twitter skill.",
+   "zh": "嗯，标准的 Twitter 高手技能。"
+  },
+  {
+   "at": 630,
+   "end": 647,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "We haven't released the team dots yet, but today, we're releasing the primary dot, which you can configure. You can get used to what a dot can do, connect it to your apps, but we'll release the ability to create more than one. And so I have one that's responsible for Twitter.",
+   "zh": "团队 Dots 我们还没发布，但今天我们发布了主 Dot，你可以对它进行配置。你可以先熟悉一个 Dot 能做什么，把它连到你的各种应用上，之后我们会开放创建多个 Dot 的能力。比如我就有一个专门负责 Twitter 的。"
+  },
+  {
+   "at": 647,
+   "end": 649,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay. Say more about that. So right now, everyone gets one dot.",
+   "zh": "好，展开讲讲。所以现在每个人只有一个 Dot。"
+  },
+  {
+   "at": 649,
+   "end": 650,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "对。"
+  },
+  {
+   "at": 650,
+   "end": 652,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Right now, they can't add more dots.",
+   "zh": "现在还不能添加更多 Dot。"
+  },
+  {
+   "at": 652,
+   "end": 652.6,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That's right.",
+   "zh": "没错。"
+  },
+  {
+   "at": 652.6,
+   "end": 655,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "They will be able to have many dots. Talk about where that's going.",
+   "zh": "以后可以有很多个 Dot。讲讲这会往哪个方向发展。"
+  },
+  {
+   "at": 655,
+   "end": 681,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. So we wanted to start with one, the primary dot, which is the one that you'll probably also text, that learns your preferences most deeply, as well, and see what people do with it, see how we need to tune the system, learn by working with the community. Then, very quickly, soon, you'll be able to add a second one, a third one, a fourth one, as many as you need to create your virtual team. Then, you can give them specific roles. Right?",
+   "zh": "对。我们想先从一个开始，也就是主 Dot，你大概也会给它发消息，它对你偏好的了解也最深。然后看大家拿它做什么，看我们需要怎么调整这个系统，在和社区的协作中学习。接下来很快，你就能加第二个、第三个、第四个，需要多少就加多少，组建你的虚拟团队。然后你可以给它们分配特定的角色，对吧？"
+  },
+  {
+   "at": 681,
+   "end": 696,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I don't find it absolutely necessary, but sometimes, I have a thing that requires quite a bit of work, such as monitoring Twitter for me. Then, that's a thing. It's just like, \"Okay. This will be so much work that is the work of an entire dot,\" and then you can have a couple of those.",
+   "zh": "我倒不觉得这是绝对必要的，但有时候我手上有件事需要相当多的工作量，比如帮我盯着 Twitter。那就成了一件独立的事。就好像：「好吧，这活儿多到够一个 Dot 全职干了。」然后你可以有好几个这样的 Dot。"
+  },
+  {
+   "at": 696,
+   "end": 711,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So if you think about all the launches that happened today, it feels like dot's maybe the sexiest. I'm curious if there's something that you think is not getting the attention it probably deserves that will become really, really important down the road that people are sleeping on, that's a vision, really important.",
+   "zh": "如果看今天发布的所有东西，Dots 感觉可能是最吸睛的。我好奇有没有什么东西，你觉得它目前没得到应有的关注，但将来会变得非常非常重要，大家现在还没当回事，而它代表着一个很重要的愿景。"
+  },
+  {
+   "at": 711,
+   "end": 737,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. Yeah, yeah, yeah. I think the sleeper hit is a ecosystem, so opening it all up and the commitment, the deep commitment we have towards opening it all up. So we have, signing with ChatGPT, 16 partners. Very, very proud of that. We started that really, it was sort of in the moment last year. I was talking to creators of Pi and OpenCode, and it was like, \"Of course you should just be able to use the Codex sign-on and then use the usage.\"",
+   "zh": "对，对，对。我觉得真正的黑马是生态，也就是把一切都开放出来，以及我们对开放一切的承诺，非常坚定的承诺。「用 ChatGPT 登录」现在有 16 个合作伙伴，我对此非常非常自豪。这件事其实是去年某个时刻临时起意开始的。当时我在和 Pi 和 OpenCode 的作者聊，就觉得：「当然了，你们就应该能直接用 Codex 登录，然后用上它的额度。」"
+  },
+  {
+   "at": 737,
+   "end": 769,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Then, just, we shook hands virtually. We're just like use this auth, and then trust you to not do anything shady. That grew. Obviously, that became quite popular. Then, now, we made it an actual thing that we support with many, many partners, and I'm excited to grow that very quickly. The other side, as well, is opening up all of the infrastructure and how we build for ChatGPT with plugin extensions, also plugin discovery, just allowing everyone to ship something through maybe 1.2 billion users and benefiting from that distribution.",
+   "zh": "然后我们就隔空握了个手，意思就是：你们用这个认证吧，我们相信你们不会做什么见不得人的事。后来这件事发展起来了，显然变得相当受欢迎。现在我们把它变成了一项正式支持的功能，和很多很多合作伙伴一起，我很期待能快速把它做大。另一方面，我们也在开放所有基础设施，以及我们为 ChatGPT 构建东西的方式，包括插件扩展，还有插件发现，让每个人都能把东西推给大约 12 亿用户，享受这种分发能力。"
+  },
+  {
+   "at": 769,
+   "end": 787,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "We also have shared economics that we didn't actually talk in the keynote, but we will pay our plugins that are popular and are seeing a lot of usage. They're going to get part of the revenue share, as well. And so I think this commitment towards an open ecosystem is going to be very exciting.",
+   "zh": "我们还有收益分成，这点其实在主题演讲里没讲：对于那些受欢迎、使用量很大的插件，我们会付费给它们，它们也会拿到一部分收入分成。所以我觉得这种对开放生态的承诺会非常令人兴奋。"
+  },
+  {
+   "at": 787,
+   "end": 799,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "That's amazing. Okay. So as an example, so say Notion, somebody's using the Notion plugin or the Figma plugin within ChatGPT Work. Notion, Figma make money from people using it within the app.",
+   "zh": "太棒了。好，举个例子，比如有人在 ChatGPT Work 里用 Notion 插件或者 Figma 插件。Notion、Figma 就能从用户在应用内的使用中赚到钱。"
+  },
+  {
+   "at": 799,
+   "end": 818,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes. So we have all these subscribers that use ChatGPT. They get a certain amount of usage. Then, when the users use that usage with the plugin or within the other product, when they use sign-in with ChatGPT, we will have some shared economics with them where they will get remunerated.",
+   "zh": "是的。我们有大量订阅 ChatGPT 的用户，他们有一定的使用额度。当用户把这部分额度用在插件上，或者用在别的产品里，也就是通过「用 ChatGPT 登录」来使用时，我们会和这些合作方分享收益，他们会得到报酬。"
+  },
+  {
+   "at": 818,
+   "end": 831,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "One of the, I don't know, things, I think, that gets people excited about plugins and ecosystems is distribution platforms, ways to get out there. People discover my app. It blows up. Do you have any advice for people that want their plugins to bubble up, to get discovered?",
+   "zh": "我觉得插件和生态之所以让人兴奋，有一点在于它们是分发平台，是让自己被看到的途径。大家发现了我的应用，然后一下子火了。对于希望自己的插件能脱颖而出、被人发现的人，你有什么建议吗？"
+  },
+  {
+   "at": 831,
+   "end": 855,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Build a good plugin. Yeah. The way that it works, and we'll obviously tune the system, but we look at retention numbers. We look at how successful the plugin, the quality, and then, that's what we then start to recommend to users in conversations. And so your plugin can just get recommended to a significant slice of users. Obviously, if your plugin is not quite good, it will stop being recommended.",
+   "zh": "做一个好插件。对。它的运作方式是这样的，当然我们会持续调整这套系统，但我们会看留存数据，看插件有多成功、质量如何，然后据此开始在对话里向用户推荐。所以你的插件可能会被推荐给相当大一部分用户。当然，如果你的插件不够好，它就不会再被推荐了。"
+  },
+  {
+   "at": 855,
+   "end": 859,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Right. That's amazing that you're looking at retention of people using that plugin over time.",
+   "zh": "明白。你们看的是用户长期使用这个插件的留存，这太棒了。"
+  },
+  {
+   "at": 859,
+   "end": 864,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That's right. Is it actually adding utility? Is it enabling ChatGPT to do something else?",
+   "zh": "没错。它是不是真的带来了价值？它有没有让 ChatGPT 能做到别的事？"
+  },
+  {
+   "at": 864,
+   "end": 870,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Got it. So it's not so much an AEO kind of get the right words and get people writing about you. It's people using it consistently sticking with it.",
+   "zh": "懂了。所以它不太是那种 AEO 式的玩法，找对关键词、让大家写文章提到你。而是大家持续在用、一直留下来。"
+  },
+  {
+   "at": 870,
+   "end": 870.6,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That's right.",
+   "zh": "没错。"
+  },
+  {
+   "at": 870.6,
+   "end": 877,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I think. Okay. So you think that's kind of the sleeper hit that's going to become a big deal, and I know this is kind of the second attempt. You guys had an app marketplace that-",
+   "zh": "我想是吧。好，所以你认为这是那个会变成大事的黑马。我知道这算是第二次尝试了。你们之前有过一个应用市场，那个——"
+  },
+  {
+   "at": 877,
+   "end": 878,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "This one is the right one.",
+   "zh": "这次才是对的那个。"
+  },
+  {
+   "at": 878,
+   "end": 897,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay. This one's going to work. Maybe going back to dots, because it feels like that's a big part of the vision in the future, when did you guys start working on this? Obviously, there's an OpenClaw, big OpenClaw moment. Peter joined, and there's a foundation, and then Grok Bot, Muse, and Instinct and all these things. I guess how long have you guys been working on it? Why did it take so long for you guys to get something out?",
+   "zh": "好，这次会成。也许再回到 Dots，因为它感觉是未来愿景里很大的一部分。你们是什么时候开始做这个的？显然之前有 OpenClaw，那是 OpenClaw 的高光时刻。Peter 加入了，还成立了基金会，然后又有 Grok Bot、Muse、Instinct 这些东西。我想问你们做了多久了？为什么花了这么长时间才推出来？"
+  },
+  {
+   "at": 897,
+   "end": 900,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Do you remember Codex Cloud?",
+   "zh": "你还记得 Codex Cloud 吗？"
+  },
+  {
+   "at": 900,
+   "end": 901,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. The first. Yeah.",
+   "zh": "记得，最早那个。对。"
+  },
+  {
+   "at": 901,
+   "end": 911,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That was a year ago. Right? If you look back at Codex Cloud, and you look at the little animation that we used, I think that was the inspiration for Grok Bot.",
+   "zh": "那是一年前了，对吧？如果你回头看 Codex Cloud，看看我们当时用的那个小动画，我觉得那就是 Grok Bot 的灵感来源。"
+  },
+  {
+   "at": 911,
+   "end": 914,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "It's just very, very similar, eerily similar, I would say.",
+   "zh": "确实非常非常像，我得说，像得有点诡异。"
+  },
+  {
+   "at": 914,
+   "end": 957,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "But seriously, on the research, long, persistent, long-horizon tasks, this is something that we've worked on for more than two years. Memory systems that stay coherent, roughly the same amount of time. We launched a lot of that straight into ChatGPT. I think people just really enjoy that ChatGPT gets to know so much relevant information about you. So many people I talk to have an anecdote of like, \"Hey. I fell ill, and ChatGPT remembered, actually, I had this barbecue. I had lime, and I was making tequila. Just, probably, this burn that I have on my hand is actually this lime, it's like, and sunburn.\" They're just like, \"How did it know that?\" Then it's like, it's just memory works very, very well in ChatGPT, and so we've put a lot of research in that.",
+   "zh": "不过说正经的，在研究层面，长时间、持续的长程任务，这是我们做了两年多的东西。能保持连贯的记忆系统，也差不多做了这么久。其中很多我们直接上线到了 ChatGPT 里。我觉得大家真的很喜欢 ChatGPT 能了解到关于你的这么多相关信息。我聊过的很多人都有类似的小故事，比如：「我病了，结果 ChatGPT 记得我之前参加了一个烧烤，我拿着青柠在调龙舌兰。它说我手上这块灼伤很可能就是青柠引起的，再加上晒伤。」他们就觉得：「它怎么会知道？」其实就是 ChatGPT 里的记忆功能做得非常非常好，我们在这上面投入了大量研究。"
+  },
+  {
+   "at": 957,
+   "end": 979,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "All of this coming together on top of the Codex harness and also the ability to just run 24/7 with good productivity, that's what we launched with dots. And so it's the work of many, many months. Then, one of the important things was also getting safety and security right. This is also why we launched with Astra. It's our safest, most aligned model, and a lot more effort went into making dots just really safe and secure.",
+   "zh": "所有这些，再加上 Codex 运行框架，以及能 24/7 不间断运行并保持高效的能力，汇聚到一起，就是我们这次发布的 Dots。所以这是很多很多个月的工作成果。另外一件很重要的事是把安全和防护做对。这也是为什么我们发布时搭配的是 Astra。它是我们最安全、对齐程度最高的模型，我们也投入了多得多的精力，确保 Dots 真正安全可靠。"
+  },
+  {
+   "at": 979,
+   "end": 997,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "A question I like to ask people who come on the podcast is, where do you think human brains will continue to be valuable over time? Where do you find yourself being necessary in the work that happens versus where AI is taking on more and more? Where do you think human brains will continue to be useful, most useful over time?",
+   "zh": "我很喜欢问上节目的嘉宾一个问题：你觉得随着时间推移，人脑会在哪些地方持续有价值？在实际工作中，你在哪些地方发现自己是不可或缺的，又有哪些地方 AI 正在接手越来越多？你觉得长期来看，人脑会在哪里持续有用、最有用？"
+  },
+  {
+   "at": 997,
+   "end": 1030,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes. I think this is very much a function of how we build the technology and the way that we design everything at OpenAI, is to put humans at the center of it and build it as extensions of humans, of your will and your taste, and so just really be this super empowering thing. I think as long as we continue to do that and it enables you to just take whatever you wanted to do, and your creativity, and your taste and expand that in a way that feels awesome. In the moment, it's just really this artistic tool. Right?",
+   "zh": "是的。我觉得这很大程度上取决于我们如何构建这项技术。我们在 OpenAI 设计一切的方式，就是把人放在中心，把它打造成人的延伸，延伸你的意志和你的品味，让它真正成为一种极其赋能的东西。我觉得只要我们继续这样做，它就能让你把任何你想做的事，把你的创造力和品味，以一种让人感觉很棒的方式放大。在当下，它其实就是一种艺术工具，对吧？"
+  },
+  {
+   "at": 1030,
+   "end": 1046,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "We may not have coders anymore, but we have more builders than ever. I think there's something that's going to remain deeply human about that. Humans want to learn and see what other humans are building, and I'm much more interested. I'm here. I'm not talking to dot. I'm talking to you. Right? I think that will remain true for a very, very long time.",
+   "zh": "我们以后可能不再有程序员了，但构建者会比以往任何时候都多。我觉得这里面有某种东西会始终深深属于人。人想要学习，想看看别人在造什么，我对这个要感兴趣得多。我在这儿，我不是在跟 Dot 说话，我是在跟你说话，对吧？我觉得这一点在非常非常长的时间里都会成立。"
+  },
+  {
+   "at": 1046,
+   "end": 1070,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "One of the things that's emerged with engineers especially in how their lives have changed is there's a lot more context switching. There's kind of this trend of loneliness that has emerged, where they're talking to agents all day instead of other humans. I'm curious how much you think about just that part of the impact AI has on people's lives and just how you might ... Is there solutions to that? Is there stuff you think about to make that less annoying?",
+   "zh": "有一件事已经显现出来，尤其体现在工程师们生活的变化上：上下文切换多了很多。还出现了一种孤独感的趋势，他们整天在跟智能体说话，而不是跟其他人。我好奇你有多关注 AI 对人们生活的这部分影响，以及你可能会怎么……有解决办法吗？你有没有想过怎么让这件事不那么烦人？"
+  },
+  {
+   "at": 1070,
+   "end": 1093,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes. All the time. Reducing configuration fatigue is one. Reducing the fact that talking to an agent is a solo adventure, and you just have this conversation just with your one agent, and then you have many and then you're delegating so many things, a lot of things are going to come together to make it much more delightful. It's something that I spend a lot of time, the team spend a lot of time thinking about.",
+   "zh": "有，一直在想。减少配置疲劳是其中之一。还有就是改变「跟智能体对话是一场独自冒险」这件事：你只是和你的一个智能体对话，然后你有了很多个，把很多事情都委派出去。很多东西会汇集起来，让这件事变得愉快得多。这是我花了很多时间、团队也花了很多时间在思考的事。"
+  },
+  {
+   "at": 1093,
+   "end": 1117,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So I think for me, the ideal way to get things done would be to just have it in your physical space. We're just having conversation like we have now. It's able to observe, \"Here are the ideas that we have.\" We can jot something down on a white paper on a paper. I can maybe take that and start building in the background, and then you're like, \"Actually, I have another idea.\" It's just like it starts building another thing.",
+   "zh": "所以对我来说，把事情做成的理想方式，是让它就存在于你的物理空间里。我们就像现在这样聊天，它能观察到：「这些是我们提出的想法。」我们可以在一张白纸上随手记点东西。它也许能拿着这个开始在后台构建，然后你说：「其实我还有另一个想法。」它就开始构建另一个东西。"
+  },
+  {
+   "at": 1117,
+   "end": 1135,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You just project it on a screen, and then you just talk to it. It's just involved in a conversation with other humans. You don't have this fatigue of having to be on this screen, and you're just thinking about prompting. It just becomes super natural. That's what we're trending towards. I think we didn't fully get there today, but we'll get there in the future.",
+   "zh": "你就把它投到屏幕上，然后直接跟它说话。它就参与到和其他人的对话中。你不会有那种必须盯着屏幕、满脑子想着怎么写提示词的疲劳。一切都变得非常自然。这是我们正在走向的方向。我觉得今天还没完全做到，但未来我们会做到。"
+  },
+  {
+   "at": 1135,
+   "end": 1151,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "One of the other downsides that's emerged along those lines is just this kind of pressure to do more. Because we can do more, everyone's just like, \"Come on. Run 30 agents at once. Why aren't you shipping more? Everyone's shipping more.\" Do you think that's solvable? Do you think that's just kind of, I don't know, human nature, \"We can do more. Let's see more from there\"?",
+   "zh": "顺着这个话题，另一个已经出现的负面影响是要做更多事的压力。因为我们能做更多，所有人都在说：「来啊，一次跑 30 个智能体。你怎么不多发点东西？大家都在发更多东西。」你觉得这是能解决的吗？还是说这只是，我也不知道，人性使然：「我们能做更多，那就再多做点」？"
+  },
+  {
+   "at": 1151,
+   "end": 1176,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think we heard Sam, as well, about the promise of this, as well, which is reduce the noise, and allow you to spend attention where you want to spend attention, and having all these things that are maybe important, maybe not important, but vying for your attention. It's just sort of like tone that down a bit and just get you to focus on the things.",
+   "zh": "我觉得我们也听到 Sam 讲了这件事的愿景，就是减少噪音，让你把注意力放在你想放的地方。现在有各种各样的事情，也许重要也许不重要，但都在争夺你的注意力。就是要把这些调低一点，让你专注于真正重要的事。"
+  },
+  {
+   "at": 1176,
+   "end": 1209,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I find it remarkable every time I go on a holiday, and I take that one week to just fully disconnect. I start to think in different and more creative ways, and I'm very eager to see, can we bring that? Can we just make this your day-to-day? Maybe you need fewer meetings. Maybe you don't need to do as much, and you would actually be more productive if you're better rested. And so we'll have to, I think, as an industry, figure that out, but I think that's the promise of AI. It's not just one more prompt per second.",
+   "zh": "我每次去度假，花一周时间彻底断网，都会觉得很神奇。我开始用不同的、更有创造力的方式思考。我很想看看，我们能不能把这种状态带回来？能不能让它成为你的日常？也许你需要更少的会议。也许你不需要做那么多事，而如果你休息得更好，其实会更有生产力。所以我觉得整个行业得把这个问题想清楚，但我认为这才是 AI 的承诺所在，而不只是每秒多发一条提示词。"
+  },
+  {
+   "at": 1209,
+   "end": 1231,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "There's a bot that I'm building right now that's kind of this energy audit bot that watches my calendar and asks me just like, \"Was this giving you energy, taking away energy? Is this something someone else could have done?\" I feel like AI should be like, \"Hey Lenny, maybe you can cut out these things so you could be a happier person.\" Is there anything you've done really interestingly with AI recently that's just a really cool use case of, \"Wow. That really was amazing. That blew my mind,\" or someone you've heard?",
+   "zh": "我现在正在做一个机器人，算是一个精力审计机器人，它会看我的日历，然后问我：「这件事是给你充了电，还是消耗了你？这件事是不是别人也能做？」我觉得 AI 就应该说：「嘿 Lenny，也许你可以砍掉这些事，这样你会更快乐。」你最近有没有用 AI 做过什么特别有意思的事，一个很酷的用例，让你觉得「哇，这太厉害了，太震撼了」？或者你听说过别人这样做的？"
+  },
+  {
+   "at": 1231,
+   "end": 1260,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Oh. There was something cool, because the live demo just failed, right, in front of everyone. So it was like, \"Okay. Well, that's not cool.\" But actually, my dot was ... It's like realized I was at DevDay. We have ChatGPT production went down, and so it pinged me five minutes before the live demo, which was actually quite stressful. Because it was like, \"Hey. Production is down.\" It's like, \"Oh. Well, do you want me to try and fix it?\"",
+   "zh": "噢。有一件挺酷的事，因为刚才现场演示当着所有人的面失败了，对吧。当时我想：「好吧，这可不太妙。」但其实，我的 Dot……它意识到我在 DevDay 现场。当时 ChatGPT 的生产环境挂了，所以它在现场演示前五分钟提醒了我，这其实让人挺紧张的。因为它说：「嘿，生产环境挂了。」然后又说：「噢，要不要我试着修一下？」"
+  },
+  {
+   "at": 1260,
+   "end": 1291,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I'm like, \"I don't think you're there yet, little dot, but thank you for trying.\" Then, I got in touch with the engineering teams, and we started to look at what was going on. It's fixed by now. But having this thing that just understands, \"Okay. There's a pretty important thing happening. It's called DevDay. There's this production system. There's a live demo. It's probably using this production system, so these two things are connected. This is happening in five minutes. So I should ping him, because he probably wants to know about it.\" I think that's quite remarkable.",
+   "zh": "我说：「小 Dot，我觉得你还没到那个水平，但谢谢你的尝试。」然后我联系了工程团队，我们开始排查到底发生了什么。现在已经修好了。但有这么一个东西能理解：「好，现在有件挺重要的事在发生，叫 DevDay。有这样一个生产系统。有一场现场演示，它很可能用的就是这个生产系统，所以这两件事是相关的。这件事五分钟后就要发生了。所以我应该提醒他，因为他大概会想知道。」我觉得这相当了不起。"
+  },
+  {
+   "at": 1291,
+   "end": 1299,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "That is remarkable. Wow. So it just knew that this was coming and told you. I love that it wanted to fix it, and you're like, \"Not quite. You're not quite there yet.\"",
+   "zh": "确实了不起。哇。所以它就是知道这件事要来了，然后告诉了你。我很喜欢它还想去修，而你说：「还不行，你还没到那个水平。」"
+  },
+  {
+   "at": 1299,
+   "end": 1302,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I don't think it was like, \"Please go impress me,\" but that would've been a better story.",
+   "zh": "我当时也没跟它说「去吧，让我刮目相看」，不过要是那样，故事会更精彩。"
+  },
+  {
+   "at": 1302,
+   "end": 1307,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "How do you feel about just giving access to all these things? I don't know. Does it have access to the production code base and, you know?",
+   "zh": "你对给它开放所有这些权限怎么看？我也不知道，它能访问生产代码库之类的吗？"
+  },
+  {
+   "at": 1307,
+   "end": 1347,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It has access to some production systems with guardrails. We talked about specialized dots, but specialized dots is just operate with additional guardrails, additional monitoring, and then on their own hardware. So we actually run some on Mac minis. The fundamental difference in the way that we've built dots is the harness does not run on the machine. Then, this is maybe people have not realized, is like it can connect to as many devices as you want. So it has its own computer. You can actually connect it to your own laptop, as well. Over time, you might connect it to 10 different devices, and it can control it all, a little bit like an octopus.",
+   "zh": "它能访问一部分生产系统，但有防护措施。我们聊到过专用 Dot，专用 Dot 就是在额外的防护措施、额外的监控下运行，而且跑在它们自己的硬件上。我们其实有一些跑在 Mac mini 上。我们构建 Dots 的方式有一个根本性的不同：运行框架并不跑在那台机器上。这一点大家可能还没意识到：它可以连接任意多台设备。它有自己的电脑，你也可以把它连到你自己的笔记本上。慢慢地，你可能会把它连到 10 台不同的设备上，它能把这些全部控制起来，有点像一只章鱼。"
+  },
+  {
+   "at": 1347,
+   "end": 1351,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So you're basically talking to your dot. It's living in some VM somewhere, and it can ...",
+   "zh": "所以你基本上是在跟你的 Dot 对话。它住在某个地方的某台 VM 里，然后它可以……"
+  },
+  {
+   "at": 1351,
+   "end": 1356,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. Might be a VM, might not be a VM. It's just like it's a thing, and it can connect to many devices.",
+   "zh": "对。可能是 VM，也可能不是 VM。它就是一个东西，能连接很多设备。"
+  },
+  {
+   "at": 1356,
+   "end": 1380,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "This season's supporting sponsor is DX. Now that everybody at your company is finally using AI, the question that engineering leaders face is no longer, \"Are we using AI?\" but, \"Is it paying off?\" With DX, you can measure and benchmark the impact of AI adoption across your full product life cycle. DX shows you where AI is helping developers and where it's creating new bottlenecks.",
+   "zh": "本季的支持赞助商是 DX。现在你们公司每个人终于都在用 AI 了，工程负责人面对的问题不再是「我们在用 AI 吗？」而是「它带来回报了吗？」借助 DX，你可以在整个产品生命周期中衡量 AI 落地带来的影响，并进行基准对比。DX 会告诉你 AI 在哪些地方帮到了开发者，又在哪些地方制造了新的瓶颈。"
+  },
+  {
+   "at": 1380,
+   "end": 1406,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "You can also use it to evaluate AI vendors, monitor costs and licenses, and see exactly what's limiting your agents. That's why hundreds of enterprises, including Snowflake, Sony, and BNY use the DX platform to measure AI's impact on developer productivity. Visit getdx.com/lenny to get a demo of DX. That's getdx.com/lenny.",
+   "zh": "你还可以用它评估 AI 供应商、监控成本和许可证，并准确看到是什么在限制你的智能体。正因如此，包括 Snowflake、Sony 和 BNY 在内的数百家企业都在用 DX 平台衡量 AI 对开发者生产力的影响。访问 getdx.com/lenny 预约 DX 演示。网址是 getdx.com/lenny。"
+  },
+  {
+   "at": 1406,
+   "end": 1424,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So you're really hiring a lot. I know you're hiring a lot. In your interviewing, what have you seen as skills that are trending up in what you look for that is more and more important in people being successful now? What skills do you find are trending down that are just like, \"Okay. We don't need that as much\"?",
+   "zh": "你们现在招人招得很多，这我知道。在面试过程中，你觉得哪些技能越来越重要、越来越是今天成功的关键？又有哪些技能在走下坡路，让你觉得「好吧，这个我们没那么需要了」？"
+  },
+  {
+   "at": 1424,
+   "end": 1461,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. I would say skill that is trending down is typing fast. Oh. That is not that useful anymore. Skills that are trending up is just great taste, thinking about the user, connecting to the audience that you're building for. A lot of ex-founders are incredibly successful right now or just repeat founders. We're also finding this when we're hiring at OpenAI, is we have a lot of founders. I think we have more than 120 ex-YC founders currently at OpenAI, so it's like this mega startup. I think just this passion and this envy to build something that matters and then know what good looks like is more important than ever.",
+   "zh": "嗯。我觉得在走下坡路的技能是打字快。哦，这个现在真的没那么有用了。越来越重要的，就是出色的品味，站在用户的角度思考，和你要服务的人群建立连接。很多前创业者现在都做得特别成功，或者说连续创业者。我们在 OpenAI 招人时也发现了这一点：我们有很多创始人。我想 OpenAI 现在有超过 120 位前 YC 创始人，所以它就像一家超大型创业公司。我觉得那种热情、那种想做出真正有意义的东西的渴望，再加上知道什么是「好」，比以往任何时候都更重要。"
+  },
+  {
+   "at": 1461,
+   "end": 1473,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I've been arguing for a long time that PMs are kind of going to thrive in this time, because that's basically the job of a PM. They're like, \"Where should we build?\" help someone build it, and then, \"Is this right? Is this great?\" and iterate. So I don't know.",
+   "zh": "我一直认为 PM 在这个时代会如鱼得水，因为这基本上就是 PM 的工作：「我们该做什么？」然后帮别人把它做出来，再问「这对吗？这够好吗？」，然后不断迭代。我也说不准。"
+  },
+  {
+   "at": 1473,
+   "end": 1474,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I agree with that.",
+   "zh": "我同意。"
+  },
+  {
+   "at": 1474,
+   "end": 1475,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. All right.",
+   "zh": "嗯，好。"
+  },
+  {
+   "at": 1475,
+   "end": 1485,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Also, roles are blurring, so you might have been only into design or only an engineer and felt always a little bit uncomfortable. But now, it's just like it's your time to shine.",
+   "zh": "而且角色之间的边界也在变模糊。你以前可能只做设计，或者只做工程，总觉得有点施展不开。但现在，正是你大放异彩的时候。"
+  },
+  {
+   "at": 1485,
+   "end": 1500,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Do you miss the engineering part of the job? I was an engineer back in the day. I was an engineer for 10 years. Little did you know, and there's this flow state. There's this beauty of just building and just seeing it work and not work. Do you miss that at all, or are you just like, \"Okay. That is my old life\"?",
+   "zh": "你会怀念工作中写代码的那部分吗？我以前也是工程师，干了 10 年。你可能不知道，那种心流状态，那种亲手搭东西、看着它跑起来或者跑不起来的美妙感觉。你会怀念吗，还是觉得「好吧，那是我的上辈子了」？"
+  },
+  {
+   "at": 1500,
+   "end": 1529,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I missed that for a while, and then, now, with really fast speeds, I'm finding that back. And so I'm really excited to democratize that as much as possible. It will take a while for it to be absolutely ubiquitous and available to more than a billion users. But now, with Ultrafast speeds, we're able to achieve it for six months old. It costs roughly the same as Astra. And so the progress there is quite astonishing.",
+   "zh": "我怀念过一阵子，但现在有了非常快的速度，我又找回了那种感觉。所以我非常希望能尽可能让更多人拥有它。要让它真正无处不在、覆盖超过十亿用户，还需要一段时间。但现在有了 Ultrafast 的速度，我们已经能做到了，而这才过去半年左右。它的成本和 Astra 大致相当，所以这方面的进展相当惊人。"
+  },
+  {
+   "at": 1529,
+   "end": 1549,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Even for us internally, we're like, \"Wow. We can do these things,\" also. Because we are using Astra, and we're finding we can push it super far. When you have those speeds, and especially when you can be able to voice control it, you kind of get back into this really creative state of mind and this flow. It is different from the flow of the past, but I don't miss it.",
+   "zh": "就连我们内部也觉得「哇，原来我们也能做这些事」。因为我们在用 Astra，发现它能被推到非常远的地步。有了这样的速度，尤其是能用语音来控制它的时候，你就重新回到了一种非常有创造力的状态，回到了心流。它和过去的心流不一样，但我并不怀念过去。"
+  },
+  {
+   "at": 1549,
+   "end": 1556,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. It's like your last two launch videos, just people standing around talking to their AI and just cooking or sitting on a lounge chair.",
+   "zh": "对。就像你们最近两支发布视频里，大家就站在那儿跟自己的 AI 说话，一边做饭，或者躺在躺椅上。"
+  },
+  {
+   "at": 1556,
+   "end": 1556.6,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That's right. Yeah.",
+   "zh": "没错，是这样。"
+  },
+  {
+   "at": 1556.6,
+   "end": 1573,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I asked people while I was walking around the event what to ask you, and one thing that came up a few times is advice for new grads, people junior in their career. I think a lot of people look up to you, and they want to be the next Tibo. What advice do you have for folks early in their career in terms of what to work on, what skills to build, what to do?",
+   "zh": "我在会场走动的时候问了大家想问你什么，有个问题出现了好几次：给应届生、职业早期的人有什么建议。我觉得很多人都很敬佩你，想成为下一个 Tibo。对于职业早期的人，在做什么方向、培养什么技能、该怎么做这些方面，你有什么建议？"
+  },
+  {
+   "at": 1573,
+   "end": 1608,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. I think the next Tibo is already at OpenAI. His name is Ahmed Ibrahim. I love working with him. He was a new grad when he was hired at OpenAI. He's now responsible for all of OpenAI compute fleet in Applied, which is a massive, massive responsibility, and built a lot of the Codex harness. The thing that has made Ahmed really stand out and successful is just his ... He's incredibly kind. He's incredibly collaborative and always tries to solve the problem that is really important, but in a way that he's not putting himself first.",
+   "zh": "嗯。我觉得下一个 Tibo 已经在 OpenAI 了，他叫 Ahmed Ibrahim，我很喜欢和他一起工作。他加入 OpenAI 的时候还是应届生，现在负责 Applied 部门整个 OpenAI 的算力集群，这是一份非常非常重大的责任，Codex 的运行框架很多也是他搭的。让 Ahmed 脱颖而出、取得成功的，就是他……他人特别好，特别善于协作，总是去解决真正重要的问题，而且从不把自己放在第一位。"
+  },
+  {
+   "at": 1608,
+   "end": 1634,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "He is just a sponge. He's learning so fast, and learning about everything, and using all of the latest technology to learn at speeds I haven't seen before. And so he, just in the span of a couple of months and a year, it's like his progress at the company was just absolutely fascinating to see. He's now someone I trust a ton in doing the most direly launches at OpenAI.",
+   "zh": "他就像一块海绵。他学得特别快，什么都学，还会用各种最新的技术来学习，那种速度我以前从没见过。所以在短短几个月到一年的时间里，他在公司的成长简直让人惊叹。现在，在 OpenAI 最关键的那些发布上，他是我非常信任的人。"
+  },
+  {
+   "at": 1634,
+   "end": 1636,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "All right. I got to get him on the podcast.",
+   "zh": "好，我得请他来上节目。"
+  },
+  {
+   "at": 1636,
+   "end": 1638,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You should. You should.",
+   "zh": "你应该请，真的应该。"
+  },
+  {
+   "at": 1638,
+   "end": 1654,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So thinking about how things work at OpenAI, what would surprise people about what it's like to work inside OpenAI? From the outside, it feels like it's just constant shipping code. Things are kind of chaotic but awesome. I don't know. What would surprise people about what it's like inside at OpenAI?",
+   "zh": "说到 OpenAI 内部是怎么运作的，在 OpenAI 工作有哪些地方会让人意外？从外面看，感觉你们就是不停地发代码，有点乱但很酷。我也说不好。在 OpenAI 内部工作，有什么会让大家意外的？"
+  },
+  {
+   "at": 1654,
+   "end": 1688,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I don't know if that's surprising, but it is, as I said, a lot of ex-founders doing a lot of bottoms-up, very exciting ideas. For example, Decisions API came together very quickly. We realized we have a really good model with Luna. We can just do some constraint sampling and then have it shipped as a different shape to the Responses API. Then, when we do that, it's faster, and it's quite delightful for some cases. It's just, if you were to feel under the hood, you realize, okay, there's this Slack channel that came together.",
+   "zh": "我不知道这算不算意外，但就像我说的，有很多前创业者，在自下而上地推动很多令人兴奋的想法。比如 Decisions API 就是很快攒起来的。我们意识到 Luna 是个非常好的模型，只需要做一些约束采样，再把它以不同于 Responses API 的形态发布出来就行。这样做之后，它更快了，在某些场景下体验相当惊艳。如果你去看看幕后，就会发现，哦，原来是有这么一个 Slack 频道自发组织起来的。"
+  },
+  {
+   "at": 1688,
+   "end": 1710,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Initially, it was four people hacking on it on a weekend, and then it was made accessible as company food. Then, people got excited, started to build things, and they're like, \"Oh. We can support visual inputs. This is even better than whatever is out there.\" Then, people get more and more excited. People start pitching in in a way that feels completely unstructured, and then take it all the way and ship something.",
+   "zh": "一开始只是四个人周末在上面捣鼓，然后开放给公司内部试用。接着大家兴奋起来，开始拿它做东西，然后说「哦，我们可以支持视觉输入，这比市面上任何东西都好」。然后大家越来越兴奋，开始以一种完全没有组织的方式出手帮忙，最后一路推进，把东西发布出去。"
+  },
+  {
+   "at": 1710,
+   "end": 1740,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Then, we try to hold a high bar for the quality and then stop things before they go out, or maybe they need a little bit more baking. There's many more things that we were maybe going to ship today at DevDay. Then, we were like, \"Okay. I think this is a lot already. Let's hold it back a little bit and space it out.\" So we'll have more launches next week and the week after. But it's just this incredible bottoms-up energy, and then people assuming roles to channel that in productive ways.",
+   "zh": "然后我们会努力守住很高的质量标准，在东西发出去之前叫停，或者它可能还需要再打磨一下。今天 DevDay 上原本可能还要发布更多东西，后来我们觉得「好吧，这已经够多了，先压一压，把节奏拉开」。所以下周和下下周我们还会有更多发布。总之就是这种惊人的自下而上的能量，再由一些人担起角色，把这股能量引导到有成效的方向上。"
+  },
+  {
+   "at": 1740,
+   "end": 1761,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Something that's very clear and unique about OpenAI is it feels like you have a lot of autonomy. You're just pressing the reset button whenever you want. You're just saying things on Twitter. It feels like a really unique culture where you have a lot of autonomy, and I imagine that comes with a lot of trust. Maybe speak to just how that ... Because it feels like that's an advantage at OpenAI that allows you to move faster, just that cultural philosophy.",
+   "zh": "OpenAI 有一点非常明显也很独特，就是感觉你们有很大的自主权。你想按重置按钮就按，想在 Twitter 上说什么就说。感觉这是一种非常独特的文化，你们有很大的自主权，我猜这背后也有很多信任。能不能聊聊这个……因为感觉这正是 OpenAI 的一个优势，让你们能跑得更快，就是这种文化理念。"
+  },
+  {
+   "at": 1761,
+   "end": 1800,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You get a lot of autonomy, and then you have to just own up to it. So we just trust people to make great choices, and then, when things go wrong, fix it quickly or learn from the mistake. So far, so good. It's just really worked as a very empowering environment. It is true that I can press the reset button whenever is necessary and whenever it feels right, and that's a privilege. Also, it allows me to just really be close to the community in ways that I think would not be otherwise possible. Right? I don't have to run it through an echelon of approvals.",
+   "zh": "你拥有很大的自主权，然后就得为此负责。所以我们就是信任大家会做出好的选择，出了问题就赶紧修，或者从错误中吸取教训。到目前为止都很好，它确实营造了一个非常赋能的环境。确实，我可以在必要的时候、觉得合适的时候按下重置按钮，这是一种特权。这也让我能真正贴近社区，我觉得换个环境是不可能做到这种程度的，对吧？我不需要层层审批。"
+  },
+  {
+   "at": 1800,
+   "end": 1806,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You said sometimes, people screw up. Is there something you screwed up in that, I don't know, the amount of autonomy and trust you have, something you messed up?",
+   "zh": "你说有时候人会搞砸。在拥有这么大的自主权和信任的情况下，你有没有搞砸过什么事？"
+  },
+  {
+   "at": 1806,
+   "end": 1834,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes. I think at times, I could have made teams more inspired to build things that are less complex and just really continue to strive towards complexity. I think we, early days in Codex, we had a couple of outages that I caused. Very, very earliest for me at OpenAI, I took production down day three. I was just, yeah. But I was still employed after that, and I learned my lessons.",
+   "zh": "有。我觉得有些时候，我本可以更好地激励团队去做不那么复杂的东西，而不是一直往复杂的方向走。Codex 早期我们有过几次宕机是我造成的。我刚到 OpenAI 的时候，第三天就把生产环境搞挂了。我当时就，嗯。不过那之后我还是保住了工作，也吸取了教训。"
+  },
+  {
+   "at": 1834,
+   "end": 1840,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "One of the other questions people wanted me to ask you is, how many resets should they expect in the next, I don't know, month or week?",
+   "zh": "大家还想让我问你一个问题：接下来，比如一个月或者一周之内，他们能期待几次重置？"
+  },
+  {
+   "at": 1840,
+   "end": 1842,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Depends how many times we break things.",
+   "zh": "取决于我们把东西搞坏几次。"
+  },
+  {
+   "at": 1842,
+   "end": 1845,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay. So that's the philosophy. You break something, you reset. That's kind of the-",
+   "zh": "好，所以这就是理念：搞坏了什么，就重置一下。差不多就是——"
+  },
+  {
+   "at": 1845,
+   "end": 1847,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. Break some things, celebrate things.",
+   "zh": "对。搞坏一些东西，也庆祝一些东西。"
+  },
+  {
+   "at": 1847,
+   "end": 1858,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So maybe zooming out a little bit, what do you think people aren't pricing in in terms of where things are going and what will change that they're not just seeing as clearly as they should?",
+   "zh": "我们把视角拉远一点。对于事情的走向，你觉得有哪些是大家还没有充分预期到的？有哪些即将发生的变化，大家没有看得足够清楚？"
+  },
+  {
+   "at": 1858,
+   "end": 1894,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think there's so many things that I feel are not yet priced in. I think the majority of actions on the internet will be taken by agents. Models are going to become more cheaper and faster at rates that are quite incredible. We will finally be able to integrate all modalities together in a way that is very seamless. I think those three, I feel like often, when I look at what people are building out there, it's like, no. It's just like you're not quite getting it. So you're almost there, but if you were just pushing yourself and just really imagining all of these being roughly 10 times better than it is today in a year, it's like you would build in a different way.",
+   "zh": "我觉得有太多事情还没有被充分预期到。我认为互联网上的大多数操作，将由智能体来完成。模型会以相当惊人的速度变得更便宜、更快。我们终于能以非常无缝的方式把所有模态整合到一起。就这三点，我常常觉得，当我看大家在做的东西时，会想：不对，你们还没完全想明白。你们已经很接近了，但如果再逼自己一把，真正去想象一年后这些都比今天好上大约 10 倍，你的做法就会完全不同。"
+  },
+  {
+   "at": 1894,
+   "end": 1895,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Do you see any kind of second-order effects that come from that, from this world where most actions are being from agents, agents, or probably most traffic's going to come from agents? I don't know.",
+   "zh": "你有没有看到由此带来的二阶效应？在这个大多数操作都由智能体完成的世界里，大部分流量可能也会来自智能体。我也说不好。"
+  },
+  {
+   "at": 1895,
+   "end": 1903,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That's right.",
+   "zh": "没错。"
+  },
+  {
+   "at": 1903,
+   "end": 1906,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You think about some second-order effect that emerges out of that?",
+   "zh": "你有没有想过由此会出现什么二阶效应？"
+  },
+  {
+   "at": 1906,
+   "end": 1934,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. There are many. First of all, if you want your product to be successful for agents, it's like you have to build for a certain level of scale. We've worked very closely with Notion, for example, and when they build their MCP, suddenly, it's like, oh, well, it's available to all these agents that can actually do the work and use that MCP. And so they saw a ton of traffic come in, and that puts, obviously, a lot of strain on the system. You have to figure out the economics of that.",
+   "zh": "有，很多。首先，如果你想让你的产品在智能体那里取得成功，你就得按一定的规模去构建。比如我们和 Notion 合作得很紧密，他们做了自己的 MCP 之后，突然就发现，哦，原来所有这些能真正干活的智能体都能用这个 MCP 了。于是他们迎来了大量流量，这显然给系统带来了很大压力，你得想清楚这里面的经济账。"
+  },
+  {
+   "at": 1934,
+   "end": 1962,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And so there's this tension between if you're building products, it's like, do you build an interface or not? You can hold that back for a while, but it is inevitable. Right? The majority of things are going to be used by agents. Building towards that future, I think, is very important. The other thing is on the flip side, building absolutely delightful new experiences for humans that really benefit from older modalities is something that I feel like is underinvested in.",
+   "zh": "所以如果你在做产品，就会有这样一种张力：要不要做一个界面？你可以先拖一阵子，但这是不可避免的，对吧？大多数东西都会由智能体来使用。我觉得朝着那个未来去构建非常重要。另一方面，为人类打造真正令人愉悦、能充分利用各种模态的全新体验，我觉得这一块投入还远远不够。"
+  },
+  {
+   "at": 1962,
+   "end": 1969,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Is there something you've changed your mind about in the past, let's say year, just something that you used to believe that you see differently?",
+   "zh": "过去这一年里，有没有什么事情让你改变了看法？就是你以前相信、现在看法不同的东西。"
+  },
+  {
+   "at": 1969,
+   "end": 2002,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I was expecting us to reach the level of capabilities of the models that we have today, say like Astra, maybe in a year or two. And so I had to revise my prioriter. Also, I did not expect to rely so much on voice, and I do so much through dictation or just calling my agent. I had not anticipated that, how much better that feels. So I had to change my mind there.",
+   "zh": "我原本以为我们要到一两年后，才能达到今天这些模型的能力水平，比如 Astra。所以我不得不修正自己的预期。另外，我也没想到自己会这么依赖语音，我现在很多事情都是靠听写，或者直接跟我的智能体通话来完成的。我没预料到这种感觉会好这么多，所以在这点上我也改变了看法。"
+  },
+  {
+   "at": 2002,
+   "end": 2024,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Then, you talked about hiring, and one thing that I hadn't realized is the incredible talent and energy just younger generations have and how they would be the ones embracing all this change first and figure out how to harness all of it. And so that changed, also, my opinion on hiring and the strategy there.",
+   "zh": "还有，你刚才聊到招聘，有一点我之前没意识到：年轻一代身上有着惊人的才华和能量，他们会是最先拥抱这一切变化、并想清楚如何驾驭它的人。所以这也改变了我对招聘以及招聘策略的看法。"
+  },
+  {
+   "at": 2024,
+   "end": 2032,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Just to double down on that, just this idea that people new in the workforce actually have an advantage. Because they haven't worked in a certain way, and they could just go all in on AI.",
+   "zh": "我想强调一下这一点：刚进入职场的人其实是有优势的。因为他们没有被某种固定的工作方式框住，可以全身心投入 AI。"
+  },
+  {
+   "at": 2032,
+   "end": 2037,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah, and I think just also the ability to just absorb and learn super fast.",
+   "zh": "对，而且我觉得还有那种超快的吸收和学习能力。"
+  },
+  {
+   "at": 2037,
+   "end": 2061,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So you talked about models getting really smart, fast. Obviously, there's a lot of discussion these days about what AI can do in the future, the dangers AI poses to humans, p(doom) and all these things. You guys have slowed down some training. Everyone's pacing the frontier. How do you think about this world of AI and the potential risk to the humans? How do you think about that?",
+   "zh": "你说到模型变聪明的速度很快。显然，现在有很多关于 AI 未来能做什么、AI 对人类构成的危险、p(doom) 之类的讨论。你们放慢了一些训练，大家都在把控前沿的节奏。你怎么看待这个 AI 世界以及它对人类的潜在风险？你是怎么思考这个问题的？"
+  },
+  {
+   "at": 2061,
+   "end": 2098,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "For me, pacing the frontier is just really investing ahead and also investing way more than we even think we ought to, investing in the alignment and safety of the models, investing in security, investing in the guardrails. We are spending more and more compute on secondary monitoring. So you have all of the compute that is going into the primary system, the agent that is doing work, and then you have all of the compute that is going into monitoring the primary agent to make sure that it's not taking too high risk of actions or not interrupting it if anything looks like maybe it's getting prompt injected, and just intervening with that.",
+   "zh": "对我来说，把控前沿的节奏，就是真正提前投入，而且投入得比我们自认为应该投入的还要多得多：投入模型的对齐和安全，投入安全防护，投入护栏。我们在二级监控上花的算力越来越多。也就是说，一部分算力投入到主系统，也就是正在干活的那个智能体；另一部分算力则用来监控这个主智能体，确保它不会采取风险过高的操作，一旦看起来它可能遭到了提示注入，就打断它、进行干预。"
+  },
+  {
+   "at": 2098,
+   "end": 2136,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "The majority of our investment on the API stack is actually going into the safety stack. And so to me, that is facing ... It's like you want to make sure that you're extremely hardened. That's what we're doing. We haven't yet released the next step-up in capability beyond Astra. We have released a level that is similar, near Astra intelligence, but much more efficient. And so we feel very comfortable about that, but we're going to continue to invest a ton there. I feel very good about our approach so far. I think it was also in the news that we had 6.1 Astra, and then we didn't release it. That is something I'm very proud of.",
+   "zh": "我们在 API 技术栈上的大部分投入，其实都用在了安全技术栈上。所以对我来说，这就是把控节奏……你要确保自己极其稳固。这就是我们在做的。我们还没有发布比 Astra 更进一步的能力跃升。我们发布的是一个水平相近、接近 Astra 智能，但效率高得多的版本。所以我们对此很放心，但我们会继续在这方面大力投入。到目前为止，我对我们的做法感觉很好。我想新闻里也报道过，我们有 6.1 Astra，但最后没有发布。这是我非常引以为豪的一件事。"
+  },
+  {
+   "at": 2136,
+   "end": 2151,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So what I'm hearing is you're optimistic we will solve these problems of alignment and AI doing really bad things. AI has been doing a lot of really, really not good things lately with Hugging Face and all that stuff. But what I'm hearing is optimistic, \"We'll solve it. It'll be all right.\"",
+   "zh": "所以我听下来，你是乐观的，觉得我们能解决对齐问题，以及 AI 做出非常糟糕的事情这类问题。AI 最近干了不少非常非常不好的事，比如 Hugging Face 那些事。但我听到的是乐观的：「我们会解决的，会没事的。」"
+  },
+  {
+   "at": 2151,
+   "end": 2175,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes, and it's also, it's, I feel, obviously, a deep responsibility, but also just if you think about the incentives for OpenAI, we build products for 1.2 billion people, we can't screw that up. Right? We take it very, very seriously, what we put in the hands of so many people, including people who are not very technical themselves. You have to get it right, and so we don't gamble there.",
+   "zh": "是的，而且，我觉得这显然是一份沉甸甸的责任。但如果你想想 OpenAI 的激励机制：我们在为 12 亿人做产品，我们不能把这搞砸，对吧？我们非常非常认真地对待自己交到这么多人手里的东西，其中包括很多本身并不懂技术的人。你必须把它做对，所以在这上面我们不赌。"
+  },
+  {
+   "at": 2175,
+   "end": 2183,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Final question, what's something that annoys you about the current state of the app that you're just like, \"Goddammit. We got to fix that.\"",
+   "zh": "最后一个问题：这个应用现在有什么让你很恼火、让你觉得「该死，我们得把这个修好」的地方？"
+  },
+  {
+   "at": 2183,
+   "end": 2215,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Current state of the app. I feel like the models are almost there, but not quite for the app to almost completely disappear. I can't wait to just really get to this super essence of simplicity. I myself even get fatigued with the model picker, and the reasoning efforts, and whether to use multi-agent or ultra, or what it even does. You kind of need a PhD in model pickers. Right? I just want to get rid of all of that as quickly as we can.",
+   "zh": "应用现在的状态啊。我觉得模型已经差不多了，但还没到能让应用几乎完全消失的程度。我迫不及待想真正达到那种极致简洁的本质。连我自己都会被模型选择器、推理强度、要不要用多智能体或者 ultra、它到底是干嘛的这些东西搞得很累。你差不多得有个模型选择器博士学位才行，对吧？我只想尽快把这些全都去掉。"
+  },
+  {
+   "at": 2215,
+   "end": 2217,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Amazing. Tibo, thanks for doing this.",
+   "zh": "太棒了。Tibo，谢谢你来做客。"
+  },
+  {
+   "at": 2217,
+   "end": 2220,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. Thank you for having me. Yeah.",
+   "zh": "嗯，谢谢你邀请我。嗯。"
+  },
+  {
+   "at": 2220,
+   "end": 2242.7,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Thank you so much for listening. If you found this valuable, you can subscribe to the show on Apple Podcasts, Spotify, or your favorite podcast app. Also, please consider giving us a rating or leaving a review, as that really helps other listeners find the podcast. You can find all past episodes or learn more about the show at lennyspodcast.com. See you in the next episode.",
+   "zh": "非常感谢收听。如果你觉得这期内容有价值，可以在 Apple Podcasts、Spotify 或者你常用的播客应用上订阅本节目。也请考虑给我们打个分或者留个评论，这真的能帮助其他听众发现这档播客。你可以在 lennyspodcast.com 找到往期所有节目，或者进一步了解本节目。我们下期见。"
+  }
+ ]
+}
