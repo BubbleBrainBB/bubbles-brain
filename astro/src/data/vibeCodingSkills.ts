@@ -25,6 +25,11 @@ export const vibeCodingSkillFamilies: VibeCodingSkillFamily[] = [
 		title: 'Grill 设计拷问套件',
 		skillIds: ['grill-with-docs', 'grilling', 'domain-modeling'],
 	},
+	{
+		id: 'pstack',
+		title: 'pstack 严谨工程套件',
+		skillIds: ['poteto-mode', 'setup-pstack'],
+	},
 ];
 
 export const vibeCodingSkillCategories: VibeCodingSkillCategory[] = [
@@ -153,6 +158,16 @@ export const vibeCodingSkillMeta: Record<string, VibeCodingSkillMeta> = {
 		chineseName: '浏览器自动化',
 		description:
 			'给 AI agent 的浏览器自动化 CLI：导航、填表、点击、截图、抓数据、测 Web 应用都能干，支持无头/真实 Chrome/云浏览器与会话保持。',
+	},
+	'poteto-mode': {
+		chineseName: 'pstack 严谨模式',
+		description:
+			'Lauren Tan（poteto）的干活方式：短句、先定数据形状，改完用真东西验证。任务按剧本拆开，需要时再调用插件里的原则、验证和子智能体技能。',
+	},
+	'setup-pstack': {
+		chineseName: '配置 pstack',
+		description:
+			'给 pstack 的每个角色选模型和推理档位，写成一条始终生效的规则，盖过技能里的默认值。装好插件后先跑它，再用 poteto-mode。',
 	},
 	humanizer: {
 		chineseName: '去 AI 味改写',
