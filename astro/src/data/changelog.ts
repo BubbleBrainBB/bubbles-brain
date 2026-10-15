@@ -17,6 +17,15 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-15',
+		tag: '播客',
+		type: 'content',
+		title: 'AlphaFold 这一期也有文字稿了',
+		summary:
+			'Latent Space 的 AlphaFold 一期补上了完整文字稿：英文取自节目官方发布的文字稿，按音频逐段对齐时间，并配了中文翻译。打开跟随播放，正在说的那段会高亮，点时间戳就从那里听。',
+		links: [{ label: '看文字稿', href: '/podcasts/latent-space-alphafold/transcript/' }],
+	},
+	{
 		date: '2026-10-14',
 		tag: '播客',
 		type: 'feature',

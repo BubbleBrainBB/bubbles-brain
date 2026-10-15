@@ -1,6 +1,7 @@
 /** 播客文字稿: a turn per span of speech, timed to the show's own audio so the
  *  player can follow along. Transcripts are optional: an episode has one when
  *  `transcriptFor` finds it, and the episode page then links to it. */
+import alphafold from '../data/transcripts/latent-space-alphafold.json';
 import metaMuse from '../data/transcripts/how-i-ai-meta-muse.json';
 import type { PodcastEpisode } from '../data/podcasts';
 
@@ -30,8 +31,11 @@ export interface Transcript {
 	episodeId: string;
 	language: string;
 	source: {
-		type: string;
-		video: string;
+		/** asr-diarization: we transcribed the audio ourselves. show-transcript: the show
+		 *  published its own transcript, and we only timed it to the audio. */
+		type: 'asr-diarization' | 'show-transcript';
+		/** The video the transcription was checked against, when there is one. */
+		video?: string;
 		note: string;
 	};
 	speakers: TranscriptSpeaker[];
@@ -41,6 +45,7 @@ export interface Transcript {
 /** Every transcript the site has, keyed by the episode it belongs to. */
 const transcripts: Record<string, Transcript> = {
 	'how-i-ai-meta-muse': metaMuse as Transcript,
+	'latent-space-alphafold': alphafold as Transcript,
 };
 
 export function transcriptFor(episode: Pick<PodcastEpisode, 'id'>): Transcript | null {

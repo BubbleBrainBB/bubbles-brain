@@ -155,16 +155,31 @@ function who(turn: TranscriptTurn): { name: string; role: string } {
 		</ol>
 
 		<footer class="tr-foot">
-			<p>
-				本页文字稿由节目音频自动转写并做说话人分离{
-					translated && '，中文由 AI 翻译'
-				}，未经人工校对，可能存在识别和翻译误差；以<a
-					href={episode.source}
-					target="_blank"
-					rel="noopener noreferrer">节目笔记</a
-				>和<a href={transcript.source.video} target="_blank" rel="noopener noreferrer">原视频</a
-				>为准。发现错漏欢迎告诉我们。
-			</p>
+			{
+				transcript.source.type === 'show-transcript' ? (
+					<p>
+						本页英文取自节目官方发布的文字稿，时间点按节目音频对齐{translated && '，中文由 AI 翻译'}
+						，可能存在对齐和翻译误差；以
+						<a href={episode.source} target="_blank" rel="noopener noreferrer">
+							节目原文
+						</a>
+						为准。发现错漏欢迎告诉我们。
+					</p>
+				) : (
+					<p>
+						本页文字稿由节目音频自动转写并做说话人分离{translated && '，中文由 AI 翻译'}
+						，未经人工校对，可能存在识别和翻译误差；以
+						<a href={episode.source} target="_blank" rel="noopener noreferrer">
+							节目笔记
+						</a>
+						和
+						<a href={transcript.source.video} target="_blank" rel="noopener noreferrer">
+							原视频
+						</a>
+						为准。发现错漏欢迎告诉我们。
+					</p>
+				)
+			}
 		</footer>
 
 		<button class="tr-recenter" type="button" hidden data-transcript-recenter>
