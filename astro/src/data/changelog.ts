@@ -18,6 +18,18 @@ export interface ChangelogItem {
 export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-15',
+		tag: 'Skills',
+		type: 'content',
+		title: 'Skills 新增 pstack',
+		summary:
+			'收录 Lauren Tan（poteto）的 pstack。作者让人真正调用的是两条：先配置每个角色用的模型，再用 poteto-mode 按严谨剧本干活。插件里其余技能由这个模式按需调用。',
+		links: [
+			{ label: '看 poteto-mode', href: '/vibe-coding/skills/poteto-mode/' },
+			{ label: '看配置', href: '/vibe-coding/skills/setup-pstack/' },
+		],
+	},
+	{
+		date: '2026-10-15',
 		tag: '精选阅读',
 		type: 'polish',
 		title: '《怎么更有野心》改成贴近原文的译文',
