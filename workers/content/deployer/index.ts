@@ -446,6 +446,7 @@ function classifyCodeReleasePath(
       "content/skills/",
       "astro/src/data/design-md/",
       "astro/src/data/brainpod-art/",
+      "astro/src/data/transcripts/",
       "content/workbuddy-tutorials/",
       "static/fonts/",
       "static/media/",
