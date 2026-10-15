@@ -5,7 +5,8 @@ import { transcriptFor, transcriptHref, transcriptProblems, wordCount } from './
 const metaMuse = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-meta-muse')!;
 const alphafold = podcastEpisodes.find((episode) => episode.id === 'latent-space-alphafold')!;
 const tibo = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-tibo-sottiaux')!;
-const withTranscripts = new Set([metaMuse.id, alphafold.id, tibo.id]);
+const jev = podcastEpisodes.find((episode) => episode.id === 'latent-space-jev')!;
+const withTranscripts = new Set([metaMuse.id, alphafold.id, tibo.id, jev.id]);
 
 describe('the Meta Muse transcript', () => {
 	it('is well formed against its episode', () => {
@@ -106,6 +107,31 @@ describe('the Tibo Sottiaux transcript', () => {
 		)!;
 		expect(turn.speaker).toBe('guest');
 		expect(Math.abs(turn.at - (30 * 60 + 58))).toBeLessThanOrEqual(3);
+	});
+});
+
+describe('the Jev transcript', () => {
+	it('is well formed against its episode', () => {
+		const transcript = transcriptFor(jev);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, jev)).toEqual([]);
+	});
+
+	it('covers the whole episode, translated throughout', () => {
+		const transcript = transcriptFor(jev)!;
+		expect(transcript.source.type).toBe('show-transcript');
+		expect(transcript.turns[0].at).toBe(0);
+		expect(transcript.turns.at(-1)!.end).toBeGreaterThan(jev.duration - 5);
+		expect(transcript.turns.every((turn) => turn.zh)).toBe(true);
+	});
+
+	it('puts the quoted line where the episode page says it is', () => {
+		// 15:54 on the episode page: "I think intelligence will be more like a database than a coworker."
+		const turn = transcriptFor(jev)!.turns.find((candidate) =>
+			candidate.text.includes('intelligence will be more like a database'),
+		)!;
+		expect(turn.speaker).toBe('guest');
+		expect(Math.abs(turn.at - (15 * 60 + 54))).toBeLessThanOrEqual(3);
 	});
 });
 
