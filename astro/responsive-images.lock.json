@@ -1983,6 +1983,18 @@
 				"/_responsive/media/showcase/claude-opus-5.5-iphone-18-pro-variable-aperture-1280.webp"
 			]
 		},
+		"/media/showcase/claude-opus-5.5-landing-flyover.webp": {
+			"source_sha256": "1d7298b5d926804415a5e670c235bd38b28c18799df3241946289e866f851e4c",
+			"width": 1440,
+			"variants": [
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-640.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-640.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-960.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-960.webp",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-1440.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-landing-flyover-1440.webp"
+			]
+		},
 		"/media/showcase/claude-opus-5.5-lightspark-promo.webp": {
 			"source_sha256": "cae2411897a579a1a3affdb13680e05dffffb1ed416bb9f04c1ed2369304740b",
 			"width": 1080,
