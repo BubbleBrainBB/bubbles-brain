@@ -1420,6 +1420,28 @@ Ask me for the inputs, capture my page, then show me stills at 0, 1.6, 2.5, 5, 6
 			platform: 'X',
 		},
 	},
+	{
+		id: 'claude-opus-5.5-genesis',
+		title: 'GENESIS · 创世',
+		category: 'demo',
+		medium: 'code-to-video',
+		model: 'Claude Opus 5.5',
+		video: '/media/showcase/claude-opus-5.5-genesis.mp4',
+		poster: '/media/showcase/claude-opus-5.5-genesis.webp',
+		width: 1920,
+		height: 1080,
+		duration: 30,
+		added: '2026-10-15',
+		note: '黑暗里先只有一个点，粒子再聚成球体、旋成复杂的形，铺开成一圈圈波纹，最后拼出 IMAGINE。片名叫 GENESIS · 创世，画面和配乐都是代码写的。',
+		prompt: {
+			zh: '做一个顶尖的 30秒动效视频，你做完的视频一定要让人觉得惊艳，让人觉得AI居然也能做到这种程度，达到世界顶尖的水准，把它作为你毕生最重要的一件事，全力以赴',
+		},
+		source: {
+			author: '@guanmo_ai',
+			url: 'https://x.com/guanmo_ai/status/2110159147551342954',
+			platform: 'X',
+		},
+	},
 ];
 
 export const showcaseHref = (work: Pick<ShowcaseWork, 'id'>) => `/vibe-coding/showcase/${work.id}/`;
