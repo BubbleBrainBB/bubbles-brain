@@ -105,6 +105,18 @@ describe('sourceMark', () => {
 		expect(sourceMark('', 'not a url')).toEqual({ vendor: null, initial: '·', image: null });
 	});
 
+	it('uses Felix Rieseberg’s X portrait when his site favicon is not a mark', () => {
+		const image = '/images/sources/felix-rieseberg.jpg';
+		expect(
+			sourceMark(
+				'Felix Rieseberg',
+				'https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/',
+			).image,
+		).toBe(image);
+		expect(sourceMark('felixrieseberg.com', 'https://www.felixrieseberg.com/').image).toBe(image);
+		expect(sourceMark('@felixrieseberg', 'https://x.com/felixrieseberg').image).toBe(image);
+	});
+
 	it('uses Lauren Tan’s portrait on the highlights source and on her X post', () => {
 		const image = '/images/sources/lauren-tan.png';
 		expect(
