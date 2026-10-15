@@ -5,6 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { legacyEntryIsRoutable, loadLegacyContent, type LegacyContentEntry } from './legacyContent';
 
 const expectedArticleRoutes = [
+	'/highlights/2026-10-15-how-to-be-more-ambitious/',
+	'/en/highlights/2026-10-15-how-to-be-more-ambitious/',
 	'/highlights/2026-10-13-prompting-claude-opus-5-5/',
 	'/en/highlights/2026-10-13-prompting-claude-opus-5-5/',
 	'/highlights/2026-10-13-how-i-shipped-2500-prs-last-month/',

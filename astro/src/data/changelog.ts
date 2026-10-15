@@ -18,6 +18,15 @@ export interface ChangelogItem {
 export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-15',
+		tag: '精选阅读',
+		type: 'content',
+		title: '新增精选阅读：怎么更有野心',
+		summary:
+			'整理 Felix Rieseberg 的教程：用模型更有野心，不是把眼前的活做快，而是问更高一层的结果、按这个领域最好的人那样做，再从别的领域借方法。文末附新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-15-how-to-be-more-ambitious/' }],
+	},
+	{
+		date: '2026-10-15',
 		tag: '播客',
 		type: 'polish',
 		title: 'Grok Bot 设计师这一期：金句署名和时间都对上了',
