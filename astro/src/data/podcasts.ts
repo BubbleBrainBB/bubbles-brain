@@ -665,50 +665,50 @@ export const podcastEpisodes: PodcastEpisode[] = [
 		quote: {
 			text: 'I use AI to get me off my computer, not on my computer.',
 			translation: '我用 AI，是为了让自己离开电脑，而不是更离不开电脑。',
-			by: 'John Bai',
-			at: '20:13',
+			by: 'Claire Vo',
+			at: '25:33',
 		},
 		points: [
 			{
-				at: '04:35',
+				at: '07:28',
 				text: 'Peng 没写需求，也不要 CMS：发一张照片、截图或地名，机器人查到地点，画出白天和夜里两版 3D 小插画，直接发布到网站。',
 			},
 			{
-				at: '19:35',
+				at: '19:36',
 				text: '节目里现场试了一次：几分钟后，网站就多了一张 Bernal Heights 山顶秋千的插画。',
 			},
 			{
-				at: '20:13',
+				at: '21:38',
 				text: 'John 在健身房接到需求，用手机截两张图、录一段语音，Figma Bro 就通过 MCP 在 Figma 里把图标排好了。',
 			},
 			{
-				at: '23:35',
+				at: '23:31',
 				text: '先做好一张模板，再让机器人把同样的样式套到机器人市场的整套宣传图上，录节目时它就在后台做完了。',
 			},
 			{
-				at: '26:00',
+				at: '26:37',
 				text: '交互点子不用先说服产品经理和工程师：截图加一段语音发给 DevBot，回来就有两个能点的原型。',
 			},
 			{
-				at: '28:48',
+				at: '29:38',
 				text: '「垃圾桶开发法」：做东西时就假设扔掉它几乎不花钱。那个动画原型最后没上线，但试一次几乎不费人力。',
 			},
 			{
-				at: '31:19',
+				at: '31:53',
 				text: '日历、邮件、学日语、核对保险报销：两人把很多日常杂事也交给了各自的机器人。',
 			},
 		],
 		chapters: [
 			{ at: '00:00', title: '介绍 John 和 Peng' },
-			{ at: '02:53', title: 'Grok Bot 的热潮' },
-			{ at: '04:35', title: 'Peng 用 Grok Bot 做的会自己更新的个人网站' },
+			{ at: '02:54', title: 'Grok Bot 的热潮' },
+			{ at: '04:34', title: 'Peng 用 Grok Bot 做的会自己更新的个人网站' },
 			{ at: '15:12', title: 'AI 怎样让设计更容易上手' },
-			{ at: '19:35', title: '网站更新的结果' },
-			{ at: '20:13', title: 'John 的 Figma Bro 机器人' },
-			{ at: '23:35', title: '给机器人市场做宣传素材' },
-			{ at: '26:00', title: 'DevBot：从洗澡时的点子到能用的原型' },
-			{ at: '28:48', title: '垃圾桶开发法' },
-			{ at: '31:19', title: 'John 和 Peng 还在用的其他机器人' },
+			{ at: '19:36', title: '网站更新的结果' },
+			{ at: '20:14', title: 'John 的 Figma Bro 机器人' },
+			{ at: '23:31', title: '给机器人市场做宣传素材' },
+			{ at: '25:59', title: 'DevBot：从洗澡时的点子到能用的原型' },
+			{ at: '28:49', title: '垃圾桶开发法' },
+			{ at: '31:40', title: 'John 和 Peng 还在用的其他机器人' },
 			{ at: '39:05', title: '机器人不照做时的实用办法' },
 		],
 		brief: {
@@ -716,17 +716,17 @@ export const podcastEpisodes: PodcastEpisode[] = [
 			answer: '不只是出图，而是把整段杂活交出去。三种做法：',
 			reasons: [
 				{
-					at: '04:35',
+					at: '08:35',
 					head: '网站自己更新',
 					text: '发照片或地名，机器人画好插画再发布，不用后台。',
 				},
 				{
-					at: '20:13',
+					at: '21:38',
 					head: '语音改 Figma',
 					text: '在健身房录一段语音，重复的排版就交给机器人做完。',
 				},
 				{
-					at: '26:00',
+					at: '26:37',
 					head: '点子直接变原型',
 					text: '截图加语音发给机器人，回来就有能点的原型。',
 				},
@@ -737,27 +737,27 @@ export const podcastEpisodes: PodcastEpisode[] = [
 				question: 'Peng 的网站后台是什么？',
 				answer:
 					'没有后台，也没有 CMS 和设计稿：一个打卡机器人就是整条流程，查地点、生成插画、整理朋友和地点信息、发布都是它做。',
-				at: '04:35',
+				at: '07:28',
 			},
 			{
 				question: '什么是「垃圾桶开发法」？',
 				answer:
 					'主持人 Claire 的说法：做东西时就假设扔掉它几乎不花钱。所以点子可以先做出来看，不合适就扔，不用先开会、占工程师的时间。',
-				at: '28:48',
+				at: '29:38',
 			},
 			{
 				question: '除了设计，他们还让机器人做什么？',
 				answer:
 					'Peng 的「幕僚长」机器人帮他买 3D 打印耗材、更新 Notion 里的库存；John 的机器人陪他学日语，还帮他核对保险报销。',
-				at: '31:19',
+				at: '31:53',
 			},
 		],
 		topics: [
 			{ at: '00:00', title: '开场' },
-			{ at: '04:35', title: '会自己更新的网站' },
-			{ at: '20:13', title: '语音改 Figma' },
-			{ at: '26:00', title: '点子变原型' },
-			{ at: '31:19', title: '更多机器人' },
+			{ at: '04:34', title: '会自己更新的网站' },
+			{ at: '20:14', title: '语音改 Figma' },
+			{ at: '25:59', title: '点子变原型' },
+			{ at: '31:40', title: '更多机器人' },
 		],
 		glossary: [
 			{ term: 'CMS', meaning: '内容管理系统：网站的后台，用来发文章、改页面。' },

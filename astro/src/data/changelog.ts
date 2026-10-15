@@ -19,6 +19,15 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-15',
 		tag: '播客',
+		type: 'polish',
+		title: 'Grok Bot 设计师这一期：金句署名和时间都对上了',
+		summary:
+			'对照新做的文字稿，这一期页面上的金句改回主持人 Claire Vo 所说（25:33），之前误标成了 John。要点、一图读懂、听完你能回答里的时间也改到真正说到那件事的地方，点时间就从那句话听起；章节时间对齐到每段开头。',
+		links: [{ label: '去听这一期', href: '/podcasts/how-i-ai-grok-bot-designers/' }],
+	},
+	{
+		date: '2026-10-15',
+		tag: '播客',
 		type: 'content',
 		title: 'Grok Bot 设计师这一期也有文字稿了',
 		summary:
