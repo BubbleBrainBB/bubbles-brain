@@ -31,6 +31,15 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-15',
 		tag: '精选阅读',
+		type: 'polish',
+		title: '《怎么更有野心》改成贴近原文的译文',
+		summary:
+			'这篇中文不再是缩写导读。按 Felix Rieseberg 的原文逐段译过并润色，人称、例子和那段提示词都留着，读起来按中文来。文末仍有一小段新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-15-how-to-be-more-ambitious/' }],
+	},
+	{
+		date: '2026-10-15',
+		tag: '精选阅读',
 		type: 'content',
 		title: '新增精选阅读：怎么更有野心',
 		summary:
