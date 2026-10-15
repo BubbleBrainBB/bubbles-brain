@@ -1377,7 +1377,7 @@ Generic AI clichés (brains, robots, neural nets, sparkles), soft gradients, bou
 		poster: '/media/showcase/claude-opus-5.5-landing-flyover.webp',
 		width: 1440,
 		height: 1152,
-		duration: 15,
+		duration: 14,
 		added: '2026-10-15',
 		note: "镜头贴着一条落地页往下飞，手机、卡片和照片立起来迎向镜头，近处慢慢糊掉。飞到页尾后升到正上方，再俯冲回去，落成一张卡片，打出 “You'll need Opus 5.5, for this level of quality”。",
 		prompt: {
