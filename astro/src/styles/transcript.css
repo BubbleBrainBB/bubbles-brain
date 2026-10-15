@@ -1,0 +1,389 @@
+/* 播客文字稿: an episode's transcript at /podcasts/[episode]/transcript/ (P17).
+   The page follows the player: each turn carries the same data-podcast-from/to
+   spans the 听什么 outline uses, so podcastPlayer.ts marks the turn being spoken
+   with aria-current and scripts/transcriptView.ts keeps it in view.
+   The entry link on the episode's page is .podcast-transcript-link, in podcasts.css. */
+
+.tr-head {
+	display: grid;
+	grid-template-columns: 56px minmax(0, 1fr);
+	column-gap: 16px;
+	align-items: center;
+	margin-top: 22px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--rule);
+}
+.tr-head__cover {
+	width: 56px;
+	height: 56px;
+	border-radius: 9px;
+	object-fit: cover;
+	background: var(--paper-muted);
+}
+.tr-head__title {
+	margin: 0;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+/* 工具行：跟随播放开关 + 搜索 + 命中数 */
+.tr-toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 0;
+	background: var(--paper);
+	border-bottom: 1px solid var(--rule);
+}
+.tr-follow {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	height: 32px;
+	padding: 0 13px;
+	border: 0;
+	border-radius: 999px;
+	background: var(--ink);
+	color: var(--paper);
+	font: inherit;
+	font-size: 12.5px;
+	font-weight: 600;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.tr-follow svg {
+	width: 11px;
+	height: 11px;
+	fill: currentColor;
+}
+.tr-follow[aria-pressed='false'] {
+	background: var(--paper-muted);
+	color: var(--ink-soft);
+}
+.tr-search {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	gap: 8px;
+	height: 32px;
+	padding: 0 12px;
+	border-radius: 999px;
+	box-shadow: 0 0 0 1px var(--rule-strong);
+	color: var(--ink-faint);
+	font-size: 12.5px;
+}
+.tr-search:focus-within {
+	box-shadow: 0 0 0 1px var(--ink);
+}
+.tr-search svg {
+	width: 12px;
+	height: 12px;
+	flex: none;
+}
+.tr-search input {
+	flex: 1;
+	min-width: 0;
+	border: 0;
+	outline: 0;
+	background: none;
+	font: inherit;
+	font-size: 12.5px;
+	color: var(--ink);
+}
+.tr-search input::-webkit-search-cancel-button {
+	display: none;
+}
+.tr-search kbd {
+	flex: none;
+	font-family: var(--sans);
+	font-size: 11px;
+}
+.tr-hits {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: var(--ink-faint);
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+.tr-hits[hidden] {
+	display: none;
+}
+.tr-hits b {
+	color: var(--ink);
+	font-weight: 600;
+}
+.tr-hits__nav {
+	border: 0;
+	background: none;
+	padding: 2px;
+	color: var(--ink-soft);
+	font: inherit;
+	font-size: 12px;
+	line-height: 1;
+	cursor: pointer;
+}
+.tr-hits__nav:hover {
+	color: var(--ink);
+}
+.tr-hits__nav:disabled {
+	visibility: hidden;
+}
+
+/* 语言切换：纯文字，选中的变黑加粗 */
+.tr-lang {
+	display: inline-flex;
+	gap: 10px;
+	flex: none;
+}
+.tr-lang button {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--ink-faint);
+	font: inherit;
+	font-size: 12.5px;
+	cursor: pointer;
+}
+.tr-lang button:hover {
+	color: var(--ink);
+}
+.tr-lang button[aria-pressed='true'] {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+/* 转录流：一段 = 时间戳 + 说话人 + 文字 */
+.tr-stream {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tr-turn {
+	display: grid;
+	grid-template-columns: 64px minmax(0, 1fr);
+	column-gap: 14px;
+	padding: 18px 0;
+	border-bottom: 1px solid var(--rule);
+	transition: opacity 160ms ease;
+	scroll-margin-top: 72px;
+}
+.tr-turn__at {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	justify-self: start;
+	display: inline-flex;
+	align-items: center;
+	height: 24px;
+	margin-top: 2px;
+	padding: 0 8px;
+	border: 0;
+	border-radius: 999px;
+	background: var(--paper-muted);
+	color: var(--ink-soft);
+	font: inherit;
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+	font-family: var(--mono);
+	cursor: pointer;
+	transition:
+		background-color 140ms ease,
+		color 140ms ease;
+}
+/* 悬停一段：时间戳前长出 ▶，说明点它从这里播 */
+.tr-turn__at::before {
+	content: '';
+	width: 0;
+	height: 8px;
+	margin-right: 0;
+	background: currentColor;
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
+	transition:
+		width 160ms ease,
+		margin-right 160ms ease;
+}
+.tr-turn:hover .tr-turn__at::before,
+.tr-turn__at:focus-visible::before {
+	width: 7px;
+	margin-right: 5px;
+}
+.tr-turn:hover .tr-turn__at {
+	color: var(--ink);
+}
+/* 当前段：时间戳本身就是这一段的进度条，播到哪填到哪 */
+.tr-turn__at::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: rgb(0 0 0 / 0.14);
+	transform: scaleX(var(--span-played, 0));
+	transform-origin: left;
+	opacity: 0;
+	transition: transform 260ms linear;
+}
+.tr-turn[aria-current] .tr-turn__at {
+	color: var(--ink);
+	font-weight: 600;
+}
+.tr-turn[aria-current] .tr-turn__at::after {
+	opacity: 1;
+}
+/* 跟随播放时像歌词：正在说的这段是墨色，其余退成浅灰；指上去的那段先亮回来 */
+.tr-turn__text {
+	transition: color 300ms ease;
+}
+:root:has(.podcast-player.is-playing)
+	.tr-stream--following:not(.tr-stream--search)
+	.tr-turn:not([aria-current], :hover)
+	.tr-turn__text {
+	color: var(--ink-faint);
+}
+/* 说话人字重区分：嘉宾是这段对话的主角，主持人是引线 */
+.tr-turn--guest .tr-turn__who {
+	color: var(--ink);
+	font-weight: 600;
+}
+.tr-turn--host .tr-turn__who {
+	color: var(--ink-soft);
+	font-weight: 400;
+}
+.tr-turn__who {
+	margin: 0 0 4px;
+	font-size: 13px;
+}
+.tr-turn__who span {
+	margin-left: 6px;
+	color: var(--ink-faint);
+	font-size: 12px;
+	font-weight: 400;
+}
+.tr-turn__text {
+	margin: 0;
+	color: #222222;
+	font-size: 15.5px;
+	line-height: 1.9;
+}
+.tr-turn mark {
+	background: none;
+	color: var(--ink);
+	font-weight: 600;
+}
+/* 搜索态：非命中段淡出 */
+.tr-stream--search .tr-turn:not(.is-hit) {
+	opacity: 0.3;
+}
+.tr-stream--search .tr-turn.is-hit .tr-turn__at {
+	background: var(--ink);
+	color: var(--paper);
+}
+
+/* 赞助口播：节目的一部分，但不是对话 */
+.tr-turn--ad {
+	padding-block: 14px;
+}
+.tr-turn--ad .tr-turn__who {
+	color: var(--ink-faint);
+	font-weight: 400;
+}
+.tr-turn--ad .tr-turn__text {
+	color: var(--ink-faint);
+	font-size: 13.5px;
+	line-height: 1.75;
+}
+
+/* 节目中播放的音频：嘉宾的旧博客被 Muse 念出来之类 */
+.tr-turn--clip .tr-turn__who {
+	color: var(--ink-faint);
+	font-weight: 400;
+}
+.tr-turn--clip .tr-turn__text {
+	color: var(--ink-soft);
+}
+/* 斜体只给西文；中文没有真斜体，硬斜是歪的 */
+.tr-turn--clip .tr-turn__text:lang(en) {
+	font-style: italic;
+}
+
+/* 有译文时一次只显示一种语言，跟着工具行的「中文 / 原文」 */
+.tr-stream[data-lang] .tr-turn__text:not(:lang(zh)) {
+	display: none;
+}
+.tr-stream[data-lang='en'] .tr-turn__text:lang(zh) {
+	display: none;
+}
+.tr-stream[data-lang='en'] .tr-turn__text:lang(en) {
+	display: block;
+}
+
+.tr-foot {
+	margin-top: 28px;
+	padding-top: 18px;
+	border-top: 1px solid var(--rule);
+	color: var(--ink-faint);
+	font-size: 12.5px;
+	line-height: 1.8;
+}
+.tr-foot a {
+	color: var(--ink-soft);
+}
+
+/* 滚离当前段时，浮动「回到当前」 */
+.tr-recenter {
+	position: fixed;
+	left: 50%;
+	bottom: 24px;
+	transform: translateX(-50%);
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	height: 32px;
+	padding: 0 14px;
+	border: 1px solid var(--rule-strong);
+	border-radius: 999px;
+	background: var(--paper);
+	color: var(--ink);
+	font-size: 12.5px;
+	font-weight: 600;
+	white-space: nowrap;
+	cursor: pointer;
+	box-shadow: 0 10px 28px rgb(0 0 0 / 0.1);
+	z-index: 30;
+}
+/* 不定尺寸的 svg 在 flex 里会撑满，把文字挤成一字一行 */
+.tr-recenter svg {
+	width: 13px;
+	height: 13px;
+	flex: none;
+}
+.tr-recenter[hidden] {
+	display: none;
+}
+/* 播放器在的时候，让到它上面 */
+.has-podcast-player .tr-recenter {
+	bottom: calc(96px + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 640px) {
+	.tr-turn {
+		grid-template-columns: 1fr;
+		row-gap: 6px;
+	}
+	.tr-toolbar {
+		flex-wrap: wrap;
+	}
+	.tr-head {
+		grid-template-columns: 44px minmax(0, 1fr);
+		row-gap: 10px;
+	}
+	.tr-head__cover {
+		width: 44px;
+		height: 44px;
+	}
+}

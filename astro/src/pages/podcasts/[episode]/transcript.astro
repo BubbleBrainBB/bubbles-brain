@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { podcastEpisodes, type PodcastEpisode } from '../../../data/podcasts';
+import {
+	clock,
+	episodeHref,
+	playerEpisode,
+	PODCASTS_HREF,
+	showHref,
+	showOf,
+} from '../../../lib/podcasts';
+import {
+	hasChinese,
+	transcriptFor,
+	transcriptHref,
+	type Transcript,
+	type TranscriptTurn,
+} from '../../../lib/transcripts';
+import '../../../styles/podcasts.css';
+import '../../../styles/transcript.css';
+
+export function getStaticPaths() {
+	// Only episodes that have a transcript get the page; the rest 404 at build time.
+	return podcastEpisodes
+		.filter((episode) => transcriptFor(episode))
+		.map((episode) => ({ params: { episode: episode.id }, props: { episode } }));
+}
+
+const { episode } = Astro.props as { episode: PodcastEpisode };
+const transcript = transcriptFor(episode) as Transcript;
+const show = showOf(episode);
+const player = playerEpisode(episode);
+const translated = hasChinese(transcript);
+const speakers = new Map(transcript.speakers.map((speaker) => [speaker.id, speaker]));
+
+/** Who a turn belongs to: the speaker, or what the turn is when it is not speech. */
+function who(turn: TranscriptTurn): { name: string; role: string } {
+	if (turn.kind === 'ad') return { name: '赞助内容', role: '' };
+	if (turn.kind === 'clip') return { name: '引述音频', role: '' };
+	const speaker = speakers.get(turn.speaker);
+	return { name: speaker?.name ?? turn.speaker, role: speaker?.role ?? '' };
+}
+---
+
+<BaseLayout
+	title={`${episode.title} · 文字稿 · 播客 · Bubble's Brain`}
+	description={`${episode.title} 的完整文字稿：跟随播放高亮当前发言，可搜索、可点时间戳跳转。`}
+	canonicalPath={transcriptHref(episode)}
+>
+	<article class="rr-page rr-page--narrow" data-podcast-episode={JSON.stringify(player)}>
+		<nav class="podcast-crumbs" aria-label="位置">
+			<a href={PODCASTS_HREF}>播客</a>
+			<span aria-hidden="true">/</span>
+			<a href={showHref(show)}>{show.name}</a>
+			<span aria-hidden="true">/</span>
+			<a href={episodeHref(episode)}>本期</a>
+		</nav>
+
+		<header class="tr-head">
+			<img class="tr-head__cover" src={show.cover} alt="" width="56" height="56" />
+			<div>
+				<h1 class="tr-head__title">{episode.title}</h1>
+			</div>
+		</header>
+
+		<div class="tr-toolbar">
+			<button class="tr-follow" type="button" aria-pressed="true" data-transcript-follow>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+				跟随播放
+			</button>
+			<label class="tr-search">
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					aria-hidden="true"
+					><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg
+				>
+				<input
+					type="search"
+					placeholder="搜索文字稿"
+					aria-label="搜索文字稿"
+					data-transcript-search
+				/>
+				<kbd>⌘F</kbd>
+			</label>
+			<span class="tr-hits" data-transcript-hits hidden>
+				<b data-transcript-hits-count>0</b>
+				<span>处</span>
+				<button class="tr-hits__nav" type="button" data-transcript-hit-prev aria-label="上一处"
+					>↑</button
+				>
+				<button class="tr-hits__nav" type="button" data-transcript-hit-next aria-label="下一处"
+					>↓</button
+				>
+			</span>
+			{
+				translated && (
+					<div class="tr-lang" role="group" aria-label="文字稿语言">
+						<button type="button" aria-pressed="true" data-transcript-lang="zh-CN">
+							中文
+						</button>
+						<button type="button" aria-pressed="false" data-transcript-lang={transcript.language}>
+							原文
+						</button>
+					</div>
+				)
+			}
+		</div>
+
+		<ol
+			class="tr-stream tr-stream--following"
+			data-transcript-stream
+			data-lang={translated ? 'zh-CN' : transcript.language}
+		>
+			{
+				transcript.turns.map((turn) => {
+					const { name, role } = who(turn);
+					return (
+						<li
+							class:list={[
+								'tr-turn',
+								`tr-turn--${turn.kind === 'turn' ? turn.speaker : turn.kind}`,
+							]}
+							data-podcast-from={turn.at}
+							data-podcast-to={turn.end}
+						>
+							<button
+								class="tr-turn__at"
+								type="button"
+								data-podcast-at={turn.at}
+								aria-label={`从 ${clock(turn.at)} 开始播放`}
+							>
+								{clock(turn.at)}
+							</button>
+							<div>
+								<p class="tr-turn__who">
+									{name}
+									{role && <span>{role}</span>}
+								</p>
+								{translated && (
+									<p class="tr-turn__text" lang="zh-CN">
+										{turn.zh}
+									</p>
+								)}
+								<p class="tr-turn__text" lang={transcript.language}>
+									{turn.text}
+								</p>
+							</div>
+						</li>
+					);
+				})
+			}
+		</ol>
+
+		<footer class="tr-foot">
+			<p>
+				本页文字稿由节目音频自动转写并做说话人分离{
+					translated && '，中文由 AI 翻译'
+				}，未经人工校对，可能存在识别和翻译误差；以<a
+					href={episode.source}
+					target="_blank"
+					rel="noopener noreferrer">节目笔记</a
+				>和<a href={transcript.source.video} target="_blank" rel="noopener noreferrer">原视频</a
+				>为准。发现错漏欢迎告诉我们。
+			</p>
+		</footer>
+
+		<button class="tr-recenter" type="button" hidden data-transcript-recenter>
+			<svg
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg
+			>
+			回到当前
+		</button>
+	</article>
+</BaseLayout>
+
+<script>
+	import '../../../scripts/transcriptView';
+</script>

@@ -1,0 +1,1311 @@
+{
+ "episodeId": "how-i-ai-meta-muse",
+ "language": "en",
+ "source": {
+  "type": "asr-diarization",
+  "video": "https://www.youtube.com/watch?v=4TOLm1g-gCE",
+  "note": "由节目音频自动转写并做说话人分离，未经人工校对，可能存在识别误差"
+ },
+ "speakers": [
+  {
+   "id": "host",
+   "name": "Claire Vo",
+   "role": "主持"
+  },
+  {
+   "id": "guest",
+   "name": "Alex Cornell",
+   "role": "Meta 设计总监"
+  }
+ ],
+ "turns": [
+  {
+   "at": 0.1,
+   "end": 17.7,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Designers have struggled with how much do we narrate along the way, what is happening. So it's quite obvious to the user so that latency doesn't feel so painful. My experience in the Muse app is I do like that progressive disclosure and it's one of the things I called out in our review, but also it's just fast, like it is just fast.",
+   "zh": "设计师们一直在纠结：过程中要把正在发生的事讲述多少，才能让用户看得明明白白，不觉得延迟那么难熬。我在Muse应用里的体验是，我确实喜欢那种渐进式展开，这也是我在测评里特别点出来的一点，但它还有一个优点就是快，真的就是快。"
+  },
+  {
+   "at": 17.75,
+   "end": 40.62,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "If you are an engineer, you may want to know exactly what your agent has done and you can find that in Muse. But if you're a normal person, you maybe just want to know like is it doing something? So at the top it'll tell you it's working. I'm very happy with our solution currently because we've sort of like exposed the benefit of the main chat to people, but I feel like there's a lot more that we could do in terms of helping people organize.",
+   "zh": "如果你是工程师，你可能想确切知道你的智能体做了什么，这些在Muse里都能找到。但如果你是普通人，你可能只想知道它是不是在干活？所以顶部会告诉你它正在工作。我对我们目前的方案很满意，因为我们把主对话的好处展示给了大家，但我觉得在帮大家整理组织这方面，我们还能做得更多。"
+  },
+  {
+   "at": 40.62,
+   "end": 45,
+   "speaker": "guest",
+   "kind": "clip",
+   "text": "I had a blog 20 years ago and I had Marlowe go and find it.",
+   "zh": "我20年前写过一个博客，我让Marlowe去把它找了出来。"
+  },
+  {
+   "at": 45,
+   "end": 61.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And then accumulated them into one PDF first. But the way that I like to read it now just again from memory is via a podcast, and Muse is able to take it and just like reform it into a way that's like really interesting. And useful for me.",
+   "zh": "然后先把它们汇总成一个PDF。不过现在我更喜欢的阅读方式，还是凭记忆说啊，是做成播客来听，Muse能把内容拿过去，重新改编成一种非常有意思的形式，对我也很有用。"
+  },
+  {
+   "at": 61.2,
+   "end": 66.47,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "When your Muse is being obstinate, what is your prompting strategy?",
+   "zh": "当你的Muse很犟、不听话的时候，你的提示词策略是什么？"
+  },
+  {
+   "at": 66.52,
+   "end": 112.47,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What do you do? Welcome back to How I AI. I'm Claire Vo, product leader and AI obsessive here on a mission to help you build better with these new tools. Today we have Alex Cornell, design director on Meta's Muse and he's here to talk a little bit about how to design a great agent experience for consumers, and a little bit more about some Meta Muse use cases you might not have thought of, especially ones that involve shopping on Instagram and going really hard into some of your personal hobbies. Let's get to it",
+   "zh": "你会怎么做？欢迎回到How I AI。我是Claire Vo，产品负责人，也是AI狂热爱好者，我的使命是帮你用好这些新工具、做出更好的东西。今天的嘉宾是Alex Cornell，Meta的Muse设计总监，他会来聊聊怎样为普通消费者设计出色的智能体体验，还会多讲讲一些你可能没想到的Meta Muse用法，尤其是在Instagram上购物，以及在个人爱好上玩得特别深入的那些。我们开始吧。"
+  },
+  {
+   "at": 112.47,
+   "end": 174.51,
+   "speaker": "host",
+   "kind": "ad",
+   "text": "This episode is brought to you by WorkOS. AI has already changed how we work, tools are helping teams write better code analyze customer data and even handle support tickets automatically. But there's a catch. These tools only work well when they have deep access to company systems your Copilot needs to see your. Entire codebase your chatbot needs to search across internal docs and for enterprise buyers that raises serious security concerns. That's why these apps face intense IT scrutiny from day one to pass. They need secure authentication access controls audit logs. The whole suite of enterprise features building all that from scratch. It's a massive lift. That's where WorkOS comes in WorkOS gets you drop-in APIs for enterprise features so your app can become enterprise ready and scale up market faster. Think of it like Stripe for enterprise features OpenAI Perplexity and Cursor are already using WorkOS to meet enterprise demands. Join them and hundreds of other industry leaders at workos.com. Start building today.",
+   "zh": "本期节目由WorkOS赞助。AI已经改变了我们的工作方式，各种工具在帮团队写出更好的代码、分析客户数据，甚至自动处理客服工单。但有个问题：这些工具只有在能深度访问公司系统时才好用，你的Copilot需要看到整个代码库，你的聊天机器人需要在内部文档里搜索，对企业买家来说，这就带来了严重的安全顾虑。所以这些应用从第一天起就要面对IT部门的严格审查。要通过审查，它们需要安全认证、访问控制、审计日志，也就是一整套企业级功能。从零开始把这些都做出来，工作量巨大。这正是WorkOS的用武之地。WorkOS为企业级功能提供即插即用的API，让你的应用做好企业级准备，更快地拓展高端市场。你可以把它理解为企业级功能领域的Stripe。OpenAI、Perplexity和Cursor都已经在用WorkOS满足企业需求。和它们以及数百家行业领先者一起，访问workos.com，今天就开始构建吧。"
+  },
+  {
+   "at": 174.51,
+   "end": 175.08,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Alex, welcome to How I AI thanks for joining us.",
+   "zh": "Alex，欢迎来到How I AI，谢谢你来做客。"
+  },
+  {
+   "at": 175.08,
+   "end": 177.28,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Thank you for having me, big fan, happy to be here.",
+   "zh": "谢谢邀请，我是你的忠实粉丝，很高兴来到这里。"
+  },
+  {
+   "at": 178,
+   "end": 189.35,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I am, I was just saying I am a big, big fan of Muse and I have used probably every AI Agent on the planet",
+   "zh": "我刚才还在说，我是Muse的超级粉丝，地球上的AI智能体我大概都用遍了。"
+  },
+  {
+   "at": 189.82,
+   "end": 217.22,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And Muse, I will tell you fastest time to pure delight I have had with an AI product in a very, very long time. So tell us a little bit about how you approached designing this agent, because I think some of the primitives you picked are very different than what we see in others. It seems like the persona that you're going after is different. Walk me through how you all ended up where you ended up from a design perspective. Yeah.",
+   "zh": "而Muse，我跟你说，是我很久很久以来用过的AI产品里，最快让我真正感到惊喜的一个。所以跟我们讲讲，你是怎么着手设计这个智能体的？因为我觉得你们选的一些基本元素和其他产品很不一样，你们瞄准的用户画像好像也不同。带我走一遍，从设计的角度，你们是怎么一步步走到现在这个样子的。"
+  },
+  {
+   "at": 217.22,
+   "end": 225.69,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well thank you for saying that. Um, it was definitely a really interesting challenge and I felt like a unique one, I think we all could feel that.",
+   "zh": "谢谢你这么说。这确实是个非常有意思的挑战，而且我觉得是个很独特的挑战，我想我们所有人都能感觉到。"
+  },
+  {
+   "at": 226.29,
+   "end": 233.09,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Something was different this time around, I think from a capability perspective and I think like just simple things",
+   "zh": "这一次有些东西不一样了，我觉得是从能力的角度来说，还有一些很简单的事情。"
+  },
+  {
+   "at": 233.86,
+   "end": 273.61,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "The fact that an agent can message you proactively changes the nature of like how you think about the product from a design perspective even in like super simple ways. Like I've joked before because we have bubbles around our messages. You know, and like that's typically something that you associate more with messaging than like an AI app like long ago, I think most AI apps kind of stripped those out, and that is there among other reasons to like help with the, like separation that you need when like a agent is possibly messaging you at different times of the day, you kind of need to know like where and when the different messages begin, and so like simple things like that I think inform some of the design but the basic framing.",
+   "zh": "比如智能体可以主动给你发消息，这一点就改变了你从设计角度思考这个产品的方式，哪怕是在一些非常简单的地方。我之前开玩笑说过，我们的消息是带气泡的，这通常是你会和即时通讯联系在一起的东西，而不是AI应用，很早以前，我觉得大部分AI应用就把气泡去掉了。我们保留它，除了别的原因，也是为了帮助区分，因为智能体可能会在一天中不同的时间给你发消息，你得知道不同的消息是从哪里、什么时候开始的。我觉得像这样的简单事情影响了一部分设计，但最基本的框架是"
+  },
+  {
+   "at": 274.71,
+   "end": 278.81,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Always we went back to and I think was probably the most helpful was just imagining.",
+   "zh": "我们总会回到这个出发点，我觉得也可能是最有帮助的，就是去想象"
+  },
+  {
+   "at": 279.71,
+   "end": 286.51,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That this interface was more of an exchange between you and an entity, and that's why it's embodied at the top of the screen.",
+   "zh": "这个界面更像是你和一个实体之间的交流，这也是为什么它在屏幕顶部有一个具象化的形象。"
+  },
+  {
+   "at": 287.34,
+   "end": 297.29,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And so, a lot of the patterns that we looked at were much more messaging patterns, you know, and not, thinking about how did this work before in different AI apps or using kind of like the traditional.",
+   "zh": "所以我们参考的很多模式更多是即时通讯的模式，而不是去想以前在别的AI应用里是怎么做的，或者沿用那种传统的"
+  },
+  {
+   "at": 298.26,
+   "end": 308.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Ah, industry, I guess as a reference it was more like how would you handle this if you were actually speaking with another person, you know? And that was immensely clarifying, I think in almost every.",
+   "zh": "嗯，行业惯例来做参考。更多是想：如果你真的是在和另一个人说话，你会怎么处理这件事？这一点让思路变得无比清晰，我觉得几乎在每一个"
+  },
+  {
+   "at": 308.88,
+   "end": 321.75,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Decision that we had to make um and I think defines kind of how it feels, you know when you look at it, it feels like a messaging app, you see a little guy there at the top of the screen and I think like that even something like that,",
+   "zh": "我们必须做的决定上都是如此。我觉得这也决定了它给人的感觉：你一看，它就像一个即时通讯应用，屏幕顶部有个小家伙，我觉得哪怕是这样一个细节，"
+  },
+  {
+   "at": 322.5,
+   "end": 333.45,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "One of the other capabilities of it being able to work in the background makes it really important that you know when it's working, and so like just simply having that status I think has been one of the most important decisions that we made.",
+   "zh": "它的另一项能力是可以在后台工作，这就让“你知道它正在工作”变得非常重要，所以我觉得单单是有这个状态显示，就是我们做过的最重要的决定之一。"
+  },
+  {
+   "at": 333.45,
+   "end": 343.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "The other thing that strikes me as very different about Muse is the primitives that you've chosen to elevate as core parts of the application because I think.",
+   "zh": "Muse还有一点让我觉得很不一样，就是你们选择把哪些基本元素提升为应用的核心部分，因为我觉得"
+  },
+  {
+   "at": 343.96,
+   "end": 362.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "For those of us who have been using AI building tools, chatbots, etcetera, we're used to these ideas of like threads and chats and projects and machines and files and diffs, like and connectors, like they're these very, uh, software centric.",
+   "zh": "对我们这些一直在用AI构建工具、聊天机器人等等的人来说，我们已经习惯了这些概念，比如线程、对话、项目、机器、文件、diff，还有连接器，它们都是非常以软件为中心的"
+  },
+  {
+   "at": 362.99,
+   "end": 378.54,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Concepts, um, I think because a lot of these agents have primarily been built as coding agents for the enterprise or knowledge work agents, and then I look at Muse and what really struck me is you have this like character first of all as a primary entity.",
+   "zh": "概念，我想这是因为很多智能体主要是作为面向企业的编程智能体或者知识工作智能体来打造的。然后我再看Muse，真正让我印象深刻的是，首先你们把这个角色作为一个主要实体。"
+  },
+  {
+   "at": 379.3,
+   "end": 392.85,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You have chats, you have ideas, you know you have these, um you have your feed like you've just chosen different aspects to elevate is that because you knew that this was going to be serving",
+   "zh": "你们有对话，有想法，还有你的动态信息流，你们就是选择了提升不同的方面。这是因为你们知道它要服务的是"
+  },
+  {
+   "at": 393.18,
+   "end": 399.61,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "A different type of user with a different kind of like breadth of intention around what this agent could get done for them. Yeah.",
+   "zh": "另一类用户，他们希望这个智能体帮自己完成的事情，覆盖面也不一样吗？"
+  },
+  {
+   "at": 399.61,
+   "end": 420.73,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um, you know, I got a text actually from my mom like this morning which is really funny. She said that she has apologized to her Muse for making him work so hard and thanked him for all that he's done for her, which I found really gratifying because I have been working in software for a long time and I don't think my mom has ever used a thing that I've made, not because",
+   "zh": "其实今天早上我妈妈给我发了条短信，特别好笑。她说她向她的Muse道歉了，因为让他干活干得太辛苦，还感谢他为她做的一切。我觉得特别欣慰，因为我做软件很多年了，我觉得我妈妈从来没用过我做的任何东西，不是因为"
+  },
+  {
+   "at": 421.61,
+   "end": 429.76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I don't make interesting things, it's just like to your point, I think typically they can be maybe a little bit inaccessible to. Kind of the average person and I think with this.",
+   "zh": "我做的东西没意思，而是就像你说的，我觉得这些东西通常对普通人来说可能有点难以上手。而我觉得对于这种"
+  },
+  {
+   "at": 430.68,
+   "end": 447.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Kind of technology to it is so new and has so much capability to it, that's not obvious I think like that was definitely a huge part of what we were after, in terms of making this more accessible and intuitive to for people to use and I think",
+   "zh": "技术来说，它太新了，能力又那么强，这些都不是一目了然的。所以让它更容易上手、用起来更直观，这绝对是我们追求的一个重要部分。而且我觉得"
+  },
+  {
+   "at": 448.04,
+   "end": 464.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I mean you hear a lot about progressive disclosure in design and it's, it's kind of one of those things that like you hear like on day one and then like you always think about, but like, I don't know, you don't use it every day, but in this product I found it to be one of the most helpful things which is like if you take something like status, it's",
+   "zh": "你在设计领域经常听到“渐进式展开”这个说法，它属于那种你入行第一天就听说、之后也一直会想到，但其实不一定每天都用得上的东西。但在这个产品里，我发现它是最有帮助的东西之一。比如拿状态来说，"
+  },
+  {
+   "at": 464.74,
+   "end": 476.99,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "If you are an engineer, you may want to know exactly what your agent has done and you can find that in Muse, but if you're a normal person, you maybe just want to know like is it doing something? So at the top it'll tell you",
+   "zh": "如果你是工程师，你可能想确切知道你的智能体做了什么，这些在Muse里都能找到。但如果你是普通人，你可能只想知道它是不是在干活？所以顶部会告诉你"
+  },
+  {
+   "at": 477.46,
+   "end": 486.08,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's working, Jollybot is working and then your next question might be, what's it working on? You know, and so it will tell you that with the little emoji like researching pumpkin patches.",
+   "zh": "它正在工作，“Jollybot正在工作”，然后你接下来的问题可能是：它在忙什么？所以它会配一个小表情告诉你，比如“正在调研南瓜田”。"
+  },
+  {
+   "at": 486.91,
+   "end": 504.41,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "But then if you want to go a little bit further, you tap on it and then you have a list of everything that it's done. If you want to go a little bit further, you could tap on that and then eventually you get down to where you're going to see the curl and all the like all the code and everything, which is really important from like an auditing perspective, um, but it's only there if you need it and it doesn't get in the way for",
+   "zh": "如果你想再深入一点，点一下它，就能看到它做过的所有事情的列表。如果还想再深入，可以再点进去，最后一路看到curl请求和所有代码之类的东西，这从审计的角度来说非常重要，但只有在你需要的时候它才会出现，不会妨碍到"
+  },
+  {
+   "at": 504.7,
+   "end": 515.1,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "People who may not know what that means and I think like you, you see like a lot of uh, what is traditionally referred to as chain of thought can get pretty loud and",
+   "zh": "那些可能不懂这些是什么意思的人。我觉得你会看到，很多传统上被称作思维链的东西，在核心聊天里可能会相当吵闹，"
+  },
+  {
+   "at": 515.78,
+   "end": 519.38,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Really detailed in the core chat and that's the kind of thing I think that",
+   "zh": "而且非常琐碎详细。我觉得这种东西，"
+  },
+  {
+   "at": 520.56,
+   "end": 526.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Typically we would have just put that in there because that's like what you do these days in AI apps, but I think in this case it was like, well.",
+   "zh": "通常我们直接就会把它放进去，因为现在的AI应用都是这么做的，但在这个产品里，我们想的是："
+  },
+  {
+   "at": 527.52,
+   "end": 531.29,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Does it really need to be there for everybody? It's like probably not,",
+   "zh": "它真的需要展示给每个人看吗？大概不需要。"
+  },
+  {
+   "at": 531.29,
+   "end": 555.72,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I'll give you one other compliment because again I'm a Muse girl now, but I also think that a lot of times these chain of thought reasoning user you know like elements in the UI are there as a band aid for latency, which is it feels very um frustrating as a user to sit and wonder is my agent working on something and is it making progress or is it just stuck, and so I think a lot",
+   "zh": "我再夸你一句，因为我现在已经是Muse的忠实用户了。不过我也觉得，很多时候界面里这些思维链推理之类的元素，其实是给延迟打的补丁。作为用户，坐在那里干等、猜我的智能体到底在不在干活、有没有进展，还是干脆卡住了，这种感觉非常让人抓狂。所以我觉得很多"
+  },
+  {
+   "at": 556.2,
+   "end": 572.75,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Designers have struggled with how much do we narrate along the way, what is happening, so it's quite obvious to the user so that latency doesn't feel so painful, um, versus how much do we kind of like do progressive disclosure? And what I, what I think is nice about, um, my experience in the Muse app is.",
+   "zh": "设计师一直在纠结：过程中要把正在发生的事讲述多少，才能让用户看得明明白白，不觉得延迟那么难熬，又要在多大程度上做渐进式展开？而我觉得我在Muse应用里的体验好在"
+  },
+  {
+   "at": 573.58,
+   "end": 588.36,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I do like that progressive disclosure and it's one of the things I called out in our review, um, that I thought was quite nice, but also it's just fast, like it is just fast, the model is just fast, like I do think for especially something that's going to try to catch the eye of consumers.",
+   "zh": "我确实喜欢那种渐进式展开，这也是我在测评里特别点出来、觉得做得很好的一点，但它还有一个优点就是快，真的就是快，模型本身就快。我确实认为，尤其是对于要吸引普通消费者眼球的产品来说，"
+  },
+  {
+   "at": 589.04,
+   "end": 593.64,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "That latency really matters and it's a zippy little agent, yeah.",
+   "zh": "延迟真的很关键，而它是个反应很麻利的小智能体。"
+  },
+  {
+   "at": 593.64,
+   "end": 608.84,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It is and it's really uh you know it's interesting actually because it's one of those things where sometimes it's so fast that you are tempted to think, like is it like did it actually go do a thing like because it's so quick and I think like the nice thing is there are times where.",
+   "zh": "确实，而且这其实挺有意思的，因为有时候它快到让你忍不住怀疑：它真的去做了吗？因为实在太快了。我觉得好的一点是，有些时候，"
+  },
+  {
+   "at": 609.6,
+   "end": 630.85,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It will, you'll ask for something somewhat complex and it will at least acknowledge your request, you know, either through a reaction or an initial message and then go off and do the hard work and I think like, like a person, you know, if you ask for something hard they're not going to just ghost you until they're, they're done, they'll usually just say like, okay here's the plan, I'm going to do this, I'll be back when I have it done",
+   "zh": "你提一个稍微复杂点的需求，它至少会先回应一下你的请求，要么用一个表情回应，要么先回一条消息，然后再去干那些费劲的活。我觉得就像人一样，你请别人做件难事，他们不会一直不理你直到做完，通常会先说：“好，我的计划是这样的，我先去做，做完再回来找你。”"
+  },
+  {
+   "at": 631.44,
+   "end": 636.49,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Even just a reaction is enough to let you know that it's doing it and so I think like that balance",
+   "zh": "哪怕只是一个表情回应，也足以让你知道它在做了。所以我觉得要拿捏好这个平衡："
+  },
+  {
+   "at": 637.52,
+   "end": 652.17,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "When to respond quickly, how to respond, what to say and then like what to do in the meantime if it is a really long task, and that's where we start to rely a little bit on that status display to let you know, like what's going on and if you want to know like specifically did it get stuck or is it",
+   "zh": "什么时候快速回应、怎么回应、说什么，以及如果任务真的很长，中间该做些什么。这时候我们就会稍微依赖一下那个状态显示，让你知道进展如何。如果你想具体了解它是不是卡住了，或者是不是"
+  },
+  {
+   "at": 652.8,
+   "end": 661.4,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Going down the wrong path you can check and I think that's really helpful because you never really feel like it's just gone off and left you alone. Yeah.",
+   "zh": "走错了方向，你都可以去看。我觉得这一点很有帮助，因为你永远不会觉得它就这么走掉、把你晾在一边了。对。"
+  },
+  {
+   "at": 661.4,
+   "end": 670.9,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "One other thing, just thinking about this status um message I want to talk about which is these this concept of generative UI and I think a lot of people think.",
+   "zh": "还有一点，说到这个状态消息，我想聊聊“生成式UI”这个概念。我觉得很多人以为，"
+  },
+  {
+   "at": 671.56,
+   "end": 718.01,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "They're thinking about generative UI. They think like every time I log into my dashboard it's different or every button I click is unique for every person. And what I saw in looking at the Muse agent is you're using generative UI in a really elegant way which is like the core primitives stick. You've got your avatar, you've got your status message, you've got your ideas, you've got your feed, but then within that every time I log in I have a new set of ideas that are based on the things that we've talked about, and every time the status is generated, it picks the exact right emoji and when it's working on its computer, you get a little generated video of it typing on its laptop, like that type of quote unquote generative UI I think is really.",
+   "zh": "一说到生成式UI，就是每次登录仪表盘都长得不一样，或者每个人点的每个按钮都是独一无二的。而我在研究Muse这个智能体时看到的是，你们用生成式UI的方式非常优雅：核心的基础元素是固定的，有你的头像、你的状态消息、你的点子、你的信息流，但在这些框架里，我每次登录都会看到一组新的点子，都是基于我们聊过的东西；每次生成状态时，它都会挑一个恰到好处的emoji；它在电脑上干活的时候，你还会看到一段生成的小视频，是它在笔记本上打字。我觉得这种所谓的“生成式UI”真的"
+  },
+  {
+   "at": 718.86,
+   "end": 729.81,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Delightful and much easier to understand, for folks trying to understand how they could bring these concepts into their own app than like every time any one person opens up the UI is completely different, right.",
+   "zh": "很讨喜，而且对那些想把这些理念用到自己应用里的人来说，也比“任何人每次打开界面都完全不一样”要好理解得多，对吧？"
+  },
+  {
+   "at": 729.81,
+   "end": 742.81,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah I think you know perhaps one day we'll get there you know but I think these days there's, it's definitely a little bit more on the rails in terms of like where we can apply it, the avatar is a great example and I think people find a lot of delight I have seen in.",
+   "zh": "对，我觉得也许有一天我们会走到那一步，但现在在能用到哪些地方这件事上，肯定还是更有章法、更受约束一些。头像就是个很好的例子，我看到大家从中获得了很多乐趣，"
+  },
+  {
+   "at": 743.09,
+   "end": 770.74,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "When they do make their own new avatar scene that it will then be translated into each one of those states, you know typing on its little computer or making something, and that's been one of the most fun things because we of course have our mascot and you know Jollybot has the states as well. But like if you turn yours into a tomato, then you'll see a tomato typing on the computer and that really does feel very personal and is I think a very delightful thing but yeah, you mentioned feed and ideas and I think that those surfaces are.",
+   "zh": "当他们自己做了一个新的头像形象，它就会被转换成每一种状态，比如在小电脑上打字，或者在做东西。这一直是最好玩的地方之一，因为我们当然有自己的吉祥物，Jollybot也有这些状态。但如果你把自己的头像变成一个番茄，你就会看到一个番茄在电脑上打字，那种感觉真的很个人化，我觉得非常讨喜。不过你刚才也提到了信息流和点子，我觉得这些界面，"
+  },
+  {
+   "at": 771.52,
+   "end": 804.72,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You know, you could, you could definitely imagine this app with just chat and I think part of an agent's power is that it can handle a lot in a single chat, and you can kind of just treat it like a really capable personal assistant in that way. I think though, like there's so much that it can do that might not be intuitive for people that exposing some of those additional capabilities just with the additional surfaces that we have, like ideas in particular, it's serving a very specific purpose which is basically just telling you some things that you may not know that it can do, I think.",
+   "zh": "你完全可以想象这个应用只有聊天。我觉得智能体的一部分威力就在于，它在一个对话里就能处理很多事情，从这个角度说，你可以把它当作一个能力很强的私人助理。但我觉得它能做的事太多了，很多对大家来说可能并不直观，所以借助我们额外做的这些界面，把一些额外的能力展示出来。尤其是“点子”，它的用途非常明确，基本上就是告诉你一些你可能不知道它能做的事。我觉得，"
+  },
+  {
+   "at": 805.26,
+   "end": 823.18,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like, to your point, if those were just generic suggestions, that would be one thing, maybe even useful things, but when they're specifically based on what you've talked about, I think that's when people really find the power where like if you talk to it about golf all day, like I do like then I got a lot of golf ideas and then the feed too, the feed's a fun one because.",
+   "zh": "就像你说的，如果那些只是泛泛的建议，那是一回事，也许还算有用；但当它们是根据你聊过的内容专门生成的时候，我觉得大家才会真正感受到它的威力。比如你要是整天跟它聊高尔夫，就像我这样，那我就会收到一堆高尔夫相关的点子。还有信息流，信息流也很好玩，因为"
+  },
+  {
+   "at": 824.16,
+   "end": 841.91,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You can experiment and I think people should experiment more than they do. It's like the you can write anything you want in the prompt and get a feed of whatever. Like I mix and match things all the time and like have a really, uh, really interesting feed and I often change mine too just because like sometimes I'll get tired of getting",
+   "zh": "你可以拿它做实验，我觉得大家应该比现在多做些实验。你可以在提示词里写任何想要的东西，得到一个关于任何主题的信息流。我自己就经常混搭各种东西，弄出一个非常有意思的信息流，而且我也经常换，因为有时候我会看腻了"
+  },
+  {
+   "at": 842.2,
+   "end": 848.4,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like Muse news or something and I'll switch it to something else, like I try to do like kid stuff on the weekend for example,",
+   "zh": "比如Muse的新闻之类的，就会换成别的，比如周末我会试着换成跟孩子有关的内容。"
+  },
+  {
+   "at": 849.14,
+   "end": 863.92,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah, I mean it's still a native surface though, you know, like the feed unit that you're looking at is still like one that we've designed, and it's being powered by the intelligence of flight and the personalization that your Muse has, but it's like, it's not yet like a fully. Generative surface.",
+   "zh": "对，不过它仍然是一个原生界面。你看到的这个信息流模块，依然是我们设计好的，背后是Muse的智能和你的Muse所具备的个性化能力在驱动，但它还不是一个完全生成式的界面。"
+  },
+  {
+   "at": 864.93,
+   "end": 875.33,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay, so speaking of ideas or things that your Muse can do for you that you wouldn't have thought of, I'm going to let you get your screen up and share with us some of your ideas",
+   "zh": "好，说到点子，或者说你的Muse能帮你做、而你自己想不到的事，我让你先把屏幕共享出来，给我们看看你的一些点子。"
+  },
+  {
+   "at": 875.9,
+   "end": 891.62,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "While you're doing that I will tell you what my Muse's name is which is Slime, and Slime is the pink dinosaur um fashioned after my child's favorite stuffy um and he is very adorable. Okay so let's look at Marlowe. Yeah.",
+   "zh": "你准备的时候，我先说说我的Muse叫什么：它叫Slime，是一只粉色的恐龙，照着我孩子最喜欢的毛绒玩具做的，特别可爱。好，那我们来看看Marlowe吧。好。"
+  },
+  {
+   "at": 891.62,
+   "end": 920.52,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So mine is Marlowe, which is a cactus and I have a bit of a complex relationship with Marlowe because my original Muse was Jollybot, which is the mascot that you see everywhere, and it's named after my daughter, who we call Jolly Bug and when we started using Jollybot everywhere, I felt kind of weird using Jollybot for mine because it was like it was just too close to home. So I made it kind of a cactus version which is Marlowe which I like a lot especially Marlowe's little cactus.",
+   "zh": "我的叫Marlowe，是一株仙人掌。我跟Marlowe的关系有点复杂，因为我最初的Muse是Jollybot，就是你到处都能看到的那个吉祥物，它是以我女儿的名字命名的，我们叫她Jolly Bug。后来我们开始到处用Jollybot，我再拿Jollybot当自己的Muse就觉得有点怪，太贴近自家生活了。所以我做了一个仙人掌版本，就是Marlowe。我很喜欢它，尤其是Marlowe那台仙人掌小电脑。"
+  },
+  {
+   "at": 920.52,
+   "end": 924.85,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I love the fuzzy laptops. Just send me they are so funny.",
+   "zh": "我超爱那些毛茸茸的笔记本电脑，太好笑了。"
+  },
+  {
+   "at": 925.83,
+   "end": 926.61,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "They're really funny.",
+   "zh": "确实很好笑。"
+  },
+  {
+   "at": 926.61,
+   "end": 932.83,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay well walk me through some things that you do with Marlowe that are fun. Yeah.",
+   "zh": "好，那带我看看你用Marlowe做的一些好玩的事吧。好。"
+  },
+  {
+   "at": 932.83,
+   "end": 950.03,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I'll I can show you a few things. So I think one of my favorite things recently is I had and I would recommend doing this by the way, I had if you use Instagram, I had Marlowe look at everything I'd saved on Instagram and just organize them. So put all of my saves into folders and categories. Useful baseline.",
+   "zh": "我可以给你看几个。我觉得我最近最喜欢的一件事是，顺便说一句，我也推荐大家这么做：如果你用Instagram的话，我让Marlowe把我在Instagram上收藏过的所有东西都看了一遍，然后整理好，把我所有的收藏都归到不同的文件夹和分类里。这算是一个有用的基础。"
+  },
+  {
+   "at": 950.5,
+   "end": 970.7,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um, but then I said, okay, look at everything I've saved and maybe send me some suggestions for shopping ideas like gifts and that kind of thing and it did that again just in text, which was a good idea, but one of my favorite things I think to do with these systems is take what would be otherwise like a fairly mundane.",
+   "zh": "然后我又说：好，看看我收藏过的所有东西，给我推荐一些购物点子，比如礼物之类的。它也照做了，同样只是用文字，这本身是个好主意。但我觉得用这类系统做的最喜欢的事之一，就是把原本挺平淡的"
+  },
+  {
+   "at": 971.46,
+   "end": 991.31,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Set of data and render it in a way that I personally find really fun. So with this what you're looking at here is Jollybot SkyMall which is that same set of suggestions that have looked at everything I've saved on Instagram, considered some ideas for things that I might be interested in but then rendered them in the kind of the vernacular of the SkyMall Sharper Image magazine.",
+   "zh": "一组数据，用我个人觉得特别好玩的方式呈现出来。你现在看到的是Jollybot SkyMall，用的就是同一组推荐：它看了我在Instagram上收藏的所有东西，想了一些我可能会感兴趣的东西，然后用SkyMall、Sharper Image那种商品杂志的风格呈现出来。"
+  },
+  {
+   "at": 991.51,
+   "end": 1002.17,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So as a nineties kid this is like very this is speaking my actual language um so like this clock for example. You can see right here was a good suggestion.",
+   "zh": "作为一个90年代长大的孩子，这简直说的就是我的母语。比如这个钟，你看这里，就是个很不错的推荐。"
+  },
+  {
+   "at": 1002.17,
+   "end": 1004.72,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "It's yours yeah.",
+   "zh": "它归你了，对。"
+  },
+  {
+   "at": 1004.72,
+   "end": 1009.42,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So this is a fun one and I think like it refreshes every day and it's kind of like",
+   "zh": "所以这个挺好玩的，而且我觉得它每天都会刷新，有点像是"
+  },
+  {
+   "at": 1010.21,
+   "end": 1024.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "A really interesting way to like both from like just for me personally as a designer to look at because I think it's a really fun type of crazy design, but also like, you know, I may be one day in the market for a new range finder, so it's nice to see that.",
+   "zh": "一种很有意思的方式：一方面，对我个人作为设计师来说，看着就很有意思，因为我觉得这是一种特别好玩的疯狂设计；另一方面，说不定哪天我就想买个新的测距仪，所以能看到这些也挺好的。"
+  },
+  {
+   "at": 1024.8,
+   "end": 1033.5,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I, I love this and then have you, I just, I'm curious, have you transacted with Marlowe on like have you bought, has Marlowe bought you some things.",
+   "zh": "我太喜欢这个了。我就是好奇，你有没有通过Marlowe完成过交易？Marlowe有没有帮你买过东西？"
+  },
+  {
+   "at": 1034.18,
+   "end": 1051.13,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah, I and but probably not anything that exciting like watch straps and things like this, you know like I think, uh and I've had like one of the things I do most actually with mine and probably my favorite use case is like, I feel like a kind of just like monitoring.",
+   "zh": "有，不过大概没买什么特别激动人心的东西，比如表带之类的。我觉得，其实我用得最多、可能也是我最喜欢的用法，就是它让我有了一种类似“盯梢”的"
+  },
+  {
+   "at": 1051.82,
+   "end": 1066.99,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Superpower where I'm like always looking for like oh if this artist releases a new album tell me okay great if this artist comes to San Francisco, tell me if this golf brand does a collaboration with this person tell like I have a lot of things kind of like on the on the radar.",
+   "zh": "超能力：我总在留意各种事，比如这个歌手出新专辑了就告诉我；好，这个歌手来旧金山了就告诉我；这个高尔夫品牌跟某某人出联名了就告诉我。我有很多事都放在雷达上盯着。"
+  },
+  {
+   "at": 1067.87,
+   "end": 1074.87,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like usually like you know Ray always talks about and I remember from your thing movie tickets is a big one as well",
+   "zh": "通常就像Ray常说的那样，我记得你那期里也提到过，电影票也是一个很重要的场景。"
+  },
+  {
+   "at": 1076.12,
+   "end": 1080.92,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So yeah, I have and uh, I think that it's definitely like something that is",
+   "zh": "所以是的，我觉得它确实是那种"
+  },
+  {
+   "at": 1081.82,
+   "end": 1096.17,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's just really useful. I haven't hooked this, that's actually something that I would like to do. I haven't hooked this up to where I can like make it easy to, if I do see something I like go and get it, but it's mostly because this is more of a fun thing for me that I just love seeing these things rendered this way. You know.",
+   "zh": "真的很有用的东西。我还没把这个打通，这其实是我想做的：我还没设置好，让我看到喜欢的东西就能很方便地直接去买。但主要是因为这对我来说更多是一种乐趣，我就是喜欢看这些东西以这种方式呈现出来。"
+  },
+  {
+   "at": 1096.17,
+   "end": 1119.17,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "The other thing that you can do here, which I do, is I have a trigger that every week it looks at the list of stuff that I'm like interested in buying and sees if any of it is on sale, and so it'll be like, you know, that thing you've been waiting for, it's, it's now discounted or you know, this, this vendor happens to be selling it on sale and so then I just get that like just in time.",
+   "zh": "你在这里还可以做另一件事，我自己就在做：我设了一个触发器，每周它都会去看我想买的那张清单，查查有没有在打折的。然后它就会告诉我：你一直在等的那个东西现在降价了，或者某个商家正好在打折卖它。这样我就能及时拿到"
+  },
+  {
+   "at": 1120,
+   "end": 1124.08,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Discount on things. I also do a lot of price comparison yeah.",
+   "zh": "各种东西的折扣。我也经常做比价。"
+  },
+  {
+   "at": 1124.08,
+   "end": 1147.12,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah yeah I and I do a lot of research as well, like whether it's price or just kind of like what reminds me of like used to be a very manual process of like okay, I'm in the market for a toddler car seat you know it's like normally that would kick off a lot of web searches, a lot of like Youtube watching and everything like this and now it's like I usually start and Muse with whatever it is and then kind of go from there.",
+   "zh": "对对，我也做很多调研，不管是比价，还是别的。这让我想起来，以前这是一个非常手动的过程，比如：好，我想买一个幼儿汽车安全座椅，通常这会引出一大堆网页搜索、看一大堆YouTube视频之类的。现在我通常会先在Muse里开始，不管是什么事，然后再从那儿往下走。"
+  },
+  {
+   "at": 1147.64,
+   "end": 1165.14,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, well and I do think people are really, I haven't heard a lot of folks talk about the Instagram connector, it's one that I also use a lot, it's just a, it's a very rich source of personal information that has historically been in a format of. Very hard to reason with.",
+   "zh": "对，而且我觉得大家真的……我没怎么听人聊过Instagram连接器，我自己也用得很多。它是一个非常丰富的个人信息来源，但一直以来，它的格式都很难拿来分析和推理。"
+  },
+  {
+   "at": 1166.14,
+   "end": 1181.74,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So and now it is in a format that I can actually like reason and extract that value out of it. I use a lot of Instagram. I use um because now these agents can log into websites. I use I like use my Pinterest a lot more too. I use these like visual.",
+   "zh": "而现在它变成了一种我真的能拿来推理、从中提取价值的格式。我用Instagram用得很多。而且因为现在这些智能体能登录网站了，我用Pinterest也比以前多多了。我现在用这类视觉化的"
+  },
+  {
+   "at": 1182.9,
+   "end": 1194.86,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Records a lot more um, than I had in the past. One kind of like for the designers out there, one of the things that I've done recently is like open up a board or a saved group. And said",
+   "zh": "记录比过去多得多。给各位设计师说一个，我最近做过的一件事是，打开一个画板或者一个收藏分组，然后说："
+  },
+  {
+   "at": 1195.86,
+   "end": 1215.29,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I like this, help me generate concepts based on this or language I can use to describe this, and so I think the ability for these agents to reason with visual data in a way, um especially if you can just log into a website or use an Instagram connector just really unleashes a lot of creativity, use cases I feel like have been harder to do before.",
+   "zh": "我喜欢这个，帮我基于它生成一些概念，或者给我一些可以用来描述它的说法。所以我觉得，这些智能体能够理解和推理视觉数据，尤其是你可以直接登录网站或者用Instagram连接器的时候，真的能释放很多创意，我觉得这些用法以前都比较难做到。"
+  },
+  {
+   "at": 1215.98,
+   "end": 1234.78,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah and Pinterest is a great idea too. I mean I think like you know to your point, the I feel like I have scattered about the internet a lot of this information that's kind of just gotten lost to time, you know and so like MY My Instagram saves for better or for worse I've been using that forever but I very rarely go back",
+   "zh": "对，Pinterest也是个好主意。就像你说的，我觉得我有很多信息散落在互联网各处，时间一长就被遗忘了。比如我的Instagram收藏，不管好坏，我一直都在用，但我很少回去"
+  },
+  {
+   "at": 1235.53,
+   "end": 1257.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Mill about in there and like look at them, you know because it's like you're kind of just I don't know what I would be doing necessarily one thing I did actually I don't have it here, um but I do save a lot of golf tips and but like hundreds, like hundreds and hundreds of golf tips that I'd never go back in and look at, so I had Marlowe do it and then consolidate them all into like a manual and so that I have this",
+   "zh": "在里面翻一翻、看一看，因为我也说不清回去能干什么。我做过一件事，这里没有展示：我收藏了很多高尔夫技巧，几百条，成百上千条，但从来不会回去看。所以我让Marlowe把它们全过一遍，汇总成一本手册，这样我就有了这么一份"
+  },
+  {
+   "at": 1258.26,
+   "end": 1271.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Kind of like for Alex, like these are the things you should work, apparently you think you should work on, you know? And it was that was pretty cool because it was like a otherwise kind of just buried in time, you know? And actually to that end, I have this one too, which I",
+   "zh": "Alex专属手册，告诉我这些是你应该练的，或者说是你自己显然觉得应该练的东西。这很酷，因为不然这些东西就一直埋在时间里了。说到这个，我还有这一个，"
+  },
+  {
+   "at": 1272.23,
+   "end": 1275.63,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "This is another Instagram one, but I do post a lot of stories.",
+   "zh": "这也是Instagram相关的，我发了很多快拍。"
+  },
+  {
+   "at": 1276.66,
+   "end": 1304.11,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And this one is basically just showing me an archive of random stories from the past that again I would never look at. Um, and it's kind of like, I mean I almost think of this as like my new kind of feed that I'm looking at where it's like, you know, this is just mine but you could bring in any kind of content here and like I love looking at this kind of stuff. It's just kind of like nice memories and I'll check it a couple times a day yeah, exactly, yeah and like I, you know, I have a five year old, so it's fun seeing like little things of her, like when she was growing up.",
+   "zh": "这个基本上就是给我展示过去一些随机的快拍存档，这些我平时也绝不会去看。我几乎把它当成我新的信息流来看，当然这里只有我自己的内容，但你可以把任何内容放进来。我很喜欢看这类东西，就是一些美好的回忆，我每天会看几次。对，没错。我有个5岁的女儿，所以看到她成长过程中的一些小片段挺有意思的。"
+  },
+  {
+   "at": 1305.02,
+   "end": 1322.39,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay, you mentioned golf and we're going to talk about Muse for going hard on your hobbies. So let's talk about how are you using Muse for your golf game, which I you know as a parent of a five year old I'm presuming is inconsistent at best. I know.",
+   "zh": "好，你提到了高尔夫，我们接下来就聊聊怎么用Muse把爱好玩到极致。说说你是怎么用Muse提升高尔夫水平的吧。作为5岁孩子的家长，我猜你打球的频率最多也就是时有时无吧。我懂。"
+  },
+  {
+   "at": 1322.39,
+   "end": 1345.47,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah I used to always joke about this with people on the team, because I a lot of what I would want to use for was golf oriented, but that sort of assumed that I was able to play golf, but like we've been building this project for so long that it's like kind of very few and far between where I'm able to get out there but yeah, I use it in a couple ways and I think what's nice about this is um similar to some of my other hobbies like chess there are.",
+   "zh": "对，我以前老跟团队里的人开这个玩笑，因为我很多想用它做的事都跟高尔夫有关，但前提是我得有空去打球。可是我们做这个项目做了太久，我能去球场的机会少之又少。不过我确实有几种用法。我觉得这件事好的地方在于，跟我其他一些爱好比如国际象棋类似，已经有"
+  },
+  {
+   "at": 1346.18,
+   "end": 1349.68,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Services already that I use that monitor",
+   "zh": "一些我在用的服务，会记录"
+  },
+  {
+   "at": 1350.4,
+   "end": 1377.08,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "How I'm playing. So every time I play I record the round that's a thing most golfers do and so that's like some basic data about the course that you played, what your score was. But I also keep track of every shot that I hit on a watch, and so I have a lot of data that I can provide and what I do is I just have it every week, which is this is again kind of sad because it looks Every Sunday and I never play, so it's like I should probably just tell it every so often but it will send me this basically every time I play, which is kind of like a round recap.",
+   "zh": "我打得怎么样。每次打球我都会记录这一轮，大部分高尔夫球手都会这么做，这样就有一些基础数据，比如你打的是哪个球场、成绩多少。另外我还会用手表记录我打的每一杆，所以我能提供很多数据。我的做法是让它每周跑一次，这又有点心酸，因为它每周日都去看，而我根本没去打，所以我可能应该时不时手动告诉它。不过基本上每次我打完球，它都会给我发这个，相当于一份本轮复盘。"
+  },
+  {
+   "at": 1377.84,
+   "end": 1394.61,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So I'll see kind of like how the round unfolded, much richer than like a paper scorecard or some other way that I'd be able to see it and sometimes I don't think this one has it in here, it will tell me a little bit about the course if I played the course a lot and it will like tell me okay on this whole. This is usually what's happened.",
+   "zh": "我能看到这一轮是怎么一步步打下来的，比纸质计分卡或者其他方式丰富得多。有时候，我觉得这一份里没有，如果某个球场我打得多，它会跟我讲讲这个球场，比如告诉我：在这个洞，你通常会是这样的情况，"
+  },
+  {
+   "at": 1394.71,
+   "end": 1404.79,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You did better today or worse today which is really helpful when I go back and play the course again, this one's doing a little bit of that like it's trying to tell me like how I could have turned my 84 into a 79 by just",
+   "zh": "你今天打得更好还是更差。这在我再去打那个球场时非常有用。这一份也做了一点类似的事，它在告诉我怎样才能把84杆变成79杆，只要"
+  },
+  {
+   "at": 1405.54,
+   "end": 1414.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Doing a little bit better here or there. The interesting thing about this one is, and again we've talked a little bit about this, but I think like it's taking data that like was.",
+   "zh": "在这里或那里稍微打好一点。这一份有意思的地方在于，我们之前也聊过一点，我觉得它把那些原本"
+  },
+  {
+   "at": 1414.72,
+   "end": 1435.6,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Pretty much very plain and monolithic and not really showing me more than the number and turning it into these different visuals that like tell much more of a story, like I had this, the red line is like a very bad front nine and then the back nine was a very good back nine and you can see that with the, with the graph like very easily. That'd be much harder to do if you're looking at the, at the scorecard,",
+   "zh": "非常单调、铁板一块、除了一个数字什么都看不出来的数据，变成了各种能讲出更多故事的可视化。比如这里，红线显示前九洞打得很糟，后九洞打得非常好，从图上一眼就能看出来。如果你只看计分卡，就难多了。"
+  },
+  {
+   "at": 1436.23,
+   "end": 1463.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "This has been great. I also whenever I practice I have a lot. I feel like when I'm practicing, I'm like those people you see running with oxygen on with all the wires hooked up to them like when I can only practice every so often, so when I practice, it has to be very data oriented, so I have all these machines that are looking at me when I swing and this again it's like putting out all this stuff that like I kind of understand, but it's really helpful to get Muse to like really go through and like tell me about",
+   "zh": "这个真的很棒。另外每次练习的时候，我都有很多……我觉得自己练习时就像那些戴着氧气面罩、浑身连满线跑步的人。因为我只能偶尔练一次，所以练的时候必须非常以数据为导向。我有一堆机器在我挥杆时盯着我，同样，它们会输出一大堆东西，我大概能看懂，但让Muse帮我仔细过一遍、告诉我"
+  },
+  {
+   "at": 1464.19,
+   "end": 1471.59,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Where I can improve like what I need to do better, what's looking good and that's what you're looking at here is like a practice session really broken down into",
+   "zh": "我哪里可以提高、哪些地方要改进、哪些地方表现不错，真的很有帮助。你现在看到的就是一次练习被拆解成"
+  },
+  {
+   "at": 1472.2,
+   "end": 1481.65,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Fine detail, I think like golfers will know what this stuff means, but it's kind of, it's, you know, it's kind of like a, it's a, it's very useful I should say,",
+   "zh": "非常细的细节。我觉得打高尔夫的人能看懂这些是什么意思，总之，应该说它非常有用。"
+  },
+  {
+   "at": 1482.48,
+   "end": 1486.68,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And do you have a Muse goal to get better?",
+   "zh": "那你在Muse里有设定球技进步的目标吗？"
+  },
+  {
+   "at": 1486.68,
+   "end": 1507.58,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I do. I have and this, this is one that yeah, like I said kind of a sad one I make no progress against but that is one of my long term goals. So I have a lot I mentioned of things that I'm tracking. I love the tracking section in particular just because like there's a lot that I keep an eye on. But in terms of long term goals it's basically I would really like to be a single digit handicap.",
+   "zh": "有。就像我说的，这是个有点心酸的目标，我一直没什么进展，但它确实是我的长期目标之一。我之前提到我在追踪很多东西，我特别喜欢追踪那个板块，因为我要关注的东西很多。但说到长期目标，基本上就是我很想把差点打到个位数，"
+  },
+  {
+   "at": 1508.06,
+   "end": 1514.46,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "In my life, which is like, it's achievable, it's hard, it's kind of like the perfect goal because I can talk",
+   "zh": "这辈子能做到就行。这个目标可以实现，但很难，算是个完美的目标，因为我随时都可以跟"
+  },
+  {
+   "at": 1515.54,
+   "end": 1527.41,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Muse about it at any time and like it knows that all these things are kind of like accrue into that goal, it's kind of the perfect like hopefully not super long term goal but it is definitely a. One of my main ones.",
+   "zh": "Muse聊这件事，它也知道所有这些事情都会累积成这个目标。希望它不会是一个超级长期的目标，但它绝对是我最主要的目标之一。"
+  },
+  {
+   "at": 1528.18,
+   "end": 1535.45,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Quick question about Muse and this could be maybe personal preference or you could just give our audience a little bit of insider, um, tips on how to use it.",
+   "zh": "问一个关于Muse的小问题，这可能纯属个人偏好，也可以给我们的听众透露一点内部人士的使用技巧。"
+  },
+  {
+   "at": 1536.36,
+   "end": 1550.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Main chat or side chats? I haven't decided yeah, if one is better than the other. I like MY my impulse is told towards side chat, and I don't know if that's just an artifact of how I've been working with other chatbots or if it's actually useful.",
+   "zh": "用主对话还是侧边对话？我一直没想好哪个更好。我的本能倾向是用侧边对话，但我不知道这只是用其他聊天机器人养成的习惯，还是它真的更有用。"
+  },
+  {
+   "at": 1550.9,
+   "end": 1557.55,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's a great question, this is actually one of my favorite things to talk about, um, because I think it's such an interesting architectural.",
+   "zh": "这个问题问得好，这其实是我最喜欢聊的话题之一，因为我觉得这是这个领域里一个非常有意思的架构"
+  },
+  {
+   "at": 1558.86,
+   "end": 1573.86,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Problem in the space and you know, the way Muse is designed is there is a canonical main chat that is kind of very intentionally the primary main line, and we sort of feel like you could use that entirely if you wanted",
+   "zh": "问题。Muse的设计是有一个标准的主对话，它被刻意设计成主线，我们觉得如果你愿意，完全可以只用它。"
+  },
+  {
+   "at": 1574.83,
+   "end": 1586.63,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "We know that for a lot of people, especially anyone that's used to the way most of these apps work today, that threading is a very useful way to organize, so we have side chats for that purpose, like if you want",
+   "zh": "但我们也知道，对很多人来说，尤其是习惯了如今大多数这类应用用法的人，分线程是一种很有用的组织方式，所以我们为此做了侧边对话。比如你想"
+  },
+  {
+   "at": 1588.66,
+   "end": 1605.53,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Put something specifically in like just to get it out of your main chat or it's like a very scoped problem for whatever, whatever it is, there's lots of reasons why you might want to do it, um, that's why side chats are there, but it is definitely like a single thread with the possibility of side threads. Whereas most apps are.",
+   "zh": "专门把某件事放进去，只是为了不让它占着主对话，或者它是一个范围很明确的问题，不管是什么，你想这么做的理由有很多，这就是侧边对话存在的原因。但它本质上是单一线程，外加可以开分支线程。而大多数应用是"
+  },
+  {
+   "at": 1606.52,
+   "end": 1617.37,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "All threaded, that's kind of like the traditional model was like a new thread every time you open it, you know? Um, and I think once the models were able to handle the context and be able to manage everything in a single chat to me.",
+   "zh": "全部分线程的，传统模式就是你每次打开都新建一个线程。我觉得，一旦模型能处理好上下文、能在单一对话里管理所有东西，对我来说"
+  },
+  {
+   "at": 1618.66,
+   "end": 1635.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That is a little bit easier way to interface with what you feel like as another entity the same way you would have with another person, you know, like I don't side thread with my mom or something like that, you know? Now all that said, I think that there remains a lot of really interesting work to do.",
+   "zh": "这就是一种更容易的交互方式，因为你会觉得它像另一个实体，就像你跟另一个人交流一样。我跟我妈聊天也不会开个分支线程什么的。不过话虽如此，我觉得还有很多非常有意思的工作要做，"
+  },
+  {
+   "at": 1636.28,
+   "end": 1645.95,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "To kind of like up level this to maybe you could say like the agentic era, I feel like even still this is sort of an under explored area where",
+   "zh": "把它提升到新的层次，或者说提升到智能体时代。我觉得即便到现在，这仍然是一个没被充分探索的领域，"
+  },
+  {
+   "at": 1646.56,
+   "end": 1657.81,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I'm very happy with our solution currently because we've sort of like exposed the benefit of the main chat to people, but I feel like there's a lot more that we could do in terms of helping people organize and",
+   "zh": "我对我们目前的方案很满意，因为我们已经让大家体会到了主对话的好处，但我觉得在帮助大家组织内容、"
+  },
+  {
+   "at": 1658.44,
+   "end": 1667.34,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Really understand the difference between the main chat and the side chat because your question I think is a good one and one that, you know, a normal person could very reasonably come to too and just be",
+   "zh": "真正理解主对话和侧边对话的区别方面，我们还能做得更多。因为我觉得你这个问题问得很好，一个普通人也很可能会想到这个问题，然后就会"
+  },
+  {
+   "at": 1667.9,
+   "end": 1671,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Why would I use this instead of that? And I think all that stuff can be",
+   "zh": "想：我为什么要用这个而不是那个？我觉得这些都可以"
+  },
+  {
+   "at": 1671.97,
+   "end": 1674.87,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think it's going to be an exciting area in the future.",
+   "zh": "我觉得未来这会是一个很令人兴奋的方向。"
+  },
+  {
+   "at": 1675.77,
+   "end": 1679.27,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Okay show me your last hobby oh.",
+   "zh": "好，给我看看你最后一个爱好吧，哦，"
+  },
+  {
+   "at": 1679.27,
+   "end": 1679.44,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "好。"
+  },
+  {
+   "at": 1679.44,
+   "end": 1681.64,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Artifact that you've made yeah.",
+   "zh": "你做的作品，对。"
+  },
+  {
+   "at": 1681.64,
+   "end": 1722.55,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well I'll show you one I wanted to show you was this one with a podcast attached because I think this one's very fun. Um so I had a blog 20 years ago uh which has again lost to time, and I had Marlowe go and find it Wayback Machine going to Blogger because it moved between Tumblr and stuff, like I moved it all around you know, so it went back and found all the posts and then accumulated them into one PDF first. Then this little thing that is basically just like looks like a blog, but the way that I like to read it now just again from memory is via a podcast, which is sent to me every morning and it is just basically a random reading you can hear a little.",
+   "zh": "我想给你看的是这个，它带了一个播客，我觉得特别好玩。我20年前写过一个博客，同样早就被时间遗忘了。我让Marlowe去把它找回来，它通过Wayback Machine一路找到Blogger，因为这个博客在Tumblr之类的平台之间搬过家，我搬来搬去的。它回去把所有文章都找到了，先汇总成一个PDF，然后做成了这个小东西，看起来基本就像个博客。不过我现在喜欢的读法，同样是当作回忆来重温，是通过播客，每天早上发给我，基本上就是随机朗读一篇，你可以听一点。"
+  },
+  {
+   "at": 1722.55,
+   "end": 1727.17,
+   "speaker": "guest",
+   "kind": "clip",
+   "text": "Is it weird to anyone else, that 90% of people wear the exact same color pants.",
+   "zh": "有没有别人也觉得奇怪，90%的人穿的裤子颜色都一模一样？"
+  },
+  {
+   "at": 1728.08,
+   "end": 1738.18,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Which is the kind of thing that a 20 years ago Alex used to wonder about and it's like very, very funny because you're hearing yourself.",
+   "zh": "这就是20年前的Alex会琢磨的那种事，特别特别好笑，因为你听到的是你自己。"
+  },
+  {
+   "at": 1739.46,
+   "end": 1749.93,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Kind of but 20 years ago you barely remember anything you know so like I everything that this person is saying I'm like yeah, that is kind of weird but it's like of course I would think that because it was me 20 years with me.",
+   "zh": "有点吧，但20年前的事你几乎什么都记不得了，所以这个人说的每一句话，我都会想：对，这确实有点怪，可我当然会这么想，因为那就是20年前的我。"
+  },
+  {
+   "at": 1749.93,
+   "end": 1750.51,
+   "speaker": "guest",
+   "kind": "clip",
+   "text": "Yeah.",
+   "zh": "是啊。"
+  },
+  {
+   "at": 1750.51,
+   "end": 1757.61,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah but anyway I think like that one, I love that one because like a lot of these things or there's AI guess you could say it sort of a theme here which is",
+   "zh": "是啊。总之我特别喜欢这个，因为这些东西里，我想可以说有一个共同的主题，那就是"
+  },
+  {
+   "at": 1758.71,
+   "end": 1782.26,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I feel like I'm constantly taking these things that I had in my life but like for whatever reason, like I do not look at them, I can't like that it's presented in such a way that it wasn't useful for me at the time or whatever, and Muse is able to take it and just like reform it into a way that's like really interesting and useful for me, whether it's interesting like this or useful like the golf stuff",
+   "zh": "我感觉自己一直在把生活里原本就有的东西拿出来——出于各种原因，我平时根本不会去看它们，或者它们当时呈现的方式对我没什么用——而Muse能把它们重新组织成一种对我来说真正有趣、有用的形式，有趣的比如这个，有用的比如高尔夫那些。"
+  },
+  {
+   "at": 1782.72,
+   "end": 1789.47,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You know, I have the same thing for chess as well which will break down my recent games and this, this one gets a little bit like",
+   "zh": "我在国际象棋上也做了同样的东西，它会拆解我最近下的几盘棋，而且这个会变得有点"
+  },
+  {
+   "at": 1790.4,
+   "end": 1812.45,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Snarky I guess you could say I didn't tell it to do this, but it like kind of like will poke at me a little bit, uh which is kind of fun like bishop B5 collapse like I don't know what this is what's going on here. But anyway so it's a fun that's a fun one because it's useful, but it's also kind of funny to have like this I guess you could say like kind of snarky chess coach that's trying to help me get better",
+   "zh": "毒舌，可以这么说吧。我没让它这么做，但它会时不时损我两句，还挺好玩的，比如“象b5崩盘”，我都不知道这是怎么回事。总之这个很好玩，因为它有用，同时有这么一个毒舌的国际象棋教练想帮我进步，也挺好笑的。"
+  },
+  {
+   "at": 1812.6,
+   "end": 1820.93,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Well, and for folks that aren't watching this is a dashboard that I think pulls in your chess.com data, right? And just renders it. And gives you game by game.",
+   "zh": "给没在看视频的朋友说明一下，这是一个仪表盘，我想它会拉取你在chess.com上的数据，对吧？然后直接渲染出来，给你逐局的"
+  },
+  {
+   "at": 1821.86,
+   "end": 1825.34,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Breakdowns um I really like this, yeah.",
+   "zh": "复盘分析。我真的很喜欢这个。"
+  },
+  {
+   "at": 1825.34,
+   "end": 1857.63,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's been useful because and you know the fun thing is you basically just define this in chat, you know so when I originally asked for this I said I have a chess account I would love to see kind of a mixture of analysis, but also like trends over time because it's helpful for me to know like am I improving it looks like right now I'm kind of like falling off a bit. Um but then the main thing that I wanted to do in this case is give me a review of the most recent game, so I can go through here and try to get a sense of. Like what did I do wrong in this case? I just quit mid game, so that's not going to be that helpful, but you know, when the daughter arrives home you have to stop playing,",
+   "zh": "它挺有用的。而且好玩的是，基本上你只要在对话里把它描述出来就行。我最初提需求时说：我有个国际象棋账号，很想看到一些分析，同时也想看看长期趋势，因为知道自己有没有进步对我很有帮助——现在看起来我好像有点退步了。不过在这里我最想要的，是让它帮我复盘最近的一盘棋，这样我可以在这里一步步看，弄明白这盘我哪里下错了。这一盘我是下到一半就退出了，所以帮助不大，不过你懂的，女儿一到家，你就得停下来。"
+  },
+  {
+   "at": 1858.12,
+   "end": 1878.12,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "That's exactly right. Okay, so we have seen Marlowe do everything from reviving old Instagram posts and blogs to give you a custom and kind of a nostalgic shopping catalog to taking all you, you seem like a data person taking all your data you collect.",
+   "zh": "完全没错。好，我们已经看到Marlowe能做各种事：从翻出旧的Instagram帖子和博客、给你做一份带点怀旧感的定制购物目录，到把你收集的所有数据——你看起来就是个数据控——"
+  },
+  {
+   "at": 1878.9,
+   "end": 1884.5,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And uh, especially for some of your hobbies and let you put it in a way that will allow you to achieve either short term",
+   "zh": "尤其是你那些爱好相关的数据，整理成一种形式，帮你实现短期"
+  },
+  {
+   "at": 1885.44,
+   "end": 1897.19,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Long term goals. Um and then we talked a lot about you know why I think a lot of people are reacting so positively to Muse is because it's well designed, it's thoughtful, it shows you what you need, it's fast.",
+   "zh": "或长期目标。我们也聊了很多，我觉得很多人对Muse反响这么好，是因为它设计得好、很用心，会把你需要的东西呈现给你，而且速度快。"
+  },
+  {
+   "at": 1897.44,
+   "end": 1912.94,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Um and we all have these like little cutie-pie avatars. Well let's do a very quick lightning round um questions and then I will get you back to all your important work. Um, first question is just I think designing these",
+   "zh": "还有，我们都有这些超可爱的小头像。好，我们来一轮快问快答，问完就放你回去忙重要的工作。第一个问题，我觉得设计这些"
+  },
+  {
+   "at": 1913.3,
+   "end": 1924.25,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Agent experiences, um, and AI experiences are very new to a lot of designers and a lot of PMS, the surfaces are new, the underlying infrastructure and technology is new.",
+   "zh": "智能体体验和AI体验，对很多设计师和产品经理来说都很新：交互界面是新的，底层的基础设施和技术也是新的。"
+  },
+  {
+   "at": 1925.2,
+   "end": 1931.5,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What did you have to learn? And then what, what were you able to kind of like fall back on that has worked forever from a design perspective.",
+   "zh": "你必须学会些什么？又有哪些从设计角度看一直都管用、你可以依靠的东西？"
+  },
+  {
+   "at": 1932.46,
+   "end": 1933.71,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Oh, it's a great question.",
+   "zh": "哦，这个问题很好。"
+  },
+  {
+   "at": 1934.62,
+   "end": 1948.37,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You know, I think one thing that I have found for myself and any designer kind of coming into this project, or really just this space is really wrapping your head around what a non deterministic system is.",
+   "zh": "我觉得，对我自己以及任何加入这个项目、或者说进入这个领域的设计师来说，有一点很关键：真正弄明白什么是非确定性系统，"
+  },
+  {
+   "at": 1948.86,
+   "end": 1958.81,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Is and how what that means for when you're designing a screen and by that I mean like we're used to and through for my whole career, you would come to a feature.",
+   "zh": "以及这对你设计一个界面意味着什么。我的意思是，我们早就习惯了——我整个职业生涯都是这样——你拿到一个功能，"
+  },
+  {
+   "at": 1959.76,
+   "end": 1964.88,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And you would be able to think about it and then design it and kind of know that",
+   "zh": "可以先想清楚，再把它设计出来，并且心里有数："
+  },
+  {
+   "at": 1965.74,
+   "end": 1981.09,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "On any given customer screen, it's basically going to work like this and look like this because that is the way that this thing has been coded, and that is the only outcome that you will see, you know? And so then the bugs that you would see would be like, oh no, like this circle didn't appear where it's supposed to and they'd be very, very.",
+   "zh": "在任何一个用户的屏幕上，它基本都会这样运作、长这个样子，因为代码就是这么写的，你只会看到这一种结果。所以你会遇到的bug，也就是“哎呀，这个圆圈没出现在该出现的位置”这种，它们都非常、非常"
+  },
+  {
+   "at": 1981.92,
+   "end": 1985.07,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Scoped in terms of like what you had to think about",
+   "zh": "局限，你需要考虑的范围很小。"
+  },
+  {
+   "at": 1985.9,
+   "end": 2001.65,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I mean it sounds like kind of, routine to us now to, to talk about this, but like you're saying in terms of things I had to learn, it's, it's hard to remember what it felt like even just a year ago, how different things were, you know, but when you first come into this space, I think really understanding that these systems are.",
+   "zh": "我是说，现在聊起这个好像已经挺稀松平常了，但说到我必须学的东西，你很难记起哪怕一年前是什么感觉、那时候情况有多不一样。但刚进入这个领域时，我觉得真正要理解的是，这些系统"
+  },
+  {
+   "at": 2002.37,
+   "end": 2061.99,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Usually do like kind of end up the way you think, but like my Muse setup is completely different than yours, is completely different to somebody else's, they're so personal and they can like do so many different things that you really kind of have to think more about the underlying foundation and the system, the architecture, the scaffolding that's in place and less about like, well what about this one little thing here? Is it going to be just so, you know, actually one of the things that's hardest for me sometimes is looking at those artifacts that we were looking at, like I kind of have to turn off my brain sometimes design wise because I'm like you know, it's like it's a different you can if you want go and spend all the time in the world to like make it look exactly as you want. But I've come to kind of view it a little bit more freely and it's kind of I think um, kind of liberating in some ways to feel like you know, this is still just a very useful output for me and maybe I will take the time to make the colors just so but otherwise it's good and it's fine, you know, and then I think like that's, that's kind of a fun new world and that took some getting used to, I would say.",
+   "zh": "通常确实会大致按你预想的那样运行，但我的Muse配置和你的完全不同，和别人的也完全不同。它们太个性化了，能做的事情太多了，所以你真的得更多地去思考底层的基础和系统、架构，以及已经搭好的脚手架，而不是纠结“这里这个小细节会不会刚刚好”。其实有时候对我来说最难的，就是看我们刚才看的那些作品，我有时得把自己脑子里设计的那部分关掉，因为这是另一回事了。你要是愿意，可以花大把时间把它调得完全符合心意。但我渐渐学会用更放松的心态看待它，而且我觉得这在某种程度上挺解放的：你会觉得，这对我来说仍然是一个非常有用的产出，也许哪天我会花时间把颜色调到刚好，但除此之外，它已经挺好、够用了。我觉得这是一个挺有意思的新世界，不过我得说，这确实需要一段时间去适应。"
+  },
+  {
+   "at": 2062.51,
+   "end": 2067.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "That is a very, a very gentle approach to the spectrum",
+   "zh": "这种看待这条光谱的方式非常温和，"
+  },
+  {
+   "at": 2068.5,
+   "end": 2074.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Slop to high quality agent design stuff that way we get out of our agents yeah okay speaking",
+   "zh": "从粗制滥造的东西到高质量的智能体设计，我们从智能体那里得到的就是这么一条光谱。好，说到"
+  },
+  {
+   "at": 2075.65,
+   "end": 2092.22,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You didn't get the colors quite right when your Muse, when Marlowe is being obstinate and not giving you what you want from a quality perspective, you know, just not listening. What is your prompting strategy? What do you do? Yeah.",
+   "zh": "颜色没调对这件事：当你的Muse，也就是Marlowe，跟你较劲、在质量上给不出你想要的东西，就是不听你的时候，你的提示词策略是什么？你会怎么做？"
+  },
+  {
+   "at": 2092.22,
+   "end": 2104.37,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well, not like a well-formed one in the sense that I didn't I suppose ever a reason about it, but I am very polite, I think I'm not, I'm not all caps, I'm not a multi exclamation mark person.",
+   "zh": "嗯，谈不上什么成型的策略，我好像从来没认真琢磨过这个。但我非常有礼貌，我不是那种全大写、连打好几个感叹号的人。"
+  },
+  {
+   "at": 2105.24,
+   "end": 2113.84,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And I do find myself sometimes looking at what I wrote and being like, wow, that was really nice way to express that frustration and",
+   "zh": "有时候我回头看自己写的话，会想：哇，我把这种沮丧表达得还挺客气的。"
+  },
+  {
+   "at": 2114.3,
+   "end": 2126.05,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think it's really interesting, and I feel this way when I'm doing any kind of coding thing as well, where things you know can maybe take a really long time and then go sideways and it is really frustrating. I have always been surprised with how.",
+   "zh": "我觉得这挺有意思的，我做任何编程相关的事情时也有这种感觉：一件事可能要花很长时间，结果最后跑偏了，真的很让人沮丧。但我一直很惊讶，"
+  },
+  {
+   "at": 2127.45,
+   "end": 2153.08,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like not consciously but how I will just speak to it the way I would speak to like anybody else about it and like I don't, I don't ever really get mad to other people so I don't really get mad to Marlowe or Jollybot or otherwise you know um yeah, so I don't know I've it's always how I've been, I have seen I have some friends who show me sometimes like the traces when they have gotten really mad the thinking trace will be a. Will be like kind of a reset",
+   "zh": "自己会不自觉地像跟其他任何人说话那样跟它说话。我从来不会真的对别人发火，所以也不会对Marlowe、Jollybot或者别的什么发火。我也说不清，我一直就是这样。我有些朋友有时会给我看他们真动怒时的思考轨迹，那些思考轨迹会"
+  },
+  {
+   "at": 2153.84,
+   "end": 2161.07,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Okay, Alex is frustrated so I should really you know so it does make me think sometimes I could probably be a little bit more forceful.",
+   "zh": "像是重新调整了一下：“好的，Alex很沮丧，所以我真的应该……”所以这确实让我有时会想，也许我可以再强硬一点，"
+  },
+  {
+   "at": 2161.07,
+   "end": 2166.19,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "More effective. Yeah, you know, I also try to generally be.",
+   "zh": "效果会更好。是啊，你知道，我一般也尽量保持"
+  },
+  {
+   "at": 2167.04,
+   "end": 2176.36,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Polite with the exception of what feels like very expensive misaligned coding misadventures. That's the one that like really gets me. Yeah.",
+   "zh": "礼貌，除了那种感觉代价很高、方向跑偏的编程翻车事故，那种真的会让我抓狂。是的。"
+  },
+  {
+   "at": 2176.79,
+   "end": 2187.09,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And to be honest, every time I'm yelling it is true to agents as it is in life, it's usually a me problem. Yeah, not a them problem. Yeah. But.",
+   "zh": "而且说实话，每次我吼它的时候——对智能体如此，在生活中也一样——通常都是我自己的问题，而不是它们的问题。是啊。不过，"
+  },
+  {
+   "at": 2187.09,
+   "end": 2191.66,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You're right though, like they go off on the misadventure. It's like that's yeah, it's not frustrating.",
+   "zh": "不过你说得对，它们一旦跑偏去瞎折腾，那真的挺让人抓狂的。"
+  },
+  {
+   "at": 2192.51,
+   "end": 2196.06,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Well Alex, this has been so fun. Thank you for being so generous with your time.",
+   "zh": "好，Alex，今天聊得太开心了，谢谢你这么慷慨地抽出时间。"
+  },
+  {
+   "at": 2196.31,
+   "end": 2204.99,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Um, we love Muse. I'm excited to see more of it. Um, as it evolves, where can we find you? How can we be helpful and how can we follow along?",
+   "zh": "我们很喜欢Muse，很期待看到它不断发展、带来更多东西。大家可以在哪里找到你？我们能怎么帮上忙，又可以怎么关注你的动态？"
+  },
+  {
+   "at": 2204.99,
+   "end": 2233.61,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "The most helpful thing would be to download Muse, try it out and you can let Muse know when something isn't going right or you want to feature those do come to us. So that's probably the most helpful thing I think for me like on the internet, Threads is probably the best place. Um, I try to, I've been trying to do some posting about the um, behind the scenes and like kind of some decisions that we made and I'll continue to do that. So that's probably what I would say. But yeah, trying the app out and letting us know what you think is the most useful thing. So.",
+   "zh": "最有帮助的就是下载Muse试试看。如果哪里不对劲，或者你想要某个功能，可以直接告诉Muse，这些反馈都会到我们这里。所以这大概是最有帮助的。至于我自己，在网上的话，Threads大概是最好的地方。我一直在尝试发一些幕后故事，讲讲我们做过的一些决策，之后也会继续发。我大概就说这些。不过说真的，试用这个app并告诉我们你的想法，才是最有用的。"
+  },
+  {
+   "at": 2234.11,
+   "end": 2236.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Amazing. Well thank you for joining How I AI.",
+   "zh": "太棒了。谢谢你来参加How I AI。"
+  },
+  {
+   "at": 2236.72,
+   "end": 2237.77,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yes, thanks for having me.",
+   "zh": "好的，谢谢邀请。"
+  },
+  {
+   "at": 2237.77,
+   "end": 2264.57,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Thanks so much for watching. If you enjoyed this show please like and subscribe here on YouTube or even better leave us a comment with your thoughts. You can also find this podcast on Apple Podcasts, Spotify or your favorite podcast app. Please consider leaving us a rating and review which will help others find the show. You can see all our episodes and learn more about the show at How I AI pod dot com. See you next time.",
+   "zh": "非常感谢收看。如果你喜欢这期节目，请在YouTube上点赞并订阅，更好的是留言告诉我们你的想法。你也可以在Apple Podcasts、Spotify或者你常用的播客应用上找到这档播客。欢迎给我们评分和留言，这能帮助更多人发现这档节目。你可以在howiaipod.com查看所有剧集、了解更多节目信息。我们下期见。"
+  }
+ ]
+}

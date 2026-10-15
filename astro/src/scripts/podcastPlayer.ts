@@ -91,9 +91,17 @@ function setup() {
 			const episode = item.closest<HTMLElement>('[data-podcast-episode]');
 			const mine = current && parseEpisode(episode?.dataset.podcastEpisode)?.id === current.id;
 			const at = audio.currentTime;
-			const inside = at >= Number(item.dataset.podcastFrom) && at < Number(item.dataset.podcastTo);
-			if (mine && inside) item.setAttribute('aria-current', 'true');
-			else item.removeAttribute('aria-current');
+			const from = Number(item.dataset.podcastFrom);
+			const to = Number(item.dataset.podcastTo);
+			const inside = at >= from && at < to;
+			if (mine && inside) {
+				item.setAttribute('aria-current', 'true');
+				// How far into the span, for pages that draw it (the transcript's timestamp).
+				item.style.setProperty('--span-played', String((at - from) / (to - from)));
+			} else {
+				item.removeAttribute('aria-current');
+				item.style.removeProperty('--span-played');
+			}
 		}
 	};
 
