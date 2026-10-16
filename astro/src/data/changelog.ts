@@ -17,6 +17,15 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-16',
+		tag: '精选阅读',
+		type: 'content',
+		title: '新增精选阅读：Codex 是怎么做成的',
+		summary:
+			'收录 Dan Shipper 在 Every 的长报道。按 10 月 15 日原文逐段译成中文并润色：云端 Codex 没找到市场，团队转回开发者自己的电脑，再做成没有代码编辑器的桌面应用，最后成为 ChatGPT 桌面版的底座。文末有一小段新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-15-how-codex-happened/' }],
+	},
+	{
 		date: '2026-10-15',
 		tag: '精选阅读',
 		type: 'polish',

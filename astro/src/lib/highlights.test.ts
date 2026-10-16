@@ -5,6 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { legacyEntryIsRoutable, loadLegacyContent, type LegacyContentEntry } from './legacyContent';
 
 const expectedArticleRoutes = [
+	'/highlights/2026-10-15-how-codex-happened/',
+	'/en/highlights/2026-10-15-how-codex-happened/',
 	'/highlights/2026-10-15-how-to-be-more-ambitious/',
 	'/en/highlights/2026-10-15-how-to-be-more-ambitious/',
 	'/highlights/2026-10-13-prompting-claude-opus-5-5/',
@@ -469,6 +471,48 @@ describe('unified highlights content', () => {
 
 		const chinese = records.find((entry) => entry.locale === 'zh-CN');
 		expect(chinese?.body).not.toMatch(/不是|而是|并非|而非|不像|不仅/u);
+	});
+
+	it('keeps the Codex origin story complete in both languages', async () => {
+		const records = highlightRecords(await loadLegacyContent()).filter(
+			(entry) => entry.frontmatter.externalId === 'how-codex-happened',
+		);
+
+		expect(records.map((entry) => entry.locale).sort()).toEqual(['en', 'zh-CN']);
+		for (const entry of records) {
+			expect(entry.frontmatter.sourceUrl).toBe('https://every.to/p/how-codex-happened');
+			expect(entry.frontmatter.kind).toBe('article');
+			expect(entry.frontmatter.draft).toBe(false);
+			expect(entry.frontmatter.featured).toBe(true);
+			expect(entry.body.match(/^## /gm)?.length).toBeGreaterThanOrEqual(8);
+			for (const evidence of [
+				'Alexander Embiricos',
+				'Thibault Sottiaux',
+				'Mia Glaese',
+				'Andrew Ambrosino',
+				'Ed Bayes',
+				'Greg Brockman',
+				'com.openai.codex',
+				'GPT-5.3 Codex',
+				'Rust',
+				'https://every.to/vibe-check/vibe-check-codex-openai-s-new-coding-agent',
+			]) {
+				expect(entry.body).toContain(evidence);
+			}
+		}
+
+		const chinese = records.find((entry) => entry.locale === 'zh-CN');
+		expect(chinese?.body).toContain('2025 年 5 月 16 日');
+		expect(chinese?.body).toContain('2026 年 2 月 2 日');
+		expect(chinese?.body).toContain('7 月 9 日');
+		expect(chinese?.body).toContain('500 万');
+		expect(chinese?.body).toContain('4000 万');
+		const english = records.find((entry) => entry.locale === 'en');
+		expect(english?.body).toContain('May 16, 2025');
+		expect(english?.body).toContain('February 2, 2026');
+		expect(english?.body).toContain('July 9');
+		expect(english?.body).toContain('5 million');
+		expect(english?.body).toContain('40 million');
 	});
 
 	it('preserves every migrated Chinese and English record in Markdown', async () => {
