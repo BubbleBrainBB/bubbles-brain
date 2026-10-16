@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-04",
+  "checked_at": "2026-10-16",
   "benchmarks": [
     {
       "id": "aa-index",
       "category": "general",
       "name": {
-        "zh": "Artificial Analysis Intelligence Index v4.3",
-        "en": "Artificial Analysis Intelligence Index v4.3"
+        "zh": "Artificial Analysis Intelligence Index v4.3.2",
+        "en": "Artificial Analysis Intelligence Index v4.3.2"
       },
       "source": "Artificial Analysis",
       "url": "https://artificialanalysis.ai/leaderboards/models",
@@ -17,14 +17,14 @@
         "en": "General intelligence: agentic work, coding, scientific reasoning and general knowledge rolled into one number"
       },
       "explainer": {
-        "zh": "Artificial Analysis 是一家独立评测机构。它用同一套流程自己跑 10 项评测，再按四个类别加权合成一个 0–100 的指数，数字越高，模型的总体水平越强。当前的 v4.3 版本更偏重 Agent 实际干活：Agent 类占 30%，包括 AA-Briefcase、GDPval-AA v2.1 和 AutomationBench-AA，要求模型交付文件、完成职场任务或调用 API 跑通 SaaS 工作流；编程类占 20%，包括 Terminal-Bench 4.0 和 SciCode；科学推理类占 20%，包括 Humanity’s Last Exam 和物理研究题 CritPt；通用类占 30%，包括知识与幻觉评测 AA-Omniscience、长 PDF 文档推理 GDP.pdf 和长上下文推理 AA-LCR。它适合快速回答“这个模型大概处在什么位置”，但看不出某项具体能力的强弱。同一模型的不同推理强度（low / high / max）会被当作不同条目分别计分。",
-        "en": "Artificial Analysis is an independent evaluator. It runs 10 evaluations itself under one harness and blends them, by four weighted categories, into a single 0–100 index; higher means stronger overall. The current v4.3 leans toward agents doing real work: Agents carry 30% (AA-Briefcase, GDPval-AA v2.1 and AutomationBench-AA, which require file deliverables, workplace tasks or SaaS workflows driven through APIs); Coding 20% (Terminal-Bench 4.0 and SciCode); Scientific Reasoning 20% (Humanity’s Last Exam and the physics-research benchmark CritPt); and General 30% (AA-Omniscience for knowledge and hallucination, GDP.pdf for long-PDF reasoning, and AA-LCR for long-context reasoning). It answers “roughly where does this model sit?” quickly, but it cannot tell you about any single skill. Each reasoning-effort setting (low / high / max) of a model is scored as its own entry."
+        "zh": "Artificial Analysis 是一家独立评测机构。它用同一套流程自己跑 10 项评测，再按四个类别加权合成一个 0–100 的指数，数字越高，模型的总体水平越强。当前的 v4.3.2 版本更偏重 Agent 实际干活：Agent 类占 30%，包括 AA-Briefcase v1.1、GDPval-AA v2.1 和 AutomationBench-AA，要求模型交付文件、完成职场任务或调用 API 跑通 SaaS 工作流；编程类占 20%，包括 Terminal-Bench 4.0 和 SciCode；科学推理类占 20%，包括 Humanity’s Last Exam 和物理研究题 CritPt；通用类占 30%，包括知识与幻觉评测 AA-Omniscience、长 PDF 文档推理 GDP.pdf 和长上下文推理 AA-LCR v1.1。它适合快速回答“这个模型大概处在什么位置”，但看不出某项具体能力的强弱。同一模型的不同推理强度（low / high / max）会被当作不同条目分别计分。",
+        "en": "Artificial Analysis is an independent evaluator. It runs 10 evaluations itself under one harness and blends them, by four weighted categories, into a single 0–100 index; higher means stronger overall. The current v4.3.2 leans toward agents doing real work: Agents carry 30% (AA-Briefcase v1.1, GDPval-AA v2.1 and AutomationBench-AA, which require file deliverables, workplace tasks or SaaS workflows driven through APIs); Coding 20% (Terminal-Bench 4.0 and SciCode); Scientific Reasoning 20% (Humanity’s Last Exam and the physics-research benchmark CritPt); and General 30% (AA-Omniscience for knowledge and hallucination, GDP.pdf for long-PDF reasoning, and AA-LCR v1.1 for long-context reasoning). It answers “roughly where does this model sit?” quickly, but it cannot tell you about any single skill. Each reasoning-effort setting (low / high / max) of a model is scored as its own entry."
       },
       "description": {
-        "zh": "分数怎么读：0–100 的相对指数，只在同一时期、同一版本的模型之间比较有意义。v4.3 用 AutomationBench-AA 替换了 𝜏³-Banking，并把 Terminal-Bench 2.1 换成更难的 4.0；随后的 v4.3.2 又随 GDPval-AA v2.1 更换了 Elo 锚点，因此不能与旧版本的指数直接比较。本页收录 2026 年 10 月 4 日官网默认（Current）榜单中指数不低于 45 的全部条目；标有 with fallback 的 Anthropic 条目包含拒答后的备用模型机制，这里沿用推理档位命名。",
-        "en": "How to read it: a relative 0–100 index, only meaningful among models scored in the same period on the same version. V4.3 replaced 𝜏³-Banking with AutomationBench-AA and Terminal-Bench 2.1 with the harder 4.0, and v4.3.2 then re-anchored the GDPval-AA v2.1 Elo, so scores should not be compared directly with older versions. This page includes every entry scoring 45 or above on the default (Current) leaderboard as of October 4, 2026; Anthropic entries that AA labels “with fallback” include a backup model after refusals, and are named here by reasoning effort."
+        "zh": "分数怎么读：0–100 的相对指数，只在同一时期、同一版本的模型之间比较有意义。v4.3 用 AutomationBench-AA 替换了 𝜏³-Banking，并把 Terminal-Bench 2.1 换成更难的 4.0；随后的 v4.3.2 又随 GDPval-AA v2.1 更换了 Elo 锚点，因此不能与旧版本的指数直接比较。本页收录 2026 年 10 月 16 日官网默认（Current）榜单中指数不低于 45 的全部条目；标有 with fallback 的 Anthropic 条目包含拒答后的备用模型机制，这里沿用推理档位命名。",
+        "en": "How to read it: a relative 0–100 index, only meaningful among models scored in the same period on the same version. V4.3 replaced 𝜏³-Banking with AutomationBench-AA and Terminal-Bench 2.1 with the harder 4.0, and v4.3.2 then re-anchored the GDPval-AA v2.1 Elo, so scores should not be compared directly with older versions. This page includes every entry scoring 45 or above on the default (Current) leaderboard as of October 16, 2026; Anthropic entries that AA labels “with fallback” include a backup model after refusals, and are named here by reasoning effort."
       },
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "related_reading": {
         "title": {
           "zh": "查看 Intelligence Index 官方评测方法与版本记录",
@@ -44,7 +44,7 @@
         "en": "GDPval-AA v2.1"
       },
       "source": "Artificial Analysis",
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "url": "https://artificialanalysis.ai/evaluations/gdpval-aa",
       "format": "integer",
       "score_label": {
@@ -60,8 +60,8 @@
         "en": "GDPval-AA v2.1 is an independent Artificial Analysis evaluation built on OpenAI’s GDPval dataset. It uses the 220-task public gold set across 44 occupations and nine industries, requiring actual work products rather than answers alone. For example, an official sample asks for a one-page stage-plot PDF for a touring band: place the singers, drummer, amplifiers and microphones correctly, then list the input and output connections. Explaining how to draw the diagram is not enough; the model must produce a file whose content and layout meet the brief. All models work through the Stirrup agent harness with shell access, file processing, web search and browsing, for up to 250 turns per task. Model identities are hidden and an LLM judge sampled from a three-model panel compares two submissions for the same task; these comparisons are aggregated into Elo ratings."
       },
       "description": {
-        "zh": "Elo 越高，表示交付成果在这套任务的两两比较中更受评审偏好；DeepSeek V4.1 Flash (Max) 固定为 1,600 分作为锚点，其他模型都相对它计分。比如 A 得 1,500 分、B 得 1,200 分，只能说明 A 在这一评测中的相对表现更强，不表示 A 的正确率是 150%，也不表示效率高 25%。Elo 可以低于 0，表中的 ± 数值是官方公布的 95% 置信区间，分数接近时不要把名次差当成确定差距。本页保留 2026 年 10 月 4 日核对到的全部 282 条成绩和官方模型配置；标有 Fallback 的条目包含备用模型机制，不能当成单一模型独立完成的结果。v2.1 沿用 v2 的任务、工具和评审流程，但更换了锚点并改用 Crowd-BT 模型拟合评分，分数整体平移，因此不能与 v2 快照混用。榜单会随新增比较而变化，也不能直接与 v1、模型发布时的旧快照或 OpenAI 自己公布的 GDPval 胜率混用；它也不是 AA Intelligence Index 的综合分。",
-        "en": "Higher Elo means the deliverables are preferred more often in pairwise comparisons on this task set; DeepSeek V4.1 Flash (Max) is pinned at 1,600 as the anchor and every other rating is fitted relative to it. For example, ratings of 1,500 for A and 1,200 for B indicate stronger relative performance for A, not 150% accuracy or 25% greater efficiency. Elo can be negative, and the ± values are the published 95% confidence intervals; small ranking gaps should not be treated as certain differences. This snapshot preserves all 282 results and official model configurations checked on October 4, 2026. Entries labeled Fallback include a backup-model mechanism and are not results from a single model working entirely alone. V2.1 keeps v2’s tasks, tools and judging but changes the anchor and fits ratings with a Crowd-BT model, shifting all values, so it must not be mixed with the v2 snapshot. Ratings can change as new comparisons are added, and should not be mixed with v1, launch-day snapshots or OpenAI’s own GDPval win rates; they are also distinct from the overall AA Intelligence Index."
+        "zh": "Elo 越高，表示交付成果在这套任务的两两比较中更受评审偏好；DeepSeek V4.1 Flash (Max) 固定为 1,600 分作为锚点，其他模型都相对它计分。比如 A 得 1,500 分、B 得 1,200 分，只能说明 A 在这一评测中的相对表现更强，不表示 A 的正确率是 150%，也不表示效率高 25%。Elo 可以低于 0，表中的 ± 数值是官方公布的 95% 置信区间，分数接近时不要把名次差当成确定差距。本页保留 2026 年 10 月 16 日核对到的全部 295 条成绩和官方模型配置；标有 Fallback 的条目包含备用模型机制，不能当成单一模型独立完成的结果。v2.1 沿用 v2 的任务、工具和评审流程，但更换了锚点并改用 Crowd-BT 模型拟合评分，分数整体平移，因此不能与 v2 快照混用。榜单会随新增比较而变化，也不能直接与 v1、模型发布时的旧快照或 OpenAI 自己公布的 GDPval 胜率混用；它也不是 AA Intelligence Index 的综合分。",
+        "en": "Higher Elo means the deliverables are preferred more often in pairwise comparisons on this task set; DeepSeek V4.1 Flash (Max) is pinned at 1,600 as the anchor and every other rating is fitted relative to it. For example, ratings of 1,500 for A and 1,200 for B indicate stronger relative performance for A, not 150% accuracy or 25% greater efficiency. Elo can be negative, and the ± values are the published 95% confidence intervals; small ranking gaps should not be treated as certain differences. This snapshot preserves all 295 results and official model configurations checked on October 16, 2026. Entries labeled Fallback include a backup-model mechanism and are not results from a single model working entirely alone. V2.1 keeps v2’s tasks, tools and judging but changes the anchor and fits ratings with a Crowd-BT model, shifting all values, so it must not be mixed with the v2 snapshot. Ratings can change as new comparisons are added, and should not be mixed with v1, launch-day snapshots or OpenAI’s own GDPval win rates; they are also distinct from the overall AA Intelligence Index."
       },
       "related_reading": {
         "title": {
@@ -82,7 +82,7 @@
         "en": "Vals Index"
       },
       "source": "Vals AI",
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "url": "https://www.vals.ai/benchmarks/vals_index",
       "format": "percent",
       "score_label": {
@@ -98,8 +98,8 @@
         "en": "Vals Index is Vals AI’s composite measure of agent performance on real-world work, currently at version 2.1. It covers finance, coding, legal and tax tasks: financial research and Excel modeling; terminal work, app building and code migration; legal research and long-horizon legal work products; and research-grade U.S. corporate tax questions. Think of it as a report card with differently weighted subjects: average each sector’s benchmark scores first, then combine the four sector averages. Finance has the greatest weight, so models with similar coding results can have different overall scores because of financial research and modeling. Finance comprises Finance Agent v2 and the Excel Modeling Benchmark; coding comprises Terminal-Bench 4.0, Vibe Code Bench and Code Migration; legal comprises Legal Research Bench and Harvey’s Legal Agent Benchmark; tax is Tax Agent Bench on its own. The weights use the sectors’ approximate shares of U.S. GDP: finance and insurance 8.0, information 5.6, legal services 1.2, and accounting and tax preparation 0.5, totaling 15.3; normalized weights are approximately 52.3%, 36.6%, 7.8% and 3.3%."
       },
       "description": {
-        "zh": "分数越高，表示在这组任务和权重下的综合表现越好。计算方式为（8 × 金融平均分 + 5.6 × 编程平均分 + 1.2 × 法律平均分 + 0.5 × 税务得分）÷ 15.3。例如四个领域分别得 60、80、40、50 分，综合指数约为 65.4%。它不是所有任务的简单正确率，也不表示已经能替代相同比例的岗位或创造相同比例的 GDP。收录官方标注 2026 年 10 月 2 日更新的 v2.1 榜单全部 43 条模型成绩，保留官方公布的推理设置。v2.1 新增税务领域，并把编程中的 Terminal-Bench 2.1 换成更难的 4.0，分数普遍低于 v2；不同版本的组成与权重会变化，不宜直接比较。Code Migration 在此指数中使用固定子集：50 个 CLI 迁移任务和全部 10 个 COBOL 任务，按 75% / 25% 加权，不能直接拿其完整榜单总分替代。表中保留官方综合分，不用本站其他评测的分数重新拼算；来源中的标准误也不作为 95% 置信区间展示。",
-        "en": "Higher scores mean stronger overall performance under this specific task mix and weighting. The formula is (8 × Finance + 5.6 × Coding + 1.2 × Legal + 0.5 × Tax) ÷ 15.3. For example, sector scores of 60, 80, 40 and 50 yield approximately 65.4%. This is neither a simple success rate across all tasks nor a percentage of jobs automated or GDP generated. This snapshot includes all 43 model results from the v2.1 leaderboard marked updated October 2, 2026, retaining published reasoning settings. V2.1 adds the tax sector and replaces Terminal-Bench 2.1 with the harder 4.0 in coding, so scores are generally lower than under v2. Components and weights change between versions, so their scores should not be compared directly. Code Migration uses a fixed subset of 50 CLI migration tasks plus all 10 COBOL tasks, weighted 75% / 25%; its full standalone leaderboard score cannot simply be substituted. We retain the published composite scores instead of recomputing them from other benchmarks on this site, and do not present source standard errors as 95% confidence intervals."
+        "zh": "分数越高，表示在这组任务和权重下的综合表现越好。计算方式为（8 × 金融平均分 + 5.6 × 编程平均分 + 1.2 × 法律平均分 + 0.5 × 税务得分）÷ 15.3。例如四个领域分别得 60、80、40、50 分，综合指数约为 65.4%。它不是所有任务的简单正确率，也不表示已经能替代相同比例的岗位或创造相同比例的 GDP。收录官方标注 2026 年 10 月 13 日更新的 v2.1 榜单全部 48 条模型成绩，保留官方公布的推理设置。v2.1 新增税务领域，并把编程中的 Terminal-Bench 2.1 换成更难的 4.0，分数普遍低于 v2；不同版本的组成与权重会变化，不宜直接比较。Code Migration 在此指数中使用固定子集：50 个 CLI 迁移任务和全部 10 个 COBOL 任务，按 75% / 25% 加权，不能直接拿其完整榜单总分替代。表中保留官方综合分，不用本站其他评测的分数重新拼算；来源中的标准误也不作为 95% 置信区间展示。",
+        "en": "Higher scores mean stronger overall performance under this specific task mix and weighting. The formula is (8 × Finance + 5.6 × Coding + 1.2 × Legal + 0.5 × Tax) ÷ 15.3. For example, sector scores of 60, 80, 40 and 50 yield approximately 65.4%. This is neither a simple success rate across all tasks nor a percentage of jobs automated or GDP generated. This snapshot includes all 48 model results from the v2.1 leaderboard marked updated October 13, 2026, retaining published reasoning settings. V2.1 adds the tax sector and replaces Terminal-Bench 2.1 with the harder 4.0 in coding, so scores are generally lower than under v2. Components and weights change between versions, so their scores should not be compared directly. Code Migration uses a fixed subset of 50 CLI migration tasks plus all 10 COBOL tasks, weighted 75% / 25%; its full standalone leaderboard score cannot simply be substituted. We retain the published composite scores instead of recomputing them from other benchmarks on this site, and do not present source standard errors as 95% confidence intervals."
       },
       "related_reading": {
         "title": {
@@ -134,7 +134,7 @@
         "zh": "分数怎么读：解决率百分比，附 95% 置信区间；官方榜与厂商自报可能不同，不同时另加脚注。",
         "en": "How to read it: percentage of tasks solved with a 95% confidence interval; when the official leaderboard and a vendor’s own report differ, both are footnoted."
       },
-      "checked_at": "2026-10-04"
+      "checked_at": "2026-10-16"
     },
     {
       "id": "deepswe",
@@ -145,7 +145,7 @@
       },
       "source": "Datacurve · DeepSWE",
       "url": "https://deepswe.datacurve.ai/",
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "format": "percent",
       "measures": {
         "zh": "软件工程能力：在真实代码库中完成长流程、多文件的开发任务",
@@ -156,8 +156,8 @@
         "en": "DeepSWE is a software engineering benchmark from Datacurve that tests whether coding agents can understand an existing project, plan changes and deliver working software. Its 113 original tasks span 91 repositories and five languages: TypeScript, JavaScript, Python, Go and Rust. Tasks include bug fixes, new features, API extensions and complex behavior changes, such as adding configuration-file support to a CLI or implementing XML diff and patch operations. Authors design tasks from scratch rather than adapting existing commits or pull requests, aiming to reduce exposure to reference solutions; this does not mean the underlying repositories were never in training data. The official leaderboard uses mini-swe-agent throughout and grades solutions with behavioral tests. In v1.1, only the committed patch is evaluated in a separate container, and Git history after the starting commit is hidden to reduce opportunities to bypass evaluation. It is useful for comparing complex engineering ability, while real-world results still depend on the agent scaffold, reasoning effort and task domain."
       },
       "description": {
-        "zh": "分数怎么读：Pass@1 是单次尝试的任务通过率，越高越好；重复运行用来估计成绩波动，不表示允许多次尝试后取成功。本页收录官方 v1.1 默认 Best 视图中的 21 款模型，每款保留该视图下成绩最好的推理档位，档位写在模型名后；官方榜尚未收录的新模型，暂列厂商自报成绩并在脚注注明，官方收录后替换。数值由官方数据换算为百分比并保留一位小数；± 为四轮整套评测之间波动估计的 95% 置信区间半宽，单位为百分点，并非任务抽样区间。部分配置的有效尝试数不足 452 次，成绩应按官方统计口径解读；小幅差距不代表稳定领先。此快照对应官方标注的 2026 年 9 月 3 日更新，不与 v1 分数混用。",
-        "en": "How to read it: Pass@1 is the task pass rate for a single attempt; higher is better. Repeated runs estimate variability, not success after multiple retries. This page includes the 21 models shown in the official v1.1 default Best view, retaining the best-scoring effort setting for each displayed model and naming that setting explicitly. New models the official board has not listed yet appear with vendor-reported scores, footnoted, until official results replace them. Official values are converted to percentages and rounded to one decimal place. ± is the half-width of a 95% confidence interval estimated from variation across four whole-benchmark runs, in percentage points, rather than a task-sampling interval. Some configurations have fewer than 452 valid attempts, so use the official denominator convention and do not treat small gaps as stable leads. This snapshot follows the official September 3, 2026 update and does not mix v1 scores."
+        "zh": "分数怎么读：Pass@1 是单次尝试的任务通过率，越高越好；重复运行用来估计成绩波动，不表示允许多次尝试后取成功。本页收录官方 v1.1 默认 Best 视图中的 21 款模型，每款保留该视图下成绩最好的推理档位，档位写在模型名后；官方榜尚未收录的新模型，暂列厂商自报成绩并在脚注注明，官方收录后替换。数值由官方数据换算为百分比并保留一位小数；± 为四轮整套评测之间波动估计的 95% 置信区间半宽，单位为百分点，并非任务抽样区间。部分配置的有效尝试数不足 452 次，成绩应按官方统计口径解读；小幅差距不代表稳定领先。此快照对应官方标注的 2026 年 9 月 22 日更新，不与 v1 分数混用。",
+        "en": "How to read it: Pass@1 is the task pass rate for a single attempt; higher is better. Repeated runs estimate variability, not success after multiple retries. This page includes the 21 models shown in the official v1.1 default Best view, retaining the best-scoring effort setting for each displayed model and naming that setting explicitly. New models the official board has not listed yet appear with vendor-reported scores, footnoted, until official results replace them. Official values are converted to percentages and rounded to one decimal place. ± is the half-width of a 95% confidence interval estimated from variation across four whole-benchmark runs, in percentage points, rather than a task-sampling interval. Some configurations have fewer than 452 valid attempts, so use the official denominator convention and do not treat small gaps as stable leads. This snapshot follows the official September 22, 2026 update and does not mix v1 scores."
       }
     },
     {
@@ -169,7 +169,7 @@
       },
       "source": "ProgramBench · Meta / Stanford / Harvard",
       "url": "https://programbench.com/",
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "format": "percent",
       "measures": {
         "zh": "从零开发能力：只运行参考程序、阅读文档，重建行为一致的软件",
@@ -202,7 +202,7 @@
         "en": "FrontierSWE v2"
       },
       "source": "Proximal Labs · FrontierSWE",
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "url": "https://www.frontierswe.com/",
       "format": "percent",
       "score_label": {
@@ -218,8 +218,8 @@
         "en": "FrontierSWE v2, developed by Proximal Labs, tests whether coding agents can sustain autonomous work on complex projects. Its 34 tasks cover system implementation, performance optimisation, scientific computing, visual reasoning and AI research, with five trials per task and up to 20 hours per trial. Think of it as a day-long engineering challenge: the agent must build, test, diagnose problems and iterate, rather than merely explain how to write the code. Examples include reimplementing Git in Zig, building a PostgreSQL-compatible service on SQLite, recreating a video in Remotion, and training a racing bot that drives from camera images alone. Models use the Proximus harness in Linux environments, sometimes with GPUs. The harness supports image viewing, context compaction and saved candidate submissions to encourage further improvements within the remaining time. Automated verifiers grade the final work, so these are model-plus-harness results, not measurements of the same model in Codex or Claude Code."
       },
       "description": {
-        "zh": "分数怎么读：每项任务先得到 0–1 的分数，再将五次试验的平均成绩跨任务汇总为 mean@5，以百分比显示；65% 不代表完整解决了 65% 的任务。分数下方的 worst@5–best@5 是每项任务五次试验中最差与最好成绩汇总后的范围，不是 95% 置信区间。费用以美元计，耗时以小时计，均为单次试验的平均值，不是跑完整套评测的总开销。本页收录官网主榜 All 视图的全部 20 个模型，统一使用主榜的得分、费用和耗时口径；分析图与主榜的汇总值有细微差异，未混用。v2 新增 21 项任务、移除 4 项旧任务，且改变了评分方式，不能与 v1 的排名直接比较。官方仓库已公开任务，但独立运行器与公共预构建镜像仍标为待发布。",
-        "en": "How to read it: each task earns a score from 0 to 1; scores are averaged over five trials and aggregated across tasks as mean@5, displayed as a percentage. A score of 65% does not mean 65% of tasks were fully solved. The worst@5–best@5 range aggregates each task’s worst and best trial scores; it is not a 95% confidence interval. Cost in USD and time in hours are per-trial averages, not the cost of a full benchmark evaluation. This page includes all 20 models from the official leaderboard’s All view, consistently using its scores, costs and times. Its analysis charts contain slightly different aggregates, which are not mixed here. V2 adds 21 tasks, retires four older tasks and changes scoring, so results are not directly comparable with v1 rankings. Task content is public, but the standalone runner and public prebuilt images are still marked as forthcoming."
+        "zh": "分数怎么读：每项任务先得到 0–1 的分数，再将五次试验的平均成绩跨任务汇总为 mean@5，以百分比显示；65% 不代表完整解决了 65% 的任务。分数下方的 worst@5–best@5 是每项任务五次试验中最差与最好成绩汇总后的范围，不是 95% 置信区间。费用以美元计，耗时以小时计，均为单次试验的平均值，不是跑完整套评测的总开销。本页收录官网主榜 All 视图的全部 22 个模型，统一使用主榜的得分、费用和耗时口径；分析图与主榜的汇总值有细微差异，未混用。v2 新增 21 项任务、移除 4 项旧任务，且改变了评分方式，不能与 v1 的排名直接比较。官方仓库已公开任务，但独立运行器与公共预构建镜像仍标为待发布。",
+        "en": "How to read it: each task earns a score from 0 to 1; scores are averaged over five trials and aggregated across tasks as mean@5, displayed as a percentage. A score of 65% does not mean 65% of tasks were fully solved. The worst@5–best@5 range aggregates each task’s worst and best trial scores; it is not a 95% confidence interval. Cost in USD and time in hours are per-trial averages, not the cost of a full benchmark evaluation. This page includes all 22 models from the official leaderboard’s All view, consistently using its scores, costs and times. Its analysis charts contain slightly different aggregates, which are not mixed here. V2 adds 21 tasks, retires four older tasks and changes scoring, so results are not directly comparable with v1 rankings. Task content is public, but the standalone runner and public prebuilt images are still marked as forthcoming."
       },
       "related_reading": {
         "title": {
@@ -240,7 +240,7 @@
         "en": "Finance Agent v2"
       },
       "source": "Vals AI",
-      "checked_at": "2026-10-04",
+      "checked_at": "2026-10-16",
       "url": "https://www.vals.ai/benchmarks/fabv2",
       "format": "percent",
       "score_label": {
@@ -256,8 +256,8 @@
         "en": "Finance Agent v2 is Vals AI’s benchmark for the research work of junior financial analysts. Rather than answering finance trivia, agents must find public-company filings, connect information across sources and produce supported answers. For example, comparing two companies’ inventory efficiency requires finding inventory and cost figures for the right periods, checking units and conventions, and calculating which company turns inventory over faster. Copying one number is not enough: the evidence, calculations and conclusion must hold up. The benchmark covers nine categories, including earnings, market analysis, comparables, precedent transactions, accounting adjustments, disclosures and financial modeling. Its 927 expert-reviewed questions comprise 27 public examples, 450 private validation questions and 450 held-out test questions; the reported results use only the test set. Models share tools for SEC EDGAR search, web search, HTML parsing, information retrieval, calculation and historical prices, with a two-hour limit per question. Each model runs three times and scores are averaged across runs, measuring performance with this shared tool environment."
       },
       "description": {
-        "zh": "默认按 Partial Credit（部分得分）排序：每道题由多项带权重的检查组成，只要任一关键项（dealbreaker）失败，该题就记零分；关键项正确、其他项有遗漏时可以获得部分分数。比如收入数字是关键项，数字错了，即使解释写得再完整也不能得分；数字正确但漏掉一项次要解释，则可能获得部分分数。All-Pass（全部通过率）更严格，只有一题的所有检查都通过才算成功，所以两列不能相加，部分得分 60% 也不代表完整答对了 60% 的题。评分由 GPT-5.4、Gemini 3.1 Pro 和 Claude Sonnet 4.6 组成的三模型评审团完成。收录官方标注 2026 年 10 月 1 日更新的 v2 榜单全部 74 条结果，保留公布的推理设置；不与 v1.1 混排。官网提供的是三轮均值的标准误，并非 95% 置信区间，本表不将其标成置信区间。",
-        "en": "The default ranking uses Partial Credit: each question has weighted checks, and failing any critical dealbreaker makes the entire question score zero. Correct dealbreakers with peripheral omissions can earn partial credit. For example, a wrong critical revenue figure earns zero even with a polished explanation, while a correct figure with a minor omission may earn partial credit. All-Pass counts a question as successful only if every check passes; the columns must not be added, and 60% Partial Credit does not mean 60% of questions were answered perfectly. A three-model jury of GPT-5.4, Gemini 3.1 Pro and Claude Sonnet 4.6 grades responses. This snapshot includes all 74 results from the v2 leaderboard marked updated October 1, 2026, retaining published reasoning settings and keeping v1.1 separate. The source reports standard errors across three runs, not 95% confidence intervals; this table does not relabel them as confidence intervals."
+        "zh": "默认按 Partial Credit（部分得分）排序：每道题由多项带权重的检查组成，只要任一关键项（dealbreaker）失败，该题就记零分；关键项正确、其他项有遗漏时可以获得部分分数。比如收入数字是关键项，数字错了，即使解释写得再完整也不能得分；数字正确但漏掉一项次要解释，则可能获得部分分数。All-Pass（全部通过率）更严格，只有一题的所有检查都通过才算成功，所以两列不能相加，部分得分 60% 也不代表完整答对了 60% 的题。评分由 GPT-5.4、Gemini 3.1 Pro 和 Claude Sonnet 4.6 组成的三模型评审团完成。收录官方标注 2026 年 10 月 12 日更新的 v2 榜单全部 78 条结果，保留公布的推理设置；不与 v1.1 混排。官网提供的是三轮均值的标准误，并非 95% 置信区间，本表不将其标成置信区间。",
+        "en": "The default ranking uses Partial Credit: each question has weighted checks, and failing any critical dealbreaker makes the entire question score zero. Correct dealbreakers with peripheral omissions can earn partial credit. For example, a wrong critical revenue figure earns zero even with a polished explanation, while a correct figure with a minor omission may earn partial credit. All-Pass counts a question as successful only if every check passes; the columns must not be added, and 60% Partial Credit does not mean 60% of questions were answered perfectly. A three-model jury of GPT-5.4, Gemini 3.1 Pro and Claude Sonnet 4.6 grades responses. This snapshot includes all 78 results from the v2 leaderboard marked updated October 12, 2026, retaining published reasoning settings and keeping v1.1 separate. The source reports standard errors across three runs, not 95% confidence intervals; this table does not relabel them as confidence intervals."
       }
     }
   ],
@@ -406,6 +406,9 @@
             "en": "Vals AI reports one Opus 4.8 refusal fallback among 1,350 run-task results; that task already scored zero, so the published score is unchanged."
           },
           "note_url": "https://www.vals.ai/benchmarks/fabv2"
+        },
+        "aa-index": {
+          "value": 51
         }
       }
     },
@@ -430,6 +433,9 @@
           "average_cost_usd": 301.27823945454537,
           "average_duration_seconds": 56966.39999999996,
           "agent": "Proximus"
+        },
+        "aa-index": {
+          "value": 50
         }
       }
     },
@@ -453,6 +459,9 @@
           "almost_resolved": 37.0,
           "average_pass_rate": 74.7,
           "agent": "mini-SWE-agent"
+        },
+        "aa-index": {
+          "value": 50
         }
       }
     },
@@ -506,6 +515,9 @@
           "all_pass": 41.362,
           "source_model": "openai/gpt-5.6-sol",
           "agent": "Vals Finance Agent v2"
+        },
+        "aa-index": {
+          "value": 47
         }
       }
     },
@@ -538,10 +550,10 @@
           "value": 45
         },
         "gdpval-aa": {
-          "value": 1671,
-          "ci": 21,
+          "value": 1666,
           "source_model": "Qwen3.8 Max (0902)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -587,7 +599,7 @@
           "agent": "mini-swe-agent"
         },
         "vals-index": {
-          "value": 54.825,
+          "value": 54.887,
           "source_model": "google/gemini-3.8-flash",
           "note": {
             "zh": "Vals AI 标注：2,281 个任务结果中有 3 次提供商拒答（0.13%），按失败计分。",
@@ -722,6 +734,10 @@
           "all_pass": 46.259,
           "source_model": "zai/glm-5.3-flash",
           "agent": "Vals Finance Agent v2"
+        },
+        "vals-index": {
+          "value": 44.581,
+          "source_model": "zai/glm-5.3-flash"
         }
       }
     },
@@ -820,7 +836,7 @@
           "agent": "mini-swe-agent"
         },
         "vals-index": {
-          "value": 51.775,
+          "value": 51.898,
           "source_model": "anthropic/claude-sonnet-5"
         },
         "finance-agent": {
@@ -1438,10 +1454,10 @@
       "creator": "MiniMax",
       "scores": {
         "gdpval-aa": {
-          "value": 1245,
-          "ci": 17,
+          "value": 1242,
           "source_model": "MiniMax-M3",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         },
         "vals-index": {
           "value": 36.535,
@@ -1767,10 +1783,10 @@
       "creator": "MiniMax",
       "scores": {
         "gdpval-aa": {
-          "value": 1013,
-          "ci": 19,
+          "value": 1010,
           "source_model": "MiniMax-M2.7",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         },
         "finance-agent": {
           "value": 27.887,
@@ -1816,10 +1832,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": 641,
-          "ci": 25,
+          "value": 639,
           "source_model": "Nemotron 3.5 Lightning",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         },
         "finance-agent": {
           "value": 18.5,
@@ -1874,14 +1890,14 @@
     },
     {
       "id": "glm-5-3-flash",
-      "name": "GLM 5.3 Flash",
+      "name": "GLM-5.3-Flash",
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1647,
-          "ci": 19,
-          "source_model": "GLM 5.3 Flash",
-          "agent": "Stirrup"
+          "value": 1644,
+          "source_model": "GLM-5.3-Flash",
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -1891,10 +1907,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1633,
-          "ci": 20,
+          "value": 1628,
           "source_model": "Qwen3.8-Flash-Next",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -1904,10 +1920,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1608,
-          "ci": 19,
+          "value": 1604,
           "source_model": "Qwen3.8 Max",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -1917,10 +1933,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1613,
-          "ci": 17,
+          "value": 1610,
           "source_model": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -1930,10 +1946,10 @@
       "creator": "MBZUAI Institute of Foundation Models",
       "scores": {
         "gdpval-aa": {
-          "value": 1366,
-          "ci": 21,
+          "value": 1361,
           "source_model": "K2 Horizon 375B A23B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -1943,10 +1959,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1250,
-          "ci": 22,
+          "value": 1247,
           "source_model": "GLM-5.2 (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -1957,9 +1973,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1242,
-          "ci": 20,
           "source_model": "GPT-5.6 Sol (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -1969,10 +1985,10 @@
       "creator": "Apodex",
       "scores": {
         "gdpval-aa": {
-          "value": 1197,
-          "ci": 21,
+          "value": 1191,
           "source_model": "Apodex 1.1",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -1982,10 +1998,10 @@
       "creator": "MBZUAI Institute of Foundation Models",
       "scores": {
         "gdpval-aa": {
-          "value": 1193,
-          "ci": 23,
+          "value": 1191,
           "source_model": "K2 Horizon MoVA 36B A4B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -1995,10 +2011,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1165,
-          "ci": 23,
+          "value": 1162,
           "source_model": "Ling-3.0-flash-VL",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2008,10 +2024,10 @@
       "creator": "Xiaomi",
       "scores": {
         "gdpval-aa": {
-          "value": 1123,
-          "ci": 18,
+          "value": 1121,
           "source_model": "MiMo-V2.5-Pro (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -2022,9 +2038,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1124,
-          "ci": 24,
           "source_model": "Inkling Small",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2034,10 +2050,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1131,
-          "ci": 18,
+          "value": 1128,
           "source_model": "Qwen3.7 Max",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2047,10 +2063,10 @@
       "creator": "AI9Stars",
       "scores": {
         "gdpval-aa": {
-          "value": 1111,
-          "ci": 25,
+          "value": 1104,
           "source_model": "G9v3-39A5B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2060,10 +2076,10 @@
       "creator": "Motif Technologies",
       "scores": {
         "gdpval-aa": {
-          "value": 1106,
-          "ci": 23,
+          "value": 1103,
           "source_model": "Motif 3 (Beta)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2073,10 +2089,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1119,
-          "ci": 18,
+          "value": 1116,
           "source_model": "GLM-5.1 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2086,10 +2102,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1110,
-          "ci": 19,
+          "value": 1109,
           "source_model": "GPT-5.6 Terra (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -2099,10 +2115,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1106,
-          "ci": 23,
+          "value": 1101,
           "source_model": "Ling-3.0-flash-Fin",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2112,10 +2128,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1100,
-          "ci": 20,
+          "value": 1098,
           "source_model": "GPT-5.6 Terra (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2125,10 +2141,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1070,
-          "ci": 19,
+          "value": 1067,
           "source_model": "Grok Build 0.1 0616",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -2139,9 +2155,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1067,
-          "ci": 23,
           "source_model": "Hy3",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2151,10 +2167,10 @@
       "creator": "Kimi",
       "scores": {
         "gdpval-aa": {
-          "value": 1040,
-          "ci": 19,
+          "value": 1038,
           "source_model": "Kimi K2.7 Code",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2164,10 +2180,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1074,
-          "ci": 21,
+          "value": 1072,
           "source_model": "Qwen3.8 27B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2177,10 +2193,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1017,
-          "ci": 22,
+          "value": 1014,
           "source_model": "GLM-4.7 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2190,10 +2206,10 @@
       "creator": "MBZUAI Institute of Foundation Models",
       "scores": {
         "gdpval-aa": {
-          "value": 1025,
-          "ci": 24,
+          "value": 1023,
           "source_model": "K2 Horizon 7B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2203,10 +2219,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": 1016,
-          "ci": 19,
+          "value": 1013,
           "source_model": "Nemotron 3 Ultra 550B A55B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2216,10 +2232,10 @@
       "creator": "Xiaomi",
       "scores": {
         "gdpval-aa": {
-          "value": 1003,
-          "ci": 24,
+          "value": 997,
           "source_model": "MiMo-V2.5",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2229,10 +2245,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": 1001,
-          "ci": 19,
+          "value": 998,
           "source_model": "Muse Spark",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2242,10 +2258,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 988,
-          "ci": 19,
+          "value": 986,
           "source_model": "Qwen3.6 27B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2255,10 +2271,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 993,
-          "ci": 19,
+          "value": 990,
           "source_model": "Qwen3.6 Plus",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2268,10 +2284,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 986,
-          "ci": 23,
+          "value": 983,
           "source_model": "Gemini 3.5 Flash-Lite",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2281,10 +2297,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 973,
-          "ci": 19,
+          "value": 969,
           "source_model": "GPT-5.5 (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2294,10 +2310,10 @@
       "creator": "SK Telecom",
       "scores": {
         "gdpval-aa": {
-          "value": 965,
-          "ci": 25,
+          "value": 964,
           "source_model": "A.X-K2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2307,10 +2323,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 966,
-          "ci": 22,
+          "value": 964,
           "source_model": "Qwen3.6 27B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2320,10 +2336,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 945,
-          "ci": 19,
+          "value": 942,
           "source_model": "Grok 4.3 (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -2333,10 +2349,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 948,
-          "ci": 24,
+          "value": 947,
           "source_model": "Ling 3.0 Flash",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2346,10 +2362,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 896,
-          "ci": 20,
+          "value": 892,
           "source_model": "Qwen3.6 35B A3B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -2359,10 +2375,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 911,
-          "ci": 22,
+          "value": 910,
           "source_model": "Claude 4.5 Sonnet (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2372,10 +2388,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 922,
-          "ci": 21,
+          "value": 920,
           "source_model": "GPT-5.6 Luna (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2385,10 +2401,10 @@
       "creator": "LongCat",
       "scores": {
         "gdpval-aa": {
-          "value": 873,
-          "ci": 22,
+          "value": 870,
           "source_model": "LongCat 2.0",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2398,10 +2414,10 @@
       "creator": "MBZUAI Institute of Foundation Models",
       "scores": {
         "gdpval-aa": {
-          "value": 884,
-          "ci": 25,
+          "value": 882,
           "source_model": "K2 Horizon 3.7B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2411,10 +2427,10 @@
       "creator": "StepFun",
       "scores": {
         "gdpval-aa": {
-          "value": 860,
-          "ci": 20,
+          "value": 856,
           "source_model": "Step 3.7 Flash",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -2424,10 +2440,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 850,
-          "ci": 26,
+          "value": 847,
           "source_model": "Qwen3.6 35B A3B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2437,10 +2453,10 @@
       "creator": "Kimi",
       "scores": {
         "gdpval-aa": {
-          "value": 843,
-          "ci": 24,
+          "value": 839,
           "source_model": "Kimi K2.5 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2450,10 +2466,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 817,
-          "ci": 20,
+          "value": 814,
           "source_model": "Qwen3.5 122B A10B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -2463,10 +2479,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 796,
-          "ci": 20,
+          "value": 793,
           "source_model": "Qwen3.5 397B A17B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2476,10 +2492,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 794,
-          "ci": 20,
+          "value": 792,
           "source_model": "Gemini 3.1 Pro Preview",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2489,10 +2505,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 770,
-          "ci": 20,
+          "value": 768,
           "source_model": "Qwen3.7 Plus",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2502,10 +2518,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 763,
-          "ci": 20,
+          "value": 761,
           "source_model": "Mistral Medium 3.5",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2515,10 +2531,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 761,
-          "ci": 23,
+          "value": 757,
           "source_model": "GLM-4.6 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2528,10 +2544,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 749,
-          "ci": 21,
+          "value": 746,
           "source_model": "Ring-2.6-1T",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2541,10 +2557,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 735,
-          "ci": 21,
+          "value": 732,
           "source_model": "Claude 4.5 Haiku (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2554,10 +2570,10 @@
       "creator": "KwaiKAT",
       "scores": {
         "gdpval-aa": {
-          "value": 734,
-          "ci": 22,
+          "value": 731,
           "source_model": "KAT-Coder-Pro V1",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2567,10 +2583,10 @@
       "creator": "KwaiKAT",
       "scores": {
         "gdpval-aa": {
-          "value": 736,
-          "ci": 25,
+          "value": 733,
           "source_model": "KAT Coder Pro V2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2580,10 +2596,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 713,
-          "ci": 24,
+          "value": 709,
           "source_model": "Qwen3.5 122B A10B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2593,10 +2609,10 @@
       "creator": "OpenBMB",
       "scores": {
         "gdpval-aa": {
-          "value": 711,
-          "ci": 26,
+          "value": 707,
           "source_model": "MiniCPM5-2B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2606,10 +2622,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 712,
-          "ci": 25,
+          "value": 709,
           "source_model": "DeepSeek V3.1 Terminus (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2619,10 +2635,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 695,
-          "ci": 26,
+          "value": 692,
           "source_model": "DeepSeek V3.2 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2632,10 +2648,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 695,
-          "ci": 23,
+          "value": 691,
           "source_model": "Claude 4 Sonnet (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2645,10 +2661,10 @@
       "creator": "Xiaomi",
       "scores": {
         "gdpval-aa": {
-          "value": 631,
-          "ci": 25,
+          "value": 628,
           "source_model": "MiMo-V2-Flash (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2658,10 +2674,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 623,
-          "ci": 21,
+          "value": 620,
           "source_model": "Gemma 4 31B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2671,10 +2687,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 612,
-          "ci": 21,
+          "value": 609,
           "source_model": "gpt-oss-120b (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2684,10 +2700,10 @@
       "creator": "IBM",
       "scores": {
         "gdpval-aa": {
-          "value": 579,
-          "ci": 24,
+          "value": 576,
           "source_model": "Granite 4.2 30B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2697,10 +2713,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 565,
-          "ci": 27,
+          "value": 561,
           "source_model": "Ling 3.0 Tiny",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 26
         }
       }
     },
@@ -2710,10 +2726,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 569,
-          "ci": 21,
+          "value": 566,
           "source_model": "Gemma 4 26B A4B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2723,10 +2739,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 550,
-          "ci": 24,
+          "value": 547,
           "source_model": "Gemma 4 31B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2736,10 +2752,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 547,
-          "ci": 22,
+          "value": 544,
           "source_model": "Devstral 2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2749,10 +2765,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 532,
-          "ci": 22,
+          "value": 528,
           "source_model": "Devstral Small 2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2762,10 +2778,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 517,
-          "ci": 24,
+          "value": 514,
           "source_model": "Qwen3 Coder Next",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2775,10 +2791,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 512,
-          "ci": 22,
+          "value": 509,
           "source_model": "GPT-5.5 Instant (June 2026)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2788,10 +2804,10 @@
       "creator": "Cohere",
       "scores": {
         "gdpval-aa": {
-          "value": 518,
-          "ci": 23,
+          "value": 515,
           "source_model": "Command A+",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         },
         "finance-agent": {
           "value": 9.044,
@@ -2807,10 +2823,10 @@
       "creator": "Inception",
       "scores": {
         "gdpval-aa": {
-          "value": 498,
-          "ci": 24,
+          "value": 494,
           "source_model": "Mercury 2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2820,10 +2836,10 @@
       "creator": "IBM",
       "scores": {
         "gdpval-aa": {
-          "value": 495,
-          "ci": 25,
+          "value": 492,
           "source_model": "Granite 4.2 8B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2833,10 +2849,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": 493,
-          "ci": 21,
+          "value": 490,
           "source_model": "Nemotron 3 Super 120B A12B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2846,10 +2862,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 459,
-          "ci": 22,
+          "value": 456,
           "source_model": "Gemini 2.5 Pro",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2859,10 +2875,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 434,
-          "ci": 21,
+          "value": 431,
           "source_model": "Gemini 3.1 Flash-Lite",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2872,10 +2888,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 430,
-          "ci": 25,
+          "value": 427,
           "source_model": "Gemma 4 12B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2885,10 +2901,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 423,
-          "ci": 21,
+          "value": 420,
           "source_model": "Mistral Large 3",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -2898,10 +2914,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 423,
-          "ci": 23,
+          "value": 420,
           "source_model": "Qwen3.5 9B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2911,10 +2927,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 380,
-          "ci": 22,
+          "value": 377,
           "source_model": "Mistral Small 3.1",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2924,10 +2940,10 @@
       "creator": "LG AI Research",
       "scores": {
         "gdpval-aa": {
-          "value": 370,
-          "ci": 25,
+          "value": 367,
           "source_model": "K-EXAONE (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -2937,10 +2953,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 365,
-          "ci": 23,
+          "value": 363,
           "source_model": "Mistral Small 4 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -2950,10 +2966,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 389,
-          "ci": 23,
+          "value": 386,
           "source_model": "Mistral Medium 3.1",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -2963,10 +2979,10 @@
       "creator": "Arcee AI",
       "scores": {
         "gdpval-aa": {
-          "value": 340,
-          "ci": 25,
+          "value": 337,
           "source_model": "Trinity Large Thinking",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -2976,10 +2992,10 @@
       "creator": "Amazon",
       "scores": {
         "gdpval-aa": {
-          "value": 335,
-          "ci": 21,
+          "value": 332,
           "source_model": "Nova 2.0 Pro Preview (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -2989,10 +3005,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 325,
-          "ci": 22,
+          "value": 321,
           "source_model": "DiffusionGemma 26B A4B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3002,10 +3018,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 317,
-          "ci": 24,
+          "value": 314,
           "source_model": "Qwen3 235B A22B 2507 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3015,10 +3031,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 322,
-          "ci": 24,
+          "value": 319,
           "source_model": "Ling 2.6 Flash",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3028,10 +3044,10 @@
       "creator": "Celeris",
       "scores": {
         "gdpval-aa": {
-          "value": 305,
-          "ci": 25,
+          "value": 302,
           "source_model": "Celeris-1",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3041,10 +3057,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 299,
-          "ci": 23,
+          "value": 295,
           "source_model": "DeepSeek R1 (Jan '25)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3054,10 +3070,10 @@
       "creator": "Cohere",
       "scores": {
         "gdpval-aa": {
-          "value": 315,
-          "ci": 23,
+          "value": 312,
           "source_model": "North Mini Code",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3067,10 +3083,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 273,
-          "ci": 23,
+          "value": 270,
           "source_model": "GPT-4.1 mini",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3080,10 +3096,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": 268,
-          "ci": 25,
+          "value": 265,
           "source_model": "Nemotron Cascade 2 30B A3B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3093,10 +3109,10 @@
       "creator": "Upstage",
       "scores": {
         "gdpval-aa": {
-          "value": 268,
-          "ci": 21,
+          "value": 265,
           "source_model": "Solar Pro 3",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -3106,10 +3122,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": 258,
-          "ci": 21,
+          "value": 255,
           "source_model": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3119,10 +3135,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 251,
-          "ci": 21,
+          "value": 248,
           "source_model": "Ministral 3 14B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3132,10 +3148,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": 233,
-          "ci": 25,
+          "value": 230,
           "source_model": "Nemotron 3 Nano Omni 30B A3B Reasoning",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3145,10 +3161,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 214,
-          "ci": 22,
+          "value": 211,
           "source_model": "Claude 3.5 Haiku",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3158,10 +3174,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 217,
-          "ci": 22,
+          "value": 214,
           "source_model": "Ministral 3 8B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3171,10 +3187,10 @@
       "creator": "IBM",
       "scores": {
         "gdpval-aa": {
-          "value": 205,
-          "ci": 26,
+          "value": 202,
           "source_model": "Granite 4.2 3B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3184,10 +3200,10 @@
       "creator": "IBM",
       "scores": {
         "gdpval-aa": {
-          "value": 192,
-          "ci": 21,
+          "value": 188,
           "source_model": "Granite 4.1 30B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3197,10 +3213,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 172,
-          "ci": 23,
+          "value": 169,
           "source_model": "Magistral Medium 1.2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3210,10 +3226,10 @@
       "creator": "MBZUAI Institute of Foundation Models",
       "scores": {
         "gdpval-aa": {
-          "value": 133,
-          "ci": 23,
+          "value": 130,
           "source_model": "K2 Think V2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3223,10 +3239,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 132,
-          "ci": 24,
+          "value": 128,
           "source_model": "Qwen3 Next 80B A3B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -3236,10 +3252,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 73,
-          "ci": 23,
+          "value": 70,
           "source_model": "DeepSeek V3 0324",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3249,10 +3265,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 71,
-          "ci": 25,
+          "value": 68,
           "source_model": "Qwen3 30B A3B 2507 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -3262,10 +3278,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 37,
-          "ci": 23,
+          "value": 34,
           "source_model": "Qwen3 32B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3275,10 +3291,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 32,
-          "ci": 22,
+          "value": 30,
           "source_model": "Ministral 3 3B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3288,10 +3304,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": 8,
-          "ci": 23,
+          "value": 4,
           "source_model": "Magistral Small 1.2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3301,10 +3317,10 @@
       "creator": "Liquid AI",
       "scores": {
         "gdpval-aa": {
-          "value": -4,
-          "ci": 27,
+          "value": -8,
           "source_model": "LFM2.5-2.6B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 26
         }
       }
     },
@@ -3314,10 +3330,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": -17,
-          "ci": 23,
+          "value": -20,
           "source_model": "GPT-4",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3327,10 +3343,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": -19,
-          "ci": 24,
+          "value": -22,
           "source_model": "GPT-4o mini",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3340,10 +3356,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": -21,
-          "ci": 23,
+          "value": -24,
           "source_model": "Qwen3 14B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3353,10 +3369,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": -25,
-          "ci": 24,
+          "value": -28,
           "source_model": "DeepSeek V3 (Dec '24)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3366,10 +3382,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": -33,
-          "ci": 26,
+          "value": -36,
           "source_model": "Gemma 4 E4B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 26
         }
       }
     },
@@ -3379,10 +3395,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": -43,
-          "ci": 26,
+          "value": -46,
           "source_model": "Qwen3.5 2B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3392,10 +3408,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": -45,
-          "ci": 24,
+          "value": -48,
           "source_model": "Qwen3 8B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3405,10 +3421,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": -55,
-          "ci": 26,
+          "value": -58,
           "source_model": "NVIDIA Nemotron 3 Nano 4B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3418,10 +3434,10 @@
       "creator": "IBM",
       "scores": {
         "gdpval-aa": {
-          "value": -142,
-          "ci": 25,
+          "value": -145,
           "source_model": "Granite 4.1 3B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -3431,10 +3447,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": -160,
-          "ci": 22,
+          "value": -163,
           "source_model": "Llama 4 Scout",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3444,10 +3460,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": -170,
-          "ci": 23,
+          "value": -174,
           "source_model": "Llama 3.3 Instruct 70B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3457,10 +3473,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": -185,
-          "ci": 26,
+          "value": -188,
           "source_model": "Gemma 4 E2B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -3470,10 +3486,10 @@
       "creator": "Mistral",
       "scores": {
         "gdpval-aa": {
-          "value": -192,
-          "ci": 24,
+          "value": -195,
           "source_model": "Mistral Small 3.2",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3483,10 +3499,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": -210,
-          "ci": 24,
+          "value": -213,
           "source_model": "GPT-4.1 nano",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -3496,10 +3512,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": -272,
-          "ci": 22,
+          "value": -275,
           "source_model": "Llama 4 Maverick",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3509,10 +3525,10 @@
       "creator": "NVIDIA",
       "scores": {
         "gdpval-aa": {
-          "value": -353,
-          "ci": 22,
+          "value": -356,
           "source_model": "NVIDIA Nemotron 3 Nano 30B A3B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3522,10 +3538,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": -363,
-          "ci": 23,
+          "value": -366,
           "source_model": "Qwen3.5 2B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3535,10 +3551,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": -367,
-          "ci": 23,
+          "value": -370,
           "source_model": "Qwen3.5 0.8B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3548,10 +3564,10 @@
       "creator": "OpenBMB",
       "scores": {
         "gdpval-aa": {
-          "value": -366,
-          "ci": 21,
+          "value": -369,
           "source_model": "MiniCPM-V 4.6 1.3B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3561,10 +3577,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": -384,
-          "ci": 21,
+          "value": -387,
           "source_model": "Llama 3.1 Instruct 8B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3574,10 +3590,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": -385,
-          "ci": 22,
+          "value": -388,
           "source_model": "Qwen3.5 0.8B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -3587,10 +3603,10 @@
       "creator": "Nanbeige",
       "scores": {
         "gdpval-aa": {
-          "value": -400,
-          "ci": 22,
+          "value": -404,
           "source_model": "Nanbeige4.1-3B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3600,10 +3616,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": -405,
-          "ci": 21,
+          "value": -408,
           "source_model": "Gemma 3 27B Instruct",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3613,10 +3629,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": -405,
-          "ci": 21,
+          "value": -408,
           "source_model": "Gemma 3 12B Instruct",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3626,10 +3642,10 @@
       "creator": "Microsoft",
       "scores": {
         "gdpval-aa": {
-          "value": -405,
-          "ci": 21,
+          "value": -408,
           "source_model": "Phi-4 Mini Instruct",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3639,10 +3655,10 @@
       "creator": "MBZUAI Institute of Foundation Models",
       "scores": {
         "gdpval-aa": {
-          "value": -406,
-          "ci": 22,
+          "value": -409,
           "source_model": "K2 Horizon 0.9B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -3813,8 +3829,8 @@
           "value": 66.972,
           "source_model": "anthropic/claude-opus-5-5",
           "note": {
-            "zh": "使用官网默认成绩，包含拒答后的备用模型结果。Vals AI 标注：2,281 个任务结果中有 91 次 fallback（3.99%）；这不是所有任务都由单一模型独立完成的成绩。另有 18 次提供商拒答（0.79%），按失败计分。若将 fallback 任务按失败计分，成绩为 59.159%。",
-            "en": "The default published score includes fallback-assisted results. Vals AI flags 91 fallbacks across 2,281 task results (3.99%); this is not a score obtained entirely by one model without fallback assistance. It also reports 18 provider refusals (0.79%), scored as failures. Counting fallback tasks as failures gives 59.159%."
+            "zh": "使用官网默认成绩，包含拒答后的备用模型结果。这不是所有任务都由单一模型独立完成的成绩。Vals AI 写明：若将 fallback 任务按失败计分，成绩为 65.05%，名次不变。",
+            "en": "The default published score includes fallback-assisted results. This is not a score obtained entirely by one model without fallback assistance. Vals AI says counting those fallback tasks as failures lowers the score to 65.05%, with the rank order unchanged."
           },
           "note_url": "https://www.vals.ai/benchmarks/vals_index"
         },
@@ -3836,6 +3852,11 @@
             "en": "Self-reported in the Anthropic system card; not yet on the official leaderboard. Max effort, mean of five trials; the agent harness and confidence interval are not stated, so the setup may differ from the official mini-swe-agent runs."
           },
           "note_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+        },
+        "tbench-4": {
+          "value": 64.8,
+          "ci": 3.1,
+          "agent": "Claude Code"
         }
       }
     },
@@ -3866,6 +3887,11 @@
             "en": "The default published score includes fallback-assisted results. Vals AI flags 81 fallbacks across 1,350 task results (6.00%); this is not a score obtained entirely by one model without fallback assistance. Counting fallback tasks as failures gives 55.144%."
           },
           "note_url": "https://www.vals.ai/benchmarks/fabv2"
+        },
+        "tbench-4": {
+          "value": 61.8,
+          "ci": 2.9,
+          "agent": "Claude Code"
         }
       }
     },
@@ -3876,15 +3902,6 @@
       "scores": {
         "aa-index": {
           "value": 56
-        },
-        "tbench-4": {
-          "value": 66.4,
-          "agent": "Claude Code",
-          "note": {
-            "zh": "Anthropic system card 自报，官方榜尚未收录：xhigh 推理档位、Claude Code --bare 模式，5 轮均值，标准误约 ±2.6（非 95% 置信区间）；2.5% 的请求触发安全机制、由备用模型回答。max 档位为 64.8%。",
-            "en": "Self-reported in the Anthropic system card; not yet on the official leaderboard. xhigh effort, Claude Code in --bare mode, mean of five trials, standard error about ±2.6 (not a 95% confidence interval); 2.5% of requests were answered by a fallback model after safeguards triggered. Max effort scored 64.8%."
-          },
-          "note_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
         }
       }
     },
@@ -3945,6 +3962,11 @@
           "all_pass": 39.906,
           "source_model": "openai/gpt-6.1-sol",
           "agent": "Vals Finance Agent v2"
+        },
+        "tbench-4": {
+          "value": 58.2,
+          "ci": 3.1,
+          "agent": "Codex"
         }
       }
     },
@@ -4017,10 +4039,10 @@
           "value": 46
         },
         "gdpval-aa": {
-          "value": 1688,
-          "ci": 23,
+          "value": 1684,
           "source_model": "MiMo-V2.6-Pro",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4040,10 +4062,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1867,
-          "ci": 26,
+          "value": 1866,
           "source_model": "Claude Opus 5.5 (Max, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 26
         }
       }
     },
@@ -4053,10 +4075,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1840,
-          "ci": 24,
+          "value": 1838,
           "source_model": "Claude Sonnet 5.5 (Max, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -4066,10 +4088,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1837,
-          "ci": 25,
+          "value": 1831,
           "source_model": "Claude Opus 5.5 (Xhigh, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -4079,10 +4101,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1758,
-          "ci": 20,
+          "value": 1754,
           "source_model": "Claude Fable 5.1 (Max, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4092,10 +4114,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1735,
-          "ci": 21,
+          "value": 1732,
           "source_model": "Claude Fable 5.1 (Xhigh, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4106,9 +4128,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1728,
-          "ci": 26,
           "source_model": "Claude Sonnet 5.5 (Xhigh, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -4118,10 +4140,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1726,
-          "ci": 21,
+          "value": 1721,
           "source_model": "Claude Opus 5 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4131,10 +4153,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1716,
-          "ci": 23,
+          "value": 1711,
           "source_model": "Grok 4.7 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4144,10 +4166,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1710,
-          "ci": 20,
+          "value": 1706,
           "source_model": "Grok 4.7 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4157,10 +4179,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1708,
-          "ci": 23,
+          "value": 1704,
           "source_model": "Claude Opus 5.5 (High, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4170,10 +4192,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1692,
-          "ci": 20,
+          "value": 1691,
           "source_model": "Claude Opus 5 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4183,10 +4205,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": 1684,
-          "ci": 20,
+          "value": 1681,
           "source_model": "Muse Spark 1.3 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4196,10 +4218,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1653,
-          "ci": 20,
+          "value": 1650,
           "source_model": "GLM-5.3 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4209,10 +4231,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1647,
-          "ci": 20,
+          "value": 1645,
           "source_model": "Grok 4.6 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4223,9 +4245,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1635,
-          "ci": 20,
           "source_model": "Claude Fable 5.1 (High, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4235,10 +4257,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": 1630,
-          "ci": 20,
+          "value": 1627,
           "source_model": "Muse Spark 1.3 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4248,10 +4270,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1627,
-          "ci": 22,
+          "value": 1624,
           "source_model": "Gemini 4 Argon (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -4261,10 +4283,10 @@
       "creator": "InclusionAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1622,
-          "ci": 18,
+          "value": 1618,
           "source_model": "Ling 3.1 Flash",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4274,10 +4296,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1622,
-          "ci": 18,
+          "value": 1618,
           "source_model": "Grok 4.6 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4287,10 +4309,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1617,
-          "ci": 20,
+          "value": 1612,
           "source_model": "Grok 4.6 (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4300,10 +4322,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1613,
-          "ci": 20,
+          "value": 1608,
           "source_model": "Qwen3.8 2.4T A95B",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4313,10 +4335,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1611,
-          "ci": 17,
+          "value": 1609,
           "source_model": "GPT-5.6 Sol (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4326,10 +4348,10 @@
       "creator": "Xiaomi",
       "scores": {
         "gdpval-aa": {
-          "value": 1611,
-          "ci": 23,
+          "value": 1608,
           "source_model": "MiMo-V2.6-Flash",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4356,10 +4378,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1596,
-          "ci": 20,
+          "value": 1595,
           "source_model": "Claude Opus 5 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4369,10 +4391,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1589,
-          "ci": 24,
+          "value": 1588,
           "source_model": "Grok 4.7 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -4383,9 +4405,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1587,
-          "ci": 26,
           "source_model": "Step 5 Preview",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         },
         "vals-index": {
           "value": 49.354,
@@ -4405,10 +4427,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1586,
-          "ci": 22,
+          "value": 1584,
           "source_model": "Claude Opus 5.5 (Medium, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -4418,10 +4440,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1575,
-          "ci": 20,
+          "value": 1594,
           "source_model": "GPT-6.1 Sol (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -4431,10 +4453,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1572,
-          "ci": 18,
+          "value": 1568,
           "source_model": "GPT-5.6 Sol (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4444,10 +4466,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1552,
-          "ci": 24,
+          "value": 1549,
           "source_model": "Claude Sonnet 5.5 (High, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -4457,10 +4479,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1550,
-          "ci": 20,
+          "value": 1545,
           "source_model": "Claude Fable 5.1 (Medium, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4470,10 +4492,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1548,
-          "ci": 19,
+          "value": 1547,
           "source_model": "DeepSeek V4 Flash Vision (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -4483,10 +4505,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1542,
-          "ci": 25,
+          "value": 1573,
           "source_model": "GPT-6 Astra (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4496,10 +4518,10 @@
       "creator": "Kimi",
       "scores": {
         "gdpval-aa": {
-          "value": 1538,
-          "ci": 20,
+          "value": 1533,
           "source_model": "Kimi K3 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4509,10 +4531,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1516,
-          "ci": 26,
+          "value": 1556,
           "source_model": "GPT-6 Astra (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4522,10 +4544,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1510,
-          "ci": 18,
+          "value": 1538,
           "source_model": "GPT-6.1 Sol (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4535,10 +4557,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1509,
-          "ci": 25,
+          "value": 1508,
           "source_model": "GPT-6 Sol (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -4548,10 +4570,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1505,
-          "ci": 18,
+          "value": 1504,
           "source_model": "GPT-5.6 Sol (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4562,9 +4584,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1492,
-          "ci": 20,
           "source_model": "Claude Opus 5 (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4574,10 +4596,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1486,
-          "ci": 19,
+          "value": 1511,
           "source_model": "GPT-6.1 Sol (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4587,10 +4609,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1485,
-          "ci": 26,
+          "value": 1523,
           "source_model": "GPT-6 Astra (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4600,10 +4622,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": 1478,
-          "ci": 21,
+          "value": 1473,
           "source_model": "Muse Spark 1.2 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4614,9 +4636,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1469,
-          "ci": 20,
           "source_model": "Claude Fable 5.1 (Low, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4626,10 +4648,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1468,
-          "ci": 24,
+          "value": 1486,
           "source_model": "GPT-6 Astra (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4639,10 +4661,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1466,
-          "ci": 18,
+          "value": 1464,
           "source_model": "Claude Sonnet 5 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4652,10 +4674,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1464,
-          "ci": 18,
+          "value": 1459,
           "source_model": "GPT-5.6 Luna (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4665,10 +4687,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1457,
-          "ci": 24,
+          "value": 1455,
           "source_model": "GPT-6 Sol (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -4678,10 +4700,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1456,
-          "ci": 17,
+          "value": 1453,
           "source_model": "Claude Opus 4.8 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 16
         }
       }
     },
@@ -4691,10 +4713,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1455,
-          "ci": 21,
+          "value": 1450,
           "source_model": "DeepSeek V4 Pro 0813 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4704,10 +4726,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1453,
-          "ci": 18,
+          "value": 1452,
           "source_model": "GPT-5.6 Terra (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4717,10 +4739,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1449,
-          "ci": 18,
+          "value": 1447,
           "source_model": "GPT-5.6 Terra (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4730,10 +4752,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1438,
-          "ci": 20,
+          "value": 1434,
           "source_model": "DeepSeek V4 Flash 0731 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4743,10 +4765,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1438,
-          "ci": 22,
+          "value": 1432,
           "source_model": "GPT-6 Luna (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4756,10 +4778,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1435,
-          "ci": 21,
+          "value": 1436,
           "source_model": "Gemini 3.8 Flash (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4769,10 +4791,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1433,
-          "ci": 19,
+          "value": 1450,
           "source_model": "GPT-6.1 Sol (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4782,10 +4804,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1426,
-          "ci": 21,
+          "value": 1421,
           "source_model": "Gemini 3.8 Flash (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -4795,10 +4817,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1423,
-          "ci": 22,
+          "value": 1420,
           "source_model": "Qwen3.8 27B (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -4808,10 +4830,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1422,
-          "ci": 18,
+          "value": 1421,
           "source_model": "GPT-5.6 Sol (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -4821,10 +4843,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1409,
-          "ci": 21,
+          "value": 1410,
           "source_model": "Grok 4.6 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4834,10 +4856,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1403,
-          "ci": 19,
+          "value": 1400,
           "source_model": "GPT-5.6 Luna (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -4847,10 +4869,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1396,
-          "ci": 23,
+          "value": 1394,
           "source_model": "GPT-6 Sol (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4861,9 +4883,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1392,
-          "ci": 21,
           "source_model": "Gemini 3.7 Flash (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4873,10 +4895,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1389,
-          "ci": 20,
+          "value": 1384,
           "source_model": "Grok 4.5 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -4886,10 +4908,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 1383,
-          "ci": 20,
+          "value": 1382,
           "source_model": "Qwen3.8 27B (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4899,10 +4921,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1379,
-          "ci": 18,
+          "value": 1376,
           "source_model": "GPT-5.6 Terra (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -4912,10 +4934,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1375,
-          "ci": 17,
+          "value": 1372,
           "source_model": "GLM-5.2 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 16
         }
       }
     },
@@ -4925,10 +4947,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1366,
-          "ci": 26,
+          "value": 1389,
           "source_model": "GPT-6 Astra (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -4939,9 +4961,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1364,
-          "ci": 23,
           "source_model": "GPT-6 Luna (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -4952,9 +4974,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1363,
-          "ci": 20,
           "source_model": "Qwen3.8 27B (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -4964,10 +4986,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1362,
-          "ci": 19,
+          "value": 1358,
           "source_model": "Claude Sonnet 5 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -4977,10 +4999,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1361,
-          "ci": 22,
+          "value": 1360,
           "source_model": "Gemini 3.7 Flash (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -4990,10 +5012,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1356,
-          "ci": 17,
+          "value": 1352,
           "source_model": "Claude Opus 4.7 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -5003,10 +5025,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1353,
-          "ci": 17,
+          "value": 1351,
           "source_model": "GPT-5.5 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 16
         }
       }
     },
@@ -5016,10 +5038,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1350,
-          "ci": 25,
+          "value": 1346,
           "source_model": "GPT-6 Sol (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5029,10 +5051,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1344,
-          "ci": 22,
+          "value": 1341,
           "source_model": "DeepSeek V4.1 Flash (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5042,10 +5064,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1344,
-          "ci": 23,
+          "value": 1340,
           "source_model": "GPT-6 Luna (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5055,10 +5077,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1333,
-          "ci": 19,
+          "value": 1330,
           "source_model": "GPT-5.6 Luna (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5068,10 +5090,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1329,
-          "ci": 17,
+          "value": 1326,
           "source_model": "GPT-5.5 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 16
         }
       }
     },
@@ -5081,10 +5103,10 @@
       "creator": "China Mobile",
       "scores": {
         "gdpval-aa": {
-          "value": 1328,
-          "ci": 25,
+          "value": 1324,
           "source_model": "JT-4.1 Flash 236B A21B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -5094,10 +5116,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1327,
-          "ci": 22,
+          "value": 1323,
           "source_model": "Gemini 3.7 Flash (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5107,10 +5129,10 @@
       "creator": "Z AI",
       "scores": {
         "gdpval-aa": {
-          "value": 1325,
-          "ci": 22,
+          "value": 1322,
           "source_model": "GLM-5.3 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5120,10 +5142,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1324,
-          "ci": 23,
+          "value": 1323,
           "source_model": "Claude Sonnet 5.5 (Medium, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5133,10 +5155,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1310,
-          "ci": 19,
+          "value": 1307,
           "source_model": "Gemini 3.8 Flash (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5146,10 +5168,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1305,
-          "ci": 18,
+          "value": 1303,
           "source_model": "GPT-5.6 Sol (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -5159,10 +5181,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1304,
-          "ci": 22,
+          "value": 1302,
           "source_model": "Claude Opus 5 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5172,10 +5194,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1297,
-          "ci": 19,
+          "value": 1315,
           "source_model": "GPT-6.1 Sol (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5185,10 +5207,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1286,
-          "ci": 20,
+          "value": 1284,
           "source_model": "Gemini 3.6 Flash (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5198,10 +5220,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1269,
-          "ci": 19,
+          "value": 1265,
           "source_model": "GPT-5.6 Terra (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5212,9 +5234,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1262,
-          "ci": 23,
           "source_model": "GPT-6 Luna (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5224,10 +5246,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1258,
-          "ci": 19,
+          "value": 1254,
           "source_model": "Claude Sonnet 5 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5237,10 +5259,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1252,
-          "ci": 23,
+          "value": 1249,
           "source_model": "GPT-6 Sol (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5250,10 +5272,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1248,
-          "ci": 18,
+          "value": 1246,
           "source_model": "GPT-5.4 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -5263,10 +5285,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1236,
-          "ci": 23,
+          "value": 1235,
           "source_model": "Claude Opus 5.5 (Low, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5276,10 +5298,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1234,
-          "ci": 18,
+          "value": 1232,
           "source_model": "Claude Sonnet 4.6 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -5289,10 +5311,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1234,
-          "ci": 19,
+          "value": 1231,
           "source_model": "GPT-5.5 (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -5302,10 +5324,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": 1215,
-          "ci": 22,
+          "value": 1212,
           "source_model": "Muse Spark 1.1 (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5315,10 +5337,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1214,
-          "ci": 20,
+          "value": 1210,
           "source_model": "Claude Sonnet 5 (Non-reasoning, High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5328,10 +5350,10 @@
       "creator": "Google",
       "scores": {
         "gdpval-aa": {
-          "value": 1205,
-          "ci": 18,
+          "value": 1203,
           "source_model": "Gemini 3.5 Flash (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -5341,10 +5363,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1204,
-          "ci": 24,
+          "value": 1200,
           "source_model": "GPT-6 Sol (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5354,10 +5376,10 @@
       "creator": "Multiverse Computing",
       "scores": {
         "gdpval-aa": {
-          "value": 1184,
-          "ci": 22,
+          "value": 1182,
           "source_model": "Quasar 438B (Max, Based on GLM-5.2)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5367,10 +5389,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1179,
-          "ci": 23,
+          "value": 1175,
           "source_model": "Claude Sonnet 5.5 (Low, Default Fallback)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5380,10 +5402,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1160,
-          "ci": 19,
+          "value": 1157,
           "source_model": "Claude Sonnet 5 (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -5393,10 +5415,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1159,
-          "ci": 18,
+          "value": 1156,
           "source_model": "DeepSeek V4 Pro 0424 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 17
         }
       }
     },
@@ -5407,9 +5429,9 @@
       "scores": {
         "gdpval-aa": {
           "value": 1152,
-          "ci": 24,
           "source_model": "DeepSeek V4 Pro 0424 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5419,10 +5441,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1132,
-          "ci": 20,
+          "value": 1129,
           "source_model": "GPT-5.6 Luna (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -5432,10 +5454,10 @@
       "creator": "Kimi",
       "scores": {
         "gdpval-aa": {
-          "value": 1129,
-          "ci": 24,
+          "value": 1126,
           "source_model": "Kimi K3 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5445,10 +5467,10 @@
       "creator": "China Mobile",
       "scores": {
         "gdpval-aa": {
-          "value": 1124,
-          "ci": 23,
+          "value": 1123,
           "source_model": "JT-4.1 Flash 236B A21B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5458,10 +5480,10 @@
       "creator": "Motif Technologies",
       "scores": {
         "gdpval-aa": {
-          "value": 1123,
-          "ci": 24,
+          "value": 1117,
           "source_model": "Motif 3",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5471,10 +5493,10 @@
       "creator": "Upstage",
       "scores": {
         "gdpval-aa": {
-          "value": 1110,
-          "ci": 25,
+          "value": 1107,
           "source_model": "Solar Pro 4",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -5484,10 +5506,10 @@
       "creator": "Nex AGI",
       "scores": {
         "gdpval-aa": {
-          "value": 1105,
-          "ci": 21,
+          "value": 1103,
           "source_model": "Nex-N2-Pro (Based on Qwen3.5-397B-A17B)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5497,10 +5519,10 @@
       "creator": "Upstage",
       "scores": {
         "gdpval-aa": {
-          "value": 1090,
-          "ci": 25,
+          "value": 1089,
           "source_model": "Solar Mini 4",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -5510,10 +5532,10 @@
       "creator": "Thinking Machines",
       "scores": {
         "gdpval-aa": {
-          "value": 1079,
-          "ci": 23,
+          "value": 1076,
           "source_model": "Inkling (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5523,10 +5545,10 @@
       "creator": "Anthropic",
       "scores": {
         "gdpval-aa": {
-          "value": 1071,
-          "ci": 20,
+          "value": 1067,
           "source_model": "Claude Sonnet 5 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -5536,10 +5558,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1062,
-          "ci": 23,
+          "value": 1058,
           "source_model": "DeepSeek V4 Pro 0813 (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5549,10 +5571,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1049,
-          "ci": 24,
+          "value": 1045,
           "source_model": "GPT-6 Luna (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5562,10 +5584,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1049,
-          "ci": 20,
+          "value": 1045,
           "source_model": "GPT-5.5 (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -5575,10 +5597,10 @@
       "creator": "Kimi",
       "scores": {
         "gdpval-aa": {
-          "value": 1041,
-          "ci": 18,
+          "value": 1038,
           "source_model": "Kimi K2.6 (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5588,10 +5610,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1039,
-          "ci": 19,
+          "value": 1036,
           "source_model": "DeepSeek V4 Flash 0420 (Max)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 19
         }
       }
     },
@@ -5601,10 +5623,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1036,
-          "ci": 23,
+          "value": 1033,
           "source_model": "GPT-6 Luna (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5614,10 +5636,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 1016,
-          "ci": 19,
+          "value": 1012,
           "source_model": "GPT-5.4 mini (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5627,10 +5649,10 @@
       "creator": "DeepSeek",
       "scores": {
         "gdpval-aa": {
-          "value": 1008,
-          "ci": 24,
+          "value": 1005,
           "source_model": "DeepSeek V4 Flash 0420 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5640,10 +5662,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 997,
-          "ci": 21,
+          "value": 995,
           "source_model": "GPT-5.6 Luna (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5653,10 +5675,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 951,
-          "ci": 19,
+          "value": 948,
           "source_model": "GPT-5.4 nano (Xhigh)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5666,10 +5688,10 @@
       "creator": "SpaceXAI",
       "scores": {
         "gdpval-aa": {
-          "value": 941,
-          "ci": 19,
+          "value": 938,
           "source_model": "Grok 4.3 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 18
         }
       }
     },
@@ -5679,10 +5701,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 920,
-          "ci": 23,
+          "value": 917,
           "source_model": "GPT-5 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5692,10 +5714,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 830,
-          "ci": 23,
+          "value": 826,
           "source_model": "GPT-5.1 (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 22
         }
       }
     },
@@ -5705,10 +5727,10 @@
       "creator": "Meta",
       "scores": {
         "gdpval-aa": {
-          "value": 791,
-          "ci": 25,
+          "value": 787,
           "source_model": "Muse Glimmer (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -5718,10 +5740,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 770,
-          "ci": 23,
+          "value": 766,
           "source_model": "GPT-5 mini (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5731,10 +5753,10 @@
       "creator": "Alibaba",
       "scores": {
         "gdpval-aa": {
-          "value": 612,
-          "ci": 27,
+          "value": 608,
           "source_model": "Qwen3.5 35B A3B (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 26
         }
       }
     },
@@ -5744,10 +5766,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 593,
-          "ci": 21,
+          "value": 590,
           "source_model": "GPT-5.4 mini (Non-reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5757,10 +5779,10 @@
       "creator": "Inception",
       "scores": {
         "gdpval-aa": {
-          "value": 478,
-          "ci": 26,
+          "value": 475,
           "source_model": "Mercury 2.5",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -5770,10 +5792,10 @@
       "creator": "Amazon",
       "scores": {
         "gdpval-aa": {
-          "value": 473,
-          "ci": 21,
+          "value": 470,
           "source_model": "Nova 2.0 Pro Preview (Medium)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5783,10 +5805,10 @@
       "creator": "LG AI Research",
       "scores": {
         "gdpval-aa": {
-          "value": 471,
-          "ci": 25,
+          "value": 467,
           "source_model": "EXAONE 4.5 33B (Reasoning)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -5796,10 +5818,10 @@
       "creator": "Multiverse Computing",
       "scores": {
         "gdpval-aa": {
-          "value": 445,
-          "ci": 24,
+          "value": 442,
           "source_model": "HyperNova 60B 2605 (High, Based on gpt-oss-120b)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 24
         }
       }
     },
@@ -5809,10 +5831,10 @@
       "creator": "Amazon",
       "scores": {
         "gdpval-aa": {
-          "value": 440,
-          "ci": 21,
+          "value": 436,
           "source_model": "Nova 2.0 Pro Preview (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5822,10 +5844,10 @@
       "creator": "Amazon",
       "scores": {
         "gdpval-aa": {
-          "value": 370,
-          "ci": 22,
+          "value": 366,
           "source_model": "Nova 2.0 Lite (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 21
         }
       }
     },
@@ -5835,10 +5857,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 343,
-          "ci": 21,
+          "value": 340,
           "source_model": "gpt-oss-20b (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 20
         }
       }
     },
@@ -5848,10 +5870,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 234,
-          "ci": 24,
+          "value": 230,
           "source_model": "o3-mini (High)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 23
         }
       }
     },
@@ -5861,10 +5883,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": 176,
-          "ci": 26,
+          "value": 172,
           "source_model": "gpt-oss-120b (Low)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 25
         }
       }
     },
@@ -5874,10 +5896,10 @@
       "creator": "OpenAI",
       "scores": {
         "gdpval-aa": {
-          "value": -13,
-          "ci": 30,
+          "value": -16,
           "source_model": "GPT-4o (Nov '24)",
-          "agent": "Stirrup"
+          "agent": "Stirrup",
+          "ci": 30
         }
       }
     },
@@ -6017,6 +6039,9 @@
           "all_pass": 35.981,
           "source_model": "openai/gpt-6-sol",
           "agent": "Vals Finance Agent v2"
+        },
+        "aa-index": {
+          "value": 48
         }
       }
     },
@@ -6082,7 +6107,7 @@
       "creator": "Fireworks AI",
       "scores": {
         "vals-index": {
-          "value": 50.811,
+          "value": 50.935,
           "source_model": "fireworks/ember-1"
         },
         "finance-agent": {
@@ -6120,6 +6145,299 @@
           "all_pass": 43.361,
           "source_model": "ant/ling-3.0-flash-af-rc3",
           "agent": "Vals Finance Agent v2"
+        }
+      }
+    },
+    {
+      "id": "muse-wonder-full-max",
+      "name": "Muse Wonder Full (max)",
+      "creator": "Meta",
+      "scores": {
+        "aa-index": {
+          "value": 56
+        },
+        "vals-index": {
+          "value": 64.566,
+          "source_model": "meta/muse-wonder-full"
+        },
+        "finance-agent": {
+          "value": 59.061,
+          "all_pass": 49.037,
+          "source_model": "meta/muse-wonder-full",
+          "agent": "Vals Finance Agent v2"
+        }
+      }
+    },
+    {
+      "id": "muse-wonder-max",
+      "name": "Muse Wonder (max)",
+      "creator": "Meta",
+      "scores": {
+        "aa-index": {
+          "value": 52
+        },
+        "vals-index": {
+          "value": 61.062,
+          "source_model": "meta/muse-wonder"
+        },
+        "finance-agent": {
+          "value": 56.637,
+          "all_pass": 45.936,
+          "source_model": "meta/muse-wonder",
+          "agent": "Vals Finance Agent v2"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-5-high",
+      "name": "Claude Opus 5 (high)",
+      "creator": "Anthropic",
+      "scores": {
+        "aa-index": {
+          "value": 48
+        }
+      }
+    },
+    {
+      "id": "claude-opus-5-medium",
+      "name": "Claude Opus 5 (medium)",
+      "creator": "Anthropic",
+      "scores": {
+        "aa-index": {
+          "value": 45
+        }
+      }
+    },
+    {
+      "id": "muse-wonder-full-max-gdpval-aa",
+      "name": "Muse Wonder Full (Max)",
+      "creator": "Meta",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1857,
+          "source_model": "Muse Wonder Full (Max)",
+          "agent": "Stirrup",
+          "ci": 25
+        }
+      }
+    },
+    {
+      "id": "muse-wonder-max-gdpval-aa",
+      "name": "Muse Wonder (Max)",
+      "creator": "Meta",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1770,
+          "source_model": "Muse Wonder (Max)",
+          "agent": "Stirrup",
+          "ci": 23
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5-max",
+      "name": "Claude Haiku 5.5 (Max)",
+      "creator": "Anthropic",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1618,
+          "source_model": "Claude Haiku 5.5 (Max)",
+          "agent": "Stirrup",
+          "ci": 23
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5-xhigh",
+      "name": "Claude Haiku 5.5 (Xhigh)",
+      "creator": "Anthropic",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1513,
+          "source_model": "Claude Haiku 5.5 (Xhigh)",
+          "agent": "Stirrup",
+          "ci": 23
+        }
+      }
+    },
+    {
+      "id": "mistral-large-4-preview",
+      "name": "Mistral Large 4 Preview",
+      "creator": "Mistral",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1422,
+          "source_model": "Mistral Large 4 Preview",
+          "agent": "Stirrup",
+          "ci": 25
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5-high",
+      "name": "Claude Haiku 5.5 (High)",
+      "creator": "Anthropic",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1418,
+          "source_model": "Claude Haiku 5.5 (High)",
+          "agent": "Stirrup",
+          "ci": 20
+        }
+      }
+    },
+    {
+      "id": "muse-spark-open-xhigh",
+      "name": "Muse Spark Open (Xhigh)",
+      "creator": "Meta",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1401,
+          "source_model": "Muse Spark Open (Xhigh)",
+          "agent": "Stirrup",
+          "ci": 19
+        }
+      }
+    },
+    {
+      "id": "agnes-2-5-pro-beta",
+      "name": "Agnes 2.5 Pro Beta",
+      "creator": "Sapiens AI",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1329,
+          "source_model": "Agnes 2.5 Pro Beta",
+          "agent": "Stirrup",
+          "ci": 21
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5-medium",
+      "name": "Claude Haiku 5.5 (Medium)",
+      "creator": "Anthropic",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1275,
+          "source_model": "Claude Haiku 5.5 (Medium)",
+          "agent": "Stirrup",
+          "ci": 21
+        }
+      }
+    },
+    {
+      "id": "nemotron-3-5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "creator": "NVIDIA",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1162,
+          "source_model": "Nemotron 3.5 Super VL",
+          "agent": "Stirrup",
+          "ci": 19
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5-low",
+      "name": "Claude Haiku 5.5 (Low)",
+      "creator": "Anthropic",
+      "scores": {
+        "gdpval-aa": {
+          "value": 1123,
+          "source_model": "Claude Haiku 5.5 (Low)",
+          "agent": "Stirrup",
+          "ci": 22
+        }
+      }
+    },
+    {
+      "id": "nemotron-3-5-bolt-74b-a9b",
+      "name": "Nemotron 3.5 Bolt 74B-A9B",
+      "creator": "NVIDIA",
+      "scores": {
+        "gdpval-aa": {
+          "value": 979,
+          "source_model": "Nemotron 3.5 Bolt 74B-A9B",
+          "agent": "Stirrup",
+          "ci": 19
+        }
+      }
+    },
+    {
+      "id": "solar-open2-250b",
+      "name": "Solar Open2 250B",
+      "creator": "Upstage",
+      "scores": {
+        "gdpval-aa": {
+          "value": 971,
+          "source_model": "Solar Open2 250B",
+          "agent": "Stirrup",
+          "ci": 25
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5-max-vals-index",
+      "name": "Claude Haiku 5.5 (max)",
+      "creator": "Anthropic",
+      "scores": {
+        "vals-index": {
+          "value": 54.435,
+          "source_model": "anthropic/claude-haiku-5-5"
+        },
+        "finance-agent": {
+          "value": 54.138,
+          "all_pass": 42.874,
+          "source_model": "anthropic/claude-haiku-5-5",
+          "agent": "Vals Finance Agent v2"
+        }
+      }
+    },
+    {
+      "id": "mistral-large-4-high",
+      "name": "Mistral Large 4 (high)",
+      "creator": "Mistral",
+      "scores": {
+        "vals-index": {
+          "value": 48.106,
+          "source_model": "mistralai/mistral-large-4"
+        },
+        "finance-agent": {
+          "value": 54.678,
+          "all_pass": 43.787,
+          "source_model": "mistralai/mistral-large-4",
+          "agent": "Vals Finance Agent v2"
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "creator": "Anthropic",
+      "scores": {
+        "frontierswe": {
+          "value": 43.76868294117648,
+          "worst_at_5": 34.486967647058805,
+          "best_at_5": 52.753011764705896,
+          "average_cost_usd": 20.547701664705873,
+          "average_duration_seconds": 44698.90909090911,
+          "agent": "Proximus"
+        }
+      }
+    },
+    {
+      "id": "muse-spark-1-3",
+      "name": "Muse Spark 1.3",
+      "creator": "Meta",
+      "scores": {
+        "frontierswe": {
+          "value": 25.80214823529412,
+          "worst_at_5": 12.589391176470588,
+          "best_at_5": 40.91821764705883,
+          "average_cost_usd": 243.34431627764707,
+          "average_duration_seconds": 61074.21176470587,
+          "agent": "Proximus"
         }
       }
     }
