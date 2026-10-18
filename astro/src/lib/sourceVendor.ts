@@ -80,6 +80,11 @@ const PORTRAITS: { image: string; handle?: string; hosts?: string[]; name?: RegE
 		name: /^felix rieseberg\b/i,
 		image: '/images/sources/felix-rieseberg.jpg',
 	},
+	{
+		handle: 'danshipper',
+		name: /^dan shipper\b/i,
+		image: '/images/sources/dan-shipper.jpg',
+	},
 	{ hosts: ['sankalp.bearblog.dev'], image: '/images/sources/sankalp.jpg' },
 	{ handle: 'droid_35719', image: '/images/sources/theo.jpg' },
 	{ handle: 'hyperframes_', image: '/images/sources/hyperframes.jpg' },
