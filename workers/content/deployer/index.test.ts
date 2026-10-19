@@ -1166,6 +1166,9 @@ describe("automatic code release boundary", () => {
       "static/icons/icon-192.png",
       "static/icons/icon-512.png",
       "static/icons/icon-maskable-512.png",
+      "static/icons/launch/launch-1179x2556.png",
+      "astro/src/lib/launchScreens.json",
+      "astro/scripts/generate-launch-screens.mjs",
     ];
     expect(
       validateCodeReleaseChangeSet(

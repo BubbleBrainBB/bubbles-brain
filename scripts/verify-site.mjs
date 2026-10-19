@@ -566,7 +566,7 @@ const appManifest = JSON.parse(
 invariant(
   appManifest.name === "Bubble's Brain" &&
     appManifest.short_name &&
-    appManifest.start_url === "/" &&
+    appManifest.start_url === "/?source=pwa" &&
     appManifest.display === "standalone" &&
     /^#[\da-f]{6}$/i.test(appManifest.theme_color ?? "") &&
     /^#[\da-f]{6}$/i.test(appManifest.background_color ?? ""),
@@ -593,6 +593,21 @@ for (const icon of manifestIcons) {
   invariant(
     png.readUInt32BE(16) === width && png.readUInt32BE(20) === height,
     `Web app manifest icon is not ${icon.sizes}: ${icon.src}`,
+  );
+}
+
+// iOS draws plain white on a home-screen launch unless a launch image matches the phone.
+const launchHtml = await readFile(resolve(distRoot, "index.html"), "utf8");
+const launchImages = [
+  ...launchHtml.matchAll(/<link rel="apple-touch-startup-image" href="([^"]+)"/g),
+].map((match) => match[1]);
+invariant(launchImages.length >= 10, "Home page links too few iOS launch screens");
+for (const href of launchImages) {
+  const png = await readFile(resolve(distRoot, href.replace(/^\//, "")));
+  const [, width, height] = href.match(/launch-(\d+)x(\d+)\.png$/).map(Number);
+  invariant(
+    png.readUInt32BE(16) === width && png.readUInt32BE(20) === height,
+    `iOS launch screen is not ${width}x${height}: ${href}`,
   );
 }
 

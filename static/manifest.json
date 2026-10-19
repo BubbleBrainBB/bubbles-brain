@@ -5,7 +5,7 @@
   "description": "Bubble's Brain 个人 AI 知识库：精选阅读、教程、播客与模型榜单。",
   "lang": "zh-CN",
   "dir": "ltr",
-  "start_url": "/",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#ffffff",
