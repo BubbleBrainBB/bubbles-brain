@@ -61,6 +61,12 @@ const isSearchPage = Astro.url.pathname.replace(/\/$/, '') === '/search';
 		<meta property="og:url" content={canonicalUrl} />
 		<meta name="twitter:card" content="summary" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Bubble's Brain" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<link rel="canonical" href={canonicalUrl} />
 		<link rel="alternate" hreflang={lang} href={canonicalUrl} />
 		{
@@ -178,6 +184,7 @@ const isSearchPage = Astro.url.pathname.replace(/\/$/, '') === '/search';
 			import '../scripts/instantNavigation';
 			import '../scripts/readingUpdates';
 			import '../scripts/newsHints';
+			import '../scripts/serviceWorkerRegistration';
 		</script>
 		<script is:inline type="module" src="/js/site-shell.js"></script>
 	</body>

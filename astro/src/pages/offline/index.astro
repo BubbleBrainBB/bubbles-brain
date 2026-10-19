@@ -1,0 +1,91 @@
+---
+/**
+ * Shown by the service worker (src/scripts/serviceWorker.js) when a page cannot be reached.
+ * It is stored once and must work with nothing else from the network, so it has no layout,
+ * no scripts and no external files: the styles are inline and use the site's paper and ink.
+ */
+const canonicalUrl = new URL('/offline/', Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="canonical" href={canonicalUrl} />
+		<link rel="alternate" hreflang="zh-CN" href={canonicalUrl} />
+		<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+		<title>没有网络 · Bubble's Brain</title>
+		<style is:inline>
+			:root {
+				color-scheme: light;
+				--paper: #ffffff;
+				--ink: #111111;
+				--ink-soft: #555555;
+				--rule-strong: #e5e5e5;
+				--sans:
+					-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+					'Noto Sans SC', system-ui, sans-serif;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				min-height: 100vh;
+				min-height: 100dvh;
+				display: grid;
+				place-items: center;
+				padding: 24px 20px;
+				background: var(--paper);
+				color: var(--ink);
+				font: 17px/1.7 var(--sans);
+			}
+			main {
+				max-width: 30em;
+				text-align: center;
+			}
+			main:focus {
+				outline: none;
+			}
+			p {
+				margin: 0 0 24px;
+				color: var(--ink-soft);
+			}
+			a {
+				display: inline-block;
+				padding: 10px 18px;
+				border: 1px solid var(--rule-strong);
+				border-radius: 999px;
+				color: var(--ink);
+				font-size: 15px;
+				text-decoration: none;
+			}
+			a:hover {
+				border-color: var(--ink);
+			}
+			a:focus-visible {
+				outline: 2px solid var(--ink);
+				outline-offset: 3px;
+			}
+			.skip-link {
+				position: fixed;
+				top: 12px;
+				left: 12px;
+				transform: translateY(-180%);
+			}
+			.skip-link:focus {
+				transform: translateY(0);
+			}
+		</style>
+	</head>
+	<body>
+		<a class="skip-link" href="#main-content">跳到正文</a>
+		<main id="main-content" tabindex="-1">
+			<p>现在连不上网络，联网后再打开这一页就好。</p>
+			<a href="/">返回首页</a>
+		</main>
+	</body>
+</html>
