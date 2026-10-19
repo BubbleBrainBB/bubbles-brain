@@ -10,6 +10,7 @@ import FooterLinks from '../components/FooterLinks.astro';
 import CommandSearch from '../components/CommandSearch.astro';
 import PodcastPlayer from '../components/PodcastPlayer.astro';
 import { activeSiteSection, siteSections } from '../lib/siteSections';
+import { launchScreens } from '../lib/launchScreens';
 
 interface Props {
 	title: string;
@@ -67,6 +68,11 @@ const isSearchPage = Astro.url.pathname.replace(/\/$/, '') === '/search';
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-title" content="Bubble's Brain" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		{
+			launchScreens.map((screen) => (
+				<link rel="apple-touch-startup-image" href={screen.href} media={screen.media} />
+			))
+		}
 		<link rel="canonical" href={canonicalUrl} />
 		<link rel="alternate" hreflang={lang} href={canonicalUrl} />
 		{

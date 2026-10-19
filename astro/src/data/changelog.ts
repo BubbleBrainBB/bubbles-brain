@@ -19,6 +19,14 @@ export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-19',
 		tag: '全站',
+		type: 'polish',
+		title: '从主屏打开更快，也不再白屏',
+		summary:
+			'iPhone 上从主屏打开时，先显示带猫咪图标的启动画面，不再是一片空白。第二次起，首页直接用上次存下的那份，马上就能看到，同时在后台取最新的一份留给下次；存的超过一周就不用了，改为照常联网加载。',
+	},
+	{
+		date: '2026-10-19',
+		tag: '全站',
 		type: 'feature',
 		title: '可以把网站装到手机主屏幕了',
 		summary:
