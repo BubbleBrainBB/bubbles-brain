@@ -3,6 +3,7 @@
  *  `transcriptFor` finds it, and the episode page then links to it. */
 import grokBot from '../data/transcripts/how-i-ai-grok-bot-designers.json';
 import alphafold from '../data/transcripts/latent-space-alphafold.json';
+import catWu from '../data/transcripts/lennys-podcast-cat-wu.json';
 import jev from '../data/transcripts/latent-space-jev.json';
 import metaMuse from '../data/transcripts/how-i-ai-meta-muse.json';
 import tibo from '../data/transcripts/lennys-podcast-tibo-sottiaux.json';
@@ -51,6 +52,7 @@ const transcripts: Record<string, Transcript> = {
 	'how-i-ai-meta-muse': metaMuse as Transcript,
 	'latent-space-alphafold': alphafold as Transcript,
 	'latent-space-jev': jev as Transcript,
+	'lennys-podcast-cat-wu': catWu as Transcript,
 	'lennys-podcast-tibo-sottiaux': tibo as Transcript,
 };
 

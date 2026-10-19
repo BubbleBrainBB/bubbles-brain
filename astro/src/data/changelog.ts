@@ -17,6 +17,18 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-19',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：Anthropic 的产品团队，怎么做到比谁都快',
+		summary:
+			"Lenny's Podcast 采访 Claude Code 和 Cowork 的产品负责人 Cat Wu：Anthropic 怎么把功能上线周期从半年压到一周甚至一天，AI 公司的产品经理要哪些新技能，以及 Claude Code、桌面版和 Cowork 各该什么时候用。附一图读懂、时间花在哪、中文要点和带中文翻译的完整文字稿，站内直接收听。",
+		links: [
+			{ label: '收听这一期', href: '/podcasts/lennys-podcast-cat-wu/' },
+			{ label: '看文字稿', href: '/podcasts/lennys-podcast-cat-wu/transcript/' },
+		],
+	},
+	{
 		date: '2026-10-16',
 		tag: '精选阅读',
 		type: 'content',

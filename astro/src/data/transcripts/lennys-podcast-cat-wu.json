@@ -1,0 +1,1742 @@
+{
+	"episodeId": "lennys-podcast-cat-wu",
+	"language": "en",
+	"source": {
+		"type": "show-transcript",
+		"note": "英文取自 Lenny's Podcast 公开的文字稿档案，时间点与节目音频抽样核对一致，中文由 AI 翻译"
+	},
+	"speakers": [
+		{
+			"id": "host",
+			"name": "Lenny Rachitsky",
+			"role": "主持"
+		},
+		{
+			"id": "guest",
+			"name": "Cat Wu",
+			"role": "Anthropic"
+		}
+	],
+	"turns": [
+		{
+			"at": 0,
+			"end": 13,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think it is very hard to be the right amount of AGI-pilled. It's very easy to build the product for the super AGI strong model. The hard thing is figuring out for the current model, how do you elicit the maximum capability?",
+			"zh": "我觉得要做到「恰到好处的 AGI 信仰」非常难。为那个超强的 AGI 级模型去做产品很容易，难的是针对当前这个模型，怎么把它的能力最大限度地激发出来。"
+		},
+		{
+			"at": 13,
+			"end": 17,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I've never seen anything like the pace folks at Anthropic are shipping at.",
+			"zh": "我从没见过像 Anthropic 这样的上线速度。"
+		},
+		{
+			"at": 17,
+			"end": 27,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "We want to remove every single barrier to shipping things. The timelines for a lot of our product features have gone down from six month to one month and sometimes to even one day.",
+			"zh": "我们想把上线路上的每一道障碍都拆掉。我们很多产品功能的周期，已经从六个月缩短到一个月，有时甚至只要一天。"
+		},
+		{
+			"at": 27,
+			"end": 32,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "You're interviewing hundreds of PMs and you just keep feeling like they're approaching it very incorrectly.",
+			"zh": "你面试了几百位 PM，却总觉得他们的思路都不太对。"
+		},
+		{
+			"at": 32,
+			"end": 44,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "The PM role is changing a lot. It's changing really quickly. The thing that is extremely important for building AI-native products is iterating so quickly, figuring out a way for you to actually launch features every single week.",
+			"zh": "PM 这个角色正在发生很大的变化，而且变得非常快。打造 AI 原生产品，极其重要的一点是迭代要足够快，想办法做到每周都能发布新功能。"
+		},
+		{
+			"at": 44,
+			"end": 48,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "What do you think are the emerging skills PMs need to develop?",
+			"zh": "你觉得 PM 需要培养哪些新兴能力？"
+		},
+		{
+			"at": 48,
+			"end": 56,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "It comes back to product taste. As code becomes much cheaper to write, the thing that becomes more valuable is deciding what to write.",
+			"zh": "归根结底还是产品品味。代码越来越便宜，越来越有价值的就是决定该写什么。"
+		},
+		{
+			"at": 56,
+			"end": 93,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Today, my guest is Cat Wu, head of product for Claude Code and Cowork at Anthropic. Cat is at the center of everything that is changing in AI and product and building, and she and her team are building the product that is most changing the way that we all build our products. She is so full of insights and wisdom and lessons. This is an episode you cannot miss. Before we get into it, don't forget to check out lennysproductpass.com for an insane set of deals available exclusively to Lenny's newsletter subscribers. With that, I bring you Cat Wu.",
+			"zh": "今天的嘉宾是 Cat Wu，Anthropic 旗下 Claude Code 和 Cowork 的产品负责人。Cat 身处 AI、产品和构建方式变革的中心，她和她的团队做出的产品，正在最大程度地改变我们所有人做产品的方式。她满肚子都是洞见、智慧和经验教训，这一期你绝对不能错过。在开始之前，别忘了去看看 lennysproductpass.com，那里有一大批只给 Lenny 周刊订阅者的超值优惠。好了，有请 Cat Wu。"
+		},
+		{
+			"at": 93,
+			"end": 95,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Cat, welcome to the podcast.",
+			"zh": "Cat，欢迎来到播客。"
+		},
+		{
+			"at": 95,
+			"end": 97,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Thanks for having me.",
+			"zh": "谢谢邀请。"
+		},
+		{
+			"at": 97,
+			"end": 136,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I have so many questions. I'm so excited to have you on this podcast. I want to start with giving people an understanding of your role alongside Boris. Everybody knows Boris. His episode is the number one most popular episode on this podcast, no pressure. He created Claude Code. He leads the eng team, ships a bazillion PRs a day from his phone, just like... I don't even know what the number is anymore. I think people don't give you enough credit for the success that Claude Code has had and Cowork and all the things you all are building. Help us understand your role on the team, how you work with Boris, how you split responsibilities. Just like what does the PMO look like on the Claude Code team?",
+			"zh": "我有太多问题想问了，能请你来做客我特别兴奋。先请你给大家讲讲，你和 Boris 在角色上是怎么搭配的。大家都认识 Boris，他那一期是这个播客最受欢迎的一期，没压力哈。他创建了 Claude Code，带领工程团队，每天用手机提交海量 PR，我都不知道现在具体是多少了。我觉得大家对 Claude Code 和 Cowork 以及你们正在做的所有这些事情的成功，没有给你足够的功劳。请讲讲你在团队里的角色，你怎么和 Boris 配合，职责怎么分。Claude Code 团队的产品管理到底是什么样的？"
+		},
+		{
+			"at": 136,
+			"end": 180,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I feel very lucky to work with Boris. He's been an amazing thought partner. He's our tech lead. He's very much the product visionary, and he is great at setting, \"This is what the product needs to be in three months, six months from now. This is what the AGI-pilled version of the product is,\" and a lot of my role is figuring out, okay, what is the path from where we are today to that vision three to six months from now? And I spend more of my time on the cross-functional, so making sure that our marketing team, sales team, finance, capacity, et cetera, are bought in on the plan and that we're all rowing the same direction and that once the feature is ready, that there aren't any blockers to shipping it.",
+			"zh": "我觉得自己非常幸运能和 Boris 共事。他是一位很棒的思考伙伴，是我们的技术负责人，也完全是产品的远见者。他特别擅长定下「三个月后、六个月后产品应该是什么样子」，「这就是这个产品 AGI 信仰版本的样子」。而我的工作很大一部分，是想清楚从今天的位置到三到六个月后的那个愿景，路径是什么。我花更多时间在跨部门协作上，确保市场团队、销售团队、财务、算力容量等等都认同这个计划，大家劲往一处使，并且功能一旦准备好，上线路上不会有任何阻碍。"
+		},
+		{
+			"at": 180,
+			"end": 200,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think in many ways it works well because we kind of mind meld, but it is actually remarkably blurry of a line. I think we're 80% mind meld, and then there's this 20% of things that maybe I care a lot more about than Boris, so I'll drive those and 20% work he cares a lot more than me and he just drives those.",
+			"zh": "我觉得很多方面这样运转得很好，是因为我们有点心有灵犀，但这条分界线其实出乎意料地模糊。大概 80% 是我们俩想法完全一致，剩下 20% 里，有些事我可能比 Boris 更在意，就由我来推动；另外 20% 是他比我更在意的，就由他来推动。"
+		},
+		{
+			"at": 200,
+			"end": 270,
+			"speaker": "host",
+			"kind": "ad",
+			"text": "This episode is brought to you by our season's presenting sponsor WorkOS. What do OpenAI, Anthropic, Cursor, Vercel, Replit, Sierra, Clay, and hundreds of other winning companies all have in common? They are all powered by WorkOS. If you're building a product for the enterprise, you've felt the pain of integrating single sign-on, SCIM, RBAC, audit logs, and other features required by large companies. WorkOS turns those deal blockers into drop-in APIs with a modern developer platform built specifically for B2B SaaS. Literally, every startup that I'm an investor in that starts to expand upmarket ends up working with WorkOS, and that's because they are the best. Whether you are a seed stage startup trying to land your first enterprise customer or a unicorn expanding globally, WorkOS is the fastest path to becoming enterprise-ready and unblocking growth. It's essentially Stripe for enterprise features. Visit workos.com to get started or just hit up their Slack where they have actual engineers waiting to answer your questions. Work OS allows you to build faster with delightful APIs, comprehensive docs, and a smooth developer experience. Go to workos.com to make your app enterprise ready today.",
+			"zh": "本期节目由本季的首席赞助商 WorkOS 赞助。OpenAI、Anthropic、Cursor、Vercel、Replit、Sierra、Clay，还有数百家成功的公司有什么共同点？它们都由 WorkOS 驱动。如果你在做面向企业的产品，你一定体会过集成单点登录、SCIM、RBAC、审计日志，以及大型公司要求的其他功能有多痛苦。WorkOS 通过专为 B2B SaaS 打造的现代开发者平台，把这些卡单子的障碍变成即插即用的 API。说真的，我投资的每一家开始向上拓展企业市场的创业公司，最后都会用到 WorkOS，因为他们就是最好的。无论你是想拿下第一个企业客户的种子期创业公司，还是正在全球扩张的独角兽，WorkOS 都是让你最快具备企业级能力、解锁增长的路径。它基本上就是企业功能领域的 Stripe。访问 workos.com 开始使用，或者直接去他们的 Slack，那里有真正的工程师等着回答你的问题。WorkOS 让你借助好用的 API、完善的文档和顺畅的开发者体验，更快地构建。现在就去 workos.com，让你的应用达到企业级。"
+		},
+		{
+			"at": 270,
+			"end": 303,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Something that you shared actually before we started recording is the fact that you're interviewing hundreds of PMs all the time. If I had a nickel every time someone asked me for an intro to someone at Anthropic to go work at Anthropic as a PM, I'd have 30 billion in ARR. It's just the number one place people want to go work at. So I can only imagine how many PMs you're interviewing. You told me that you're just seeing people doing it wrong, the way they're approaching what they think it takes to be a successful AIPM. Talk about what you're seeing and what people need to understand about what it takes to be successful these days.",
+			"zh": "你在开始录制之前分享过一件事：你一直在面试几百位 PM。我要是每次有人找我介绍 Anthropic 的人、想去 Anthropic 当 PM，就能收一个五分镍币，我现在已经有 300 亿美元的 ARR 了。那里就是大家最想去的地方，所以我完全能想象你要面试多少 PM。你告诉我，你看到大家做得不对，也就是他们对「要成为一名成功的 AI PM 需要什么」的理解有偏差。讲讲你看到了什么，以及现在要成功，大家需要理解什么。"
+		},
+		{
+			"at": 303,
+			"end": 349,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think before AI, technology shifts were a lot slower, so you could plan on these six to 12 month time horizons, and because you were shipping features at a bit of a slower rate, there was a lot more emphasis on coordinating with all the other partner teams to make sure that their shipping features that unblock your features because code at that time was very expensive to make. I think now with AI and with how much that has accelerated engineering and with how quickly the model capabilities are improving, the timelines for a lot of our product features have gone down from six month to one month and sometimes to one week or even one day. And with that, we actually need to make sure that products ship quite quickly.",
+			"zh": "我觉得在 AI 之前，技术变迁要慢得多，所以你可以按六到十二个月的时间跨度做规划。而且因为你上线功能的节奏偏慢，会更强调和所有合作团队协调，确保他们上线的功能能为你的功能扫清障碍，因为那时候写代码是很昂贵的。现在有了 AI，工程效率大幅提升，模型能力又进步得这么快，我们很多产品功能的周期已经从六个月缩短到一个月，有时甚至缩短到一周乃至一天。这样一来，我们就必须保证产品能非常快地上线。"
+		},
+		{
+			"at": 349,
+			"end": 397,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And what that means is as a PM, there should be less emphasis on making sure that you're aligning your multi-quarter roadmaps with your partner teams and more emphasis on, okay, how can we figure out the fastest way to get something out the door? How can we figure out how to make a concept corner of our product suite where we can just... An engineer has an idea or a PM has an idea, and by the end of the week, we are able to get into our user's hands. I think the PMs who do the best on AI-native products are the ones who can figure out, how can I shorten the time from having this idea to actually getting the product in the hands of users and help define what are the most important tasks that need to work out of the box for my product?",
+			"zh": "这意味着，作为 PM，应该少花精力去把你的多季度路线图和合作团队对齐，多去想：怎样才能找到把东西推出去的最快办法？怎样才能划出产品线里的一小块地方，让工程师有了想法、或者 PM 有了想法，到周末就能送到用户手里？我觉得在 AI 原生产品上做得最好的 PM，都是在想：我怎么才能缩短从有想法到产品真正到用户手中的时间，并帮忙定义出对我的产品来说，哪些最重要的任务必须开箱即用？"
+		},
+		{
+			"at": 397,
+			"end": 417,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So what I love about this is what you're saying is just like people haven't grasped how fast they need to move and how much of the job now is helping the team move fast. What helps do that? What do you do, what does your PM team do to help them move this fast other than have access to the most advanced models?",
+			"zh": "我喜欢你这个说法的地方在于：大家还没意识到自己需要多快，也没意识到现在这份工作很大一部分是帮助团队更快地行动。那有什么能帮上忙？除了能用上最先进的模型之外，你和你的 PM 团队还做了什么，来帮大家跑得这么快？"
+		},
+		{
+			"at": 417,
+			"end": 462,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the first thing is to set clear goals. Because LLMs are so general, that actually creates a lot of ambiguity in who we're building for, what problems we're trying to solve, what the top use cases are. And so I think a great PM is able to say, \"Okay, our key user is professional developers. The main problem that we want to solve for this feature is maybe there's too many permission prompts and people are feeling fatigue, and the use case is we want professional developers at enterprises to safely get to zero permission prompts.\" And that actually sets a pretty clear goal because it rules out a lot of potential approaches for reducing permission prompts so that people can get a lot more done with one prompt.",
+			"zh": "我觉得第一件事是设定清晰的目标。因为大语言模型太通用了，这反而会让我们到底为谁做、要解决什么问题、最主要的用例是什么，变得含糊不清。所以一个优秀的 PM 能够说：「我们的核心用户是专业开发者。这个功能要解决的主要问题，可能是权限提示太多，大家觉得疲劳；用例是让企业里的专业开发者能安全地做到零权限提示。」这就设定了一个相当清晰的目标，因为它排除了很多减少权限提示的可行做法，让大家用一次提示词就能多做很多事。"
+		},
+		{
+			"at": 462,
+			"end": 497,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And then I think the second thing that's very important is figuring out some repeatable process for getting these features shipped. So for Claude Code, what we do is we actually ship almost all of our features in research preview. We clearly brand this when we ship something so that users know that this is an early product, this is just an idea, this is just something that we're trying to get feedback on and iterating on, and that this might not be supported forever. And what this does is it reduces our commitment for shipping something. We can just get something out in a week or two.",
+			"zh": "第二件非常重要的事，是找到一套可重复的流程，把这些功能上线。对 Claude Code 来说，我们几乎所有功能都以研究预览的形式发布。上线时我们会清楚地标明，让用户知道这是早期产品，只是一个想法，是我们想拿来收集反馈、继续迭代的东西，而且可能不会一直支持下去。这样做降低了我们发布一个东西所要承担的承诺，我们一两周就能把东西推出去。"
+		},
+		{
+			"at": 497,
+			"end": 539,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And then the third thing that a PM should do is help create the framework for the team so that they know when to pull in cross-functional partners and what those cross-functional partners' expectations are. So for example, we have a really tight process between engineering, marketing, and docs. So when engineers have a feature that they feel is ready and that we've dogfooded internally, they post it in our evergreen launch room, and then Sarah, who leads our docs, and Alex who leads PMM, Antaric and Lydia on DevRel just jump in and can turn around the marketing announcement for it the very next day. And because we have this really tight process, it lowers the friction for any engineer to ship something, and PM is the role that should be setting this up.",
+			"zh": "第三件事，PM 应该帮团队建立一套框架，让大家知道什么时候该拉跨部门的伙伴进来，以及这些伙伴有什么期望。比如，我们在工程、市场和文档之间有一套非常紧密的流程。当工程师觉得某个功能已经就绪、而且我们内部已经自用过了，就会发到我们长期开放的发布群里，然后负责文档的 Sarah、负责产品营销的 Alex，还有负责开发者关系的 Antaric 和 Lydia 就会立刻跟进，第二天就能出来营销发布内容。有了这套很紧密的流程，任何工程师上线东西的阻力都变小了，而搭建这套流程正是 PM 该做的。"
+		},
+		{
+			"at": 539,
+			"end": 552,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "How do PRDs fit into this and the fact that you said that goals are a really important part, just like being aligned on what does success look like? Who is this for? Who's this now for? Are you writing PRDs, is it just a couple bullet points? How's that evolved in the world of a PM?",
+			"zh": "那 PRD 在这里面怎么放？你说目标是很重要的一环，就是对齐成功是什么样子，这是给谁用的，又是给谁用的？你们写 PRD 吗，还是只有几条要点？在 PM 的世界里这件事是怎么演变的？"
+		},
+		{
+			"at": 552,
+			"end": 595,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So there's two things that we do. One is we have very rigorous metrics and we do metrics readouts with the entire team every week. The goal of this is to make sure that everyone deeply understands all the facets of our business, what our key goals are, how they're trending, and what drives them. The second thing that we do is we have this list of team principles, and this includes who our key users are, why those are our key users, and the reason that we articulate all of this is so that everybody on the team feels like they understand how our business works, they understand what's important to us and what we're willing to trade off, and it lets people make decisions by themselves without feeling like they're blocked on PM or any other stakeholder.",
+			"zh": "我们做两件事。第一，我们有非常严格的指标，每周都会和整个团队一起做指标复盘。目的是让每个人都深入理解我们业务的方方面面：关键目标是什么，趋势如何，是什么在驱动它们。第二，我们有一份团队原则清单，里面包括我们的核心用户是谁，为什么是他们。我们把这些都明确写下来，是为了让团队里每个人都觉得自己理解我们的业务是怎么运转的，理解对我们来说什么重要、我们愿意做什么取舍，这样大家就能自己做决定，不会觉得被卡在 PM 或其他相关方那里。"
+		},
+		{
+			"at": 595,
+			"end": 605,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I love how so much of this is like, okay, we still need PMs in the future, and there's so much talk of why do we need PMs? We're just going to ship and build. We need engineers.",
+			"zh": "我很喜欢这里面的很多观点，就是说，我们将来还是需要 PM 的。现在有很多说法，说为什么要 PM？我们直接上线、直接做就行了，我们需要的是工程师。"
+		},
+		{
+			"at": 605,
+			"end": 629,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Oh, we actually do PRDs sometimes. So I think for features that are particularly ambiguous, it does help to write out just a one-pager on what the goals are, what the delightful use cases are, what the failure modes currently are that we need to fix. And there are occasionally some projects, especially things that require heavy infrastructure that do take many months, and for those situations, we do write PRDs still.",
+			"zh": "哦，我们有时候其实也会写 PRD。对于特别模糊的功能，写一页纸说明目标是什么、哪些用例会让人惊喜、目前有哪些需要修复的失败情形，确实有帮助。还有一些项目，尤其是需要大量基础设施的，要花好几个月，这种情况下我们依然会写 PRD。"
+		},
+		{
+			"at": 629,
+			"end": 663,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I want to drill a little bit further into just how you're able to move so fast. I've never seen anything like the pace folks at Anthropic are shipping at. Someone made this calendar of launches across Anthropic, and it was literally every day there was a major feature or product. So one question people had online is you guys just launched this, not launched, but built this incredible model Mythos that is still in preview because it's so powerful, people are a little afraid of what it can do. Have you guys been using this? Is this part of the reason you've been able to move so fast?",
+			"zh": "我想再深入问问你们怎么能走得这么快。我从没见过像 Anthropic 这样的上线速度。有人做了一份 Anthropic 全公司的发布日历，真的是每天都有重大功能或产品。网上有人提出一个问题：你们刚刚发布，不对，是做出了这个了不起的模型 Mythos，它因为太强大还停留在预览阶段，大家有点担心它能做什么。你们有在用吗？这是你们能走这么快的原因之一吗？"
+		},
+		{
+			"at": 663,
+			"end": 701,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "We've been moving pretty fast for several quarters now, so I think it's not fully Mythos. Mythos is an incredibly powerful model. We do use the models internally, and I think this has increased our rate of shipping a little bit, but I don't think it explains the bulk of the increase. I think a lot of it is the process and the expectation on the team. So we're very low on process. We want to remove every single barrier to shipping things. We want to make sure every single person on the team feels empowered to take their idea from just an idea to out in the world in less than a week, sometimes even in a day.",
+			"zh": "我们已经连续好几个季度保持很快的节奏了，所以我觉得不全是因为 Mythos。Mythos 是一个非常强大的模型。我们确实会在内部使用这些模型，这在一定程度上提高了我们的上线速度，但我不认为它能解释大部分的提升。我觉得很大程度上是流程，以及团队里的预期。我们的流程非常少。我们想把上线路上每一道障碍都拆掉。我们想确保团队里每个人都有底气，把自己的想法从一个念头变成上线到外面的东西，用不了一周，有时甚至一天。"
+		},
+		{
+			"at": 701,
+			"end": 706,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Cool. Oh, man. What an advantage to have the best model and also be building product. That's so cool.",
+			"zh": "太棒了。天哪，既拥有最好的模型，同时又在做产品，这是多大的优势啊。太酷了。"
+		},
+		{
+			"at": 706,
+			"end": 709,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "We are very lucky to be able to work with the frontier models.",
+			"zh": "我们非常幸运，能和前沿模型一起工作。"
+		},
+		{
+			"at": 709,
+			"end": 735,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Oh my God, what an awesome advantage, just build a thing and then use it and then accelerate faster. It's so interesting. There's a couple of these other side things, I want to just go on these sidequest on this conversation. There's so much happening with Anthropic, and I just am so curious to get your insight. One is a week ago or so, the whole source code of Claude Code leaked. Somebody got it out there. I think it was a mistake someone made. Is there anything you comment there, just like what happened? What went wrong? What should people know?",
+			"zh": "天哪，这优势太惊人了，做个东西，然后自己用，再加速前进。太有意思了。我还想顺便聊几个旁支话题，借这个机会问问。Anthropic 最近有太多事情，我特别想听听你的看法。其一，大概一周前，Claude Code 的完整源代码泄露了，有人把它弄到了网上。我想是某个人的失误。你有什么可以评论的吗？到底发生了什么，哪里出了问题？大家应该知道些什么？"
+		},
+		{
+			"at": 735,
+			"end": 760,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So we immediately looked into this when we saw it. We realized that this was the result of human error. There was a human working with Claude to write PR. This was just an update to how we release our packages and it actually went through two layers of human review, and so this was a result of human error and we've hardened our processes to make sure that it doesn't happen in the future.",
+			"zh": "我们看到之后立刻着手调查了。我们确认这是人为失误导致的。当时有一个人在和 Claude 一起写一个 PR，那只是对我们发布软件包的方式做的一次更新，它其实还经过了两层人工审核，所以这是人为失误的结果，我们已经加固了流程，确保将来不会再发生。"
+		},
+		{
+			"at": 760,
+			"end": 762,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Is this person still at Anthropic? Are they doing all right?",
+			"zh": "那个人还在 Anthropic 吗？他还好吗？"
+		},
+		{
+			"at": 762,
+			"end": 774,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yes, yes. It's a process failure, and the most important thing is to just learn from it and to add more safeguards so that doesn't happen again, and so that's what we've been focused on and most of those have shifted.",
+			"zh": "在的，在的。这是流程上的失误，最重要的是从中吸取教训，增加更多保障措施，避免再次发生，这就是我们一直在专注做的，而且大部分措施已经落实了。"
+		},
+		{
+			"at": 774,
+			"end": 798,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay. Another question I had is OpenClaw. So recently there's been this move to keep people from using Claude's subscription with their OpenClaws. People got really upset. They're confused why this is happening. It feels like there's harm caused to the open source community. What do people need to understand about what went into this decision?",
+			"zh": "好的。我的另一个问题是 OpenClaw。最近有一个动作，不让大家用 Claude 的订阅来跑他们的 OpenClaw。大家非常不满，也很困惑为什么会这样。感觉这对开源社区造成了伤害。大家需要了解，这个决定背后有哪些考量？"
+		},
+		{
+			"at": 798,
+			"end": 841,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So we've been seeing a lot of demand for Claude, and we've been working very hard to both scale our infrastructure and also to make our harness more token efficient so that you can get more usage out of it. It wasn't designed for third-party products, which have different usage patterns than our first-party ones. We spent a bunch of time trying to figure out what is the most seamless transition that we can offer, and so I was very happy to be able to say that everyone gets some credits alongside their subscription. But yeah, we did have to make the hard decision that we needed to prioritize our first-party products and our API, and so this is the decision that resulted from that.",
+			"zh": "我们看到对 Claude 的需求非常旺盛，我们一直在努力扩展基础设施，也在让我们的运行框架更省 token，这样你就能用得更久。它当初并不是为第三方产品设计的，而第三方产品的使用模式和我们自家产品不一样。我们花了很多时间，想弄清楚我们能提供的最平滑的过渡方案是什么，所以我很高兴能宣布，每个人在订阅之外都会获得一些额度。不过，是的，我们确实不得不做出艰难的决定：必须优先保障我们自家的产品和 API，这就是由此产生的决定。"
+		},
+		{
+			"at": 841,
+			"end": 866,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah. To me, it makes so much sense. You guys are subsidizing this usage at 200 bucks a month and it's basically unlimited use of this. And I think people don't understand. Businesses are trying to make money. We're trying to be profitable here. We can't just give away compute when it's so in demand. So I get it. Coming back to the PM team, what does just the PM team look like at Anthropic? How many PMs are there? How are they kind of organized?",
+			"zh": "是的。对我来说这完全说得通。你们每个月 200 美元，基本上是无限量使用，等于在补贴这些用量。我觉得大家没理解这一点。企业是要赚钱的，我们要盈利。算力需求这么大，我们不能白送算力。所以我理解。回到 PM 团队的话题，Anthropic 的 PM 团队到底是什么样的？有多少 PM？大致是怎么组织的？"
+		},
+		{
+			"at": 866,
+			"end": 908,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, so we have a few PM teams. I think we're maybe around 30 or 40 PMs right now. So we have the research PM team who Diane leads, and this team is responsible for understanding all of the feedback from our customers for our models, and then feeding that to the best research team to act on it, and they also shepherd the model launch. There's the Claude developer platform team that maintains the APIs that Claude Code is built on top of, and they also release things like Managed Agents, which is a way for you to build your agents and we can host it on your behalf. And then there's Claude Code that works on both Claude Code and the Cowork core products.",
+			"zh": "是的，我们有几个 PM 团队。我想现在大概有 30 到 40 位 PM。有研究 PM 团队，由 Diane 带领，这个团队负责了解客户对我们模型的所有反馈，然后把这些反馈交给最合适的研究团队去处理，他们也负责推动模型发布。还有 Claude 开发者平台团队，负责维护 Claude Code 所构建于其上的那些 API，他们也发布 Managed Agents 这类东西，也就是你来构建自己的智能体，由我们替你托管。然后还有 Claude Code 团队，同时负责 Claude Code 和 Cowork 这两个核心产品。"
+		},
+		{
+			"at": 908,
+			"end": 943,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "There's enterprise that helps make Claude Code and Cowork easier to adopt for all of our enterprise customers, and so this is everything from cost controls, our back security controls, and just making sure that these enterprises feel very confident and comfortable using our tools. And then we also have our growth team that is responsible for growing across our entire product suite. So we work very closely with them on Claude Code and Cowork growth. And I know they also work with our other teams on CDP growth, so growth of people who use the Claude API.",
+			"zh": "还有企业团队，帮助我们所有企业客户更容易地采用 Claude Code 和 Cowork，从成本控制、基于角色的访问控制（RBAC）、安全控制，到确保这些企业用我们的工具时感到非常有信心、很放心。此外我们还有增长团队，负责整个产品线的增长。我们在 Claude Code 和 Cowork 的增长上和他们合作非常紧密。我知道他们也和我们其他团队合作 CDP 增长，也就是使用 Claude API 的人群的增长。"
+		},
+		{
+			"at": 943,
+			"end": 975,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So speaking of growth, so Amol was just on the podcast. You have this really interesting insight that most people haven't been sharing. There's always this sense that we need fewer PMs in the future. Why do we need PMs? Engineers can do ship. His take is that because engineers are moving so fast, PMs and designers are squeezed. There's less time to stay on top of everything that is happening. There's a feature shipping every day. So his take is he needs more PMs because it's hard to keep up. What's your take there? Do you feel like there'll be an increase in hiring of PMs? What do you think is going on with the PM profession long-term?",
+			"zh": "说到增长，Amol 刚刚上过这个播客。他有一个很有意思的洞见，是大多数人没有分享过的。大家总觉得未来需要的 PM 会更少。为什么需要 PM？工程师自己就能上线。他的看法是，因为工程师动得太快，PM 和设计师被挤压了，没有足够的时间跟上所有正在发生的事情。每天都有功能上线。所以他的观点是他需要更多 PM，因为实在跟不上。你怎么看？你觉得 PM 的招聘会增加吗？你觉得 PM 这个职业长期会怎么发展？"
+		},
+		{
+			"at": 975,
+			"end": 1025,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think all of the roles are merging. PMs are doing some engineering work, engineers are doing PM work, designers are PMing and also landing code. You can either hire a lot more engineers who have great product taste, or you can keep your engineering hiring the same and hire a lot more PMs to help guide some of their work. On our team, we're pretty focused on hiring engineers with great product taste. This way, we can reduce the amount of overhead for shipping any product. There are many engineers on our team who are fully able to end to end go from see user feedback on Twitter through to ship a product at the end of the week with almost no product involvement. And this I think is actually the most efficient way to ship something.",
+			"zh": "我觉得所有角色都在融合。PM 在做一些工程工作，工程师在做 PM 的工作，设计师在做 PM 的事，同时也在提交代码。你可以多招很多有出色产品品味的工程师，也可以保持工程招聘不变，多招很多 PM 来帮忙引导他们的工作。在我们团队，我们比较专注于招有出色产品品味的工程师。这样我们能减少任何产品上线的协调开销。我们团队有不少工程师完全有能力端到端地完成：从在 Twitter 上看到用户反馈，到周末前把产品上线，几乎不需要产品团队介入。我认为这其实是上线东西最高效的方式。"
+		},
+		{
+			"at": 1025,
+			"end": 1045,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So I think engineer and PM are kind of overlapping and you will get a lot of benefit from having more of either. I think product taste is still a very rare skill to have, and we'll pretty much hire anyone who we feel has demonstrated this strongly.",
+			"zh": "所以我觉得工程和 PM 在某种程度上是重叠的，不管多招哪一边，你都会获益良多。我觉得产品品味依然是一种非常稀缺的能力，只要我们觉得谁清楚地证明了自己有这种能力，我们基本上都会招。"
+		},
+		{
+			"at": 1045,
+			"end": 1047,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And your background was in engineering, right?",
+			"zh": "你的背景是工程，对吧？"
+		},
+		{
+			"at": 1047,
+			"end": 1074,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, I was an engineer for many years. I was then a VC very briefly before joining Anthropic, and actually almost all the PMs on our team have either been engineers or ship code here on Claude Code, and so that's one of the things that I think helps build trust with the team and also just enables us to move a lot faster. And then actually our designers also have been front end engineers before.",
+			"zh": "对，我做了很多年工程师。在加入 Anthropic 之前，我短暂地做过一阵 VC。其实我们团队几乎所有 PM 要么做过工程师，要么在 Claude Code 这里自己提交代码，我觉得这是帮助赢得团队信任的因素之一，也让我们能走得快得多。另外我们的设计师以前也都做过前端工程师。"
+		},
+		{
+			"at": 1074,
+			"end": 1096,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Wow. Because that's the big question, there's definitely this emerging that's happening, the Venn diagrams are combining. I think the big question for a lot of people is if you're coming from engineering or product or design, which of those core skills is going to be most valuable? I could see it Anthropic and on Claude Code, engineering is very valuable. I'm curious if other companies, if you have a design background becoming a PM is more valuable or just a PM-PM.",
+			"zh": "哇。因为这正是大家最关心的问题，现在确实有一种趋势，几个角色的韦恩图在重叠。我想很多人的疑问是：如果你出身工程、产品或者设计，这几种核心能力里哪一种会最有价值？我能想象在 Anthropic、在 Claude Code 上，工程能力非常有价值。我好奇的是，在其他公司，如果你有设计背景，转做 PM 是不是更有价值，还是说纯粹的 PM 更吃香。"
+		},
+		{
+			"at": 1096,
+			"end": 1133,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I still think it comes back to product taste. As code becomes much cheaper to write, the thing that becomes more valuable is deciding what to write. What is the right UX for this feature? What is the most delightful way that a user can experience it? We get tens of thousands of GitHub issues asking for every single thing under the sun, and it takes a lot of care and taste to figure out, okay, which of these is worth building and what is the right way to build it? And I think that skillset can come from any background, but I think that's the most important thing.",
+			"zh": "我仍然觉得最终还是回到产品品味。代码写起来越来越便宜，真正变得更有价值的是决定写什么。这个功能该是什么样的 UX？用户用起来怎样才最愉悦？我们收到成千上万条 GitHub issue，什么需求都有，要从里面判断哪些值得做、又该怎么做，需要很用心，也需要品味。我觉得这种能力可以来自任何背景，但它是最重要的。"
+		},
+		{
+			"at": 1133,
+			"end": 1167,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the reason why an engineering background is particularly useful, at least for the next few months, is if you have an engineering background, you have a better sense for how hard something should be, and that's often a factor in what you choose to build. So if something is very easy to build, then maybe instead of debating it, you just spend an hour doing it, but if something is harder to build and you know that upfront, then you know that, okay, this will just cost a lot more for our team to get this out the door. So it helps a bit with the prioritization.",
+			"zh": "至少在接下来的几个月里，工程背景之所以特别有用，是因为你对一件事应该有多难有更好的判断，而这往往是决定做什么的一个因素。如果某件事很容易做，那也许不用争论，花一个小时直接做出来就行；但如果某件事更难做，而你一开始就知道，那你就清楚这会让团队付出多得多的成本才能上线。所以它对排优先级有一些帮助。"
+		},
+		{
+			"at": 1167,
+			"end": 1177,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "You said for the next few months, is that just because the models will get so good potentially in the next few months, you may not even need to know that as much?",
+			"zh": "你说「接下来的几个月」，是因为模型可能在未来几个月里变得非常强，到时候你甚至不太需要懂这些了吗？"
+		},
+		{
+			"at": 1177,
+			"end": 1193,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the valued skillsets does change quite frequently, and so it's really hard to predict more than a few months out. So it's less a commentary on what shift I think will happen and more of a commentary that I think large shifts will happen.",
+			"zh": "我觉得哪些技能有价值，变化得相当频繁，所以很难预测几个月以后的事。所以这与其说是在评论具体会发生什么转变，不如说是在说：我认为会发生巨大的转变。"
+		},
+		{
+			"at": 1193,
+			"end": 1199,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So you're not saying that's when Mythos comes out and will change everything and that we don't need to know anything about engineering?",
+			"zh": "所以你不是在说，等 Mythos 发布、一切都被改变之后，我们就完全不需要懂工程了？"
+		},
+		{
+			"at": 1199,
+			"end": 1266,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "No, I'm just saying that every few months it seems like there's a large increase in coding capability, which then changes what other roles are valuable. I think the most important thing is to be able to have this first principles thinking where you can figure out how the tech landscape is changing, what the team really needs from you, and to jump in and fix that hole because I think the work is becoming more amorphous, which means that a great PM is able to understand what all the gaps are to figure out what the highest priority ones are, and then to just figure out, okay, how do I learn that skillset or what is the skillset that I have that I can apply to this challenge? So I think the current environment values people who are able to wear a lot of hats, are able to swap them, and are very low ego about what work they do to help the team move faster.",
+			"zh": "不是，我的意思只是，每隔几个月，编码能力似乎就会大幅提升，进而改变其他角色的价值所在。我觉得最重要的是具备第一性原理的思考方式：能弄清楚技术格局在怎么变化、团队真正需要你做什么，然后跳进去把这个缺口补上。因为工作正变得越来越不成形，这意味着一个优秀的 PM 要能看清所有的缺口，判断哪些优先级最高，然后想清楚：我该怎么学会这项技能，或者我已有的哪项技能可以用来应对这个挑战。所以我觉得当下的环境看重的是这样的人：能身兼多职、能随时切换角色，而且在做什么工作上毫无架子，只想帮团队跑得更快。"
+		},
+		{
+			"at": 1266,
+			"end": 1303,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I love this answer. There's this question I've been asking people in your shoes, folks that are kind of at the bleeding edge of what AI is capable of and building with the latest tools, which is just where will human brains continue to be useful and necessary for a while until we get to super intelligence. What I'm hearing here is essentially picking the things to work on, knowing where the market's going and figuring out what to prioritize essentially, and then it's knowing if the thing you've built is good and right and getting it out there in some early version at least. Does that sound right? Is there anything else of just where human brains will continue to be useful for at least the next few months?",
+			"zh": "我喜欢这个回答。我一直在问身处你这种位置的人一个问题，就是你们站在 AI 能力的最前沿，用着最新的工具在做东西，那么在我们抵达超级智能之前，人类的大脑在哪些方面仍会持续有用、不可或缺？我听下来，大致是：挑选要做的事，知道市场走向、搞清楚该优先做什么，然后判断自己做出来的东西好不好、对不对，并且至少先以某个早期版本推出去。这样说对吗？至少在接下来的几个月里，人类的大脑还有哪些地方会继续有用，还有别的吗？"
+		},
+		{
+			"at": 1303,
+			"end": 1347,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think humans still provide a level of common sense that the models don't, and there's a thousand moving pieces to any product launch, some of them are very small, but there's always a lot that could potentially go wrong. I think the model doesn't always have a great sense of who all the stakeholders are, how they relate to each other, what their preferences are, what are the right venues to communicate with them, to keep them on board. I think a lot of this more tacit common sense EQ kind of knowledge is still very valuable. Of course, we want the models to get better at this and I think they will be, but right now I think there's still gaps.",
+			"zh": "我觉得人类仍然提供着一种模型所没有的常识。任何一次产品发布都有上千个活动的部件，有些很小，但总有很多地方可能出岔子。模型并不总能清楚地知道谁是所有的利益相关方、他们之间是什么关系、各自的偏好是什么、该通过什么渠道跟他们沟通、怎样让他们一直支持你。我觉得这类更偏隐性的常识和情商方面的知识，依然非常有价值。当然，我们希望模型在这方面变得更好，我认为它们会的，但现在还是有差距。"
+		},
+		{
+			"at": 1347,
+			"end": 1359,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "How do you just deal as a human going through so much constant change, just being on the inside of the tornado, maybe it's calm there, but just like how do you stay on top of what's going on? How do you stay sane through all this craziness that we're moving through?",
+			"zh": "作为一个人，你要怎么应对这么多持续不断的变化？你身处龙卷风的中心，也许那里是平静的，但你怎么跟上正在发生的一切？在这一切疯狂之中，你怎么保持理智？"
+		},
+		{
+			"at": 1359,
+			"end": 1392,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think our team is still people who lean into the chaos. So we try to face every challenge with a smile because there's always so much going on. There's always so many risks and tricky situations that if you get too stressed about anything, you'll burn out, and so we really look for people who can kind of look at a challenge, be like, \"Whew, that's going to be hard, but I'm excited to tackle it and I'm going to do the best that I possibly can. And I know I won't be perfect, but I'll be able to sleep at night knowing that I did my best.\"",
+			"zh": "我觉得我们团队仍然是一群拥抱混乱的人。所以我们尽量笑着面对每一个挑战，因为事情实在太多了，风险和棘手的情况也太多了，如果你对任何一件事过于焦虑，就会被耗尽。所以我们特别想找的是这样的人：看着一个挑战，会说「哎呀，这会很难，但我很期待去解决它，我会尽我所能做到最好。我知道自己不会完美，但想到我已经尽力了，我晚上就能睡得着。」"
+		},
+		{
+			"at": 1392,
+			"end": 1403,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "That's an interesting answer to just what skills will be important in this future because it's... I forget who said this, maybe Ben Mann, that this is the most normal the world will ever be.",
+			"zh": "对于「未来什么能力重要」，这是个有意思的回答，因为……我忘了是谁说的了，可能是 Ben Mann，说现在是世界有史以来最正常的时候了。"
+		},
+		{
+			"at": 1403,
+			"end": 1457,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, it definitely gets harder. I feel like there are a lot of weeks where maybe Sunday night there's some P0 and then by Monday there's a P00 and by Monday afternoon there's a P000 and you're like, \"Wow. I can't believe I was so worried about that P0 from Sunday.\" But I think you just have to acknowledge that there's only so much that you can do that you need to sleep well so that you can make good decisions next day and just brutally prioritize where you spend your time, what's the most important thing to get right and be okay letting things go. There's products that we ship that aren't as polished as I wish they were, but our top goal is to help empower professional developers, and if a product isn't successful, as long as it's not blocking the core use case, it's okay because we'll hear the feedback and we'll fix it in the next release.",
+			"zh": "是的，确实越来越难。我感觉很多周都是这样：周日晚上出了个 P0，到周一又来了个 P00，周一下午又冒出个 P000，然后你会想：「哇，我居然曾经为周日那个 P0 那么担心。」但我觉得你只能承认，你能做的就这么多，你需要睡好觉，这样第二天才能做出好的决定，同时要毫不留情地排优先级：把时间花在哪里、最重要的是把什么事做对，并且接受放手一些事情。我们上线的产品里，有些没有我希望的那么精致，但我们的首要目标是赋能专业开发者，如果某个产品不太成功，只要它没有阻碍核心使用场景，就没关系，因为我们会听到反馈，在下一个版本里修好它。"
+		},
+		{
+			"at": 1457,
+			"end": 1471,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Launching a feature that is buggy is the kind of thing that would have kept me up at night, but it is something that I'm now able to live with knowing that, okay, we're going to get that quick feedback and we're going to fix it in the next release.",
+			"zh": "发布一个有 bug 的功能，以前是会让我夜不能寐的事，但现在我能接受了，因为我知道我们很快会得到反馈，然后在下一个版本里修复。"
+		},
+		{
+			"at": 1471,
+			"end": 1500,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "What I'm imagining is there's that GIF. I think it's maybe from Pirates of the Caribbean where it's this guy walking down a pair of stairs on a ship and the whole ship is just being demolished around him and he's so chill, just strolling down the staircases as everything's falling apart. And that's interesting because everyone I've met from Anthropic is just so chill and just so optimistic. Yeah, I think that's a really interesting insight is just like having this calmness and optimism versus just like, \"Oh my God, everything's crazy and going nuts.\"",
+			"zh": "我脑子里浮现的是那张 GIF，我想是《加勒比海盗》里的，一个人走下船上的楼梯，周围整艘船都在被摧毁，而他却悠然自得，一步步走下楼梯，眼看着一切分崩离析。这挺有意思的，因为我遇到的每个 Anthropic 的人都那么淡定、那么乐观。是的，我觉得这是个很有意思的洞察：保持这种平静和乐观，而不是「天哪，一切都疯了、乱套了」。"
+		},
+		{
+			"at": 1500,
+			"end": 1520,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, I think if you don't have it, you'll get pretty burnt out. I think we also tend to hire people who have been in the industry for a while and have experienced lots of ups and downs and have a good sense for what gives them energy and how to maintain their energy over time, and I think that's helped us a lot.",
+			"zh": "是的，我觉得如果没有这种心态，你会相当倦怠。我们也倾向于招那些在行业里待了很久、经历过大起大落的人，他们很清楚什么能给自己带来能量，也知道怎么长期保持能量，我觉得这对我们帮助很大。"
+		},
+		{
+			"at": 1520,
+			"end": 1542,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So interesting. Something that I wanted to ask about is, so there's these roles blurring, engineers are becoming PMs, everyone's dogs are cats, everyone's everyone. What do we lose in that world? Do we lose career ladders and clear career paths? Do we lose design consistency, code quality? There's probably some downsides. What are some things you find are just like, okay, that's something we're sacrificing for the greater good?",
+			"zh": "太有意思了。我还想问一件事：现在角色的边界在变模糊，工程师在变成 PM，大家都在跨界，人人都能干所有人的活。在这样的世界里，我们失去了什么？我们会失去职业阶梯和清晰的职业路径吗？会失去设计的一致性、代码质量吗？大概会有一些负面影响。你觉得有哪些东西是我们为了更大的利益而牺牲掉的？"
+		},
+		{
+			"at": 1542,
+			"end": 1601,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "We're sacrificing product consistency. Historically, when code was expensive to write, you would carefully plan out everything in your product suite, how every product relates to each other, what the use case for every single one is, how they integrate, and you would pretty much have one product for each use case, and now with AI moving so quickly and with so many ideas that we need to test out, we do sometimes have features that overlap with each other. A lot of the times it's because there's two form factors that we love internally and we want the external audience to tell us which one is better. What that means for someone who's a new user though is a new user might not know, okay, what is the best path to accomplish X? There is more education we need to do to help people understand what the core features are and what the best practices are for using them.",
+			"zh": "我们牺牲的是产品的一致性。过去代码写起来很贵，你会仔细规划整个产品矩阵里的一切：每个产品之间是什么关系、每个产品对应什么使用场景、它们怎么整合，基本上每个使用场景只有一个产品。而现在，AI 发展得这么快，又有这么多想法需要测试，我们确实会有一些功能彼此重叠。很多时候，是因为内部有两种我们都很喜欢的形态，想让外部用户告诉我们哪一种更好。但这对新用户意味着，他可能不知道要完成 X，最好的路径是什么。我们需要做更多的教育，帮助大家理解哪些是核心功能，以及使用它们的最佳实践是什么。"
+		},
+		{
+			"at": 1601,
+			"end": 1668,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think this is the cost of launching a lot of features. I think users also feel like it's hard to keep up with the latest. Usually in traditional PM, you ship a feature every month or quarter, and so it's really easy for a user to understand, okay, I just need to check in on this once a month and I'll learn some new things, and if I ignore it for six months, it's fine, I don't feel like I'm missing out. I think with these agentic tools, not just Claude Code and Cowork, but across the whole ecosystem, people feel this need to check Twitter every single day to see what the absolute latest thing is, and I think there's more we can do to help people feel less like they're on this ever increasingly fast treadmill and that they feel like... I would love people to feel like they can just open these tools, the tools will educate them or teach them what they want to know, and that they can just feel more bought along.",
+			"zh": "我觉得这是推出大量功能的代价。我想用户也会觉得很难跟上最新进展。传统的产品管理里，你每个月或每个季度上线一个功能，用户很容易理解：我每月看一次就行，会学到一些新东西；就算半年不管，也没关系，不会觉得自己错过了什么。而有了这些智能体工具，不只是 Claude Code 和 Cowork，而是整个生态都是这样，大家觉得每天都得刷 Twitter，看看最新的东西到底是什么。我觉得我们可以多做些事，让大家不再觉得自己踩在一台越转越快的跑步机上，而是觉得……我希望大家可以直接打开这些工具，由工具来教会他们想知道的东西，让他们更有跟上节奏的感觉。"
+		},
+		{
+			"at": 1668,
+			"end": 1677,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah. I saw you launch this really interesting feature the other day. I think it's /powerup where it basically walks you through all the cool ways and basically all the best practices to use Claude Code. Is that kind of along these lines?",
+			"zh": "对。我前几天看到你们上线了一个很有意思的功能，好像是 /powerup，它会带你过一遍使用 Claude Code 的各种酷炫玩法和最佳实践。是沿着这个思路吗？"
+		},
+		{
+			"at": 1677,
+			"end": 1712,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, exactly. So in the past, we didn't actually want to do something like powerup, because we felt like the product should be intuitive enough that you don't actually need to go through any tutorial, and over time, we've just realized that there's just so many features and there's so much demand for a built-in onboarding experience that we diverged a bit from our original principle saying no onboarding flow and added this because there's just so many users who wanted to know there's a hundred features, what are the 10 that I absolutely need to use? And so we put that together.",
+			"zh": "对，没错。以前我们其实不想做 powerup 这样的东西，因为我们觉得产品应该足够直观，你不需要走任何教程。但随着时间推移，我们发现功能实在太多了，大家对内置的上手引导需求也非常大，所以我们稍微背离了「不做引导流程」的原始原则，加了这个功能。因为有太多用户想知道：这里有上百个功能，我最需要用的那 10 个是什么？所以我们就把它做出来了。"
+		},
+		{
+			"at": 1712,
+			"end": 1769,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah, it's such a bizarre world. So Anthropic has been really successful with B2B enterprises where traditionally you don't launch a bunch of stuff, you just kind of have quarterly release maybe, and it's like the opposite of every day we got some new... So just maybe following that thread, the run Anthropic has been on as just otherworldly. Anthropic was way behind when it started. It was, Amol shared this, just like one of the least funded companies, didn't have distribution, wasn't the first to go, OpenAI was way ahead and it was just like no way Anthropic has any chance to compete significantly long-term. Now it's just killing it, just beating the biggest companies, teams. So much just like the growth is just... $11 billion in ARR in one month growth. By the time this comes out, it'd probably be even higher. Just being on the inside, what are some ingredients that have allowed Anthropic to be this successful and kind of come from behind and do this well?",
+			"zh": "是啊，这个世界真奇妙。Anthropic 在 B2B 企业市场做得非常成功，而传统上在这个领域你不会推出一大堆东西，顶多按季度发布，而你们是完全相反，每天都有新东西。顺着这个话头聊，Anthropic 这一路的势头简直不可思议。Anthropic 起步时远远落后，Amol 分享过，它是资金最少的公司之一，没有分销渠道，也不是第一个入场的，OpenAI 遥遥领先，当时大家觉得 Anthropic 没有任何机会能长期有意义地竞争。现在它却势如破竹，把最大的公司和团队都甩在身后。增长太惊人了，一个月就增加 110 亿美元的 ARR。等这期播出的时候，可能数字还会更高。从内部来看，有哪些要素让 Anthropic 能够这样成功，从落后一路追上来，而且做得这么好？"
+		},
+		{
+			"at": 1769,
+			"end": 1812,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "The two most important things are, one, this unifying mission. It's hard to state how important this is. We hire people who care most about bringing safe AGI to all of humanity, and this is actually something that we reference frequently in our decisions about what our entire product org should focus on shipping. And because we put this mission above any individual product line, we're able to make Make very fast decisions that cut across the entire org and execute on them in a unified way. So I think this is something that I've never seen at a company of our scale.",
+			"zh": "最重要的有两点，第一，是统一的使命。这一点的重要性怎么强调都不为过。我们招的是最在乎把安全的 AGI 带给全人类的人，而且我们在决定整个产品组织应该专注上线什么时，也经常拿它作为参照。因为我们把这个使命放在任何单一产品线之上，所以能做出跨整个组织的快速决策，并且统一地执行。我在这么大规模的公司里从没见过这样的情况。"
+		},
+		{
+			"at": 1812,
+			"end": 1824,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And so just to make sure that's clear, so essentially having the number one mission is safety, alignment, making sure AI is good for the world, and you're saying just having that as a clear mission makes decisions a lot easier to make.",
+			"zh": "我确认一下我理解对了：本质上就是，第一使命是安全、对齐，确保 AI 对世界是好的，而你是说，把这一点作为清晰的使命，会让做决策容易很多。"
+		},
+		{
+			"at": 1824,
+			"end": 1847,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "If there's two competing priorities, we'll talk about which one is more important for Anthropic's mission, and it makes it a lot easier to decide which of the two we prioritize and then everyone will stand behind the one that we decide. And so sometimes that means that, hey, we want to ship something on Claude Code, but this other thing is more important, and so we deprioritize shipping this and we just wait until later.",
+			"zh": "如果有两个优先级相互冲突，我们会讨论哪一个对 Anthropic 的使命更重要，这样就容易得多地决定优先哪一个，然后所有人都会支持这个决定。所以有时候这意味着，我们本来想在 Claude Code 上上线某个东西，但另一件事更重要，于是我们就把它往后放，等以后再上线。"
+		},
+		{
+			"at": 1847,
+			"end": 1870,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "What's really interesting about that is that explains, I think, versus another company maybe rhymes with OpenAI did a lot of different things, and what I'm hearing here essentially is like, okay, we're not going to launch a social network, we're not going to launch a feed of interesting information because it's not aligned to this mission, and that has kept Anthropic focused, which seems to be a core ingredient to the success.",
+			"zh": "这一点很有意思，我觉得它解释了为什么和另一家名字有点像 OpenAI 的公司不同，那家公司做了很多不同的事情。而我听到的是，我们不会去做社交网络，不会去做一个信息流，因为这不符合使命，这让 Anthropic 保持专注，而专注似乎是成功的核心要素之一。"
+		},
+		{
+			"at": 1870,
+			"end": 1918,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Well, when I think about mission, I think about putting Anthropic's goals ahead of any individual org or any individual product. And so for me, it's... I think the second thing that we're very good at is focus. I think mission to me is slightly different. Mission means that teams are willing to make sacrifices that hurt their own goals and their own KRs in service of Anthropic's goals and Anthropic's KRs, and people are very happy to make those trade-offs. So an extreme example is if Claude Code failed, but Anthropic succeeded, I would be extremely happy. And the whole team is very willing to make decisions that follow that chain of thought.",
+			"zh": "嗯，我说到使命，指的是把 Anthropic 的目标置于任何单个组织、单个产品之上。所以对我来说……我觉得我们第二个非常擅长的是专注。在我看来使命稍有不同。使命意味着，团队愿意为了 Anthropic 的目标和 Anthropic 的 KR 做出牺牲，哪怕这会损害自己团队的目标和 KR，而且大家都很乐意做这样的取舍。举个极端的例子，如果 Claude Code 失败了，但 Anthropic 成功了，我会非常开心。整个团队也非常愿意顺着这条思路去做决定。"
+		},
+		{
+			"at": 1918,
+			"end": 1931,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I don't know if you can talk about this in depth, but do you feel like the OpenClaw decision is a part of this, just like, okay, this is not furthering the mission of Anthropic, we need to stop this because it's not working in the way we want it to work?",
+			"zh": "不知道你能不能深入聊这个，你觉得 OpenClaw 那个决定是不是也属于这一类？比如，这并不推进 Anthropic 的使命，我们需要叫停，因为它没有按我们希望的方式运作？"
+		},
+		{
+			"at": 1931,
+			"end": 1949,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think one of the most important things for Anthropic is to grow the number of users that we're able to reach. One of the ways that we're able to do this is with the Claude subscriptions with our first-party products. And so we just very much want to double down on that, but that does come at the expense of third-party products sometimes.",
+			"zh": "我认为对 Anthropic 来说最重要的事情之一，是扩大我们能触达的用户数量。实现这一点的方式之一，是通过 Claude 订阅和我们的第一方产品。所以我们非常希望在这上面加倍投入，但这有时确实会以第三方产品为代价。"
+		},
+		{
+			"at": 1949,
+			"end": 1964,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So we've been talking about Claude Cowork, all these things. Something that I want to make sure people get, and I'm curious just how you use these tools. So there's Claude Code, there's Claude desktop/web, there's Cowork. What's the best way to understand when to use which? When do you use each of these three?",
+			"zh": "我们一直在聊 Claude Cowork 之类的东西。有件事我想让大家弄明白，也很好奇你自己是怎么用这些工具的。现在有 Claude Code、Claude 桌面端和网页版、还有 Cowork。怎么理解什么时候该用哪个最好？这三个你分别在什么时候用？"
+		},
+		{
+			"at": 1964,
+			"end": 2002,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So I tend to use Claude Code in the terminal when I'm just kicking off a one-off coding task, and I want all of the latest features. The CLI is our initial product surface, and it's also the one where our features often land first, and so it's the most powerful of all the tools. So that's what I tend to use when I'm just trying to kick off one or maybe a handful of tasks at a time. I think desktop really shines when you're doing something that requires front end work, and so one thing that I love to do is to use our preview feature.",
+			"zh": "我一般在终端里用 Claude Code，当我要启动一个一次性的编码任务，并且想要所有最新功能的时候。CLI 是我们最初的产品形态，也是功能常常最先落地的地方，所以它是所有工具里最强大的。因此当我只想启动一个或者少数几个任务时，我通常会用它。我觉得桌面端在做前端工作的时候特别出色，我很喜欢用我们的预览功能。"
+		},
+		{
+			"at": 2002,
+			"end": 2056,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So if I'm building a web app, I'll often use Claude Code and desktop. I'll have the preview pane open on the right-hand side so that I can actually see the web app that I'm making in real-time as I'm chatting with Claude. It's also really great for people who want something a bit more graphical. A terminal can feel very unfamiliar to someone who's non-technical. You get a bunch of these scary popups on your machine and you can't click around the way that you're used to in pretty much every other product that you use. So there's a lot of people who just don't feel comfortable in the terminal, and if that's you, I would highly recommend checking out Claude Code on desktop. Desktop is also great for getting an at-a-glance view of everything that's happening. So you can see your CLI terminal sessions in desktop, you can see your other desktop sessions, you can see your sessions that you kicked off on web and mobile. So it's a one-stop control point where you can see all of your tasks.",
+			"zh": "比如我在做一个网页应用，我常常会用桌面端的 Claude Code，在右侧开着预览面板，这样我一边跟 Claude 对话，一边就能实时看到我正在做的网页应用。对那些想要更图形化界面的人来说，它也非常好。对非技术人员来说，终端可能很陌生，会弹出一堆吓人的窗口，也没法像用其他产品那样到处点点点。所以很多人在终端里就是不自在，如果你是这样，我强烈建议你试试桌面端的 Claude Code。桌面端还很适合一眼纵览所有正在发生的事情：你能在桌面端看到 CLI 终端里的会话，看到其他桌面端的会话，也能看到你在网页和手机上发起的会话。所以它是一个一站式的控制中心，你可以在这里看到你所有的任务。"
+		},
+		{
+			"at": 2056,
+			"end": 2097,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the benefit of web and mobile is that it's really great for kicking things off on the go. So CLI and desktop both require you to be on your local laptop, and this is constraining because sometimes you're out and about, you're touching grass, you're going on a walk and you don't have your laptop open, and I can't count the number of people who I've seen holding their laptop open, like tethered to their phone while they're outside. And this just means that we're missing a product that solves that need. And so for me, what mobile lets you do is kick off these tasks on the go so that you don't need to bring your laptop everywhere and make sure that your laptop's open wherever you are.",
+			"zh": "我觉得网页端和手机端的好处，是特别适合在外面随时发起任务。CLI 和桌面端都需要你在本地的笔记本电脑前，这很受限，因为有时候你在外面，在户外走走、散步，没有打开笔记本。我数不清见过多少人把笔记本打开着，连着手机热点，在户外拿着。这说明我们缺少一个满足这种需求的产品。所以对我来说，手机让你能在路上发起这些任务，不必随身带着笔记本，也不用确保无论你在哪里笔记本都开着。"
+		},
+		{
+			"at": 2097,
+			"end": 2106,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I love that. I've seen people on plane. It's just like such a meme now. Just I need to let this agent finish. I can't shut this down. I need WiFi.",
+			"zh": "我太喜欢了。我见过有人在飞机上这样，现在都成梗了：我得让这个智能体跑完，不能关，我需要 WiFi。"
+		},
+		{
+			"at": 2106,
+			"end": 2148,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Exactly. And then I think for Cowork, the role that this fills is there's a lot of work that everyone does where the output isn't code. So whether that's like getting to Slack zero or inbox zero, or whether that's creating a slide deck for some customer meeting that's coming up, or whether that's writing a quick doc on what the goals of a feature are or what the launch plan for a feature is. All of these tasks produce outputs that are non-code and Cowork is best positioned for that. So the way that I split the products in my mind is if I'm building something where the output is code, I'll use Claude Code or desktop or Claude Code on mobile, and if the output is anything that's not code, I'll use Cowork for it.",
+			"zh": "没错。然后说到 Cowork，它扮演的角色是这样的：大家做的很多工作，产出并不是代码。比如把 Slack 清零或者收件箱清零，或者为即将到来的客户会议做一份幻灯片，或者快速写一份文档，说明一个功能的目标是什么，或者一个功能的发布计划是什么。所有这些任务的产出都不是代码，而 Cowork 最适合做这些。所以我在脑子里区分这些产品的方式是：如果我做的东西产出是代码，我就用 Claude Code、桌面端或者手机上的 Claude Code；如果产出不是代码，我就用 Cowork。"
+		},
+		{
+			"at": 2148,
+			"end": 2168,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "People are just sleeping on the success that Cowork is having. It's just growing incredibly fast, and I think people still don't understand maybe what it's for. And so what if you give us a couple use cases just in your work as a PM? What are some really interesting, maybe unexpected ways you use Cowork to save you time, get more work done?",
+			"zh": "大家低估了 Cowork 的成功。它增长得极快，但我觉得大家可能仍然不明白它是干什么的。那你能不能举几个用例，就你作为 PM 的工作而言，有哪些特别有意思、也许出人意料的方式，用 Cowork 帮你省时间、多做事？"
+		},
+		{
+			"at": 2168,
+			"end": 2214,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "If you are getting started on Cowork, the first thing that you really need to do is connect all the data sources that are relevant to your role because Cowork can only do a great job if it has access to all the context that it needs to be able to curate the output for you. So what that means for me is I connected to my Google Calendar, I connected to my Slack, to my Gmail, to my Google Drive so that it just knows... It has the flexibility to find relevant context, to ask questions, to pull in threads, and this substantially improves the quality of the result. The kinds of things I use it for are like last night we have this Code with Claude conference coming up and there's a few talks that I'm giving there.",
+			"zh": "如果你刚开始用 Cowork，首先要做的就是把和你角色相关的所有数据源都连上，因为只有它能访问到所需的全部上下文，Cowork 才能为你做出好的成果。对我来说，就是连上我的 Google Calendar、Slack、Gmail 和 Google Drive，这样它就能灵活地去找相关上下文、提问、拉取讨论串，这会大幅提升结果的质量。我用它做的事情，比如昨晚，我们马上要办 Code with Claude 大会，我在那里有几场演讲。"
+		},
+		{
+			"at": 2214,
+			"end": 2253,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And one of the talks that we're doing talks about the transition of Claude Code from an assistant to a full-on agent, and one of the things that I wanted to do in this talk was to showcase all of the products that we've been shipping that enable this transition, and also to figure out, okay, what are the success stories that people have had internally that we can use as demos? And so I have my Google Drive connected, I have Slack connected. Alex, who's our product marketer, put together a draft of what the points that he thinks we should cover are.",
+			"zh": "其中一场演讲讲的是 Claude Code 从助手转变为完整智能体的过程，我想在这场演讲里展示我们为促成这一转变所上线的全部产品，同时还要弄清楚，内部有哪些成功案例可以拿来做演示。所以我连上了 Google Drive，也连上了 Slack。产品营销同事 Alex 写了一份草稿，列出他认为我们应该涵盖的要点。"
+		},
+		{
+			"at": 2253,
+			"end": 2309,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And so I just fed this all into Cowork. I told Cowork the narrative that I wanted to tell, and it actually just worked for an hour. It looked through Twitter to see what we launched, it looked through our evergreen launch room, it looked in our Claude Code announced channel, which is where our team posts demos of how they've been getting the most value out of Claude Code, and it synthesized all this together to this 20-page deck that I woke up to this morning and I read through it and it was like pretty good. There were a few tweaks, so I did have to give it a round of feedback. I like my slides to have extremely minimal words and it was a little too wordy, but it was far faster than what I would be able to produce. And because Cowork has access to our whole design system, it actually looks like an Anthropic designer put it together. When you visually see it, you're like, \"Oh, this is incredibly polished.\"",
+			"zh": "然后我把这些全部丢给了 Cowork。我告诉 Cowork 我想讲的叙事，它就这样干了一个小时。它翻了 Twitter 看我们发布过什么，翻了我们的常青发布群，还看了我们 Claude Code announced 频道，团队会在那里发布他们如何从 Claude Code 获得最大价值的演示。它把这些综合起来，做出了一份 20 页的幻灯片，我今天早上醒来就看到了，读下来觉得相当不错。有几处需要微调，所以我确实给了一轮反馈。我喜欢幻灯片上的字极少，而它写得有点太啰嗦了，但它的速度远比我自己做要快。而且因为 Cowork 能访问我们整个设计系统，成品看起来就像是 Anthropic 的设计师做的，你一眼看过去会觉得：「哇，这太精致了。」"
+		},
+		{
+			"at": 2309,
+			"end": 2325,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So these are the kinds of things that are so much faster. Making this slide deck would've taken me hours, but instead it turns out a draft that is actually quite good so that I could focus on making sure that the demos are amazing that we plug into it.",
+			"zh": "所以这类事情快太多了。做这份幻灯片本来要花我好几个小时，而现在它直接给出了一份相当不错的草稿，让我能把精力放在确保接入其中的演示足够精彩上。"
+		},
+		{
+			"at": 2325,
+			"end": 2329,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "This sounds like a dream come true to PMs that... Putting decks together, so annoying.",
+			"zh": "这对 PM 们来说简直是梦想成真。做幻灯片太烦人了。"
+		},
+		{
+			"at": 2329,
+			"end": 2331,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "It's so slow.",
+			"zh": "太慢了。"
+		},
+		{
+			"at": 2331,
+			"end": 2347,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And I love people will see this deck whenever you present this. This will be out in the world. Obviously it's not the one-shotted version, but you've iterated on it. So just to help people try this for themselves, so step one is connect their... What did you say? Slack. What else do you suggest they connect?",
+			"zh": "我也喜欢这一点：你演讲的时候，大家都会看到这份幻灯片，它会公之于众。显然这不是一次生成的版本，而是你迭代过的。那为了帮大家自己试一试，第一步是连上他们的……你刚才说的是什么？Slack。你还建议他们连上什么？"
+		},
+		{
+			"at": 2347,
+			"end": 2361,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Slack, Google Calendar, Gmail, GDrive. You should connect your communications tools and where you store your source of truth data for what your team cares about, what you care about and what you're working on.",
+			"zh": "Slack、Google Calendar、Gmail、GDrive。你应该把沟通工具，以及存放「事实来源」数据的地方都连上，也就是你的团队关心什么、你自己关心什么、你手上在做什么。"
+		},
+		{
+			"at": 2361,
+			"end": 2365,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay. And then what was the prompt roughly that you put in there to generate this deck?",
+			"zh": "好的。那你当时输入的提示词大概是什么样的，用来生成这份幻灯片？"
+		},
+		{
+			"at": 2365,
+			"end": 2407,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So I just wrote make me a slide deck for the code with Claude Conference. This is what our PMM suggested it should cover. This is the current draft that I made that I don't like. This is one that I made manually that I don't like, but I linked it. Can you start by creating a proposed outline with details? Also, make sure it doesn't overlap too much with a keynote talk, which is more important. And then Claude read a bunch of the links that I sent to it and created a proposed outline. So then I read through its proposal and all the different ideas that I had generated for what we could cover, and I just made a decision on what I wanted to actually be in the final deck, and I think this is an example of what the role of the PM still is today.",
+			"zh": "我就写了：帮我做一份 Code with Claude 大会的幻灯片。这是我们的 PMM 建议要覆盖的内容，这是我现在写的草稿，但我不满意；这是我手动做的另一版，我也不喜欢，不过我把链接给你了。你能先做一份带细节的大纲提案吗？另外要注意，别和主题演讲重叠太多，主题演讲更重要。然后 Claude 读了我发给它的一堆链接，做出了一份大纲提案。接着我通读了它的提案，还有我之前想到的所有可以讲的点，自己决定最终的幻灯片里到底放什么。我觉得这正是今天产品经理这个角色依然在做的事。"
+		},
+		{
+			"at": 2407,
+			"end": 2450,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "It's like Claude is a great brainstorming partner. It's able to synthesize a massive amount of information really quickly and present all of the possibilities to you, but the role of the PM is still to make the end decision of, okay, what should belong in the final product? So for this, what I ended up deciding was that I wanted the talk to cover the progression from making local tasks successful to making every PR green, to helping engineers land more PRs, and for each of these, which demo would be the most compelling. And then after this decision about the outline, Cowork just went off for a few hours and built the whole slide deck.",
+			"zh": "Claude 是一个很棒的头脑风暴搭档。它能很快消化海量信息，把所有可能性摆到你面前，但产品经理的角色仍然是做最终决定：好，最终成品里应该放什么？这次我最后决定的是，这场演讲要讲清一条递进的线：先让本地任务成功，再让每个 PR 都变绿，再帮工程师合并更多 PR，而每一步都要选出最有说服力的演示。大纲定下来之后，Cowork 就自己跑了几个小时，把整份幻灯片做完了。"
+		},
+		{
+			"at": 2450,
+			"end": 2475,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "This is so awesome. What an awesome part of the job to not have to do anymore, and it feels like you're talking to essentially a deck designer that also has actual knowledge about what you've worked on and can make it actually the content what you want it to be, not just make it look really nice. How did you do the design system piece? How does that work? How does it know the design system of Anthropic?",
+			"zh": "太棒了。这部分工作居然可以不用再做了，真是太好了。感觉就像你在跟一位幻灯片设计师对话，而且它真的了解你做过的事情，能把内容做成你想要的样子，而不只是把版面做得好看。设计系统那部分你是怎么做的？它怎么知道 Anthropic 的设计系统？"
+		},
+		{
+			"at": 2475,
+			"end": 2497,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So what I did for this is we actually already have a standardized deck that we use across all of our external engagements. And so I just gave Claude access to that, and so it's able to see what colors we use, what fonts we use, the different kinds of, what's it called, like slide formats that are possible, and so it has 20 of these example slides.",
+			"zh": "我们对外所有的活动本来就有一套标准化的幻灯片模板，我只是把它开放给了 Claude。这样它就能看到我们用哪些颜色、哪些字体，还有有哪些版式可用。里面有 20 页这样的示例页。"
+		},
+		{
+			"at": 2497,
+			"end": 2501,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So give an example, got it. So you upload, here's our template, work from this. Yeah.",
+			"zh": "明白，就是说你上传「这是我们的模板，照这个来」。对。"
+		},
+		{
+			"at": 2501,
+			"end": 2508,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "You can also connect to your Figma MCP if you have your slide format save there and it can pull that in.",
+			"zh": "如果你的幻灯片格式存在 Figma 里，你也可以连上 Figma MCP，它能直接把格式拉进来。"
+		},
+		{
+			"at": 2508,
+			"end": 2522,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Along those lines, something I'm always curious about is what's kind of in your stack of tools as a PM at Anthropic? Obviously Claude Code and Cowork and all the Anthropic tools. What else are you using? What other... Slack you mentioned. Is there anything else?",
+			"zh": "顺着这个话题，我一直很好奇，你作为 Anthropic 的产品经理，工具栈里都有什么？显然有 Claude Code、Cowork 和 Anthropic 所有的工具。还有别的吗？你提到了 Slack，还有其他的吗？"
+		},
+		{
+			"at": 2522,
+			"end": 2586,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So my stack is pretty heavily Claude Code, Cowork and Slack. Anthropic largely runs on Slack. I feel like it's the core OS of our company. And day-to-day, I would say maybe 30% of my time is pushing the boundaries of what Cowork and Claude Code can do so that I have a very strong sense of what we're not good at, and I spend a lot of time talking with the model to understand why it makes mistakes that it does. We actually have a lot of internal tools that we make. I think one of the things that Claude Code has really unlocked for our entire company is it really lowers the barrier to making any custom app that you want, and so we've seen this surge in personalized work software that people are building for custom use cases instead of using tools that don't perfectly fit the use case.",
+			"zh": "我的工具栈主要就是 Claude Code、Cowork 和 Slack。Anthropic 基本上是跑在 Slack 上的，我觉得它是我们公司的核心操作系统。日常来说，我大概有 30% 的时间在不断推动 Cowork 和 Claude Code 的能力边界，这样我就能对我们哪里不行有很清楚的感觉，我也花很多时间和模型对话，去弄清楚它为什么会犯那些错。我们内部还做了很多工具。我觉得 Claude Code 给整个公司带来的一大变化，就是它大大降低了做任何定制应用的门槛，所以我们看到个性化的工作软件大量涌现，大家为自己的具体场景去做，而不是去用那些不太贴合场景的现成工具。"
+		},
+		{
+			"at": 2586,
+			"end": 2592,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I got to hear more. What are some examples? What are things you've built, other people built that are really popular and useful?",
+			"zh": "我想多听听。有哪些例子？你自己做的、或者别人做的，特别受欢迎又好用的有哪些？"
+		},
+		{
+			"at": 2592,
+			"end": 2654,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "One of the sales folks on Claude Code, he realized he was making these repetitive decks over and over and over again, and so he actually has this web app that he built with the examples of the core Claude Code decks that we know work well, so like a 101, 201 and mastering Claude Code, and then he has a way to input specific customer context that pulls from Salesforce, that pulls from Gong, that pulls from other notes so that we can customize the decks for specific customers. And so we'll pull out things like, okay, this customer is using Bedrock or Claude for enterprise or console, which affects what features are available to them. It'll pull out things like, okay, this customer is concerned about the code review stage of the SLC, and so we'll add a slide about our code review features there. It'll pull out things like, okay, this customer needs to be HIPAA-compliant or needs X, Y, Z security controls, and so we'll make sure to add a slide or two in their deck about that.",
+			"zh": "Claude Code 的一位销售同事，发现自己总在一遍又一遍地做重复的幻灯片，于是他做了一个网页应用，里面放着我们已知效果不错的几套核心 Claude Code 幻灯片，比如 101、201 和精通 Claude Code。然后他有一个办法输入具体的客户背景，这些信息来自 Salesforce、Gong 和其他笔记，这样我们就能针对具体客户定制幻灯片。比如它会提取出：这个客户用的是 Bedrock、Claude for enterprise 还是 console，这会影响他们能用哪些功能；比如这个客户关心 SDLC 里的代码评审环节，那我们就加一页讲代码评审功能；再比如这个客户需要符合 HIPAA，或者需要 X、Y、Z 这些安全控制，我们就会确保在他们的幻灯片里加上一两页讲这些。"
+		},
+		{
+			"at": 2654,
+			"end": 2682,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And then for example, if this is a customer that's on Vertex or Bedrock and doesn't want to use Claude for enterprise, then we'll just take out some of the slides that are Claude for enterprise-only features. And so normally this is manual work that could take 20, 30 minutes, and so people will either spend that time doing it or they'll just decide not to do it and use the general deck. With this, it takes a few seconds and you get a tailored deck.",
+			"zh": "再比如，如果客户用的是 Vertex 或 Bedrock，不想用 Claude for enterprise，我们就把幻灯片里那些只有 Claude for enterprise 才有的功能删掉。这些事情平时是手工活，可能要花 20、30 分钟，所以大家要么花时间去做，要么干脆不做，直接用通用版幻灯片。有了这个工具，几秒钟就能拿到一份量身定制的幻灯片。"
+		},
+		{
+			"at": 2682,
+			"end": 2704,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "What's interesting about this Slack is the tool that nobody's... It's just like nobody's trying to create their own. Slack just continues to win, and this is just like the way you describe it as the OS of so many companies. It's so interesting. People talk about Salesforce as just SaaS. We don't need SaaS software anymore. We're going to build our own. It's like Slack is a durable tool that nobody wants to try to compete with and build a better version.",
+			"zh": "有意思的是，Slack 是那个没人想去自己做一个的工具。就是没有人想自己造一个。Slack 一直在赢，就像你说的，它是很多公司的操作系统，真的很有意思。大家都在讲 Salesforce 这种就是 SaaS，我们不再需要 SaaS 软件了，我们要自己造。但 Slack 是一个很持久的工具，没人想去和它竞争、做出一个更好的版本。"
+		},
+		{
+			"at": 2704,
+			"end": 2713,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think it's pretty important communications infrastructure, and I think they do the core task of helping everyone get real-time updates incredibly well.",
+			"zh": "我觉得它是非常重要的沟通基础设施，而且在帮每个人实时获取最新动态这件核心任务上，它做得特别好。"
+		},
+		{
+			"at": 2713,
+			"end": 2721,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah, people hate on Slack, but it's really great at what it's trying to do, and the most cutting-edge teams are hooked on it. It's so interesting.",
+			"zh": "对，大家爱吐槽 Slack，但它在自己想做的事情上真的很出色，而且最前沿的团队都离不开它。真的很有意思。"
+		},
+		{
+			"at": 2721,
+			"end": 2738,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, and I also love how easy they've made to customize it. And so we love making Slack bots and this kind of hackability means that we're able to integrate with Slack the way that we want to. So really appreciate Slack's work on that.",
+			"zh": "对，我还很喜欢它定制起来非常方便。我们很爱做 Slack 机器人，这种可玩性让我们可以按自己想要的方式和 Slack 集成。所以真的很感谢 Slack 在这方面的付出。"
+		},
+		{
+			"at": 2738,
+			"end": 2740,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Time to buy some CRM stock.",
+			"zh": "该去买点 CRM 的股票了。"
+		},
+		{
+			"at": 2740,
+			"end": 2809,
+			"speaker": "host",
+			"kind": "ad",
+			"text": "I am so excited to tell you about this season's supporting sponsor Vanta. Vanta helps over 15,000 companies like Cursor, Ramp, Duolingo, Snowflake, and Atlassian earn and prove trust with their customers. Teams are building and shipping products faster than ever thanks to AI, but as a result, the amount of risk being introduced into your product and your business is higher than it's ever been. Every security leader that I talk to is feeling the increasing weight of protecting their organization, their business, and not to mention their customer data. Because things are moving so fast, they are constantly reacting, having to guess at priorities, and having to make do with outdated solutions. Vanta automates compliance and risk management with over 35 security and privacy frameworks, including SOC 2, ISO 27001, and HIPAA. This helps companies get compliant fast and stay compliant. More than ever before, trust has the power to make or break your business. Learn more at vanta.com/lenny. And as a listener of this podcast, you get $1,000 off Vanta. That's vanta.com/lenny.",
+			"zh": "我非常高兴地向你介绍本季的赞助商 Vanta。Vanta 帮助超过 15,000 家公司，包括 Cursor、Ramp、Duolingo、Snowflake 和 Atlassian，赢得并证明客户对他们的信任。得益于 AI，团队构建和发布产品的速度前所未有，但随之而来的是，你的产品和业务所面临的风险也比以往任何时候都高。我接触的每一位安全负责人，都感到保护组织、保护业务、更不用说保护客户数据的压力越来越重。因为一切变化太快，他们总是在被动应对，只能靠猜来排优先级，只能凑合用过时的方案。Vanta 通过 35 种以上的安全与隐私框架，包括 SOC 2、ISO 27001 和 HIPAA，把合规和风险管理自动化。这能帮公司快速合规，并持续保持合规。比以往任何时候都更是如此，信任有能力成就一家企业，也有能力毁掉一家企业。欢迎到 vanta.com/lenny 了解更多。作为本播客的听众，你还能在 Vanta 立减 1,000 美元。网址是 vanta.com/lenny。"
+		},
+		{
+			"at": 2809,
+			"end": 2824,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay. So you talked about all these different teams and how they use Claude Code and Cowork to operate. Which teams do you find other than engineering... Imagine engineering is the biggest token spender, but if not, that'd be really interesting. What's the second place function right now for tokens?",
+			"zh": "好。你刚才讲了这么多团队是怎么用 Claude Code 和 Cowork 来工作的。除了工程之外，你觉得哪些团队用得最多？我想工程应该是 token 花得最多的，但如果不是，那就更有意思了。目前 token 消耗排第二的职能是哪个？"
+		},
+		{
+			"at": 2824,
+			"end": 2862,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Oh, Applied AI is amazing at pushing the boundaries of what Claude Code and Cowork can do. A lot of our Applied AI team spends time with our customers helping them adopt our API, and so sometimes our Applied AI team will, for example, make prototypes on behalf of these customers, which Claude Code makes so much faster than it used to do. They also have the dual goal of needing to manage a lot of customer comms, a lot of customer inbound and historical context, call notes, and so they're both extremely heavy on Cowork and on Claude Code.",
+			"zh": "哦，Applied AI 特别厉害，一直在突破 Claude Code 和 Cowork 的能力边界。Applied AI 团队里很多人把时间花在陪客户采用我们的 API 上，所以有时候他们会替客户做原型，Claude Code 让这件事比以前快太多了。他们还有另一个目标，就是要处理大量的客户沟通、大量的客户来信，还有历史背景、通话记录，所以他们对 Cowork 和 Claude Code 都是重度使用。"
+		},
+		{
+			"at": 2862,
+			"end": 2872,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And just to understand Applied AI, is that forward to play engineering sort of role? How would most people describe what the Applied AI team is doing?",
+			"zh": "我确认一下，Applied AI 是不是类似前置部署工程师（forward deployed engineer）那样的角色？大多数人会怎么描述 Applied AI 团队在做的事？"
+		},
+		{
+			"at": 2872,
+			"end": 2885,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, it's helping our customers adopt the latest API and model features across their company, both for powering their company's products and also for internal acceleration.",
+			"zh": "是的，就是帮我们的客户在整个公司范围内采用最新的 API 和模型功能，既用于驱动他们公司的产品，也用于内部提效。"
+		},
+		{
+			"at": 2885,
+			"end": 2891,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Got it. So it's like customer success, go to marketing, kind of for deploy engineering sort of thing.",
+			"zh": "明白了。所以有点像客户成功、市场推广，再加上部署工程这类角色。"
+		},
+		{
+			"at": 2891,
+			"end": 2893,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Exactly. It's like a very technical go to-market person.",
+			"zh": "没错。就是一个技术性非常强的市场推广人员。"
+		},
+		{
+			"at": 2893,
+			"end": 2899,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Got it. Okay, awesome. So you're saying that might be the second org that uses the most tokens?",
+			"zh": "明白。好的，太棒了。所以你是说，他们可能是第二大 token 用户组织？"
+		},
+		{
+			"at": 2899,
+			"end": 2965,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. And then we also see them pushing the boundaries of what Cowork can do. So for example, if... So a lot of these folks cover multiple customers and in any given day can have five to 10 customer engagements on a high day, and so what they often use Cowork to do is the night before, they'll ask it to summarize, okay, what are all my customer meetings that are coming up the next day? What are all the things that this customer has asked me for? What's top of mind for them? What are the action items from the past meetings? And Cowork will just put together this dossier, this brief of what they should be aware of going into the next meeting. And Cowork can also research answers. So if a customer asks, \"Okay, when is feature X going to launch?\" Cowork can help the Applied AI person research through Slack to get the latest ETA, add that to the notes so that during the customer call, the Applied AI person has the absolute latest. And these are just workflows that people are building for themselves and sharing with other people on their team.",
+			"zh": "对。而且我们还看到他们在不断突破 Cowork 的能力边界。比如，这些人很多都要对接多个客户，忙的时候一天可以有五到十场客户会议，所以他们经常用 Cowork 来做的事是，前一天晚上让它总结：我明天有哪些客户会议？这个客户都向我要过什么？他们现在最关心什么？之前几次会议留下了哪些待办事项？然后 Cowork 就会整理出一份档案，一份简报，写明进入下一场会议前应该知道什么。Cowork 还能帮忙查答案。比如客户问「功能 X 什么时候上线？」，Cowork 可以帮 Applied AI 的同事去 Slack 里查最新的预计时间，加进笔记里，这样客户通话时，Applied AI 的同事手上就有最新的信息。这些都是大家为自己搭建的工作流，并且在团队里互相分享。"
+		},
+		{
+			"at": 2965,
+			"end": 2990,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "So cool. Something that kind of this question, this trend, I don't know, question topic comes up a lot recently, which is tokens spend exceeding people's salary where people just use AI and it costs more than how much they're making. Are there any numbers floating around Anthropic of just how much tokens spend, say, engineers spend, I don't know, a month, a day or PMs, anything like that?",
+			"zh": "太酷了。最近这个话题经常被提到：token 花费超过人的薪水，也就是有人用 AI 花的钱比他挣的还多。Anthropic 内部有没有一些大概的数字，比如工程师一个月或一天花多少 token，或者产品经理花多少，诸如此类？"
+		},
+		{
+			"at": 2990,
+			"end": 3022,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "It is clear to us that as the models get better, people delegate far more tasks to it and they spend a lot more hours in tools like Claude Code and Cowork, and so we do see the token cost per engineer or per any knowledge worker increase every time that there's a model jump or a substantial product improvement. I think it's still much lower than what the average engineer salary is, but we see the percentage increasing over time.",
+			"zh": "我们很清楚的一点是，模型越强，人们就会把多得多的任务委托给它，在 Claude Code 和 Cowork 这类工具里待的时间也长得多。所以每次模型有大的飞跃，或者产品有明显改进，我们都会看到每位工程师、或者每位知识工作者的 token 成本上升。我觉得它仍然远低于工程师的平均薪资，但我们看到这个比例在逐渐上升。"
+		},
+		{
+			"at": 3022,
+			"end": 3033,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "It's such an interesting... We talked about how you have access to the most cutting-edge models and other advantage of working Anthropic, I believe you guys have basically unlimited tokens. You can use as much as you want. Is that right?",
+			"zh": "这很有意思……我们刚才聊到你们能用到最前沿的模型，我想在 Anthropic 工作的另一个优势是，你们基本上有无限的 token，想用多少用多少。是这样吗？"
+		},
+		{
+			"at": 3033,
+			"end": 3037,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "We can use a lot of tokens. Some people do run into limits, so-",
+			"zh": "我们可以用很多 token。有些人确实会碰到上限，所以——"
+		},
+		{
+			"at": 3037,
+			"end": 3049,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay, there's a limit. Okay. Boris, shut it down. Okay. It's so interesting how many advantages come from having the most advanced model. It's such an interesting flywheel that starts to kick in.",
+			"zh": "好吧，还是有上限的。好。Boris，关掉它。好。有最先进的模型会带来这么多优势，真的很有意思，这是一个开始转起来的飞轮。"
+		},
+		{
+			"at": 3049,
+			"end": 3074,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think we also believe a lot in empowering our internal teams to build as fast as possible, and we also trust that everyone understands how much capacity that serving these models truly costs, and we trust our team to use the tokens responsibly. So it's very frowned upon to waste tokens, but we do trust individuals to make that judgment call.",
+			"zh": "我们也非常相信要让内部团队尽可能快地去构建，同时我们相信每个人都明白，服务这些模型的算力到底要花多少钱，所以我们信任团队会负责任地使用 token。浪费 token 是很不被提倡的，但我们确实信任每个人自己做判断。"
+		},
+		{
+			"at": 3074,
+			"end": 3095,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Awesome. Coming back to the PM role, we talked a little bit about this, but I think this will be really interesting for people to hear. Just what I want to understand is what do you think are the emerging skills that PMs need to develop/you most look for, AI companies most look for when they're hiring PMs these days?",
+			"zh": "太好了。回到产品经理这个角色，我们聊过一点，但我觉得这对大家会很有意思。我想了解的是，你认为产品经理需要培养哪些新兴技能？还有，现在 AI 公司招产品经理时最看重什么？"
+		},
+		{
+			"at": 3095,
+			"end": 3165,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the hardest skill is being able to define what the product should look like a month from now. I think there's a lot of ambiguity in what models are capable of in that timeline and how user behavior will change, but I think there are patterns that the best PMs can see based on how users are abusing the limits of the existing product and the best PMs can sense that, can set a direction and can steadily execute towards it and change the path if the model capabilities are much better than or worse than what they'd originally expected. I think it is very hard to be the right amount of AGI-pilled because I think everyone can see this future where the models are extremely smart and can do almost everything, in which case you actually don't need that complicated a product, you can actually just have a text box again where you tell the model what you want and it's so smart that it can add any tool or add any integration that it needs to get the job done. It knows when it's uncertain, it can ask clarifying questions.",
+			"zh": "我觉得最难的技能，是能够定义一个月之后产品应该是什么样子。在这个时间跨度里，模型能做什么、用户行为会怎么变，都有很多不确定性。但我认为有一些规律，最优秀的产品经理能从用户如何「滥用」现有产品的极限中看出来，他们能感知到这些，能定下方向，稳步朝它推进，并且在模型能力比原先预期好很多或差很多的时候调整路径。我觉得要做到恰到好处的「AGI 信仰」非常难，因为每个人都能想象这样一个未来：模型极其聪明，几乎什么都能做，那样你其实不需要那么复杂的产品，你可以又回到一个文本框，告诉模型你想要什么，它聪明到可以自己加上完成任务所需的任何工具、任何集成。它知道自己什么时候不确定，会提出澄清问题。"
+		},
+		{
+			"at": 3165,
+			"end": 3199,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "It's kind of very easy to build the product for the super AGI strong model. I think the hard thing is figuring out for the current model, how do you elicit the maximum capability? How do you help users go get onto the golden path? How do you guide users to interact with the model's strengths and patch its weaknesses? This skill is pretty rare.",
+			"zh": "为那个超级 AGI 的强大模型去做产品，其实很容易。难的是，针对当前的模型，怎么把它的最大能力激发出来？怎么帮用户走上那条「黄金路径」？怎么引导用户去发挥模型的长处、弥补它的短板？这种技能相当稀缺。"
+		},
+		{
+			"at": 3199,
+			"end": 3212,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And how do you build that skill? Is it just using each... Basically understanding the limits of each model? You talked about taste, understanding, having taste into what the model maybe is capable of, what it's great and not great to at, where it's changed?",
+			"zh": "那这个技能怎么培养？是不是就是每个模型都去用，基本上去了解每个模型的极限？你提到过品味，也就是对模型可能有什么能力、哪方面强哪方面弱、哪里变了，要有品味？"
+		},
+		{
+			"at": 3212,
+			"end": 3271,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Think it's spending a ton of time talking and using the model. One of the things I really like to do is to ask the model to introspect on its own behaviors. So sometimes when I notice that the model does something unexpected, like for example, there's situations where the model will make a front end change and run tests, but not actually use the UI. It's actually pretty useful to ask the model to reflect on why I did this, and sometimes they'll say that, \"Hey, there was something confusing in the system prompt,\" or, \"I didn't realize that the front end verification was part of this task,\" Or, \"Hey, I delegated the verification to this subagent and the subagent didn't do the test and I didn't check its work.\" A lot of times just being very curious about why the model made the decision that it did will show you what misled it so that you can fix the harness in order to close this gap.",
+			"zh": "我觉得就是花大量的时间跟模型聊、用模型。我很喜欢做的一件事，是让模型对它自己的行为做反思。有时候我发现模型做了出乎意料的事，比如，有些情况下模型改了前端，跑了测试，却没有真的去用界面。这时候让模型反思一下「你为什么这么做」就很有用，有时它会说：「嘿，系统提示词里有个地方让我困惑」，或者「我没意识到前端验证也是这个任务的一部分」，或者「我把验证委托给了这个子智能体，而子智能体没有做测试，我也没有检查它的工作」。很多时候，只要对模型为什么做出那个决定保持好奇，就能看出是什么误导了它，这样你就可以修复运行框架，把这个缺口补上。"
+		},
+		{
+			"at": 3271,
+			"end": 3333,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "The other thing that helps is to figure out who are the users who you trust the most to give you accurate feedback about the model. Usually there's a handful of people who are much better than others at articulating what makes a specific model or model harness combination good, and there's a lot of people who will give you feedback, but not everyone's feedback is as qualified. And so finding a group of those five people you trust is really important for getting very fast feedback. I think the third thing that is useful, but not everyone loves doing is building evals. You don't need to build hundreds of evals for them to be useful. Just building 10 great evals is important for helping the team quantify what the goal is and what their progress towards it is and what they're missing, and so I think evals is this underappreciated thing that more PMs, more engineers should be working on.",
+			"zh": "另一件有帮助的事，是弄清楚你最信任哪些用户，能给你关于模型的准确反馈。通常总有那么几个人，在说清楚某个模型、或者某个模型加运行框架的组合好在哪里这件事上，比别人强得多；很多人都会给你反馈，但不是每个人的反馈都同样靠谱。所以找到你信任的那五个人，对快速拿到反馈非常重要。第三件有用的事是做评测，不过不是每个人都喜欢做。你不需要做几百个评测才有用，只要做出 10 个好的评测，就能帮团队量化目标是什么、朝它走到了哪一步、还缺什么。所以我觉得评测是一件被低估的事，更多的产品经理、更多的工程师都应该去做。"
+		},
+		{
+			"at": 3333,
+			"end": 3346,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "We've covered evals a bunch. There's this trend of just like, that is the future of product management's writing evals because essentially it's what does success look like. Okay, cool. Let me actually concretely define it and then we'll know. How much of your time are you spending writing evals, would you say?",
+			"zh": "评测我们已经聊过不少了。现在有一种趋势，认为产品管理的未来就是写评测，因为本质上就是定义成功是什么样子：好，让我具体地把它定义出来，然后我们就知道了。你自己大概有多少时间花在写评测上？"
+		},
+		{
+			"at": 3346,
+			"end": 3406,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the importance of evals varies a bit based on the feature that you're working on or what the problem you're trying to solve is. So there are a lot of folks on our team who do spend a lot of time working on evals. We have a small pod of folks who collaborate very closely with research to more precisely understand our Claude Code behaviors and what the largest areas of improvement are and trying to measure those pretty concretely. I personally jump into evals when there's a feature that I think needs a bit more product definition, and often the output of this is, \"Okay, here are five evals that I made. This is how you run them. These are the ones that succeed and these are the ones that don't, and this is the prompt that I've used to increase the success rate.\" It varies a lot though based on the exact feature. Not every feature needs it, but I think features such as memory benefit a lot from it.",
+			"zh": "我觉得评测的重要性会因你做的功能、或者你要解决的问题而有所不同。我们团队里有不少人确实在评测上花很多时间。我们有一个小组，和研究团队紧密合作，更精确地理解 Claude Code 的各种行为，以及最大的改进空间在哪里，并尽量具体地去衡量。我自己会在某个功能需要更多产品定义的时候跳进去做评测，通常产出是这样的：「这是我做的五个评测，这是运行方法，这些通过了，这些没通过，这是我用来提高成功率的提示词。」不过这非常取决于具体功能。不是每个功能都需要，但我觉得像记忆这样的功能就很受益。"
+		},
+		{
+			"at": 3406,
+			"end": 3421,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "This point you made about people being very good at evaluating models so interesting. It's almost like a human eval of just like, okay, they understand where it's spiking, where it's maybe lacking. Is there anyone specific that you want to shout out that's very good at this?",
+			"zh": "你说有些人特别擅长评估模型，这点很有意思。这几乎就像是一种人工评测：他们能理解模型哪里表现突出、哪里可能不足。你有没有想特别点名的、在这方面很强的人？"
+		},
+		{
+			"at": 3421,
+			"end": 3466,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Two people who I think are incredible at this are, one, Amanda, who molds Claude's character. It's just such a hard role because the task is so ambiguous. Even coding is easier because you can verify the success, whereas crafting the character requires a very strong sense of conviction in who Claude should be, and I think she has an incredible ability to not only mold the character, but also to articulate what the goals are, what the character, what's successful and what's not. The other group of people who I really trust is just the Claude Code team.",
+			"zh": "我觉得有两位在这方面非常了不起。第一位是 Amanda，她负责塑造 Claude 的性格。这个角色太难了，因为任务本身非常模糊。就连写代码都更容易，因为成功与否可以验证；而塑造性格，需要对 Claude 应该成为什么样的人有非常坚定的信念。我觉得她不仅有塑造性格的卓越能力，还能清楚地表达目标是什么，什么样的性格算成功、什么不算。另一群我非常信任的人，就是 Claude Code 团队。"
+		},
+		{
+			"at": 3466,
+			"end": 3525,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So we often have team lunches and whenever there's a new model we're testing, one of the fastest ways for us to get feedback is to just at these team lunches, just go to every single person and just be like, \"Hey, what is your vibe on the model?\" And oftentimes we'll get feedback like, \"Okay, this model is not fully explaining its thinking. It's too abrupt,\" or like, \"Hey, this model just loves writing a ton of memories, but we're not sure if the memories are high quality or not,\" or some people will notice that, \"Okay, this model loves to test itself, which is great, or this model isn't testing itself enough.\" So that informs what data we look at to verify, okay, is this a larger pattern? So we have a ton of data, but it is very hard to extract insights, and so the feedback from this group helps us inform, okay, what are the hypotheses we want to test, and then we're able to extract data to test that.",
+			"zh": "我们团队经常一起吃午饭，每次有新模型要测试，最快拿到反馈的办法之一，就是趁着午饭挨个儿问每个人：「嘿，你觉得这个模型的感觉怎么样？」常常会听到这样的反馈：「这个模型没把思考过程讲清楚，太突兀了」，或者「这个模型特别爱写一大堆记忆，但我们不确定这些记忆质量高不高」，也有人会发现「这个模型喜欢自己测试自己，这很好」，或者「这个模型测试自己测得不够」。这些反馈会告诉我们该去看哪些数据，来验证这是不是一个更普遍的规律。我们手上有海量数据，但很难从中提炼出洞察，所以这个小圈子的反馈能帮我们确定：到底想验证哪些假设？然后我们再去提取数据来检验。"
+		},
+		{
+			"at": 3525,
+			"end": 3574,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "This point you made about the character of Claude, I had Ben Mann on the podcast, co-founder, and he talked about this, just the character, the constitution of Claude is such an important part of Claude. And I didn't realize until afterwards just with OpenClaw actually, one of the reasons people are sad is the personality of your Claude is... Because Claude's personality is so good and fun and interesting unlike other models. And the way he put it is the personality is what makes Claude so good at so many things. It feels like this trivial side thing. Okay, it's going to be funny and interesting and talk in a fun way, but it's so core to the success of Claude. Is there anything get shared there about just what people may not understand about why the character, as you described, and the personality is so key?",
+			"zh": "你说的 Claude 的性格这一点，我之前请过 Ben Mann 上节目，他是联合创始人，他也讲到了这个：Claude 的性格、它的宪法，是 Claude 非常重要的一部分。其实直到后来，尤其是 OpenClaw 这件事，我才意识到，人们感到难过的原因之一，就是你们的 Claude 的性格……因为 Claude 的性格那么好、那么有趣，和其他模型不一样。他的说法是，正是这种性格让 Claude 在这么多事情上都那么出色。这看起来像是一件无关紧要的小事，不就是幽默一点、有趣一点、说话好玩一点嘛，但它其实是 Claude 成功的核心。关于为什么你说的这种特质和性格如此关键，是不是有什么人们可能没意识到的地方，你能分享一下吗？"
+		},
+		{
+			"at": 3574,
+			"end": 3628,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "When you reflect on everyone you've worked with, there's just some people where you're like, \"I really like their energy. I really like their vibe,\" and when people think about Claude and Claude Code, this is one of the things that people bring up the most where they just really love that Claude, it's lighthearted and fun, but it also is extremely confident at your task. People really like that Claude's low ego, and so if you tell it, \"Hey, you did this thing wrong.\" It's truly sorry. It's like, \"Oh, shoot. Thanks for telling me. Let me fix it. Let's work together.\" It's also very positive. So if you're feeling like, \"Oh, this is an insurmountable task. I don't know how to get started,\" Claude is like, \"Okay, it's okay. These are the steps that I think we should take. Do you want me to get started on it for you?\"",
+			"zh": "回想一下你共事过的所有人，总有一些人让你觉得「我就是喜欢他们的气场，喜欢他们那种感觉」。人们谈起 Claude 和 Claude Code 的时候，这是被提到最多的点之一：大家就是特别喜欢 Claude，它轻松有趣，但在你的任务上又极其自信。人们喜欢 Claude 的低自我：你对它说「嘿，这件事你做错了」，它是真的会抱歉，会说「哎呀，谢谢你告诉我，我来改，我们一起搞定」。它也非常积极。比如你觉得「这任务太难了，我不知道从哪儿下手」，Claude 会说：「没关系，我觉得可以按这几步来。要我先帮你开个头吗？」"
+		},
+		{
+			"at": 3628,
+			"end": 3645,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think part of what makes a great Coworker is this positivity, this bias towards action, this ability to give you earnest feedback, not just agreeing with every single thing that you say, and so we try to imbue this into Claude because we think it makes it a lot more enjoyable to work with.",
+			"zh": "我觉得一个出色的同事，就该有这种积极的态度、这种偏向行动的倾向，还能给你真诚的反馈，而不是你说什么它都附和。所以我们努力把这些特质注入 Claude，因为我们觉得这会让和它共事愉快得多。"
+		},
+		{
+			"at": 3645,
+			"end": 3663,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "There's something I want to come back to. You talked about how when new models come out, you often have to revisit things you've built. That's so interesting and so frustrating maybe, just like, \"Oh, Goddammit it. Reshipped this thing, now I have to rethink it.\" Talk about just how often you have to come back with a new model and they're like, \"Okay, we have to redo this product that we launched a few months ago.\"",
+			"zh": "有件事我想回过头聊聊。你说到新模型发布的时候，经常要回头重新审视之前做过的东西。这挺有意思的，也可能挺让人崩溃的，就像「天哪，刚发布的东西，现在又得重新想」。聊聊你们多久就得因为新模型来一次，然后说「好，几个月前上线的这个产品得重做了」？"
+		},
+		{
+			"at": 3663,
+			"end": 3715,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "A lot of the changes that we make with a new model is removing features that are no longer needed. So a lot of times we add features to the product as a crutch for the model because it's not naturally doing itself. So the classic example for this is the to do list. When we first launched Claude Code, people would ask it to do these larger factors and Claude Code would say, \"Okay, cool. I need to change these 20 call sites,\" and it would go and change five of them and then stop. And then we were like, \"Okay, how do we force it to remember to get every single one of these 20?\" And so Sid on our team was like, \"Okay, what if we just think about what a human would do? A human would make a list of everything that they need to change. Similar to how in VS Code, you would look up all the call sites and it would be a list on the left side and you would go through them one by one and replace all. How do we give this kind of a tool to Claude?\"",
+			"zh": "新模型带来的很多改动，其实是删掉不再需要的功能。很多时候，我们给产品加功能，是给模型当拐杖，因为模型自己没法自然地做到。最典型的例子就是待办清单。刚推出 Claude Code 的时候，人们让它做比较大的重构，Claude Code 会说：「好的，我需要修改这 20 处调用点」，结果它改了五处就停了。于是我们想，怎么才能逼它记得把这 20 处全部改完？团队里的 Sid 就说：「我们想想人会怎么做。人会把需要改的东西列成一张清单，就像在 VS Code 里，你会查出所有调用点，它们在左侧排成一列，你一个个过，再全部替换。我们怎么把这样的工具给 Claude？」"
+		},
+		{
+			"at": 3715,
+			"end": 3764,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And so he added the to do list and we found that with that, Claude was actually able to fix all these 20 call sites. But then with Opus 4 and later models, we realized that we didn't need to force it to use this to do list, it would naturally use itself. For the earlier models, we had to keep reminding it, \"Hey, did you finish everything on the to do list? You can't finish until you're done with everything on the to do list.\" And for the later models, without prompting, it's just naturally thinks to do everything on the to do list. These days, the to do list is still nice to have as a user because then you can more clearly see what Claude is working on. But honestly, it's such a de-emphasized part of the product right now that the model may use it, the model may not use it. It's really not necessary for it to make thorough changes anymore.",
+			"zh": "于是他加上了待办清单，我们发现有了它，Claude 真的能把这 20 处调用点全改完。但到了 Opus 4 和之后的模型，我们发现不用再强制它用待办清单了，它自己就会自然地用。对更早的模型，我们得不停提醒它：「嘿，清单上的事都做完了吗？清单上的事没做完之前，你不能结束。」而对后来的模型，不用提示，它自然就会想着把清单上的事全做完。现在待办清单对用户来说仍然不错，因为你能更清楚地看到 Claude 在做什么。但说实话，它在产品里已经是个被淡化的部分了，模型可能用，也可能不用，它对于让模型把改动做彻底，已经没那么必要了。"
+		},
+		{
+			"at": 3764,
+			"end": 3783,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I forget who said this on the podcast, that the model will eat your harness for breakfast, and what I'm hearing here is essentially you remove things over time that you've had to add on top of the model where it was not operating the way you wanted. And essentially, as the models get smarter, it becomes simpler and simpler for it just to do the thing you want it to do.",
+			"zh": "我忘了是谁在节目里说过，模型会把你的运行框架当早餐吃掉。我从你这里听到的意思基本上就是：你会随着时间推移，把当初为了纠正模型不按你想要的方式工作而加在它上面的东西逐步拿掉。而随着模型越来越聪明，让它去做你想做的事就变得越来越简单。"
+		},
+		{
+			"at": 3783,
+			"end": 3838,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. We can remove a lot of prompting interventions every time the model gets smarter. And we actually do this every time we launch a model, we read through the entire system prompt and we reflect on, okay, for each of these sections, does the model really need this reminder anymore, and if not, we'll remove it. The most exciting thing that new models unlocks though is just entirely new features. So there's a lot of features that we've been testing out with prior models and the accuracy wasn't high enough for us to want to launch them, and so one example of this is code review. We tried to build a code review product a few times and we've launched simpler versions of code review, which is the /codereview command in the past, and it was only with the most recent models that we felt like, okay, this code review is so good that our engineering team relies on this code review to pass before we merge PRs.",
+			"zh": "对。每次模型变聪明，我们都能去掉很多提示词层面的干预。而且我们每次发布模型，都会把整个系统提示词通读一遍，逐段反思：这一段，模型还需要这个提醒吗？如果不需要，就删掉。不过新模型带来的最令人兴奋的，还是全新的功能。有很多功能，我们在之前的模型上试过，但准确率不够高，不足以让我们发布。一个例子就是代码审查。我们试着做过几次代码审查产品，之前也发布过比较简单的版本，也就是 /codereview 命令，直到最近的这批模型，我们才觉得：好，这个代码审查现在够好了，好到我们的工程团队在合并 PR 之前，要依赖这个代码审查通过。"
+		},
+		{
+			"at": 3838,
+			"end": 3879,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And we found that this was... We've always dreamed of Claude being able to be a reliable code reviewer that we can confidently feel catches the majority of bugs, and it was only with Opus 4.5 and 4.6, and Sonnet 4.6 that we felt like, okay, we are now able to run multiple code review agents simultaneously to traverse the entirety of the code base and to synthesize a set of real issues that an engineer needs to address before merge. And so this is a new capability that the newest models have unlocked.",
+			"zh": "我们一直梦想着让 Claude 成为一个可靠的代码审查者，能让我们有信心地认为它抓出了大多数 bug。直到 Opus 4.5 和 4.6，还有 Sonnet 4.6，我们才觉得：好，现在可以同时运行多个代码审查智能体，遍历整个代码库，再综合出一份工程师在合并前必须处理的真实问题清单。所以，这是最新的模型解锁的一项新能力。"
+		},
+		{
+			"at": 3879,
+			"end": 3892,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "This is another trend that is very common on this podcast of build something that will possibly be possible in the next six months, be kind of at the edge of what's working sort of, and then it'll catch up and then it'll be an amazing product and you'll be ahead of everyone.",
+			"zh": "这是这档播客上很常见的另一个趋势：去做一个未来六个月内有可能实现的东西，让它处在刚好能用、又不太好用的边缘，等模型追上来，它就会变成一个很棒的产品，你就领先所有人了。"
+		},
+		{
+			"at": 3892,
+			"end": 3912,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, exactly. It's pretty important to build products that don't necessarily work yet so that you know, okay, what is missing for this product to work? And then with the newest model, you can just swap it into the prototype you've already made and see, okay, does this new model close that gap?",
+			"zh": "对，没错。做一些暂时还不太能用的产品，其实很重要，这样你就知道这个产品到底缺什么才能跑通。等新模型出来，你直接把它换进你已经做好的原型里，看看这个新模型能不能补上那块缺口。"
+		},
+		{
+			"at": 3912,
+			"end": 3932,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "How much are you able to speak to just where things are going with Claude and Cowork as the vision of it? I imagine you don't want to give away too much about the goal, but it feels like there's all these awesome features being added on top, dispatch, control from phone and all these mobile app, all these things. What's kind of just a way to understand the vision for all these things long-term?",
+			"zh": "关于 Claude 和 Cowork 的愿景，也就是它们接下来的方向，你能说多少？我想你不会透露太多目标，但感觉上面不断有很棒的功能加进来，比如 dispatch、手机远程控制，还有各种移动应用。要怎么理解这些东西长期的愿景呢？"
+		},
+		{
+			"at": 3932,
+			"end": 3990,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "We think about this in terms of building blocks. So for both Claude Code and Cowork, the core building block is making individual tasks successful. So you wanted to produce some output, you give it a prompt description. Is it able to consistently produce acceptable output that you're able to either merge or share with your colleagues or external audience? So the task is the core building block. As the models get smarter, the task access rate gets a lot higher, and then we see people moving towards doing multiple tasks at the same time. So multi-Claudeing was this big thing towards the end of 2025, and it's only increased since then. And so we see this as, okay, great. One task works, and now you can do six tasks at a time. As the models get even smarter, the way that we are extrapolating this is, okay, next, maybe you're going to run 50 Claudes at a time or hundreds of Claudes at a time, and so what is the infrastructure we need to build to enable that?",
+			"zh": "我们是用「积木」的思路来想这件事的。对 Claude Code 和 Cowork 来说，最核心的积木都是让单个任务成功。你想产出某个结果，给它一段提示词描述，它能不能稳定地产出合格的结果，让你可以合并，或者分享给同事或外部受众？所以任务是最核心的积木。随着模型变聪明，任务的成功率大大提高，我们就看到人们开始同时做多个任务。「多开 Claude」在 2025 年底成了一股大潮，此后只增不减。所以我们的看法是：很好，一个任务能跑通了，现在你可以同时做六个。等模型再聪明一些，我们推断下一步，你也许会同时运行 50 个甚至上百个 Claude，那我们需要搭建什么样的基础设施来支撑这件事？"
+		},
+		{
+			"at": 3990,
+			"end": 4043,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "At that point, you're probably not going to run everything locally on your machine anymore. There's just not enough RAM to do it. And so we're thinking about how do we make it easier for you to manage all these? These will probably run remotely. How do we build the interface so that you as a human know which tasks you need to look into? How do we make sure that the agent is fully verifying its work so that when you look at a task and it says it's done, you can very quickly verify and fully trust that it is done to your spec. And how do we make sure that this process is self-improving so that when you do see a task that isn't done to your liking, you can give it feedback and the model will know for every future run to incorporate that feedback so it never makes that mistake again? So this is the progression that we're bringing our users along for.",
+			"zh": "到那个阶段，你大概不会再把所有东西都跑在自己机器上了，内存根本不够。所以我们在想，怎么让你更容易管理这一切？这些任务多半会在远端运行。我们怎么设计界面，让你作为人类知道该去看哪些任务？怎么确保智能体充分验证了自己的工作，这样当你看到一个任务显示已完成时，可以很快验证，并完全相信它确实按你的要求完成了？还有，怎么确保这个过程能自我改进，这样当你看到某个任务没做到你满意时，可以给它反馈，而模型在之后的每一次运行里都会记得吸收这条反馈，永远不再犯同样的错？这就是我们要带着用户一路走过的演进路径。"
+		},
+		{
+			"at": 4043,
+			"end": 4069,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "There's a lot of people listening, a lot of product managers, a lot of maybe founders, a lot of other cross-functional folks listening. There's a lot of worry about just how their role... Just the future of their careers. What advice would you have for just people to not just survive this transition to this very AI-driven world, but to be really successful to essentially just to thrive in this future? What are just things people need to hear, need to be doing?",
+			"zh": "现在听众里有很多产品经理，很多创始人，也有很多其他跨职能的朋友，大家都很担心自己的角色，担心自己职业的未来。你对大家有什么建议，不只是帮他们挺过这场向 AI 驱动世界的转变，而是真正活得出色，在这样的未来里茁壮成长？有哪些话是大家需要听到的，有哪些事是大家需要去做的？"
+		},
+		{
+			"at": 4069,
+			"end": 4112,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think AI gives everybody a ton more leverage than they used to, and so I would push you towards anytime you realize that you're doing some manual task multiple times, think about how you can use Claude Code, Cowork, or other AI tools to automate that for you. Most people have creative parts of their job that they absolutely love and then tedious parts of their job that they really hate doing. I think the beauty of AI is that it can do those tedious parts for you. It can learn from every time that you've done that manual task and generalize and then run it automatically and so that you can focus on the creative parts and that means you can do a lot more than you used to be able to do.",
+			"zh": "我觉得 AI 给了每个人比以前多得多的杠杆。所以我会建议你，每当发现自己在重复做某件手动任务时，就想一想怎么用 Claude Code、Cowork 或其他 AI 工具把它自动化。大多数人的工作里，都有自己特别热爱的创造性部分，也有特别讨厌的繁琐部分。我觉得 AI 的美妙之处就在于，它可以替你做那些繁琐的部分。它能从你每一次手动做这件事的过程中学习，然后加以泛化，自动运行，这样你就可以专注在创造性的部分，也就意味着你能做的事比以前多得多。"
+		},
+		{
+			"at": 4112,
+			"end": 4159,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "So I think my immediate push for people is figure out the repetitive parts that you can pass to Claude, iterate on those automations until the success rate is very high, and then focus on, okay, what more can you be doing for your team, for your product, for your company that people haven't had the bandwidth to pick up so far, or what is that pet project that you always thought the company should do that you've never had bandwidth to do? If AI can take care of the grunt work, then you have this extra 20% time now that you might not have before. So my push is to lean into these tools, hand off the work that you're not excited to do, figure out how it can accelerate you, and then as a result, you'll be able to do so much more.",
+			"zh": "所以我给大家的当务之急建议是：找出那些重复性的工作交给 Claude，不断迭代这些自动化，直到成功率很高，然后去想：我还能为团队、为产品、为公司做些什么，是之前大家没精力去做的？或者，你一直觉得公司应该做、却从来没精力做的那个小项目是什么？如果 AI 能把苦力活包下来，你就多出了 20% 的时间，这是你以前可能没有的。所以我的建议是：拥抱这些工具，把你不想做的工作交出去，想办法让它帮你提速，这样你就能做成多得多的事。"
+		},
+		{
+			"at": 4159,
+			"end": 4186,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Something core to what you just shared, which I fully agree with is find problems to solve with AI. There's all this potential what all these tools can do. For a lot of people, the hardest part is just like, \"What should I actually do?\" And what you're saying here is just pay attention to things that you are doing constantly you can automate, pay attention to just ideas that have been floating around that you haven't had time to do. It's basically it's like solve a problem for yourself is kind of the core advice there.",
+			"zh": "你刚才说的有个核心，我完全同意，就是要去找可以用 AI 解决的问题。这些工具有这么多潜力，对很多人来说，最难的反而是「我到底该做什么」。你的意思是，留意那些你一直在做、可以自动化的事，留意那些一直在脑子里转、却没时间做的想法。基本上，核心建议就是：先为自己解决一个问题。"
+		},
+		{
+			"at": 4186,
+			"end": 4248,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Exactly. I would also push listeners towards focusing on bringing your automations from, okay, this is a cool concept to like, hey, this actually works 100% of the time. Sometimes I see users trying to automate something, getting it to 90, 95% accuracy and then giving up on it, and if an automation doesn't work 100% of the time, it's not really an automation, and that last five to 10% does take more time. Also, building the automation is often a lot slower than you doing it yourself. I would encourage listeners to put in that time to scope some automation that you really want to get to 100%, put in the elbow grease to teach Claude your preferences, to give it feedback so that it can improve its skill so that it can get to that 100%, and then really then you'll be able to rely on it. There's just not much value in a 95% there automation.",
+			"zh": "没错。我还想建议听众，把你的自动化从「这是个酷炫的概念」推进到「它真的能百分之百奏效」。我有时看到用户尝试自动化某件事，做到 90%、95% 的准确率就放弃了。但一个自动化如果不能百分之百奏效，就算不上真正的自动化，而最后那 5% 到 10% 确实要花更多时间。而且，搭建自动化往往比你自己动手做慢得多。我鼓励听众花这个时间，选一个你真心想做到 100% 的自动化，下功夫去教 Claude 你的偏好，给它反馈，让它改进自己的技能，最终做到 100%，到那时你才真正能依赖它。一个 95% 的自动化，其实没多大价值。"
+		},
+		{
+			"at": 4248,
+			"end": 4249,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I am super guilty of that. This is really good advice for me.",
+			"zh": "这一点我太中招了。这个建议对我真的很有用。"
+		},
+		{
+			"at": 4249,
+			"end": 4262,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I am guilty of this too. I've been teaching Cowork to try to get me to inbox zero for Gmail, and it has been very time-consuming and it is definitely not there as you probably realize.",
+			"zh": "我也是。我一直在教 Cowork 帮我把 Gmail 收件箱清到零，这个过程非常耗时，你大概也猜到了，它到现在还没做到。"
+		},
+		{
+			"at": 4262,
+			"end": 4288,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah. Funny enough, that's exactly where my mind goes. I have this workflow I set up where every email I get, it looks for things that are spammy, which is just all these like, \"Hey, can I come on your podcast?\" Or, \"What about this?\" All these things, I'm just like, \"I don't have time for these sorts of things,\" and I have it categorized it into a folder called Spammy and it's just like, it's 95% great, but then there's like, oh, wow, I missed an email because it went in there. So this is a good push for me to like, I'm going to work on this. I'm going to get it to perfect.",
+			"zh": "是啊，说来好笑，我的脑子也是直接想到这个。我设置了一套流程，每封邮件进来，它会找出那些垃圾味的，比如各种「嘿，我能上你的播客吗？」或者「你看这个怎么样？」之类的，我就想「这些事我没时间处理」，于是让它把这些邮件归到一个叫 Spammy 的文件夹里。它做到 95% 都很好，但时不时就会冒出一句「哇，我漏掉了一封邮件，因为它被分到那里面去了」。所以这对我是个很好的推动：我要在这上面下功夫，把它做到完美。"
+		},
+		{
+			"at": 4288,
+			"end": 4317,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. We also are working on making the flow for customizing these commands a lot easier because right now I think you have to know too many concepts. You have to know to define a skill, you have to know to use this skill and give it feedback, and then you have to know to tell Cowork to update the skill based on all the feedback that you gave, and then you also have to know where to read the skill to make sure that the feedback was incorporated the way that you want. It's also our job to make this flow really seamless so that it doesn't feel painful to do.",
+			"zh": "对。我们也在努力让自定义这些命令的流程变得简单得多，因为现在我觉得你需要懂的概念太多了。你得知道去定义一个技能，得知道怎么用这个技能并给它反馈，然后得知道告诉 Cowork 根据你给的所有反馈去更新这个技能，接着你还得知道去哪里读这个技能，确认反馈是不是按你想要的方式吸收进去了。把这个流程做得足够顺畅，让它做起来不痛苦，也是我们的责任。"
+		},
+		{
+			"at": 4317,
+			"end": 4328,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Amazing. Is there anything else, Cat, you wanted to share? Anything else you wanted to leave listeners with? Anything you wanted to double down on that we haven't already touched on before we get to our very exciting lightning round?",
+			"zh": "太棒了。Cat，你还有什么想分享的吗？在进入我们激动人心的快问快答之前，有没有什么想留给听众的话，或者想再强调一下、我们还没聊到的内容？"
+		},
+		{
+			"at": 4328,
+			"end": 4358,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I see a lot of people playing around with AI and building prototype apps and tinkering with building workflows. I would really push people towards building apps that you're actually using every single day because I think only through that usage are you actually getting the value. If you build a prototype app that isn't helping you get more done, then the AI isn't really adding value to your day.",
+			"zh": "我看到很多人在玩 AI，做原型应用，捣鼓搭建各种工作流。我真心建议大家去做那种你自己每天都在用的应用，因为只有通过这样的使用，你才能真正获得价值。如果你做了一个原型应用，却没有帮你多做成任何事，那 AI 就没有真正给你的一天增加价值。"
+		},
+		{
+			"at": 4358,
+			"end": 4365,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And there's only so much you learn from that when it's like, okay, I just did one-shotted something, oh, that's cool, and then you never come back to it. You're not learning a lot.",
+			"zh": "而且从那种东西里能学到的也有限，就是「好，我一次性生成了个东西，哇，挺酷」，然后就再也不回头用它了。这样学不到多少东西。"
+		},
+		{
+			"at": 4365,
+			"end": 4367,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "And you're not getting much leverage from it.",
+			"zh": "而且你也没从中获得多少杠杆。"
+		},
+		{
+			"at": 4367,
+			"end": 4369,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "And actual leverage. Yeah, that's such a good point.",
+			"zh": "没错，真正的杠杆。这一点说得太好了。"
+		},
+		{
+			"at": 4369,
+			"end": 4421,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I also think there's a lot of people who spend a lot of time customizing their workflow. So I think there's two ends of the spectrum. One is people who never customize or never build automations, but there's this polar opposite end of people who obsess around customizing their tool, adding a ton of skills and MCPs and these workflow improvements, and I think sometimes that can even distract from your core goal of launching some product or building some feature. I think there's a lot of fun in customizing and we definitely want to make our products very hackable so that you can make it work really well for you, but there is a limit to how much it's useful, and I think there's a camp of people who maybe spend so much time customizing that they're not sleeping and not doing the core task that they originally set out to do.",
+			"zh": "我还觉得，有很多人花大量时间去定制自己的工作流。我觉得这里有两个极端：一端是从不定制、从不搭建自动化的人，而另一端恰好相反，是那些痴迷于定制工具的人，加一大堆技能、MCP 和各种工作流改进。我觉得有时候这甚至会让你偏离核心目标，比如发布某个产品或做出某个功能。定制本身有很多乐趣，我们也确实希望让产品非常好改造，让你能把它调教得特别顺手，但它的用处是有上限的。我觉得有这么一群人，花了太多时间在定制上，以至于不睡觉，也没去做他们当初打算做的核心任务。"
+		},
+		{
+			"at": 4421,
+			"end": 4432,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I see a lot of that on Twitter. Just like, \"Look at my setup. It's out of control. It's so optimized,\" and what are you actually building? No, but my setup is so awesome. It gets so much done.",
+			"zh": "我在推特上看到很多这种。就是「看我的配置，已经失控了，优化得太极致了」，那你到底在做什么东西呢？「不，可我的配置太棒了，效率特别高。」"
+		},
+		{
+			"at": 4432,
+			"end": 4436,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think the simple setups actually work better.",
+			"zh": "我觉得简单的配置反而更好用。"
+		},
+		{
+			"at": 4436,
+			"end": 4438,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "/powerup. Level up a little bit.",
+			"zh": "/powerup。稍微升个级。"
+		},
+		{
+			"at": 4438,
+			"end": 4438.6,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah,",
+			"zh": "对，"
+		},
+		{
+			"at": 4438.6,
+			"end": 4478,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah. There's this Karpathy tweet that just came out yesterday where you talked about this divide that's interesting between people that tried ChatGPT, Claude back in the day, it was like, okay, and they're like, \"Nah, this is terrible,\" and they kind of gave up on what AI could do for them and they're just so cynical of like, \"No way, it's not actually that big of a deal.\" And then there's people that are using it to code essentially who see the full intense power of it and how good it is and people on both sides don't understand the other side and how they see the world. And so your advice is really good here to just actually use it for real things and see how good it actually has gotten.",
+			"zh": "对。昨天刚出了一条 Karpathy 的推文，你也提到过这种有意思的分化：有些人在早些年试过 ChatGPT、Claude，觉得「嗯，这也太烂了」，就对 AI 能为自己做什么放弃了，非常愤世嫉俗，觉得「不可能，其实没那么了不起」。而另一边是那些用它写代码的人，他们看到了它的全部威力，知道它有多强，两边的人都无法理解对方，也不理解对方眼中的世界。所以你的建议在这里特别好：就是真的用它去做实事，看看它现在到底变得有多好。"
+		},
+		{
+			"at": 4478,
+			"end": 4510,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. I think the big shift is that the 2024 generation of products were chat-based and the Claude Code generation of products is action-based, and the big aha moment people have is when Claude can just do things on your behalf. It is an amazing feeling to know that the agent is capable of doing so much more than telling you what to do. The agent can actually just do it itself, and when people feel that, I think that's the eye-opening moment.",
+			"zh": "对。我觉得最大的转变是，2024 年那一代产品是基于聊天的，而 Claude Code 这一代产品是基于行动的，人们最大的顿悟时刻，就是 Claude 能直接替你把事情做了。知道智能体能做的远不止告诉你该怎么做，它自己就能直接做，这种感觉太棒了，我觉得人们一旦有了这种感受，就是醍醐灌顶的时刻。"
+		},
+		{
+			"at": 4510,
+			"end": 4518,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Shout out Chrome Extension, the Claude Code Chrome Extension, which you could just watch it doing stuff and you'd be like, \"Fill out this form for me,\" and I'm like, \"All right, here I go.\"",
+			"zh": "给 Chrome 扩展点个赞，就是 Claude Code 的 Chrome 扩展，你可以看着它自己干活，你说「帮我填一下这个表单」，然后我就想，「好，来了」。"
+		},
+		{
+			"at": 4518,
+			"end": 4519,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Exactly.",
+			"zh": "没错。"
+		},
+		{
+			"at": 4519,
+			"end": 4522,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay. Anything else before we get to our very exciting lightning round?",
+			"zh": "好。在进入我们激动人心的快问快答之前，还有别的要说吗？"
+		},
+		{
+			"at": 4522,
+			"end": 4525,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "No, let's do it.",
+			"zh": "没了，开始吧。"
+		},
+		{
+			"at": 4525,
+			"end": 4532,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Let's do it. Cat, I've got five questions for you. Welcome to the Lightning Round. There's this animation that plays, I have to make sure to say it. Are you ready?",
+			"zh": "来吧。Cat，我有五个问题要问你。欢迎来到快问快答。这里会播一段动画，我得记得说一下。准备好了吗？"
+		},
+		{
+			"at": 4532,
+			"end": 4534,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I'm ready.",
+			"zh": "准备好了。"
+		},
+		{
+			"at": 4534,
+			"end": 4538,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "First question, what are two or three books that you find yourself recommending most to other people?",
+			"zh": "第一个问题，你最常向别人推荐的两三本书是什么？"
+		},
+		{
+			"at": 4538,
+			"end": 4590,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I really like How Asia Works. It's a story about economic development and what are the policies and governments that make long-lasting successful economies. The other books that I'm really into are The Technology Trap. So this is actually about the past few technology revolutions, so the Industrial Revolution and the Computer Revolution and how this has affected workers. The reason that I really like this is because I think there's a lot we can learn from history to make sure that this transition goes well. And maybe on a fun note, I really like Paper Menagerie. It's just a book of short stories about coming of age and AI and just self-discovery.",
+			"zh": "我很喜欢《亚洲是如何运转的》（How Asia Works）。它讲的是经济发展，以及什么样的政策和政府能造就长久成功的经济体。我另外很喜欢的一本是《技术陷阱》（The Technology Trap）。它其实讲的是过去几次技术革命，也就是工业革命和计算机革命，以及它们如何影响了劳动者。我喜欢它的原因是，我觉得我们可以从历史里学到很多东西，来确保这一次转型能够顺利。再说点轻松的，我很喜欢《纸动物园》（Paper Menagerie），那是一本短篇小说集，讲成长、AI，还有自我发现。"
+		},
+		{
+			"at": 4590,
+			"end": 4594,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Favorite recent movie or TV show you have really enjoyed?",
+			"zh": "最近有没有特别喜欢的电影或电视剧？"
+		},
+		{
+			"at": 4594,
+			"end": 4637,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I really like Drive to Survive. There's no deeper meaning to it. There's just something very satisfying about people being so obsessed with a singular engineering goal and just the purity of the pursuit. And I also really love Free Solo, which is about Alex Honnold climbing El Capitan without a harness, and I think similarly, it's just such a pure achievement to be able to climb this extremely challenging, dangerous route and to be able to have the mental focus to do it knowing that if you make a single mistake, you die.",
+			"zh": "我很喜欢《一级方程式：飞速人生》（Drive to Survive）。它没什么更深的意义，就是看到一群人对同一个工程目标如此痴迷，那种纯粹的追求让人特别满足。我也特别爱《徒手攀岩》（Free Solo），讲的是 Alex Honnold 不带任何保护绳攀登酋长岩。我觉得同样地，这是一种极其纯粹的成就：要爬一条极其困难又危险的路线，还要有足够的专注力，明知只要错一步就会丧命。"
+		},
+		{
+			"at": 4637,
+			"end": 4642,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "It's insane. Yeah, that movie's out of control. And it's interesting how these relate in some way to the work you do.",
+			"zh": "太疯狂了。对，那部电影简直离谱。而且有意思的是，它们在某种程度上和你做的工作有关联。"
+		},
+		{
+			"at": 4642,
+			"end": 4667,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I actually am a rock climber, but I first watched Free Solo before I climbed rocks. And so I thought it was impressive, but I didn't understand how impressive it was. It's one of the rare movies where the more you know about it, the more you're blown away by how insane this is. The kinds of moves doing on the wall are things that I don't think I will ever be able to do in my lifetime if it were set in a gym one feet off the ground.",
+			"zh": "其实我自己是攀岩的，但我是在开始攀岩之前看的《徒手攀岩》。所以当时我觉得很厉害，却不明白到底有多厉害。这是少有的那种电影：你越懂行，就越被它的疯狂震撼。他在岩壁上做的那些动作，就算放在离地一英尺的攀岩馆里，我这辈子也未必做得到。"
+		},
+		{
+			"at": 4667,
+			"end": 4668,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "With a rope.",
+			"zh": "还得带着绳子。"
+		},
+		{
+			"at": 4668,
+			"end": 4670,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "With a rope.",
+			"zh": "对，带着绳子。"
+		},
+		{
+			"at": 4670,
+			"end": 4674,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Did you see the documentary in that other guy, the younger one that went on ice mountains?",
+			"zh": "你看过另一个纪录片吗？讲另一个更年轻的人，去爬冰山的那个。"
+		},
+		{
+			"at": 4674,
+			"end": 4676,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I did. That one was very sad.",
+			"zh": "看过。那部很让人难过。"
+		},
+		{
+			"at": 4676,
+			"end": 4681,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "But that was wild. Okay, favorite product you've recently discovered that you really love.",
+			"zh": "但那部也很震撼。好，说说你最近发现的、特别喜欢的产品。"
+		},
+		{
+			"at": 4681,
+			"end": 4735,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "The product that has most changed my life outside of Claude products is probably Waymo. I'm a diehard Waymo user, use it twice a day, get to and from work. So the two things that I really like about it are, one, I don't feel bad if a Waymo is waiting for me, and so I feel less pressure to be right at the curbside the moment it arrives, and the second thing is I feel like it lets me be a bit more productive. When I'm in the car with another human, I typically try not to do any work calls. I feel a little rude if I'm on my laptop the whole time. But one thing I really appreciate about the Waymo is I can call into a work call. I'm not worried about someone overhearing me. I'm not worried about, \"Hey, is this rude? Am I talking too loud? Do I need to ask someone to change the music?\" And so I feel like this has given me back 30 minutes every day.",
+			"zh": "除了 Claude 的产品之外，最改变我生活的产品大概是 Waymo。我是 Waymo 的忠实用户，每天用两次，上下班都坐。我特别喜欢它的两点：第一，如果 Waymo 在等我，我不会有愧疚感，所以不用一到就非得立刻站在路边；第二，我觉得它让我能更高效一些。和另一个人同车时，我一般尽量不开工作电话，一直开着笔记本电脑也会觉得有点失礼。但 Waymo 的好处是我可以直接打进工作电话，不用担心被别人听到，也不用纠结「这样是不是不礼貌？我是不是说话太大声了？要不要请司机换首歌？」所以我觉得它每天帮我多出了 30 分钟。"
+		},
+		{
+			"at": 4735,
+			"end": 4739,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "All these second order effects of technology, it's so interesting.",
+			"zh": "技术带来的这些二阶效应，真的很有意思。"
+		},
+		{
+			"at": 4739,
+			"end": 4747,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. I always saw Waymo needed to be priced lower than Uber and Lyft to succeed, but actually I'm very happy to pay a 2X premium for it.",
+			"zh": "是啊。我一直以为 Waymo 得比 Uber 和 Lyft 定价低才能成功，但其实我非常乐意为它多付两倍的价钱。"
+		},
+		{
+			"at": 4747,
+			"end": 4758,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "I love Waymo. It's just like once you see it, you're just like, \"This is insane.\" And then you get used to it. You get in there, you're like, \"This is crazy,\" and then you forget about it.",
+			"zh": "我爱 Waymo。就是那种，你第一次见到会觉得「这太疯狂了」，然后很快就习惯了。坐进去的时候你觉得「这也太神了」，然后你就把这事忘了。"
+		},
+		{
+			"at": 4758,
+			"end": 4770,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Totally. And I think it's also changed the vernacular. A lot of people at Anthropic love Waymo, and I think in the past you'd be like, \"Hey, let's call our rideshare app,\" and now everyone's just like, \"Okay, is Waymo here?\"",
+			"zh": "没错。我觉得它还改变了大家的用语。Anthropic 里很多人都爱 Waymo，以前你会说「嘿，我们叫一下打车软件吧」，现在大家都是「好，Waymo 到了吗？」"
+		},
+		{
+			"at": 4770,
+			"end": 4775,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay, two more questions. Do you have a favorite life motto that you often come back to in work or in life?",
+			"zh": "好，还有两个问题。你有没有一句常常回想起的人生格言，不管是工作上还是生活中？"
+		},
+		{
+			"at": 4775,
+			"end": 4776,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Just do things.",
+			"zh": "Just do things（去做就是了）。"
+		},
+		{
+			"at": 4776,
+			"end": 4778,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "That tracks. That tracks.",
+			"zh": "这很符合你。太符合了。"
+		},
+		{
+			"at": 4778,
+			"end": 4808,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think there's a lot of value in first principles thinking, and if you know what you're optimizing for and you have strong first principles, then you can normally deduce what the right course of action is and be able to clearly articulate that to all the stakeholders, and then you should just do it. I think jobs are fake. If you understand the constraints, you can figure out what you can do and then just try to do it quickly, learn from the mistakes and apologize or fix them if you did something wrong.",
+			"zh": "我觉得第一性原理思考很有价值：如果你清楚自己在优化什么，又有扎实的第一性原理，通常就能推导出正确的行动方向，也能向所有相关方讲清楚，然后就该去做了。我觉得职位这东西都是虚的。只要你理解约束条件，就能想清楚自己能做什么，然后尽快去做，从错误中学习，做错了就道歉或修正。"
+		},
+		{
+			"at": 4808,
+			"end": 4810,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "You could just do things, whoever said that.",
+			"zh": "你就是可以直接去做事，不管这话是谁说的。"
+		},
+		{
+			"at": 4810,
+			"end": 4838,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think it's liberating actually to tell people this. I think in a lot of companies, roles are very strictly defined like, okay, this is what the PM does, is what the designer does, this is what an engineer does, and then even team scopes are very rigidly defined. So hey, this corner of the code base we touch and this corner, we're not allowed to touch, and I think what just do things lets people do is they feel empowered to make these decisions, empowered to operate across team boundaries just to get something done.",
+			"zh": "其实我觉得把这话告诉大家是一种解放。在很多公司里，角色定义得非常死：这是 PM 做的，这是设计师做的，这是工程师做的，连团队范围也划得很僵，比如这块代码我们可以碰，那块我们不许碰。而我觉得「去做就是了」让人们感到被赋权，敢于做这些决定，敢于跨越团队边界把事情办成。"
+		},
+		{
+			"at": 4838,
+			"end": 4845,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "That feels like a big important skill to be good at. People call it agency, just do the things they need to do.",
+			"zh": "这感觉是一项很重要、值得练好的能力。大家管它叫主观能动性，就是主动去做该做的事。"
+		},
+		{
+			"at": 4845,
+			"end": 4846,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Bias towards action.",
+			"zh": "行动优先。"
+		},
+		{
+			"at": 4846,
+			"end": 4850,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Bias towards action, all these ways of describing just don't wait for permission.",
+			"zh": "行动优先，各种说法其实都是一个意思：别等着别人批准。"
+		},
+		{
+			"at": 4850,
+			"end": 4888,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. I think this is my favorite reason to work at a startup at some point in your life because one thing that was very life-changing for me was actually working at scale when we were 20 people, and so there was just no process and we had really big problems that we needed to solve. And I really appreciate Alex and the rest of the team for empowering me and the rest of the team to just figure things out without any boundaries for what sales supposed to do, what ops supposed to do, what engineer is supposed to do. Just like you have all the tools at your disposal, you have some ambitious hairy problem statement and you can do whatever you need to get to a good solution.",
+			"zh": "对。我觉得这是人生中至少应该去一次创业公司的最好理由。对我来说，影响很大的一点是我在公司只有 20 个人的时候就经历过规模化，那时候没有任何流程，却有很大的问题要解决。我特别感谢 Alex 和团队其他人，让我和团队其他人可以自己摸索，没有任何边界，比如销售该干什么、运营该干什么、工程师该干什么。你手上有所有的工具，面前有一个雄心勃勃又棘手的问题，你可以不择手段地找到一个好的解法。"
+		},
+		{
+			"at": 4888,
+			"end": 4906,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "You almost need that experience to build that skill to feel comfortable doing that because a lot of people, they go through school or in college and all these do the thing we tell you to do and then you will get a good grade, and you have to kind of unlearn that of like, okay, I'm just going to do the thing that needs to be done, and even if people think it's dumb, I think it's the right thing to do.",
+			"zh": "你几乎需要这种经历才能培养出这项能力，才会觉得这样做心安理得。因为很多人在学校、大学里，一直是「照我们说的做，你就能拿好成绩」，你得把这套逻辑忘掉，变成「我就去做该做的事，哪怕别人觉得很蠢，我也认为这是对的」。"
+		},
+		{
+			"at": 4906,
+			"end": 4907,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah, exactly.",
+			"zh": "对，没错。"
+		},
+		{
+			"at": 4907,
+			"end": 4916,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Okay. I actually have two more quick questions, two more final questions. One is when Claude thinks there's all these, I don't know if you call them verbs, what's the term for these things?",
+			"zh": "好。我其实还有两个简短的问题，最后两个。第一个是，当 Claude 在思考的时候，会冒出各种词，我不知道你们管它们叫动词还是什么，这些东西叫什么？"
+		},
+		{
+			"at": 4916,
+			"end": 4917,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Thinking words.",
+			"zh": "思考词。"
+		},
+		{
+			"at": 4917,
+			"end": 4923,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Thinking words. And interestingly, these all leaked in the source code. Do you have a favorite thinking word?",
+			"zh": "思考词。有意思的是，这些词全都在源码泄露时被曝光了。你有最喜欢的思考词吗？"
+		},
+		{
+			"at": 4923,
+			"end": 4930,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I really like manifesting. It's also like the sticker that I have on my laptop. It's my favorite.",
+			"zh": "我很喜欢「manifesting」（显化）。它也是我笔记本电脑上贴的贴纸，是我的最爱。"
+		},
+		{
+			"at": 4930,
+			"end": 4943,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Clearly the winner. Okay. Final question. Asked Forest this too, with AGI potentially arriving in our lifetime, when you don't potentially have to work, what are you going to do? What are you going to do with all your time?",
+			"zh": "毫无悬念的赢家。好，最后一个问题。我也问过 Forest 这个问题：AGI 有可能在我们有生之年到来，当你不再需要工作的时候，你打算做什么？你会拿所有的时间去做什么？"
+		},
+		{
+			"at": 4943,
+			"end": 5006,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "I think it will take a long time for AGI to diffuse across society. So I think the immediate thing is actually just helping bring the world along. I think my non-serious answer for it after this happens is I'll probably just do a lot of rock climbing. I'll probably just live in some... I'll probably move to Fontainebleau and just live amongst 10,000 boulders and climb for a bit. There's also so many books I want to read that... My goal is to be able to read one or two books a week, and I'm currently at probably 0.5. The backlog is pretty big. I think there's just so much we can learn from history and so much that I don't understand as well as I would love to. I don't know anything about physics or robotics or any hardware or aerospace or... There's just so many interesting topics. So I'm excited to learn, even knowing that the AGI will already know it.",
+			"zh": "我觉得 AGI 要在社会中扩散开会花很长时间，所以眼下最要紧的其实是帮助世界跟上来。至于不太正经的回答，等那一天到来之后，我大概会去疯狂攀岩。我可能会搬到枫丹白露，住在一万块巨石中间，攀爬一阵子。还有很多书想读……我的目标是每周读一两本，而我现在大概只有 0.5 本，积压的书单相当长。我觉得从历史中可以学到太多东西，也有太多我理解得不够好、很想弄明白的东西。我对物理、机器人、任何硬件或航空航天之类的一无所知……有太多有趣的主题了。所以我很期待去学习，哪怕明知道 AGI 早就懂了。"
+		},
+		{
+			"at": 5006,
+			"end": 5015,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Cat, this was amazing. You're awesome. Two follow-up questions. Where can folks find you online if they want to reach out and just follow what you're up to, and how can listeners be useful to you?",
+			"zh": "Cat，这期太棒了，你真了不起。还有两个后续问题：大家在网上哪里可以找到你，想联系你、关注你的动态的话？另外，听众怎样才能帮到你？"
+		},
+		{
+			"at": 5015,
+			"end": 5065,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "The best way to reach out is I am _catwu on Twitter. Feel free to tag me in things. Feel free to DM me. I read all my DMs. I don't always respond to every single one, but I will read them all. And then the thing that is most helpful is tell us where Claude Code and Cowork aren't working well for you. We are very grateful for the amount of positive feedback, but the thing that we thrive on is edge cases, errors, like specific tasks that we can reproduce where Claude Code or Cowork fail, because if you're able to share that with us and we're able to reproduce it, then this is something that we're able to actively improve for our next generations of models and for our next harnesses.",
+			"zh": "联系我最好的方式是在 Twitter 上找 _catwu。欢迎在帖子里 @ 我，也欢迎私信我。我所有的私信都会看，虽然不一定每条都回，但我都会读。至于最有帮助的事，就是告诉我们 Claude Code 和 Cowork 在哪些地方对你不好用。我们非常感谢大家给的很多正面反馈，但我们真正靠它成长的是边缘情况、错误，也就是我们能复现的、Claude Code 或 Cowork 做不好的具体任务。因为如果你能分享给我们，我们也能复现，那我们就可以在下一代模型和下一代运行框架里主动去改进它。"
+		},
+		{
+			"at": 5065,
+			"end": 5070,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Extremely cool. Everyone on... People on Twitter are not shy with sharing this feedback, so keep it going.",
+			"zh": "太棒了。Twitter 上的朋友们分享反馈从来不害羞，所以继续保持。"
+		},
+		{
+			"at": 5070,
+			"end": 5074,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yes, please share the problems that you're having with us.",
+			"zh": "对，请把你们遇到的问题分享给我们。"
+		},
+		{
+			"at": 5074,
+			"end": 5084,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Yeah, and it's really cool to see all your team being so active on Twitter and responding to people. And so what I'm hearing, this is actually stuff you guys actually see and react to.",
+			"zh": "对，而且看到你们整个团队在 Twitter 上这么活跃、积极回复大家，真的很棒。所以我听到的是，你们确实会看到这些内容并做出回应。"
+		},
+		{
+			"at": 5084,
+			"end": 5102,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Yeah. We appreciate everyone being so engaged with us. It gives a team a ton of energy. We have this channel of user love, and so whenever you guys share a success story, we post it there and whenever you guys share issues with our product, we put it into our feedback channel, that way our broader team is able to act on it.",
+			"zh": "是的。我们感谢大家这么积极地和我们互动，这给团队带来了很大的能量。我们有一个「用户喜爱」频道，大家分享成功故事时，我们就发到那里；大家反馈产品问题时，我们就放进反馈频道，这样我们更广泛的团队就能据此行动。"
+		},
+		{
+			"at": 5102,
+			"end": 5108,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "That is so cool to know. Thanks for sharing that. Well, Cat, thank you so much for being here.",
+			"zh": "知道这些太好了，谢谢分享。好，Cat，非常感谢你来做客。"
+		},
+		{
+			"at": 5108,
+			"end": 5109,
+			"speaker": "guest",
+			"kind": "turn",
+			"text": "Thanks for having me.",
+			"zh": "谢谢你邀请我。"
+		},
+		{
+			"at": 5109,
+			"end": 5111,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Bye, everyone.",
+			"zh": "大家再见。"
+		},
+		{
+			"at": 5111,
+			"end": 5134,
+			"speaker": "host",
+			"kind": "turn",
+			"text": "Thank you so much for listening. If you found this valuable, you can subscribe to the show on Apple Podcasts, Spotify, or your favorite podcast app. Also, please consider giving us a rating or leaving a review as that really helps other listeners find the podcast. You can find all past episodes or learn more about the show at lennyspodcast.com. See you in the next episode.",
+			"zh": "非常感谢收听。如果你觉得这期节目有价值，可以在 Apple Podcasts、Spotify 或你常用的播客应用上订阅。也请考虑给我们打个分或留下评论，这真的能帮助更多听众发现这档播客。你可以在 lennyspodcast.com 找到所有往期节目，或了解更多关于节目的信息。下期再见。"
+		}
+	]
+}
