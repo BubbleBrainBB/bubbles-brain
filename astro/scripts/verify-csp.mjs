@@ -43,6 +43,17 @@ assert.match(
 	'only this site may embed the reading pages',
 );
 
+assert.match(
+	globalHeaders,
+	/worker-src 'self'[ ;]/,
+	'the service worker at /sw.js must be allowed to register',
+);
+assert.match(
+	globalHeaders,
+	/manifest-src 'self'[ ;]/,
+	'the web app manifest at /manifest.json must be allowed to load',
+);
+
 for (const asset of ['js/theme-bootstrap.js', 'js/site-shell.js']) {
 	assert((await readFile(path.join(dist, asset))).length > 0, `${asset} is missing or empty`);
 }

@@ -18,6 +18,14 @@ export interface ChangelogItem {
 export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-19',
+		tag: '全站',
+		type: 'feature',
+		title: '可以把网站装到手机主屏幕了',
+		summary:
+			"现在可以像 App 一样把 Bubble's Brain 加到主屏幕，从图标打开是全屏的，没有浏览器地址栏。iPhone 用 Safari 打开网站，点底部的分享按钮，选「添加到主屏幕」；Android 和电脑上的 Chrome 会在地址栏或菜单里给出「安装」。文章总是取最新的；断网时打开会看到一页提示，联网后再试即可。",
+	},
+	{
+		date: '2026-10-19',
 		tag: '播客',
 		type: 'content',
 		title: '新增播客：Anthropic 的产品团队，怎么做到比谁都快',
