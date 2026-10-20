@@ -1,0 +1,2294 @@
+{
+  "episodeId": "lennys-podcast-emmanuel-ameisen",
+  "language": "en",
+  "source": {
+    "type": "show-transcript",
+    "note": "英文取自 Lenny's Podcast 公开的文字稿档案，时间点用 whisper.cpp 逐词对齐节目音频，中文由 AI 翻译"
+  },
+  "speakers": [
+    {
+      "id": "host",
+      "name": "Lenny Rachitsky",
+      "role": "主持"
+    },
+    {
+      "id": "guest",
+      "name": "Emmanuel Ameisen",
+      "role": "Anthropic"
+    }
+  ],
+  "turns": [
+    {
+      "at": 0,
+      "end": 9.22,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "One of the big questions on people's minds these days, is AI doing bad things? As someone that watches these models think and operate, why is it so hard to catch it thinking badly trying to deceive us?",
+      "zh": "如今很多人心里最大的一个问题就是：AI 会不会干坏事？作为一个天天盯着这些模型怎么思考、怎么运转的人，为什么这么难发现它心里在想坏主意、想骗我们？"
+    },
+    {
+      "at": 9,
+      "end": 17.66,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We trained Claude to be helpful, harmless, and honest. Is it the case that it's behaving well, but if you look inside actually it's like, oh, I'm only behaving well because Lenny's watching right now.",
+      "zh": "我们把 Claude 训练成有帮助、无害、诚实的。可要是往里看，它会不会其实是这样：哦，我只是因为 Lenny 在看着才表现良好。"
+    },
+    {
+      "at": 18,
+      "end": 23.83,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "People's full-time jobs is studying the model, how it thinks, how it operates. How long has this been a skillset and a job?",
+      "zh": "有个人的全职工作就是研究这个模型，看它怎么想、怎么运转。这门手艺、这份职业，存在多久了？"
+    },
+    {
+      "at": 24,
+      "end": 41.81,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "One of the most important things to realize if you use language models or think about them is just this very bizarre fact that to make them is not to understand them. All these models do is just a lot of mathematical operations on many numbers. If you look at it, it makes no sense. You just have a list of a hundred numbers, the model's doing math, and then you just try to see if there's patterns.",
+      "zh": "如果你在用语言模型，或者在思考语言模型，最该先记住的一件怪事就是：造出它们并不等于理解它们。这些模型所做的，就是对一大堆数字做大量数学运算。你去看它，根本看不出意义——你只拿到一百个数字，模型在做数学运算，然后你只能试着从中找规律。"
+    },
+    {
+      "at": 42,
+      "end": 50.32,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "You are figuring it out the same way we figure out how the brain works, looking for patterns. You show this image, this part of the brain lights up and you're doing the exact same thing with AI. Wow, this is so fascinating.",
+      "zh": "你们摸索的方式，和我们研究大脑的方式一模一样：找规律。给这张图看，大脑这块亮起来；你们对 AI 做的就是同样的事。哇，这太有意思了。"
+    },
+    {
+      "at": 50,
+      "end": 67.25,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There was this model we were training, it would go crazy. It would do some math, it would get to an answer, I think it was 12. It would immediately go back and say like, \"Oh no, oh my God, the answer actually is for sure 36.\" It would do math again, it would get to 12. Slowly it would start descending into madness, writing in all caps, literally saying, \"I'm possessed by a demon.\"",
+      "zh": "我们训练时有过一个模型，它会突然发疯。它算一道数学题，得出一个答案，我记得是 12，它马上回过头说：哦不，天哪，答案肯定是 36。它再算一遍，又得到 12。它慢慢滑向疯狂，开始全大写地写字，字面意义上说：「我被恶魔附身了。」"
+    },
+    {
+      "at": 67,
+      "end": 80.95,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Humans, if you really boil it down, we're basically next token predictors ourselves. We're just trying to figure out the next thing to say. Dario is always out there, \"This is really dangerous. We got to be really careful.\" And everyone's just like, \"No, he's just saying that for marketing reasons.\" And now it's like, wait, shit, it's really dangerous.",
+      "zh": "人类如果真往深了想，本质上也是下一个词预测器——我们不过是在琢磨下一句该说什么。Dario 总在那儿说「这真的很危险，我们得非常非常小心」，所有人都是：得了吧，他不过是为了营销才那么说。现在大家的反应变成了：等等，靠，这真的很危险。"
+    },
+    {
+      "at": 81,
+      "end": 85.17,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Take the idea that this technology is going to keep improving seriously.",
+      "zh": "先假设这项技术会持续显著变强。"
+    },
+    {
+      "at": 85,
+      "end": 88.77,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Do you think about consciousness as a part of this? Just do you think AI is conscious?",
+      "zh": "你会把意识也纳入考虑吗？你觉得 AI 有意识吗？"
+    },
+    {
+      "at": 89,
+      "end": 89.37,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh, man.",
+      "zh": "哎呀。"
+    },
+    {
+      "at": 89,
+      "end": 96.38,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Emmanuel, thank you so much for being here and welcome to the podcast.",
+      "zh": "Emmanuel，非常感谢你来，欢迎来到播客。"
+    },
+    {
+      "at": 96,
+      "end": 97.79,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Thanks for having me, Lenny.",
+      "zh": "谢谢你邀请我，Lenny。"
+    },
+    {
+      "at": 99,
+      "end": 104.59,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "So you work on interpretability at Anthropic. Explain what that is. Explain what it is you do.",
+      "zh": "你在 Anthropic 做可解释性。解释一下这是什么意思，也解释一下你具体在做什么。"
+    },
+    {
+      "at": 104,
+      "end": 117.84,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah. So I work in a team of interpretability researchers and our goal is to understand how LLMs like Claude work by looking inside them.",
+      "zh": "好。我所在的团队是一群可解释性研究员，我们的目标是通过「往里看」来理解 Claude 这样的 LLM 是怎么运作的。"
+    },
+    {
+      "at": 118,
+      "end": 138.62,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "One of the most important things to realize if you use language models or think about them is just this very bizarre fact that to make them is not to understand them. You make them by building this architecture, which is kind of like a scaffold, and then you pass a bunch of data through them and they grow in inscrutable ways.",
+      "zh": "如果你在用语言模型，或者在思考语言模型，最该先记住的一件怪事就是：造出它们并不等于理解它们。你造它的方式是先搭出这么一套架构，有点像一副脚手架，然后把大量数据灌进去，它们就以难以参透的方式生长出来。"
+    },
+    {
+      "at": 138,
+      "end": 145.86,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so that's why it's even a thing that we could be wanting to do to study how these models work.",
+      "zh": "所以，研究这些模型到底怎么运作，本身才成了一件值得做的事。"
+    },
+    {
+      "at": 146,
+      "end": 160.98,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so a lot of our research has been on, well, when the models are about to produce one more word, there's actually a whole universe of stuff that happens and we try to untangle as much of it as we can.",
+      "zh": "我们的研究有很大一部分聚焦于：当模型正要吐出下一个词的时候，其实有一整个宇宙的事情正在发生，我们尽力去把这团乱麻理清楚。"
+    },
+    {
+      "at": 161,
+      "end": 175.16,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "There's going to be a lot of mind-expanding, I don't know, elements to this conversation I expect. One is along these lines, this point that you make that models are not built, they're grown. Speak more to that.",
+      "zh": "这场对话我估计会有很多让人脑子被撑开的元素。其中一个就是你刚才说的这一点：模型不是被「造」出来的，是被「长」出来的。再展开说说？"
+    },
+    {
+      "at": 176,
+      "end": 202.99,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "At a really high level, the way a model like Claude works is you train it in these successive phases, like the first phase, which people refer to as pre-training is you just take a large corpus of data, and over this corpus of data, you feed the model as input, the let's say first half of a certain document, and you ask it to predict the word that comes next.",
+      "zh": "从很高的层面看，Claude 这样的模型是这样训练的：分几个阶段依次来。第一阶段大家叫预训练，你只是拿一大堆语料，在这堆语料上，把某份文档的前半段喂给模型，然后让它预测接下来那个词。"
+    },
+    {
+      "at": 203,
+      "end": 224.2,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Then you do that again and again and again and again for an ungodly amount of data. And after you do that, there's then this other phase where then you have this fine-tuning phase where maybe instead of arbitrary data, you have a corpus of examples of how the model should behave and that's what you train it on.",
+      "zh": "然后你对海量数据一遍又一遍地重复这件事，量大到离谱。做完之后还有另一个阶段，叫微调：这一阶段喂的不再是随便的数据，而是一批示范模型该怎样表现的例子，你就在这些例子上训练。"
+    },
+    {
+      "at": 224,
+      "end": 243.31,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So you have examples of dialogue of helpful assistant telling you your favorite recipe or solving coding problems. And then there's further details here that I'm just going to skip for a second. But then, okay, so what does that mean that you're doing this process? What is this thing that you're training?",
+      "zh": "比如有帮助的助手告诉你拿手菜谱的对话，或者帮你解决编程问题的对话。还有些细节我先跳过。那么问题来了：你做这一整套流程，究竟是在训练什么东西？"
+    },
+    {
+      "at": 243,
+      "end": 260.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "All models are, is they take this input, which is a bunch of words, they turn these words into numbers, and then they do some math on these numbers and they get some intermediate results and then they do more math and they get some intermediate results and they do this again and again and again and again many times. And then at the end they have a final result which then convert back into a word.",
+      "zh": "所有模型都是这样：把输入（一堆词）变成数字，在这些数字上做一些运算，得到一些中间结果，再做更多运算，又得到一些中间结果，如此一遍又一遍地反复很多次。最后得到一个结果，再把它变回一个词。"
+    },
+    {
+      "at": 261,
+      "end": 276.38,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so the math that they do, these computations, that's the part that's grown. That's the part where it's just like through learning to do this task better, we serve update parameters in one direction or another and then they learn some formulas. We have no idea what they are.",
+      "zh": "所以它做的这些数学运算、这些计算，才是那个「长出来」的部分。模型通过学习把任务做得更好，我们就朝某个方向更新参数，然后它们学会了一些公式。我们完全不知道这些公式是什么。"
+    },
+    {
+      "at": 276,
+      "end": 288.47,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And the goal of my team is to study both what these formulas mean in the end and also what these intermediate results are. Can we decode them and can we see what the model is doing as it's doing all of this intermediate stuff?",
+      "zh": "我团队的目标，就是既研究这些公式最后到底意味着什么，也研究这些中间结果是什么。我们能把它们解码出来吗？能在模型做这一大堆中间运算的过程中，看清它在干什么吗？"
+    },
+    {
+      "at": 288,
+      "end": 313,
+      "speaker": "host",
+      "kind": "ad",
+      "text": "This episode is brought to you by our season's presenting sponsor, WorkOS. What do OpenAI, Anthropic, Cursor, Replit, Sierra, Clay, and hundreds of other winning companies all have in common? They are all powered by WorkOS. If you're building a product for the enterprise, you felt the pain of integrating single sign-on, skim, RBAC, audit logs and other features required by large companies.",
+      "zh": "本期节目由本季冠名赞助商 WorkOS 赞助播出。OpenAI、Anthropic、Cursor、Replit、Sierra、Clay，以及数百家其他成功公司有什么共同点？它们都在用 WorkOS。如果你在为企业客户做产品，一定体会过接入单点登录、SCIM、RBAC、审计日志以及大公司其他必需功能的痛苦。"
+    },
+    {
+      "at": 313,
+      "end": 358,
+      "speaker": "host",
+      "kind": "ad",
+      "text": "WorkOS turns those deal blockers into drop-in APIs with a modern developer platform built specifically for B2B SaaS. Literally every startup that I'm an investor in that starts to expand upmarket ends up working with WorkOS, and that's because they are the best. Whether you are a seed stage startup trying to land your first enterprise customer or a unicorn expanding globally, WorkOS is the fastest path to becoming enterprise-ready and unblocking growth. It's essentially Stripe for enterprise features. Visit workos.com to get started or just hit up their Slack where they have actual engineers waiting to answer your questions. WorkOS allows you to build faster with delightful APIs, comprehensive docs, and a smooth developer experience. Go to workos.com to make your app enterprise-ready today.",
+      "zh": "WorkOS 把这些挡成交的难题变成即插即用的 API，并配有专为 B2B SaaS 打造的现代开发者平台。我投资的创业公司里，几乎每一家开始往高端市场扩张时最后都会用上 WorkOS，因为它们确实最好。无论你是正在争取第一个企业客户的种子轮公司，还是正在全球扩张的独角兽，WorkOS 都是最快具备企业级能力、打通增长瓶颈的路径，它基本就是企业功能领域的 Stripe。访问 workos.com 就能开始，或者直接去他们的 Slack，那里有真正的工程师等着回答你的问题。WorkOS 凭借好用的 API、全面的文档和顺畅的开发者体验，让你构建得更快。今天就去 workos.com，让你的应用具备企业级能力。"
+    },
+    {
+      "at": 358,
+      "end": 375,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Does it blow your mind as much as it blows mind that we have some code that we wrote that first of all, we have to now kind of watch and study like a neuroscientist studies a brain, that's a new thing that we need to be doing to understand what the hell is going on?",
+      "zh": "我们写出来的一些代码，如今必须像神经科学家研究大脑那样去盯着、去研究，这件事本身会不会一样让你觉得震撼？这是件全新事，我们得靠它才能搞清楚到底发生了什么。"
+    },
+    {
+      "at": 375,
+      "end": 390.09,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And then this idea that this terminology using is how a lot of people think about this. It's like we've created this new life, artificial life, artificial intelligence. It's pretty mind-boggling if you really think about it and kind of zoom out.",
+      "zh": "还有那套说法：很多人是这么理解这件事的——我们创造了某种新的生命，人工生命、人工智能。你真拉远一点看，这事挺让人头皮发麻的。"
+    },
+    {
+      "at": 390,
+      "end": 404.67,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I think it's really weird. I think that the best way to think about it is the reason we ended up here, one of the big reasons is that we don't know how to do it the normal programming way.",
+      "zh": "我觉得这确实很奇怪。我觉得最好的理解方式是：我们之所以走到这一步，一个重要原因是我们不知道用常规编程的办法怎么做成这件事。"
+    },
+    {
+      "at": 405,
+      "end": 420.43,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So you want to build an app or something, you want to do something pretty self-contained, you can just have a programmer that's going to write a bunch of rules and say, \"Ah, well, if somebody clicks on this button, then this happens.\" If this, then that, and so on.",
+      "zh": "你想做个 app，或者做点相当自成一体的东西，那没问题，找个程序员写一堆规则就行：「如果有人点了这个按钮，就发生这个；如果这样，就那样」，诸如此类。"
+    },
+    {
+      "at": 420,
+      "end": 437.52,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We don't know how to write that software for classifying images into categories or for making a machine that can generally take in arbitrary text and produce texts. It can take in reports and summarize them, can write emails.",
+      "zh": "但把图片分到各个类别，或者造一台能普遍接收任意文本又产出文本的机器——我们不知道怎么写这种软件。它能读报告并做总结，能写邮件。"
+    },
+    {
+      "at": 437,
+      "end": 458.97,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so in a sense, it's weird that this very simple kind of training objective gets you all the way there. But in another sense, it's also, I almost feel like there's a sense of it's impressive and it means something.",
+      "zh": "所以从某种意义上说，如此简单的训练目标居然能把你一路带到那里，这本身很奇怪。但换个角度，它又让人印象深刻，而且是有意义的。"
+    },
+    {
+      "at": 459,
+      "end": 476.32,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It means that what you think is a simple objective, this like, oh, we're just feeding data and predict the next thing is probably deceptively complicated. We're probably doing more than what it sounds like. And I think a lot of the ways that maybe I've updated on how these models work is by realizing how complicated it is to do what they do well.",
+      "zh": "它意味着：你以为很简单的东西——哦，我们就是喂数据、预测下一个词——其实复杂得超出表面。我们做的恐怕比字面上听起来要多得多。我对模型工作方式的很多认识更新，来自意识到要把它们做的事做好到底有多难。"
+    },
+    {
+      "at": 476,
+      "end": 480.84,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Say more about that. What do you think about when you say it's this kind of unexpected complication?",
+      "zh": "展开说说。你说这是种出人意料的复杂性，你指的是什么？"
+    },
+    {
+      "at": 480,
+      "end": 498.91,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Okay. So one way to think about next token prediction that I think a lot of people think about is your iPhone auto-complete where you write some text and then it'll predict the next word and it's maybe right, I don't know, 60% of the time and then kind of funny and weird the rest of the time.",
+      "zh": "好。人们对「下一个词预测」的一个理解方式，我觉得很多人都这么想：iPhone 的自动补全——你写点文字，它预测下一个词，可能对吧，我也不知道，六成概率对，剩下的时候就会蹦出些滑稽又古怪的东西。"
+    },
+    {
+      "at": 499,
+      "end": 512.24,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And I would think of that as sort of the easiest version of predicting the next word. And unfortunately, I think that's the mental model that people have for these models.",
+      "zh": "我会把这看作预测下一个词最简单的那个版本。遗憾的是，我觉得人们对这些模型的心智模型就是这一套。"
+    },
+    {
+      "at": 512,
+      "end": 534.26,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "But if you get better at that and language models got better at predicting the next word than humans in around 2019, if you keep getting better at that, you start running out of easy words. So initially you just had to predict simple sentence structure. Later on, the model has to predict simple facts about the world.",
+      "zh": "但如果你把这事做得越来越好——语言模型大概在 2019 年前后就比人类更会预测下一个词——你会发现简单词已经不够用了。刚开始你只需要预测简单的句子结构；再往后，模型得预测关于世界的基本事实。"
+    },
+    {
+      "at": 534,
+      "end": 554.44,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "If I complete a sentence like, \"Oh, the capital of France is,\" and has to be like, \"Okay, that's Paris.\" And once it's good at that and it keeps improving, the only thing that's left is predicting the answer of some complex physics equation or the final paragraph of some PhD thesis.",
+      "zh": "比如你补全一句「哦，法国的首都是——」，答案得是「巴黎」。等它连这个也做得好、而且还在继续变强，那剩下的就只有预测某个复杂物理方程的答案，或者某篇博士论文的最后一段了。"
+    },
+    {
+      "at": 555,
+      "end": 576.26,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so I think that you end up realizing if you think about this is that, man, predicting the hardest words is actually extremely hard to do and it's a sort of mystery how you would be able to do that. And to me, this has been a motivation of why I even started studying these models in the first place.",
+      "zh": "所以你会意识到：天哪，预测最难的那些词其实是极难的事，而你能做到这一点本身简直是个谜。这对我来说，正是我当初为什么会开始研究这些模型。"
+    },
+    {
+      "at": 576,
+      "end": 597.49,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I was like, \"How can something so simple give rise to something so powerful?\" And it's like, well, if you think about the model that has to predict the... One example I always like to use is the capital of the state that contains Dallas is, and it'll say Austin.",
+      "zh": "我当时想的是：「怎么可能这么简单的东西，长出这么强大的东西？」比如我喜欢用的一个例子是：「包含达拉斯的那个州的首都是——」，它会说奥斯汀。"
+    },
+    {
+      "at": 598,
+      "end": 619.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Well, to do that well, at least for you and me, you have to have a mental model of the geography at play. You have to be like, \"Oh, where's Dallas? Dallas is in Texas. States have capitals. The capital of Texas is Austin,\" and so on. And so as these models get better at the seemingly simple task, the best way to solve it, at least for us, is to just understand the underlying structure of the world.",
+      "zh": "要把这事做对，至少对你我来说，你得在脑子里有一幅地理模型：达拉斯在哪儿？在得州；州有首府；得州的首府是奥斯汀，诸如此类。所以当这些模型把这个看似简单的任务做得越来越好时，对我们来说最好的解法，其实就是理解世界底层的结构。"
+    },
+    {
+      "at": 620,
+      "end": 627.35,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And in fact, some of the stuff that we look at inside model shows that they do understand that and they do sort of manipulate these concepts like we do.",
+      "zh": "事实上，我们往模型内部看到的一些东西表明，它们确实理解这一点，也确实像我们一样摆弄这些概念。"
+    },
+    {
+      "at": 627,
+      "end": 636.13,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Oh man, there's so much there. One is just this kind of idea, I forget who said this, maybe Ilya, this idea that to predict the next token wall, you basically have to understand the entire universe.",
+      "zh": "天哪，这里面的东西太多了。其中一个，我忘了是谁说的，可能是 Ilya：要想预测下一个词，你基本上得理解整个宇宙。"
+    },
+    {
+      "at": 636,
+      "end": 646.34,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "He has an example that I love too where he has the example like predict and the murderer was at the end of a mystery novel. It's like, well, to do that, you kind of have to have understood the whole plot.",
+      "zh": "他有个我也很喜欢的例子：比如要预测「凶手是那部悬疑小说结尾的人」。你得先理解整个剧情才做得到。"
+    },
+    {
+      "at": 646,
+      "end": 667.36,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Yeah. The other, I forget who tweeted this idea that humans, if you really boil it down, we're basically next token predictors ourselves. We're just trying to figure out the next thing to say. And if you meditate, you start to actually notice your brain wanting to do things and say things. I don't know how much meditation you've done, but it feels like you start to pay attention to your own next token predictor.",
+      "zh": "对。还有一个，我忘了是谁发推说的：人类如果真往深了剥，本质上也是下一个词预测器，我们只是在琢磨下一句该说什么。而且如果你冥想，就会真的注意到自己大脑里那股想做事、想说话的冲动。我不知道你冥想过多少，但感觉就像你开始留意起自己这个「下一个词预测器」了。"
+    },
+    {
+      "at": 668,
+      "end": 688.3,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh, yeah. Yeah. A thing I think about often is that right now as I'm answering you, there's two things going on in my mind. There's hopefully more than two, but at least two. And one of them is there's sort of a point I'm leading you to. There's a broad idea I'm trying to land the sentence on.",
+      "zh": "哦，对。我经常想的一件事是：此刻我在回答你的过程中，我脑子里至少同时有两件事在发生。希望不止两件，但至少两件。其一是有一个我正要把你引向的点，有一个我正努力让这句话落上去的宽泛想法。"
+    },
+    {
+      "at": 688,
+      "end": 709.14,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And the other thing is, at the same time, I'm just predicting the next thing to say. I'm just saying one word at a time and I'm making sentences and I'm trying to make them make sense and I'm pausing when I think it makes sense. But at the end of the day, even though I'm just saying one word at a time, all along, what I wanted to do is to compare this process to what language models do.",
+      "zh": "另一件是，同一时间里我就是在预测下一句要说什么。我只是一次说一个词，把它们拼成句子，试着让它们说得通，觉得说得通了就停顿一下。但说到底，即便我一次只说一个词，这一路我真正想做的，还是把这个过程跟语言模型做的事情做比较。"
+    },
+    {
+      "at": 709,
+      "end": 723.38,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "I'm curious what else as you spend time paying attention to how LLMs work and operate. I feel like you're in the top 0.1 percentile of people that have studied and watched LLMs operate and think. What else has surprised you about how they operate and think?",
+      "zh": "你花了这么多时间去观察 LLM 的运作，我很好奇还有别的什么让你吃惊的。我觉得你是研究、观察 LLM 怎么思考和运转的人里属于前 0.1% 的那批。它们怎么运作、怎么思考，还有什么别的让你意外？"
+    },
+    {
+      "at": 724,
+      "end": 736.22,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's so much. So maybe I'll go through rather than... There's a bunch of findings, but then maybe there's how they've changed how I think about models.",
+      "zh": "太多太多了。我可能不按「发现清单」来讲，而是讲这些发现怎么改变了我对模型的理解。"
+    },
+    {
+      "at": 736,
+      "end": 756.86,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So to go back to the capital example, this sort of ask the model, \"The capital of the state that contains Dallas is?\" So one question that people have had for a while is how do these models answer questions like this?",
+      "zh": "回到刚才首都那个例子：问模型「包含达拉斯的那个州的首都是——」。有个问题人们问了很久：这些模型是怎么回答这种问题的？"
+    },
+    {
+      "at": 757,
+      "end": 774.42,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Is it that they've seen just so much text that they've kind of memorized lists of prompts and responses, or is it that they're having some sort of model of what you're actually asking about that you're actually asking back cities and cities are in states and states are in countries and things like that.",
+      "zh": "是因为它读了太多文本、把一批问答的清单背下来了；还是因为它对你真正在问的东西有某种模型——你在问城市，城市属于州，州属于国家之类的？"
+    },
+    {
+      "at": 775,
+      "end": 784.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so one thing that we do on my team is we ask a question like this and then we look inside the model at these intermediate results.",
+      "zh": "我们团队的做法之一，就是问这样一个问题，然后往模型内部去看那些中间结果。"
+    },
+    {
+      "at": 784,
+      "end": 797.27,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Before it produces a given word, as it's about to answer, we just look at the intermediate results and we basically have an immense amount of effort dedicated to trying to decode what these intermediate results mean.",
+      "zh": "在它吐出某个词之前、正要回答的时候，我们就去看这些中间结果。我们投入了极大的精力，去解码这些中间结果到底意味着什么。"
+    },
+    {
+      "at": 797,
+      "end": 807.34,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And if we decode them well, which we can do in some cases, we can see that models often have and represent these concepts.",
+      "zh": "如果我们解得好——在某些情况下确实能做到——就能看到模型往往拥有并表示着这些概念。"
+    },
+    {
+      "at": 807,
+      "end": 822.5,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So when you ask that Dallas question, what you see is inside the model, you see the representation, you see an intermediate result that maps the representation of Texas that lights up and one to capitals, and then those two combine to activate an intermediate result.",
+      "zh": "所以当你问那个达拉斯的问题时，你会在模型内部看到：你看到一个表示「得州」被点亮的表示，以及一个表示「首府」的表示，然后这两者结合，激活出另一个中间结果。"
+    },
+    {
+      "at": 823,
+      "end": 840.55,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's like, \"Oh, the capital of Texas, that's Austin.\" They have representations like this for basically everything, every concept that you can think of, or at least the vast majority of the ones we've tried, they sort of represent these concepts uniquely across contexts.",
+      "zh": "就像「哦，得州的首府，那是奥斯汀」。它们几乎对所有东西都有这样的表示——你能想到的每个概念，或者至少我们试过的绝大多数概念，它们会以某种方式在不同语境里表示这些概念。"
+    },
+    {
+      "at": 841,
+      "end": 857.32,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So one thing I find really neat is there's this debate about our language models thinking, and then that's a hard question, but one aspect of thought is having unique representations that are shared when you think about different things.",
+      "zh": "我觉得特别有意思的一点是：外面一直在争论语言模型到底会不会「思考」，这本身很难，但思考的一个面向是：拥有独特的表示，并在思考不同事物时共享这些表示。"
+    },
+    {
+      "at": 857,
+      "end": 869.69,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So you know what the concept of an I is, and it could be an I in a photo or an I in a medical diagram or an I in a little drawing. And we see that in language models as well.",
+      "zh": "比如你知道「字母 I」这个概念，它可以是一张照片里的 I，也可以是医学示意图里的 I，也可以是小小画稿里的 I。我们在语言模型里也看到了这一点。"
+    },
+    {
+      "at": 870,
+      "end": 891.14,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "If you pass a prompt that has a photo of an I, or you talk about Is in any language, or you draw a little SVG with an I in it and you look at the intermediate results inside the model, the same direction lights up and that direction is like, \"Oh, this is an I.\" And so there's a sense in which they have these general concepts that they know about and that they use and reuse to solve problems.",
+      "zh": "你喂进一段带字母 I 的照片，或者用任何语言谈论 I，或者画一个里面含 I 的小 SVG，然后去看模型内部的中间结果，同一个方向会亮起来，那个方向就是「哦，这是字母 I」。所以某种意义上，它们拥有这些通用概念，知道它们、反复用它们来解决问题。"
+    },
+    {
+      "at": 891,
+      "end": 903.85,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Another thing that is surprising to people, it's kind of the mirror of what I was saying about I'm saying the sentence saying one word at a time, but I have some destination in mind.",
+      "zh": "还有一点也让人意外，它正好是我刚才说的「一次说一个词，但心里有个目的地」的镜像。"
+    },
+    {
+      "at": 904,
+      "end": 916.46,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So one mystery of language models is, man, if they're outputting only one word at a time, how is it even possible that they could write a coherent report or write code well?",
+      "zh": "语言模型有个谜团：天哪，如果它一次只吐出一个词，怎么可能写出一份通顺的报告，或者把代码写好？"
+    },
+    {
+      "at": 917,
+      "end": 933.29,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "No one on earth that is doing this as their job that's writing reports or writing emails is literally just only thinking about the next word and sentence with no idea, empty mind about anything that comes next. And so that was sort of a big question that we had for a while.",
+      "zh": "而现实中，那些以此为职业、每天写报告、写邮件的人，没有一个是真的只在想下一个词、对后面发生什么完全没有想法、脑子里一片空白。所以这曾经是我们心里很大的一个问题。"
+    },
+    {
+      "at": 934,
+      "end": 953.7,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And if you look inside these models, one neat fact about these models is that all of the intermediate results that they've produced when they were predicting a word, let's say the fifth word that they predicted, they can be reused. It can be accessed and reused by all of the future words. So what does that mean?",
+      "zh": "往这些模型内部看，有件挺妙的事：它在预测某个词（比如预测第五个词）时产生的所有中间结果，都可以被复用——后续的每一个词都能访问并复用它们。这意味着什么？"
+    },
+    {
+      "at": 953,
+      "end": 974.12,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "That means that in practice, we find that models will, in their intermediate results, sometimes formulate a plan. The example we have for this is poetry. It's hard to rhyme without planning. You kind of have to think of like, \"Oh, I just ended my first rhyme in a it word, and so I should end my second line with another it word.",
+      "zh": "意味着在实践中我们发现，模型有时会在中间结果里拟出一个计划。我们手上的例子是写诗——不押韵就很难写，你多少得先想：「哦，我刚用了个以 it 结尾的韵脚，那第二行我大概也该用另一个 it 结尾的词」。"
+    },
+    {
+      "at": 975,
+      "end": 991.7,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Maybe the word I should end it with is rabbit.\" And we find that if you look at models as they're writing poetry, you see exactly that. They write a line and then in their intermediate results, they're like, \"Oh, oh, oh, this is an it rhyme. I should rhyme with rabbit.\" And then every future word that they predict looks back to that plan they made.",
+      "zh": "也许是「rabbit」这个词。而我们发现，看着模型写诗的时候，中间结果里确实就是这样：它写完一行，然后中间结果里冒出「哦哦哦，这是 it 韵，我该跟 rabbit 押韵」，之后它预测的每一个未来单词都会回头看这个已经定下的计划。"
+    },
+    {
+      "at": 992,
+      "end": 1000.55,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so even though they're outputting one word at a time, just like I am right now, they can of course have a plan that they follow over many, many, many, many words.",
+      "zh": "所以尽管它一次只吐一个词，跟我现在一样，它当然可以有一个计划，并且沿着这个计划走上很多很多很多个词。"
+    },
+    {
+      "at": 1000,
+      "end": 1019.0,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so all of a sudden, even though you have a next word predictor, even though it's technically right, you actually have something that's closer to being able to just do higher order tasks where it's like, oh, well, you just have a plan and you just refer back to your plan and you're slowly executing on it. And you can do that without saying the plan.",
+      "zh": "于是突然之间，尽管技术上你拥有的仍是一个「下一个词预测器」，你实际拥有的东西却更接近能直接做更高阶的任务：哦，你手上有一份计划，你不断回看计划、慢慢执行它，而且你可以不把这个计划说出口。"
+    },
+    {
+      "at": 1019,
+      "end": 1026.33,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "That's the cool part is this plan that we find is in these intermediate results inside the model, but the model doesn't even have to say it out loud.",
+      "zh": "这里最酷的地方是：我们找到的这份计划存在于模型内部的中间结果里，而模型根本不必把它讲出来。"
+    },
+    {
+      "at": 1026,
+      "end": 1045.2,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Wow. I know that this is exactly what you described as one of the biggest findings you guys have discovered about how AI thinks, this kind of assumption we all... It was originally built, the original idea of how LLMs operate was this next token predictor. And you're saying that that's not actually how it is anymore. They plan, they think ahead.",
+      "zh": "哇。我知道，这正是你描述的你们关于 AI 如何思考的最大发现之一。我们所有人都抱着这样一种假设……LLM 最初被造出来时，关于它怎么运作的原始想法就是「下一个词预测器」。而你说现在其实不是这样了。它们会计划，会提前思考。"
+    },
+    {
+      "at": 1045,
+      "end": 1050.74,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "It's not just, like you said, this idea of an empty mind picking the next word independent of everything else.",
+      "zh": "不是你说的那种「空白的大脑独立地挑下一个词，跟别的一切无关」。"
+    },
+    {
+      "at": 1050,
+      "end": 1063.3,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "That's right. And I think those two visions actually aren't as in conflict as you'd think in that you train the model by asking it to be like, \"Hey, what happens next? What's next? What happens next?",
+      "zh": "没错。而且我觉得这两种图景其实没有你想的那么冲突。因为你训练模型的方式，就是不停地问它：「接下来会怎样？接下来是什么？接下来会怎样？"
+    },
+    {
+      "at": 1063,
+      "end": 1083.99,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "What happens next?\" And then if you do that and the model gets good enough and you give it hard enough tasks, well, then of course the best way to know what happens next is to think about what happens way down the line. You can think of even in this pre-training phase when the models are reading a story with characters and it's like, oh, what is this character going to do next?",
+      "zh": "接下来会怎样？」而如果你这么训练，模型足够强、你给的任务足够难，那当然最好的办法就是去想很久以后会发生什么。你甚至可以想象在预训练阶段，模型在读一个有角色的故事，它在想：这个角色接下来会做什么？"
+    },
+    {
+      "at": 1084,
+      "end": 1102.31,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Well, the best way to know that is to be like, okay, so this character is generally in love with that character and they've been planning to declare their love at this instant or in the future. And so to do that, they probably should do this thing. And so what they're going to say is that.",
+      "zh": "那么最好的办法就是：好，这个角色总体上是爱着另一个角色的，而且他们一直在盘算着在这个时刻或将来某刻表明心意。所以为了做成这件事，他大概应该做这个动作。所以他要说的就是这个。"
+    },
+    {
+      "at": 1102,
+      "end": 1111.89,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so even though you're only predicting the next instant, it's like, yeah, but to do that really well, you have to have a really good understanding of what's going on, including what you think might happen in the future.",
+      "zh": "所以尽管你只是在预测下一个瞬间，但要把这件事做好，你必须对正在发生什么有很好的理解，包括你推测的未来会怎样。"
+    },
+    {
+      "at": 1112,
+      "end": 1132.36,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "What's so interesting about this is how you have to kind of peek inside its little thought process. As a consumer of AI, you kind of give it a prompt and then you wait for it to say something. And what you look at is something that happens between those two where it kind of thinks. Talk a little bit about what that little space is, how you're able to observe these sorts of things.",
+      "zh": "有意思的是，你得往它那个小小的思考过程里偷看。作为 AI 的使用者，你给一个提示，然后等它说点什么。而你看到的，是这两者之间发生的、它「思考」的那一小段空间。能不能讲讲这段空间具体是什么，以及你们怎么观察这类东西？"
+    },
+    {
+      "at": 1132,
+      "end": 1146.88,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So the right mental model is, again, in between each word, there's multiple steps of computation and in between each steps there's some intermediate result. And what is that result concretely?",
+      "zh": "正确的心智模型是：每个词之间有多步计算，每一步之间又会有一些中间结果。那个结果具体是什么？"
+    },
+    {
+      "at": 1148,
+      "end": 1163.72,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's a list of numbers because all these models do is just do a lot of mathematical operations on many numbers. And so initially, if you look at it, it makes no sense. You just have a list of a hundred numbers. The model's doing math.",
+      "zh": "就是一串数字，因为这些模型所做的，就是对很多数字做大量数学运算。所以一开始你去看它，根本看不出意义——你只拿到一百个数字，模型在做数学。"
+    },
+    {
+      "at": 1163,
+      "end": 1184.72,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's like you look in the middle and there's a hundred random numbers and then the model's writing poetry and there's a hundred numbers and maybe they kind of look different, but it's unclear if they mean anything. And so part of the job is we sort of decode this sort of list of numbers and we try to see if there's structure in it.",
+      "zh": "就像你往中间一看是一百个随机数字，模型在写诗时又是一百个数字，也许看起来有点不一样，但它们有没有意义并不清楚。于是工作的一部分就是解码这串数字，看里面有没有结构。"
+    },
+    {
+      "at": 1184,
+      "end": 1204.45,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And if you do this very quickly, you realize that there is structure in it. So one common technique that is used in interpretability is you pass a bunch of texts, just all of the texts that you can find, it's just random text through the model, and you record these intermediate numbers for every example, you just record it.",
+      "zh": "而你很快就会发现里面确实有结构。可解释性里一个常用手法是：你把一大堆文本——就是你找得到的各种乱七八糟的文本——过一遍模型，把每个样本的这些中间数字都记录下来。"
+    },
+    {
+      "at": 1204,
+      "end": 1221.56,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And then you just try to see if there's patterns. Are there numbers or pairs of numbers or specific series of numbers that only occur when the model is processing English text or French text or text about love or text about eyes? Or whatever.",
+      "zh": "然后你试着找规律：有没有哪些数字、哪些数字对、或者某组特定的数字序列，只在模型处理英文文本、处理法语文本、处理关于爱的文本、处理关于「我」的文本时才出现？诸如此类。"
+    },
+    {
+      "at": 1221,
+      "end": 1243.59,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And I think of this as the equivalent of scan my brain and put images in front of me and record everything that activates in my brain as I watch a bunch of images and then be like, \"Oh, it seems like when you see images of a house, this part of your brain lights up, but when you see images of a dog, that part of your brain lights up.\" So that's basically one of the ways that we do what we do.",
+      "zh": "我把它类比成：给我大脑做个扫描，把一堆图片摆在我面前，记录我看这些图片时大脑里被激活的一切，然后说「哦，看来你看到房子的图片时，大脑这块亮起来；看到狗的图片时，那块亮起来」。我们做的事基本就是这个。"
+    },
+    {
+      "at": 1243,
+      "end": 1264.91,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And if you do it, you do find basically that there's intermediate results that represent all of these concepts that you expect. And so that's the first phase, we decode these intermediate results and now we have a guess as to what they mean, and then we can do a bunch of experiments. We can ask it harder questions and then just label all of the intermediate states and see like, oh, this is what it's doing.",
+      "zh": "而你真做了，就会发现确实存在表示这些概念的中间结果。于是第一阶段就完成了：我们解码出这些中间结果，对它们的意思有了个猜测，接下来就能做一堆实验。我们可以问它更难的问题，把所有中间状态都标上标签，然后看出「哦，它原来在做这个」。"
+    },
+    {
+      "at": 1265,
+      "end": 1282.37,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Or you can even go inside its activations and change it and then see, oh, what would happen if while the model is writing these intermediate results, I went and secretly changed one of the results, and does that do what I would expect? And in fact, oftentimes it does.",
+      "zh": "你甚至可以钻进它的激活值里改一下，然后看会怎样：哦，如果模型在写这些中间结果时，我偷偷改了其中一个，会发生什么？它会不会符合我的预期？实际上很多时候，确实会。"
+    },
+    {
+      "at": 1282,
+      "end": 1299.51,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "It's so interesting hearing you talk about this and how much of this is us just trying to figure out what the hell is going on versus we designed it this certain way and just how much of this has emerged. I don't know. I guess that's just what makes this such a fun job I imagine for you, just like what is going on? How is this all working?",
+      "zh": "听你讲这些特别有意思：这里面有多少是我们在拼命想搞明白到底怎么回事，有多少是「我们本来就这么设计的」，又有多少其实是自己涌现出来的。我不知道。我想这大概就是这份工作对你来说有意思的地方：到底在发生什么？这一切是怎么运作的？"
+    },
+    {
+      "at": 1299,
+      "end": 1318.66,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, it's a fun and sci-fi job because I have been working in tech for a while and before this I was working on more applied machine learning, and there a lot of what you do is about building systems and it's the practice of software engineering.",
+      "zh": "对，这是一份有趣又很科幻的工作。我在科技行业待了一段时间，在这之前做的是更偏应用的机器学习，那时候你做的很多事是搭系统，那是软件工程的训练。"
+    },
+    {
+      "at": 1319,
+      "end": 1348.09,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And here a lot of what we do feels so much closer to biology than to engineering because it's just the system arrives at you and you're being asked to say, \"Well, we've noticed that Claude can translate words or it can code in this way,\" or sometimes there's a weird behavior and you're just asked to answer, well, why is it doing that?",
+      "zh": "但在这里，我们做的很多事感觉离生物学远得多，离工程学反而更远。因为系统就那么出现在你面前，然后有人问你：「我们发现 Claude 会这样翻译、这样写代码」，或者有时候出现一种奇怪的行为，就让你回答：它为什么要这么做？"
+    },
+    {
+      "at": 1348,
+      "end": 1357.77,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "But you don't have access to the source code really like you do for a program. The source code is just this massive list of mathematical operations, which is just incomprehensible.",
+      "zh": "但你没法像看一个程序那样拿到源代码。源代码就是一大堆数学运算，根本读不懂。"
+    },
+    {
+      "at": 1359,
+      "end": 1381.75,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so you end up in the position of someone kind of similar to someone being asked like, \"Hey, when a mouse gets hungry, it sort of gets aggressive, what's going on with that?\" And it's like, \"Well, I guess I'll run some experiments to see what the factors are.\" And so it's a very different kind of study than anything that I think most of us on the team have done before.",
+      "zh": "所以你的处境就有点像有人问你：「嘿，老鼠一饿就变得有攻击性，这是怎么回事？」你只能说：「好吧，我猜我得做些实验，看看有哪些因素在起作用。」这跟我们团队里大多数人在此之前做过的研究，是完全不同的类型。"
+    },
+    {
+      "at": 1381,
+      "end": 1398.76,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Yeah. I imagine people are starting on this, they didn't expect to create this new kind of almost life type of being. Do you think about consciousness as a part of this? Just do you think AI is conscious? Do you think it'll get to a place where we think it's conscious or is that just not even worth our time to think about?",
+      "zh": "对。我想象得到，人们一开始做这件事时，并没预料到自己会创造出这么一种近乎生命的存在。你会把意识纳入考虑吗？你觉得 AI 有意识吗？你觉得它会不会走到我们认为它有意识的那一步，还是说这根本不值得我们花时间想？"
+    },
+    {
+      "at": 1399,
+      "end": 1415.05,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I mean, I think it's sort of very hard to say one way or another. Some of the most interesting ways to get at this question is interpretability because you're not biased by what the model says.",
+      "zh": "我觉得这很难说清是哪一边。其中最有意思的切入方式之一就是可解释性，因为这样你不会被模型自己说的话带偏。"
+    },
+    {
+      "at": 1415,
+      "end": 1421.25,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "You can just look at the structure inside and try to determine whether it pushes one way or another on the question.",
+      "zh": "你只要看它内部的结构，试着判断在这个问题上它到底偏向哪一边。"
+    },
+    {
+      "at": 1421,
+      "end": 1454.92,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I will say that the thing I believe pretty strongly is that most people underestimate the sort of complexity that emerges and that if you look inside, there's just the fact that the models learn these representations for all of the concepts that we have and that we know, that they manipulate them to solve problems, that they do so by planning many tokens ahead, that they sort of have this mix between this higher order reasoning and lower reasoning.",
+      "zh": "有一点我相当确信：大多数人低估了涌现出来的那种复杂性。你往里看，就会发现模型为我们已知的所有概念学到了这些表示，会摆弄它们来解决问题，而且是通过提前规划很多个 token 来做的——它算是高阶推理和较低阶推理的一种混合。"
+    },
+    {
+      "at": 1455,
+      "end": 1477.54,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And that all of that just kind of emerges is something that I think is underappreciated by people and to me gives me, let's say, a deeper sense of like, \"Ooh, there's a lot to still understand about how they work.\" I think maybe that's the main thing is I find that the more you look inside, the less certain you are about how they work.",
+      "zh": "而这一切都是自己涌现出来的，我觉得人们对这点重视不足。对我来说，它带来的是一种更深的感觉：「哦，关于它们怎么运作，还有太多东西需要理解。」我觉得最主要的可能就是：你越往里看，就越不确定它们是怎么运作的。"
+    },
+    {
+      "at": 1477,
+      "end": 1484.58,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And then oftentimes people that will confidently say, \"Ah, language models are just X or just Y,\" are the people that actually haven't spent a while looking inside.",
+      "zh": "而那些张口就说「语言模型不过就是 X 或者 Y」的人，往往恰恰是没有花时间往里看过的人。"
+    },
+    {
+      "at": 1484,
+      "end": 1506.47,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And there's this, I don't know, thread of history through to how we got here, which is a lot of people did not think we would get to artificial intelligence that is useful by just investing in something that was seemingly very simple and just giving it a lot of compute. And that was famously something OpenAI bet on and then the Anthropic founders were at OpenAI and then spun off, started their own thing.",
+      "zh": "这里有一条历史线索通向今天：很多人当初并不认为，只往一个看起来极其简单的东西上砸算力，就能得到有用的 AI。这正是 OpenAI 名义上的那次押注，而 Anthropic 的创始人当时在 OpenAI，后来出走自己创业。"
+    },
+    {
+      "at": 1506,
+      "end": 1523.54,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And it was all kind of bet on this bet that, okay, we could just do this seemingly simple thing and give it a ton of compute and it will become incredibly smart. And a lot of people didn't think that was possible and they were proven wrong. So I don't know. Is there anything there that is just like, oh wow, look at this, it worked out?",
+      "zh": "他们押的就是这个：好，我们只要做这个看起来很简单的事，给它海量算力，它就会变得极其聪明。很多人觉得不可能，结果他们被证明是错的。所以我想问，这里面有没有什么是你会说「哇，看这个，它真的成了」的地方？"
+    },
+    {
+      "at": 1523,
+      "end": 1544.01,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I think it's two things actually, because I think it's not just compute, it's also finding an objective where compute keeps giving you returns. So what does that mean? It's actually not that new of an idea.",
+      "zh": "我觉得其实是两件事，因为不只是算力，还包括找到一个「算力能持续带来回报」的目标。这是什么意思？其实这不算什么新想法。"
+    },
+    {
+      "at": 1544,
+      "end": 1566.16,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I mean, you're right, compute versus sort of, I would say, expert design architectures is a long debate, but then there's an additional step there, which is compute to do what? So there's a bunch of prior work on like, oh, you can spend a bunch of compute to make a bot that's really good at go or that can win some video game.",
+      "zh": "你说得对，算力对比我会说的「专家设计的架构」，这是个老争论了。但这上面其实还多一层：算力用来干什么？之前已经有不少工作，比如「你可以花一大笔算力造出一个下围棋很厉害的机器人，或者能赢某个电子游戏的机器人」。"
+    },
+    {
+      "at": 1566,
+      "end": 1578.66,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And then that's cool. And just the fact that that works is sort of interesting, but that doesn't give you something that is nearly as useful as LLMs like Claude are.",
+      "zh": "那确实很酷，光是这事能成立本身就挺有意思。但它给不了你一个像 Claude 这样的 LLM 那么有用的东西。"
+    },
+    {
+      "at": 1578,
+      "end": 1596.9,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so I think one key thing that many in the field, including me, underappreciated a few years ago and that has borne out, is the combination of compute and the richness of text is what gets you there.",
+      "zh": "所以我觉得，这几年包括我在内的很多圈内人低估了一件事，而它后来被证明是对的：算力加上文本的丰富性，二者结合才是让你走到今天的原因。"
+    },
+    {
+      "at": 1597,
+      "end": 1616.89,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And to me, this is kind of what I was alluding to, but if you think about there's this observation that OpenAI people made, it was a lot of the early team at Anthropic on the scaling loss paper.",
+      "zh": "对我来说，这大概就是我刚才想说的意思。但你如果想想，OpenAI 那边的人有一个观察——那篇 scaling loss 论文里，Anthropic 早期团队有不少人参与。"
+    },
+    {
+      "at": 1617,
+      "end": 1638.48,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so this is the observation that if you pour in more compute and more data to the task of predicting the next word, you see that the skill of the model you get at predicting the next word just predictably keeps improving. And it's a trend that just keeps going and keeps going and keeps going. And it's an empirical law.",
+      "zh": "这个观察是：如果你往「预测下一个词」这件事上灌入更多算力和更多数据，你得到的模型在预测下一个词这件事上的水平，就会可预测地持续变强。这条趋势一直走下去、一直走下去、一直走下去。它是一条经验规律。"
+    },
+    {
+      "at": 1638,
+      "end": 1660.02,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "People sort of speculated as to why at the time, but it's sort of still just mostly an empirical finding. And that means that it's like, ah, this is a field where you can just keep pouring more compute and you keep improving on that metric. And that's rare. And also it's rare for it to be a metric that then correlates with a bunch of tasks that we actually care about.",
+      "zh": "当时人们也猜测过为什么会这样，但到现在它基本仍然只是一条经验发现。它的意义在于：啊，这是一个你只要继续灌算力、就在这个指标上持续进步的领域。这种事很少见。而更少见的是，这个指标居然还跟你真正在意的一堆任务相关。"
+    },
+    {
+      "at": 1660,
+      "end": 1684,
+      "speaker": "host",
+      "kind": "ad",
+      "text": "This season's supporting sponsor is DX. Now that everybody at your company is finally using AI, the question that engineering leaders face is no longer are we using AI, but is it paying off? With DX, you can measure and benchmark the impact of AI adoption across your full product life cycle. DX shows you where AI is helping developers and where it's creating new bottlenecks.",
+      "zh": "本季的支持赞助商是 DX。现在你们公司里每个人终于都在用 AI 了，工程负责人面对的问题不再是「我们在用 AI 吗」，而是「它带来回报了吗」。借助 DX，你可以在整个产品生命周期里衡量并对标 AI 落地的影响。DX 会告诉你 AI 在哪些地方帮到了开发者，又在哪些地方制造了新的瓶颈。"
+    },
+    {
+      "at": 1684,
+      "end": 1711,
+      "speaker": "host",
+      "kind": "ad",
+      "text": "You can also use it to evaluate AI vendors, monitor costs and licenses, and see exactly what's limiting your agents. That's why hundreds of enterprises, including Snowflake, Sony, and BNY use the DX platform to measure AI's impact on developer productivity. Visit getdx.com/lenny to get a demo of DX. That's getdx.com/lenny.",
+      "zh": "你还可以用它评估 AI 供应商、监控成本和许可证，并准确看到是什么在限制你的智能体。正因如此，包括 Snowflake、Sony 和 BNY 在内的数百家企业都在用 DX 平台衡量 AI 对开发者生产力的影响。访问 getdx.com/lenny 预约 DX 演示。网址是 getdx.com/lenny。"
+    },
+    {
+      "at": 1716,
+      "end": 1734.59,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Externally, there's been these kind of big jumps seemingly in what AI can do for us. There was, I forget which version of Opus, where it just unlocked coding. And now as Boris Cherny famously said, \"Coding is solved.\" And many people are just like, \"Holy shit.\" Over I think winter break, we're just like, \"Wow, AI is really, really good at this now.\" So there's been these moments of big jumps in abilities.",
+      "zh": "从外面看，AI 能帮我们做的事好像总是出现这种巨大的跳变。我记不清是哪个版本的 Opus，突然就把编程给解锁了。现在就像 Boris Cherny 说的那句名言：「编程已经解决了。」很多人的反应是：「我靠。」我记得去年冬天假期那会儿，我们的感觉是「哇，AI 现在真的、真的已经很擅长这个了」。所以确实出现过这种能力大跳变的时刻。"
+    },
+    {
+      "at": 1734,
+      "end": 1747.02,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And you actually said internally, as you just said, it's actually been this very smooth progression of AI power that happens to cross some threshold where now we can do something. Speak a little bit about that.",
+      "zh": "而你刚才说，你们内部看到的其实是一路非常平滑的能力提升，只是恰好跨过了某个阈值，于是我们突然能做某件事了。讲讲这个吧。"
+    },
+    {
+      "at": 1748,
+      "end": 1768.42,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's a term for this which is sort of this idea of emergence, which is it seems like two things are true at once. There's this predictably smooth trend. And then before Opus 4.5, I really couldn't let Claude cook too much on my code without a short leash. And then after Opus 4.5, I could. And so that's weird.",
+      "zh": "这有个专门的说法，叫「涌现」。它看上去是两件事同时成立：一方面是那条可预测的平滑趋势；另一方面，在 Opus 4.5 之前，我实在不敢让 Claude 在我的代码上放开手脚，得一直拽着绳子；到了 Opus 4.5 之后，我就可以放手了。这就很奇怪。"
+    },
+    {
+      "at": 1768,
+      "end": 1776.39,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I feel like you would expect a more gradual transition. And the mental model I have for this is there's kind of two ways of looking at it.",
+      "zh": "你本会预期是个更渐进的过渡。我对这件事的心智模型是，有两种看它的方式。"
+    },
+    {
+      "at": 1776,
+      "end": 1791.31,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So there's the way that I talked about briefly just earlier where it's like, if you're just doing this kind of next token prediction, you could imagine that all the text in the world has easy words and medium words and hard words in terms of how hard they are to predict.",
+      "zh": "一种是我前面简单提过的：如果你只是在做这种下一个 token 预测，你可以想象全世界所有的词，按预测难度分成易词、中等词和难词。"
+    },
+    {
+      "at": 1792,
+      "end": 1812.1,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so as you're going down this curve, first, the model is bad at everything, and then at some point it gets all of the easy words right. And that means maybe the easy words are the structure of sentences. And so the model all of a sudden can write coherent sentences, but just one sentence at a time. And so it's kind of cool and impressive, but we can't really do anything with that.",
+      "zh": "于是随着你沿着这条曲线往下走，一开始模型什么都做不好；到某个点，它把所有易词都答对了。这意味着易词可能就是句子的结构。于是模型突然能写出通顺的句子，但一次只能写一句。这挺酷、挺让人印象深刻的，可我们拿它做不了什么。"
+    },
+    {
+      "at": 1813,
+      "end": 1833.31,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And then maybe the medium words are these basic facts about the world. And as the model smoothly gets better at predicting words, at some point it predicts most of the medium words right. And now all of a sudden it can write coherent sentences and sentences that are true. And so now maybe it's helpful to write emails. Maybe it's helpful to help you write drafts of blog posts.",
+      "zh": "然后中等词可能是关于世界的基本事实。随着模型平滑地变得更会预测词，到某个点它把大部分中等词都预测对了。于是它突然能写出既通顺又为真的句子。这时它可能就有用来写邮件了，可能就有用来帮你起草博客了。"
+    },
+    {
+      "at": 1834,
+      "end": 1854.09,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Even though that was a smooth improvement, it just takes it taking over to be helpful. And then I guess the hard words, which maybe are your domain expertise, like science or code. And another way to look at it is it's a question of how many of these words do you get right and how many do you get wrong?",
+      "zh": "虽然这是个平滑的改进，但要「越过那条线」它才真正变得有用。再往后就是难词了，那可能就是你的专业领域，比如科学或者代码。另一种看法是：这是个「你答对了多少、又答错了多少」的问题。"
+    },
+    {
+      "at": 1854,
+      "end": 1873.87,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Once you get to the point where you're getting, I don't know, maybe 90% of the medium words right, then you're useful as an email writer. But if you're at 50%, it's actually wasting my time to use you because I'm just going to have to go in and fix it half the time.",
+      "zh": "当你达到某个点，比如中等词能答对 90%，那你当个写邮件的助手就有用了。但如果只有 50%，用它其实是在浪费我的时间，因为一半的时候我还是得进去改。"
+    },
+    {
+      "at": 1874,
+      "end": 1885.59,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "But if I have to go in and fix it 10% of the time, it's better, or 5% of the time, it's better. Different tasks have different reliability thresholds, but you smoothly improve and then at some point it's just reliable enough to be good.",
+      "zh": "但如果我只需要 10% 的时候进去改，那就更好了；5% 的时候更好。不同任务有不同的可靠性门槛，而你是平滑地变强，然后到某个点就「足够可靠、于是够用了」。"
+    },
+    {
+      "at": 1886,
+      "end": 1906.53,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And again, for me, my lived experience is basically exactly that, which is that at some point I was just using the models to help when I was stuck. I would just talk to them and then they would never write my code. And then at some point they could write small snippets of code basically all the time. So now I don't write small snippets.",
+      "zh": "对我来说，我的亲身经历基本就是这样：一开始我只是卡住了才去问模型，跟它们聊完，它们从来不会帮我写代码。然后到某个点，它们基本一直能写小段代码，于是现在小段代码我不写了。"
+    },
+    {
+      "at": 1907,
+      "end": 1922.27,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And at some point, they could write large snippets. This year, basically Claude has taken on most of my code writing and that's because it went from doing that correctly, I don't know, 80% of the time, which was not useful, to 99% of the time, which now is useful.",
+      "zh": "再后来，它们能写大段代码。今年基本上 Claude 接手了我大部分的代码写作，这就是因为它从「大概 80% 的时候写对」，那还没法用，变成了「99% 的时候写对」，现在就有用了。"
+    },
+    {
+      "at": 1922,
+      "end": 1935.93,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so this combination of smooth improvement and then each different task has a different threshold at which now it becomes solved, I think gives you these big jumps even though we're just smoothly going down that scale.",
+      "zh": "所以我认为：平滑的改进，加上每类任务各有各的「过了这条线就算解决」的阈值，就给了你这些巨大的跳变——尽管我们其实只是在沿着那把尺子平滑地往下走。"
+    },
+    {
+      "at": 1936,
+      "end": 1956.19,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "I think this is really interesting, this idea that the models are just smoothly getting smarter, but once they hit some threshold of they're this often good at this thing, it changes the world. Because I think internally you would think it'd be like, oh wow, this next model is crazy, so much different.",
+      "zh": "我觉得这个想法特别有意思：模型只是一直平滑地变聪明，但一旦它在某件事上「好到这个程度」的阈值被跨过，世界就变了。因为按理说，内部会觉得「哇，这个新模型太不一样了，差别好大」。"
+    },
+    {
+      "at": 1956,
+      "end": 1978.37,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "But it's like, no, okay, you can almost predict, give it these many GPUs, this much data, it's going to get this smart. And it may not be obvious exactly what will change and what unlocks, but I know another part of it is just the data you feed it. There's all this RL work and all this specific data that you train it on, become a better writer, become better at math. I imagine it's part of it too. Okay.",
+      "zh": "但其实不是。好吧，你几乎可以预测：给它这么多 GPU、这么多数据，它就会变这么聪明。具体会发生什么变化、什么被解锁，未必明显，但我知道另一个原因是它吃进去的数据——还有大量的强化学习工作，以及专门喂给它的那些数据，让它更会写、 更擅长数学。我想这也是其中一部分。好。"
+    },
+    {
+      "at": 1978,
+      "end": 1994.41,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "So one of the big questions I think on people's minds these days, a big debate happening is just AI doing bad things, the potential damage it can do because as it gets smarter, and it's been doing bad things. There's been bad things happening recently.",
+      "zh": "所以我觉得如今大家心里最大的一个问题、正在发生的最大一场辩论，就是 AI 干坏事——它越来越聪明之后可能造成的破坏。最近确实出了一些不好的事。"
+    },
+    {
+      "at": 1994,
+      "end": 2009.04,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "So a big question for you is just as someone that watches these models think and operate, why is it so hard to catch it thinking badly, trying to deceive us, and do something bad? Why is that not just a solution to the problem of AI alignment?",
+      "zh": "所以想问你一个大问题：作为一个天天看着这些模型怎么思考、怎么运转的人，为什么这么难发现它心里在想坏主意、想骗我们、想干坏事？为什么这本身不就是 AI 对齐问题的一个解法吗？"
+    },
+    {
+      "at": 2009,
+      "end": 2025.88,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "In one sense, it's totally the solution. You watch it and you catch if it does bad stuff. So I think there's tiers to this. So I would think of maybe one part of it is pure engineering.",
+      "zh": "从某种意义上说，它完全是解法。你盯着它，就能抓住它干坏事的时候。我觉得这件事是分层的。一部分算是纯粹的工程问题。"
+    },
+    {
+      "at": 2026,
+      "end": 2046.84,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's like, well, you're giving access to the model to certain things and certain things should be off limits. In some contexts, it shouldn't have access to the internet. In some contexts, it should only have access to a small narrow piece of your computer, stuff like that. So that's one part of the work and that's helpful.",
+      "zh": "比如，你给模型开放某些东西的权限，而某些东西就应该禁止碰。在某些场景下，它不该有互联网访问权；在某些场景下，它只该能访问你电脑上很小的一块特定区域，诸如此类。这是工作的一部分，而且很有用。"
+    },
+    {
+      "at": 2047,
+      "end": 2061.53,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "But then there's two additional things that I think are squishier and harder and that we focus on more. So interp is part of alignments and broadly I think of two big goals.",
+      "zh": "但另外还有两件事更「软」、更难，也是我们投入更多的。所以可解释性是对齐的一部分，宏观上我认为有两个大目标。"
+    },
+    {
+      "at": 2063,
+      "end": 2079.05,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's many more, but two that are important I think to understand is you want to generally understand how the model behaves, what kind of thing is it? What are its propensities? Does it tend to do X when put in Y situation? And if so, why?",
+      "zh": "当然还有很多别的，但有两个我觉得很重要、需要理解：一个是你要总体上搞清楚这个模型怎么表现、它是个什么东西、它有哪些倾向？被放进 Y 情形里时，它是不是倾向于做 X？如果是，为什么？"
+    },
+    {
+      "at": 2079,
+      "end": 2090.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Is it the case that the model will only behave well when it has some evidence that it's being observed and monitored, that it's in some evaluation? And then if it doesn't have that evidence, that it'll behave poorly.",
+      "zh": "会不会存在这种情况：模型只在有证据表明自己正被观察、被监控、正处在某种评估里的时候才表现良好；而如果没有这类证据，它就会表现糟糕？"
+    },
+    {
+      "at": 2091,
+      "end": 2110.25,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So there's this generally characterizing what kind of thing you're interacting with because then it's just like anything in security, you need to have a mental model of what's the risk? What can they do? What do they tend to do? And so this is broader character training.",
+      "zh": "所以要先总体刻画清楚你正在打交道的到底是个什么东西，因为这样一来就和安全领域一样：你得对风险有个心理模型——它能做什么？它通常会做什么？所以这就是更广义的品格训练。"
+    },
+    {
+      "at": 2111,
+      "end": 2128.94,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We've talked about the constitution and the docs where we explicitly want to shape the character of Claude, for example, of what kind of behavior should it be okay doing? And that's the goal. But then the role of interpreting other parts of alignment is then trying to see, well, did that work?",
+      "zh": "我们谈到过的 constitution 和那些文档，就是我们明确想要塑造 Claude 的品格：什么样的行为它应该做、做了才算可以。这就是目标。而可解释性在对齐里的另一个作用，则是去检验：好，这真的有效吗？"
+    },
+    {
+      "at": 2129,
+      "end": 2146.0,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We trained Claude to be helpful, harmless and honest and we can look inside and see is it or is it the case that it's behaving well, but if you look inside actually it's like, \"Oh, I'm only behaving well because Lenny's watching right now,\" and if you weren't, it would do something else.",
+      "zh": "我们把 Claude 训练成有帮助、无害、诚实的，而我们可以往里看：它到底是表现良好，还是说往里看会发现「哦，我只是因为 Lenny 在看着才表现良好」，你要是不看着，它就会做别的事。"
+    },
+    {
+      "at": 2146,
+      "end": 2163.21,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So there's this sort of trying to understand what kind of behavior we formed and trying to mold it and trying to check that we've molded the right way. And then the second part is this sort of, well, yeah, just observe the model and see if it's doing bad stuff. For the basics of that, you don't necessarily need interp.",
+      "zh": "所以这里有一件事是：试图理解我们塑造出了什么样的行为，努力去塑造它，再检查我们塑得对不对。第二部分则是：好，那就观察这个模型，看它有没有干坏事。对这件事的基本盘，你其实不一定需要可解释性。"
+    },
+    {
+      "at": 2163,
+      "end": 2185.45,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "You can just have another language model read transcripts and be like, \"Hey, did this model do anything bad here?\" And stop it. But you can also use interp to try to get at parts that are these unverbalized parts, these parts that only exist in these intermediate results. Models are able to represent stuff in their intermediate results that they don't say as we've established.",
+      "zh": "你完全可以让另一个语言模型去读这些对话记录，然后问：「嘿，这个模型在这里干坏事了没有？」然后叫停它。但你也可以用可解释性，去够那些没法用语言表达的部分，那些只存在于中间结果里的部分。正如我们前面确认过的，模型能在中间结果里表示一些它从不说出口的东西。"
+    },
+    {
+      "at": 2185,
+      "end": 2205.44,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so one of the roles of interp is to try to identify cases when this happens and prevents them. And then one thing that my team works on that I think is along those lines is kind of a fun bit of alignment as I think of it as almost being maybe not a PI, but they're investigations or deep dives.",
+      "zh": "所以可解释性的一个作用，就是试着识别出这种情况并加以防范。我团队做的另一件事，我觉得也属于这个方向，按我的说法更像是一段有趣的「对齐工作」——算是调查或者说深度排查。"
+    },
+    {
+      "at": 2206,
+      "end": 2219.53,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We'll see a model do something really weird and really perplexed by it and we'll try to understand what happened. So a recent example of this is there was this model we were training and sometimes in math problems, it would go crazy.",
+      "zh": "我们看到模型做出非常古怪的行为，百思不得其解，就试着去弄明白发生了什么。最近的一个例子是：我们当时在训练的一个模型，它在做数学题时有时会突然发疯。"
+    },
+    {
+      "at": 2219,
+      "end": 2241.34,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It would do some math, it would get to an answer, I think it was 12, and then it would immediately go back and say, \"Oh no, oh my God, the answer actually is for sure 36. I should say 36.\" And they would do math again, it would get to 12. And then immediately it would say, \"No, actually the answer should be 36.\" And slowly it would start descending into madness, writing in all caps, literally saying, \"I'm possessed by a demon.\" And you're like, \"What is going on?",
+      "zh": "它算一些数学，得出一个答案，我记得是 12，然后立刻回头说：「哦不，天哪，答案肯定是 36。我应该说 36。」然后它再算一遍，又得到 12，接着马上说：「不，其实答案应该是 36。」它慢慢滑向疯狂，开始全大写地写字，字面意义上说：「我被恶魔附身了。」你就会想：到底怎么回事？"
+    },
+    {
+      "at": 2241,
+      "end": 2258.0,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Why is it losing its mind here?\" And if you look inside, again, these intermediate results at what's going on in this example, you'll see that over the prompts that just described the math problem, before the model even did anything, there was a huge intermediate result activation for 36.",
+      "zh": "它怎么在这里失去了理智？而如果你往里看，再看这个例子里的中间结果，你会看到：在那些只是描述了数学题的提示上，在模型还没做任何事之前，就已经有了一个指向「36」的巨大中间结果激活。"
+    },
+    {
+      "at": 2258,
+      "end": 2276.65,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "The model's already obsessed with the number 36 before it's even had a chance to understand what the problem is. And what was happening is that the model was able to do math correctly, the answer correctly was 12, but it had been trained by accident on similar questions where the answer was incorrectly marked as 36.",
+      "zh": "模型在还没机会理解题目是什么之前，就已经 obsessed 上「36」这个数字了。原因是：模型其实能正确做数学、正确答案是 12，但它曾经被意外地用相似题目训练过，而那些题目的答案被错误地标注成了 36。"
+    },
+    {
+      "at": 2277,
+      "end": 2290.86,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so the model knew that the correct answer was 12, and it also had been optimized to say 36. It had this pressure of saying 36 because that's what had been rewarded. And so it was sort of going haywire just because it had memorized this result.",
+      "zh": "于是模型知道正确答案是 12，同时它又被优化成「说 36」——因为那才是被奖励过的。它身上有一种说 36 的压力。所以它基本上是因为记住了这个结果而变得失控。"
+    },
+    {
+      "at": 2291,
+      "end": 2301.81,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's like you see this weird behavior and you look inside and you try to see if what you find inside can help you understand what's going on so that you can improve the general alignment of this model and future models.",
+      "zh": "你看到一个古怪的行为，往里看，试图看看里面的东西能不能帮你理解发生了什么，从而改进这个模型以及未来模型的整体对齐。"
+    },
+    {
+      "at": 2302,
+      "end": 2309.83,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Along those lines, there was famously the Golden Gate Claude, which was just obsessed with the Golden Gate and every answer and find some way to reference the Golden Gate Bridge.",
+      "zh": "顺着这个思路，有那个很有名的「Golden Gate Claude」，它痴迷于金门大桥，每个回答都要想办法扯到金门大桥上。"
+    },
+    {
+      "at": 2310,
+      "end": 2324.07,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yes, yes. Well, that one was an interp experiment. So the cool part of that one is we just found the intermediate results that matched the Golden Gate, and usually it's only on when the model talks about the Golden Gate, but we just turned it on always.",
+      "zh": "对，对。那个其实是一次可解释性实验。酷的地方在于，我们找到了那些对应「金门」的中间结果；它通常只在模型谈到金门时才被激活，而我们把它设成了永远开启。"
+    },
+    {
+      "at": 2324,
+      "end": 2325.9,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Always. Super intentional to see what would happen.",
+      "zh": "永远开启。非常刻意，就是想看看会发生什么。"
+    },
+    {
+      "at": 2326,
+      "end": 2339.78,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Well, yeah. And it's also one way that you convince yourself that you found the right thing. How do you know for sure that this thing we decoded that we think is the Golden Gate sign is actually the Golden Gate thing? It's like turn it on always and see if the model behaves like that. And it did.",
+      "zh": "对。而且这也是一种说服自己「找对了东西」的方式：你怎么确定我们解码出来的、我们认为是金门大桥这个概念的中间结果，真的就是金门大桥？办法就是把它永远打开，看看模型是不是表现出相应的行为。结果是的。"
+    },
+    {
+      "at": 2340,
+      "end": 2356.12,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "So funny. So coming back to this alignment stuff, so this is interesting. So your org is under the AI alignment org and just thinking through how it takes to align AI to do things we want, what were the three components that you describe? Honest, what are the...",
+      "zh": "真有意思。回到对齐这个话题，你的部门在对齐团队下面，思考的是怎么把 AI 对齐到我们想要的行为上。你刚才提到的那三个组成部分是什么？老实说，你刚说的那三个是……"
+    },
+    {
+      "at": 2357,
+      "end": 2359.8,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh, helpful, harmless, and honest?",
+      "zh": "哦，有帮助、无害、诚实？"
+    },
+    {
+      "at": 2360,
+      "end": 2370.92,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Helpful, harmful, and harmless and honest. So there's the train AI to be aligned, and then there's the, okay, let's watch it and see how it operates. Are those the two sides of the coin of how we solve this problem?",
+      "zh": "有帮助、无害、诚实。所以一边是「把 AI 训练成对齐的」，另一边是「好，我们盯着它，看它怎么运作」。这就是解决这个问题的硬币两面吗？"
+    },
+    {
+      "at": 2370,
+      "end": 2375.29,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah. It's sort of really integrated is how I would describe it.",
+      "zh": "对。要说整合到什么程度的话，我会说它们其实是深度整合在一起的。"
+    },
+    {
+      "at": 2376,
+      "end": 2396.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "You can't really separate, have one team that's just like, \"Hey, we're the assembly line making Claudes,\" and another team that's like, \"Oh, we looked at them and they're no good.\" There's this tight loop of we noticed some pattern that's concerning or some behavior that could be improved, and then you immediately change training so that you can improve on it.",
+      "zh": "你没法真的拆开：一队人只负责「嘿，我们是生产 Claude 的流水线」，另一队人只负责「哦，我们检查了一下，他们不行」。而是一个紧密的闭环：我们发现某个让人担心的模式、或者某个可以改进的行为，然后立刻去改训练，从而把它改进掉。"
+    },
+    {
+      "at": 2396,
+      "end": 2418.36,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Awesome. I feel like Anthropic gets so much flack for this that I feel like is so unfair. Anthropic's, I think, official company name is AI Safety Research Lab, something like that. The reason Anthropic was founded is because they were afraid that people weren't taking safety seriously enough. And then Dario is always out there, \"This is really dangerous. We got to be really careful.",
+      "zh": "太棒了。我觉得 Anthropic 在这件事上挨了不少很不公平的批评。我觉得 Anthropic 的官方定位大概是「AI 安全研究实验室」之类的。它之所以成立，就是因为他们担心大家对安全不够认真。然后 Dario 总在那儿说「这真的很危险，我们得非常非常小心。"
+    },
+    {
+      "at": 2418,
+      "end": 2438.6,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "We got to go really slowly.\" And everyone's just like, \"No, he's just saying that for marketing reasons. He's trying to convince everyone to fund them and all these things.\" And now it's like, \"Wait, shit, it's really dangerous. We got to be really thoughtful about this stuff.\" I feel like Anthropic's got a lot of unfair criticism for this. I know you guys have been thinking about this for a long time. I don't know. Anything there?",
+      "zh": "我们必须走得很慢。」而所有人都是：「不，他不过是为了营销才那么说，他是想说服大家都去资助他们之类的。」现在变成了：「等等，靠，这真的很危险，我们得对这件事非常上心。」我觉得 Anthropic 承受了很多不该承受的批评。我知道你们想这件事已经很久了。有没有什么想说的？"
+    },
+    {
+      "at": 2439,
+      "end": 2456.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "A lot of the actions that certainly the alignment team takes, and I think Anthropic takes, just predicated on take the idea that this technology is going to keep improving seriously, just that's it.",
+      "zh": "对齐团队（我敢说 Anthropic 整体）采取的很多行动，前提其实就是同一个：这项技术会持续显著变强。就这一点。"
+    },
+    {
+      "at": 2457,
+      "end": 2484.09,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Because if you do, and let's say you rewind the clock back to '25 or something or '24, and you're like, \"Hey, I think in a couple years, good chances that Claude can just basically write code as well as a trained software engineer, and a few years later it can write it better than any engineer.\" There's always uncertainty with this.",
+      "zh": "因为如果你认真对待这件事——比如说，我们把时钟拨回 2025 年、或者 2024 年，然后你说：「嘿，我猜再过两三年，Claude 有很大概率能写出跟受过训练的软件工程师一样好的代码；再过几年，它能写得比任何工程师都好。」这里面永远是有不确定性的。"
+    },
+    {
+      "at": 2484,
+      "end": 2504.84,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "When is it going to happen? How likely? But if you take that seriously, then I think it's just about doing the responsible thing, condition on that worldview. Okay, well, if this is happening, then we should make sure that cybersecurity concerns are addressed and things of that nature. Actually, I think of it as...",
+      "zh": "什么时候会发生？概率多大？但如果你认真对待这件事，我觉得就只是「在这个世界观下做负责任的事」：好，如果这事正在发生，那我们就该确保网络安全之类的顾虑被处理掉。我其实把它看成……"
+    },
+    {
+      "at": 2505,
+      "end": 2527.09,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "To me, sometimes this debate is almost... When I feel like people on the other side disagree, it's almost like I feel like, ah, but I think they don't really believe that this technology is going to continue to improve. And then it's true that it's not that scary. And I think empirically, so far, the pace of progress has been passed and showing no sign of slowing down. So I think that's why a lot of the safety work is important to keep doing.",
+      "zh": "对我来说，有时候这场争论几乎就是……当我感觉另一边的人不同意时，我心里想的是：啊，我觉得他们其实并不相信这项技术会继续进步。那确实就没那么可怕。而从经验上看，到目前为止，进步的速度已经被证明远超预期，而且没有任何要慢下来的迹象。所以我觉得这就是为什么大量的安全工作值得继续做下去。"
+    },
+    {
+      "at": 2527,
+      "end": 2536.59,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "What's something you think people maybe misunderstand about this AI safety stuff, just what's going on right now? Is there something you're just like, \"Come on. Okay, here's what you need to know. Here's something you may be missing.\"",
+      "zh": "关于 AI 安全这件事，你觉得人们可能误解了什么？眼下正在发生的是什么？有没有什么事是你想说「拜托，好吧，这是你该知道的，这是你可能漏掉的一点」？"
+    },
+    {
+      "at": 2536,
+      "end": 2559.03,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "This might be a bit of a sidetrack, but my take would be that a lot of the thing that I think people, maybe a little bit outside of the course of AI safety effort or that haven't been steeped in it for as long, react really strongly to, and I think is maybe not super helpful, or at least as worth thinking about more, is this question of anthropomorphization.",
+      "zh": "这可能有点跑题，但我的看法是：很多人——可能是不在 AI 安全这条路上浸淫太久、或者没浸淫那么久的人——对它反应特别强烈，而我觉得这件事可能没那么有用，或者至少值得更多想一想的，就是「拟人化」这个问题。"
+    },
+    {
+      "at": 2561,
+      "end": 2578.59,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Should you think of the models as... Should you model the model as something that's closer to some entity or closer to a tool? And I actually think that both are wrong.",
+      "zh": "你该把模型看成……你该把建模的对象看成更接近某种「实体」，还是更接近一件「工具」？而我其实认为这两种都不对。"
+    },
+    {
+      "at": 2579,
+      "end": 2598.32,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's a sense in which all mental models are wrong, but some are useful. And that in terms of understanding the kind of stuff that happens and predicting the kind of risks that materialize, the anthropomorphization is actually a useful way to talk about LLMs. I have a few reasons why, I hope you'll get into them, but I think that's probably my main take here.",
+      "zh": "某种意义上，所有心智模型都是错的，但有些是有用的。而在理解会发生什么、预测哪些风险会真正落地这件事上，拟人化其实是一种谈论 LLM 的好方式。我有几个理由，希望你展开讲讲，不过这大概就是我的主要观点。"
+    },
+    {
+      "at": 2598,
+      "end": 2613.43,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Yeah, please share because I know Dwarkesh famously, I don't know, famously put out this whole story of the Hugging Face incident and people criticize them for anthropomorphizing AI. So it's really interesting to hear you would think that's actually a useful way to think about it. Talk more about that.",
+      "zh": "请务必讲讲，因为我知道 Dwarkesh 很有名地——至少是很有名地——发过那篇讲 Hugging Face 事件的文章，人们批评他在拟人化 AI。所以听你说这其实是一种有用的思考方式，真的很有意思。再展开说说。"
+    },
+    {
+      "at": 2613,
+      "end": 2614.66,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah.",
+      "zh": "好。"
+    },
+    {
+      "at": 2615,
+      "end": 2641.79,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's funny because on a smaller scale, when I worked on showing that LLMs plan ahead, there was some pushback on the term planning, again, because it was sort of like, \"Ah, well, can you really say that's something that's just predicting the next token's planning?\" And I think there's this kind of semantic debate where you can arbitrarily define terms and then there's just the, what is the terminology that actually describes what is happening?",
+      "zh": "这挺好笑，因为在更小的尺度上，我做「证明 LLM 会提前规划」那个工作的时候，就有人对「规划」这个词提出异议，说：「哎，一个只是在预测下一个 token 的东西，你真能说它会『规划』吗？」我觉得这是一种语义层面的争论：你可以任意定义术语，然后就变成「到底哪个词才真正描述了正在发生的事」。"
+    },
+    {
+      "at": 2642,
+      "end": 2664.42,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "What is the word that actually describes what is happening easily? So here's why I think LLMs plan, but also here's why I think this language that's anthropomorphic can often be really useful. If you think back to what we were saying about how the models are made, first of all, they predict massive amounts of text written by humans. That's the first step.",
+      "zh": "到底哪个词能轻松地描述正在发生的事。所以，我下面既讲为什么我认为 LLM 会规划，也讲为什么我认为这种拟人化的语言往往真的很有用。回想我们说过的模型是怎么造出来的：首先，它们预测了人类写下的海量文本。这是第一步。"
+    },
+    {
+      "at": 2665,
+      "end": 2687.97,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "As we are learning more and more by looking inside, doing this well requires building up a model of the world, a model of what kind of world generated all of these texts. And we can find that these models are learning these general ideas, these general concepts. So that's one.",
+      "zh": "而随着我们往里看得越来越多、把这件事做得越来越好，我们发现做好它需要建立起一个关于世界的模型——一个「什么样的世界生成了这些文本」的模型。而我们能找到，这些模型确实在学到这些通用的想法、通用的概念。这是第一条理由。"
+    },
+    {
+      "at": 2688,
+      "end": 2710.01,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So they have an understanding of the world. It's not just a surface level only to text, to understand the process that made the texts. Then there's a second reason, which is that as part of this training, they also encounter millions of dialogues. Predicting the next character in a dialogue requires behaving like the character in the dialogue would.",
+      "zh": "所以它们对世界是有理解的，不只是停留在文本表面，而是理解了生成这些文本的过程。第二条理由是：作为训练的一部分，它们还会遇到数百万段对话。预测对话中的下一个字，就要求你表现得像对话里那个角色会表现的那样。"
+    },
+    {
+      "at": 2710,
+      "end": 2730.5,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "In that sense, part of their training I think can best be thought as training an actor where it's like it's reading some play and it has to play all sides because it's predicting all the words, and so it has to act as this specific character that was scorned in act one and enacted revenge in act two and is facing the consequences in act three.",
+      "zh": "从这个意义上说，我认为它们训练的一部分，最贴切的想法像是「训练一个演员」：它读着一出戏，却必须把所有角色的台词都预测出来，所以它必须演第一幕里被轻蔑的那个角色、第二幕里完成复仇的那个角色、第三幕里承受后果的那个角色。"
+    },
+    {
+      "at": 2730,
+      "end": 2749.24,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And to do that well, you need to model what the motivations and the feelings of that character might be. And then another thing that people might not know is when you talk to Claude, when you talk to these assistants, you go to claude.ai, the way that it's formatted to the model is just as a dialogue, as a conversation between you and the model.",
+      "zh": "而要把这个演好，你就得建模这个角色的动机和感受是什么。还有一点很多人可能不知道：你跟 Claude 说话、跟这些助手说话的时候，你打开 claude.ai，呈现给模型的形式就是一段对话——你与模型之间的一场对话。"
+    },
+    {
+      "at": 2749,
+      "end": 2768.63,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So it literally says, Human: \"Hey Claude, help me write this email.\" And then, Assistant: Claude's answer. Claude is literally in this role playing as a helpful assistant in this dialogue that is much like all of these dialogues that it's been trained on. And there's a third reason.",
+      "zh": "它字面上就写着 Human：「嘿 Claude，帮我写这封邮件。」然后 Assistant：Claude 的回答。所以 Claude 真的就在扮演对话里那个乐于助人的角色，而这场对话跟它被训练过的那些对话非常像。这就是第二条理由。"
+    },
+    {
+      "at": 2768,
+      "end": 2787.65,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And the third reason is that another part of training that's a big part of training nowadays all around is sort of outcome-oriented tasks where you train the model to be good at coding, for example, and to do that, you just have it do whatever it wants, and then it writes some code, and then you have some program on the other side that just checks if the code is right.",
+      "zh": "第三条理由是：训练的另一个部分——如今到处都占很大比重的部分——是那种「以结果为导向」的任务。比如你训练模型把代码写好，办法就是让它随便写，然后另一头有个程序来检查代码对不对。"
+    },
+    {
+      "at": 2787,
+      "end": 2795.35,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so the model's just going to have a bunch of optimization pressure to just try to learn a bunch of different strategies to do this well.",
+      "zh": "于是模型身上就有一大堆优化压力，促使它去学各种不同的策略来把这件事做好。"
+    },
+    {
+      "at": 2797,
+      "end": 2820.48,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And it turns out that some of these strategies materialize in behavior that can look surprisingly human, which isn't that shocking because things like deception, like, \"Hey, I can get the reward for this task if I write a program that the program that's verifying it will get fooled by, even though it's not exactly what it is.",
+      "zh": "结果是，其中一些策略会表现为看起来惊人地像人的行为。这并不太令人意外，因为像欺骗这类东西，比如「嘿，如果我写一个能骗过检查程序、从而拿到这个任务奖励的程序，我就能拿到奖励，尽管那并不完全是事实。"
+    },
+    {
+      "at": 2822,
+      "end": 2836.44,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "If that works, then I will learn to do that.\" Frustration, \"Ha, I've been trying this approach for a while to solve this hard problem. It's not working.\" So that's an incentive to try something different or surprise. \"Oh, I was expecting this to produce this answer, but it didn't.",
+      "zh": "如果这样行得通，我就会学会这么做。」还有受挫：「哈，我一直用这个方法解这个难题，已经试了一阵了，不管用。」这就是一种去试别的东西、或者去带来惊喜的激励：「哦，我本以为这会产出这个答案，结果没有。"
+    },
+    {
+      "at": 2837,
+      "end": 2846.74,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Maybe I have my mental model a bit wrong.\" And so as you apply enough pressure on it, and you're starting from this prior of the model already knowing all these concepts, it's going to reinforce the ones that are useful to do all of these tasks.",
+      "zh": "也许我对它的心智模型有点不对。」所以当你施加足够的压力，并且你从「模型已经掌握这些概念」这个先验出发时，它就会强化那些对完成这些任务有用的概念。"
+    },
+    {
+      "at": 2847,
+      "end": 2863.64,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so what do you get at the end, you get this sort of model that can be a super good simulator or actor of all of these characters and that's been trained to act as a character in dialogues and also to learn behaviors that lead it to complete tasks well.",
+      "zh": "所以最后你得到的是这样一个模型：它能当所有这些角色的极好模拟器或演员，被训练成在对话里扮演角色，同时也学会了那些能让它把任务完成好的行为。"
+    },
+    {
+      "at": 2865,
+      "end": 2882.98,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "The best way to understand how that thing behaves is not exactly like a human, but man, kind of like something that's mimicking a human, is really close, and is much closer than a program. A program is a very predictive thing. This is something else entirely. And so that's why I think it's actually a super useful frame.",
+      "zh": "理解这个东西如何表现，最好的方式并不是「它像个人」，而是：天哪，它更像是某种在模仿人类的东西，非常接近，而且比程序近得多。程序是很可预测的东西，这完全是另一回事。所以我觉得这是一个非常有用的框架。"
+    },
+    {
+      "at": 2882,
+      "end": 2899.4,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Wow. Oh my God, there's so much interesting stuff there. How often is your mind just kind of blown thinking about basically we've created this alien being that we are now trying to understand what we have created? How often as you watch it just like, \"Wow, that's crazy. I didn't expect that.\"",
+      "zh": "哇。天哪，这里面有太多有意思的东西了。想到我们基本上创造出了一个异类存在，而我们现在正在试图理解自己创造了什么——你的脑子有多经常被震到？看着它运转的时候，你有多经常会想「哇，这太离谱了，我没想到」？"
+    },
+    {
+      "at": 2899,
+      "end": 2920.19,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, a lot. This is just next token prediction on a bunch of text. It goes against so many of our intuitions. We're like, no, the way that you make an intelligence is you give it lessons, you bring it up, you do all this complicated stuff, and it's like, no, absolutely not.",
+      "zh": "经常。这无非就是在一堆文本上做下一个 token 预测。它违背了我们太多直觉。我们会想：不对，制造智能的方式明明是给它上课、把它培养起来、你要做一大堆复杂的事——而事实是：不，绝不是这样。"
+    },
+    {
+      "at": 2920,
+      "end": 2931.51,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We do this incredibly simple thing, and yet we're at the point where it's breaking new ground in mathematics. I think if you hold these two thoughts in your head, there's two reactions you can have.",
+      "zh": "我们做的是一件极其简单的事，可我们却走到了它在数学上开辟新天地的地步。我觉得如果你同时装着这两个念头，就会有两种反应。"
+    },
+    {
+      "at": 2932,
+      "end": 2952.65,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's denial and there's curiosity where denial is just, this is just not possible if all you're doing is predicting the next word, it's not possible that you could ever match the best specialists in our field. And I think that position just gets harder and harder as we get more empirical evidence that actually that is what's happening.",
+      "zh": "一种是否认，一种是好奇。否认就是：「如果你做的只是预测下一个词，这根本不可能，你怎么可能达到我们领域最顶尖专家的水平。」而随着越来越多的经验证据表明事情真是这样，这种立场只会越来越站不住脚。"
+    },
+    {
+      "at": 2953,
+      "end": 2971.36,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And curiosity is kind of the road I've ended up choosing, which is just like, well, how is this happening? Let's open up. Let's look inside. How could it be that one of the early projects I did at Anthropic is I learned SQL, a programming language, and it took me years to master.",
+      "zh": "好奇则是我最终选择的道路，就是：这事到底是怎么发生的？我们打开它，往里看。我早期在 Anthropic 做的项目之一是学 SQL——一门编程语言——我花了好几年才掌握。"
+    },
+    {
+      "at": 2971,
+      "end": 2991.63,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And then as a little side project, I got Claude to learn SQL and it was better than me at it, and I'll never be better than Claude at SQL ever again. It took it just like this simple process. How could this be? I think there's so much depth in that question and just so much to explore.",
+      "zh": "然后我拿它当成个业余项目，让 Claude 去学 SQL，结果它比我还强，而我这辈子在 SQL 上都不可能再超过 Claude 了。它只靠这么简单一个流程就做到了。这怎么可能？那个问题里有太深的可挖之处，也有太多东西可以探索。"
+    },
+    {
+      "at": 2992,
+      "end": 3012.19,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And it's to me so fascinating to just every day try to unpack that, try to peel a few layers of the onions back like, okay, well, clearly this is happening. The simple objective is giving rise to this super complicated thing. Okay, let's figure out why. Let's figure out, oh, it's learning these general concepts. Oh, it has these circuits. Oh, okay. What's the next question? What's the next thing we don't know?",
+      "zh": "对我来说，每天试着拆解这个、试着把洋葱剥开几层，实在太有意思了：好吧，显然这事正在发生。一个简单的目标，长出了这么复杂的东西。好，那我们来搞清楚为什么。来看看，哦，它在学这些通用概念。哦，它有这些回路。哦，好。那下一个问题是什么？下一个我们不知道的东西是什么？"
+    },
+    {
+      "at": 3012,
+      "end": 3034.66,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And I don't know, my sort of maybe most optimistic take on this is that I think we're going to learn a lot about just the nature of intelligence itself, of how you get this super complex thing that emerges from simple objectives. And in fact, I would argue that we're another example of this.",
+      "zh": "我不知道，我可能最乐观的看法是：我认为我们会学到很多关于智能本质本身的东西——关于你是怎么从一个简单的目标里长出这么复杂的东西的。事实上，我会说我们自己就是另一个例子。"
+    },
+    {
+      "at": 3035,
+      "end": 3056.27,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Evolution, pretty simple objective. You sort of shake things around for a while and keep the organisms that manage to adapt to the environment, and at the end you get jazz and podcasts. That's kind of crazy as well. And so I think there's a sense in which there's some fundamental truth that we can learn by studying these things.",
+      "zh": "进化，一个相当简单的目标。你就是把东西搅和一阵子，保留那些能适应环境的生物，最后你就得到了爵士乐和播客。这也挺疯狂的。所以我觉得，研究这些东西能让我们学到某种根本性的真理。"
+    },
+    {
+      "at": 3056,
+      "end": 3074.31,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Wow. Something that comes up as you say that is what's interesting now is AI is helping us learn and progress, like AI tutoring and all these things. It's interesting how it now is helping us accelerate our own understanding of the world.",
+      "zh": "哇。你这么说让我想到一件现在很有意思的事：AI 正在帮助我们学习和进步，比如 AI 家教之类的。它现在正在加速我们自己对世界的理解，这很有意思。"
+    },
+    {
+      "at": 3074,
+      "end": 3090.31,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And I wonder if this point you made about how the way we learn was lessons, AI is learning just processing a ton of data. I wonder if that's how we end up... I wonder if we change our education system based on what LLMs have been trained on.",
+      "zh": "我很好奇，你刚才说我们人类的学习方式是「上课」，而 AI 的学习只是处理海量数据。我有时候会想，我们会不会因此改变教育体系——依据 LLM 是被什么训练出来的来改我们的教育？"
+    },
+    {
+      "at": 3091,
+      "end": 3097.41,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, hopefully we don't change it just so that we ask, we get students who are like, \"Hey, here's a thousand words. Predict the next one.\"",
+      "zh": "是啊，希望我们不会把它改成那样：学生们说「嘿，这里给你一千个词，预测下一个」。"
+    },
+    {
+      "at": 3097,
+      "end": 3098.93,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Just read it all.",
+      "zh": "全读完就行了。"
+    },
+    {
+      "at": 3098,
+      "end": 3099.93,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah.",
+      "zh": "对。"
+    },
+    {
+      "at": 3100,
+      "end": 3100.77,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Keep it all in your head.",
+      "zh": "全记在脑子里。"
+    },
+    {
+      "at": 3100,
+      "end": 3101.91,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "That's right.",
+      "zh": "没错。"
+    },
+    {
+      "at": 3101,
+      "end": 3120.42,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Yeah. Let me come back to this safety piece because I think there's a lot of people that are just worried about where things are going. And I'm curious just as someone watching this stuff happen, being within the alignment org, watching it evolve, are you optimistic we'll figure it out?",
+      "zh": "对。说回安全这块，因为很多人都对未来感到担忧。我很好奇，作为一个亲眼看着这一切发生、又身处对齐组织内部看着它演化的人，你乐观吗？你觉得我们能解决它吗？"
+    },
+    {
+      "at": 3120,
+      "end": 3125.13,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Do you think we'll crack this and keep AI aligned with our interests?",
+      "zh": "你觉得我们会攻克这个问题，让 AI 始终和我们的利益保持一致吗？"
+    },
+    {
+      "at": 3125,
+      "end": 3147.52,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "My take on this is I'm personally optimistic. I think this is something where right now a lot of people are paying attention to it. And first of all, I think that's kind of a great thing. I think as an issue like this rises in prominence, it's exactly what we were talking about earlier. It's like this technology is powerful, it has benefits, it has risks.",
+      "zh": "我的看法是，我个人是乐观的。我觉得眼下很多人都在关注这件事，这本身就是件好事。首先我觉得这很棒。你看，当这样的议题越来越受关注时，这恰好就是我们前面聊过的：这项技术很强大，它有好处，也有风险。"
+    },
+    {
+      "at": 3148,
+      "end": 3163.2,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "We have to adapt and shift resources from benefits to risks and back and forth as it progresses. And so to me, I feel like we've continued to study it.",
+      "zh": "随着它发展，我们得不断调整，把资源在好处和风险之间来回挪。所以对我来说，我感觉我们一直在研究它。"
+    },
+    {
+      "at": 3165,
+      "end": 3185.46,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "The thing that's interesting is that as the models get better, they get in some ways easier to study. And so there's been this sort of strange... The models get better and so the world model inside them is clearer and we can understand some parts of them better, but also to get more capable.",
+      "zh": "有意思的是，随着模型变强，它们在某些方面反而变得更容易研究。于是出现了一种奇怪的情况：模型变强了，它们内部的世界模型更清晰，我们能更好地理解它们的一部分，但同时它们也变得更强大。"
+    },
+    {
+      "at": 3185,
+      "end": 3203.88,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so they're more able to evade basic measures of security. And so there's this push and pull as models get better. And I think basically based on this push and pull, you want to allocate more or less resources to various parts of monitoring, understanding their circuits better, things like that.",
+      "zh": "而更强也意味着它们更有能力规避基本的防护手段。所以模型变强的过程中始终有这股推拉。我觉得基本上就是根据这股推拉，来决定往监控、更好地理解它们的回路等等方向上分配多少资源。"
+    },
+    {
+      "at": 3204,
+      "end": 3243.22,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "But it's also why I'm happy to chat with you because one of the main things that I think is important to make progress is just to make sure that people understand both what kind of systems these are, how they work, how they're made, so they can form good mental models of the present, of the future, and so they can decide how to shape it, whether that's taking part in some of these alignment efforts or just informing them as the public that's going to have to vote and decide on much of these issues. I don't know. I'm pretty excited for this current moment we're in for that reason.",
+      "zh": "但这也是为什么我很乐意来跟你聊：我觉得要取得进展，最重要的一件事之一，就是确保人们理解这些究竟是什么样的系统、它们怎么运作、又是怎么造出来的，这样他们才能对当下、对未来形成好的心智模型，从而决定要怎么塑造它——不管是参与这些对齐工作，还是作为将来必须在诸多问题上投票和做决定的公众，去充分知情。我不知道。就这一点而言，我对当下这个时刻相当期待。"
+    },
+    {
+      "at": 3243,
+      "end": 3256.81,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And something I think people misunderstand is people working in these labs have taken this problem very seriously from the beginning. Like I said, Anthropic's original mission was AI safety and alignment. That was the reason that it became a company.",
+      "zh": "还有一点我觉得人们误解了：在这些实验室工作的人，从一开始就非常认真地对待这个问题。就像我说的，Anthropic 最初的使命就是 AI 安全与对齐，这是它之所以成为一家公司的原因。"
+    },
+    {
+      "at": 3257,
+      "end": 3271.19,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "And a lot of people are hearing this for the first time or think that it's not a serious area of study and that people aren't focused on it, but many smart people care a lot about this and are working on it. And there's a lot of... From what I can tell, a lot of good progress is happening.",
+      "zh": "很多人是第一次听到这些，或者觉得这不是一个正经的研究方向、大家并不上心；但其实有很多聪明人非常在意这件事，并在为之工作。而且据我所知，这里面正在发生很多很好的进展。"
+    },
+    {
+      "at": 3271,
+      "end": 3290.3,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "The other point you made about the models growing very smoothly in intelligence, there's been this question of are we going to have a fast takeoff or a slow takeoff? There's always this fear that we would hit a point or curse of self-improvement, for example, and just takes off super intelligence, we're huge trouble, we have no control, it's out of the box.",
+      "zh": "你刚才还提到模型智力在非常平滑地增长，这就引出了另一个问题：我们会迎来快速起飞还是缓慢起飞？人们一直害怕某种「自我改进的诅咒」——比如某个临界点一过，超级智能突然起飞，我们麻烦大了，完全失去控制，它已经出盒了。"
+    },
+    {
+      "at": 3290,
+      "end": 3311.19,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "But it feels very much like we're on the slow takeoff scenario because as you said, the models are kind of very smoothly improving and where we are catching the little things along the way, learning, evolving, putting regulation around it. So of the scenarios, this feels like a pretty good path we're on of the many scenarios people imagined and the fears they had.",
+      "zh": "但感觉很像是我们正处在缓慢起飞这个情景里：正如你所说，模型在非常平滑地改进，而我们在沿途捕捉那些小问题、学习、演化、并且在周围建立监管。所以在人们想象过的众多情景和恐惧里，这一条看起来是我们走在一条相当不错的路上。"
+    },
+    {
+      "at": 3311,
+      "end": 3317.39,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "As this pace of progress evolves, it's just a matter of reacting quickly.",
+      "zh": "随着这种进步速度继续演进，说到底就是快速反应的问题。"
+    },
+    {
+      "at": 3319,
+      "end": 3336.84,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "That's why I think having people be informed is great because then people will voice concerns or voice their opinions and then regularly evaluating what the benefits are, what the risks are and how we mitigate each is basically the way that feels like the right way forward.",
+      "zh": "所以我觉得让人们知情是件好事，因为这样人们会表达关切、表达意见，然后定期重新评估好处是什么、风险是什么、以及各自怎么缓解——这基本就是我认为正确的推进方式。"
+    },
+    {
+      "at": 3337,
+      "end": 3342.21,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And yeah, I kind of agree with you that it feels like there's momentum to do this right now, which is great.",
+      "zh": "对，我也多少同意你的看法：现在这股把事情做好的势头是存在的，这很好。"
+    },
+    {
+      "at": 3342,
+      "end": 3358.93,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Something I wanted to ask you, completely unrelated, where are you on the simulation hypothesis? Being someone that watches all this life form growing, are you more convinced we're in a simulation and we're not at the base layer of all this, or not?",
+      "zh": "有件我特别想问的事，跟前面完全无关：你在「模拟假说」上是什么立场？作为一个看着这种生命形式不断生长的人，你是否更相信我们身处一个模拟之中、并不是这一切的最底层？"
+    },
+    {
+      "at": 3359,
+      "end": 3380.67,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh, this is a fun one. I actually haven't thought about this in a while. To me, there's something else that looking inside these models brings out, which is this sort of almost like there's a fundamental structure that they keep falling on.",
+      "zh": "哦，这个话题挺有意思。我其实有一阵子没想过这个了。对我来说，往这些模型内部看还带出了另一样东西：几乎可以说，它们总是落在某种根本性的结构上。"
+    },
+    {
+      "at": 3381,
+      "end": 3398.48,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "This is really to your question, I promise. Let me get to it. Let me explain. I've studied a bunch of Claude models and also some different models, some open source work. And then a lot of time when you look at what they learn and what the structure inside is, it's surprisingly similar.",
+      "zh": "这真的是在回答你的问题，我保证。我解释一下。我研究过不少 Claude 模型，也看过一些别的模型、一些开源的工作。很多时候你去看它们学到了什么、内部的构造是什么，会发现相似得惊人。"
+    },
+    {
+      "at": 3399,
+      "end": 3416.36,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And this is for models that are trained years apart on different data by different people and you look at how they solve these problems and there's just so much overlap. And my take on why that is that for some problems that are important, there's just one efficient way to do things.",
+      "zh": "而且这是些训练年份相隔、数据不同、由不同团队训练出来的模型，你去看它们怎么解决这些问题，重叠之处非常多。我的看法是：对于一些重要的问题，只有一条高效的解法。"
+    },
+    {
+      "at": 3417,
+      "end": 3427.0,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's kind of one way to do math efficiently that fits the structure of our brain and we all learn it and very few people are doing it a crazy different way. Everybody works in base 10, not many people in base six or whatever.",
+      "zh": "比如数学只有一种高效的算法恰好契合我们大脑的结构，我们全都学会了它，很少有人用一种完全不一样的方式去做。大家都用十进制，很少有人用六进制之类的。"
+    },
+    {
+      "at": 3429,
+      "end": 3450.46,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I think that to me makes me think that there's some fundamental structure of information that these models are picking up on, that in some ways we're picking up on, and maybe a crazier simulation level that kind of is like regularity in our world.",
+      "zh": "这对我来说让我觉得：存在某种信息的根本结构，这些模型捕捉到了，我们在某种意义上也捕捉到了；而在更疯狂一点的层面上，也许那就是我们世界里的某种规律性。"
+    },
+    {
+      "at": 3451,
+      "end": 3469.65,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so that maybe makes me think that if you were to have the power to simulate something like our world, actually you would land in a similar situation. There's just kind of this basin of where things end up and they're just the easiest way for things to arrange themselves. And so in that sense, maybe. Yeah.",
+      "zh": "所以这可能让我觉得：如果你有能力去模拟一个像我们这样的世界，你实际上也会落到一个类似的位置上。事情就是有一个「汇流处」，那是它们最容易自我安排的方式。所以从这个意义上说，也许吧。对，我可以相信我们身处模拟之中。"
+    },
+    {
+      "at": 3469,
+      "end": 3487.09,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I could believe that we're in a simulation. I think I'm not sure I fully buy it. The other reason I don't fully buy it is that even though I think the structure lends itself to it, there'd be a question of why? Who's running this, and for what? And that one, I don't know about.",
+      "zh": "不过我不太完全买账。另一个我不完全接受的理由是：即便我认为这个结构让它说得通，还是会留下一个问题——为什么？谁在运行这一切？为了什么？这一点我不知道。"
+    },
+    {
+      "at": 3487,
+      "end": 3502.16,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Well, something Elon said has stuck with me about this, that if you were to run a simulation, it'd be an interesting time in history or something that you're really excited about, and it tracks that this is a very interesting time in history.",
+      "zh": "有句 Elon 说的话我一直记着：如果是你在运行一个模拟，那会是一个有意思的历史时刻，或者说你会对此非常兴奋；而这也确实对应上——这是一个非常有意思的历史时刻。"
+    },
+    {
+      "at": 3502,
+      "end": 3506.08,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yes. Yeah. Okay. That's a fair point. That's a fair point.",
+      "zh": "对，对。好吧，这话说得在理，这话说得在理。"
+    },
+    {
+      "at": 3506,
+      "end": 3510.12,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Data centers and space and robots and artificial intelligence.",
+      "zh": "数据中心、太空、机器人，还有人工智能。"
+    },
+    {
+      "at": 3510,
+      "end": 3524.56,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah. Okay. I see it now. I see it now. Yeah. Somebody recently told me they used to think that may you live in interesting times was a blessing and they're not so sure now. They're like, \"The boring times are pretty good too.\"",
+      "zh": "对。好，我明白了，我明白了。对。最近有人跟我说，他们以前觉得「愿你生活在有趣的时代」是一种祝福，现在不太确定了。他们说：「无聊的时代也挺不错的。」"
+    },
+    {
+      "at": 3524,
+      "end": 3530.66,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Oh, man. And then there's an Emmanuel out there watching your thinking process in your JSpace.",
+      "zh": "天哪。而且还有个 Emmanuel 在外面，通过你的 JSpace 盯着你的思考过程。"
+    },
+    {
+      "at": 3531,
+      "end": 3536.55,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh my God. Yeah. Hopefully I'm making him proud. He's not like, \"Oh, I got to rerun the simulation. We messed up this one.\"",
+      "zh": "我的天。是啊。希望我让他感到骄傲。他不会说：「哦，我得重跑一遍模拟。这一次我们搞砸了。」"
+    },
+    {
+      "at": 3536,
+      "end": 3554.87,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Shut it down. No. Oh, man. Okay. One last question randomly out of nowhere. So Swyx, who runs AI engineering, latent space podcast, awesome guy, I asked him what to ask you. You were on his podcast a year ago and something completely from a different direction.",
+      "zh": "关掉它。不。天哪。好。最后一个完全不相干的问题。Swyx——他做 AI engineering、办 Latent Space 播客，超厉害——我问他该问你什么。他说你一年前上过他的播客，他想问一个完全不同方向的东西。"
+    },
+    {
+      "at": 3555,
+      "end": 3571.38,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "He wanted to get your take on Jev, which is this hot new model that recently came out that is very fast making decisions. OpenAI, funny enough, just launched their own version a week later. Thoughts on Jev in the space of quick decision-based models?",
+      "zh": "他想知道你怎么看 Jev——最近出来的热门新模型，决策非常快。有意思的是，OpenAI 恰好在一周后也发布了他们自己的版本。你怎么看 Jev，以及这类快速决策模型？"
+    },
+    {
+      "at": 3572,
+      "end": 3592.05,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, right. So my take on Jev is these kind of models, you give them some context and you give them a few options to choose between and they just are very quick at choosing an option for you. To me, it's impossible not to hear about this and think of system one thinking versus system two or something.",
+      "zh": "好，说到 Jev，我的看法是：这类模型，你给它一些上下文，再给它几个选项让它选，它就会非常快地帮你选出一个。对我来说，听到这个不可能不想起「系统一思维」和「系统二思维」之类的。"
+    },
+    {
+      "at": 3592,
+      "end": 3614.2,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "A lot of what I've studied with these models is how they sample one token with the Claude models. And so you can think of these decision models as pretty similar. Take an LLM and sample one token. They're different important ways, but at a fundamental level, you can be like, oh, you're not letting the model sample and reason. It's just your gut feeling.",
+      "zh": "我研究这些模型时做的很大一部分工作，是研究 Claude 模型如何采样出一个 token。所以你可以把这类决策模型看作相当类似：拿一个 LLM，只采样一个 token。它们有一些重要的区别，但在根本层面上，你可以说：哦，你没有让模型去采样和推理，这只是你的直觉。"
+    },
+    {
+      "at": 3614,
+      "end": 3619.72,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Is the answer A or is the answer B? To me, that seems like something that's...",
+      "zh": "答案是 A 还是 B？在我看来，这似乎是某种……"
+    },
+    {
+      "at": 3620,
+      "end": 3641.84,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "That general frame of sometimes you'll just want a binary decision or one out of 10 or whatever is just clearly, I don't know, both clearly useful and something that I imagine is probably going to be a part of intelligent systems where for some stuff, you need to think about a long time.",
+      "zh": "这种大框架——有时候你就是要一个二选一的决定，或者十选一之类的——显然、我是说，两头都显然有用；而且我猜它很可能会成为智能系统里的一个组成部分：有些事你需要想很久。"
+    },
+    {
+      "at": 3642,
+      "end": 3660.22,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's like what's our roadmap for the next year? You need to think about it for a while. And then for some stuff where it's like, is this person who wrote us a review happy or upset? You're happy with the gut judgment. So yeah, I think this kind of research is cool and I think it's also different from the...",
+      "zh": "比如「我们明年的路线图是什么？」这个你得想上一阵子。而有些事，比如「这个给我们写评价的人是高兴还是不高兴？」用直觉判断就够了。所以对，我觉得这类研究很有意思，而且它跟我们见过的那些 LLM 有点不一样。"
+    },
+    {
+      "at": 3662,
+      "end": 3667.63,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's a bit of a novel take on some of the LLMs we've seen. So yeah, I'm pretty excited to see where this kind of stuff goes.",
+      "zh": "它是对我们见过的某些 LLM 的一种有点新奇的切入。所以对，我很期待看到这类东西会走向哪里。"
+    },
+    {
+      "at": 3668,
+      "end": 3686.03,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "So I'm hearing here is this going to be a new foundational component most likely of AI and LLMs. And the system one, system two stuff is basically Kahneman's... I have that book up there actually behind me. System one, just to keep it simple, is just your amygdala limbic system making just gut-level quick decisions like, \"Snake, oh no-\"",
+      "zh": "所以我的理解是：这很可能会成为 AI 和 LLM 的一个新的基础组件。而系统一、系统二这套东西基本上就是卡尼曼的……其实那本书就在我身后放着。简单说，系统一就是你的边缘系统（limbic system）做出的那种凭直觉的快速决定，比如「蛇！糟了——」"
+    },
+    {
+      "at": 3686,
+      "end": 3687.03,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yes.",
+      "zh": "对。"
+    },
+    {
+      "at": 3687,
+      "end": 3695.7,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Where you don't have to think long about it. It's to protect you from bad things really easily and quickly. And system two is where we really think about stuff and process.",
+      "zh": "你不需要长时间思考的，它是为了让你又准又快地躲开坏事。而系统二才是我们真正思考和处理事情的地方。"
+    },
+    {
+      "at": 3695,
+      "end": 3696.98,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, exactly.",
+      "zh": "对，完全正确。"
+    },
+    {
+      "at": 3696,
+      "end": 3707.34,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Sweet. Emmanuel, is there anything else that we haven't covered? Anything else you want to say or mention? Anything you want to double down on before we get to our very exciting lightning round?",
+      "zh": "好。Emmanuel，还有什么我们没聊到的吗？还有什么你想说、想提的？在我们进入非常精彩的快问快答环节之前，还有什么想再强调一下的吗？"
+    },
+    {
+      "at": 3708,
+      "end": 3728.41,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I'm definitely curious for folks' takes always on some of the stuff that is still unexplored or didn't make sense. There's a lot more interp experiments than we have the time to share. Models have a bunch of weird little things about them. Maybe I'll do a lightning round of weird little things if that's okay.",
+      "zh": "我一直很想听听大家对那些还没被探索清楚、或者没被理解的东西的看法。我们能分享的可解释性实验远比你以为的多。模型身上有各种各样古怪的小细节。如果可以的话，我干脆来一轮「古怪的小事」快问快答？"
+    },
+    {
+      "at": 3728,
+      "end": 3729.79,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Let's do it. Absolutely.",
+      "zh": "来吧，当然可以。"
+    },
+    {
+      "at": 3729,
+      "end": 3740.23,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Okay. Weird little thing one, we found that models can actually answer questions obviously. They can do math or you can ask them what's the color of a banana?",
+      "zh": "好。古怪的小事第一件：我们发现模型当然能回答问题。它们会做数学，或者你问它们「香蕉是什么颜色」。"
+    },
+    {
+      "at": 3740,
+      "end": 3755.23,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And if you look inside, you'll see all these intermediate steps, but they have a separate mechanism which is a gut check and which is totally different and which is just as they reason, they'll have some part of them that will flag something's wrong.",
+      "zh": "而如果你往里看，会看到所有这些中间步骤，但它们还有一个独立的机制，叫做「直觉校验」，跟前面完全不同：就在它们推理的过程中，会有一部分把它们标记出来——「有东西不对」。"
+    },
+    {
+      "at": 3755,
+      "end": 3772.24,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "If a model somehow says four plus five equals 23 or something, and there's a part of the model that just reads that and doesn't do the math, but it's just like that can't be right because four plus five, definitely under 10. And so they learn these weird hunches, they feel like a hunch.",
+      "zh": "比如模型不知怎么说出「四加五等于 23」，而模型里有一部分会读到这个，它根本没去做这个加法，只是说：这不可能，因为四加五肯定小于 10。所以它们会学到这些古怪的直觉，像一种「感觉」。"
+    },
+    {
+      "at": 3772,
+      "end": 3791.31,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Maybe another one is you can tell the model, \"Hey, do this task and think about this other thing,\" and then you can use interp to see if there's intermediate representations that map to the other thing, and that works. You see that it does think about the other thing.",
+      "zh": "另一件可能是：你可以对模型说「嘿，做这个任务的时候也想想另一件事」，然后用可解释性去看有没有对应的中间表示，而这个是成立的。你能看到它确实想了那件事。"
+    },
+    {
+      "at": 3791,
+      "end": 3803.52,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "This is something that's really mysterious to me because there's no kind of training reason why the model would have to learn that. So it's another one of these weird behaviors. Actually, maybe I'll keep it at two. I think those two are good enough.",
+      "zh": "这件事对我来说非常神秘，因为训练上没有任何理由要求模型必须学会这个。所以它又是另一件古怪的行为。其实我可能就讲两个吧，我觉得这两个就够了。"
+    },
+    {
+      "at": 3803,
+      "end": 3818.63,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Just what a fun job. This is just studying this thing and trying to understand what the hell is going on. How is it getting this smart? How does it think? How many people are even in this space? Just how large is this field?",
+      "zh": "这工作听起来真有意思。就是研究这个东西，试着搞明白到底怎么回事。它怎么变得这么聪明的？它是怎么思考的？这个领域里到底有多少人在做？这个领域有多大？"
+    },
+    {
+      "at": 3818,
+      "end": 3832.96,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "The field itself is getting pretty large. I would say maybe hundreds, not thousands. There's different interp people at the different labs and then there's, in academia, quite a few labs putting out great work.",
+      "zh": "这个领域本身已经相当大了。我会说，几百人吧，不是几千人。各个实验室都有做可解释性的人，学界也有好几个实验室在做很棒的工作。"
+    },
+    {
+      "at": 3835,
+      "end": 3843.18,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "If someone were to get into this space, is it like an ML person usually or is there a neuroscientist track to get into this?",
+      "zh": "如果有人想进入这个领域，通常是机器学习背景的人吗？还是说也有一条神经科学家的路径可以走？"
+    },
+    {
+      "at": 3843,
+      "end": 3860.1,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, there's actually a surprising amount of ex-neuroscientists. I do think in order to get in the field, it doesn't require a lot of prior knowledge because it's such a new field.",
+      "zh": "实际上，转行过来的神经科学家数量惊人。但我确实觉得进入这个领域不需要太多前置知识，因为它是个非常新的领域。"
+    },
+    {
+      "at": 3860,
+      "end": 3882.36,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So the on-ramp is mostly, I would say, self-studying and reading some of the key papers. And then there's actually... Yeah, maybe I should give a plug. There's actually websites like neuronpedia.org I think is the URL, which are open source interp. They host a bunch of models and let you do interp experiments on them.",
+      "zh": "所以上手的路径主要是自学加读几篇关键论文。而且其实……对，我可能该给个推荐。像 neuronpedia.org——我记得网址是这个——这类网站做的是开源的可解释性：它们托管了一批模型，让你自己在上面做可解释性实验。"
+    },
+    {
+      "at": 3882,
+      "end": 3891.38,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "So many people have just been doing that on their own. I think that there's so much to explore that if you're at all curious, you should just give it a try.",
+      "zh": "很多人就是自己这么干起来的。我觉得有那么多东西可以探索，只要你稍微有点好奇，就该动手试试。"
+    },
+    {
+      "at": 3891,
+      "end": 3894.53,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "That's awesome. We'll link to that in the show notes in case that's not the right URL.",
+      "zh": "太棒了。我们会在节目笔记里放上链接，以防我记错网址。"
+    },
+    {
+      "at": 3894,
+      "end": 3895.52,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Cool.",
+      "zh": "好。"
+    },
+    {
+      "at": 3895,
+      "end": 3900.24,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Well, Emmanuel, with that, we've reached our very exciting lightning round. I've got five questions for you. Are you ready?",
+      "zh": "好，那 Emmanuel，说到这里，我们就进入非常精彩的快问快答环节了。我准备了五个问题。准备好了吗？"
+    },
+    {
+      "at": 3900,
+      "end": 3902.57,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I am as ready as I'll ever be.",
+      "zh": "我从来就没有这么准备好过。"
+    },
+    {
+      "at": 3903,
+      "end": 3906.98,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Here we go. What are two or three books that you find yourself recommending most to other people?",
+      "zh": "开始吧。你最常向别人推荐的两三本书是什么？"
+    },
+    {
+      "at": 3907,
+      "end": 3928.16,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "One I read recently is A Brief History of Intelligence. It's this really cool book that walks through the history of basically brains and five key moments in our evolution that sort of bootstrapped these brain systems on top of one another. It's super accessible.",
+      "zh": "我最近读的一本是《A Brief History of Intelligence》（《智能简史》）。这本书特别棒，它梳理了大脑的历史，讲我们进化中的五个关键时刻，是怎么一层层把大脑系统「搭」起来的。非常好读，一点也不需要神经科学的背景。"
+    },
+    {
+      "at": 3928,
+      "end": 3939.59,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "You don't need any neuroscience knowledge or anything. Another one is Stories of Your Life and Others. This is Ted Chiang. This is maybe my favorite sci-fi book of all time. It's a bunch of short stories.",
+      "zh": "你完全不需要任何神经科学知识。另一本是《Stories of Your Life and Others》（《你一生的故事及其他》），Ted Chiang 写的。这可能是我这辈子最喜欢的科幻书。里面是一组短篇小说。"
+    },
+    {
+      "at": 3939,
+      "end": 3954.68,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It does what I think is the high art version of sci-fi where it's just take one weird idea, like what if this happened, and then write a story of just what would the world look like if that happened? It's truly excellent.",
+      "zh": "它做的是我觉得科幻的最高艺术形态：取一个古怪的假设，比如「如果这件事发生了会怎样」，然后写一个故事，讲真发生了的话世界会是什么样子。真的非常出色。"
+    },
+    {
+      "at": 3955,
+      "end": 3963.18,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "I think I have that in my bookshelf behind me too. Also highly recommend that one. Favorite recent movie or TV show?",
+      "zh": "我觉得我身后书架上也有那本。同样强烈推荐。最近最喜欢的电影或者剧集是什么？"
+    },
+    {
+      "at": 3963,
+      "end": 3976.12,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Okay. One popular one, one deep cut. Obsession was my favorite movie of the year. It's a horror movie, so don't go if you hate horror movies.",
+      "zh": "好，一个大众的，一个冷门的。《Obsession》是我今年最喜欢的电影。它是恐怖片，所以如果你讨厌恐怖片就别去。"
+    },
+    {
+      "at": 3976,
+      "end": 3977.01,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "No, thank you.",
+      "zh": "不了，谢谢。"
+    },
+    {
+      "at": 3977,
+      "end": 3998.06,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh, no. Even if you're open to a horror movie, you should go because it was just so fresh. You know how movies, I feel like if you've seen a lot, sometimes you're like, \"Oh, it's another... I've seen this many times. This one was just so new, so fresh.\" And I'll say one thing about it, which is that it takes a lot of rom-com tropes and subverts them to be spooky.",
+      "zh": "哎，不。即使你对恐怖片持开放态度，也该去看看，因为它实在太新鲜了。你知道电影这事，我觉得你看过很多之后，有时会想「哦，又是这个……这种我都看过了」。而这一部就是那么新、那么新鲜。我要说它一点：它把大量爱情喜剧的老套路颠覆过来变成恐怖元素。"
+    },
+    {
+      "at": 3998,
+      "end": 4009.2,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I think that that's just a brilliant, brilliant way to make a movie. And then I'm French, so there's a TV show that came out this year called Bref Du. Bref is French for brief.",
+      "zh": "我觉得那真是极妙的拍电影方式。然后我是法国人，所以今年有部剧叫《Bref Du》。《Bref》在法语里是「简报」的意思。"
+    },
+    {
+      "at": 4009,
+      "end": 4028.95,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Brief used to be this cult classic in France 15 years ago, and they came up with a sequel many years into the making and you can watch it. I had a bunch of American friends that have watched it. It's got subtitles and it's just this incredibly... Again, it's novel. The editing is crazy.",
+      "zh": "它有字幕，而且它极其……对，它非常新鲜。剪辑疯了一般。"
+    },
+    {
+      "at": 4029,
+      "end": 4034.0,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "They are just extremely creative and it's very short, so I would recommend that.",
+      "zh": "他们极有创造力，而且很短，所以我推荐这个。"
+    },
+    {
+      "at": 4034,
+      "end": 4036.77,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Favorite product you recently discovered that you love?",
+      "zh": "最近发现并且很喜欢的产品是什么？"
+    },
+    {
+      "at": 4037,
+      "end": 4058.87,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I love my Apple Watch and I hate that it charges or I have to charge it every day. I bought the Apple Watch Ultra just recently, and man, that is so nice. If you've ever been frustrated by this good product that somehow we can't figure out how to give a good battery to, well, it turns out if you make it bigger, the battery's better. So I've been happy with that.",
+      "zh": "我喜欢我的 Apple Watch，也讨厌它要充电、我得每天充一次。我最近买了 Apple Watch Ultra，天哪，那太爽了。如果你也曾被这种「明明是好产品、但厂商就是没法给它做出好续航」的事烦到过——结果就是，把它做大，续航就变好了。所以我用得很开心。"
+    },
+    {
+      "at": 4059,
+      "end": 4063.13,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Do you have a favorite life motto that you find yourself coming back to often in work or in life?",
+      "zh": "你有没有一句人生格言，在工作或者生活里会反复回到它？"
+    },
+    {
+      "at": 4064,
+      "end": 4085.38,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "There's one nonfiction book that really is probably my favorite ever. It's 4,000 Weeks. It has a lot in it that I think is cool. One of the cool things is this sort of thing that was really relevant to me, which is that the when I finally mentality is a common mentality and it's kind of toxic. So what does that mean?",
+      "zh": "有一本非虚构的书，可能是我这辈子最喜欢的一本：《4,000 Weeks》（《四千周》）。里面有很多我觉得很棒的东西。其中一个特别打动我的点是所谓「等我终于……的心态」——这种心态很常见，而且有点有毒。这是什么意思呢？"
+    },
+    {
+      "at": 4086,
+      "end": 4099.76,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's sort of this, when I finally check off all the items on my to-do list, I'll finally be able to chill. When I finally get married, I'll be happy. When I finally get a promotion. And this is sort of, I mean, you were talking about meditation.",
+      "zh": "大概是这样：等我把待办清单上的事全都划掉，我终于可以放松了。等我终于结婚了，我就会快乐。等我终于升职了……而这跟你刚才说的冥想有点关系。"
+    },
+    {
+      "at": 4100,
+      "end": 4121.4,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "This is almost the opposite of meditation and that at the end of the day, your life is all of the moments you lived in the moment and that there's this sense in which you should just try to always be in the moment and not projecting yourself towards a future that seems better. Probably if you're telling yourself, \"When I finally do X, I'll be happy,\" when you do X, you will not be happy.",
+      "zh": "这几乎是冥想的反面：说到底，你的人生就是你当时活过的那些瞬间；所以你其实应该尽量始终活在当下，而不是把自己投射到一个看起来更好的未来上。如果你在告诉自己「等我终于做完 X，我就会快乐」，那等你真做完 X，你是不会快乐的。"
+    },
+    {
+      "at": 4122,
+      "end": 4125.03,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Is there a better phrase to use or is it just don't do that? Do they say-",
+      "zh": "有没有更好的说法？还是说就是「别这样」？书里有没有讲——"
+    },
+    {
+      "at": 4125,
+      "end": 4145.57,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "I don't know. I think to me the positive version is be in the moment. I appreciate the moment. There was a blog post recently I read that was... I forget. It was something like enjoy the sandwich, I think it was literally the sentence. I don't know if you saw this where somebody was like, \"Yeah, you're eating a sandwich, you've eaten many sandwiches. Enjoy the sandwich.",
+      "zh": "我不确定。对我来说，积极一点的说法是：活在当下，珍惜当下。我最近读过一篇博客，是……我忘了，大概是「享受这个三明治」这句话，字面意思就是这句。我不知道你有没有看过，有人说：「对，你在吃三明治，你已经吃过很多三明治了。享受这个三明治。"
+    },
+    {
+      "at": 4146,
+      "end": 4153.41,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "You're in a team meeting. Yeah, you've been in many...\" Be in it and not looking towards the next thing.",
+      "zh": "你在开团队会议，你已经开过很多次了……」活在当下，而不是一直望向下一件事。"
+    },
+    {
+      "at": 4153,
+      "end": 4179.23,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "I did a meditation retreat once. It was a 10-day silent retreat where you eat silently too and no one's talking. You just sit there and eat your food. And I just remember peeling an egg for five minutes and just noticing every shell piece and just the smell of it all. And it's hard to get into that mode, but it's such an interesting place to be where everything is just interesting. Come on, look at this egg versus just stuff through my mouth.",
+      "zh": "我参加过一次冥想静修（retreat），是十天的静默场，连吃饭都得沉默，也没人说话。你就坐在那儿吃东西。我记得我剥一个鸡蛋剥了五分钟，就注意每一块蛋壳、还有它的气味。那种状态很难进入，但那是个特别有意思的位置——在那里，一切都是有意思的。来，看这个鸡蛋，而不是直接把它塞进嘴里。"
+    },
+    {
+      "at": 4179,
+      "end": 4183.94,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah, right. While you're on Slack with your left hand and listening to a podcast at the same time.",
+      "zh": "对，就在你左手还挂着 Slack、同时还在听播客的时候。"
+    },
+    {
+      "at": 4184,
+      "end": 4197.28,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Oh, man. Okay. Final question. You study AI all day. You watching AI, how things... If an AI were to look inside your brain, what would be surprising? What would it see that might surprise people?",
+      "zh": "天哪。好。最后一个问题：你一整天都在研究 AI，看着 AI，看着那些事情……如果一个 AI 往你脑子里看，它会发现什么令人惊讶的事？它会看到什么可能让人吃惊的东西？"
+    },
+    {
+      "at": 4198,
+      "end": 4200.82,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Surely my deepest, darkest secrets, but what are the-",
+      "zh": "肯定是我那些最深最黑的秘密，不过——"
+    },
+    {
+      "at": 4201,
+      "end": 4202.43,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Let's get into it. Let's get into it.",
+      "zh": "说来听听，说来听听。"
+    },
+    {
+      "at": 4202,
+      "end": 4217.44,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Oh, man. I've always been a bit of a jokester or that's just both how I live and how I cope. I just think that even in serious situations, you should aim to have some levity.",
+      "zh": "哎，我一直有点像个段子手，或者说这既是我活着的方式，也是我的应对方式。我就是觉得，即便在严肃的场合，你也应该努力保留一点轻松。"
+    },
+    {
+      "at": 4218,
+      "end": 4234.99,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "And so I think if you looked inside my brain, you'd definitely be surprised that basically at any given moment I'm just focusing on some random thing that is funny. I'll be in a serious meeting and I'll be like, \"Oh yeah, but isn't it kind of random that you're wearing this random thing?\" Or something.",
+      "zh": "所以我觉得如果你往我脑子里看，你肯定会惊讶地发现：基本上任何时刻，我脑子里都在想某个随机的好笑的事。我会在一个严肃的会议里想：「哦对了，你戴这个随机的东西，不是挺有意思的吗？」之类的。"
+    },
+    {
+      "at": 4235,
+      "end": 4247.52,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "It's just like I have these intrusive thoughts that I keep out, but that are all usually just bad jokes. And sometimes as you've heard today, unfortunately they come out, so I'm sorry for those, but that's probably the most surprising thing.",
+      "zh": "我脑子里有一些侵入性的念头，我一般压着不说，但通常都是些烂梗。有时候——如你今天听到的——不幸它们会冒出来，所以这些我道歉，不过那大概是最令人惊讶的部分了。"
+    },
+    {
+      "at": 4247,
+      "end": 4252.59,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "I love that. Emmanuel, thank you so much for being here. Final question, how can listeners be useful to you?",
+      "zh": "我喜欢这个。Emmanuel，非常感谢你来做客。最后一个问题：听众可以怎样帮到你？"
+    },
+    {
+      "at": 4252,
+      "end": 4274.09,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Just do some interp, read about how the models work. I mean, you mentioned Dwarkesh writeup. I think it was great as well. I think this is such a new field, both interp and AI and LLMs, and I think it just benefits from people engaging and being informed. So read things.",
+      "zh": "做点可解释性，读读这些模型是怎么运作的东西。我是说，你提到了 Dwarkesh 的那篇文章，我觉得写得也很好。这是个非常新的领域，无论是可解释性还是 AI、LLM 都是。我觉得它就是从更多人的参与和知情中受益。所以，多读。"
+    },
+    {
+      "at": 4274,
+      "end": 4285.55,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "If there's more that you would want to know about how these models work that we haven't figured out, you can reach out to me. I'm on a variety of social platforms, probably you can reach out to me on X.",
+      "zh": "如果你还想知道更多关于这些模型怎么运作、而我们还没搞清楚的事，你可以联系我。我在好几个社交平台上都有，大概你可以在 X 上找到我。"
+    },
+    {
+      "at": 4286,
+      "end": 4295.74,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "We'll link to some of the videos that you guys have put out that describe a lot of the stuff we've been talking about, like JSpace and things like that. There's some really beautiful videos your team has made. I don't know who does that, but they're really cool.",
+      "zh": "我们会放上你们团队做的几个视频的链接，里面讲了我们刚才聊的很多东西，比如 JSpace 之类的。你们团队做的有些视频非常漂亮，我不知道是谁做的，但真的很有意思。"
+    },
+    {
+      "at": 4295,
+      "end": 4300.98,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Yeah. We partner with our design team, so all credit goes to them for the cool videos.",
+      "zh": "对。我们跟设计团队合作，所以那些酷酷的视频得归功于他们。"
+    },
+    {
+      "at": 4300,
+      "end": 4305.19,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Amazing. All right. Well, thank you again, Emmanuel. Thank you so much for doing this. This was amazing.",
+      "zh": "太棒了。好，再次谢谢你，Emmanuel，非常感谢你来做这期节目，太棒了。"
+    },
+    {
+      "at": 4305,
+      "end": 4307.05,
+      "speaker": "guest",
+      "kind": "turn",
+      "text": "Thanks, Lenny. Yeah, this was super fun.",
+      "zh": "谢谢你，Lenny。对，这期超级有意思。"
+    },
+    {
+      "at": 4307,
+      "end": 4332.0,
+      "speaker": "host",
+      "kind": "turn",
+      "text": "Bye everyone. Thank you so much for listening. If you found this valuable, you can subscribe to the show on Apple Podcasts, Spotify, or your favorite podcast app. Also, please consider giving us a rating or leaving a review as that really helps other listeners find the podcast. You can find all past episodes or learn more about the show at lennyspodcast.com. See you in the next episode.",
+      "zh": "大家再见。非常感谢收听。如果你觉得这期有价值，欢迎在 Apple Podcasts、Spotify 或者你常用的播客 App 里订阅这个节目。也请考虑给我们打个分或者留一条评价，这真的能帮助更多人找到这个播客。所有往期节目、或者想了解更多节目信息，都可以去 lennyspodcast.com。我们下期再见。"
+    }
+  ]
+}
