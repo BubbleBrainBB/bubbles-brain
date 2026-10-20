@@ -17,6 +17,18 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-20',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：Anthropic 可解释性研究员，造出 AI 不等于看懂 AI',
+		summary:
+			"Lenny's Podcast 采访 Anthropic 的可解释性研究员 Emmanuel Ameisen：模型不是被造出来而是被长出来的，Claude 内部真的有「得州」和「首府」这样的概念表示，它会在中间结果里提前拟好计划，以及为什么 Anthropic 相信拟人化反而是最好用的心智模型。附一图读懂、时间花在哪、30 条带时间戳的中文要点，以及逐词对齐音频、带中文翻译的完整文字稿，站内直接收听。",
+		links: [
+			{ label: '收听这一期', href: '/podcasts/lennys-podcast-emmanuel-ameisen/' },
+			{ label: '看文字稿', href: '/podcasts/lennys-podcast-emmanuel-ameisen/transcript/' },
+		],
+	},
+	{
 		date: '2026-10-19',
 		tag: '全站',
 		type: 'polish',
