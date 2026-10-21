@@ -458,7 +458,11 @@ const specializedMarkers = new Map([
   ["podcasts/shows/latent-space/index.html", ["data-podcast-show-page", "data-podcast-play"]],
   ["podcasts/latent-space-jev/index.html", ["data-podcast-brief", "data-podcast-topics", "主持人和嘉宾在哪里不一样", "api.substack.com/feed/podcast/216783460/"]],
   ["podcasts/lennys-podcast-tibo-sottiaux/index.html", ["data-podcast-brief", "data-podcast-topics", "pscrb.fm/rss/p/api.substack.com/feed/podcast/217274136/"]],
-  ["podcasts/shows/lennys-podcast/index.html", ["data-podcast-show-page", "/podcasts/lennys-podcast-tibo-sottiaux/"]],
+  ["podcasts/lennys-podcast-cat-wu/index.html", ["data-podcast-brief", "data-podcast-topics", "pscrb.fm/rss/p/api.substack.com/feed/podcast/194236002/"]],
+  ["podcasts/lennys-podcast-cat-wu/transcript/index.html", ["Cat Wu", "Claude Code"]],
+  ["podcasts/lennys-podcast-emmanuel-ameisen/index.html", ["data-podcast-brief", "data-podcast-topics", "pscrb.fm/rss/p/api.substack.com/feed/podcast/219139599/"]],
+  ["podcasts/lennys-podcast-emmanuel-ameisen/transcript/index.html", ["Emmanuel Ameisen", "可解释性"]],
+  ["podcasts/shows/lennys-podcast/index.html", ["data-podcast-show-page", "/podcasts/lennys-podcast-tibo-sottiaux/", "/podcasts/lennys-podcast-cat-wu/", "/podcasts/lennys-podcast-emmanuel-ameisen/"]],
   ["podcasts/how-i-ai-meta-muse/index.html", ["data-podcast-outline", "data-podcast-topics", "anchor.fm/s/1035b1568/podcast/play/127074036/"]],
   ["podcasts/how-i-ai-grok-bot-designers/index.html", ["data-podcast-brief", "data-podcast-topics", "anchor.fm/s/1035b1568/podcast/play/"]],
   ["podcasts/shows/how-i-ai/index.html", ["data-podcast-show-page", "/podcasts/how-i-ai-grok-bot-designers/"]],
@@ -551,6 +555,94 @@ for (const directive of [
     csp.get(directive)?.includes("'none'"),
     `Raw HTML CSP must deny ${directive}`,
   );
+}
+
+const manifestRecord = byRoute.get("/manifest.json");
+invariant(
+  manifestRecord?.status === 200 && manifestRecord.owner === "static",
+  "Web app manifest /manifest.json is missing from the site contract",
+);
+const appManifest = JSON.parse(
+  await readFile(resolve(distRoot, "manifest.json"), "utf8"),
+);
+invariant(
+  appManifest.name === "Bubble's Brain" &&
+    appManifest.short_name &&
+    appManifest.start_url === "/?source=pwa" &&
+    appManifest.display === "standalone" &&
+    /^#[\da-f]{6}$/i.test(appManifest.theme_color ?? "") &&
+    /^#[\da-f]{6}$/i.test(appManifest.background_color ?? ""),
+  "Web app manifest lacks the fields an installable app needs",
+);
+const manifestIcons = appManifest.icons ?? [];
+for (const [sizes, purpose] of [
+  ["192x192", "any"],
+  ["512x512", "any"],
+  ["512x512", "maskable"],
+]) {
+  invariant(
+    manifestIcons.some(
+      (icon) =>
+        icon.sizes === sizes &&
+        (icon.purpose ?? "any").split(/\s+/).includes(purpose),
+    ),
+    `Web app manifest has no ${purpose} ${sizes} icon`,
+  );
+}
+for (const icon of manifestIcons) {
+  const png = await readFile(resolve(distRoot, icon.src.replace(/^\//, "")));
+  const [width, height] = icon.sizes.split("x").map(Number);
+  invariant(
+    png.readUInt32BE(16) === width && png.readUInt32BE(20) === height,
+    `Web app manifest icon is not ${icon.sizes}: ${icon.src}`,
+  );
+}
+
+// iOS draws plain white on a home-screen launch unless a launch image matches the phone.
+const launchHtml = await readFile(resolve(distRoot, "index.html"), "utf8");
+const launchImages = [
+  ...launchHtml.matchAll(/<link rel="apple-touch-startup-image" href="([^"]+)"/g),
+].map((match) => match[1]);
+invariant(launchImages.length >= 10, "Home page links too few iOS launch screens");
+for (const href of launchImages) {
+  const png = await readFile(resolve(distRoot, href.replace(/^\//, "")));
+  const [, width, height] = href.match(/launch-(\d+)x(\d+)\.png$/).map(Number);
+  invariant(
+    png.readUInt32BE(16) === width && png.readUInt32BE(20) === height,
+    `iOS launch screen is not ${width}x${height}: ${href}`,
+  );
+}
+
+const serviceWorker = await readFile(resolve(distRoot, "sw.js"), "utf8");
+invariant(
+  byRoute.get("/sw.js")?.status === 200 &&
+    /const VERSION = '[\da-f]{12}';/.test(serviceWorker),
+  "Service worker /sw.js is missing or was built without a version",
+);
+invariant(
+  byRoute.get("/offline/")?.status === 200 &&
+    serviceWorker.includes("const OFFLINE_URL = '/offline/';"),
+  "Service worker offline page /offline/ is missing",
+);
+const offlineHtml = await readFile(
+  resolve(distRoot, "offline", "index.html"),
+  "utf8",
+);
+invariant(
+  !/<script\b|<link\b[^>]*rel=["']stylesheet|\/_astro\//i.test(offlineHtml),
+  "The offline page must not depend on files that are unavailable offline",
+);
+invariant(
+  headerBlock(headers, "/sw.js").get("cache-control") === "no-cache",
+  "Service worker /sw.js must be revalidated on every visit",
+);
+const homeHtml = await readFile(resolve(distRoot, "index.html"), "utf8");
+for (const marker of [
+  '<link rel="manifest" href="/manifest.json">',
+  '<link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png">',
+  '<meta name="apple-mobile-web-app-capable" content="yes">',
+]) {
+  invariant(homeHtml.includes(marker), `Home page head lacks ${marker}`);
 }
 
 const robots = await readFile(resolve(distRoot, "robots.txt"), "utf8");

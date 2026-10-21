@@ -5,10 +5,20 @@ import { transcriptFor, transcriptHref, transcriptProblems, wordCount } from './
 
 const metaMuse = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-meta-muse')!;
 const alphafold = podcastEpisodes.find((episode) => episode.id === 'latent-space-alphafold')!;
+const ameisen = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-emmanuel-ameisen')!;
+const catWu = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-cat-wu')!;
 const tibo = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-tibo-sottiaux')!;
 const jev = podcastEpisodes.find((episode) => episode.id === 'latent-space-jev')!;
 const grokBot = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-grok-bot-designers')!;
-const withTranscripts = new Set([metaMuse.id, alphafold.id, tibo.id, jev.id, grokBot.id]);
+const withTranscripts = new Set([
+	metaMuse.id,
+	alphafold.id,
+	ameisen.id,
+	catWu.id,
+	tibo.id,
+	jev.id,
+	grokBot.id,
+]);
 
 describe('the Meta Muse transcript', () => {
 	it('is well formed against its episode', () => {
@@ -70,6 +80,96 @@ describe('the AlphaFold transcript', () => {
 		expect(turn.speaker).toBe('pushmeet');
 		expect(turn.at).toBeGreaterThanOrEqual(925);
 		expect(turn.at).toBeLessThanOrEqual(935);
+	});
+});
+
+describe('the Emmanuel Ameisen transcript', () => {
+	it('is well formed against its episode', () => {
+		const transcript = transcriptFor(ameisen);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, ameisen)).toEqual([]);
+	});
+
+	it('covers the whole episode, translated throughout', () => {
+		const transcript = transcriptFor(ameisen)!;
+		expect(transcript.source.type).toBe('show-transcript');
+		expect(transcript.turns[0].at).toBe(0);
+		expect(transcript.turns.at(-1)!.end).toBeGreaterThan(ameisen.duration - 5);
+		expect(transcript.turns.every((turn) => turn.zh)).toBe(true);
+	});
+
+	it('names the host and the guest', () => {
+		expect(new Set(transcriptFor(ameisen)!.turns.map((turn) => turn.speaker))).toEqual(
+			new Set(['host', 'guest']),
+		);
+	});
+
+	it('marks both sponsor reads', () => {
+		const ads = transcriptFor(ameisen)!.turns.filter((turn) => turn.kind === 'ad');
+		expect(ads.map((turn) => turn.text.slice(0, 20))).toEqual([
+			'This episode is brou',
+			'WorkOS turns those d',
+			"This season's suppor",
+			'You can also use it ',
+		]);
+		expect(ads.every((turn) => turn.speaker === 'host')).toBe(true);
+	});
+
+	it('puts the quoted line inside the turn that says it', () => {
+		// 00:27 on the episode page: "To make them is not to understand them."
+		const at = seconds(ameisen.quote!.at);
+		const said = transcriptFor(ameisen)!.turns.find((turn) => turn.at <= at && at < turn.end)!;
+		expect(said.speaker).toBe('guest');
+		expect(said.text.toLowerCase()).toContain(ameisen.quote!.text.toLowerCase());
+	});
+
+	it('times the cold open where the audio has it', () => {
+		const turn = transcriptFor(ameisen)!.turns.find((candidate) =>
+			candidate.text.includes('to make them is not to understand them'),
+		)!;
+		expect(turn.at).toBeLessThanOrEqual(27);
+		expect(turn.end).toBeGreaterThan(27);
+	});
+});
+
+describe('the Cat Wu transcript', () => {
+	it('is well formed against its episode', () => {
+		const transcript = transcriptFor(catWu);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, catWu)).toEqual([]);
+	});
+
+	it('covers the whole episode, translated throughout', () => {
+		const transcript = transcriptFor(catWu)!;
+		expect(transcript.source.type).toBe('show-transcript');
+		expect(transcript.turns[0].at).toBe(0);
+		expect(transcript.turns.at(-1)!.end).toBeGreaterThan(catWu.duration - 5);
+		expect(transcript.turns.every((turn) => turn.zh)).toBe(true);
+	});
+
+	it('marks both sponsor reads', () => {
+		const ads = transcriptFor(catWu)!.turns.filter((turn) => turn.kind === 'ad');
+		expect(ads.map((turn) => turn.text.slice(0, 20))).toEqual([
+			'This episode is brou',
+			'I am so excited to t',
+		]);
+		expect(ads.every((turn) => turn.speaker === 'host')).toBe(true);
+	});
+
+	it('puts the quoted line inside the turn that says it', () => {
+		// 1:10:06 on the episode page, checked against the audio.
+		const at = seconds(catWu.quote!.at);
+		const said = transcriptFor(catWu)!.turns.find((turn) => turn.at <= at && at < turn.end)!;
+		expect(said.speaker).toBe('guest');
+		// The show's file runs the sentence on with a comma; the quote ends it.
+		expect(said.text.toLowerCase()).toContain(catWu.quote!.text.toLowerCase().replace(/\.$/, ''));
+	});
+
+	it("starts the host's 09:12 line where the audio has it, not where the show's file says", () => {
+		const turn = transcriptFor(catWu)!.turns.find((candidate) =>
+			candidate.text.startsWith('I love how so much of this'),
+		)!;
+		expect(turn.at).toBe(595);
 	});
 });
 

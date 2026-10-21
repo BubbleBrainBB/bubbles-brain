@@ -1152,6 +1152,46 @@ describe("automatic code release boundary", () => {
     }
   });
 
+  it("accepts the installable app files only", () => {
+    const releasePaths = [
+      "astro/src/layouts/BaseLayout.astro",
+      "astro/src/pages/offline/index.astro",
+      "astro/src/pages/sw.js.ts",
+      "astro/src/scripts/serviceWorker.js",
+      "astro/src/scripts/serviceWorkerRegistration.ts",
+      "astro/route-ownership.json",
+      "static/_headers",
+      "static/manifest.json",
+      "static/icons/apple-touch-icon-180.png",
+      "static/icons/icon-192.png",
+      "static/icons/icon-512.png",
+      "static/icons/icon-maskable-512.png",
+      "static/icons/launch/launch-1179x2556.png",
+      "astro/src/lib/launchScreens.json",
+      "astro/scripts/generate-launch-screens.mjs",
+    ];
+    expect(
+      validateCodeReleaseChangeSet(
+        comparison(
+          releasePaths.map((filename) => ({ filename, status: "added" })),
+        ),
+        { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+      ),
+    ).toHaveLength(releasePaths.length);
+    for (const filename of [
+      "static/sw.js",
+      "static/manifest.webmanifest",
+      "static/icons/unknown.png",
+    ]) {
+      expect(() =>
+        validateCodeReleaseChangeSet(
+          comparison([{ filename, status: "added" }]),
+          { baseCodeSha, targetCodeSha, structuredCutoverDate: "2026-07-16" },
+        ),
+      ).toThrow(`Code release contains forbidden or unknown path: ${filename}`);
+    }
+  });
+
   it("accepts the eval case ledger, demos, thumbnails and vendor logos only", () => {
     const releasePaths = [
       "data/eval-cases/cases.json",

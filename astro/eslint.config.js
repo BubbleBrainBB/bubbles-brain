@@ -23,6 +23,12 @@ export default [
 		},
 	},
 	{
+		files: ['src/scripts/serviceWorker.js'],
+		languageOptions: {
+			globals: globals.serviceworker,
+		},
+	},
+	{
 		files: ['scripts/**/*.mjs', '*.config.js'],
 		languageOptions: {
 			globals: globals.node,

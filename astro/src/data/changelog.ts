@@ -17,6 +17,98 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-20',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：Anthropic 可解释性研究员，造出 AI 不等于看懂 AI',
+		summary:
+			"Lenny's Podcast 采访 Anthropic 的可解释性研究员 Emmanuel Ameisen：模型不是被造出来而是被长出来的，Claude 内部真的有「得州」和「首府」这样的概念表示，它会在中间结果里提前拟好计划，以及为什么 Anthropic 相信拟人化反而是最好用的心智模型。附一图读懂、时间花在哪、30 条带时间戳的中文要点，以及逐词对齐音频、带中文翻译的完整文字稿，站内直接收听。",
+		links: [
+			{ label: '收听这一期', href: '/podcasts/lennys-podcast-emmanuel-ameisen/' },
+			{ label: '看文字稿', href: '/podcasts/lennys-podcast-emmanuel-ameisen/transcript/' },
+		],
+	},
+	{
+		date: '2026-10-19',
+		tag: '全站',
+		type: 'polish',
+		title: '从主屏打开更快，也不再白屏',
+		summary:
+			'iPhone 上从主屏打开时，先显示带猫咪图标的启动画面，不再是一片空白。第二次起，首页直接用上次存下的那份，马上就能看到，同时在后台取最新的一份留给下次；存的超过一周就不用了，改为照常联网加载。',
+	},
+	{
+		date: '2026-10-19',
+		tag: '全站',
+		type: 'feature',
+		title: '可以把网站装到手机主屏幕了',
+		summary:
+			"现在可以像 App 一样把 Bubble's Brain 加到主屏幕，从图标打开是全屏的，没有浏览器地址栏。iPhone 用 Safari 打开网站，点底部的分享按钮，选「添加到主屏幕」；Android 和电脑上的 Chrome 会在地址栏或菜单里给出「安装」。文章总是取最新的；断网时打开会看到一页提示，联网后再试即可。",
+	},
+	{
+		date: '2026-10-19',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：Anthropic 的产品团队，怎么做到比谁都快',
+		summary:
+			"Lenny's Podcast 采访 Claude Code 和 Cowork 的产品负责人 Cat Wu：Anthropic 怎么把功能上线周期从半年压到一周甚至一天，AI 公司的产品经理要哪些新技能，以及 Claude Code、桌面版和 Cowork 各该什么时候用。附一图读懂、时间花在哪、中文要点和带中文翻译的完整文字稿，站内直接收听。",
+		links: [
+			{ label: '收听这一期', href: '/podcasts/lennys-podcast-cat-wu/' },
+			{ label: '看文字稿', href: '/podcasts/lennys-podcast-cat-wu/transcript/' },
+		],
+	},
+	{
+		date: '2026-10-16',
+		tag: '精选阅读',
+		type: 'content',
+		title: '新增精选阅读：Codex 是怎么做成的',
+		summary:
+			'收录 Dan Shipper 在 Every 的长报道。按 10 月 15 日原文逐段译成中文并润色：云端 Codex 没找到市场，团队转回开发者自己的电脑，再做成没有代码编辑器的桌面应用，最后成为 ChatGPT 桌面版的底座。文末有一小段新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-15-how-codex-happened/' }],
+	},
+	{
+		date: '2026-10-15',
+		tag: '精选阅读',
+		type: 'polish',
+		title: '三篇精选阅读改成贴近原文的译文',
+		summary:
+			'《给 Claude Opus 5.5 写提示词》按官方文档逐段译过，示例提示词整段译成中文，不再只说大意。《Claude Motion 上手指南》按帮助中心原文核对过。Lauren Tan 那场演讲没有公开文字稿，中文仍按她讲的顺序，这次只润色了读法。',
+		links: [
+			{ label: '写提示词', href: '/highlights/2026-10-13-prompting-claude-opus-5-5/' },
+			{ label: 'Claude Motion', href: '/highlights/2026-10-12-get-started-with-claude-motion/' },
+			{ label: '2,500 个 PR', href: '/highlights/2026-10-13-how-i-shipped-2500-prs-last-month/' },
+		],
+	},
+	{
+		date: '2026-10-15',
+		tag: 'Skills',
+		type: 'content',
+		title: 'Skills 新增 pstack',
+		summary:
+			'收录 Lauren Tan（poteto）的 pstack。作者让人真正调用的是两条：先配置每个角色用的模型，再用 poteto-mode 按严谨剧本干活。插件里其余技能由这个模式按需调用。',
+		links: [
+			{ label: '看 poteto-mode', href: '/vibe-coding/skills/poteto-mode/' },
+			{ label: '看配置', href: '/vibe-coding/skills/setup-pstack/' },
+		],
+	},
+	{
+		date: '2026-10-15',
+		tag: '精选阅读',
+		type: 'polish',
+		title: '《怎么更有野心》改成贴近原文的译文',
+		summary:
+			'这篇中文不再是缩写导读。按 Felix Rieseberg 的原文逐段译过并润色，人称、例子和那段提示词都留着，读起来按中文来。文末仍有一小段新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-15-how-to-be-more-ambitious/' }],
+	},
+	{
+		date: '2026-10-15',
+		tag: '精选阅读',
+		type: 'content',
+		title: '新增精选阅读：怎么更有野心',
+		summary:
+			'整理 Felix Rieseberg 的教程：用模型更有野心，不是把眼前的活做快，而是问更高一层的结果、按这个领域最好的人那样做，再从别的领域借方法。文末附新手解读。',
+		links: [{ label: '阅读', href: '/highlights/2026-10-15-how-to-be-more-ambitious/' }],
+	},
+	{
 		date: '2026-10-15',
 		tag: '播客',
 		type: 'polish',

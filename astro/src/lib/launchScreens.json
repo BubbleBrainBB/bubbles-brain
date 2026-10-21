@@ -1,0 +1,16 @@
+{
+	"$comment": "iPhone screens in CSS pixels and device pixel ratio, portrait. scripts/generate-launch-screens.mjs draws one launch image per entry; BaseLayout links them with apple-touch-startup-image.",
+	"screens": [
+		{ "width": 440, "height": 956, "ratio": 3, "devices": "iPhone 16/17 Pro Max" },
+		{ "width": 430, "height": 932, "ratio": 3, "devices": "iPhone 14/15 Pro Max, 15/16 Plus" },
+		{ "width": 428, "height": 926, "ratio": 3, "devices": "iPhone 12/13 Pro Max, 14 Plus" },
+		{ "width": 420, "height": 912, "ratio": 3, "devices": "iPhone Air" },
+		{ "width": 414, "height": 896, "ratio": 3, "devices": "iPhone XS Max, 11 Pro Max" },
+		{ "width": 414, "height": 896, "ratio": 2, "devices": "iPhone XR, 11" },
+		{ "width": 402, "height": 874, "ratio": 3, "devices": "iPhone 16/17 Pro, 17" },
+		{ "width": 393, "height": 852, "ratio": 3, "devices": "iPhone 14 Pro, 15, 15 Pro, 16" },
+		{ "width": 390, "height": 844, "ratio": 3, "devices": "iPhone 12, 13, 14, 16e" },
+		{ "width": 375, "height": 812, "ratio": 3, "devices": "iPhone X, XS, 11 Pro, 12/13 mini" },
+		{ "width": 375, "height": 667, "ratio": 2, "devices": "iPhone 6–8, SE" }
+	]
+}

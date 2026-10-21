@@ -38,6 +38,8 @@
 		"/zh-cn/sitemap.xml",
 		"/en/sitemap.xml",
 		"/robots.txt",
+		"/offline/**",
+		"/sw.js",
 		"/_astro/**"
 	],
 	"static": [
@@ -52,6 +54,8 @@
 		"/my-publish/*.mp4",
 		"/favicon.ico",
 		"/*.png",
+		"/icons/**",
+		"/manifest.json",
 		"/CNAME",
 		"/ai-tools.json",
 		"/ai-videos.json",
