@@ -17,6 +17,18 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-23',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：Sam Altman：我们要一场文艺复兴，不是工业革命',
+		summary:
+			'收录新节目 Forward Future。Matthew Berman 采访 Sam Altman：AI 正在进入发现新知识的时代，他希望两年内有重大疾病的治疗候选；写代码的人反而更忙；Dots 每天帮他省一小时；意识争论不该用来质疑人还掌不掌握未来；自研芯片是最重要的一注。附一图读懂、时间花在哪和中文要点，站内直接收听。',
+		links: [
+			{ label: '收听这一期', href: '/podcasts/forward-future-sam-altman/' },
+			{ label: 'Forward Future', href: '/podcasts/shows/forward-future/' },
+		],
+	},
+	{
 		date: '2026-10-20',
 		tag: '播客',
 		type: 'content',

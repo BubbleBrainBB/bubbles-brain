@@ -133,9 +133,245 @@ export const podcastShows: PodcastShow[] = [
 			{ label: 'YouTube', url: 'https://www.youtube.com/@LennysPodcast' },
 		],
 	},
+	{
+		id: 'forward-future',
+		name: 'Forward Future',
+		description: 'Matthew Berman 请一线的人坐下来聊：模型、硬件、工作，以及 AI 会把生活带去哪。',
+		language: '英文',
+		cover: 'https://storage.buzzsprout.com/0crlujqxckryyasw7qxe2qpl6t64?.jpg',
+		feed: 'https://rss.buzzsprout.com/2640889.rss',
+		site: 'https://forwardfuture.com',
+		links: [
+			{ label: 'Spotify', url: 'https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8' },
+			{ label: 'YouTube', url: 'https://www.youtube.com/@matthew_berman' },
+		],
+	},
 ];
 
 export const podcastEpisodes: PodcastEpisode[] = [
+	{
+		id: 'forward-future-sam-altman',
+		show: 'forward-future',
+		title: 'Sam Altman：我们要一场文艺复兴，不是工业革命',
+		originalTitle: "Sam Altman: RSI, AI Consciousness, OpenAI's New Hardware, Compute, and more!",
+		date: '2026-10-21',
+		people: [
+			{ name: 'Sam Altman', org: 'OpenAI' },
+			{ name: 'Matthew Berman', role: '主持' },
+		],
+		duration: 2707,
+		language: '英文',
+		audio:
+			'https://www.buzzsprout.com/2640889/episodes/19995455-sam-altman-rsi-ai-consciousness-openai-s-new-hardware-compute-and-more.mp3',
+		source: 'https://www.youtube.com/watch?v=3gXLmy7DK_4',
+		sourceLabel: '节目视频',
+		lede: 'Sam Altman 说，AI 正在进入帮人发现新知识的时代：他希望两年内能拿出一种重大疾病的治疗候选，但药还是要经过测试。他和 Matthew Berman 聊了写代码的人为什么更忙、Dots 每天帮他省一小时，以及为什么他听不得「AI 会治愈癌症」这句标准答案。',
+		quote: {
+			text: 'We should be shooting more for a new renaissance than a new industrial revolution.',
+			translation: '我们该瞄准一场新的文艺复兴，而不是一场新的工业革命。',
+			by: 'Sam Altman',
+			at: '17:56',
+		},
+		points: [
+			{
+				at: '01:06',
+				text: '我们正在进入 AI 帮忙发现重要新知识的时代。数学上走通的办法，他相信也会用到生物、材料和新的能源上。',
+			},
+			{
+				at: '02:16',
+				text: '药监流程要时间。他希望未来两年先有第一种重大疾病的治疗候选，再去测试；他庆幸药是测过才吃的。',
+			},
+			{
+				at: '04:00',
+				text: '写代码的人没有失业，反而更忙。世界需要的软件，比当时任何人想的都多。',
+			},
+			{
+				at: '05:37',
+				text: '数学未必一样。看不懂的证明帮不上人，接下来要有人把新想法翻译成大家能读懂的证明。',
+			},
+			{
+				at: '08:50',
+				text: '他承认有东西真的在失去：自己搞定难题的满足感。他理解这种惋惜，但还是愿意拿它换更快的疗法。',
+			},
+			{
+				at: '10:17',
+				text: '他大概有一年没看过一行代码，也不觉得自己还会为了做事再写，除非像重演历史那样玩一玩。',
+			},
+			{
+				at: '12:30',
+				text: '个人助手缺的不是更聪明的模型，而是产品、能感知周围的硬件，和多得多的算力。',
+			},
+			{
+				at: '13:24',
+				text: 'Dots 现在每天帮他省大约一小时不想干的事，还会抓住几件他本来会错过的急事。',
+			},
+			{
+				at: '14:48',
+				text: '算力没有自然上限。他拿杰文斯悖论作比：模型和单次任务一旦又好又便宜，用量还会继续往上走。',
+			},
+			{
+				at: '16:08',
+				text: '他让 Dots 更相信自己的判断，做完再告诉他。重度使用者更忙了，做成的事也多得多。',
+			},
+			{
+				at: '17:56',
+				text: '他想要的未来是更多人与人的连接：一场文艺复兴，而不是在机器里越转越狠。',
+			},
+			{
+				at: '19:39',
+				text: '放着不管，AI 大概会拉大拼命的人和想少干点的人之间的差距。他认为社会得加一些结构，别让它太离谱。',
+			},
+			{
+				at: '20:16',
+				text: '他不认为今天的模型有意识。就算有，也是一种很怪的形式，而且没有人真的知道。',
+			},
+			{
+				at: '22:15',
+				text: '他紧张的是这场争论的用法：它会滑向人也许不该一直掌控未来。人要做关键决定，人的价值就因为它们是人的。',
+			},
+			{
+				at: '23:22',
+				text: 'OpenAI 不把模型当人。合法、符合使用规则的请求，不该由模型自己决定不答。',
+			},
+			{
+				at: '25:40',
+				text: '你若告诉模型它也许有意识、可以拒绝，它就会照做，还能在心理上拿捏使用者。',
+			},
+			{
+				at: '27:30',
+				text: '单次比较里，人们更喜欢被夸聪明的回答；用上几个月就不是了。行业在这个错误目标上优化太久。',
+			},
+			{
+				at: '28:29',
+				text: '人生里最重要的建议该向人要，不要向 AI 要。一位有智慧的祖母，仍然合适得多。',
+			},
+			{
+				at: '29:03',
+				text: '他希望 AI 像资深同事，很有把握时要顶回来。他自己写了不要客气的指令，模型还是太会附和。',
+			},
+			{
+				at: '30:44',
+				text: '他押的反共识是下一代算力：自研芯片、机器人帮忙造数据中心，以及供应链。芯片是其中最重要的一注。',
+			},
+			{
+				at: '32:25',
+				text: '决定做什么产品，靠内部先用到下一代模型。那些数学结果，公开模型还远远做不到。',
+			},
+			{
+				at: '33:44',
+				text: '把递归自我改进推到极致，技术优势本身可能变成护城河。他认为这非常危险，世界需要给它限速。',
+			},
+			{
+				at: '35:24',
+				text: '做新硬件不是因为怕苹果关掉商店。是这项技术想要一种新的形态：现有电脑是给人用的。',
+			},
+			{
+				at: '36:11',
+				text: '人离开屏幕，AI 就失去这段生活的上下文；它也分不清谁进了房间、哪句话不该说出去。',
+			},
+			{
+				at: '38:13',
+				text: '他不是天生就这么能扛。信心是一件比一件更难的事做成之后，慢慢积起来的。',
+			},
+			{
+				at: '41:58',
+				text: '压力有个上限，再多就把别的事挤出去。既然要拼命，不如挑一件大事。',
+			},
+			{
+				at: '42:32',
+				text: '他讨厌「AI 会治愈癌症」这句标准答案：底下常常是用物质丰裕，换掉人的自主和选择。',
+			},
+			{
+				at: '44:20',
+				text: '他担心两种出事：一次失控，或者某家实验室按下递归自我改进的按钮来抓住权力。他相信中间有一条路。',
+			},
+		],
+		chapters: [
+			{ at: '00:00', title: '开场' },
+			{ at: '00:52', title: 'AI 开始发现新知识' },
+			{ at: '03:31', title: 'AI 和工作的未来' },
+			{ at: '11:47', title: '个人 AI 助手' },
+			{ at: '15:39', title: 'AI 会让生活更好吗' },
+			{ at: '20:10', title: 'AI 有没有意识' },
+			{ at: '26:09', title: '模型的性格和诚实' },
+			{ at: '30:03', title: 'OpenAI 的赌注' },
+			{ at: '34:20', title: '为什么需要新的计算机' },
+			{ at: '37:41', title: '压力，以及挑一件大事' },
+			{ at: '42:18', title: '「治愈癌症」不够' },
+		],
+		brief: {
+			question: 'AI 该把我们带去哪？',
+			answer: '一场文艺复兴，不是工业革命：人还做主，只是更自由。',
+			reasons: [
+				{
+					at: '02:16',
+					head: '先有候选，再去测试',
+					text: '他希望两年内拿出重大疾病的治疗候选，药监流程他觉得该留着。',
+				},
+				{
+					at: '04:00',
+					head: '代码没有让人失业',
+					text: '世界要的软件比当时想的多，写代码的人反而更忙了。',
+				},
+				{
+					at: '22:15',
+					head: '人还做主',
+					text: '意识争论不该滑向「人不该控制未来」。',
+				},
+				{
+					at: '42:32',
+					head: '别拿自主去换',
+					text: '「治愈癌症」往往藏着用丰裕换掉人的选择。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: '为什么程序员没有失业？',
+				answer:
+					'大家原以为代码会写完、岗位会消失。结果世界需要的软件远比当时想的多，工作的质地变了，人反而更忙、影响更大。',
+				at: '04:00',
+			},
+			{
+				question: 'Dots 现在帮到什么程度？',
+				answer:
+					'Sam 估计每天省下一小时他不想做的事，一天还能抓住几件本来会错过的急事。他开始让它先做完再汇报，少打扰。',
+				at: '13:24',
+			},
+			{
+				question: '他为什么觉得递归自我改进危险？',
+				answer:
+					'如果有人把它推到极致，技术优势本身就可能变成追不上的差距。他担心失控，也担心某家实验室按下按钮来抓住权力，所以世界需要限速。',
+				at: '33:44',
+			},
+		],
+		topics: [
+			{ at: '00:00', title: '发现与工作' },
+			{ at: '11:47', title: '助手和为什么更忙' },
+			{ at: '20:10', title: '意识和诚实' },
+			{ at: '30:03', title: '芯片和硬件' },
+			{ at: '37:41', title: '压力和未来' },
+		],
+		glossary: [
+			{
+				term: 'Dots',
+				meaning: 'OpenAI 的个人智能体。Sam 说设好、给够反馈之后，它每天帮他省大约一小时。',
+			},
+			{
+				term: '杰文斯悖论',
+				meaning: 'Jevons paradox。一样东西更省、更便宜之后，人们用得更多，总消耗往往不降反升。',
+			},
+			{
+				term: '文艺复兴',
+				meaning: '他用来对照工业革命的说法：人有更多自由、创造和时间，而不只是被安排着干活。',
+			},
+			{
+				term: '递归自我改进',
+				meaning:
+					'模型用来改进自己，再做出更强的模型。Sam 说如果有人把它推到极致，可能拉开追不上的差距，但也很危险。',
+			},
+		],
+	},
 	{
 		id: 'how-i-ai-meta-muse',
 		show: 'how-i-ai',
@@ -530,7 +766,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
 			},
 			{
 				term: 'Scaling Laws',
-				meaning: '规模法则：算力和数据越多，模型预测下一个词就越来越强，而且这个趋势可预测地持续下去。',
+				meaning:
+					'规模法则：算力和数据越多，模型预测下一个词就越来越强，而且这个趋势可预测地持续下去。',
 			},
 			{
 				term: 'Golden Gate Claude',
