@@ -1,0 +1,906 @@
+{
+ "episodeId": "latent-space-high-taste-testers",
+ "language": "en",
+ "source": {
+  "type": "caption-corrected",
+  "video": "https://www.youtube.com/watch?v=ZOH8Q401vt0",
+  "note": "英文取自公开自动字幕，对照另一份字幕做了人工校对。字幕没有说话人，时间大约每几十秒一块。中文由 AI 翻译。"
+ },
+ "speakers": [
+  {
+   "id": "table",
+   "name": "圆桌",
+   "role": "未区分说话人"
+  }
+ ],
+ "turns": [
+  {
+   "at": 0,
+   "end": 38,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I actually believe that like, you know, if you're building production software, if you run the models non-stop overnight, you're going to create more code than you can like reliably consume. Use all my existing labels as evals essentially. If it agrees like, you know, more than, you know, X% of the time, and then you're only after review the parts that disagree. I'm still pretty much at read only write with explicit permission. That's where I am. Okay, this is the first ever High Taste Testers. Welcome, guys.",
+   "zh": "我其实觉得，就是，你知道，如果你在做生产级软件，要是让模型通宵不停地跑，你会造出多到自己没法可靠消化的代码。基本上把我现有的标签都拿来当评测。如果它一致的比例，你知道，超过百分之 X，然后你只事后审那些不一致的部分。我现在基本上还是只读，写入要有明确许可。我就是这个状态。好，这是有史以来第一期 High Taste Testers。欢迎各位。"
+  },
+  {
+   "at": 38,
+   "end": 75,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Thank you. Thanks for having us. So, you've been gathered because you're people of high taste and you test models and products all the time and we're going to talk about just all the latest and greatest. We're recording this right after OpenAI DevDay. OpenAI is not in the room. We can be as honest and frank as you like. Many cloud users and also like all the other stuff, news, grok, whatever. Um So, we're going to basically pair food with questions. I think we can get the first course started. Butternut squash croquettes, crispy fried chicken, and for Ben, bread. bread [laughter] But like very nicely presented bread. Yeah. I got this from like some kind of Trader Trader Joe's baguette type",
+   "zh": "谢谢。谢谢邀请我们。所以把你们聚过来，是因为你们是品味很高的人，你们一直在测模型、测产品，我们要聊的就是所有最新最厉害的东西。我们是 OpenAI DevDay 一结束就录的。OpenAI 不在这个房间。你们想多诚实、多直白都可以。很多云用户，还有其他那些，新闻、Grok，随便什么。嗯所以，我们基本上是用食物配问题。我觉得可以上第一道了。南瓜可乐饼，脆皮炸鸡，然后 Ben 的是面包。面包（笑）不过摆得很好看的面包。对。我这是从某种 Trader Joe's 法棍那种拿来的"
+  },
+  {
+   "at": 75,
+   "end": 112,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "bread. Yeah. Yeah. Yeah. DevDay, we just released. We we just came out of it. What are people's impressions overall? Well, I mean, it's not really about the event. It's more about the releases. Yeah. There's dots, there's 6.1 soul, there's ultrafast, there's like the notion competitor, which is like something that we're excited about. to use that actually. I like it's weird. It's Spaces you mean? Yeah, spaces. This is Peter's thing, right? Yeah. Uh, I don't know. I don't actually know. So, I posted I posted our like company vision video some like open slop, which we can talk about later. But Peter replied late last night. He's like, \"Oh my god, dude, we built the same thing.\"",
+   "zh": "面包。对。对。对。DevDay，刚发布完。我们我们刚从里面出来。大家整体印象怎么样？嗯，我是说，其实不太关这场活动。更多是那些发布。对。有 Dots，有 6.1 soul，有 ultrafast，还有那个像 Notion 竞品的东西，就是我们挺兴奋的。其实挺想用。就是有点怪。你是说 Spaces？对，Spaces。这是 Peter 的东西，对吧？对。呃，我不知道。我其实不知道。所以我发了，我发了我们公司的愿景视频，有点那种公开的烂活，这个后面可以聊。但 Peter 昨晚很晚回了。他说：「我的天，兄弟，我们做了同一个东西。」"
+  },
+  {
+   "at": 112,
+   "end": 144,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "And I was like, \"Interesting. Okay, I didn't even realize he was behind that.\" But yeah, it's like, I guess it's like open like assistant shaped thing of like, \"Hey, how do you collaborate on what all everybody's OpenClaw is doing?\" Yeah, it seems like it's shared whiteboard type thing. You can write the markdown, do drawings, or whatever. I mean, it's pretty good, but it's like deeply hidden within the UI, and it has the same problem. Yeah, it's like it's the thing that they do for everything where like you can ask Codex to visualize in the chat, but no one knows that's a thing. I mean, even dots is pretty hidden. Yeah, dots is very hidden. Yeah, it's weird.",
+   "zh": "我就说：「有意思。好吧，我甚至没意识到是他在背后。」不过对，就是，我猜它像一个开放的、助理形状的东西，就是「嘿，你们怎么协作，看看大家的 OpenClaw 都在干什么？」对，看起来像共享白板那种。你可以写 Markdown，画图，或者随便什么。我是说，它挺好，但它深深藏在界面里，而且有同样的问题。对，他们做什么都这样，比如你可以让 Codex 在聊天里做可视化，但没人知道有这回事。我是说，连 Dots 都挺藏的。对，Dots 非常藏。对，很怪。"
+  },
+  {
+   "at": 144,
+   "end": 183,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I I thought that it was going to be a standalone app, actually. I Yeah, I was shocked that it wasn't. My first feedback to them to Tibor was, \"It needs to be standalone.\" I have multiple things running with Astra, with Codex, with goals, stuff, notifications. I want a separate assistant. They can look over there, but send me notifications separately. My theory is that if you want a standalone app, it's a standalone device. So, that's that's where it's coming from. I don't think it's that long term, man. Well, long term in AI time. They said end of year. Yeah, 3 to 6 months is basically long term at this point. Speaking of DevDay, Johnny Ive was not in this one. I haven't seen him. Last Last DevDay, he was there on on stage with Sam. Aluminum. And he promised something's coming.",
+   "zh": "我我其实以为它会是一个独立的应用。我，对，我很震惊它不是。我给他们、给 Tibor 的第一条反馈是：「它得独立出来。」我同时跑着好几样，Astra、Codex、目标、各种东西、通知。我想要一个单独的助理。它们可以在那边看，但通知分开推给我。我的理论是，你要是想要独立应用，那就是一台独立设备。所以，所以它是从这儿来的。我不觉得那有那么长期，兄弟。嗯，按 AI 的时间算长期。他们说年底。对，现在三到六个月基本上就是长期了。说到 DevDay，Johnny Ive 这次没来。我没看见他。上次上次 DevDay，他和 Sam 一起在台上。铝。而且他答应过有东西要来。"
+  },
+  {
+   "at": 183,
+   "end": 222,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Where is it, Johnny? Where's Where's my Where's my physical device? [laughter] Is Is Zuck going to beat OpenAI to a physical device this Christmas? It's going to be very interesting. Yeah, you heard it, you know. Yeah. They have a physical device, right? It's on my face, music is coming here. I wonder where dots is coming that's not just on my phone, like we said, inside hidden inside the ChatGPT app. I mean, if you count the glasses, they are already there. I'm guessing OpenAI is probably going to do the like home assistant thing, like the the Google the Amazon whatever that was called, the Echo, I think it was. So, this is very interesting. And for like probably like at least 2 and 1/2 years, I've been like, \"Why has no one done this? It's very easy.\" My friends and I actually Like smart Echo.",
+   "zh": "在哪儿呢，Johnny？我的我的我的实体设备在哪儿？（笑）Zuck 今年圣诞节会不会抢在 OpenAI 前面做出实体设备？这会非常有意思。对，你听到了，你知道。对。他们有实体设备，对吧？就在我脸上，音乐从这儿出来。我想知道 Dots 会从哪儿来，而不只是在我手机上，就像我们说的，藏在 ChatGPT 应用里面。我是说，如果把眼镜算上，他们已经到了。我猜 OpenAI 大概会做家庭助理那种，就像 Google 那个、Amazon 那个，叫什么来着，我觉得是 Echo。所以这非常有意思。而且大概至少两年半了，我一直在想：「为什么没人做这个？这很简单。」我和我朋友其实。像智能 Echo。"
+  },
+  {
+   "at": 222,
+   "end": 252,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah, yeah, like a like Google Assistant or Alexa, but like Like with the real model. intelligence from the last like 5 years or something. Like a proper AI assistant harness type of thing. Yeah. And so, like my my friends and I built one over a single weekend like a week or two ago using like GPT live. Like, it it works. Like, you know, there's not like I don't know why they don't just put it into a home. Like, I would buy it. Yeah, I mean, Google did it with Gemini, but Gemini is just still still still trying to catch up, right? Yeah. Still Gemini?",
+   "zh": "对对，像 Google Assistant 或者 Alexa，但是，但是接上真正的模型。最近大概五年的那种智能。像一套正经的 AI 助理框架。对。所以我和我朋友大概一两周前，一个周末就做了一个，用的像 GPT live。它它能用。就是，你知道，我不知道他们为什么不直接放进家里。我会买的。对，我是说，Google 用 Gemini 做过，但 Gemini 还是还是还是在追，对吧？对。还是 Gemini？"
+  },
+  {
+   "at": 252,
+   "end": 288,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah. And like, I I think the difference is like there's like the old way and there's the new like it has like computer used tools like MCP CLI that all like that entire harness and no one has really done that. Although, I haven't used Google Voice for a I mean, this was my challenge with dot, too, is it I was like I have I have a workflow that we used to run the company and it's a Git repo full of markdown files and like scripts that my agent is running. Sort of like OpenClaw shaped before OpenClaw was an option. And I told I told my claw running in that repo to go configure my use computer use to go configure my dot overnight. I want to wake up with a dot that can do all the stuff in this repo.",
+   "zh": "对。而且我我觉得差别在于，有老办法，也有新的，就是它有电脑操作这类工具，像 MCP CLI，那一整套框架，还没人真正做过。虽然我 Google Voice 还没用过。我是说，这也是我对 dot 的挑战，就是我有一套我们用来跑公司的工作流，一个 Git 仓库，里面全是 Markdown 文件，还有我的 agent 在跑的脚本。有点像 OpenClaw 还没成为选项之前的 OpenClaw 形状。然后我让，我让那个在仓库里跑的 claw 去配置，用 computer use 去通宵配置我的 dot。我想醒来的时候，有一个能做这个仓库里所有事的 dot。"
+  },
+  {
+   "at": 288,
+   "end": 328,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I was like, all the off stuff is really wonky. Like, if if like I don't know, we have a script that pulls like data from Mercury from our bank account to like write weekly updates on things like this and like there's no Mercury plugin in ChatGPT. So, unless I like leave my Codex desktop app open and running so that my dot can talk to it, it can't actually do any of the off or use any of the scripts that I've like accumulated over the year. Yeah. One of the most unsolved things to me about the whole story is like the where is stuff working thing is still completely unsolved. Like, I still don't really get how to use the If I talk about like, you know, they had this sort of like you know, you know, mission accomplished. Like, you can close your laptops now.",
+   "zh": "我当时觉得，所有那些 off 的东西都特别别扭。比如，我不知道，我们有个脚本会从 Mercury、从我们的银行账户拉数据，来写这种每周更新，而 ChatGPT 里没有 Mercury 插件。所以除非我把 Codex 桌面应用开着一直跑，让我的 dot 能跟它说话，否则它其实做不了任何那些 off 的事，也用不了我这一年攒下来的那些脚本。对。整件事里我觉得最没被解决的，就是东西到底在哪儿工作，这还完全没解决。我还是不太懂该怎么用。要说起来，你知道，他们有那么点，你知道，任务完成了的意思。就是，你们现在可以合上笔记本了。"
+  },
+  {
+   "at": 328,
+   "end": 362,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah. My laptop still closed because I don't Codex in the cloud. Yeah, yeah, but like I don't I kind of like saw the cloud button. I tried looking at it. I didn't really get how to set it up. Like, it wanted me to all these things and then now my laptop is still open when I [clears throat] and then when I close it, it stops working. So, like You texted me on the way here. You're like, \"Should I bring my laptop?\" I was like, \"I don't know. I think we're just hanging out.\" You're like, \"Cool. I'm going to leave it open at at the office so that my agents can keep up.\" So, it's like not mission accomplished. Like, whatever they did was not [laughter] They didn't do it. So, I don't know. I think it's a hard engineering problem to solve across every remote execution. And especially for like UX and being able to do that well for for people is pretty challenging.",
+   "zh": "对。我的笔记本还是合着的，因为我不在云上用 Codex。对对，但是我好像看到了云按钮。我试着看了看。我没太搞懂怎么设置。它要我做这一堆事，然后现在我的笔记本还开着，我一合上，它就不工作了。所以你来的路上给我发了消息。你说：「我要带笔记本吗？」我说：「不知道。我觉得我们就是聚聚。」你说：「行。我把它开在办公室，这样我的 agent 还能接着跑。」所以这不算任务完成。他们做的那些并没有（笑）他们没做到。所以我不知道。我觉得这是个很难的工程问题，每一种远程执行都得解决。尤其是用户体验，要为大家把这件事做好，挺难的。"
+  },
+  {
+   "at": 362,
+   "end": 398,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Oh, this actually it lets me bring up like something that is super recent. This happened yesterday. Pi durable. I don't know if you guys saw. Oh, yeah. Um so, basically uh a lot of coding agents by default like keep everything in memory and all that state. Um and you have to sort of do a rewrite to externalize all that state so that you can transfer easily from local to cloud and cloud to local. Uh and Pi has done that. And somehow Claude and Codex are like taking a year to do it. [laughter] I mean, Mario did say he's been working on Pi durable is like rewritten it seven times in the last year before launching it.",
+   "zh": "哦，这正好让我提起一件特别近的事。昨天发生的。Pi durable。不知道你们看到没有。哦，对。嗯所以，基本上，很多编程 agent 默认把所有东西和状态都留在内存里。嗯你得重写一遍，把那些状态都外置出去，这样才能轻松地从本地转到云上，再从云上转回本地。呃 Pi 已经做了。不知怎么 Claude 和 Codex 好像要花一年才做。（笑）我是说，Mario 确实说过，他在做 Pi durable，发布之前过去一年重写了七次。"
+  },
+  {
+   "at": 398,
+   "end": 430,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah, but the basic thing is like everything should be in a log. There's a file. And then you append to the file. And then you pick up where you left off. And like technically that's the internal representation for like Claude Code and and Codex. They have this big JSONL file for the There's so what's so hard about sending things to the cloud? But it's not a It's like they haven't committed to the API. It's like we can't We actually built our own coding harness that has this property where it's a like append-only log because we didn't want to build against an API that the OpenAI team or the Claude Code team will not actually like guarantee that this will not change in the future. So, there's no like agents nothing the standard for that they're saying. It's everybody's like making their own.",
+   "zh": "对，但基本的事情是，所有东西都该在一份日志里。有一个文件。然后你往文件里追加。然后你从离开的地方接上。技术上这就是 Claude Code 和 Codex 的内部表示。它们有一个很大的 JSONL 文件。那把东西送到云上到底难在哪？但这不是。就是他们还没把这个 API 定下来承诺出去。就是我们不能。我们其实自己做了一个编程框架，它有这个性质，就是一份只追加的日志，因为我们不想依赖一个 API，而 OpenAI 团队或者 Claude Code 团队并不会真的保证这个以后不变。所以没有什么 agent 的标准，他们也没说有这个标准。就是每个人都在做自己的。"
+  },
+  {
+   "at": 430,
+   "end": 490,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "There's a guy Justin Shoulder. I featured him in AI. He He's trying to do a standard agent. Um but I think one of the labs picks it up or something there. Well, there's like a couple trace standards for like the people like working in Harbor and stuff like this, but it's more for like research and benchmarking a way of like packaging up Okay, what is everything the agent did, right? I want to go back to what they mentioned before the you know, Pi releases something and then the big labs are catching up. It seems to in the frontier intelligence, that's kind of the other way around. The frontier labs intelligence is the fastest one and then open open source is catching up. In the personal assistant space, you know, Peter Steinberger came up like with the thing that blew up and then Hermes agent and it takes meta and OpenAI and quite a while to like release a product that's mature around us. There's a lot of stuff that tinkerers are okay with, break edges and different memory systems that they set up, etc. That I think these guys need to bake into something that just works for people. And I got to I haven't used dots for a long time, but I wonder if if it works for you guys. If you feel like the memory is there, uh that like it supports well. Cuz I have I think",
+   "zh": "有个叫 Justin Shoulder 的人。我在 AI 里介绍过他。他他想做一套标准 agent。嗯但我觉得得有一家实验室把它接过去之类的。嗯，也有那么几套 trace 标准，给在 Harbor 这类地方干活的人，但那更多是做研究、跑基准，一种把东西打包起来的办法。好，agent 做过的每一件事是什么，对吧？我想回到他们之前说的，你知道，Pi 放出一个东西，然后大实验室在追。在前沿智能这边，似乎是反过来的。前沿实验室的智能是最快的，然后开源在追。在个人助理这个领域，你知道，Peter Steinberger 弄出了那个爆掉的东西，然后是 Hermes agent，Meta 和 OpenAI 要花不少时间，才放出一个在我们这边算成熟的产品。有很多折腾的人可以接受的东西，break edges，还有他们自己搭的不同记忆系统，等等。我觉得这些人得把这些做进一个普通人拿来就能用的东西里。我还得说，我很久没用 Dots 了，但我想知道对你们有没有用。你们觉得记忆在不在，呃，支不支持得好。因为我有，我觉得"
+  },
+  {
+   "at": 490,
+   "end": 522,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "the whole promise is it grows with you. The the more you use it, the more memory is there, the more it knows kind of the stuff about you. I think the labs just really suffer on product. They're it's been a problem for a long time where they'll get something pretty right. Like the Codex desktop app was so right when they dropped that and it has become less and less right every time. Like I most of the updates for DevDay, in my opinion, were regressions. Like adding the secondary extra sidebar on there feels bad. The performance got worse. It's It's It's a mess.",
+   "zh": "整个承诺是它会跟着你长。你用得越多，记忆就越多，它就越懂你的那些事。我觉得实验室在产品上真的很吃亏。这是个老问题了，他们会把某个东西做得挺对。比如 Codex 桌面应用刚放出来的时候特别对，然后一次比一次更不对。我觉得 DevDay 的更新，在我看来大部分是退步。比如在那儿再加一条额外的侧边栏，感觉很糟。性能变差了。它它它就是一团乱。"
+  },
+  {
+   "at": 522,
+   "end": 563,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "It's just like there's too many of these icons. We're going to Yeah, there's just so much crap over there now. And the performance is getting worse in my opinion. I it keeps freezing. I think when the internet is not if it's not connected to the internet, the whole like input field freezes. It's like something It's really annoying cuz I like clicking clicking clicking and then like oh my my internet's off. That's why I need a standalone app for my assistant. Yeah. Uh this is my Yeah. No, that's why you use iMessage wrong. Did anyone use the original dot, by the way? I'm just curious. Do you guys remember The one released by the third party? No, no, no. Like like like like 3 years ago. There was a company called the Dot by New Computer. It was like one of the first Remember? Yeah, like Lauren and Jason.",
+   "zh": "就是这些图标太多了。我们会。对，那边现在垃圾太多了。而且性能我觉得越来越差。我，它老是卡死。我觉得要是没连上网络，整个输入框就冻住。就像有什么东西。真的很烦，因为我一直点一直点一直点，然后才发现哦我我断网了。所以我才需要一个助理用的独立应用。对。呃这是我的。对。不，所以你才把 iMessage 用错了。顺便问，有人用过最初那个 dot 吗？我就是好奇。你们记得吗，第三方出的那个？不，不，不。就是大概三年前。有家公司叫 Dot，是 New Computer 做的。那是最早的一批。记得吗？对，就是 Lauren 和 Jason。"
+  },
+  {
+   "at": 563,
+   "end": 597,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "It was like really good, actually. Like it's a pretty good assistant. Like it didn't have all the like, you know, you can send email. Like that didn't exist then. Like the form factor was good, actually. Like there's just like a lot of things right. A A of stuff is getting packed in the ChatGPT app and I get why they want it cuz they have a really good distribution through the ChatGPT app and like etc. etc. But like but it's also I forget about it. That's why they have to hide all the cool stuff is because like if we break it for the 8 million users that are like No. not super AI pill, like we have to hide all the things the power trust the power users to find them. I I found I found the maps feature which I [laughter] Oh yeah, the maps. Yeah.",
+   "zh": "它其实真的很好。是个挺好的助理。它没有那些，你知道，你可以发邮件。那时候还没有。形态其实是好的。有很多地方是对的。一堆东西正在被塞进 ChatGPT 应用里，我明白他们为什么想这样，因为 ChatGPT 应用的分发特别好，等等等等。但是我也会忘了它。所以他们才得把所有酷的东西藏起来，因为如果我们弄坏了那八百万用户的体验，那些人就是，不，不是超级 AI 迷，我们就得把东西都藏起来，让高级用户自己去找。我我找到了，我找到了地图功能，我（笑）哦对，地图。对。"
+  },
+  {
+   "at": 597,
+   "end": 657,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "What maps feature? ChatGPT has maps in there. It has a Google Maps clone. Mhm. In ChatGPT. It's like hidden in like the three dots on the second side bar. Like you [laughter] ask it dog, yes. That is a real sentence. And I posted about it and they were like, yeah, it's been there for a while. What do you mean? And I'm like, what are you talking about? It's been there for a while. I ironically I feel like a lot of this is a symptom of using AI to write code and like build product. Yeah. Kind of funny. Like it feels like the so much like for the code except for example, so much stuff just randomly changes all the time which is very like frustrating from a developer's standpoint. Like I remember like I was trying to figure out how do I like after they did the ChatGPT codex like merger it was also feels like a AI fever like psychosis fever dream of like you know like You think they should not have merged? I I well, I can imagine a way to do it correctly potentially, but certainly like a drop down that changes seemingly nothing about the entire app except like the model selector and different modes. Yeah. I was like I I I will often accidentally be in ChatGPT",
+   "zh": "什么地图功能？ChatGPT 里面有地图。它有一个 Google Maps 的克隆。嗯。在 ChatGPT 里。藏在第二条侧边栏的三个点里。你（笑）问它 dog，对。这是一句真的话。我发出来，他们说，对，已经在那儿有一阵了。什么意思？我说，你们在说什么？已经在那儿有一阵了。讽刺的是，我觉得这很多是用 AI 写代码、做产品的症状。对。挺好笑的。感觉就是代码那边，举个例子，好多东西一直在随便变，从开发者的角度非常烦。我记得我在想该怎么弄，他们把 ChatGPT 和 Codex 那样合并之后，那也感觉像一场 AI 发烧，那种精神错乱的高烧梦，你知道。你觉得他们不该合并？我我，嗯，我能想象也许有一种做对的方式，但肯定不是一个下拉，看起来对整个应用几乎什么都没改，除了模型选择器和不同的模式。对。我就，我我我经常不小心停在 ChatGPT 里"
+  },
+  {
+   "at": 657,
+   "end": 699,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "and like anyway, they just like it was it was like especially the initial version was like quite bad. And um but then you couldn't see your ChatGPT threads on the side. Anyway, I'm nervous to talk. For for the record, they they know it's not done and they're They they have a vision they want to work But I guess what I'm trying to say is that I mean it both in the positives and the negatives. Like also the codex app is like really good and it like it like I think it would have been very hard to build pre-AI like with like all the browsers using it and obviously and not even just the AI that powers it but like the app is very complicated. But also it's just like yeah, things randomly change all the time, things randomly break all the time. There's like a lot of like you like it's almost like AI written text like you squint and you're like wait what like uh It feels so directional. Yeah, yeah.",
+   "zh": "然后反正，他们就是，尤其第一版挺差的。嗯然后你在侧边看不到自己的 ChatGPT 对话。反正，我有点紧张不敢说。说明一下，他们他们知道还没做完，而且他们他们有愿景，他们想要做。但我想说的是，好的一面和坏的一面我都是这个意思。Codex 这个应用也真的很好，我觉得 AI 之前很难做出来，像所有浏览器都在用它，而且显然不只是驱动它的那个 AI，这个应用本身就非常复杂。但同时就是，对，东西一直在随便变，东西一直在随便坏。有很多，你，几乎像 AI 写的文字，你眯着眼看，就会觉得等等，什么，呃。感觉特别有方向。对，对。"
+  },
+  {
+   "at": 699,
+   "end": 756,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Like I've kind of been thinking a lot about this lately where there's these middle ground products that are trying to be something for everybody and then end up being for nobody where like I really like Grok Bot. I think Grok Bot's in a great state but it is much more like a professional personal assistant type thing. It feels dialed in for that but then there's Muse which is so good for the end consumer and works super well there. But now you have like Codex getting watered down and ChatGPT getting made more complicated and no one's happy. No, I mean this is literally like they I remember one of the things I got really frustrated with Codex about is like they renamed the used to be called Fork Chat. They renamed it to like either Copy Chat or some or just a copy or something. It was like and I was like why? And they're like well like non-developers wouldn't understand the word fork and I was like oh but like this is I'm a developer like I think also I worry about that with dots too, right? Which is like they're like Yeah, oh it's for enterprise and it's for consumer. And I'm like oh man those are different products. Like you know those are very very different products.",
+   "zh": "我最近一直在想这个，有些中间产品，想为每个人做一点什么，结果变成谁的都不是。比如我真的很喜欢 Grok Bot。我觉得 Grok Bot 状态很好，但它更像专业个人助理那种。感觉为这个调得很准。然后 Muse 对终端消费者特别好，在那儿超级好用。但现在 Codex 被稀释了，ChatGPT 被做得更复杂，谁都不高兴。不，我是说这简直就是，我记得有件事让我对 Codex 特别火大，他们把以前叫 Fork Chat 的改了名。改成要么是 Copy Chat，要么就是个复制什么的。我说为什么？他们说，嗯，非开发者不懂 fork 这个词。我说哦，可我是开发者。我觉得我也会这么担心 Dots，对吧？就是他们说。对，哦它是给企业的，也是给消费者的。我说哦天，那是不同的产品。你知道，那是非常非常不同的产品。"
+  },
+  {
+   "at": 756,
+   "end": 807,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Oh, there's like enterprise dots, right? That's what this is what I'm saying. It was part of the same announcement. Yeah. They showed off how a person that's an employee of OpenAI and their dots showing up in the same Slack thread and some people send their dots to kind of check in on other Slacks and and kind of tell them about this. It's a very thing And that's not a that's not released to us yet, right? No, no, no, but but there's a very interesting vision of the future where we're all going we're all all going to be super powered by multiple AI assistants kind of in our name. And whether or not if Ben sends me a Slack message, um would he expect me to show up in that Slack message and answer or my bot for example? I don't I don't know the answer to that. But also like would you bring your dot would you put would you add your dot to our shared Slack when it has access to like your say like personal email or your iMessages or like whatever? Really? Really? Prompt injection is largely solved.",
+   "zh": "哦，有企业版 Dots，对吧？我就是在说这个。它是同一次发布的一部分。对。他们展示了一个 OpenAI 的员工，他们的 Dots 出现在同一个 Slack 串里，有些人把自己的 Dots 派去别的 Slack 里看一看，然后告诉他们这件事。这是个很……的事。而且那个还没放给我们，对吧？不，不，不，但但有一个很有意思的未来，我们都会，我们都会被好几个以我们名义行动的 AI 助理超级加强。那么如果 Ben 给我发一条 Slack 消息，嗯，他会期望我本人出现在那条消息里回答，还是比如说我的 bot？我我不知道答案。但还有，你会带上你的 dot 吗，你会把你的 dot 加到我们共享的 Slack 里吗，当它能访问比如说你的个人邮箱，或者你的 iMessage，或者随便什么？真的？真的？提示注入基本上解决了。"
+  },
+  {
+   "at": 807,
+   "end": 845,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "No. Absolutely not. What the All right. Sufficiently sophisticated. I can point to a mutual friend of ours, Matthew Berman, who brought Pliny. Remember that episode? He brought Pliny, the the guy who jailbreaks all the all the liberator, yeah. Pliny liberator, and he gave him five attempts to break into the new service agent that he had, although he had some stuff, and Pliny wasn't able to. Well, Well, there's only five attempts, yeah. I I think there's like prompt injection maliciously, and then there's just like accidental This stuff stuff you're not supposed to see. If you look at like instances, like like Oh, yeah, Muse had an instance like this. Someone showed up at somebody's like front door when he wanted to sell something on the Facebook Marketplace.",
+   "zh": "不。绝对不。什么。好吧。足够精巧的那种。我可以指我们共同的朋友 Matthew Berman，他带来了 Pliny。记得那期吗？他带来了 Pliny，那个把所有东西都越狱的人，对。Pliny liberator，他给了五次机会去攻进他那个新的服务 agent，虽然他有一些东西，Pliny 没能做到。嗯，嗯，只有五次，对。我我觉得有恶意的提示注入，也有纯粹是意外。这些你不该看到的东西。你要是去看那些例子，比如比如。哦对，Muse 就有过这样一次。有人想在 Facebook Marketplace 上卖东西，结果有人出现在别人家门口。"
+  },
+  {
+   "at": 845,
+   "end": 876,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "The Muse just like told that person, \"Hey, you you should show up at Yeah, that's the kind of stuff I'm talking about. Yeah, like oh, accidentally tells your boss you're looking for a new job, or like accidentally like there's just so many things. Oh, there's a Like Ben can't make make this meeting like he's like He's He's busy interviewing someone else. Interviewing someone for your job, or like you don't know. [laughter] Not doing that, but you know, it's just like scary, yeah. Yeah. Yeah, so uh okay, like any positives? [laughter] So, I I think Okay, so I think the pattern of like always-on persistent thing that messages other things and kicks off stuff,",
+   "zh": "Muse 就跟那个人说：「嘿，你你应该出现在」。对，我说的就是这种事。对，比如哦，不小心告诉你老板你在找新工作，或者不小心，这种事太多了。哦，还有个。比如 Ben 来不了这个会，因为他，他他正忙着面试别人。在面试一个来做你这份工作的人，或者你也不知道。（笑）不是在做那个，但你知道，就是挺吓人的，对。对。对，所以呃好，有什么正面的吗？（笑）所以我我觉得。好，所以我觉得那种一直开着、一直在的东西，会给别的东西发消息，还会把事情启动起来，"
+  },
+  {
+   "at": 876,
+   "end": 911,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "it is the right idea. It's the right idea. assistants. I I'm I'm going on a crusade, and I would love to to bring all of you with me that we used to say 2025 is the year of the AI agents, and then we kind of switched in 2026 to the proactive agents, but I think like the renaming to assistants I think needs to take place. Specifically because there's a difference between something that can you call with the AI agent and something that does proactive stuff for you. Reads your emails and makes a decision on which ones are important to highlight to kind of reduce your load and not bring more of it. That schedules stuff for you with like haircut and appointments, etc.",
+   "zh": "这是对的想法。这是对的想法。助理。我我我在搞一场运动，我很想把你们都拉上，我们以前说 2025 是 AI agent 之年，然后 2026 又有点改成主动式 agent，但我觉得改名叫助理这件事得发生。具体是因为，一种是你称作 AI agent 的东西，一种是主动替你做事的东西，这两者不一样。它读你的邮件，决定哪些重要、要标出来，好减轻你的负担，而不是再加给你。它替你安排事情，比如理发、预约，等等。"
+  },
+  {
+   "at": 911,
+   "end": 946,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I think that that's the new pattern that most people that's not developers, I know, scary thought, outside of our bubble, that's what they need. Agents for them like is a scary word, assistant is an easy one. Why? Because they know that all the rich people have a personal assistant schedule stuff for them. And I think that this is what Muse is doing well. They're bringing us to the next take it back to what So, swyx was asking positive things about Schedulers. I'm going to take it back to that for a second. Dot is or Dots? I'm actually not sure which one. You you have a Dot but The service is Dots, right? It's the first agent or assistant that I have connected my personal email to. You did?",
+   "zh": "我觉得这就是大多数人要的新模式，那些不是开发者的人，我知道，这个想法挺吓人，在我们圈子外面，那才是他们需要的。对他们来说 agent 是个吓人的词，助理是个好懂的词。为什么？因为他们知道有钱人都有私人助理帮他们安排事情。我觉得这就是 Muse 做得好的地方。他们在把我们带到下一个。拉回到哪儿。所以，swyx 在问日程安排有什么正面的。我先把话拉回那儿一下。是 Dot 还是 Dots？我其实不确定哪个。你你有一个 Dot，但服务叫 Dots，对吧？这是我接上个人邮箱的第一个 agent 或助理。你接了？"
+  },
+  {
+   "at": 946,
+   "end": 980,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yes. You did connect your products and Yeah. I didn't trust any of this. I didn't trust any of this stuff. I I used a poke. I'm very, very paranoid about this sort of stuff and so I had to connected my calendar Ooh. to poke and that was like 80/20 for me. Like it could it could like set, you know, you know, it could change my calendars, you know, send calendar invites out, etc., etc. But I didn't go the like all all the email. There's really three companies in the world for me that I I would trust in like in the order of like Apple, Google, OpenAI and like there's not a fourth for me. For what?",
+   "zh": "接了。你真把你的产品接上了，对。这些我一个都不信。这些东西我一个都不信。我我用过 Poke。我对这种事非常非常多疑，所以我才把日历，哦，接到 Poke，那对我来说大概是八二分。它它可以设定，你知道，它可以改我的日历，你知道，发出日历邀请，等等等等。但我没有走到把邮件全部接上。对我来说这世界上真正我会信任的公司有三家，顺序大概是 Apple、Google、OpenAI，而且没有第四家。为了什么？"
+  },
+  {
+   "at": 980,
+   "end": 1011,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Like It was my first time connecting email as well. I was actually talking with another founder and he's like, \"Look, OpenAI already has all of my tightest, most intimate, inner thoughts and things like this.\" have my data retention configured, etc. like yeah, you know, so. Amazon, Facebook. I'm not going to mention that. No. No, Amazon Amazon, Facebook are not getting personal email. Yeah, I know. All right. I would not use is a good temperature check. Yeah. I used For me, I will say I didn't I also didn't connect poke until Cognition bought them and obviously cuz I know I [laughter] I know I know I just Like I know they take it seriously.",
+   "zh": "就是，那也是我第一次接邮箱。我当时其实在跟另一个创始人聊，他说：「你看，OpenAI 已经有了我所有最贴身、最私密的内心想法这类东西。」数据保留我也设好了，等等，对，你知道，所以。Amazon、Facebook。那个我不提。不。不，Amazon、Amazon、Facebook 拿不到个人邮箱。对，我知道。好。「我不会用」是个很好的温度检验。对。我用过。对我来说我要说，我也是 Cognition 收购了他们之后才接的 Poke，显然因为我知道，我（笑）我知道我知道我就是。我知道他们是认真的。"
+  },
+  {
+   "at": 1011,
+   "end": 1046,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Of course, of course, of course. Now it makes It makes sense. Do you guys not think that matters taking it seriously? Given the residual So, Yeah. I I I I was in the middle of the the Muse preview and they were like, \"Hey, can you connect connect up your email?\" And I said, \"No.\" They were like, \"Why don't you trust us?\" [laughter] I think Do you know where you work? Yeah. No, no, no, that I do I do trust them. It's actually more just like Like based on all the data we see about you. Yeah, I predict I will never type my my email password into anything else other than of course email. And they will ask you for an email password and I'm like absolutely not.",
+   "zh": "当然，当然，当然。现在说得通了。说得通了。你们不觉得认真对待这件事很重要吗？考虑到剩下的那些。所以，对。我我我我当时正在 Muse 的预览里，他们说：「嘿，你能不能把邮箱接上？」我说：「不。」他们说：「你为什么不信任我们？」（笑）我觉得。你知道你在哪儿工作吗？对。不，不，不，那个我是信任他们的。其实更多只是像。就像根据我们看到的所有关于你的数据。对，我预计我永远不会把我的邮箱密码输进别的任何东西，当然除了邮箱。而他们会跟你要邮箱密码，我说绝对不。"
+  },
+  {
+   "at": 1046,
+   "end": 1098,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "They didn't have an OAuth connector? No, not at the time. Okay. I see. Yeah, I think they need it too bad if that makes any sense. Like I think OpenAI has a lot of data. I think that they are less likely to do crazy with my data. That's like just what I feel. I feel like Meta if it was if it meant like some little like a little bit more likely that they were going to win whatever, they would just do it and and and pay the repercussions later. I don't think that last point sorry about that. Can I ask a question? Why do we need the assistance instead of making a we're all developers, why can't we make Codex of or whatever agent a better experience for assistance? Like like it's the same tools, it's the calls, it's Well, I I actually I tweeted about this and kind of went a little bit viral. Like I the main agent I'm using right now for like personal assistance stuff is literally just Pi with like I give it its own Gmail, it has a credit card,",
+   "zh": "他们没有 OAuth 连接器？当时没有。好。我懂了。对，我觉得他们太需要这个了，如果这么说还说得通。就是我觉得 OpenAI 有很多数据。我觉得他们不太会拿我的数据去做离谱的事。这就是我的感觉。我觉得 Meta，如果这意味着他们赢下什么的可能性哪怕再高一点点，他们就会做，然后事后再承担后果。最后那一点我不同意，抱歉。我能问个问题吗？我们为什么需要这种协助，而不是去做一个，我们都是开发者，为什么不能把 Codex 或者随便什么 agent 做成更好的协助体验？就是工具是一样的，调用是一样的，就是。嗯，我我其实发过推讲这个，还小火了一下。就是我现在用来做个人协助的主 agent，字面上就是 Pi，我给它一个自己的 Gmail，它有一张信用卡，"
+  },
+  {
+   "at": 1098,
+   "end": 1136,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "it has like reminders, cron, and I have like a very literally I was like Codex clone ChatGPT GUI. Like just works. Like I I I have Better than Docs? So, I didn't I haven't really dialed in any of like the proactivity stuff and I think I actually imagine that that part is like the really hard part of this sort of stuff. I'm not I don't feel a deep sense of longing for it right now. Maybe I don't know what I don't have, right? It's pretty useful. I really like it. Imagination unlocking. Yeah. Like literally executives at the companies, they get so busy that they cannot manage their schedule. They have a person doing this for them.",
+   "zh": "它有提醒、cron，我几乎是字面意义上做了个 Codex 克隆版的 ChatGPT GUI。就是能用。我有。比 Dots 更好？所以我还没真正把主动性那些东西调到位，我觉得那部分才是这类东西真正难的地方。我现在并没有很深的渴望。也许我不知道自己缺的是什么，对吧？它挺有用的。我真的喜欢。想象力被打开了。对。公司里的高管忙到自己管不了日程。他们有一个人专门帮他们做这件事。"
+  },
+  {
+   "at": 1136,
+   "end": 1176,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Like those people cannot go back. I don't like AIs and like this is a standard thing for humanity. Like when you go to that next level productivity, you will still be more busy, but you'll be able to do more stuff when the proactive stuff will just come in. I don't know, but I bet that we see people start I think someone is going to do a do a open source kind of version of something like that. it hasn't really happened. Like like OpenClaw you guys mean? No, like OpenClaw and Hermes are not it. Like they are they are last generation because the a big part of why is it like Grok Bot is so compelling is because it has such a good mobile app, web interface, all of that stuff feels really good to work with.",
+   "zh": "那些人回不去了。我不喜欢 AI，而这就是人类的常态。你到了下一个生产力层级，还是会更忙，但你能做更多事，等那些主动的东西进来的时候。我不知道，但我打赌我们会看到有人开始做，我觉得会有人去做一个开源的类似版本。这还没真正发生。你们说的是 OpenClaw？不，OpenClaw 和 Hermes 不是。它们是上一代，因为 Grok Bot 之所以这么吸引人，很大一部分原因是它有这么好的手机应用、网页界面，这些用起来感觉都很好。"
+  },
+  {
+   "at": 1176,
+   "end": 1212,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Hermes Yeah. Then you then you have your answer is because they need a polished product. Well, I actually Engineers can build polished products. No, because I actually think that what you're talking about is very correct cuz for my stuff personally, I do a lot of what Ben does where I just have all my stuff hooked into Codex and I can go directly in, use Gmail in there, do whatever I need. The assistant quote unquote, whatever it is, it really just feels like taking a normal coding agent, putting cron jobs in it, putting maybe some like shared box on it so that it can files and keep it Yeah, I I I I made my own like S3 backed to Google Drive essentially and like it's amazing.",
+   "zh": "Hermes。对。那你的答案就是，因为他们需要一个打磨好的产品。其实工程师能做出打磨好的产品。不，因为我其实觉得你说的很对，就我个人来说，我做了很多 Ben 做的事，就是把所有东西都接到 Codex 里，我可以直接进去，在里面用 Gmail，做任何我需要的。所谓的助手，不管它是什么，感觉真的就是拿一个普通的编程 agent，给它加上 cron，也许再加一个共享的盒子，这样它能处理文件并留住。对，我自己做了一个用 S3 做后端的，本质上就是 Google Drive，太棒了。"
+  },
+  {
+   "at": 1212,
+   "end": 1247,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Like it's very easy to build. They released remote Codex and dot at the same time. It's the same underlying I I I will I have a very simple answer for you. I don't want to another problem. So, I have two problems. I'm bringing on an assistant to help me solve with the a problem and now I have three problems going to have to maintain the the infrastructure. I wanted to reduce my load, not to increase my load. Like another one like another box that I have to manage that goes down if I run it on my Mac Mini which we bought for like Hermes' OpenClaw many of us. That Mac Mini disconnects and then it's not live. I just want simple. Hey, are you there? Do this thing for me. Bye. Well, the future of Harnesses is probably something that's shaped like that",
+   "zh": "这种很好做。他们同时发布了远程 Codex 和 Dots。底层是一样的。我给你一个很简单的回答。我不想再多一个问题。我有两个问题。我找个助手来帮我解决问题，现在变成三个问题，还得维护这套基础设施。我想减轻负担，不是增加负担。又多一个我得管的盒子，要是跑在 Mac mini 上，我们很多人都是为了 Hermes、OpenClaw 买的。那个 Mac mini 一断线就不在线了。我就想要简单的。嘿，你在吗？帮我做这件事。再见。Harness 的未来大概就是长成那样。"
+  },
+  {
+   "at": 1247,
+   "end": 1285,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "anyway. I think that a lot of why ChatGPT did the merger thing for ChatGPT and Codex is long term, it's all going to be Codex cuz they want to RL on one Harness, one set of tools, one way of doing things. dots It'll all be the same. It'll all be Codex under the hood. Yeah. I think they're not there yet, but eventually it's where it'll end. One more thing, big thing at DevDay, which is also hot topic, uh is decision models. It's called OpenAI or a clone. We had an exclusive podcast with them where they would basically say it's Luna with like a structured output right now, which is interesting. But like obviously they're going to improve on that. What are you guys' takes?",
+   "zh": "反正。我觉得 ChatGPT 把 ChatGPT 和 Codex 合并，很大原因是长远来看全都会变成 Codex，因为他们想在一个 Harness、一套工具、一种做法上做 RL。Dots 也会一样。底层全都会是 Codex。对。我觉得他们还没到，但最终会停在那儿。还有一件事，DevDay 上的大事，也是热门话题，就是决策模型。是 OpenAI 的，或者一个克隆。我们跟他们做过一期独家播客，他们基本上说，现在就是 Luna 加上结构化输出，这挺有意思。但显然他们会在这上面改进。你们怎么看？"
+  },
+  {
+   "at": 1285,
+   "end": 1323,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "You know, that's another very very hot topic. multimodal. Jev came out with his text only and OpenAI That's the biggest difference. I I I know it's coming. Just like okay, leave a little bit in the future and just be like okay, these are the same. Ah, I see. So I've been structured output for with AI in pipelines for a very long time. The coolest thing about Jev is like most of the model providers took away the logprobs. And I actually like knowing hey, what are the percentages of all these outputs? Not just here's the answer, but actually being able to get a little bit more signal about the probabilities and like what were the actual like output probabilities for that token before it actually decided. You want per token or per decision? Cuz Jev gives you per decision.",
+   "zh": "你知道，这是另一个非常非常热的话题。多模态。Jev 出来是纯文本的，OpenAI 那边，这是最大的差别。我知道它会来的。就先放一放，留给未来一点，然后就会变成，好，这些是一样的。啊，我明白了。我用 AI 在流水线里做结构化输出已经很久了。Jev 最酷的地方是，大多数模型提供商把 logprobs 拿掉了。我其实喜欢知道，嘿，这些输出各自的百分比是多少？不只是给你答案，而是能多拿到一点概率的信号，它真正决定之前，那个 token 实际的输出概率是多少。你要每个 token 的，还是每个决策的？因为 Jev 给你的是每个决策。"
+  },
+  {
+   "at": 1323,
+   "end": 1359,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah, exactly. You can use GPT-4 or mini to do almost all of the classifications that Jev can do. Like for a long time. I mean obviously it's smarter and better and faster and cheaper and whatever it is, but like it doesn't it didn't make anything new like technically new possible. It's just that the price and the speed make make it applicable for new things. I would I would say like you could even have done decision probabilities obviously with like structured outputs and you know, any other model before. They just like were not well calibrated. Like I I never trust a model give me like a one to a hundred score That's why I'm saying that's why I'm saying like you could say zero to one and like you it essentially bucketed it into zero, 0.5 or one. And even you know, no matter how much you prompted. Yeah.",
+   "zh": "对，没错。你可以用 GPT-4 或者 mini，做几乎所有 Jev 能做的分类。很长时间都可以。我的意思是，显然它更聪明、更好、更快、更便宜，随便怎么说，但它并没有让什么技术上全新的东西成为可能。只是价格和速度，让它能用到新的事情上。我会说，你以前显然也能用结构化输出，用任何别的模型，做出决策概率。只是它们校准得不好。我从来不信模型给我一个一到一百的分数。所以我才说，所以我才说，你可以让它说零到一，它基本上会落到零、0.5 或者一。而且你知道，不管你怎么提示。对。"
+  },
+  {
+   "at": 1359,
+   "end": 1414,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "And so yeah, like it you it feels like true probabilities. I like we use structured outputs like a ton. Like probably like top raindrop like That's [laughter] your entire job. We trained our own models to do this like etc. I think that I'm glad that OpenAI is doing it. I feel like you can actually switch more easily once you have a lot of labeled data cuz you can just sort of say like hey, like how much does this match how what I was doing historically? Like if if you is a once you like label a bunch of stuff, if something comes out that's like 10x cheaper, you can literally just say, okay, use all my existing labels as evals essentially. If it agrees like, you know, more than, you know, x% of the time, and then you're only have to review the parts that disagree essentially. So, very very easy to switch. Really really low switch costs, yeah. And then you can have actually a model like hill climb. I don't know. We do like the poor man's Jev where I'm just like, cool, here's a case that doesn't work. Go add it as an eval and then keep tweaking the prompts until it works. Yeah, really also these sort of structured things, yeah. That's awesome.",
+   "zh": "所以对，它感觉像是真正的概率。我们大量用结构化输出。大概像 Raindrop 最顶上的那种，（笑）这就是你的全部工作。我们训练了自己的模型来做这个，等等。我觉得我很高兴 OpenAI 在做这件事。我觉得一旦你有大量标注数据，切换其实会更容易，因为你可以说，嘿，这个跟我以前做的匹配多少？一旦你标注了一堆东西，如果出来一个便宜十倍的，你完全可以说，好，把我现有的标注都当成 eval。如果它在超过百分之多少的时候是一致的，然后你基本上只需要复查不一致的部分。所以切换非常容易。切换成本真的很低，对。然后你其实可以让模型去 hill climb。我不知道。我们做的是穷人版 Jev，我就是，好，这是一个不行的例子。把它加进 eval，然后一直改提示词，直到能用。对，这些结构化的东西也是，对。太棒了。"
+  },
+  {
+   "at": 1414,
+   "end": 1458,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "There's tons of like product UX experiences that Jev shapes things are able to unlock as well and I I think it's Yes, it'll improve from Luna in its current decision as API, but it's like the right decision to release decisions API. I actually I want to ask like though I think that the product stuff you can do with this is super cool. Like what are your favorite ones that you've seen so far cuz I have a couple? I don't know how OpenAI does it for them, but approve for me is is a thing. It's going to be a lot easier spot vacation models, different UX changes. I was actually kind of surprised Jev is like pure just like text input and output and you can get dynamic things generated, but I was surprised there's not any clever creativity around UX or changing what the shape of an experience looks like with an agent. I think there's a lot of possibility with",
+   "zh": "有一大堆产品上的 UX，是 Jev 这种形态能够打开的，我觉得是的。它会从 Luna 现在这种决策 API 往上改进，但发布决策 API 这个决定是对的。我其实想问，我觉得你用这个能做的产品东西超级酷。你们到目前为止最喜欢的是哪些？我有几个。我不知道 OpenAI 他们自己怎么做，但帮我批准这件事是有的。这会容易很多，UX 上会有各种变化。我其实有点惊讶，Jev 就是纯文本的输入和输出，你能得到动态生成的东西，但我惊讶的是，在 UX 上，或者用 agent 去改变一种体验的形状，没什么聪明的创意。我觉得还有很多可能性，就在"
+  },
+  {
+   "at": 1458,
+   "end": 1496,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "What's an example? Is there something that you have in mind? Like what's the closest neighbor that we would know? Let me think about it. I think to me the coolest thing with the this shape is that you can stick AI in a lot of weird places that it wasn't before. Like a great example is like on a website you have the command K menu to search for things. That is often broken and bad and weird, but if you you could just throw that in Jev and it's fast and instant to just predict out of the list where should we go? to have the decision before to make. If you're doing just a regular look up in the table in JavaScript and you're loading all the states or you're using AI and then you're waiting and streaming tokens etc. Now you don't kind of need that decision. It's kind of the best of both worlds in that command K.",
+   "zh": "举个例子？你心里有具体的吗？跟我们所知最接近的是什么？让我想想。我觉得这种形态最酷的是，你可以把 AI 塞进很多以前放不进去的奇怪地方。一个很好的例子是，网站上你有 Command K 菜单用来搜东西。那东西经常是坏的、差的、奇怪的，但你可以直接丢给 Jev，它又快又即时，从列表里预测我们该去哪。先把决策做出来。如果你只是用 JavaScript 在表里做普通查找，把所有状态都加载进来，或者你用 AI，然后干等、流式吐 token 之类的。现在你不太需要那样了。这种 Command K 有点像两全其美。"
+  },
+  {
+   "at": 1496,
+   "end": 1529,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah, it's like borderline instant. So, you can just like rank these 20 Okay, here are the 20 pages you could go to. The user typed these three letters, which one do they want to go to? That will ranking will make a lot of weird things feel better. I think it's dope. I am annoyed at the general discourse around Jev and all of these models cuz most of the pop like the super viral examples are mostly stupid. Yes. Like aggressively stupid. I was at a dinner so like yeah, now now that I have Jev I can guarantee that the output is in the format I want. I'm like, \"Oh, my friend.\" You outed yourself. They're just telling They're telling themselves on themselves how dumb they are.",
+   "zh": "对，几乎是即时的。所以你可以直接给这二十个排个序。好，这是你能去的二十个页面。用户打了这三个字母，他们想去哪一个？这种排序会让很多别扭的东西变好用。我觉得很酷。我对围绕 Jev 和这些模型的普遍讨论很烦，因为大多数特别火的例子基本上都很蠢。对。蠢得离谱。我在一次饭局上，就有人说，对，现在我有了 Jev，我可以保证输出是我想要的格式。我心想，哦，我的朋友。你把自己暴露了。他们就是在自己揭自己的短，看自己有多蠢。"
+  },
+  {
+   "at": 1529,
+   "end": 1590,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Can we talk about the the clones? The the clef that came off The Cloudflare one is crazy. The numbers are insane. Tell us. What do you mean numbers are insane? The like the num There's some benchmark and the Cloudflare one is like the really small one is better per like same performance as Jev, like way faster, and then even their really big one is better performance than Jev, and like noticeably faster. Yeah. I mean some strategic thing Diogo did was like don't benchmark us. Yeah, yeah. You know, like or or like He repeated I supercut your chat with Diogo. He repeated this maybe like seven times during the podcast. Like I don't believe in benchmarks. He He really believes it. What are you going to do? I think this is sort of true though. Like I think that it's really like in this exact like structured classification, it is really really really easy to overfit like a specific domain, which is like could be fine, right? The thing is like if you have a super repeatable task and you're just doing it's like it could just be fine to overfit it. Like like you can have a overfit classifier that's like fine essentially um if it's super well constrained. But I think that the whole selling point of Jev at least is like super diverse data, really good at like",
+   "zh": "我们能聊聊那些克隆吗？那个出来的 Clef，Cloudflare 那个太夸张了。数字离谱。跟我们说说。你说数字离谱是什么意思？就是有基准测试，Cloudflare 那个，真的很小的那个，性能跟 Jev 一样，但快得多，然后他们真正大的那个，性能比 Jev 还好，而且明显更快。对。我的意思是，Diogo 做的一件策略上的事就是，别给我们做基准测试。对，对。你知道，或者他反复说。我把你和 Diogo 的聊天做了个精剪。他在播客里大概把这句话重复了七次。就是我不相信基准测试。他是真的这么认为。你能怎么办？不过我觉得这有几分道理。我觉得就在这种结构化分类上，对某个具体领域过拟合真的非常非常容易，而这也许没关系，对吧？如果你有一个超级可重复的任务，你就在做它，过拟合也许就可以。你可以有一个过拟合的分类器，本质上是行的，只要约束得非常好。但我觉得 Jev 的整个卖点至少是数据超级多样，真的很擅长"
+  },
+  {
+   "at": 1590,
+   "end": 1652,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "huge range of tasks, etc. So, it I think probably very hard to actually like faithfully benchmark. So, it's it's also hard to know which one to pick, you're saying, right? It's also really something but Diogo has worked on data for 2 years and their data is immaculate. How do we tell? Yes. Yeah. Which also applies to most too. Yeah. So, the rumors are that TypeSafe closed a $10 billion round this week, which is insane. I heard some friends of mine. But I think the cool the core question of the company is if OpenAI and anthropic and like and and and everyone else has a has something to Jev thing, would you use would you go out of your way to get a Jev a TypeSafe API key? Or would you just use your OpenAI key? I think it's going to run on device. Like I don't want network Jev anymore. The the models are getting smaller Yeah. Yeah. It's already shipping on this, right? So like there's a WebGPU Jev already. public GPU Jev is a thing. You can run it maybe not to the level of Jev quality, but again, we we don't know how we tell yet. I can class I have this very deeply held belief that classification is actually really really really really hard. Yes. And it looks",
+   "zh": "很大范围的任务，等等。所以我觉得要忠实做基准测试，大概非常难。所以你是说，也很难知道该选哪一个，对吧？这也确实难，但 Diogo 做数据做了两年，他们的数据挑不出毛病。我们怎么判断？对。对。这也适用于大多数。对。所以传言是，TypeSafe 这周融了一百亿美元，太离谱了。我听一些朋友说的。但我觉得这家公司的核心问题是，如果 OpenAI 和 Anthropic，还有其他所有人，都有一个 Jev 这类东西，你会特地去搞一把 Jev 用的 TypeSafe API key 吗？还是就用你的 OpenAI key？我觉得它会在设备上跑。我不想再要联网的 Jev 了。模型在变小。对。对。这个已经在出货了，对吧？已经有 WebGPU 的 Jev 了。公开的 GPU Jev 是有的。你可以跑，也许到不了 Jev 的质量，但再说一次，我们还不知道怎么判断。我有一个非常根深蒂固的信念，分类其实真的非常非常非常难。对。而且它看起来"
+  },
+  {
+   "at": 1652,
+   "end": 1688,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "deceptively simple because it's like you're returning like a single, you know, either like zero or one, you know, in some ways, but I think that that like literally binary classification is one of the hardest problems in the world. Like you know, there's this really funny paper from OpenAI a long time ago where they were like, you know, hallucination is just a binary classification problem. And all these people were like, great. Like OpenAI solved hallucination. It's like, no, it's either like true or not true. And that's like really really hard. So I think they'll definitely be like on device versions, but I think they'll also be like I think that's like the whole thing that they did really well was be like essentially like big, you know, ish or like very smart generalized classifiers. I think that like you said like would I get a TypeSafe API key?",
+   "zh": "简单得有欺骗性，因为你返回的就是一个，你知道，某种意义上要么是零，要么是一，但我觉得二元分类真的是世界上最难的问题之一。你知道，很久以前 OpenAI 有一篇很好笑的论文，他们说，幻觉只是一个二元分类问题。然后这些人都说，太好了，OpenAI 解决幻觉了。其实不是，它要么是真的，要么不是真的。而这真的非常难。所以我觉得肯定会有端侧的版本，但我觉得也会有。我觉得他们真正做得好的整件事，本质上就是偏大的，你知道，或者非常聪明的通用分类器。我觉得就像你说的，我会去搞一把 TypeSafe 的 API key 吗？"
+  },
+  {
+   "at": 1688,
+   "end": 1738,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "The answer is like I actually use it through the Versel AI gateway. So I didn't get one. So I don't really care. Yeah. So like I don't, you know, I don't know if that's good or bad for them, but They still need Jev, not Clef, and not the Yeah, I mean because they have the brand name right now. I don't think it's even You have OpenAI Jev and like it's it's fine. It's good enough. trust it. There is a thing about they created this technology. Yes. So they probably understand about their primitives are great. I don't know about OpenAI. I haven't gotten access yet. I'm on the on the wait list. So I'm not sure they have the right primitives yet. And I'm really hoping they will align to the same primitives so I'd be able to switch easily like kind of open router type thing. But they they are the experts in not only Jev, the model, but also how to think about Jev. They already released this thing about like how to build a harness. At some point they said, \"Ah, we thought about building a harness with Jev. We decided not to do it. Here's open source how to like add this Jev harness.\" Yeah,",
+   "zh": "答案是，我其实是通过 Vercel AI Gateway 用的。所以我没去搞一把。所以我不太在乎。对。所以我不知道这对他们是好是坏，但人们还是要 Jev，不是 Clef，也不是那个。对，我的意思是因为他们现在有这个牌子。我甚至不觉得。你有 OpenAI 的 Jev，就还行。够好了。信得过。有一点是，他们创造了这项技术。对。所以他们大概明白，他们的原语很好。OpenAI 我就不知道。我还没拿到权限。我在等待名单上。所以我不确定他们是不是已经有了合适的原语。我真的希望他们会对齐到同一套原语，这样我就能轻松切换，有点像 OpenRouter 那种。但他们不只是 Jev 这个模型的专家，也是怎么思考 Jev 的专家。他们已经发过怎么做 harness 的东西。有一次他们说，啊，我们想过用 Jev 做一个 harness。我们决定不做。这是开源的，教你怎么加上这个 Jev harness。对，"
+  },
+  {
+   "at": 1738,
+   "end": 1775,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "very very smart. Yeah, the Jev I really like the like main guy at Jev. He's been so good about like, \"No, this is a dumb way to use it.\" Sorry? It's a dumb way to use it. Yes. He's awesome. Main guy at Jev. He's really good. He just changed his name to Jev. He's so passionate also about this like one specific thing that I brought to the world. No, no, no, he he he has other things coming. Yeah, that's the thing. I think like I think it'd be very silly to like look at a company that just like was the first one in a very long time to change like the way that people are using models and be like, \"That's the like that's it for them.\" Like you know. [laughter] Do you feel the the changes of the of the same magnitude as Jev GPT was?",
+   "zh": "非常非常聪明。对，我真的很喜欢 Jev 那个主要的人。他一直很会说，不，这样用很蠢。什么？这样用很蠢。对。他太棒了。Jev 的主要那个人。他真的很好。他刚把自己的名字改成了 Jev。他对这一件他带到世界上的具体的事，也非常有热情。不、不、不，他还有别的东西要来。对，就是这个。我觉得，一家公司很久以来第一次改变了人们使用模型的方式，你看着它说，他们就到此为止了，那会非常傻。你知道。（笑）你觉得这种变化的量级，跟 GPT 那次一样吗？"
+  },
+  {
+   "at": 1775,
+   "end": 1825,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "No. Do you feel the changes of the same magnitude as reasoning models was 01? Not quite, but but like it's it's it's get it's getting there. Like you know, it's like I mean it's like 30% of that or something like for us. Yeah, I I think that it is especially as it gets faster. It's just yeah, it it's going to be I think there's a lot of I think it has not fully permeated yet. Um, but we'll see it. My my hint for people listening who cuz we did the podcast is we actually left hints as to what the future models would be. Uh, if you're smart enough you can figure out the previous. Or if you have Jev, you can run every sentence of that podcast through Jev and say, \"Hey, is there a hint there?\" Is there and you'll get an answer within a second or like a millisecond, right? You're going to get an answer. Yeah. I'll say I I do think that it Jev is still actually ridiculously under explored. Like we're going to have a lot of stuff we're cooking which we'll we'll share later.",
+   "zh": "没有。你觉得这种变化的量级，跟推理模型、跟 o1 那次一样吗？还不完全，但它在往那儿走。你知道，对我们来说大概是那次的百分之三十。对，我觉得尤其是它变得更快以后。就是，会的，我觉得还有很多，我觉得它还没完全渗透。但我们会看到。给在听的人提一句，因为我们做了那期播客，我们其实留下了未来模型会是什么样的提示。你要是够聪明，就能把前面的推出来。或者你要是有 Jev，可以把那期播客的每一句都过一遍 Jev，说，嘿，这里有提示吗？有没有，你一秒之内，或者一毫秒，就会得到答案，对吧？你会得到一个答案。对。我要说，我确实觉得 Jev 其实还被探索得少得离谱。我们正在做很多东西，以后会拿出来分享。"
+  },
+  {
+   "at": 1825,
+   "end": 1870,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "So you're just saying you're throwing on everything. What? You're throwing yourself on there when Ish. So Wait, don't you like Yeah, you train your own models. Yeah, yeah, yeah. We actually still use it for that. For like for what we call signals, we still use our own models. This will be more obvious like in a We have some very very fun stuff coming in like the next uh next few weeks that that uses Jev so we'll show it. Yeah, we have a we have a thing that we've just play testing this week of like a agentic memory pipeline and it's like a mix of like it's like back and forth between jet for structured output and then like a soul five 5.6 or a soul six model for like more structured output and then jet for like sorting and re-ranking, but it's like look at all my agent traces and like tell me what to add to my cloud MD. And so like as a building block in these systems and basically like we tried it with a bunch of smart models and putting jet in there like reduced the cost by like 10 or 20 x. Wow.",
+   "zh": "所以你就是说你什么都往上扔。什么？你把自己也扔上去了。等等，你不是……对，你们训练自己的模型。对，对，对。我们其实还在用它做那个。对我们叫 signals 的那些，我们还是用自己的模型。这以后会更明显。我们接下来几周有些非常非常有趣的东西要来，用了 Jev，到时候会展示。对，我们有个东西这周刚在试玩，是一条 agent 的记忆流水线，来回混着用，Jev 做结构化输出，然后用 Soul 5.6 或者 Soul 6 做更多的结构化输出，再用 Jev 做排序和重排，就是看我所有的 agent 轨迹，告诉我该往 CLAUDE.md 里加什么。所以作为这些系统里的一块积木，基本上我们用一堆聪明的模型试过，把 Jev 放进去，成本大概降了十到二十倍。哇。"
+  },
+  {
+   "at": 1870,
+   "end": 1904,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "So, did it improve accuracy This is what I was going to say. Cost is very very easy to reduce on classification. What I will say is that in all of our evals, it is like pretty well aligned with like Opus 5.5 on classification. Yeah, yeah, with no reasoning. Yeah. That's the crazy thing. And I think if you like think about it deeply, there's like no obvious reason why classification needs as much reasoning like all the time as it does in order to get good answers. And like also if you use like any of the frontier models to do classification without a ton of reasoning, it they're they're abysmal. They're really bad at classification. Yeah.",
+   "zh": "所以，准确率提高了吗？这正是我要说的。分类的成本非常非常容易降。我要说的是，在我们所有的 eval 里，它在分类上跟 Opus 5.5 对齐得相当好。对，对，而且没有推理。对。这才是疯狂的地方。我觉得你要是往深里想，没有明显的理由，分类为了得到好答案，需要一直用那么多推理。而且你要是用任何前沿模型做分类，却不带大量推理，它们差得离谱。它们做分类真的很差。对。"
+  },
+  {
+   "at": 1904,
+   "end": 1944,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Um and so a few shot in it though. And so that that's the thing that even like speed wise is not even And so it's a smart move for Open AI to release this decision they I asked them once. I asked why and I really wanted to joke with Sam Altman to say, \"Hey, did you cuz the algo mentioned on your podcast, right? That like he came with this idea to Sam and Sam said, \"Oh, this is great. You should work on it.\" So, I really wanted to joke with Sam and was like, \"Hey, did you wait for your buddy to like release this thing before you can come into the category?\" What the answer I got between the lines not to quote anybody specifically is that there's only like jet type set prove the category exist and there's market fit for it and then Open AI is like, \"All right, well well our developers would like our offering in that area as well. So, that's why they're releasing it.\" Yeah, yeah,",
+   "zh": "而且里面还有 few-shot。所以这才是关键，甚至速度上也还不是。所以 OpenAI 发布这个决策模型，是聪明的一步。我问过他们一次。我问了为什么，我真的很想跟 Sam Altman 开玩笑，嘿，你是不是，因为你播客里提到的那个人，对吧？他带着这个想法去找 Sam，Sam 说，哦，这很棒，你应该去做。所以我真的很想跟 Sam 开玩笑，嘿，你是不是等你哥们儿先把这东西放出来，你才进这个品类？我从字里行间得到的答案，不具体引任何人，就是只有 Jev 和 TypeSafe 证明了这个品类存在，而且有市场契合，然后 OpenAI 说，好吧，我们的开发者也会想要我们在这块的东西。所以他们才发布。对，对，"
+  },
+  {
+   "at": 1944,
+   "end": 1975,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "yeah. And by release, I mean wait list. It's not out yet. It's not public. Yeah. Okay, we're going to move on to the main course. [laughter] We are we have sumac beef tenderloin tataki style, pan-seared halibut, and creamy lemon risotto. Sweet. Okay, models, right? We got the We got the Astra, we got the Soul, we got the Opus, we got the Sonnet. What are people using? What are your picks? Go. Mainly Astra ultra like ultra on the fastest mode possible.",
+   "zh": "对。我说的发布，是等待名单。还没出来。还没公开。对。好，我们要上主菜了。（笑）我们有漆树粉牛里脊，tataki 风格，香煎大比目鱼，还有奶油柠檬意大利烩饭。不错。好，模型，对吧？我们有 Astra，有 Soul，有 Opus，有 Sonnet。大家在用什么？你们选哪个？来。主要是 Astra Ultra，开到能开的最快模式。"
+  },
+  {
+   "at": 1975,
+   "end": 2022,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "How much [laughter] do you burn? Like I was able to burn down an entire weekly reset in about 20 minutes. I'm good with that. It's really easy. But you know. I I think it's worth it. I think it's worth it. Um my party line has been I think Opus like quad models have a soul like obviously GPG models do not have a soul like I think he can like GPG Like by design. Yeah, by design. Almost by design. Like Fantastic engineer zero soul. Uh it but like Opus 5.5 Fable they have souls. But I use Opus 5.5 a lot for anything that's like a writing related even adjacent to writing cannot use any of the GPG models which is really interesting. Astra improved it a bit But but it's still Sam Sam talked about this in very openly. He said, \"We know our models are not good at writing. We're like working to catch up on this.\"",
+   "zh": "你烧多少？（笑）我大概二十分钟就能把一整周的重置额度烧完。我接受。这真的很容易。但你知道。我觉得值。我觉得值。我对外的说法一直是，我觉得 Opus 这种 Claude 模型是有灵魂的，显然 GPT 模型没有灵魂。我觉得 GPT 就是这样。设计如此。对，设计如此。几乎就是设计如此。顶级工程师，灵魂为零。但 Opus 5.5、Fable，它们有灵魂。我大量用 Opus 5.5 做任何跟写作有关的，哪怕只是沾到写作，都不能用任何 GPT 模型，这真的很有意思。Astra 改进了一点，但还是。Sam 很公开地谈过这个。他说，我们知道我们的模型不擅长写作。我们在努力追上来。"
+  },
+  {
+   "at": 2022,
+   "end": 2053,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I mean up until Opus 5.5 though I felt the exact opposite. I was like I would never use a quad model Well, after 4.5 you mean? They went to 4.8? and 4.8 for example was a mess. to go all the way back to 4.6 to get something that 4.6 was the last like good Opus. 5.5 is 4.6 Yeah, yeah. smarter. Yeah, like I run AI summaries every day and the default model was 5.5 until Opus 5.5. Oh, we got like users like our customers got mad. Like they were like I can't read and they were sending screenshots of like and and it's like yeah, you're you're right. Like we When we switched to 4.6 to 4.8 It was like Are you even working on the prompting at all?",
+   "zh": "我是说，直到 Opus 5.5 之前，我的感觉完全相反。我当时想，我绝不会用 Claude 模型。你是说 4.5 之后？他们做到 4.8 了？比如 4.8 就是一团糟。得一路退回 4.6 才能得到能用的。4.6 是最后一个好的 Opus。5.5 就是更聪明的 4.6。对，对。对，我每天跑 AI 摘要，默认模型是 5.5，直到 Opus 5.5。哦，我们的用户，我们的客户生气了。他们说读不了，还发了截图。然后就是，对，你们说得对。我们从 4.6 换到 4.8 的时候，就像，你们到底有没有在做提示词？"
+  },
+  {
+   "at": 2053,
+   "end": 2088,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Um we like I mean default Well, we do we do gradual rollouts. So another interesting thing about the Claude launch was that they basically came out and shat on all previous versions of Claude. Yeah. That always happens. Yeah, the researcher like apologizing for Opus 5. They were they were making memes of like it just got slowly worse and then they 5.5 is the thing now we fixed it. Yeah, it was very They never admitted it until It's weird, right? Yeah, yeah, yeah. Weird. Very different for Anthropic. I don't think they've ever done anything like that before. Yeah, you're right. Yeah, it's it's did you So this is why like I I actually do want to convene like the high-end processors. It's obvious why though. I didn't I didn't I didn't actually feel it that much.",
+   "zh": "我是说默认模型。我们是逐步放量的。所以 Claude 这次发布，另一件有意思的事是，他们基本上一出来就把之前所有版本的 Claude 都踩了一遍。对。这种事总会发生。对，研究员好像在为 Opus 5 道歉。他们在做梗图，就是它慢慢变差，然后 5.5 才是现在这个，我们修好了。对，非常。他们直到那时才承认。很奇怪，对吧？对，对，对。奇怪。这对 Anthropic 来说很不一样。我觉得他们以前从没这么做过。对，你说得对。对，所以这就是为什么，我其实想把高端那一侧的情况说出来。原因其实很明显。我其实没感觉那么强烈。"
+  },
+  {
+   "at": 2088,
+   "end": 2118,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "You didn't feel it that much? Really? Yeah, I know. But so I so like that's my problem. It's just [clears throat] They use the high-end case. Like they don't use Opus. No one at Anthropic is using Opus. That's actually very true. Like they use They use just Fable and Mythos. I'm or it's either Fable or Mythos. They maybe just using Mythos. That's my problem. I don't think they're using release models. They're using unreleased models. They practice in their free time. They have unlimited and super fast as well. Yep. Which is a completely different experience than what those get. So they just don't don't see it maybe. Can you mention your your pricing thing that you they told me last night?",
+   "zh": "你没感觉那么强烈？真的？对，我知道。所以这就是我的问题。他们用的是高端那一档。他们不用 Opus。Anthropic 没有人在用 Opus。这其实很对。他们只用 Fable 和 Mythos。要么是 Fable，要么是 Mythos。他们也许只用 Mythos。这就是我的问题。我觉得他们没用已发布的模型。他们用的是没发布的模型。他们有空就在练。他们还有无限额度，而且超快。对。这跟那些人拿到的体验完全不一样。所以他们也许就是看不到。你能说一下你那个定价的事吗，他们昨晚跟我说的？"
+  },
+  {
+   "at": 2118,
+   "end": 2174,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Oh, yeah. Okay, there's one thing I want to say before that, which is that I think on the topic of what Anthropic uses internally, I really thought that you like you I think you're right. They do just use the Fable or Mythos or whatever class. And I thought that Opus, Sonnet, all those would just be forgotten children forever, especially after how bad Opus 5 was, which shocks that they like brought it back with this one. And and and such beautiful as well. It's It's a great model overall. It's a really good model. And and so now I feel like there is an offering from Anthropic, which is Opus 5.1.5, and an offering from OpenAI, which is a Sol 6.1, right? Um that make it so it's almost you don't even need to reach for Astro Fable. You like for the daily work stuff Definitely for for most people, I think those models are enough. And reaching for those that like finish your quota real quick really needs the big big big like refactor everything, review like huge things, or like yeah, difficult tasks. So it's very interesting to switch.",
+   "zh": "哦，对。好，在那之前我想说一件事，就是 Anthropic 内部用什么，我真的觉得你说得对。他们就是用 Fable 或者 Mythos 那一档。我本以为 Opus、Sonnet 这些会永远是被忘掉的孩子，尤其是 Opus 5 那么差之后，他们用这一版把它带回来，让我很震惊。而且也这么漂亮。总体来说是个很棒的模型。真的是个很好的模型。所以现在我觉得，Anthropic 有一个选择，是 Opus 5.1.5，OpenAI 有一个选择，是 Soul 6.1，对吧？这就让你几乎不用去够 Astra、Fable。日常的活，对大多数人，我觉得这些模型就够了。而去够那些很快把额度用完的，真的得是那种很大很大的、把一切重构掉、审查特别大的东西，或者很难的任务。所以换着用很有意思。"
+  },
+  {
+   "at": 2174,
+   "end": 2234,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Has anyone [snorts] tried Sonnet by far? Yeah. And is it okay? It is the best model that you shouldn't touch. Like it's great for Opus. Like Opus can use it as sub agents and they're like cheap and pretty capable, but Can write. Yes, Sonnet is is decent at writing. It's not like But Opus is still way better. Opus is way better? Um but Claude has like it's the little brother, right? It has a little bit of that soul. It has a little bit of that like oh okay, it can understand things between between the lines that you're kind of would expect. The Astroid is like [clears throat] analytical and and would not. But also using that when you have a subscription to Claude, it's like why? It's kind of like why? Opus is almost limitless. That's like a new thing also with Opus. That's the crazy stuff to finish Opus. Uh 5.5 now? Oh no, I used my first reset ever on Claude code this week. For Opus 5.5? Before Opus 5.5. It's like finally good enough that like I am in [clears throat] that like I haven't done this in a long time because I actually believe that like you know, if you're building production software, if you run the models non-stop overnight, you're going to create more code than you can like reliably consume and invest.",
+   "zh": "有人试过 Sonnet 吗，到目前为止？试过。还行吗？它是你不该去碰的最好的模型。给 Opus 用很合适。Opus 可以把它当子 agent，便宜，也挺能干，但是。能写。对，Sonnet 写作还行。它不像。但 Opus 还是好得多。Opus 好得多？但 Claude 就像个弟弟，对吧？它有一点点那种灵魂。它有一点点那种，哦，它能读懂字里行间，就是你会期待的那种。Astra 是分析型的，而且不会。但你已经订了 Claude，还去用那个，就像，为什么？有点像，为什么？Opus 几乎用不完。这也是 Opus 的新情况。把 Opus 用完才是疯狂的事。现在是 5.5？哦不，我这周在 Claude Code 上用掉了有史以来第一次重置。是 Opus 5.5？在 Opus 5.5 之前。它终于够好了，我很久没这样做了，因为我其实相信，你知道，如果你在做生产软件，让模型通宵不停地跑，你会造出比你能可靠消化、可靠投进去的更多代码。"
+  },
+  {
+   "at": 2234,
+   "end": 2267,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "And now that it was 5.5, I was like well, I had like 10 different prototypes that I'm working on. And now I'm like okay, cool. I actually like am doing the thing. I was like okay, 10:00 p.m. you start all the night agents and then like 9:00 a.m. you you you load it up. No. Just honestly like a lot of it on like medium or high. Medium or high? But I what I'll do is I'll do like a uh a poor man's Ralph loop or I'll just like queue up a bunch of prompts of like do this. Okay, now make it better. Compact. Now do this. Now read the plan. Now keep making it better and then compact. And so those will like queue up and run overnight. Rather than like having a So I kind of like it's like a Ralph loop, but it's bounded. You're only queuing five to 10 messages.",
+   "zh": "现在到了 5.5，我就想，好吧，我有大概十个不同的原型在做。现在我就是，好，可以。我真的在做这件事了。我当时想，好，晚上十点把所有夜间 agent 都开起来，然后早上九点再加载。不。老实说，很多是放在 medium 或者 high。medium 还是 high？但我要做的是一个穷人版的 Ralph 循环，或者我就排一串提示，比如做这个。好，现在把它变得更好。Compact。现在做这个。现在读计划。现在继续把它变得更好，然后再 Compact。于是这些会排着队通宵跑。而不是放一个没边的。所以我有点喜欢，它像 Ralph 循环，但是有边界的。你只排五到十条消息。"
+  },
+  {
+   "at": 2267,
+   "end": 2307,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "you're playing you're playing chess and you pre-move every time. No, no, I I actually do this too. Like I'm like like hey, the design's awful. Like redo it. Are you still architecture is way too complicated. Not that I ever stole stuff, but one of the previous things that got solved, that's how the guy did it. He's like you can do this. You can do this. It's the best use of queuing I've ever heard. Jared from Bunz. Yeah, Jared from Bunz. And like a lot of my version of this by the way in in case it helps people is I have a detached mode skill basically where you it's kind of like goal, but instead of like running the thing in in the foreground, you run it in the background. You you like spin up the C libraries with the agents and you run it in the background. I'll tell you to go run it in tmux or whatever. Because then I can run 40 of them parallel. Mhm.",
+   "zh": "你在下棋，你在下棋，而且每次都预先走子。不不，我其实也这么干。我就说，嘿，这设计太烂了，重做。架构还是太复杂了。不是说我偷过什么东西，但之前有个被解决掉的问题，那家伙就是这么干的。他就说，你可以这么做，你可以这么做。这是我听过的最好的排队用法。Bunz 的 Jared。对，Bunz 的 Jared。顺便说一下，我自己的这套，要是能帮到人的话，我基本上有一个 detached 模式的 skill，有点像 goal，不过不是在前台跑那个东西，而是放到后台跑。你把 C 库和这些 agent 一起拉起来，在后台跑。我会让你去 tmux 里跑，或者别的什么。因为这样我就能并行跑 40 个。嗯。"
+  },
+  {
+   "at": 2307,
+   "end": 2346,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah. Good. And then you can you can monitor the the the the the logs uh and then also pause everything, improve the logs, and then rerun. So that is full overnight. So like I asked Codex people about this whether Codex can spin up different threads of Codex that you can actually see and talk to, right? And they can talk between each other kind of like rock bots, that's nice. But also they have sub agents as a as a primitive. And so the Codex people multiple ones said the sub agents are significantly better and faster because of the cache optimizations and how the model treats sub agents versus different sessions. So I guess it's like to to your thing. Because this is the fork sub agents in the new Codex harness, right? Yeah, yeah. How many sub agents did I have?",
+   "zh": "对。好。然后你可以盯着那些日志，也可以把一切先暂停，把日志改好，再重新跑。所以这就是整夜都在跑。我就问过 Codex 的人，Codex 能不能拉起不同的 Codex 线程，而且你真的能看见、能跟它们说话，对吧？它们之间也能互相说话，有点像 Grok Bot，这挺好。不过它们也把子代理当成一种原语。所以好几个 Codex 的人都说，子代理明显更好、更快，因为有缓存上的优化，还有模型对待子代理和对待不同会话的方式不一样。所以我觉得这就是在说你那套。因为这就是新的 Codex harness 里 fork 出来的子代理，对吧？对对。我当时开了多少个子代理？"
+  },
+  {
+   "at": 2346,
+   "end": 2379,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "When I had 48 in my tunnel file, Astra burned through my limits in like 2 hours, so I decided to clean that back to default. I keep it at like 15, but yeah, you can just in the config be like, \"Hey, give me more sub agents.\" And you just tell 6.1 to do it. Go do this. I'll do it. If you if you have unlimited I never What's what what other config things I should I be doing? Cuz I actually never really touched that config. How do I say this gently? If you have unlimited access, 1 million tokens I think is a good idea. No, I just set my auto compact to 400k yesterday. No, but but the default is like 275, not for GPT.",
+   "zh": "我在 tunnel 文件里开到 48 个的时候，Astra 大概两个小时就把我的额度烧光了，所以我决定调回默认。我一般留在 15 个左右，不过对，你可以直接在配置里说，嘿，再给我多来点子代理。你只要让 6.1 去做。去干这个。我来干。如果你有无限额度的话，我从来没。我还该改哪些别的配置？因为我其实从没真正动过那个配置。这话我怎么说得委婉一点？如果你有无限的访问权限，我觉得一百万 token 是个好主意。不，我昨天才把自动压缩设到 400k。不，不过默认大概是 275，不是给 GPT 的。"
+  },
+  {
+   "at": 2379,
+   "end": 2414,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I wish you could disable compaction Codex. Yeah. Like I wish that it would just truncate tools or truncate like literally anything besides the summarizing. I wish they would use Java for the tool calling and just like give the model back what it needs everything. I don't know I don't know about You're going to bust the cache. It could work. Oh yeah, that is. No, but compaction always busts the cache. Yeah. Okay. So you just want you want different kinds of compaction as an option. No, no, I just don't want a summary compaction. Like I I just like most like a lot of the time it's just like there are a bunch of like images or a bunch of like whatever that's in the previous messages.",
+   "zh": "我希望能把 Codex 的压缩关掉。对。我希望它只是把工具截掉，或者把别的任何东西截掉，就是别去做摘要。我希望他们工具调用用 Java，然后把模型需要的东西全都还回去。我不知道，我不太清楚。你会把缓存弄失效的。也许能行。哦对，就是这样。不，可压缩本来就会把缓存弄失效。对。好。所以你是想要不同种类的压缩，当成一个选项。不不，我就是不想要摘要式的压缩。我就是觉得，很多时候，前面那些消息里就是一堆图片，或者一堆别的什么。"
+  },
+  {
+   "at": 2414,
+   "end": 2445,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "You just want to strip out all the biggest tokens. Yeah, just strip out the like that Like Codex used to do that internally. I'd think they I don't know if they're still doing it um cuz they're actually got whatever. compaction is really weird actually. It's like The weird thing about Claude Code's compaction is I feel like it always gets to a point I think it's just a new person. Like it'll be like, \"Hey, like I saw what you were working on before.\" [laughter] I've had this happen multiple times, yeah. Momentum moment, right? Yeah, yeah, yeah. Are you using like the native built-in compaction? Have you ever seen this? No, I have not seen that. It's been I haven't used this since the four plane like six four plane in this last couple of months.",
+   "zh": "你就是想把最大的那些 token 都剥掉。对，就把那种东西剥掉。Codex 以前在内部就是这么干的。我觉得他们，我不知道现在还做不做，因为他们后来确实弄了别的什么。压缩其实真的很怪。Claude Code 的压缩怪就怪在，我感觉它总会走到一个点，我觉得那就是换了一个人。它会说，嘿，我看到你之前在做的东西了。（笑）这种事我碰上过好几次，对。就是那股劲断了，对吧？对对对。你用的是原生自带的那种压缩吗？你见过这个吗？没有，我没见过。最近几个月我没用这个，大概从 four plane，像是 six four plane 那阵就没用了。"
+  },
+  {
+   "at": 2445,
+   "end": 2480,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I've loved opening eyes compaction. Uh been using it the last couple of weeks and It's just slow though. It's so slow. I mean if you're running 20 things [laughter] it doesn't matter as too much. Yeah, it does. Yeah, you can see Do you do you actually watch your trajectories cuz I I I do and I feel like I'm doing it wrong. You know what I mean? No, no, no. I watch it. I mean I don't I don't stare at them but if it says something I'm usually going to scroll up and be like, \"What kind of thing thing actually. Like often times like cuz I just especially when you're you're doing like heavy tasks, you'll like catch it going off so bad. You see the thinking and you're like, \"Nope. Here's what I actually meant.\" And I always have a skill for having a side thread that watches the main thread reasoning.",
+   "zh": "我很喜欢 opening eyes 的压缩。最近几周一直在用。不过它就是慢。太慢了。我是说你要是同时跑 20 个（笑），也就没那么要紧。不，要紧的。对，你能看见。你会真的去看自己的轨迹吗？因为我会看，而且我觉得自己看的方式不对。你懂我意思吗？不不。我看的。我不是死盯着，但如果它说了什么，我通常会往上翻，想搞清楚它到底在干什么。很多时候，尤其你在做很重的任务，你会抓住它偏得特别厉害。你看见那些思考，就说，不对。我其实想说的是这个。而且我一直有一个 skill，开一条旁路，盯着主线程的推理。"
+  },
+  {
+   "at": 2480,
+   "end": 2514,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Uh and then just goes like, \"Hey, you're going off That's the project sort chief of staff pattern, right? That's uh Claude Code. I didn't get projects yet but uh Cursor has projects where like you have the one thing that manages everything and basically it kicks off sub-agents for all the time. Uh that's great in Cursor. I can I used um That's great in in Claude Code I used that Cloud like that. Like hey, don't do work in the main thread at all. I don't want you to your context your context should be my conversation with you and not execution. Execution should happen elsewhere and you get things about that. I do it the opposite. I'm doing things and then I have conversation about the thing on the side.",
+   "zh": "然后它就说，嘿，你跑偏了。这就是项目里那种幕僚长的模式，对吧？这是 Claude Code 的。我还没有 projects，不过 Cursor 有 projects，就是有一个东西统管所有事，基本上一直在把子代理派出去。这在 Cursor 里很棒。我用过。在 Claude Code 里这也很棒，我就这么用 Claude。嘿，主线程里一点活都别干。我不想让你的上下文变成执行。你的上下文应该是我跟你的对话，不是执行。执行应该发生在别的地方，然后你会得到关于那件事的东西。我是反过来的。我自己在做事，然后在旁边开一段对话来聊这件事。"
+  },
+  {
+   "at": 2514,
+   "end": 2562,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Oh, wow. This is subtle thing. Because that that is ephemeral. If you're trying to do like a super heavy long-running loop, that is definitely the best way to do it. The only way I got Aster to burn down some insane problems I couldn't get any other models to do and it the only way [clears throat] I got this to work is put it in ultra, give it tons of sub-agents and tell the main thread, \"Your only job is to send off sub agents, put a timer on them. If they stop or get lazy, just keep push them. Just It is the pushing machine. It's kind of like this pattern in bigger companies when, you know, developers rise to the level of their incompetence as a manager. But at some point, the companies really want the developers to keep developing while managing other people. I This is the opposite for me. I I don't want the main guy to code, to run tools. I just want it to tell other folks the best way possible and then review and and bring it back. The second it starts to run here That is not Right. That is There's the idea of dots.",
+   "zh": "哦，哇。这差别很微妙。因为那样是临时的。如果你要跑一个特别重、时间特别长的循环，那样绝对是最好的办法。有些离谱的问题，别的模型我都搞不定，我让 Astra 把它们啃下来，唯一行得通的办法，就是把它开到 ultra，给它一大堆子代理，然后告诉主线程，你唯一的工作就是把子代理派出去，给它们计时。它们要是停了，或者开始偷懒，就继续推。它就是那台一直在推的机器。这有点像大公司里的一种情况，你知道，开发者升到当管理者，就升到了自己不胜任的那个位置。但有时候，公司其实很想让开发者继续写代码，同时又去管别人。对我来说正好相反。我不想让主的那个去写代码、去跑工具。我只想让它用最好的方式告诉别人该怎么做，然后审查，再把结果带回来。它一在这儿跑起来，那就不对了。对。就是这样。这就是 Dots 的那个想法。"
+  },
+  {
+   "at": 2562,
+   "end": 2597,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Wow. I mean, you can get a flash command that is That's all dots are. I don't think that's all dots are. I think dots is a personal assistant. How I use dots. It does shell stuff out, like it can fire off Codex threads, which I found it's very non-deterministic how it does that. Like more aggressively than I would like it to be. It doesn't I don't trust it. going to say, there's just something really broken with the whole model of like where the where execution's happening. And like Codex and dots and like yeah, it's like really confusing. Okay, so to piggyback on the model discussion, we just talked about the the two big ones. Other models that you guys have been trying, thinking about?",
+   "zh": "哇。我是说，你可以做一条 flash 命令，人家说 Dots 全部就是这个。我不觉得 Dots 就只是这个。我觉得 Dots 是个个人助理。我是这么用 Dots 的。它会往外调 shell，比如能拉起 Codex 的线程。我发现它这件事做得非常不确定，比我希望的更激进。它不，我不信任它。我正要说，执行到底发生在哪儿，整套这个模式真的有地方坏了。还有 Codex 和 Dots，对，真的很让人糊涂。好，那接着模型的讨论说，我们刚聊了那两个大的。你们还在试、还在想的其他模型呢？"
+  },
+  {
+   "at": 2597,
+   "end": 2638,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Where's Haiku? Where's Haiku? Yeah, we're The one-year anniversary is coming up like next week. I'm not Of Haiku. Of Haiku 45. Really? Haiku 45 is almost 1 year old. It's like It's like October or November. Luna is not doing those small, fast, kind of longevity models. Luna is great for speed, for like small stuff. Tara, where's Tara? What happened? I don't know. I thought that they had a It's just so annoying. Do you remember the lineup they were like Tara You know, Luna, Tara, Soul. It's this beautiful thing and like Open AI fixed all of them. And then they were like, \"Okay, now it's 6 Astra. Wait a minute, 6.1 Soul.\" And then you're like, \"For Luna?\" Like and then you're like, \"What happened to Tara?\"",
+   "zh": "Haiku 在哪？Haiku 在哪？对，我们。一周年快到了，大概就下周。我不是说。是 Haiku 的。是 Haiku 4.5 的。真的吗？Haiku 4.5 都快一岁了。大概是十月或者十一月。Luna 不做那种又小又快、还能撑很久的模型。Luna 在速度上很好，适合小东西。Tara 呢，Tara 去哪了？出什么事了？我不知道。我以为他们有过。这真的太烦了。你还记得他们那个阵容吗，Tara，你知道的，Luna、Tara、Soul。那套多漂亮，然后 OpenAI 把它们全改了。然后他们说，好，现在是 6 Astra。等一下，6.1 Soul。然后你就问，那 Luna 呢？然后你又问，Tara 怎么了？"
+  },
+  {
+   "at": 2638,
+   "end": 2670,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "They're like, \"That's out now.\" And you're like And it's 1 week after 6.1 week later. The Open AI finally got their together with the naming. Soul, Tara, and Luna was beautiful and easy to understand, but they screwed it up like No one used Terra. Yeah. So then like saying like oh, this is like you know X you know like five like six Terra wouldn't have done anything for No. So I think they did six Sol because the brand was good. Exactly. And that that's all it was. Yeah. And then Sol should be Terra, Sol should be Terra, and and Luna should stay the same. And",
+   "zh": "他们说，那个已经没了。然后你就，而且是 6.1 之后一个星期。一个星期之后。OpenAI 终于在命名上把事情理顺了。Soul、Tara 和 Luna 又漂亮又好懂，但他们搞砸了。没人用 Terra。对。所以那种说法，哦这就是，你知道，像五、像六，叫 Terra 也不会有什么用。不会。所以我觉得他们做了 6 Soul，是因为这个牌子好。没错。就是这么回事。对。然后 Soul 应该是 Terra，Soul 应该是 Terra，Luna 应该保持原样。而且"
+  },
+  {
+   "at": 2670,
+   "end": 2700,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "they should have but the one was Terra wasn't But no, OpenAI needed a fable class model. They needed a Yeah, they needed something better than the normal one. They couldn't call it Sol. Um Sam refers to the next models as whatever next hugest celestial body there is. That's how he mentioned kind of the next models Yeah. Yeah. Galactus, Nova, Supernovas You got to do Galactus. Nebula Yeah, Nebula. Grok Nebula I I I may be the only person I know that uses Muse Spark. I use Muse Spark. I love Muse Spark. Oh my god, you're such a Muse shill.",
+   "zh": "他们本来应该这样，但那个一号是 Terra，对吧？但不，OpenAI 需要一个 Fable 这个级别的模型。他们需要。对，他们需要一个比普通那个更好的。他们不能把它叫成 Soul。Sam 说起后面的模型，都是用下一个最大的天体来命名。他就是这么提后面那些模型的。对。对。Galactus、Nova、Supernova。你得上 Galactus。Nebula。对，Nebula。Grok Nebula。我可能是我认识的人里唯一在用 Muse Spark 的。我用 Muse Spark。我爱 Muse Spark。我的天，你真是 Muse 的托。"
+  },
+  {
+   "at": 2700,
+   "end": 2736,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Okay, yes. Yes. [laughter] Um It's one First of all it's 1 million contacts multimodal. Right? Other models don't give me that unless use it for? What do you use it Speed and Like where? Like coding or newsletters No, no, definitely not coding. Okay. Definitely not coding. The cheapest until like Jev came out and started to rethink a lot of stuff, I would just like chuck huge chunks of text at it. Especially on the contributor Luna replacement Yeah, but but but multimodal is also you can you can send it videos and say, \"Hey, when did Ben say this thing?\" For example. And not transcription wise, it can hear. So it can it can hear like the you know all the claps for example. Does",
+   "zh": "好，是。是。（笑）嗯，首先，它有一百万的上下文，而且是多模态。对吧？别的模型不给我这个。你拿它干什么？你用它做什么？速度，还有。比如用在哪？写代码，还是写通讯？不不，绝对不是写代码。好。绝对不是写代码。在 Jev 出来、开始让人重新想很多事情之前，它是最便宜的，我就把大段大段的文本扔给它。尤其是拿来当 contributor 上的 Luna 替代。对，不过多模态也是，你可以给它发视频，然后说，嘿，Ben 是什么时候说了这句话？举个例子。而且不是靠转写，它听得见。所以它听得见，你知道，比如所有的掌声。那"
+  },
+  {
+   "at": 2736,
+   "end": 2767,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Gemini also do that? They do that Yeah, but it's the same as Gemini. Gemini is kind of behind Wait, all right. So you think Muse Spark is better than anything Gemini has? No, Muse Spark is just more more useful and significantly cheaper. Muse Spark is cheaper than than Gemini is just Including the the the train on that train on me daddy mode. Yes, the contributor mode. [laughter] Train on me daddy. Uh and they will, don't worry. Also Muse Spark is what's running news as well. And it's it's good enough for most assistant tasks, I think.",
+   "zh": "Gemini 也能这样吗？他们能。对，不过这跟 Gemini 一样。Gemini 有点落后。等一下。所以你觉得 Muse Spark 比 Gemini 有的任何东西都好？不，Muse Spark 只是更有用，而且便宜得多。Muse Spark 比 Gemini 便宜，就是包括那种拿我去训练吧爹地的模式。对，contributor 模式。（笑）拿我去训练吧，爹地。呃，他们会的，别担心。另外，跑新闻的也是 Muse Spark。而且我觉得它应付大多数助手的任务，已经够好了。"
+  },
+  {
+   "at": 2767,
+   "end": 2806,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah, yeah. It's okay. Grok? Yeah, it's so bad. Grok 4.7 was a disappointment. Oh my god. I was like, all right, the Cursor folks will give Elon the data he needs to train the models finally. Yeah, you guys are right. I don't see, you know, someone releases, you download it, and what do you what do you try and then like What's your bench? Yeah. Well, there's like there's two sides of where I think they screwed them up on this one. Is one, the pricing. They were so hyped to say that it's like a better model but the same price. And that's just flat out not true. Because if you increase the if you go over 200k in the context window, you double in price. If you turn on fast mode, you double in price. And then if you do both at the same time, you nearly triple in price.",
+   "zh": "对对。还行。Grok 呢？对，它太差了。Grok 4.7 让人失望。我的天。我当时想，行吧，Cursor 的人会把 Elon 训练模型需要的数据给他，这下终于有了。对，你们说得对。我看不出来，你知道，有人发布了，你下载下来，你到底先试什么，然后就。你的基准是什么？对。嗯，我觉得他们这次在两方面搞砸了。一个是定价。他们特别起劲地说，这是更好的模型，但价格一样。而这根本不是真的。因为上下文窗口一旦超过 200k，价格就翻倍。如果你打开快速模式，价格再翻倍。然后如果两样同时开，价格几乎变成三倍。"
+  },
+  {
+   "at": 2806,
+   "end": 2848,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "It's like one one and a half X. So, it really ends up being a very expensive model. And then the thing that they're really struggling on is their token efficiency is awful. It will do so many steps, so much reasoning. It's awful. And it just kind of it doesn't I don't know what purpose it serves because it's not it's not the fast model, that's now Muse. It's not the cheap model, that's Muse or Lunar whatever. And it's not the capable model, that's Opus. Like Opus is not that efficient, but it's so capable, it's fine. And you're paying Opus prices on Grok. The only thing that it does feel good in is Grok Bot because they did RL the model on Grok Bot. And that's kind of what I feel like happened is they just sacrificed it to Grok Bot.",
+   "zh": "大概是一倍、一点五倍。所以它最后真的变成一个非常贵的模型。然后他们真正挣扎的是，token 效率太差了。它会走特别多的步骤，做特别多的推理。糟糕透了。而且我不知道它到底是干什么用的，因为它不是那个快的模型，快的现在是 Muse。它不是那个便宜的模型，便宜的是 Muse，或者 Luna 什么的。它也不是那个能干的模型，能干的是 Opus。Opus 的效率也不怎么样，但它能力太强，所以没关系。你在 Grok 上付的是 Opus 的价格。它唯一让人感觉好的地方是 Grok Bot，因为他们在 Grok Bot 上给这个模型做了 RL。我感觉实际发生的就是，他们把它牺牲给了 Grok Bot。"
+  },
+  {
+   "at": 2848,
+   "end": 2880,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Grok Bot and the Grok tool itself. So, Grok is not only the model, Grok is also the product grok.com. And inside Grok inside XAI, that has access to real-time data from Twitter, which no other model has. And that gives it like superpowers in research. Has anyone used Grok in X x.com? Yes, all the all the time. Every day. It's the best research model. Why? I I I try using it all the time and it it it always says it doesn't know my username. They fixed it. There was a bug for like a month and a half. [laughter] I hated this. IT WAS SO RIDICULOUS.",
+   "zh": "Grok Bot，还有 Grok 这个工具本身。所以 Grok 不只是那个模型，Grok 也是产品 grok.com。而且在 Grok 里面，在 xAI 里面，它能拿到 Twitter 的实时数据，别的模型都没有。这让它在研究上有了超能力。有人在 X 上用过 Grok 吗，就是 x.com？用过，一直在用。每天都用。它是最好的研究模型。为什么？我一直试着去用，它总说不知道我的用户名。他们修好了。这个 bug 大概存在了一个半月。（笑）我恨死这个了。真的太离谱了。"
+  },
+  {
+   "at": 2880,
+   "end": 2918,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I WOULD BE LIKE FANG, PULL up the tweet where I said this. It's like, \"Hi, I don't know WHO YOU ARE.\" [laughter] IT WAS FUNNY? A MONTH? YEAH. The The built-in integration within X didn't know who you are. grok.com knew who you are because you were logged in to that person. It was literally a bug. The most useful thing with it though [laughter] Maybe they used grok to build it. They need They need raindrop. They need raindrop. [laughter] Have you tried the grok built CLI? It's actually a great CLI, but the most useful thing for it is you can have other agents call it as a sub agent because it has native X API capability. For unlimited for free. So",
+   "zh": "我就会说，行，把我说过这话的那条推文拉出来。它说，嗨，我不知道你是谁。（笑）这好笑吗？一个月？对。X 里面内置的那个集成不知道你是谁。grok.com 知道你是谁，因为你是以那个人的身份登录的。这根本就是个 bug。不过它最有用的地方（笑），也许他们是用 Grok 做出来的。他们需要 raindrop。他们需要 raindrop。（笑）你试过 Grok 自带的 CLI 吗？它其实是个很棒的 CLI，但对它来说最有用的是，别的 agent 可以把它当子代理来调用，因为它原生就有 X API 的能力。无限量，还免费。所以"
+  },
+  {
+   "at": 2918,
+   "end": 2951,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "instead of an MCP to Twitter, you're just like, \"If you need Twitter stuff, go to It's literally just have it call that to go get some posts or whatever you need. It'll just do it. I I I don't know if it's unlimited. You know, Yeah, I I that's fair. I don't want to say It does search. I've used it for like Because they released this, they released the auth connector to X and you know, Pi and Hermes and everyone basically can use the same thing without even their their tool. You can just like add it and do auth and then it just works. I don't Is the tool exposed when you do that? Like I it I don't think it adds the MCP to like Pi or whatever when you do",
+   "zh": "不用去接一个到 Twitter 的 MCP，你就说，你要是需要 Twitter 上的东西，就去。说白了就是让它调用那个，去拿一些帖子，或者你需要的任何东西。它就会去做。我不知道它是不是无限的。你知道，对，这话公平。我不想把话说死。它确实能搜。我用过，因为他们发了这个，他们发了连到 X 的 auth 连接器，你知道，Pi 和 Hermes，基本上大家都能用同一套，甚至不用他们自己的工具。你只要加进去，做一下 auth，然后就能用。我不知道。你这么做的时候，那个工具有没有暴露出来？我觉得，你这么做的时候，它并不会给 Pi 之类的加上那个 MCP。"
+  },
+  {
+   "at": 2951,
+   "end": 2985,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "that. You you can search Twitter without paying for X AI X API tokens. Oh, I did Yeah, you can well You can search Twitter though. You can, but I don't know if like that tool I don't think just magically gets exposed when you sign in with The search Twitter tool? Mhm. Yes. I mean it's Let's check this after this. Yeah, I'm actually I'm so curious. I definitely I know that like my Hermes agent used to do the bird CLI that Peter released with OpenClaw and then because it was not it was frowned upon to use and they were starting banning folks that used like the cookie via browser thing, I switched to that via the auth and it works.",
+   "zh": "那样。你可以搜 Twitter，而不用给 xAI 的 X API token 付钱。哦，我确实这么干过。对，你可以，嗯。你是可以搜 Twitter 的。你可以，但我不知道那个工具，我不觉得你一登录，它就魔法一样暴露出来。搜 Twitter 的那个工具？嗯。对。我是说，这个等下再查。对，我其实特别好奇。我很确定，我知道我的 Hermes agent 以前用的是 Peter 跟 OpenClaw 一起放出来的那个 bird CLI，后来因为这么用不被看好，而且他们开始封那些用浏览器 cookie 那套的人，我就换成了走 auth，它能用。"
+  },
+  {
+   "at": 2985,
+   "end": 3045,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah. Oh, I could totally see the auth working. It's just I don't know the tool. You would have to give it the tool somehow. Okay, other model stuff. Deep seek. I don't know if people are are deep into that. Like basically open models versus closed, like how do you how are you guys feeling about the general landscape? So, I have four DGX Sparks. I when GLM 53 flash came out, as soon as I saw the size of the model, I was like, oh, okay, so these are going to spike in value. So, I instantly just text my dad and had him go to Micro Center back in Ohio and get the Sparks for me before they went up in price. So, I actually got a pretty good deal on them. I've made money off of compute, which is stupid. It should not be appreciating in value. But regardless, the point is I've been using V4.1 flash on the Sparks and it's really cool. It actually can get stuff done. It's very fun and kind of useful for any hill climbing problem where you can grind it down with verification or whatever. It is not useful for like true day-to-day work. Like there is such a chasm between the frontier from OpenAI",
+   "zh": "对。哦，我完全看得出 auth 能用。只是我不知道那个工具。你总得用某种办法把工具给它。好，别的模型的事。DeepSeek。我不知道大家有没有深挖这个。就是开源模型和闭源模型，你们现在对整个局面是什么感觉？我有四台 DGX Spark。GLM 53 Flash 一出来，我一看模型的大小，就觉得，哦，好，这些要涨价了。所以我马上给我爸发了短信，让他回俄亥俄的 Micro Center，在涨价之前把 Spark 给我买了。所以我其实买得挺划算。我靠算力赚到了钱，这很蠢。它不该增值。但不管这些，重点是我一直在这些 Spark 上跑 V4.1 Flash，真的很酷。它确实能把事情做完。很好玩，而且对任何可以靠验证一点点磨下来的爬山问题，都挺有用。真正的日常工作它帮不上。从 OpenAI 的前沿这边，隔着这么一道鸿沟"
+  },
+  {
+   "at": 3045,
+   "end": 3106,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "and and literally everything else that I I don't think it's all that viable at the moment. There was a moment where open source models were like six month months behind and then when Opus came out, the 5.5, the latest one in 6.1, so like the frontier like shot straight up in the air and open source is not not there. Maybe a year. Yeah, no, Opus felt super stalled out. I run this benchmark called Slot Code Bench, which is out of like a lab in University of Wisconsin and I hadn't looked at the new data, but the the biggest thing I saw that was like, it's less like, okay, this is a like perfect benchmark of everything cuz I only ran a subset, but it was like for the you know, 10 problems we did, Opus 5.5 wrote three times as much code as it would at the time it was like Sonnet 5 and Opus 4.8. They both had about 10,000 lines, this thing wrote like 30,000 lines and literally half of it was tests. Like oh, more than like 51% of the code was tests, whereas the other models were at like 10 or 15% code as tests. Really excited to publish the Opus 5.5 stuff. I don't have all the data together yet, but like yeah, it felt like Claude had just like",
+   "zh": "到其他所有东西那边，我觉得眼下这根本不太可行。曾经有一段时间，开源模型大概只落后六个月，然后 Opus 出来了，5.5，6.1 里最新的那个，前沿就像直线往上冲，开源不在那个位置。也许要一年。嗯，不对，我觉得 Opus 当时完全停滞了。我跑一个叫 Slot Code Bench 的基准，是威斯康星大学一个实验室做的。我还没看新的数据，但我看到最大的一点是，它不太像是，好，这是一个什么都能衡量的完美基准，因为我只跑了一个子集，但对我们做的那大概 10 道题，Opus 5.5 写出来的代码是当时的三倍，当时大概是 Sonnet 5 和 Opus 4.8。那两个都是大概一万行，这个写了大概三万行，而且整整一半是测试。超过 51% 的代码是测试，而别的模型大概只有 10% 或者 15% 的代码是测试。我特别想把 Opus 5.5 的结果发出来。数据还没凑齐，不过对，感觉 Claude 就像"
+  },
+  {
+   "at": 3106,
+   "end": 3167,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "flattened out. It was just like like the Fable was an interesting thing, but none of their like daily use models were and suddenly it's like okay the new conversation is the new is the new hot To me model capability kind of like the generations quote unquote is there's these like lines of capability that everything almost like comes and approaches and then like doesn't quite cross like they're almost as soon as they get right up next to it they can't get past until you break through that ceiling and then you get to that next plateau of capability and then can catch up. But I feel like at the end of the summer before we got Astra and 5.1 Fable 5.1 everyone was kind of getting up towards that ceiling of the last generation of sub agent orchestration long running tasks cap- very capable of solving a lot of problems but didn't quite have that power and discernment that are now in the new models and there's just a certain something that is a step function above that now 6.1 Sol Astra and Opus 55 and Fable 5.1 to me are the only ones that are in this like new category. Now what can you name the category?",
+   "zh": "走平了。就是，Fable 是个有意思的东西，但他们那些天天在用的模型都不是，然后突然之间，新的话题就成了新的热点。对我来说，模型能力那种所谓的分代，就是有一条条能力的线，所有东西几乎都会靠上来，然后就是跨不过去，它们一贴到线边上就过不去，直到你冲破那层天花板，然后到下一个能力的平台，别人这才能追上来。但我感觉，在夏天结束之前，在我们拿到 Astra，还有 5.1、Fable 5.1 之前，大家都在往上一代的天花板挤，就是子代理编排、长时间的任务，非常能解决很多问题，但还没有现在这些新模型里的那种力量和判断力。现在有某种东西，是在那之上的一个阶跃。6.1 Soul、Astra、Opus 5.5 和 Fable 5.1，在我看来是唯一进了这个新类别的。那你能给这个类别起个什么名字？"
+  },
+  {
+   "at": 3167,
+   "end": 3202,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Uh for me I think the big ones on this new generation is like really good swarming behaviors the ability it's it's hard to put a strict word on anything other than trust. Like there's a certain level of trust that these new models have. Yeah. Also there's always some like mean thing that that has to go viral and the new generation comes out and like the blender slop or the video game Oh yeah it's actually a great point. Yeah. Yeah that's just this marketing right? Like yeah. No I agree with you like if you think about you know people are connecting their email like to models now like giving the ability especially send email. You couldn't have done that a year ago.",
+   "zh": "对我来说，这一代真正大的，是那种很好的蜂群行为，是这种能力。除了信任，很难给别的东西安一个严格的词。这些新模型有某种程度的信任。对。而且总有些刻薄的东西必须出圈，新的一代一出来，就像 Blender 那种糊，或者那个电子游戏。哦对，这点说得真好。对。对，这不就是营销吗？对。我同意你说的。你想想，大家现在把邮箱接到模型上，尤其是让它能够发邮件。一年前你做不到这个。"
+  },
+  {
+   "at": 3202,
+   "end": 3236,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "No. Or two I mean you could have. You probably would have done most of your good job. That would like took in text and send an email but like no one in their right mind would have done that on their actual email but now you would. And not not cuz all the emails would be bad. one in their right mind. [laughter] I was very specific now though. How else would you get any helpful personal assistant if it doesn't know you? No, I'm saying a year ago. A year ago when OpenClaw came out. Yeah. Yeah, I I will say I will just keep my same qualifications. Like I got so many emails. In fact, we had our Azure rep, like our company Azure rep.",
+   "zh": "做不到。或者两年前。我是说，你当时也可以。你大概能把大部分活干得还行。就是收进一段文本，发出一封邮件，但任何一个脑子正常的人都不会在自己真正的邮箱上这么干，可现在你会。而且也不是因为那些邮件都会很糟。脑子正常的人。（笑）不过我现在说得很具体。它要是根本不了解你，你又怎么能得到一个真正有用的个人助理？不，我说的是一年前。一年前 OpenClaw 出来的时候。对。对，我还是要说，我还是保留我原来的那些限定。我收到了好多这种邮件。事实上，我们的 Azure 代表，就是我们公司的 Azure 代表。"
+  },
+  {
+   "at": 3236,
+   "end": 3296,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Oh. We got like started getting like oh uh messages from their OpenClaw like \"Hi, I'm this person's OpenClaw.\" Like on our like person like our dedicated support. Chat and we're like so we get these from people who I knew personally. Yeah, yeah, yeah, I know. Yeah, so like When I saw again I think on the record when I saw Pliny the Liberator cannot liberate Matthew Berman's OpenClaw I and then I saw a bunch of benchmarks they're doing about prompt injection specifically and the latest models Astra I think it started with Astra and Opus 5.5. They have benchmark jailbreak prompts and like prompt injection benchmarks. Uh these models do not trust anything that comes outside of the kind of the system prompt and you cannot inject the email into that level. So they have a very high hierarchy of like uh their constitution which is Opus 3.0, right? And then the system prompt which the the creator developer gives and then the content and they always wrap this with like very This is from here to here. This is like an email. This is whatever. It's really hard to jailbreak these models. I I with a prompt injection.",
+   "zh": "哦。我们开始收到他们的 OpenClaw 发来的消息，比如「嗨，我是这个人的 OpenClaw。」就发到我们那种专属支持的聊天里。我们就，这些是我私下认识的人发来的。对对对，我知道。对，所以当我又看到，我觉得这是可以公开说的，当我看到 Pliny the Liberator 解放不了 Matthew Berman 的 OpenClaw，然后我又看到他们在做一堆基准，专门测提示注入，最新的那些模型，Astra，我觉得是从 Astra 和 Opus 5.5 开始的。他们有越狱提示的基准，也有提示注入的基准。这些模型不信任任何从系统提示外面进来的东西，你没办法把邮件注入到那个层级。所以它们有一套很高的层级，先是它们的宪法，也就是 Opus 3.0，对吧？然后是系统提示，那是做它的开发者给的，然后才是内容。而且它们总会包得很明确。从这里到这里。这是一封邮件。这是别的什么。这些模型真的很难越狱。用提示注入，我。"
+  },
+  {
+   "at": 3296,
+   "end": 3357,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah, I'm again I'm I'm prompt injection is definitely not the only thing I'm worried about. Like I think there's a lot of other ways to cause your life a lot of harm that is not other people trying to do it. Yeah, the models are just trying to be helpful. Yeah, stupidity is much more dangerous. And I I I also think that there's still I I guarantee that there are ways of doing prompt I don't even know prompt injection is the right word, but like as soon as you have your model responding to emails and you want it to give information some of the time, it is going to misclassify whether that is because someone's intentionally trying to get it to misclassify or not like what it should or should not share. And I think I I I I believe that to be to be true. I I will ask for evidence from all of you. Like have you seen this on your timelines? You follow a lot of people that try a bunch of stuff. Instinct is like a very, you know, someone asked their friend's Instinct for the Netflix 2FA code from their email, and they just gave it. Instinct, I think uses open-source models. I don't know, don't quote me on this, but I don't think they can scale right now. Maybe like maybe later on, but in the beginning they were different. It's very much like I have mine set up it's",
+   "zh": "对，我再说一遍，提示注入绝对不是我唯一担心的事。我觉得还有很多别的方式，会让你的生活受到很大的伤害，而且不是别人在故意这么做。对，模型只是想帮忙。对，愚蠢要危险得多。而且我也觉得，现在仍然，我敢保证还有办法去提示它，我甚至不知道提示注入是不是合适的词，但只要你的模型开始回邮件，而你又希望它有的时候把信息给出去，它就会把该分享的和不该分享的分错，不管这是不是因为有人故意想让它分错。我觉得这是真的。我要向你们所有人要证据。你们在自己的时间线上见过这种事吗？你们关注很多人，他们会试一大堆东西。Instinct 就是一个很，你知道，有人去问朋友的 Instinct，要邮箱里的 Netflix 二次验证码，它就给了。Instinct，我觉得用的是开源模型。我不知道，这话别引用我，但我不觉得他们现在能扩规模。也许以后可以，但一开始他们是不一样的。非常像是，我把自己的设成"
+  },
+  {
+   "at": 3357,
+   "end": 3392,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "such that it will like give me a permission prompt before it sends the email. Yours? Uh Grok Bot. I use Grok Bot for all my stuff. With your emails connected? Mhm. They are connected and I do use them there, but it is not allowed to send anything until I can see the actual draft and then hit send myself. And this little expander thing that you need to scroll to the right to see the worst UI ever in reviewing what it's about to send. No, the one in Grok Bot is great. It just shows it as a message. Yeah, it's just it's like a normal text. It's great. But the what I have noticed though is like it's rare, but I'd say like one in five times there is details and things in there that I do not want to have. Like it will even do something",
+   "zh": "它会在发邮件之前，先给我一个权限提示。你的？呃，Grok Bot。我所有事情都用 Grok Bot。你的邮箱接上了吗？嗯。接上了，我也确实在那儿用，但它不允许发出任何东西，直到我能看到真正的草稿，然后自己点发送。还有那个小小的展开条，你得往右滚才能看见，审它准备发什么的时候，那是我见过最差的界面。不，Grok Bot 里的那个很好。它就显示成一条消息。对，就是普通的文本。很好。但我注意到的是，虽然少见，大概五次里有一次，里面会有我不想要的细节和内容。它甚至会去做某种"
+  },
+  {
+   "at": 3392,
+   "end": 3445,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "weird like it's a support email and it'll be like, \"Hi, I am this person's Grok Bot.\" And I'm like, \"No. Stop. Like do don't do that. I have to trim it a lot. It is not at the point where I will let it fire and forget.\" So okay, so but but let's draw a line here, right? So I mean we're talking about a year ago people were not connecting their emails. There is a line between read-only the ingestion. I was saying sending emails. Oh, okay. I didn't Oh, now I realize this. I don't send really any email. I really read what it sends. Yeah, I was talking about I was talking about sending. Reading is like a different thing. Yeah. I mean if you're especially a year ago things were a lot more closed off, less like, you know. I think now people are just connecting everything. I mean it has access to like our work stuff, our personal stuff, you know, they can post on Twitter for you. As your email, you know, it's kind of Here's the problem that I'm noticing after using a lot of these tools. I got to wonder if people just choose one and just stick with it because there is a attention span cost at switching between those tools. I'm now at a point where I don't remember which conversation I had with which assistant.",
+   "zh": "挺怪的，就像一封客服邮件，它会写成：「嗨，我是这个人的 Grok Bot。」我就说：「不。停。别这么干。」我得大量裁掉。它还没到我能发完就撒手的地步。好，那我们在这儿划一条线，对吧？我的意思是，一年前大家还没把自己的邮箱接上去。只读的摄入，和发邮件，中间是有一条线的。我当时说的是发邮件。哦，好。我没……哦，我现在明白了。我其实几乎不发邮件。我是在读它发出去的东西。对，我刚才说的是发送。读是另一回事。对。我是说，尤其一年前，事情封闭得多，没那么，你知道。我觉得现在大家什么都在接。我是说它能碰到我们工作上的东西、私人的东西，你知道，它们还能替你发 Twitter。当作你的邮箱，你知道，有点……这是我用了很多这些工具之后注意到的问题。我在想，大家是不是就选一个，然后一直用下去，因为在这些工具之间来回切，是有注意力成本的。我现在已经到了记不清哪段对话是跟哪个助手聊的。"
+  },
+  {
+   "at": 3445,
+   "end": 3486,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "I know, I agree. And and importing their memories one to another, that's not good enough because their memories kind of move in different ways, right? If you think about those clones, the clones start living different lives at some point and this one knows about this thing. This This one did this thing and you're like, all right, is it use case based? Do I go to Grok only for work stuff and then news for personal management stuff? How do you guys deal with like that? I would love to know. I I don't have a good solution. I have a solution. It's not good. I've been trying to rip things out like the the idea of like an MCP gateway. One of my friends is building a company around this. It's called Executor where it's basically just a central It's a big MCP gateway that has all my connections, my Gmail, my Google Drive, Notion, etc.",
+   "zh": "我知道，我同意。而且把它们的记忆从一个导到另一个，那还不够，因为它们的记忆是以不同的方式在走的，对吧？你想想那些克隆，克隆到了某个时候就开始过不同的生活，这个知道这件事，那个做了那件事，你就会想，好吧，是按使用场景来分的吗？我是不是工作的事只去找 Grok，然后私人管理的事去找新闻？你们怎么处理这种事？我很想知道。我没有好办法。我有一个办法。不算好。我一直在试着把东西抽出来，就像 MCP 网关这个想法。我有个朋友在围绕这个做一家公司。叫 Executor，基本上就是一个中心，它是一个大的 MCP 网关，里面有我所有的连接，我的 Gmail、我的 Google Drive、Notion，等等。"
+  },
+  {
+   "at": 3486,
+   "end": 3527,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "And that lives on one of my Linux boxes at home and I have a Cloudflare DNS proxy so that I can get to it on any device. And now whenever I set up a personal assistant, I do one MCP connection, I log in, and then that now it has all my tools. And all those tools include like the skills to use them, to use them, the config for each of them. So my like core connections layer, which is the really obnoxious part to set up, is centralized in one place and all my devices share it. So if I change something there, it's changed everywhere. And the actual like interface for working for things ends up being pretty lightweight. Like I don't Integrate one or Grok Bot. You said like Grok Bot shows you what it's about to send over to email. Will that generalize and instead of their Gmail connector, it will go to your connector and still show you the preview?",
+   "zh": "它跑在我家里的一台 Linux 机器上，我有一个 Cloudflare 的 DNS 代理，这样任何设备都能连上。现在每当我搭一个私人助手，我就做一个 MCP 连接，登录，然后它就有了我全部的工具。这些工具还包括使用它们的技能，还有每一个的配置。所以我那个核心连接层，也就是设置起来特别讨厌的那部分，集中在一个地方，我所有的设备共用。我在那儿改一点，到处都改了。真正用来干活的界面最后就变得很轻。比如我不会去整合某一个，或者 Grok Bot。你说过，Grok Bot 会把要发到邮箱的内容先给你看。这个能推广吗？不走它们的 Gmail 连接器，改走你的连接器，它还会给你看预览吗？"
+  },
+  {
+   "at": 3527,
+   "end": 3571,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "It works pretty well. There's a couple things that I need to work out on it. I do There are some connectors per thing that I do still use natively like the finance connector. I really like the finance connector in Grok Bot. It's useful. But like that I'm not going to do over a direct MCP. Just a note that he said a year ago people were not going to connect their emails even for sending. Now you're talking about connecting your bank data. Well, read only and write Read only is the line here. Like I'm still pretty much at read only write with explicit permission is where I am. The only one I want I want write for is I want it to be able to create I have people who are very sophisticated about every single vendor gets a different like virtual credit card. I'm way too lazy to do that. But if I could tell my agent like, hey, go go make a virtual card on Mercury and That's uh that's link.com.",
+   "zh": "效果还不错。还有几件事我得理顺。有些连接器我还是用原生的，比如金融连接器。我真的很喜欢 Grok Bot 里的金融连接器。它有用。但那个我不会走直接的 MCP。插一句，他说一年前大家甚至为了发邮件都不会去接邮箱。现在你在说接银行数据。嗯，只读，还有写入。这里的线是只读。我基本上还是停在：只读，写入要明确许可。我唯一想要写权限的，是我想让它能去创建。我认识的人很讲究，每个商家都用一张不同的虚拟信用卡。我太懒了，不会那么干。但如果我能跟我的 agent 说，嘿，去 Mercury 上开一张虚拟卡。那，那是 link.com。"
+  },
+  {
+   "at": 3571,
+   "end": 3621,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "That's link.com. That's their wallet. That's exactly what it does. You give your agent that skill, it generates a virtual card for every purchase that your assistant does. And then you approve it. Huh? Through Mercury? No, link from Cipher. Oh, yeah. Uh I need Yeah. [laughter] Yeah, but they're all still charging my one card, so I can't set like individual limits or set the expirations and Yeah. I don't know if you got I don't want to give my agent a card. I just want a different card for AWS versus like G Suite versus etc. All righty, for dessert, we have lemon blueberry cake and dark chocolate creme brulee mousse. I use Instinct for things that don't need my data like this like going and communicating with businesses and helping me book like events and things like this. And then my personal assistant is still a Git repo with a ton of scripts and like the whole brain the whole memory system is markdown and I just launched Coda or Codex in there when I want to do stuff.",
+   "zh": "那是 link.com。那是他们的钱包。它干的就是这个。你把那个技能给你的 agent，它就会给助手做的每一笔消费生成一张虚拟卡。然后你来批准。啊？通过 Mercury？不，是 Cipher 的 link。哦，对。我需要。对。（笑）对，但它们还是都在扣我那一张卡，所以我没法设单独的额度，也没法设到期时间，对。我不知道你听明白没有。我不想把一张卡交给我的 agent。我只是想要 AWS 一张卡，G Suite 一张卡，诸如此类。好了，甜点有柠檬蓝莓蛋糕，还有黑巧克力焦糖奶油慕斯。不需要我的数据的事，我用 Instinct，比如去跟商家沟通，帮我订活动这种。然后我的私人助手还是一个 Git 仓库，里面一大堆脚本，整个大脑、整个记忆系统都是 markdown，我想做事的时候，就在里面启动 Coda 或者 Codex。"
+  },
+  {
+   "at": 3621,
+   "end": 3651,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Mine is pretty much Grok Bot for all like work administrative type stuff, but then I do still do a lot of the management through Codex itself. I'm using Poke Lindy at the same time [laughter] and it's hell. Altrive message? I don't uh yeah yes yes. Uh in Slack. Uh so, I really like the the bridge into Slack. Yeah, I I'm realizing how silly this sounds as I say it, but um so Dots, you know, very recently uh Devin sent me out a bunch. As an as an assistant and not as a cleaning agent an agent as a bot. Yeah, yeah. Uh",
+   "zh": "我基本上工作上那些行政类的事都用 Grok Bot，但很多管理我还是通过 Codex 自己来做。我同时在用 Poke 和 Lindy（笑），简直是地狱。消息怎么过来的？我没有，呃，对，对，对。在 Slack 里。所以我真的很喜欢接到 Slack 的那座桥。对，我说出来的时候自己都觉得这有多傻，不过 Dots，你知道，就在最近，Devin 给我发出来一大堆。是作为助手，不是作为清洁 agent，是作为一个 bot。对，对。呃"
+  },
+  {
+   "at": 3651,
+   "end": 3682,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Codex, my own thing that I built that has access to like my own little Google Drive set up that's just like essentially S3 backed. This guy has zero trust on anything with it. Good. [laughter] Email, I'm very like e- yeah like like I think that you know, you get off code, you get 2FA codes in some cases to your email. I I'm even for read I I'm I'm I'm scared of it. And then there's a long tail of like other like assistants like Orchid, Insta, and etc. that I try. Orchid? Or- I don't know. I forgot. What is Orchid? They had like 2 million views on Twitter, right? Yeah,",
+   "zh": "Codex，我自己做的那个，能进我自己那个小小的 Google Drive，基本上就是 S3 托底的。这人对跟它有关的任何东西都是零信任。好。（笑）邮箱的话，我非常，对，就是我觉得，你知道，你会收到验证码，有些情况下 2FA 码会发到你的邮箱。哪怕只是读，我都害怕。然后还有一条长尾，其他那些助手，像 Orchid、Insta 等等，我都会试。Orchid？Or……我不知道。我忘了。Orchid 是什么？他们在 Twitter 上有大概两百万次播放，对吧？对，"
+  },
+  {
+   "at": 3682,
+   "end": 3732,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "yeah, yeah. This was the one where the guy was like planning a anniversary date or something. Yeah. Yeah. Yeah, that was actually good. And um and Muse too for like marketplace shopping and like that's it. It has um I think it's actually really good uh browser use, actually. Yeah, Muse is surprisingly decent. Surprisingly. Yeah. Yeah. For me, I use uh Codex and I actually don't like do anything else really. I just connect to Codex and have all my tools and also alternative harnesses uh for building as well, but uh that's kind of all I got. I have a Hermes agent that I mostly keep up to date because there's a lot of stuff that I built. Then Grok Bot, around 30 of them doing different things, which I kind of like like the pattern of closing one bot to do a specific thing and then talk. And then uh recently Muse and Dots, probably Muse the most. Oh, and Instinct, yes, Instinct also.",
+   "zh": "对，对。就是那个，那个人在策划一个周年纪念日的约会之类的。对。对。对，那个其实不错。还有 Muse，用来逛 marketplace 买东西，差不多就这些。它有，我觉得它的浏览器操作其实真的很好。对，Muse 出乎意料地不错。出乎意料。对。对。对我来说，我用 Codex，其他真的不怎么做。我就连上 Codex，工具都在那儿，还有用来构建的替代 harness，我大概就这些。我有一个 Hermes agent，我大体让它保持更新，因为有很多东西是我建的。然后是 Grok Bot，大概 30 个，各干各的事。我有点喜欢这种模式，专门关一个 bot 出来做一件具体的事，然后再聊。然后最近是 Muse 和 Dots，大概 Muse 用得最多。哦，还有 Instinct，对，Instinct 也是。"
+  },
+  {
+   "at": 3732,
+   "end": 3778,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Wait, so how do you section them? I that's a problem that I want to bring to the table. Uh so, Grok is mostly for like work-y stuff, Mhm. personal company management. I have like a chief of staff over there, a PM. I have a linear connector between all of them that they all talk through linear to tickets so they can tag each other. That seems to be a pattern that's working. And then uh Muse for one-offs. Muse seems to be the best when I talk to it to do something. Just like record a voice message, like, \"Hey, what about my hotel? How far away is it from this place or that other place? Or when do I need to leave for that place?\" That's Muse like immediately. And I also just send all three of them stuff that don't have a dependency or don't know how to answer the work. If there's a task that all three of them can can do without causing harm, I would send to all three of them, just copy-paste, just to see who's better, who's faster.",
+   "zh": "等一下，那你怎么把它们划分开？这正是我想摆到桌面上的问题。所以，Grok 主要是偏工作的事。嗯。个人的公司管理。我在那边有一个幕僚长，一个 PM。它们之间有一个 Linear 连接器，都通过 Linear 的工单互相说话，这样可以互相点名。这个模式看起来是管用的。然后 Muse 用来做一次性的事。当我开口让它去做事的时候，Muse 似乎是最好的。就像录一条语音：「嘿，我的酒店怎么样？离这个地方，或者那个地方，有多远？或者我得什么时候出发去那个地方？」这种马上就是 Muse。我也会把那些没有依赖的，或者不知道该怎么处理的工作，三个都发。如果一件事三个都能做，又不会造成损害，我就三个都发，复制粘贴，就看谁更好，谁更快。"
+  },
+  {
+   "at": 3778,
+   "end": 3811,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "So, actually for the Grok Bot users, I'm curious, like, do you ever have it dispatch to like Gavin or Codex or anything like that or not? Mhm. Grok bots have cursor integration and it's amazing. So, Grok Bot can work as a chief of staff for you and then he can then kick off a cursor cloud agent for with any of the Well, now they're not getting Astra, right? They're only getting the the small models, but it can kick off like like a Opus 5.5 and you can tell it, \"Hey, like don't do this yourself on your computer. Kick off a Cursor Cloud agent with Opus 5.5 to do this.\"",
+   "zh": "所以，问一下用 Grok Bot 的各位，我很好奇，你们会不会让它派活给 Gavin，或者 Codex，或者这类东西？还是不会？嗯。Grok Bot 有 Cursor 的集成，特别棒。所以 Grok Bot 可以当你的幕僚长，然后它再拉起一个 Cursor Cloud agent，用任何的……嗯，现在它们拿不到 Astra 了，对吧？它们只能拿到那些小模型，但它可以拉起一个 Opus 5.5。你可以跟它说：「嘿，别在你自己的电脑上做这个。拉一个用 Opus 5.5 的 Cursor Cloud agent 来做。」"
+  },
+  {
+   "at": 3811,
+   "end": 3872,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "It's significantly better than obviously the Grok 4.7 that's on the Lambda. So, that's the apparent to like get it to do actual stuff. Even writing, you can ask Grok Bot to always write via cloud uh thing in Cursor. I feel like I have enough code like I feel like between Codex and Devin, like I'm kind of good right now. Yeah, Cursor's good. But it's such it to get anything good out of it, it's so much work. Like you have to set up the cloud environments for every project. You have to get the environment variables, make sure the scripts are good. It's easy for the agent like it's so much work. It's also it's like the it loves developing. So, if you ask it to write something, it'll send a PR. I don't need a PR. I just need an answer. Write this and [laughter] But it loves a good PR and it loves a good pull request, man. I think I One thing I love about Devin that I for some reason, maybe Cursor has fixed this now, but like I I saw like almost every 20 people fall in the same trap. It's like Devin like by default is just like it's just a computer, you know? It's like like an agent on a computer. And like, you know, you can like create a repo, you could like, you know, find like you're using existing repo",
+   "zh": "这明显比 Lambda 上那个 Grok 4.7 好得多。所以这就是让它去干实事的办法。连写东西，你都可以让 Grok Bot 永远通过 Cursor 里的云端来写。我觉得我的代码已经够了。我觉得有 Codex 和 Devin，我现在差不多够了。对，Cursor 是好。但要从它身上弄出任何好东西，得费那么多功夫。你得给每个项目搭好云端环境。你得拿到环境变量，确保脚本是好的。对 agent 来说好像很容易，实际上事太多了。而且它就爱开发。所以你让它写点东西，它会发一个 PR。我不需要 PR。我只要一个答案。把这个写出来，然后（笑）但它就是爱一个好的 PR，也爱一个好的 pull request，哥们。我觉得，我喜欢 Devin 的一点是，不知道为什么，也许 Cursor 现在已经修好了，但我看到差不多每 20 个人都掉进同一个坑。Devin 默认就只是一台电脑，你知道吗？就是电脑上的一个 agent。而且，你知道，你可以建一个仓库，你也可以用现有的仓库"
+  },
+  {
+   "at": 3872,
+   "end": 3933,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "to work across repos, like just a computer. So, it's just like super flexible in that way. Yeah, and so I never have to I like every like wild idea I ever have, I like that's where I go. And whereas like um not not Codex cuz I I think it'll probably die like it's just I close my laptop and like not anything else because it's like, \"Oh, like which repository do you want to work in?\" Figure it out. You have to get the connector, right? Yeah, but like sometimes you don't even want to be in a repository. You just want like a thing, you just have an idea, and if it's trying to work within a repository, it's like, \"Oh, well, I'll add it to this page and I'll like you know like I just like want to see this like try out this new model, try out Jab, try out like whatever it is.\" It's so nice to just have a sandbox. Well, I I this is like the difference also between assistant and like the coding agents. They were built for coding. They're trained to do the diff work. They're trained to write a markdown file, they will connect compared to something, shove it in a box somewhere that is doesn't execute right tests, whatever. I mean, I just tell me tell me like write the thing and and give it back and I think they're like all of them are that. The whole system prompts is like, well, I can't do that. What do you want to code today? You don't want to code. I just want",
+   "zh": "去跨仓库干活，就是一台电脑。所以在这方面特别灵活。对，所以我从来不用……我每一个野想法，都去那儿。而 Codex 不是，因为我觉得它大概会死掉。我一合上笔记本，别的就没了，因为它会说：「哦，你想在哪个仓库里干活？」你自己去搞清楚。你得去把连接器接上，对吧？对，但有时候你根本不想待在仓库里。你就想要一个东西，你就有一个想法。如果它非要在仓库里面干活，它就会说：「哦，那我就把它加到这个页面上。」我其实只想看看这个，试试这个新模型，试试 Jab，试试随便什么。能有一个沙盒，真是太好了。嗯，这也是助手和编程 agent 的差别。它们是为写代码造的。它们被训练来做 diff 的活。它们被训练去写一个 markdown 文件，会连上去，跟什么东西对比，再塞进某个地方的盒子里，那个不执行，写测试，随便什么。我的意思是，我就说，把东西写出来，再交回来。我觉得它们全都是这样。整套系统提示就是，这个我做不了。你今天想写什么代码？你并不想写代码。我只是想"
+  },
+  {
+   "at": 3933,
+   "end": 3967,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "you to be you I'm I'm horrible my model for me. Thank you. Any things other than the these are the common names? Any things that are maybe way lower under the radar that you want to you think deserve more recognition? Uh this isn't on personal assistants, but I do think it is very relevant is 6.1 Soul is much much better than I think most people think it is because of just weird branding stuff that's happened. Six Soul happening last week and now 6.1 Soul happening this week, it's weird, I agree. It's an incredibly good model for an incredibly good price. It is worth looking at and",
+   "zh": "你做你自己。我很糟，我的模型对我来说。谢谢。除了这些常见的名字之外呢？有没有什么也许远远在雷达下面、你觉得值得更多人知道的？呃，这不是私人助手的事，但我觉得非常相关，就是 6.1 Soul 比我觉得大多数人以为的要好得多，就是因为发生了一些很怪的品牌上的事。上周出了 Six Soul，这周又出了 6.1 Soul，挺怪的，我同意。这是一个好得离谱的模型，价格也好得离谱。值得看一看，并且"
+  },
+  {
+   "at": 3967,
+   "end": 3998,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "trying. just like to compete with Opus 5.5? Yes, it is literally just knee- capping Opus 5.5. I heard between the lines don't don't want to name sources that it wasn't named to be Soul and then last minute marketing stuff decided that like, hey, we need to like make up on whatever happened. And the the the headline was that they had an Astra and they pulled it. For a personal assistants? Uh it doesn't have to be personal assistants. Anything underrated. Whatever you're enjoying, whatever you think is cool. For me it will be personal assistants if you don't mind because I think it's an incredible unlock for regular people.",
+   "zh": "去试。就是为了跟 Opus 5.5 竞争吗？对，它就是在专门把 Opus 5.5 废掉。我是听出言外之意的，不想点名来源，它本来不是要被叫成 Soul 的，然后最后一刻市场那边决定，嘿，我们得把之前发生的事圆上。当时的大标题是，他们有一个 Astra，然后又把它撤了。是私人助手吗？呃，不一定是私人助手。任何被低估的。你正在享受的，你觉得酷的，都行。对我来说，如果你们不介意，会是私人助手，因为我觉得这对普通人是一个特别大的解锁。"
+  },
+  {
+   "at": 3998,
+   "end": 4059,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "We're developers all of us we do stuff with these models for a long time, High Taste Testers, we like test between the model. The normal person does not care. What personal assistants give to normal people is just like time unlocking. Doing stuff that otherwise would take them some time. And I think the labs now understand this and I think that this is why they're all pivoting towards the the simpler use case. They also get the benefit all of them of how much token this will cost per user because most people still use ChatGPT as Google. They type in a query, they get a response. Most people don't run agent 24/7. Now with personal assistant, suddenly they are hooked on that like sweet sweet streaming of tokens that that most of us like enjoy. But they also get productivity in time. And so I think it's cool to just not also talk about the products but use cases because I think in the limit most of them do the same things. Most of them can do booking, most of them can reply to your emails and scan them. But I think it's very interesting to talk about what use cases can people do. I I can give you one that I did. That I noticed that an assistant could do better job than like a",
+   "zh": "我们全是开发者，我们拿这些模型做事已经很久了。High Taste Testers，我们就喜欢在模型之间测。普通人不在乎。私人助手给普通人的，就是把时间解锁出来。做那些本来要花掉他们一些时间的事。我觉得实验室现在明白了这一点，我觉得这就是它们都在转向更简单用法的原因。它们每一家也都能得到好处，就是每个用户会花掉多少 token，因为大多数人还是把 ChatGPT 当 Google 用。他们打进一个查询，得到一个回答。大多数人不会让 agent 24 小时转。现在有了私人助手，他们突然就黏上了那种甜甜的、不停往外流的 token，就是我们大多数人喜欢的那种。但他们也得到了时间上的产出。所以我觉得很酷的是，不只聊产品，也聊使用场景，因为我觉得说到底，它们大多做一样的事。它们大多能订东西，大多能回复你的邮件，把邮件扫一遍。但我觉得很有意思的是谈人们能做哪些使用场景。我可以给你们讲一个我做过的。我注意到，助手能比一个"
+  },
+  {
+   "at": 4059,
+   "end": 4108,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "coding agent before. I woke up on weekend with my kids early to take them to a karate class that was closed. I arrived there and it was closed. I got so pissed that now in the 2026 proactive assistant's era, there's nothing there that alerted me that hey, you're going to a class that's closed. That doesn't know my schedule. So I built a weekend plans bot for kids and and for my wife as well. That every as the weekend comes up, goes and searches all the local places, all the places I would never go to websites like yeah, cheap and fast or like good and expensive. It just plans and says hey, if you want, here's a bunch of things or oh and by the way, the stuff that you're meant to do is closed that weekend as well. That like is a good use case that now I'm like I know that that corner is covered. I [snorts] think that Google AI search overview or that whatever that thing, super underrated.",
+   "zh": "以前的编程 agent 做得更好。周末我早早跟孩子们起来，带他们去一节空手道课，那课是关的。我到了那儿，是关的。我气坏了，都已经是 2026 主动式助手的时代了，居然没有东西提醒我，嘿，你要去的课是关的。那个不知道我的日程。所以我做了一个给孩子的周末计划 bot，也给我老婆用。每当周末要到的时候，它就去搜所有本地的地方，那些我自己绝不会去看的网站，比如又便宜又快的，或者又好又贵的。它就规划好，然后说，嘿，如果你想，这里有一堆事，哦对了，你本来要做的那些，那个周末也是关的。这就是一个好的使用场景，现在我就知道那个角落有人罩着了。我觉得 Google 的 AI 搜索概览，或者那个不管叫什么的东西，被低估得厉害。"
+  },
+  {
+   "at": 4108,
+   "end": 4153,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Really? So underrated. Every question that I have that I want a fast answer to, I Google it. Wow. I think it's still actually. Yeah. It's really fast. It's like It's like It's like 300 milliseconds or something. By the time the page loads, the answer is there. And like ChatGPT, it's like I'm always in like the max reasoning setting and then I have to change it and then like But then if I change it, then if I make a new chat, it's on that stupid setting. So like and like it's just more It's like 10 30 seconds to get an answer. You can keyboard shortcut to instant, which is still there. I should actually I know. I should look up how to do that or whatever Uh but actually the way I do it is recast. I don't know if you guys use Recast with AI,",
+   "zh": "真的吗？低估成这样。每一个我想要快答案的问题，我都去 Google。哇。我觉得现在其实还是。对。它真的很快。大概 300 毫秒之类的。等页面一加载出来，答案已经在那儿了。而 ChatGPT 呢，我总是停在最高推理那一档，然后我得去改，可我一改，再开一个新对话，它又停在那个蠢设置上。所以就更费劲。拿到一个答案大概要 10 秒、30 秒。你可以按快捷键切到 instant，那个还在。我其实应该。我知道。我应该去查一下怎么弄，或者随便。不过我实际的做法是 Recast。我不知道你们用不用带 AI 的 Recast，"
+  },
+  {
+   "at": 4153,
+   "end": 4190,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "you just like, you know, command enter and then type your thing, enter, done. What was it again? Copies to your clipboard? does it use? Whatever you choose. Uh whatever you want. So, I I set it to Sonnet, but whatever. Okay. Actually, maybe actually with that follow. It's interesting you said the thing about like asking Muse like where's my hotel and stuff cuz I've actually started using Instinct instead of Google. Like I was traveling and I got off the train at midnight in Amsterdam. I'm like, \"Where's the nearest train station?\" And like, \"Can I pay with a tap?\" And it's like, \"Yep, you can tap your card [clears throat] and like go I go make two rights out of the door.\" And I'm like, it's not probably not as fast as Google, but it's much less overwhelming if I just want like a yes or no or a very short answer. It's it's very nice. But and I'm not going to open the ChatGPT app for all the reasons that you just said.",
+   "zh": "你就，你知道，Command 加回车，然后打你要的东西，回车，完事。再说一遍是什么？是复制到剪贴板吗？它用的是什么？你选什么都行。你想要什么都行。所以我设成了 Sonnet，不过随便。好。其实，也许顺着这个说。你刚才说问 Muse 酒店在哪之类的，这个挺有意思，因为我其实已经开始用 Instinct 来代替 Google 了。比如我在旅行，午夜在阿姆斯特丹下了火车。我说：「最近的火车站在哪？」还有：「能拍卡付吗？」它说：「能，你可以拍卡，出门右转两次。」我觉得，它大概没 Google 快，但如果我只想要一个是或否，或者一个很短的答案，它就没那么铺天盖地。这非常好。而且，就因为你刚才说的那些理由，我不会去打开 ChatGPT 的应用。"
+  },
+  {
+   "at": 4190,
+   "end": 4221,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "But actually everything that all you guys are doing is actually like suboptimal for your best experience. Yeah. Which is one thing should have all your searches ever. Exactly. Hello. Hello. So, like you shouldn't route. Routing is bad. Yeah. [laughter] But we also we we you can be a high tester without testing. You have to test around to know like the differences and other stuff. The thing that I'm super excited about is the hardware integrations. So, Grok Bot now exists in the Tesla. Once they released it a little bit, but like the ultra whatever tier now sits Grok Bot in your car.",
+   "zh": "但其实你们所有人在做的这一切，对你们最好的体验来说，其实都是次优的。对。应该有一个东西，装着你搜过的一切。没错。你好。你好。所以，你不该做路由。路由是不好的。对。（笑）但我们也是，你不能不试就当一个 high tester。你得到处试，才知道那些差别，还有别的。我特别兴奋的是硬件上的整合。所以，Grok Bot 现在存在于 Tesla 里。他们放出来一点点，不过那个 ultra 什么档，现在你的车里坐着 Grok Bot。"
+  },
+  {
+   "at": 4221,
+   "end": 4251,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "It's in it's amazing. I I tried it. I I have a Tesla. I have Really? Not Grok. Grok Bot specifically. You just like you do the voice to text with Grok. And you're like, \"Hey, go tell this bot to do this thing.\" I'll be like, \"Sending it to the bot.\" And then it will tell you, \"Oh, the bot responded with whatever.\" The car drives it. It's so good. The car drives itself and does stuff for you. It's like, \"What kind of beautiful future we're living in?\" I'm so excited about this. That's all. So, integration into hardware I think is is is something that excites me. Muse own glasses and Muse devices like the charm",
+   "zh": "它在里面，太棒了。我试过。我有一辆 Tesla。我有。真的吗？不是 Grok。是特指 Grok Bot。你就是用 Grok 做语音转文字。然后你说：「嘿，去告诉这个 bot 做这件事。」它会说：「正在发给那个 bot。」然后它会告诉你：「哦，bot 回复了什么什么。」车来跑这个。太好了。车自己开，还帮你办事。就好像，我们活在一个多美的未来里？我太兴奋了。就这些。所以，整合进硬件，我觉得是让我兴奋的事。Muse 自己的眼镜，还有 Muse 的设备，比如那个 charm"
+  },
+  {
+   "at": 4251,
+   "end": 4284,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "thing. I'm going to make a prediction. It's not a prediction. You guys will see if it's going to work. The charm thing that the Zucks showed like to hold that he lives in is going to get sold out immediately. Oh my god. Like immediately. I think I have I have plans in my agents to buy like six of them. Every agent is going to buy one. Because it's like if you think about people who are new to ChatGPT or whatever and like a new to AI systems and they get on board on news, it's a perfect Christmas gift. Just a perfect gift. Here's the thing that Yeah. It's a Tamagotchi. But also like, I don't know, my my feeling on some of these things is like why why the hell has this not like happened yet?",
+   "zh": "那个东西。我要做一个预测。这不算预测。你们会看到它成不成。Zuckerberg 展示的那个 charm，那种拿着的、他整天待在里面的，会马上卖光。我的天。马上。我觉得我已经在我的 agent 里安排了，要买六个左右。每个 agent 都会买一个。因为你想想那些刚接触 ChatGPT 之类、刚接触 AI 系统的人，他们是靠新闻入门的，这就是一份完美的圣诞礼物。就是一份完美的礼物。就是这个东西。对。它是一个 Tamagotchi。但另外，我不知道，我对其中一些东西的感觉是，这他妈怎么还没发生？"
+  },
+  {
+   "at": 4284,
+   "end": 4315,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Why why is it not on the Apple Store? want to get into the why Apple is not in the race? No, no, no, no, no, not why Apple I know why Apple is not. And everything else won't be your phone, either. Yeah. Say more. Yeah, it's just I I actually firmly believe that like the number of things to charge is saturated. And like some people are able to the responsible enough to handle a watch, but like it's actually a pretty small number. And I'm not like the reason why I don't have an Apple Watch is that I would always forget to charge it. This is a solved problem. Just bring those little battery chargers.",
+   "zh": "为什么它不在 Apple Store 上？你是想聊为什么 Apple 没加入这场竞赛吗？不，不，不，不，不，不是为什么 Apple，我知道 Apple 为什么不。其他东西也不会是你的手机。对。再说说。对，就是我其实坚定地觉得，要充电的东西已经饱和了。有些人足够负责，能顾上一块手表，但人数其实相当少。而我没有 Apple Watch 的原因，就是我总会忘了给它充电。这是个已经解决的问题。带上那些小充电器就行。"
+  },
+  {
+   "at": 4315,
+   "end": 4375,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "No, it's not it's not solved cuz then I have to like remember and that's another thing. You're like the solution is another thing to charge to get to charge the thing. Yeah, it's not worth it. $15 buy four then put it everywhere you I just it doesn't work for me. It doesn't work for me. Uh cool. We're we're almost at a wrap. Thank you thank you guys so much. Actually this is for you. What what's one thing that people can do to you do for you? How do they find you? Give you money? Whatever. The one thing that people can do for me Or to you. is or to me. To me is a massage. I would always like appreciate a massage. If random on the street approach me start a massage, it's going to be fine. I want people to unlock their imagination about what's possible with the AI systems. I think we're moving into a new era where a lot of people will get a lot of benefit from AI. Finally, I think it's very important to counter doomerism as well because there's one thing to see oh, it's coming for us on the news and completely another thing that oh, it actually booked me a hair salon and saved me like five minutes. Once people feel that tactile like helps me, saves me time, they will definitely move towards oh, AI is",
+   "zh": "不，没解决，因为那样我还得去记，那又是一件事。你这个办法就是再多一件要充电的东西，才能去给那个东西充电。对，不值当。15 美元买四个，然后到处放。我就是，这对我没用。这对我没用。呃，好。我们差不多要收尾了。谢谢，太谢谢你们了。其实这个是给你的。人们能为你做的一件事是什么？他们怎么找到你？给你钱？随便什么。人们能为我做的一件事，或者为你。是，或者为我。对我，是按摩。我永远都会很感激一次按摩。如果街上随便一个人走过来开始按摩，也完全可以。我希望人们打开想象力，去想 AI 系统里什么是可能的。我觉得我们正在进入一个新时代，很多人会从 AI 得到很多好处。终于。我觉得对抗末日论也很重要，因为在新闻里看到「哦，它要来找我们了」是一回事，而「哦，它真的帮我订了理发店，还给我省了大概五分钟」完全是另一回事。一旦人们感受到那种实实在在的、它帮到我、给我省了时间，他们一定会转向：哦，AI 是"
+  },
+  {
+   "at": 4375,
+   "end": 4414,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "actually like helpful. I think it's very important all the companies move there. So, the one thing they can do for me is unlock their imagination, try AI assistance, and if they want to know which ones we talk about this on my my podcast called Thursday AI every Thursday. Okay. I work at RC and we're doing a lot of models that are going to be pretty good and open sourcing coming out soon and I'm also building harnesses over there. You can check me out on Twitter at Allisonology would be good as well. So, in addition to being a you know, a poster on Twitter, I also run a very serious AI company that makes agents more reliable. We work with like Fortune 100 health care, a bunch of Fortune 500 companies, and some of the like fastest growing AI new startups.",
+   "zh": "真的有帮助。我觉得所有公司都往那儿走，这很重要。所以他们能为我做的一件事，就是打开想象力，试试 AI 助手，如果他们想知道我们说的是哪些，这个在我的播客 Thursday AI 上谈，每周四。好。我在 RC 工作，我们在做很多会相当不错的模型，开源也快出来了，我还在那边做 harness。你们来 Twitter 上看 Allisonology 也很好。所以，除了是个在 Twitter 上发帖的人，我还在经营一家很认真的 AI 公司，让 agent 更可靠。我们跟财富 100 强里的医疗公司合作，还有一堆财富 500 强公司，以及一些增长最快的 AI 新创业公司。"
+  },
+  {
+   "at": 4414,
+   "end": 4451,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "So, give it a try. It's free for most like most people like if you're under like a thousand a month today. What's it called? It's called Raindrop. Sorry. More detail. Raindrop. Yes. [snorts] CTO of MosaicML. [laughter] Yeah, so um I have a YouTube channel and a podcast. If you just look me up on YouTube as Ben Davis or Nerd Snipe, you will find me there and yeah. Uh I work at a company called as founder of company called HumanLayer. We're building the software forge of I guess we're saying software forge instead of software factory now. The forge of the future. Uh Cuz factories fail.",
+   "zh": "所以，去试试。对大多数人是免费的，比如你现在一个月不到一千。它叫什么？叫 Raindrop。抱歉。再说细一点。Raindrop。对。MosaicML 的 CTO。（笑）对，所以我有一个 YouTube 频道和一个播客。如果你在 YouTube 上搜 Ben Davis 或者 Nerd Snipe，就能找到我，对。我在一家公司工作，是一家叫 HumanLayer 的公司的创始人。我们在做 software forge。我想我们现在说 software forge，不说 software factory 了。未来的锻造炉。因为工厂会失败。"
+  },
+  {
+   "at": 4451,
+   "end": 4507,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "Yeah. What's a software forge? Well, not all of them. Is that a factory reference? There are certain things that you can do. [laughter] Uh no comment. No, no. It Yeah. Your your AI you talked about actually went like super viral like yeah. What it was misinterpreted cuz everyone saw it and said like oh, you're the don't like soft software factories guy. I was like no, no, no. There There are things that you could do that would cause them to fail and I'm going to tell you what those things are so you can you know, not do that. But anyways, yeah, I'm Dex on Twitter. Check out HumanLayer. Yeah, welcome to the future I guess. I don't know. I know. Welcome to Well, until the new future comes in three months. Can I do a personal reference for Dex? I think Map Pack one of your guests also. He said there's like a few folks whose skills he trusts and Dex was one of them. Lauren You're talking about Mark Town skills. I'm not like skilled in real life. You're talking about Mark Town skills. [laughter] I think if I give you an axe you can you can split a log. Yeah, I I submitted my name for consideration next",
+   "zh": "对。什么是 software forge？也不是全都会。这是在影射工厂吗？有些事你是可以做的。（笑）呃，无可奉告。不，不。对。你讲的那个 AI 其实彻底火了，对。它被误解了，因为每个人看到都说，哦，你就是那个不喜欢软件工厂的人。我说不，不，不。有些事你要是做了，会让它们失败，我要告诉你那些事是什么，这样你就可以，你知道，不那么做。不过总之，对，我在 Twitter 上是 Dex。去看看 HumanLayer。对，欢迎来到未来，我想。我不知道。我知道。欢迎来到。嗯，直到三个月后新的未来到来。我能给 Dex 做个个人推荐吗？我觉得 Map Pack，也是你的一位嘉宾。他说有那么几个人的技能他信得过，Dex 是其中一个。Lauren，你说的是 markdown 技能。我现实生活里可没什么技能。你说的是 markdown 技能。（笑）我觉得要是给你一把斧子，你能把木头劈开。对，我已经把名字交上去，供下次考虑"
+  },
+  {
+   "at": 4507,
+   "end": 4520,
+   "speaker": "table",
+   "kind": "turn",
+   "text": "time. Anyway, this has been a great first episode. Thank you guys for being part of it. This has been High Taste Testers. The thing you can do for me is like and subscribe. There we go.",
+   "zh": "了。总之，这第一集很棒。谢谢你们来参加。这里是 High Taste Testers。你们能为我做的，就是点赞和订阅。好了。"
+  }
+ ]
+}

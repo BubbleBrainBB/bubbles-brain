@@ -22,9 +22,10 @@ export const changelog: ChangelogItem[] = [
 		type: 'content',
 		title: '新增播客：什么都上线了，能天天用的没几样',
 		summary:
-			'收录 Latent Space 新栏目 High Taste Testers 第一期。Swyx 请来五位天天试用模型和产品的人，DevDay 刚过就对着 Dots、Codex、Jev 和各种助手直说：模型够强，藏得深的用不到，发信和付款也还要人先看过。附一图读懂、时间花在哪和中文要点，站内直接收听。',
+			'收录 Latent Space 新栏目 High Taste Testers 第一期。Swyx 请来五位天天试用模型和产品的人，DevDay 刚过就对着 Dots、Codex、Jev 和各种助手直说：模型够强，藏得深的用不到，发信和付款也还要人先看过。附一图读懂、时间花在哪、中文要点，以及按公开字幕校对过的文字稿。字幕没有标说话人，站内直接收听。',
 		links: [
 			{ label: '收听这一期', href: '/podcasts/latent-space-high-taste-testers/' },
+			{ label: '看文字稿', href: '/podcasts/latent-space-high-taste-testers/transcript/' },
 			{ label: 'Latent Space', href: '/podcasts/shows/latent-space/' },
 		],
 	},

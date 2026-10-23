@@ -2,6 +2,7 @@
  *  player can follow along. Transcripts are optional: an episode has one when
  *  `transcriptFor` finds it, and the episode page then links to it. */
 import altman from '../data/transcripts/forward-future-sam-altman.json';
+import highTaste from '../data/transcripts/latent-space-high-taste-testers.json';
 import grokBot from '../data/transcripts/how-i-ai-grok-bot-designers.json';
 import alphafold from '../data/transcripts/latent-space-alphafold.json';
 import ameisen from '../data/transcripts/lennys-podcast-emmanuel-ameisen.json';
@@ -38,8 +39,10 @@ export interface Transcript {
 	language: string;
 	source: {
 		/** asr-diarization: we transcribed the audio ourselves. show-transcript: the show
-		 *  published its own transcript, and we only timed it to the audio. */
-		type: 'asr-diarization' | 'show-transcript';
+		 *  published its own transcript, and we only timed it to the audio.
+		 *  caption-corrected: public auto-captions, compared and corrected by hand,
+		 *  without speaker names. */
+		type: 'asr-diarization' | 'show-transcript' | 'caption-corrected';
 		/** The video the transcription was checked against, when there is one. */
 		video?: string;
 		note: string;
@@ -51,6 +54,7 @@ export interface Transcript {
 /** Every transcript the site has, keyed by the episode it belongs to. */
 const transcripts: Record<string, Transcript> = {
 	'forward-future-sam-altman': altman as Transcript,
+	'latent-space-high-taste-testers': highTaste as Transcript,
 	'how-i-ai-grok-bot-designers': grokBot as Transcript,
 	'how-i-ai-meta-muse': metaMuse as Transcript,
 	'latent-space-alphafold': alphafold as Transcript,
