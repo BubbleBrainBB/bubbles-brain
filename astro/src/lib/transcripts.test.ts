@@ -13,8 +13,12 @@ const tibo = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-ti
 const jev = podcastEpisodes.find((episode) => episode.id === 'latent-space-jev')!;
 const grokBot = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-grok-bot-designers')!;
 const altman = podcastEpisodes.find((episode) => episode.id === 'forward-future-sam-altman')!;
+const highTaste = podcastEpisodes.find(
+	(episode) => episode.id === 'latent-space-high-taste-testers',
+)!;
 const withTranscripts = new Set([
 	altman.id,
+	highTaste.id,
 	metaMuse.id,
 	alphafold.id,
 	ameisen.id,
@@ -318,6 +322,24 @@ describe('the Sam Altman transcript', () => {
 		expect(transcript.speakers.find((speaker) => speaker.id === said.speaker)!.name).toBe(
 			altman.quote!.by,
 		);
+	});
+});
+
+describe('the High Taste Testers transcript', () => {
+	it('is a corrected public caption, in Chinese throughout, with no speaker names', () => {
+		const transcript = transcriptFor(highTaste);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, highTaste)).toEqual([]);
+		expect(transcript!.source.type).toBe('caption-corrected');
+		expect(transcript!.turns[0].at).toBe(0);
+		expect(transcript!.turns.at(-1)!.end).toBe(highTaste.duration);
+		expect(transcript!.turns.every((turn) => turn.zh && turn.speaker === 'table')).toBe(true);
+		const said = transcript!.turns.map((turn) => turn.text).join('\n');
+		expect(said).toContain('OpenAI is not in the room');
+		expect(said).toContain('High Taste Testers');
+		expect(said).not.toContain('opening eye is not');
+		expect(said).not.toContain('Hi 60s Testers');
+		expect(said).not.toContain('Johnny IV was');
 	});
 });
 

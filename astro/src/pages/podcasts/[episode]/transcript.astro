@@ -165,6 +165,20 @@ function who(turn: TranscriptTurn): { name: string; role: string } {
 						</a>
 						为准。发现错漏欢迎告诉我们。
 					</p>
+				) : transcript.source.type === 'caption-corrected' ? (
+					<p>
+						本页英文来自公开的自动字幕，并对照另一份字幕做了人工校对。字幕没有标出是谁在说，所以这里也不区分说话人。时间大约每几十秒一块，不是逐句对齐
+						{translated && '，中文由 AI 翻译'}
+						。以
+						<a
+							href={transcript.source.video ?? episode.source}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							原视频
+						</a>
+						为准。发现错漏欢迎告诉我们。
+					</p>
 				) : (
 					<p>
 						本页文字稿由节目音频自动转写并做说话人分离{translated && '，中文由 AI 翻译'}
