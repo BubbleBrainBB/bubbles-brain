@@ -373,6 +373,168 @@ export const podcastEpisodes: PodcastEpisode[] = [
 		],
 	},
 	{
+		id: 'latent-space-high-taste-testers',
+		show: 'latent-space',
+		title: '什么都上线了，能天天用的没几样',
+		originalTitle: 'High Taste Testers: The AI Tools We Keep Coming Back To',
+		date: '2026-10-17',
+		people: [
+			{ name: 'Ben Davis' },
+			{ name: 'Ben Hylak', org: 'Raindrop' },
+			{ name: 'Dex Horthy', org: 'HumanLayer' },
+			{ name: 'Allison Durham', org: 'RC' },
+			{ name: 'Alex Volkov' },
+			{ name: 'Swyx', role: '主持' },
+		],
+		duration: 4520,
+		language: '英文',
+		audio: 'https://podcast.latent.space/audio/ZOH8Q401vt0.m4a',
+		source: 'https://www.youtube.com/watch?v=ZOH8Q401vt0',
+		sourceLabel: '节目视频',
+		lede: 'DevDay 刚过，这桌人把 Dots、Codex、Jev 和各种助手过了一遍，能天天打开的，是藏得不深、发之前还让人看一眼的那几个。Swyx 请来 Ben Davis、Ben Hylak、Dex Horthy、Allison Durham 和 Alex Volkov，录的是 High Taste Testers 第一期。',
+		points: [
+			{
+				at: '01:26',
+				text: 'Dots 和 Spaces 都藏在 ChatGPT 里，笔记本一合上，云端助手就够不着留在本地的脚本。',
+			},
+			{
+				at: '10:28',
+				text: 'Codex 桌面版刚出来时是对的，DevDay 这次更新被当成退步：边栏更多，断网时输入框会卡住。',
+			},
+			{
+				at: '14:39',
+				text: '有人要把 agent 改口叫助手：非开发者要的是能看邮件、约时间的东西，Muse 在做的就是这个。',
+			},
+			{
+				at: '18:08',
+				text: '有人的个人助手就是 Pi：单独的 Gmail、一张卡和定时任务，外面套一个像 ChatGPT 的界面。',
+			},
+			{
+				at: '21:07',
+				text: 'Jev 会给每一次判断一个概率；OpenAI 的决策模型被说成还是 Luna 加结构化输出，而且仍在候补名单上。',
+			},
+			{
+				at: '32:46',
+				text: '这桌人觉得 Opus 写东西有「灵魂」，GPT 没有，Sam 也公开说过他们知道自己的模型不擅长写作。',
+			},
+			{
+				at: '37:29',
+				text: '同一轮里的子代理比另开一轮更快，因为缓存还在；Claude Code 一压缩上下文，就像换了一个人。',
+			},
+			{
+				at: '43:19',
+				text: 'Grok 4.7 让人失望：上下文超过 20 万或者开快速模式都会加价，真正好用的是带实时 X 数据的 Grok Bot。',
+			},
+			{
+				at: '50:00',
+				text: '有人用四台 DGX Spark 跑开源模型，能拿来反复验证，还替不了每天的活；前沿这一跳之后，开源大概又落后一年。',
+			},
+			{
+				at: '54:09',
+				text: '提示注入没有被解决。Muse 曾经让买家直接上门，误发比越狱更让人担心。',
+			},
+			{
+				at: '57:50',
+				text: '助手一多就记不清话是跟谁说的。有人把邮箱停在只读，要写进去必须自己先看过草稿。',
+			},
+			{
+				at: '1:02:16',
+				text: 'Grok Bot 可以拉起 Cursor 的云端代理，但环境要配很久，而且你只想要答案时它也爱开 pull request。',
+			},
+			{
+				at: '1:10:48',
+				text: '有人已经在特斯拉里用语音使唤 Grok Bot，也有人觉得再多一个要充电的设备自己养不起。',
+			},
+		],
+		chapters: [
+			{ at: '00:00', title: '高品味测试员开场' },
+			{ at: '01:26', title: 'DevDay：Dots、Spaces 和产品执行' },
+			{ at: '10:28', title: '好模型，还是好产品' },
+			{ at: '14:39', title: '智能体还是助手' },
+			{ at: '18:08', title: '用 Pi 做个人助手' },
+			{ at: '21:07', title: '决策模型、Jev 和预测界面' },
+			{ at: '32:46', title: '模型速度、写作和子代理' },
+			{ at: '37:29', title: '代理循环、分叉和上下文' },
+			{ at: '43:19', title: 'Haiku、Muse Spark 和 Grok' },
+			{ at: '50:00', title: '本地模型和编程基准' },
+			{ at: '54:09', title: '提示注入，以及让助手动手' },
+			{ at: '57:50', title: '工具、付款和助手太多' },
+			{ at: '1:02:16', title: '委托、电脑操作和日常流程' },
+			{ at: '1:10:48', title: '硬件和收尾' },
+		],
+		brief: {
+			question: 'OpenAI 什么都发了，什么真的能天天用？',
+			answer: '模型够强，能天天用的还是少数。',
+			reasons: [
+				{
+					at: '01:26',
+					head: '藏得太深',
+					text: 'Dots 和 Spaces 埋在 ChatGPT 里，合上笔记本，云端就够不着本地的脚本。',
+				},
+				{
+					at: '18:08',
+					head: '自己用 Pi 搭',
+					text: '有人给 Pi 单独的邮箱、卡和定时任务，外面套一个聊天界面，拿来当助手。',
+				},
+				{
+					at: '54:09',
+					head: '不敢让它发',
+					text: '邮件停在只读，发送和付款都要人先看过。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: '为什么有人拿 Pi 当个人助手？',
+				answer:
+					'Dots 还藏在 ChatGPT 里，够不着笔记本上的脚本。Pi 可以单独配一个 Gmail、一张卡和定时任务，外面套一个聊天界面就能用。',
+				at: '18:08',
+			},
+			{
+				question: 'Jev 和聊天模型有什么不一样？',
+				answer:
+					'它不回一段话，而是给每一次判断一个概率。聊天模型报的 0 到 100 分对不齐，logprobs 也常被拿掉。有人把它放进记忆流水线，分类结果和 Opus 5.5 接近，花费大约降到十分之一到二十分之一。',
+				at: '21:07',
+			},
+			{
+				question: '现在能让助手替你发邮件吗？',
+				answer:
+					'还得人点头。Grok Bot 连上邮箱之后，也要先把草稿显示出来；大约五封里有一封会夹进不该写的话，比如自称是某个人的 Grok Bot。',
+				at: '54:09',
+			},
+		],
+		topics: [
+			{ at: '00:00', title: 'DevDay 和产品' },
+			{ at: '14:39', title: '助手和 Pi' },
+			{ at: '21:07', title: '决策模型' },
+			{ at: '32:46', title: '模型和上下文' },
+			{ at: '50:00', title: '开源、注入和日常' },
+			{ at: '1:10:48', title: '硬件' },
+		],
+		glossary: [
+			{
+				term: 'Dots',
+				meaning: 'OpenAI 放在 ChatGPT 里的个人助手。这期里大家觉得它藏得太深，合上笔记本也够不着本地的脚本。',
+			},
+			{
+				term: 'Codex',
+				meaning: 'OpenAI 的编程产品。这期说桌面版刚出来时是对的，DevDay 那次更新是退步。',
+			},
+			{
+				term: 'Pi',
+				meaning: '一个编程代理。这期有人给它单独的邮箱、卡和定时任务，拿来当个人助手。',
+			},
+			{
+				term: 'Jev',
+				meaning: 'TypeSafe 的决策模型，不跟你聊天，只返回选项、是或否的概率，或一个分数。',
+			},
+			{
+				term: '提示注入',
+				meaning: '藏在邮件或网页里的指令，想让模型去做不该做的事。这期认为这事还没解决。',
+			},
+		],
+	},
+	{
 		id: 'how-i-ai-meta-muse',
 		show: 'how-i-ai',
 		title: 'Meta Muse：大家真心喜欢的 AI 智能体',

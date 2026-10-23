@@ -20,6 +20,18 @@ export const changelog: ChangelogItem[] = [
 		date: '2026-10-23',
 		tag: '播客',
 		type: 'content',
+		title: '新增播客：什么都上线了，能天天用的没几样',
+		summary:
+			'收录 Latent Space 新栏目 High Taste Testers 第一期。Swyx 请来五位天天试用模型和产品的人，DevDay 刚过就对着 Dots、Codex、Jev 和各种助手直说：模型够强，藏得深的用不到，发信和付款也还要人先看过。附一图读懂、时间花在哪和中文要点，站内直接收听。',
+		links: [
+			{ label: '收听这一期', href: '/podcasts/latent-space-high-taste-testers/' },
+			{ label: 'Latent Space', href: '/podcasts/shows/latent-space/' },
+		],
+	},
+	{
+		date: '2026-10-23',
+		tag: '播客',
+		type: 'content',
 		title: '新增播客：Sam Altman：我们要一场文艺复兴，不是工业革命',
 		summary:
 			'收录新节目 Forward Future。Matthew Berman 采访 Sam Altman：AI 正在进入发现新知识的时代，他希望两年内有重大疾病的治疗候选；写代码的人反而更忙；Dots 每天帮他省一小时；意识争论不该用来质疑人还掌不掌握未来；自研芯片是最重要的一注。附一图读懂、时间花在哪、中文要点，以及按节目音频对齐、带中文翻译的完整文字稿，站内直接收听。',
