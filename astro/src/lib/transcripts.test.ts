@@ -5,12 +5,16 @@ import { transcriptFor, transcriptHref, transcriptProblems, wordCount } from './
 
 const metaMuse = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-meta-muse')!;
 const alphafold = podcastEpisodes.find((episode) => episode.id === 'latent-space-alphafold')!;
-const ameisen = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-emmanuel-ameisen')!;
+const ameisen = podcastEpisodes.find(
+	(episode) => episode.id === 'lennys-podcast-emmanuel-ameisen',
+)!;
 const catWu = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-cat-wu')!;
 const tibo = podcastEpisodes.find((episode) => episode.id === 'lennys-podcast-tibo-sottiaux')!;
 const jev = podcastEpisodes.find((episode) => episode.id === 'latent-space-jev')!;
 const grokBot = podcastEpisodes.find((episode) => episode.id === 'how-i-ai-grok-bot-designers')!;
+const altman = podcastEpisodes.find((episode) => episode.id === 'forward-future-sam-altman')!;
 const withTranscripts = new Set([
+	altman.id,
 	metaMuse.id,
 	alphafold.id,
 	ameisen.id,
@@ -277,6 +281,42 @@ describe('the Grok Bot transcript', () => {
 		expect(said.text).toContain(grokBot.quote!.text);
 		expect(transcript.speakers.find((speaker) => speaker.id === said.speaker)!.name).toBe(
 			grokBot.quote!.by,
+		);
+	});
+});
+
+describe('the Sam Altman transcript', () => {
+	it('is well formed against its episode', () => {
+		const transcript = transcriptFor(altman);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, altman)).toEqual([]);
+	});
+
+	it("is the show's own transcript, timed to the audio and translated throughout", () => {
+		const transcript = transcriptFor(altman)!;
+		expect(transcript.source.type).toBe('show-transcript');
+		expect(transcript.turns[0].at).toBe(0);
+		expect(transcript.turns.at(-1)!.end).toBeGreaterThan(altman.duration - 5);
+		expect(transcript.turns.every((turn) => turn.zh)).toBe(true);
+		expect(transcript.turns.filter((turn) => turn.kind === 'clip')).toHaveLength(3);
+	});
+
+	it('names the host and the guest', () => {
+		expect(new Set(transcriptFor(altman)!.turns.map((turn) => turn.speaker))).toEqual(
+			new Set(['host', 'guest']),
+		);
+	});
+
+	it('puts the quoted line where the episode page says it is', () => {
+		// 17:56 on the episode page. The cold open also plays the line; the interview says it here.
+		const transcript = transcriptFor(altman)!;
+		const at = seconds(altman.quote!.at);
+		const said = transcript.turns.find((turn) => turn.at <= at && at < turn.end)!;
+		expect(said.kind).toBe('turn');
+		expect(said.speaker).toBe('guest');
+		expect(said.text.toLowerCase()).toContain(altman.quote!.text.toLowerCase());
+		expect(transcript.speakers.find((speaker) => speaker.id === said.speaker)!.name).toBe(
+			altman.quote!.by,
 		);
 	});
 });

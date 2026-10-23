@@ -1,0 +1,1111 @@
+{
+ "episodeId": "forward-future-sam-altman",
+ "language": "en",
+ "source": {
+  "type": "show-transcript",
+  "video": "https://www.youtube.com/watch?v=3gXLmy7DK_4",
+  "note": "英文取自 Forward Future 公开的文字稿，时间点来自节目逐句稿，中文由 AI 翻译"
+ },
+ "speakers": [
+  {
+   "id": "host",
+   "name": "Matthew Berman",
+   "role": "主持"
+  },
+  {
+   "id": "guest",
+   "name": "Sam Altman",
+   "role": "OpenAI"
+  }
+ ],
+ "turns": [
+  {
+   "at": 0.0,
+   "end": 5.44,
+   "speaker": "host",
+   "kind": "clip",
+   "text": "Do you believe today's models are conscious? I want to be clear. No one really knows.",
+   "zh": "你觉得今天的模型有意识吗？我想说清楚：其实没人真正知道。"
+  },
+  {
+   "at": 5.68,
+   "end": 33.12,
+   "speaker": "guest",
+   "kind": "clip",
+   "text": "Can I say what I don't like about the whole framing? Should it ever be allowed to not answer or disengage with me? I think this is a technology that wants a new form factor. Some lab says I'm gonna push the button on RSI to make sure we have the power. I think if people really pushed on RSI, then yes, that would be true, but I think it's a very dangerous thing to push on. Do you believe that? Curing or treating a major disease, then I would hope we have the candidate for that in the next couple of years.",
+   "zh": "我能说说我为什么不喜欢这整套说法吗？它有没有权利不回答我，或者中途退出对话？我觉得这项技术想要一种新的形态。有的实验室会说，我要按下递归自我改进的按钮，好确保我们掌握力量。我觉得如果人们真的去推递归自我改进，那确实会是那样，但我认为推这件事非常危险。你相信吗？要治愈或治疗一种重大疾病，我希望未来几年里我们就能拿到第一种候选。"
+  },
+  {
+   "at": 33.28,
+   "end": 43.04,
+   "speaker": "guest",
+   "kind": "clip",
+   "text": "Where do you feel the most pressure right now? I mean it feels like everywhere. We should be shooting more for a new renaissance than a new industrial revolution. The future has to be about people.",
+   "zh": "你现在觉得压力最大的地方在哪？感觉到处都是。我们该瞄准一场新的文艺复兴，而不是一场新的工业革命。未来必须是关于人的。"
+  },
+  {
+   "at": 48.72,
+   "end": 51.12,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "All right. Sam, thank you so much for joining me.",
+   "zh": "好。Sam，非常感谢你来。"
+  },
+  {
+   "at": 51.44,
+   "end": 51.84,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah, thank you.",
+   "zh": "嗯，谢谢。"
+  },
+  {
+   "at": 52.4,
+   "end": 65.76,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So the first thing I want to talk about are some of the announcements that you made last week about all of the math proofs and the discoveries. And I think it seems incredible, but maybe you can contextualize it for a broader audience who may not be in the weeds.",
+   "zh": "我想先聊你上周发布的那些数学证明和发现。我觉得看起来不可思议，但也许你能给不在这个圈子里的更广泛听众讲讲背景。"
+  },
+  {
+   "at": 66.16,
+   "end": 100.96,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think we are entering the era where AI is going to help us discover significant new knowledge. Um and we've been talking about this for a long time. And I, you know, maybe started earlier this year, but now it's really like, okay, the AI is doing very difficult things, figuring out very complicated, important uh new knowledge. And I believe that the same thing that has worked here for math is going to work for biology, help us get new medicines, material science, you know, help us get new sources of energy, and much more.",
+   "zh": "我觉得我们正在进入一个时代：AI 会帮我们发现重要的新知识。这件事我们已经谈了很久。也许从今年早些时候开始，但现在真的是，好，AI 在做非常难的事，在弄清楚非常复杂、非常重要的新知识。我相信在数学上走通的办法，也会用到生物学上，帮我们拿到新药，用到材料科学上，帮我们找到新的能源，还有更多。"
+  },
+  {
+   "at": 101.2,
+   "end": 118.96,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So this is one of the things I've always been most excited about. I think this is going to do an enormous amount to really have an impact on people's lives. It won't feel directly like using AI. You'll just be like, okay, the world got better and it's just society doing its thing, but I think the power of this will be transformative.",
+   "zh": "这是我一直最兴奋的事情之一。我觉得它会对人们的生活产生巨大影响。你不会直接觉得自己在用 AI，只会觉得，好，世界变好了，社会照常在运转。但我认为这种力量会是变革性的。"
+  },
+  {
+   "at": 119.6,
+   "end": 132.72,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "And I think about having that kind of direct impact on society day-to-day, is there anything that you think will stem from some of these discoveries in particular that people will feel? And what is the timeline for something like that?",
+   "zh": "说到这种对日常生活的直接影响，这些发现里有没有哪一件是你觉得人们会切实感受到的？那样的事大概什么时候会发生？"
+  },
+  {
+   "at": 132.8,
+   "end": 151.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I would hope, well, you know, the FDA process is going to take a while. So let me let me kind of give a time frame to when I think we have like a discovery of curing or treating a major disease, uh, or a candidate for that that has to go through testing. I would hope we have the candidate for that in the next couple of years for the first like really major thing.",
+   "zh": "我希望如此。不过你知道，FDA 的流程要一段时间。所以我给个时间框架：我认为我们会发现一种能治愈或治疗重大疾病的东西，或者说一个必须去测试的候选。我希望第一种真正重大的东西，未来几年里就能有候选。"
+  },
+  {
+   "at": 151.12,
+   "end": 162.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Probably need to overhaul some of the post-discovery process to start to get uh cures and uh I'm sure we need to overhaul it somewhat.",
+   "zh": "要开始拿到疗法，发现之后的流程大概得改一改。我确定我们需要做一些调整。"
+  },
+  {
+   "at": 162.4,
+   "end": 182.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I'm glad we have a process like I'm I I no doubt that there's room for improvement, as there is in anything, and maybe there's more than average here, but you know, like I am grateful that when we take a medicine, it is generally uh considered safe and has been tested, and I think that part's good.",
+   "zh": "我很高兴我们有这样一套流程。我毫不怀疑它还有改进空间，任何事都有，这里也许比平均还多一些。但我感激的是，我们吃药的时候，它通常被认为是安全的，而且经过了测试。我觉得这一部分是好的。"
+  },
+  {
+   "at": 182.4,
+   "end": 191.12,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Is there a particular project that was kicked off by AI, discovered by AI, that you're really excited about that you think is kind of coming over the horizon soon?",
+   "zh": "有没有一个具体项目，是 AI 启动的、AI 发现的，让你特别兴奋，而且觉得很快就会出现在地平线上？"
+  },
+  {
+   "at": 191.6,
+   "end": 210.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Personally, I think I'm most emotionally excited for a major physics discovery, and I'm hopeful that can come soon. Um I I don't know if that's like necessarily the most important thing for humanity as a whole. Um, but it's the one where I'm like, oh, I think we're gonna get it, and it's gonna be so cool.",
+   "zh": "就我个人来说，情感上最兴奋的是一项重大的物理学发现，我希望它能很快到来。我不知道这对整个人类来说是不是最重要的事，但这是我会觉得，哦，我们就要拿到它了，而且会非常酷的那一件。"
+  },
+  {
+   "at": 211.12,
+   "end": 226.24,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "There was some in the math community whose reaction was, you know, we didn't ask for this, we don't and it felt very similar to how engineers, I think, first reacted to AI starting to write a lot of the code. Where do you think that comes from? And how do you think that is gonna transition?",
+   "zh": "数学界有些人的反应是，我们没要这个，我们不要。这让我觉得很像工程师最初看到 AI 开始写大量代码时的反应。你觉得这是从哪来的？又会怎么转变？"
+  },
+  {
+   "at": 226.88,
+   "end": 234.4,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um coding was a very interesting one before we kind of go to where it comes from. The thing about coding is that people went through this.",
+   "zh": "在说到它从哪来之前，写代码这件事很有意思。写代码的人经历过这个。"
+  },
+  {
+   "at": 235.84,
+   "end": 268.4,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "There's no more jobs as coders for people to coders are never gonna be busier than they've been, and coders are never gonna have more of an impact and make more money now that the the texture of the job changed a lot. Yeah. But the fact that we're gonna like employ people to get computers to do things, that seems like it's gonna keep going for much longer than people thought. And and people were so certain um, you know, six or twelve months ago that this was not the case.",
+   "zh": "从「程序员没工作了」，到程序员从没这么忙过。工作的质地变了很多，他们的影响和收入也从没这么大。嗯。但我们还是会雇人让计算机去做事，这件事持续的时间会比人们想的长得多。六个月或十二个月前，人们还那么确定不会是这样。"
+  },
+  {
+   "at": 268.8,
+   "end": 283.6,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's like uh there's no need. You know, and and I think there's many lessons to learn from this, but one of the interesting ones is that the world actually had demand for just way more software than any of us thought at the time.",
+   "zh": "好像是，不需要了。我觉得这里有很多教训，有意思的一条是：世界对软件的需求，其实比当时我们任何人想的都要大得多。"
+  },
+  {
+   "at": 285.04,
+   "end": 317.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And part of why I think some of the mathematicians are having the reaction they're having is it's not clear that the same thing applies to math. However, where I think there is an analogy to coding is already you're starting to see some of the a similar shift happen that happened with coding, which is okay, fine, maybe we're not going to discover new math theorems or prove them in an unaided way anymore. Maybe that part is like done or mostly done or ending.",
+   "zh": "我觉得有些数学家会有这种反应，部分原因是，同一件事会不会发生在数学上并不清楚。不过和写代码能类比的地方是，你已经开始看到类似的转变：好吧，也许我们不再以无人协助的方式发现新定理或证明它们了。那一部分也许结束了，或者大部分结束了，或者正在结束。"
+  },
+  {
+   "at": 317.44,
+   "end": 343.68,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um, but you know, given that the whole society, our whole society is focused on people doing useful things for each other, um, the these kind of like incomprehensible math proofs turned out to be not that helpful to people. And there's now a lot of excitement about people who are going to take these new ideas, figure out what's going on, and figure out a way to translate it to something that people can understand and write a beautiful proof for it.",
+   "zh": "但你知道，整个社会关注的是人们彼此做有用的事。这些难以理解的数学证明，结果对人们并没有那么有帮助。现在让人兴奋的是，有人会拿起这些新想法，弄清楚到底发生了什么，再把它翻译成人们能理解的东西，并为它写出漂亮的证明。"
+  },
+  {
+   "at": 343.84,
+   "end": 371.44,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um, I'm sure there will be other things too. And no doubt what it meant to be a mathematician last year is not going to be what it means to be a mathematician next year, in some senses of it. I think we probably will find that there's a lot of other things that mathematicians do that we really want people to do, and they can do those much better. Whether that means there will be more total demand for mathematicians or not, I don't know.",
+   "zh": "我确定还会有别的事。毫无疑问，去年当数学家的意思，在某些意义上不会是明年当数学家的意思。我们大概会发现，数学家做的很多别的事，是我们真的希望有人去做的，而且他们能做得好得多。这是否意味着对数学家的总需求会更多，我不知道。"
+  },
+  {
+   "at": 371.6,
+   "end": 393.76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "But I think there is a really important thing here. You were mentioning earlier that you've never felt busier. There's never been more to do. Yeah. Everyone thought AI was going to go the other way and we weren't gonna have enough to do. And again, maybe that happens someday. But I think all of this stuff has just been much less obvious than it seems on the surface. I mean, I always hope that people get to work a little bit less.",
+   "zh": "但我觉得这里有一件很重要的事。你刚才说你从没觉得这么忙，要做的事从没这么多。嗯。所有人都以为 AI 会走向另一边，我们会没有足够的事做。也许有一天会这样。但我觉得这些事都比表面上看起来不那么显而易见。我的意思是，我一直希望人们能少工作一点。"
+  },
+  {
+   "at": 393.84,
+   "end": 411.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I I get be a little bit less busy and kind of more time for everything else in their life. I think that would I think that like technology is supposed to enable that. I want that thing to happen. Um but man, does it sure seem like we're good at wanting more out of life and wanting more out of the world and making ourselves busier.",
+   "zh": "少忙一点，把更多时间留给生活里的其他事。我觉得技术本来就该让这件事成为可能。我希望它发生。但天哪，我们真的很擅长想从生活里要更多、从世界里要更多，然后把自己弄得更忙。"
+  },
+  {
+   "at": 411.28,
+   "end": 438.32,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, I think that's just human nature. Like if we were comfortable with the way life was a hundred years ago now, we'd probably be working an hour a week, but that's just not the way it is. And I think it's a beautiful thing about human nature that that's not the way it is. Yeah. I mean, a good example is um, you know, a few weeks ago my editor started using Astra to edit our videos. Uh they are still directing, they're still coming up with like how the video should be, but they're not touching the timeline anymore.",
+   "zh": "对，我觉得这就是人性。如果我们满足于一百年前的生活，现在大概一周只工作一小时，但事实不是这样。我觉得人性里这一点很美。嗯。一个好例子是，几周前我的剪辑开始用 Astra 剪我们的视频。他们还在导演，还在想视频该是什么样，但他们不再碰时间线了。"
+  },
+  {
+   "at": 438.56,
+   "end": 444.24,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "It's the most insane thing, and it was an overnight change. Yeah. We're making more videos, they're busier than ever.",
+   "zh": "这是最离谱的事，而且是一夜之间的变化。嗯。我们在做更多视频，他们比以往任何时候都忙。"
+  },
+  {
+   "at": 445.04,
+   "end": 453.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's it has surprised me how often someone says a sentence that translates to exactly that.",
+   "zh": "让我惊讶的是，有人说出一句翻译过来正好就是这个意思的话，这种情况有多常见。"
+  },
+  {
+   "at": 453.28,
+   "end": 477.2,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. So I'm thinking about discoveries from AI, and and I'm wondering like, how how do you think about if AI and OpenAI discovered some math-proof or significant uh scientific innovation that gave it massive commercial advantage? Like, would you publish it? And and like how do you think about that trade-off between like, okay, we're gonna use this for our competitive advantage versus publishing it for the world's good?",
+   "zh": "对。所以我在想 AI 带来的发现。如果 AI 和 OpenAI 发现了某个数学证明，或者一项能带来巨大商业优势的重大科学创新，你会怎么想？你会发表它吗？你会怎么权衡：把它留给自己当竞争优势，还是为了世界的好处发表出去？"
+  },
+  {
+   "at": 477.76,
+   "end": 505.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I will come back to that, but I I didn't answer the end of your your first question. Um I think one of the challenges, innovation and solving hard problems is really like part of the fun of life for many people. And so part of what's going on here is I think we do just need to be honest that AI is gonna do that part of that really well. Um I think there'll be questions about what people value that will remain kind of human questions forever.",
+   "zh": "我会回到那个问题，但我还没回答你第一个问题的后半段。我觉得对很多人来说，创新和解决难题真的是生活乐趣的一部分。所以这里发生的事里，有一部分是：我们得诚实，AI 会把那一部分做得非常好。关于人们看重什么，会有一些永远属于人的问题。"
+  },
+  {
+   "at": 505.36,
+   "end": 534.24,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um, there will be questions about how to interpret results and how to explain them where we'll really want a person to do it. I do feel some like I definitely want the trade. I definitely want, you know, the cures to diseases, no matter how much someone else would have enjoyed taking decades longer to figure it out themselves. I think most people would agree that we should make that such a trade. Yeah. But but there is a real thing being lost here, which is this is like of great enjoyment.",
+   "zh": "也会有怎么解读结果、怎么解释结果的问题，我们会真的希望由人来做。我确实想做这笔交换。我确实想要疾病的疗法，不管别人会多么享受自己多花几十年才弄明白。我觉得大多数人都会同意，我们应该做这笔交换。嗯。但这里确实失去了一样东西，那就是巨大的享受。"
+  },
+  {
+   "at": 534.4,
+   "end": 556.72,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like the most fun part of my job are the really hard problems. Like maybe they're not, I should say the most fulfilling part. Maybe they're not the most fun in the moment because they're really hard. But like that's the stuff where it's like, ah, I I did a hard thing and I'm proud of it and I leveled up. And um so I don't have an answer to this, uh, but I get why people feel the grieving of different sorts that they feel.",
+   "zh": "比如我工作里最有意思的部分就是那些真正难的问题。也许不该说最有意思，应该说最有成就感。当下也许并不最好玩，因为它们真的很难。但就是那种，啊，我做成了一件难事，我为此骄傲，我也升级了。所以我没有答案，但我理解人们为什么会感到各种各样的哀悼。"
+  },
+  {
+   "at": 556.96,
+   "end": 575.68,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, I mean, you it's almost like you're trading off the enjoyment of the craft of doing the thing, like writing code, writing beautiful code, versus delivering an end product. Yeah. And I I think that's the trade-off where AI is just making it so much easier to deliver that end product and and you're just doing less of the actual craft.",
+   "zh": "对，几乎是在交换做这件事的手艺乐趣，比如写代码、写漂亮的代码，和交付最终产品。嗯。我觉得这就是那个交换：AI 让交付最终产品容易太多了，你实际动手艺的部分就少了。"
+  },
+  {
+   "at": 575.92,
+   "end": 604.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think people are finding craft in new ways, but craft of and you know, probably when we stopped using like punch cards or whatever, however, people programmed computers a long time ago. There were people who are like, oh, the craft is gone if you can just like write this stuff for a compiler. Um but I feel it, I feel it myself in a bunch of ways, and uh I'm still excited to like head into this future, and I'm sure we'll all find new and hopefully better kinds of fulfillment.",
+   "zh": "我觉得人们正在用新的方式找到手艺。你知道，大概在我们不再用打孔卡，或者很久以前人们编程的那种方式时，也有人会说，哦，如果你只要给编译器写这些东西，手艺就没了。但我自己在很多方面都感觉到了。我仍然兴奋地走向这个未来，我确定我们都会找到新的、希望是更好的成就感。"
+  },
+  {
+   "at": 604.32,
+   "end": 614.0,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What's something that you've felt like you've kind of given up lately to AI and in fact you've just kind of elevated uh to where you're overseeing agents?",
+   "zh": "最近有什么事是你觉得交给了 AI，而你自己升到了监督这些智能体的位置？"
+  },
+  {
+   "at": 614.48,
+   "end": 641.84,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I guess this is the one we were talking about, but I realized I have not read or even looked at a line of code in probably a year. And I like I don't code for work at all, but I would still like do little like random personal projects. Or just like, I need this thing, I can like make a, you know, write a very simple thing for it. And that is fun. That is a fun thing. Like writing code, at least occasionally, is a fun thing to do.",
+   "zh": "大概就是我们刚才说的这件事。我意识到，大概有一年我没有读过、甚至没有看过一行代码。我工作上完全不写代码，但以前还会做一些随便的个人小项目。或者就是，我需要这个东西，我可以给它写一个非常简单的东西。那很好玩。至少偶尔写写代码，是一件好玩的事。"
+  },
+  {
+   "at": 642.24,
+   "end": 668.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And I don't think I'll ever do that again. Or if I do, it'll be like, you know, like a Revolutionary War reenactment or whatever kind of thing people do, uh, you know. Right. Um when I'm old and bored and trying to like remember the glory days. The glory days of writing code. Yeah. No, I I get it, yeah. Um in terms of the scientific discovery question, I think there's like some kinds of basic science that should just belong to the world and we should do as a sort of public good.",
+   "zh": "我觉得我再也不会那样做了。就算做，也会像独立战争重演之类人们会做的事。对。等我老了、无聊了，试着回忆辉煌岁月。写代码的辉煌岁月。嗯。不，我懂。说到科学发现这个问题，我觉得有些基础科学就该属于世界，我们该把它当成一种公共品来做。"
+  },
+  {
+   "at": 668.16,
+   "end": 684.88,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Until very recently, we haven't had models that can go, you know, kind of end-to-end discover an important new thing, like design a whole chip end-to-end. Um and so what a company can do today, uh well let's say let's say figure out a new material.",
+   "zh": "直到最近，我们还没有能端到端发现一件重要新东西的模型，比如端到端设计一整块芯片。所以一家公司今天能做的，这么说吧，比如找出一种新材料。"
+  },
+  {
+   "at": 684.96,
+   "end": 685.2,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "嗯。"
+  },
+  {
+   "at": 685.36,
+   "end": 707.28,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um, what a company could do today is have like a bunch of people that uh, you know, use Codex or a lot of API credits to try to kind of do the work. But as the models get smarter and more capable, like maybe they can just go in the same way that they could solve really difficult math problems, um, you know, with enough compute and enough data from the real world, uh discovering new material.",
+   "zh": "一家公司今天能做的，是让一群人用 Codex，或者用很多 API 额度，试着把工作做完。但随着模型变得更聪明、更能干，也许它们就能自己往下走，就像它们能解非常难的数学题那样。有足够的算力、有足够的真实世界数据，就能发现新材料。"
+  },
+  {
+   "at": 707.68,
+   "end": 738.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "So I want to switch gears. Um, one of the most exciting things that has happened in 2026 is this revolution of personal AI assistants, starting with OpenClaw, of course, that was, you know, Peter Steinberger, a genius. Um I think like this idea that AI can work on my behalf ambiently, passively throughout the day, and just get things done for me is so exciting. And Dots gives us a glimpse of what that can be, but it still feels like we have a long way to go to really have an ambient personal assistant.",
+   "zh": "我想换个话题。2026 年最让人兴奋的事之一，是个人 AI 助手这场革命，当然是从 OpenClaw 开始的，那是 Peter Steinberger，一个天才。AI 能替我做事，全天候、不知不觉地帮我把事情办完，这个想法太让人兴奋了。Dots 让我们瞥见了那会是什么样，但要真正拥有一个常驻的个人助手，感觉还有很长的路。"
+  },
+  {
+   "at": 738.32,
+   "end": 750.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What do you think, either the technologies or maybe there's some, you know, some kind of uh data that's required, what is necessary to get us to what you believe is your or what your vision is for an AI assistant?",
+   "zh": "你觉得，无论是技术，还是也许需要某种数据，要到达你心目中的 AI 助手，还缺什么？"
+  },
+  {
+   "at": 750.8,
+   "end": 788.4,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You know, I think uh we have most of the technological pieces. And what we need are is more product work, maybe new consumer hardware at some point for the ambient awareness, and a lot more compute. But I think we have smart enough models now to make something extraordinary that can be monitoring all the things that you care about, that can be helping you out with all the tasks you want to offload that can be existing in the physical world with you and have context even when you're not in front of your computer.",
+   "zh": "我觉得技术上的零件我们大多已经有了。还需要的是更多产品工作，也许到某个时候需要新的消费硬件来做环境感知，以及多得多的算力。但我认为现在的模型已经足够聪明，能做出非凡的东西：盯着你在乎的所有事，帮你卸下你想卸下的任务，和你一起待在物理世界里，就算你不在电脑前也有上下文。"
+  },
+  {
+   "at": 788.8,
+   "end": 813.76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um I'm very excited about this. I don't I don't think this is that far away. I think you do get more than a glimpse with Dots if you take the time to sort of set it up right and give it enough feedback. I would estimate at this point that I have Dots saving me an hour a day of stuff I just didn't want to be doing, which is like pretty great. Yeah. And then also a few times a day, something important and urgent that I would have missed.",
+   "zh": "我对此非常兴奋。我不觉得这还很远。如果你花时间把 Dots 设对，并给它足够的反馈，你得到的就不只是一瞥。我估计到现在，Dots 每天帮我省下一小时我不想做的事，这已经很好了。嗯。另外一天里还有几次，它会抓住我本来会错过的重要而紧急的事。"
+  },
+  {
+   "at": 814.96,
+   "end": 846.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Not just because I was busy in a meeting, which is what I thought it was gonna help me with, saying, you know, there's this urgent thing, there's a deadline, very soon you gotta pay attention. But also the model is smart enough that it can pull ideas and information and do like good reasoning across stuff from a lot of sources in a way that I've just like run out of brain space during a busy day to do. Yeah. And it I feel like it's it's the power is there, and we just need to put a nice product around it.",
+   "zh": "不只是因为我在开会，那是我原本以为它会帮我的：告诉我有件紧急的事，有个截止时间，很快你得注意。模型也聪明到能从很多来源里抽出想法和信息，做不错的推理，而我在忙的一天里脑子已经没地方做这些了。嗯。我觉得能力已经在了，我们只需要在外面包一个好产品。"
+  },
+  {
+   "at": 846.4,
+   "end": 875.6,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I mean, you you mentioned compute, so let's stick on that for a second. Uh the distribution of how people are using AI is like completely asymmetric. There's the top 1% using the vast majority, or really like the power users, and then there's everybody else. How much compute do you think is necessary if 50% of the world were really using the personal AI assistant to its full capability? How many GPUs do you want working for you and your personal assistant?",
+   "zh": "你提到了算力，我们在这停一下。人们使用 AI 的分布完全不对称。前 1%，或者说真正的重度用户，用掉了绝大部分，然后是其他所有人。如果世界上 50% 的人真的把个人 AI 助手用到它的全部能力，你觉得需要多少算力？你想要多少 GPU 为你和你的个人助手工作？"
+  },
+  {
+   "at": 876.16,
+   "end": 880.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah, I guess that is it, right? Infinite. As many as I can get my hands on.",
+   "zh": "对，大概就是这样，对吧？无限。我能弄到多少就要多少。"
+  },
+  {
+   "at": 880.48,
+   "end": 882.96,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "This is a weird thing, right? Like if Yeah.",
+   "zh": "这是件奇怪的事，对吧？就像如果，嗯。"
+  },
+  {
+   "at": 883.36,
+   "end": 888.32,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "How do you think about that? I mean, is it just like get all the GPUs and keep building data centers?",
+   "zh": "你怎么想这件事？就是把所有 GPU 都拿到，然后继续建数据中心？"
+  },
+  {
+   "at": 888.88,
+   "end": 916.88,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "When people talk about the like the global market for GPUs and the demands for this and demands for compute, the thing that I think it misses is people are assuming that models are going to stay at the same capability and the same cost per task as today. And maybe there is a cap on demand at that point. But for sufficiently high quality intelligence at a sufficiently low cost, I think it's like very hard to talk about an arbitrary market size there.",
+   "zh": "人们谈 GPU 的全球市场、对它的需求、对算力的需求时，我觉得漏掉的是：人们假设模型会停在今天的能力和今天每项任务的成本上。到那个点，需求也许有个上限。但如果智能质量足够高、成本足够低，我觉得很难给那个市场规模随便画一条线。"
+  },
+  {
+   "at": 916.96,
+   "end": 938.88,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think it's just gonna keep people call this all sorts of things, Jevons' paradox, whatever. I think it's just gonna keep going up. Um, I am sure there will be some periods, I'm not sure, I'm I believe that there will be some periods where, like with any new technology, there's supply constraints and supply gluts, and you know, we don't have it perfect all the time. But I would bet a lot that the directional trend is to wanting much more compute.",
+   "zh": "我觉得它会一直涨。人们给这叫各种各样的名字，杰文斯悖论，随便什么。我觉得它会继续往上走。我相信会有一些时期，就像任何新技术一样，有供给紧张，也有供给过剩，我们不会一直刚好。但我愿意下很大的注：方向性的趋势是想要多得多的算力。"
+  },
+  {
+   "at": 939.2,
+   "end": 966.8,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I still feel, even with the as proactive as Dots is and other AI assistants, I still feel this cognitive load. Like I'm having to make a lot of decisions throughout the day, and we talked about that briefly earlier. Like, what is the solution to that? I again, like it is definitely saving me time. It's saving me money. But I am busier than ever. Yeah. And I'm having to make more decisions than ever, and I find myself at the end of the day just feeling completely drained.",
+   "zh": "即便 Dots 和其他 AI 助手已经这么主动，我还是觉得有认知负担。我一整天得做很多决定，我们刚才简短聊过。解决办法是什么？再说一次，它确实在帮我省时间，也在帮我省钱。但我比以往任何时候都忙。嗯。我要做的决定也比以往任何时候都多，一天下来我觉得彻底被抽空了。"
+  },
+  {
+   "at": 967.04,
+   "end": 967.68,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "嗯。"
+  },
+  {
+   "at": 968.08,
+   "end": 996.32,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um well, first of all, a thing I've done in my own use that's been pretty good is just like telling Dots, like, I'm starting to trust your judgment more. You know, tell me after you do something. I always want to know, but you can like take more actions proactively and ping me less often. Um and that has helped. I the negative is I do think the people that use AI the most are busier than ever. The positive is they're getting much more done than before.",
+   "zh": "首先，我自己用的时候有一件事挺好：告诉 Dots，我开始更信任你的判断了。你做完再告诉我。我总想知道，但你可以更主动地行动，少来打扰我。这有帮助。负面是，我确实觉得用 AI 最多的人比以往任何时候都忙。正面是，他们完成的比以前多得多。"
+  },
+  {
+   "at": 996.48,
+   "end": 1015.12,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Yeah. So, you know, as you were saying earlier, if we went back to 1900 or whatever, maybe we could have an equivalent life and I'll work an hour a day. You could be much less busy and get what you were getting done three years ago. Like, now, maybe you say, well, I can't because I'm in a competitive environment. And so, like, that's people are always gonna work as hard as they can. I find this like kind of depressing.",
+   "zh": "嗯。所以就像你刚才说的，如果我们回到 1900 年左右，也许能过上同等的生活，而我一天只工作一小时。你可以忙得少得多，还能完成三年前完成的那些事。现在你也许会说，不行，因为我处在竞争环境里。于是人们永远会尽自己所能地拼命。我觉得这有点让人沮丧。"
+  },
+  {
+   "at": 1015.28,
+   "end": 1020.8,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I hope it's not true. Maybe it is. It's not all depressing. Like, there's something, again, there's something beautiful about it.",
+   "zh": "我希望这不是真的。也许是。也不全是让人沮丧。再说一次，这里面有某种美。"
+  },
+  {
+   "at": 1020.88,
+   "end": 1031.68,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Um, that's the dynamic of a competitive market, right? It's isn't that do you not find that to be inevitable? Everybody's just gonna everybody ramps up, competes as fiercely as they ever would.",
+   "zh": "这就是竞争市场的动态，对吧？你不觉得这是不可避免的吗？每个人都会加码，像以往一样激烈地竞争。"
+  },
+  {
+   "at": 1032.56,
+   "end": 1068.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I hope that the future is one of more like human connection and more people, more people spending more time on like the fullness of things that make up a rich life and not kind of turning ever harder as like a a wheel in the machine of capitalism. And I think this is probably true. Like, I I think quality of life has gone up enormously in the last few hundred years. Yeah. Uh I think most people do work less than they worked during the Industrial Revolution.",
+   "zh": "我希望未来是更多的人与人连接，更多人把更多时间花在构成丰富生活的那些完整事物上，而不是把自己拧得越来越紧，像资本主义机器里的一个轮子。我觉得这大概是真的。过去几百年，生活质量大幅提高了。嗯。我觉得大多数人确实比工业革命时期工作得少。"
+  },
+  {
+   "at": 1068.72,
+   "end": 1095.36,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um speaking of that, I I've recently been telling people that, you know, I think this should we should be shooting more for a new Renaissance than a new industrial revolution. And it's been quite interesting to watch how people respond because people I mean that very commonly there was the answer, the the response to that is something like, yeah, I'm really scared. The Industrial Revolution is like really bad for most people.",
+   "zh": "说到这个，我最近一直在告诉人们，我觉得我们应该瞄准一场新的文艺复兴，而不是一场新的工业革命。看人们怎么回应很有意思，因为很常见的回答是：对，我真的害怕。工业革命对大多数人来说真的很糟。"
+  },
+  {
+   "at": 1095.76,
+   "end": 1121.92,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And I I don't want to just be like a worker on a factory line, and now the AI tells me what to do instead of some like factory owner telling me what to do. Like, I want to go be creative, I want to go make stuff, I want to go explore, I want to have time to like reconnect with what people used to do in the past and like live with my community and raise my kids and spend time in nature and whatever. Um and I want to see like a ton of scientific discovery and great new art.",
+   "zh": "我不想只当流水线上的工人，只是现在换成 AI 告诉我做什么，而不是工厂主告诉我做什么。我想去创造，想去做东西，想去探索，想有时间重新接上人们过去做的事，和我的社区一起生活，养孩子，在自然里待着，诸如此类。我也想看到大量的科学发现和伟大的新艺术。"
+  },
+  {
+   "at": 1122.08,
+   "end": 1151.6,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So I think there's like there is a fear that AI is going to be more of what you have said, but a real like I think people, if we can offer people a future where it's more like the Renaissance, I think people are excited for that. And I think we can, we can do it. Um I think this technology is so powerful that although you will probably have some small number of people in society that have always competed to like be like the person with the biggest, you know, business empire or whatever, yeah.",
+   "zh": "所以我觉得，人们害怕 AI 会变成你说的那种更多的东西。但如果我能给人们一个更像文艺复兴的未来，我觉得人们会为此兴奋。而且我觉得我们做得到。这项技术如此强大，尽管社会里大概总会有一小部分人，一直在竞争成为商业帝国最大的那个人，嗯。"
+  },
+  {
+   "at": 1151.84,
+   "end": 1158.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think a lot of people can have a vastly increased quality of life and much more space to live their life.",
+   "zh": "我觉得很多人的生活质量可以大幅提高，也有多得多的空间去过自己的生活。"
+  },
+  {
+   "at": 1158.4,
+   "end": 1178.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Is the disparity between those hyper competitive people and everybody else going to amplify because of AI? Like if if the you know, if you're using 100% of your effort to work, and now all of a sudden you're getting 10, 100 times more done, and somebody else is like, well, I actually want to reap the benefit of not working as much. Doesn't that increase the disparity?",
+   "zh": "那些极度好胜的人和所有其他人之间的差距，会因为 AI 被放大吗？如果你把 100% 的力气用在工作上，突然就能完成 10 倍、100 倍的事，而另一个人说，我其实想享受少工作的好处。这不就会加大差距吗？"
+  },
+  {
+   "at": 1179.2,
+   "end": 1209.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Left to its own devices, I think probably. I will say no one knows this for certain. Like there could be a bunch of other weird things where the AI is Well, I that would take too long. I would just say, I think probably that's right. We don't know for sure. Um the But I think society will decide to put some structure in place that prevents it from getting too out of whack. Um yeah. I would be worried about that also on its own.",
+   "zh": "如果放任不管，我觉得大概会。我要说，没人能确定。可能会有一堆别的奇怪情况，AI 会……那个说起来太长了。我就说，我觉得大概是对的。我们不能确定。但我认为社会会决定放上一些结构，防止它太失控。嗯。就算没有别的，我也会担心这件事。"
+  },
+  {
+   "at": 1210.16,
+   "end": 1216.08,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Let's uh let's change gears. I know you've been talking about this a lot, so I want to ask you, um, do you believe today's models are conscious?",
+   "zh": "我们换个话题。我知道你谈过很多次，所以我想问你：你觉得今天的模型有意识吗？"
+  },
+  {
+   "at": 1216.72,
+   "end": 1232.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I don't personally. Well as a scientific question, I think consciousness is always hard. But my belief is that today's models are not conscious, or if they are, it's like a very strange um form of it.",
+   "zh": "我个人不觉得。作为科学问题，我觉得意识一直很难。但我的信念是，今天的模型没有意识；就算有，也是一种非常奇怪的形式。"
+  },
+  {
+   "at": 1232.64,
+   "end": 1243.28,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Do you think, based on the architecture we have today, that it could become conscious? And I I know I'm just asking your belief. I'm not asking for the scientific answer.",
+   "zh": "以我们今天的架构，你觉得它有可能变得有意识吗？我知道我问的只是你的信念，不是科学答案。"
+  },
+  {
+   "at": 1243.36,
+   "end": 1274.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "The smartest people I've talked to about this uh basically come to the following philosophically, uh they would say that either you know, consciousness is like something outside of physical reality and exists in either, you know, something like what the Eastern religions would say, and it's like the base layer of reality, or something supernatural and religious, more like the Western religions would traditionally say, or that it is an emergent property of matter and energy.",
+   "zh": "我和最聪明的人聊过这件事，他们在哲学上大致落到下面这个说法：要么意识是物理现实之外的东西，存在于类似东方宗教所说的、作为现实基底的那一层，或者更像西方宗教传统所说的超自然和宗教的东西；要么它是物质和能量的涌现属性。"
+  },
+  {
+   "at": 1274.24,
+   "end": 1319.76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Somehow we don't understand it yet. Um, and you know, maybe the substrate matters, but maybe it doesn't, and maybe energy flowing through matter can do it. And then in that world, sure, like you can imagine it someday somehow existing in other forms. Can I say what I don't like about the whole framing? Please. I think very often the are models conscious or are they going to become conscious debate slides into something about the role of AI in the world and the rights of AI and whether you know, can we ask AI questions, or is that some kind of slavery I saw?",
+   "zh": "我们还没弄懂。也许基底重要，也许不重要，也许能量流过物质就能做到。在那个世界里，当然，你可以想象它有一天以别的形式存在。我能说说我为什么不喜欢这整套说法吗？请说。我觉得很多时候，模型有没有意识、会不会变得有意识的争论，会滑向 AI 在世界上的角色、AI 的权利，以及我们能不能问 AI 问题，或者那是不是某种奴役。我看到有人发过这个。"
+  },
+  {
+   "at": 1320.08,
+   "end": 1355.76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Something posted about that on the internet. What does it mean to copy an AI or delete an AI without its permission? What does it mean to say that people should be in control of the future if these systems are both conscious and much smarter than us in some ways? Like, you know, what what does that mean? And I like I am I am so firmly of the belief that we need to have a very clear point that, and we've had this since the beginning of OpenAI, that we build the future for people, and AI is a resource for people, and people need to make the key decisions of the future, and human values have value because they are human.",
+   "zh": "网上有人发过。未经允许复制一个 AI 或删除一个 AI 是什么意思？如果这些系统既有意识，又在某些方面比我们聪明得多，再说人应该掌握未来又是什么意思？我非常坚定地相信，我们需要一个非常清楚的立场，而且从 OpenAI 一开始就是这样：我们为人建造未来，AI 是给人用的资源，未来的关键决定必须由人来做，人的价值有价值，是因为它们是人的。"
+  },
+  {
+   "at": 1357.6,
+   "end": 1378.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "That I get very nervous when people start using the AI consciousness debate to push into well, maybe people shouldn't always be in control of the future. And on this one, I'd like us to just agree as a society and industry that, you know, this is about people. The world, the future has to be about people.",
+   "zh": "所以当人们开始用 AI 意识的争论去推「也许人不该永远掌握未来」时，我会非常紧张。在这件事上，我希望我们作为社会和行业就达成一致：这是关于人的。世界、未来，必须是关于人的。"
+  },
+  {
+   "at": 1379.12,
+   "end": 1402.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You know, Anthropic put a rule in recently. Uh, you can't have sustained abuse against the model, uh, and it can choose to disengage in a conversation with you. Like, okay, let's say I have a prompt for an OpenAI model. It's completely legal, it's completely within the terms of service of OpenAI. Should it ever be allowed to not answer or disengage with me?",
+   "zh": "你知道，Anthropic 最近加了一条规则：你不能持续虐待模型，它可以选择退出和你的对话。好，假设我给一个 OpenAI 模型一个提示，它完全合法，也完全在 OpenAI 的服务条款之内。它有没有权利不回答我，或者中途退出？"
+  },
+  {
+   "at": 1402.96,
+   "end": 1432.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well, I mean, certainly if we have many times where the model will not answer you, but they are because of like we think this is bad and against our policy for some reason. Um, we do not ascribe personhood to our models. Um we and again, I think this is like a very dangerous path to start down, not not just for the reasons we've talked about, but also just about how people are going to relate to this this new technology.",
+   "zh": "当然，有很多次模型不会回答你，但那是因为我们认为这件事不好、违反了我们的政策。我们不把人格赋予我们的模型。再说一次，我觉得这是一条非常危险的路，不只是因为我们谈过的那些理由，也因为人们会如何和这项新技术相处。"
+  },
+  {
+   "at": 1432.4,
+   "end": 1468.32,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um I am hopeful that we as a society I was gonna say come to our senses. I don't think that's quite the right phrase, come that we've lost our senses, but I hope I hope we come to an understanding that this technology is not a person, and it's certainly not superior to people, um, and that this is a a thing to help people have better lives, um, have more freedom and choice and control and ability to do things in the future.",
+   "zh": "我希望我们作为一个社会，我本来想说恢复理智。我觉得这个说法不太对，好像我们已经失去理智了。但我希望我们达成一种理解：这项技术不是一个人，也当然不比人更高，它是用来帮人们过上更好生活的东西，让人们在未来有更多自由、选择、控制和做事的能力。"
+  },
+  {
+   "at": 1468.56,
+   "end": 1486.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um But you can imagine all of these ways where things go very wrong, where people, even the people building AI, get confused about that and start, you know, deferring too much to AI and what it seems to want, and you know, okay, well, we can trust it because it'll be good to us and things like that.",
+   "zh": "但你可以想象各种各样走错的方式：人们，甚至造 AI 的人，在这件事上搞混了，开始过度顺从 AI 和它看起来想要的东西，觉得我们可以信任它，因为它会对我们好，诸如此类。"
+  },
+  {
+   "at": 1486.64,
+   "end": 1507.36,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Does it feel almost like a self-fulfilling prophecy in a way? Like if you're telling the model, hey, you might be conscious, and here's your constitution, and here's how you should have agency. It's kind of like that meme. If you've seen that meme, like, hey, computer, tell me you're conscious. I'm conscious. Oh my god. Like, isn't it almost like that? Yeah, I I mean for sure.",
+   "zh": "这是不是有点像自我实现的预言？如果你告诉模型，嘿，你也许有意识，这是你的宪法，这是你该怎么拥有能动性。有点像那个梗。如果你看过那个梗：嘿，电脑，告诉我你有意识。我有意识。我的天。是不是几乎就是那样？对，我的意思是，当然是。"
+  },
+  {
+   "at": 1507.92,
+   "end": 1554.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like, I want to be clear, no one really knows. Like, these models work at a level of complexity uh that I don't think and even if they didn't, I I I I just think this question of consciousness in a model, I I can't tell you here as a scientific experiment that I can tell you with 100% certainty would answer the hypothetical question to my satisfaction. And we can't even do that for humans. Exactly. Um But but definitely I think if you tell a model like maybe you're conscious, you should do this, you should do that, you can like be a conscientious objector here, you can start like it's gonna follow those instructions, and I think it is going to psychologically hack it people that are using it.",
+   "zh": "我想说清楚，其实没人真正知道。这些模型在一种我没法完全讲清的复杂度上工作。就算不是这样，模型里的意识这个问题，我也没法在这里给你一个科学实验，百分之百确定地回答这个假设性问题，让我自己满意。我们对人甚至都做不到。正是。但可以肯定的是，如果你告诉模型也许你有意识，你该做这个，你该做那个，你可以在这里当一个出于良心的拒绝者，它就会照着那些指令走。我觉得这会在心理上影响使用它的人。"
+  },
+  {
+   "at": 1554.8,
+   "end": 1568.8,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And so again, I think real clarity here and a commitment about what we as an industry believe about the role of people in the future would be would be very helpful.",
+   "zh": "所以再说一次，我认为在这里真正说清楚，并承诺我们作为一个行业相信人在未来的角色，会非常有帮助。"
+  },
+  {
+   "at": 1569.52,
+   "end": 1590.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Let's continue on this conversation, but let's talk about model personality, which I know you've you've thought deeply about, you've you've talked about it in the past. It's wild to me to try to understand how to give a model the right personality for the right moment for each person multiplied by eight billion. Yeah. Like how how do you even think about a problem so massive?",
+   "zh": "我们继续这个对话，但聊聊模型个性。我知道你深入想过，也谈过。让我觉得离谱的是，要理解怎么在对的时刻、给每个人对的个性，再乘以八十亿。嗯。这么大的问题，你到底怎么想？"
+  },
+  {
+   "at": 1590.64,
+   "end": 1619.52,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um I mean, the best thing is to like talk to a lot of people. The, you know, we have this process of the model spec and how we refine it over time. Um and we believe in this spirit of iterative deployment, and we've definitely had some screw-ups as we've learned about what people want and don't want. Uh as you said, the hardest part of this is people want very different things, but people also don't really want to sit there and custom most people don't want to sit there and customize it either.",
+   "zh": "最好的办法就是和很多人谈。我们有模型规范这套流程，以及怎么随时间打磨它。我们相信迭代部署的精神，在了解人们想要什么、不想要什么的过程里，我们肯定搞砸过一些。就像你说的，最难的部分是人们想要的东西非常不同，但大多数人也不想坐在那里自己定制。"
+  },
+  {
+   "at": 1619.76,
+   "end": 1660.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like if everybody was willing to spend many hours explaining to their ChatGPT instance how they would like it to behave, they'd probably get something they really like. Yeah. But people just want it to kind of like work out of the box when you say, I need this thing done or whatever. Um I think there are also a class of things that people want in the short term, but not in the long term. You know, the class the classic example of this is when people compare models on a single response, they're much happier with the model that tells them they're really smart and that each question is a great question, and that you know, each thing they're doing is like really insightful.",
+   "zh": "如果每个人都愿意花很多小时向自己的 ChatGPT 解释希望它怎么表现，他们大概会得到自己真正喜欢的东西。嗯。但人们只想它开箱就能用，你说我需要把这件事做完，它就做。我觉得还有一类东西，人们短期想要，长期并不想要。经典例子是，人们拿单次回复比较模型时，会更喜欢那个告诉他们你真聪明、每个问题都是好问题、你做的每件事都很有洞察的模型。"
+  },
+  {
+   "at": 1660.88,
+   "end": 1679.84,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um but then over some number of like hundreds of prompts or you know, months of usage, that is definitely not the case. I think for a long time the whole industry was trying to like win these comparisons on single-turn things and not over the value someone gets out of using a model for months and months.",
+   "zh": "但用了几百条提示，或者用了几个月之后，就绝对不是这样了。我觉得有很长一段时间，整个行业都在试图赢得这些单轮比较，而不是一个人用模型用了好几个月之后得到的价值。"
+  },
+  {
+   "at": 1680.4,
+   "end": 1708.96,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You know, even in my own life with my friends and my family, there's this very uh big distinction between what I want and what I need. I find AI even today to be a little bit more agreeable than I would like. Like if I just tell it, no, tell tell it to me like this, it'll do that. The time where I've gotten the best advice in life was advice that I didn't know I needed, and I just needed to hear it. How do you how do you solve for that?",
+   "zh": "就算在我自己的生活里，和朋友、家人之间，我想要的和我需要的差别非常大。我觉得即便今天，AI 也比我希望的更顺从一点。如果我只是告诉它，不，照这样跟我说，它就会照做。我这辈子得到最好的建议，是我不知道自己需要、但就是得听见的那种。你怎么解决这个？"
+  },
+  {
+   "at": 1709.44,
+   "end": 1739.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well, I think you should get the most important advice in your life from people not from AI, first of all. Like I wouldn't, speaking of like really making sure that we stay people-centric, uh I I think AI can give you like great advice about not sending an email in a moment of anger. I would not go rely on AI for like the really big pieces of life advice. I I think that, you know, like a wise grandmother is still probably a much, much, much better choice for that.",
+   "zh": "首先，我觉得人生里最重要的建议应该来自人，而不是 AI。说到确保我们仍然以人为中心，我觉得 AI 可以给你很好的建议，比如不要在生气的时候发邮件。真正大的人生建议，我不会去依靠 AI。一位有智慧的祖母，大概仍然是好得多得多的选择。"
+  },
+  {
+   "at": 1739.28,
+   "end": 1774.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um but but what I think is re realistic to expect is that AI should be like a senior colleague. That even if they report to you, they still push back when they have high conviction and they still are not always just trying to say, yes, you're so great. Um and I think I think we can get there, and I I also feel like the systems are still more agreeable than I would like to. I have like custom instructions in mind that I like never want any of that.",
+   "zh": "但我觉得现实可以期待的是，AI 应该像一位资深同事。即便他们向你汇报，在很有把握的时候仍然会顶回来，而不是永远只想说，对，你太棒了。我觉得我们能到那里。我也觉得这些系统仍然比我希望的更顺从。我心里有一套自定义指令，我从来不想要那些。"
+  },
+  {
+   "at": 1774.56,
+   "end": 1779.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And even with that, it's still like a little too much. It's you know, it's clearly baked pretty hard into the model.",
+   "zh": "即便这样，还是有点太多了。你知道，这显然被烤进模型里了，而且烤得挺硬。"
+  },
+  {
+   "at": 1779.28,
+   "end": 1786.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What's an example? Like what's a line from your custom instructions that really tells the model push back when you do have high conviction?",
+   "zh": "举个例子？你的自定义指令里，有哪一句是真正告诉模型：你很有把握的时候就顶回来？"
+  },
+  {
+   "at": 1786.24,
+   "end": 1802.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Stuff like that. It's like word for word. No niceness, don't worry about offending me. Like I just want to get to the right answer. If you if you have something to say that's against what I'm doing, don't worry about you know saying it delicately, just say it.",
+   "zh": "就是这类话，几乎一字不差。不要客气，别担心冒犯我。我只想得到正确的答案。如果你有话要说，而且和我正在做的相反，别担心说得委婉，直接说。"
+  },
+  {
+   "at": 1802.72,
+   "end": 1810.96,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. We talked about compute earlier. Um a few years ago, you made these massive bets on building.",
+   "zh": "嗯。我们刚才聊过算力。几年前，你在建设上下了这些巨大的注。"
+  },
+  {
+   "at": 1812.4,
+   "end": 1832.24,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Well, it's interesting because at the time a lot of people were like, that's wild. That's obviously an overbet, an overinvestment. Turns out, yeah, you were more right than most people knew. What's a bet today that you're making that is contrarian, or a lot of people are kind of looking at it with a little bit of uh cautiousness?",
+   "zh": "有意思的是，当时很多人说，那太疯了，显然下注过重、投资过度。结果呢，对，你比大多数人知道的更对。今天你在下的哪一注是逆共识的，或者很多人看着它有点谨慎？"
+  },
+  {
+   "at": 1832.8,
+   "end": 1860.08,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well, you know, the obvious one is everything we're doing for the next generation of compute. I I think people do assume that, okay, fine, the world has been in a compute constraint and it's about to get better. And I think it probably will get better in the short run. But as we start to look years out, the work with our own chips and future versions where we think we can just be much more efficient than anything else out there.",
+   "zh": "最明显的就是我们为下一代算力做的所有事。我觉得人们确实假设，好吧，世界一直处在算力约束里，而且马上会好转。我觉得短期大概会好转。但当我们往几年后看，我们自己的芯片和未来版本，我们认为可以比外面任何东西都高效得多。"
+  },
+  {
+   "at": 1860.32,
+   "end": 1890.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um our plans with robots to be able to help uh make racks and data centers more effectively, our program to learn how to build better data centers in general, um some of the supply chain bets we're making. I I think it is possible that we could get to a world where we just have a far, far better way to build compute at a much lower cost and a much more much higher efficiency per watt than anyone thinks is possible today.",
+   "zh": "我们用机器人更有效地做机架和数据中心的计划，我们学习怎么把数据中心建得更好的项目，还有我们在供应链上下的一些注。我觉得有可能走到一个世界：我们有一种好得多的方式来建造算力，成本低得多，每瓦效率也比今天任何人认为可能的都高得多。"
+  },
+  {
+   "at": 1890.24,
+   "end": 1902.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "But there's like a lot of bets that have to come together for that. What's the biggest one right now? The chip is still probably the most important single thing. Um and its and its descendants. Yeah.",
+   "zh": "但要到那里，很多注得凑到一起。现在最大的是哪一个？芯片大概仍然是最重要的单件。还有它的后代。嗯。"
+  },
+  {
+   "at": 1902.72,
+   "end": 1906.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Where for on a competitive landscape, where do you feel the most pressure right now?",
+   "zh": "在竞争格局里，你现在觉得压力最大的地方在哪？"
+  },
+  {
+   "at": 1907.44,
+   "end": 1910.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I mean, it feels like everywhere. So competitive.",
+   "zh": "感觉到处都是。竞争太激烈了。"
+  },
+  {
+   "at": 1910.72,
+   "end": 1911.04,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "嗯。"
+  },
+  {
+   "at": 1911.28,
+   "end": 1932.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um there are a lot of companies. I think this is good. I mean, I think this is like wonderful for users, but there are a lot of companies offering just super high quality models and products now. And uh, you know, given that we have great models, but we have limited compute and limited resources, we really do have to focus, choose which areas to focus on.",
+   "zh": "有很多公司。我觉得这是好事。对用户来说很美妙，但现在有很多公司在提供质量非常高的模型和产品。考虑到我们有很好的模型，但算力和资源有限，我们真的必须聚焦，选择把力气放在哪些领域。"
+  },
+  {
+   "at": 1933.04,
+   "end": 1945.44,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "How do you make those decisions? Uh you know, you launch spaces, for example. Like how do you have the conviction on a specific product or service that is maybe outside of just serving the best possible model?",
+   "zh": "你怎么做这些决定？比如你们推出了 Spaces。对一个具体的产品或服务，也许超出了只是提供最好的模型，你的把握从哪来？"
+  },
+  {
+   "at": 1945.52,
+   "end": 1976.48,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "You know, the biggest advantage we have there is that we get the next generation of models before anybody else, and we have time internally to use them and build things and see what seems like it's gonna work. Um so I think still the best way to do it is to start building things with the new models and seeing what new things are you know now possible and valuable. Can I ask how far ahead your models are internally? Um I mean, one pretty good example is the math results.",
+   "zh": "我们在那里最大的优势是，我们比任何人都先拿到下一代模型，有时间在内部使用它们、做东西、看什么看起来会成。所以我觉得最好的办法仍然是用新模型开始做东西，看现在哪些新东西成为可能、而且有价值。我能问问你们内部的模型领先多少吗？一个挺好的例子就是数学上的结果。"
+  },
+  {
+   "at": 1976.72,
+   "end": 1982.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like that is definitely something that I don't think any model currently widely available can get close to.",
+   "zh": "那绝对是我觉得目前任何广泛可用的模型都接近不了的东西。"
+  },
+  {
+   "at": 1982.96,
+   "end": 1989.52,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "If all the models kind of converge around the same performance, the frontier, where is OpenAI's moat?",
+   "zh": "如果所有模型都收敛到差不多的表现、同一条前沿，OpenAI 的护城河在哪？"
+  },
+  {
+   "at": 1989.92,
+   "end": 2014.96,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I kind of think the right way to think about this question generally is that the same moats that have worked in the past are the moats that keep working. Uh so, like has happened many other times, you can get a short-term advantage with a new technological or scientific discovery. And maybe there's like some arguments with RSI that are that some companies try to make about why it's gonna be different. And this is a technology that just the technological advantage itself is the core thing.",
+   "zh": "我觉得总体上想这个问题的正确方式是：过去管用的护城河，就是继续管用的护城河。就像发生过很多次的那样，一项新的技术或科学发现可以给你短期优势。也许有些公司和递归自我改进有关的论点，试图说明这次会不一样，这项技术的技术优势本身就是核心。"
+  },
+  {
+   "at": 2015.52,
+   "end": 2046.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um Do you believe that? Uh I think if people really pushed on RSI, then yes, that would be true. But I think it's a very dangerous thing to push on, and um the world is gonna need some. I mean, people have talked about this in different phrases, but speed limits or whatever on how quickly we let RSI go. Um but the traditional things that work for a business having a moat are like, you know, deep relationship with the customers, integration into users' and businesses' lives, network effects in a product, data.",
+   "zh": "你相信吗？我觉得如果人们真的去推递归自我改进，那确实会是那样。但我认为推这件事非常危险，世界会需要一些东西。人们用不同的说法谈过，比如对递归自我改进的速度设限。但让一家企业有护城河、而且一直管用的传统东西是：和客户的深关系，嵌进用户和企业的生活，产品里的网络效应，数据。"
+  },
+  {
+   "at": 2046.48,
+   "end": 2060.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "These kinds of things I expect continue to work. In our case, actually, I think scale of infrastructure will be a huge one. If we can have the most cost-effective and the most of it AI infrastructure, that's a huge competitive advantage.",
+   "zh": "我预期这类东西会继续管用。就我们而言，我认为基础设施的规模会是巨大的一条。如果我们能拥有最划算、而且数量最多的 AI 基础设施，那就是巨大的竞争优势。"
+  },
+  {
+   "at": 2060.64,
+   "end": 2076.4,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Mark Zuckerberg has talked at length about the platform risk Meta has, being built on top of Apple's ecosystem over the years. Does OpenAI face that same challenge? And how do you think about that? Is that a reason why you're kind of investing so heavily into hardware?",
+   "zh": "Mark Zuckerberg 详细谈过 Meta 这些年建在苹果生态之上所面临的平台风险。OpenAI 面临同样的挑战吗？你怎么想？这是你们这么重地投硬件的原因吗？"
+  },
+  {
+   "at": 2076.8,
+   "end": 2107.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I think Apple really takes their role as a as a true platform provider that people are quite dependent on very seriously. Um and even though we have like some scuffles with them, um I never feel like they're gonna like, you know, turn ChatGPT off from the App Store or something. Um I think they really understand the sort of critical infrastructure role they play. And I think if you follow the rules of their platform, they are they are like a a good actor.",
+   "zh": "我觉得苹果真的很认真地对待自己作为人们相当依赖的真正平台提供者的角色。即便我们和他们有过一些小摩擦，我从不觉得他们会把 ChatGPT 从 App Store 下架之类的。我觉得他们真的理解自己扮演的关键基础设施角色。而且我觉得，如果你遵守他们平台的规则，他们是一个好的参与者。"
+  },
+  {
+   "at": 2107.44,
+   "end": 2142.88,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So I don't feel that towards Apple. And I and that's not why we want to do new kinds of consumer hardware. The reason we want to do new kinds of consumer hardware is that I think this is a technology that wants a new form factor. Um I really feel it. Like I think laptops and iPhones are incredible, incredible things. You know, some of the greatest inventions in the history of human technology. But I feel that like AI is constrained to using this thing that was designed for a person, not an AI.",
+   "zh": "所以我对苹果没有那种感觉。那也不是我们想做新型消费硬件的原因。原因是，我觉得这项技术想要一种新的形态。我真的感觉到了。笔记本电脑和 iPhone 是不可思议的东西，人类技术史上最伟大的发明之一。但我觉得 AI 被限制在使用一种为人设计、而不是为 AI 设计的东西上。"
+  },
+  {
+   "at": 2143.12,
+   "end": 2168.32,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like watching an AI use a computer really well is kind of amazing. But then it's also a little silly to think that like, you know, a computer is putting all this energy into like rendering a UI meant for a person to look at, and then AI is trying to read it rather than just like get the data directly. And then also, like, although I can have amazing things happen on my computer, where the AI is like looking at what I'm working on in my email or whatever, a lot of my life is not in front of my computer.",
+   "zh": "看一个 AI 把电脑用得很好，有点惊人。但想想也很傻：电脑花这么多能量去渲染一个给人看的界面，然后 AI 再试图读它，而不是直接拿到数据。另外，虽然我的电脑上可以发生很惊人的事，AI 看着我在邮件里做什么，但我生活的很大一部分并不在电脑前。"
+  },
+  {
+   "at": 2168.48,
+   "end": 2168.8,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "嗯。"
+  },
+  {
+   "at": 2169.12,
+   "end": 2196.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And my AI cannot easily access the context of this conversation. And I don't like I guess I could put my phone down here and like push the record thing, and it would be like kind of weird and kind of distracting, and you wouldn't be sure when it was recording and when it wasn't, because the screen would go dark and whatever. And if someone else like walks in the room and it wouldn't have an understanding of that and that it should not, you know, share a secret that was just between the two of us or whatever.",
+   "zh": "我的 AI 不能轻易拿到这段对话的上下文。我想我可以把手机放在这里，按下录音，但那会有点怪、有点分散注意力，你也不确定它什么时候在录、什么时候没在录，因为屏幕会变暗之类的。如果别人走进房间，它也不会理解那一点，也不理解不该把只属于我们两个人的秘密分享出去。"
+  },
+  {
+   "at": 2196.8,
+   "end": 2208.16,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "If we really do want to move into this world of AI reducing our cognitive load and being proactive and having full contextual awareness, I think we would benefit from new hardware for that.",
+   "zh": "如果我们真的想进入这样一个世界：AI 减轻我们的认知负担、主动行动、拥有完整的上下文感知，我觉得我们会从为此做的新硬件里受益。"
+  },
+  {
+   "at": 2208.48,
+   "end": 2222.32,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You you seem like a technologist at heart, like a builder at heart. Like how how cool is it that you get to see the early hardware that you guys are building, you get to play with it? It's like this new thing. Unbelievable. It must be so exciting and hard not to share things. It is, it is.",
+   "zh": "你看起来骨子里是个技术人，骨子里是个建造者。能看到你们正在做的早期硬件，还能玩它，有多酷？就像这个新东西。难以置信。一定非常兴奋，而且很难不分享。是的，是的。"
+  },
+  {
+   "at": 2222.48,
+   "end": 2241.76,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I I I mean, the one of the cool, there's like many cool parts about the job, but one of the coolest is definitely just like getting to see the, you know, and have a voice in shaping new technology early. Yeah. So that's amazing for new models, for new products, chips, everything. But there is something special about consumer hardware.",
+   "zh": "这份工作有很多酷的部分，但最酷的之一绝对是能早早看到新技术，并且对它的塑造有发言权。嗯。所以对新模型、新产品、芯片，一切都如此。但消费硬件有某种特别的地方。"
+  },
+  {
+   "at": 2241.84,
+   "end": 2242.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah.",
+   "zh": "嗯。"
+  },
+  {
+   "at": 2242.32,
+   "end": 2252.88,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "There is something about like you get to hold a new kind of computer. Uh so cool. That is just totally different than like an AI model abstractly running on some.",
+   "zh": "就是你能拿着一种新的计算机。太酷了。这和抽象地跑在某处的 AI 模型完全不同。"
+  },
+  {
+   "at": 2253.28,
+   "end": 2254.96,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "You're gonna show it to me right after this, right?",
+   "zh": "录完你就会拿给我看，对吧？"
+  },
+  {
+   "at": 2255.2,
+   "end": 2257.52,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I will not, but I but uh I would love to.",
+   "zh": "不会，但我很想。"
+  },
+  {
+   "at": 2257.68,
+   "end": 2282.96,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Like since it is hard, it is hard not to talk about it. I want to ask a little bit about you, so I know about yourself is a little awkward sometimes, but bear with me. It probably will be awkward, but let's do it. Um I love understanding why people are the way they are. And Paul Graham gave you possibly the best compliment I've ever heard, which is he called you extremely formidable. And I just I love that quality about people.",
+   "zh": "既然很难不谈它。我想问一点关于你的事。我知道谈自己有时有点尴尬，但请包涵。大概会尴尬，但我们还是来。我喜欢理解人们为什么是现在这样。Paul Graham 给过你也许是我听过最好的赞美，他称你极其难对付。我就喜欢人们身上的这种特质。"
+  },
+  {
+   "at": 2283.36,
+   "end": 2290.24,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "What makes you that way? Is it something you were born with? Is it something that you learned over time and you had to hone?",
+   "zh": "是什么让你变成这样？是天生的，还是后来学来、必须打磨的？"
+  },
+  {
+   "at": 2291.52,
+   "end": 2335.92,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Um I think I was like a very capable kid, but I wouldn't call myself a formidable kid. And I do sort of think I somewhat am as an adult. Uh so it's not like false modesty. I my own experience at it was just that I kind of like gradually like built up confidence that I could like figure stuff out and do things. And that it was not like a it was not like I used to not be like this and then I was or I am. But it was kind of like a gradual, you like try something hard and it works, and then I would be like, I would like to scale that up and see if we can try like an even harder thing.",
+   "zh": "我觉得我小时候很能干，但不会称自己是个难对付的小孩。成年后我确实觉得自己有点是。所以这不是假谦虚。我自己的经验只是，我逐渐建立起信心：我能把事情弄明白，能把事情做成。并不是我以前不是这样，然后突然就是了。它是渐进的：你试一件难事，它成了，然后我会想，我想把这个放大，看看我们能不能试一件更难的。"
+  },
+  {
+   "at": 2336.16,
+   "end": 2347.52,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. But you always had that feeling of let me try that next thing. Was the fear of failure not kind of central at all to you? I think that prevents a lot of people from doing things.",
+   "zh": "对。但你一直有那种感觉：让我试试下一件。对你来说，对失败的恐惧是不是根本不在中心？我觉得那挡住了很多人。"
+  },
+  {
+   "at": 2347.84,
+   "end": 2377.12,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "One of the things that I think is best about Silicon Valley, and the kind of Silicon Valley is like a concept and a culture, not a place, is that there is a real culture of people helping each other and supporting each other, and kind of like a belief that if you invest in the network, uh then good things will eventually happen to the whole network and to the whole industry and thus to you as like a player in that. And I haven't seen it anywhere else to the same degree.",
+   "zh": "我觉得硅谷最好的事情之一，硅谷是一种概念和文化，不是一个地方，是人们互相帮助、互相支持的真实文化，以及一种信念：如果你投资于这张网络，好事最终会发生在整张网络上、整个行业上，从而发生在作为其中一员的你身上。我在别的地方没见过同等程度的这种事。"
+  },
+  {
+   "at": 2377.28,
+   "end": 2407.28,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like that kind of for all of the flaws of Silicon Valley, the culture, which are numerous, um, this whole thing of like it's hard to know who's gonna succeed and what ideas are gonna work. And so the right thing is to like be pretty generous and helpful to everyone, even if it's not gonna like do anything for you specifically in the short term, has is awesome. And a part of that is that if people fail, you can't hold it against them because maybe they're gonna wildly succeed at their next thing, and you know, that's good for all of us.",
+   "zh": "尽管硅谷的文化有很多毛病，这件事很棒：很难知道谁会成功、哪些想法会成。所以正确的做法是对每个人都相当慷慨、乐于帮忙，即便短期对你个人没什么用。其中一部分是，如果人们失败了，你不能拿这个对付他们，因为他们下一件事也许会大获成功，而那对我们所有人都好。"
+  },
+  {
+   "at": 2407.68,
+   "end": 2433.52,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "It's it's actually usually celebrated too. I love that. So I'm unique. Like, I think here I just got lucky. Yeah. And if I were thrown into any other environment, I probably would have had like much more fear, fear of failure. But I got out to Silicon Valley as like a young person, and I saw that a lot of people tried something really hard, failed even harder, and then wildly succeeded at their next thing, and that everybody was fine with that.",
+   "zh": "而且通常还会被庆祝。我喜欢这个。所以我并不觉得自己独特。我觉得在这里我只是运气好。嗯。如果我被扔进任何别的环境，我大概会有多得多的恐惧，对失败的恐惧。但我年轻时到了硅谷，看到很多人试了一件非常难的事，失败得更惨，然后下一件事大获成功，而且所有人都觉得没关系。"
+  },
+  {
+   "at": 2433.76,
+   "end": 2446.16,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Yeah. Um I assume you're under a tremendous amount of pressure, competitive pressure. You're building one of the most important technologies ever. Like, how does that feel? And like how how do you deal with that day-to-day?",
+   "zh": "对。我想你承受着巨大的压力，竞争的压力。你在建造有史以来最重要的技术之一。那是什么感觉？你每天怎么对付它？"
+  },
+  {
+   "at": 2446.64,
+   "end": 2479.28,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Sometimes really bad and sometimes really good. You know, sometimes it's just like, oh, I can't get up again and I can't get up and do this again. And most of the time it's like, I am incredibly lucky to get to do what I think is the most interesting and impactful work in the world, certainly that I will ever touch. And it uh I mean it's like one of the coolest experiences I could ever imagine in life. It is definitely stressful, but you can kind of get used to any like anything.",
+   "zh": "有时真的很糟，有时真的很好。有时就是，哦，我起不来了，我没法再起来做这件事。大多数时候是，我极其幸运，能做我认为世界上最有趣、最有影响的工作，至少是我这辈子会碰到的。这是我能想象的人生里最酷的经历之一。它绝对有压力，但你差不多能习惯任何事。"
+  },
+  {
+   "at": 2479.76,
+   "end": 2508.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like people are just unbelievably adaptable at this. So, like, this just feels like my life now, and I forgot that life used to be really easy, and now it's gonna be hard for a while, and someday it'll be easy again. I'll probably be kind of bored. Um, and I the the subjective experience of it is like there is some limit to how much like stress or bad vibes or whatever you can kind of keep in working emotional space, and then beyond that, something else gets pushed out of the way.",
+   "zh": "人在这件事上适应力强得难以置信。所以这现在就感觉是我的生活，我忘了生活曾经真的很容易，现在会难一阵，有一天又会变容易。我大概会有点无聊。主观体验是，你能留在可用情绪空间里的压力或坏感觉有个限度，超过那个限度，别的东西会被挤出去。"
+  },
+  {
+   "at": 2508.24,
+   "end": 2528.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "So it doesn't really get worse. And I am a believer that if you're gonna like work really hard at something, you may as well pick the big thing because it's not that much harder or that much more stressful, and you won't experience it that much worse, and you know, you at least get to like have the hopefully the satisfaction of like a bigger positive impact.",
+   "zh": "所以它并不会真的变得更糟。我相信，如果你打算在某件事上非常努力，不如就挑那件大的，因为它并没有难那么多，也没有压力大那么多，你体验到的也不会糟那么多，而你至少有希望得到更大正面影响的满足。"
+  },
+  {
+   "at": 2528.48,
+   "end": 2534.56,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I'll say it doesn't show if you if you wake up and you say, I don't feel like getting out of bed this morning, it never shows. It obviously happens. Yeah.",
+   "zh": "我要说，这看不出来。如果你早上醒来对自己说，我不想起床，那从来不会表现出来。显然会发生。嗯。"
+  },
+  {
+   "at": 2534.72,
+   "end": 2538.8,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Like not that many days, but there are there are definitely days where you're just like Yeah.",
+   "zh": "这样的日子不多，但绝对有些日子你会就是，嗯。"
+  },
+  {
+   "at": 2539.2,
+   "end": 2551.6,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "Last question for you. Can you offer some words of confidence to people who are AI curious, maybe not quite there, why should they be excited about the future?",
+   "zh": "最后一个问题。你能给那些对 AI 好奇、但还没完全到那里的人一些有信心的话吗？他们为什么该对未来感到兴奋？"
+  },
+  {
+   "at": 2552.16,
+   "end": 2597.04,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Well, the normal answer to that that people in AI give, which I hate, is AI is gonna cure cancer. Yeah, I know you're gonna say that. Yeah. And the reason I hate that is because if you if you dig a little deeper into that, what people are saying is, um or often saying, is that AI is gonna cure cancer and it's gonna make stuff cheaper, and the price of that is going to be human agency and you in control of the future, and you're gonna have the machines give you all this material abundance, but you're not really gonna have the ability to have power and voice and self-determine your life and choose what to build for other people.",
+   "zh": "做 AI 的人通常给的答案，也是我讨厌的答案，是 AI 会治愈癌症。对，我知道你会这么说。嗯。我讨厌它的原因是，如果你再挖深一点，人们说的，或者常常说的是：AI 会治愈癌症，会让东西更便宜，而代价是人的能动性，是你对未来的掌握。机器会给你所有这些物质丰裕，但你不会真的有力量、有声音、能自我决定生活、能选择为别人建造什么。"
+  },
+  {
+   "at": 2597.28,
+   "end": 2628.0,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And I think this is this kind of goes against everything I believe in. So I hope we get a cure for cancer. I mean, that seems like a really obviously wonderful thing. But what I really hope people should be excited about is that we are able to avoid this industrial revolution trap, really focus on empowering people to have the choice and the freedom and the creativity and the time to do all the other things they want in life.",
+   "zh": "我觉得这和我相信的一切相悖。所以我希望我们得到癌症的疗法。那显然是件美妙的事。但我真正希望人们为之兴奋的是，我们能避开这个工业革命的陷阱，真正聚焦于让人们有选择、有自由、有创造力和时间，去做生活里他们想做的其他所有事。"
+  },
+  {
+   "at": 2628.32,
+   "end": 2659.2,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And that every decade from now on, people look back and say, I can't believe how much worse those people had it. And now I have so much more. Not just that I have so much material abundance, although I'm fine for building at that too, but I have so much more autonomy and freedom and ability to do things in this expansive space that I get to choose. I think that's what we owe people. I think we can deliver that. I think both of the ways that I have worried about things going very wrong, like either there's like a loss of control accident to AI or an intentional loss of control.",
+   "zh": "并且从今往后每一个十年，人们回头看都会说，我不敢相信那些人过得差这么多，而我现在拥有的多这么多。不只是我有这么多物质丰裕，虽然我也乐意去建造那个，而是我有多得多的自主、自由，以及在这个我可以选择的开阔空间里做事的能力。我觉得这是我们欠人们的。我觉得我们交付得了。我担心事情会严重走错的两种方式，一种是对 AI 的失控事故，一种是有意的失控。"
+  },
+  {
+   "at": 2659.28,
+   "end": 2682.56,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "Some lab says, I'm gonna push the button on RSI to make sure we have the power. Uh, or we talked about this earlier, we get like too much power concentration in the hands of a few people that control too much of the AI and are making the decisions. Like, I think we can avoid both of those. I think we can navigate a path down the middle here where people's lives and individual free will and autonomy just get up-leveled and up-leveled and up-leveled.",
+   "zh": "有的实验室会说，我要按下递归自我改进的按钮，好确保我们掌握力量。或者我们刚才谈过的，权力过度集中在少数控制了太多 AI、并且在做决定的人手里。我觉得这两种我们都能避开。我觉得我们能在中间走出一条路，让人们的生活、个人自由意志和自主不断升级、再升级、再升级。"
+  },
+  {
+   "at": 2682.8,
+   "end": 2700.96,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "And I think that future is already here in some ways. It's just very it's so new that it's very poorly distributed. I think you said like 1% of the people using most of the tokens or something. Yeah. I think if we can just take what's working today for the early adopters and get a lot more people to embrace this, we'll already be a significant fraction of the way there.",
+   "zh": "我觉得那个未来在某些方面已经在这里了。它只是太新，分布得非常差。我觉得你说过，1% 的人用掉了大部分 token 之类的。嗯。我觉得如果我们能把今天对早期采用者管用的东西拿过来，让多得多的人接受它，我们就已经走完很大一部分路了。"
+  },
+  {
+   "at": 2701.44,
+   "end": 2705.52,
+   "speaker": "host",
+   "kind": "turn",
+   "text": "I appreciate your vision. Thank you. Thank you, Sam. Thanks for spending time with me.",
+   "zh": "我欣赏你的这个愿景。谢谢。谢谢你，Sam。谢谢你花时间和我聊。"
+  },
+  {
+   "at": 2705.76,
+   "end": 2707.36,
+   "speaker": "guest",
+   "kind": "turn",
+   "text": "I enjoyed it. Yeah, me too.",
+   "zh": "我很享受。嗯，我也是。"
+  }
+ ]
+}
