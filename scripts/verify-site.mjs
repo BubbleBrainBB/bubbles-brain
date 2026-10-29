@@ -446,8 +446,8 @@ invariant(
 
 const specializedMarkers = new Map([
   ["index.html", ['class="home-search"', 'action="/search/"']],
-  ["tutorials/index.html", ['id="newbie-tutorials"', 'id="workbuddy-tutorials"']],
-  ["highlights/index.html", ["data-reading-directory", "data-reading-search"]],
+  ["tutorials/index.html", ['id="newbie-tutorials"', 'id="workbuddy-tutorials"', "分钟"]],
+  ["highlights/index.html", ["data-reading-directory", "data-reading-filter", "rr-contents__dots"]],
   ["vibe-coding/terms/index.html", ['id="ai-agent"', 'id="ui-patterns"']],
   ["vibe-coding/showcase/index.html", ["data-showcase-gallery", "showcase-tile"]],
   ["benchmarks/index.html", ['id="coding"', "实测案例"]],

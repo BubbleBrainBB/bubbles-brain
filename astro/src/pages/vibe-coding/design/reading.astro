@@ -31,19 +31,19 @@ const parts = designReadingParts.map((part, index) => ({
 	<div class="rr-page">
 		<DesignHead current="reading" />
 
-		<div class="design-contents" data-design-reading>
+		<div class="rr-contents rr-contents--numbered" data-design-reading>
 			{
 				parts.map((part) => (
-					<section class="design-contents__part" aria-labelledby={`part-${part.id}`}>
+					<section class="rr-contents__part" aria-labelledby={`part-${part.id}`}>
 						<h2 id={`part-${part.id}`}>
 							<span>{part.name}</span>
 							{part.label}
 						</h2>
-						<ol>
+						<ol class="rr-contents__list">
 							{part.items.map(({ article, number }) => (
 								<li>
 									<a
-										class="design-contents__row"
+										class="rr-contents__link"
 										href={article.url}
 										title={article.original}
 										data-design-article={article.id}
@@ -51,22 +51,24 @@ const parts = designReadingParts.map((part, index) => ({
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<span class="design-contents__num" aria-hidden="true">
-											{String(number).padStart(2, '0')}
-										</span>
-										<span class="design-contents__title" data-design-title>
-											{article.title}
-										</span>
-										<span class="design-contents__dots" aria-hidden="true" />
-										<span class="design-contents__by">
-											<img
-												src={designIcon(article.icon)}
-												alt=""
-												width="16"
-												height="16"
-												decoding="async"
-											/>
-											{article.source}
+										<span class="rr-contents__row">
+											<span class="rr-contents__num" aria-hidden="true">
+												{String(number).padStart(2, '0')}
+											</span>
+											<span class="rr-contents__title" data-design-title>
+												{article.title}
+											</span>
+											<span class="rr-contents__dots" aria-hidden="true" />
+											<span class="rr-contents__side">
+												<img
+													src={designIcon(article.icon)}
+													alt=""
+													width="16"
+													height="16"
+													decoding="async"
+												/>
+												{article.source}
+											</span>
 										</span>
 									</a>
 								</li>

@@ -219,28 +219,11 @@ export const designKitGroups: DesignKitGroup[] = [
 	},
 ];
 
-/** 组件库的框架筛选：React、Vue，以及不只绑一种框架的 */
-export const designKitFilters = [
-	{ id: 'react', label: 'React' },
-	{ id: 'vue', label: 'Vue' },
-	{ id: 'any', label: '不挑框架' },
-] as const;
-
-export function designKitFilterIds(kit: DesignKit): string[] {
-	const ids: string[] = [];
-	if (kit.frameworks.includes('React')) ids.push('react');
-	if (kit.frameworks.includes('Vue')) ids.push('vue');
-	if (kit.frameworks.length > 2 || kit.frameworks.includes('JS')) ids.push('any');
-	return ids;
-}
-
 export const designIcon = (icon: string) => `/media/design/icons/${icon}.png`;
 
 // ------------------------------------------------------------------ 作品
 
 export type DesignWorkKind = '产品官网' | '个人站' | '组件与交互' | '设计系统';
-
-export const designWorkKinds: DesignWorkKind[] = ['产品官网', '个人站', '组件与交互', '设计系统'];
 
 export interface DesignWork {
 	id: string;

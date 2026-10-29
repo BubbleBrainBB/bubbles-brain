@@ -3,6 +3,7 @@ import DesignHead from '../../../components/DesignHead.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/design-library.css';
 import { designBrandGroups, designBrands } from '../../../data/designBrands';
+import { designIcon } from '../../../lib/designLibrary';
 
 const brandsById = new Map(designBrands.map((brand) => [brand.id, brand]));
 const groups = designBrandGroups.map((group) => ({
@@ -18,41 +19,35 @@ const groups = designBrandGroups.map((group) => ({
 	title="Design · Vibe Coding · Bubble's Brain"
 	description="大公司如何用 DESIGN.md 描述自己的视觉语言：色彩、字体、组件规则与设计哲学。"
 >
-	<div class="rr-page rr-page--wide" data-reading-directory>
-		<DesignHead current="brands">
-			<div class="rr-filters" role="group" aria-label="按分组">
-				<button type="button" data-reading-filter="" aria-pressed="true">全部</button>
-				{
-					groups.map((group) => (
-						<button type="button" data-reading-filter={group.id} aria-pressed="false">
-							{group.label}
-						</button>
-					))
-				}
-			</div>
-		</DesignHead>
+	<div class="rr-page rr-page--wide">
+		<DesignHead current="brands" />
 
 		{
 			groups.map((group) => (
-				<section
-					class="rr-block"
-					id={group.id}
-					data-reading-group={group.id}
-					aria-labelledby={`design-${group.id}`}
-				>
+				<section class="rr-block" id={group.id} aria-labelledby={`design-${group.id}`}>
 					<div class="rr-block__head">
 						<h2 class="rr-block__title" id={`design-${group.id}`}>
 							{group.label}
 						</h2>
 					</div>
-					<ul class="rr-names rr-names--three">
+					<ul class="design-links">
 						{group.brands.map((brand) => (
-							<li data-reading-item>
-								<a class="rr-name rr-name--block" href={`/vibe-coding/design/${brand.id}/`}>
-									<span class="rr-name__main">{brand.name}</span>
-									<span class="rr-name__sub">
-										{brand.category} · {brand.tagline}
+							<li>
+								<a class="design-link" href={`/vibe-coding/design/${brand.id}/`}>
+									<img
+										class="design-link__icon"
+										src={designIcon(brand.id)}
+										alt=""
+										width="20"
+										height="20"
+										loading="lazy"
+										decoding="async"
+									/>
+									<span class="design-link__head">
+										<span class="design-link__name">{brand.name}</span>
+										<span class="design-link__by">{brand.category}</span>
 									</span>
+									<span class="design-link__note">{brand.tagline}</span>
 								</a>
 							</li>
 						))}
@@ -62,7 +57,3 @@ const groups = designBrandGroups.map((group) => ({
 		}
 	</div>
 </BaseLayout>
-
-<script>
-	import '../../../scripts/readingDirectory';
-</script>

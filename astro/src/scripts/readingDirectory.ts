@@ -3,8 +3,7 @@
  * where offered, by a filter button. Without JS everything shows.
  *
  * Markup: [data-reading-directory] holds [data-reading-search], optional [data-reading-filter]
- * buttons, [data-reading-group] groups of [data-reading-item] (each with data-search text, and
- * data-reading-tags when the filter cuts across groups),
+ * buttons, [data-reading-group] groups of [data-reading-item] (each with data-search text),
  * an optional [data-reading-count] per group and a [data-reading-empty] note.
  */
 function setupReadingDirectory(root: HTMLElement) {
@@ -21,14 +20,10 @@ function setupReadingDirectory(root: HTMLElement) {
 		const words = (search?.value ?? '').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
 		let shown = 0;
 		for (const group of groups) {
-			const groupInFilter = !filter || group.dataset.readingGroup === filter;
+			const inFilter = !filter || group.dataset.readingGroup === filter;
 			let count = 0;
 			for (const item of group.querySelectorAll<HTMLElement>('[data-reading-item]')) {
 				const text = item.dataset.search ?? '';
-				// Items with their own tags are filtered by tag, wherever their group is.
-				const tags = item.dataset.readingTags;
-				const inFilter =
-					tags === undefined ? groupInFilter : !filter || tags.split(' ').includes(filter);
 				const match = inFilter && words.every((word) => text.includes(word));
 				item.hidden = !match;
 				if (match) count += 1;

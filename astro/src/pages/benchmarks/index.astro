@@ -13,35 +13,36 @@ const checked = benchmarkLedger.checked_at.replaceAll('-', '.');
 	description="先弄清每个 benchmark 到底在测模型的什么能力，再去看那些分数。"
 	alternateHref="/en/benchmarks/"
 >
-	<div class="rr-page rr-page--narrow">
+	<div class="rr-page">
 		<BenchmarksHead current="benchmarks" />
 
-		{
-			groups.map((group) => (
-				<section class="rr-group" id={group.id} aria-labelledby={`bench-${group.id}`}>
-					<h2 class="rr-group__label" id={`bench-${group.id}`}>
-						{group.name.zh}
-					</h2>
-					<ul class="rr-stack bench-stack">
-						{group.benchmarks.map((benchmark) => (
-							<li>
-								<a class="rr-entry" href={benchmarkRoute(benchmark.id, 'zh-CN')}>
-									<span class="rr-entry__head">
-										<span class="rr-entry__title rr-entry__title--strong">
-											{pick(benchmark.name, 'zh-CN')}
+		<div class="rr-contents">
+			{
+				groups.map((group) => (
+					<section class="rr-contents__part" id={group.id} aria-labelledby={`bench-${group.id}`}>
+						<h2 id={`bench-${group.id}`}>{group.name.zh}</h2>
+						<ul class="rr-contents__list rr-contents__list--decks">
+							{group.benchmarks.map((benchmark) => (
+								<li>
+									<a class="rr-contents__link" href={benchmarkRoute(benchmark.id, 'zh-CN')}>
+										<span class="rr-contents__row">
+											<span class="rr-contents__title">{pick(benchmark.name, 'zh-CN')}</span>
+											{benchmark.source && (
+												<Fragment>
+													<span class="rr-contents__dots" aria-hidden="true" />
+													<span class="rr-contents__side">{benchmark.source}</span>
+												</Fragment>
+											)}
 										</span>
-										{benchmark.source && (
-											<span class="rr-entry__source">{benchmark.source}</span>
-										)}
-									</span>
-									<span class="rr-entry__deck">{pick(benchmark.measures, 'zh-CN')}</span>
-								</a>
-							</li>
-						))}
-					</ul>
-				</section>
-			))
-		}
+										<span class="rr-contents__deck">{pick(benchmark.measures, 'zh-CN')}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				))
+			}
+		</div>
 
 		<p class="bench-checked">数据核对于 {checked}</p>
 	</div>

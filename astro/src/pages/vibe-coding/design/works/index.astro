@@ -1,12 +1,7 @@
 ---
 import DesignHead from '../../../../components/DesignHead.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import {
-	designWorkHref,
-	designWorkKinds,
-	designWorks,
-	designWorkThumb,
-} from '../../../../lib/designLibrary';
+import { designWorkHref, designWorks, designWorkThumb } from '../../../../lib/designLibrary';
 import '../../../../styles/design-library.css';
 ---
 
@@ -15,25 +10,14 @@ import '../../../../styles/design-library.css';
 	description="别人做得好的网页和组件：每个都写了值得学的地方，和想让 AI 做出这种感觉时可以怎么说。"
 	section="vibe-coding"
 >
-	<div class="rr-page rr-page--gallery" data-reading-directory>
-		<DesignHead current="works">
-			<div class="rr-filters" role="group" aria-label="按类型">
-				<button type="button" data-reading-filter="" aria-pressed="true">全部</button>
-				{
-					designWorkKinds.map((kind) => (
-						<button type="button" data-reading-filter={kind} aria-pressed="false">
-							{kind}
-						</button>
-					))
-				}
-			</div>
-		</DesignHead>
+	<div class="rr-page rr-page--gallery">
+		<DesignHead current="works" />
 
-		<section data-reading-group="works" aria-label="作品">
+		<section aria-label="作品">
 			<ul class="rr-thumbs design-works">
 				{
 					designWorks.map((work) => (
-						<li data-reading-item data-reading-tags={work.kind}>
+						<li>
 							<a class="rr-thumb" href={designWorkHref(work)}>
 								<img
 									src={designWorkThumb(work)}
@@ -58,7 +42,3 @@ import '../../../../styles/design-library.css';
 		</section>
 	</div>
 </BaseLayout>
-
-<script>
-	import '../../../../scripts/readingDirectory';
-</script>

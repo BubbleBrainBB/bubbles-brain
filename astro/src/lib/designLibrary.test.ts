@@ -9,7 +9,6 @@ import {
 	designArticleCover,
 	designArticles,
 	designIcon,
-	designKitFilterIds,
 	designKitGroups,
 	designReadingParts,
 	designTabs,
@@ -42,9 +41,8 @@ describe('Design library', () => {
 		}
 	});
 
-	it('links kit notes to real terms and files every kit under a framework filter', () => {
+	it('links kit notes to real terms', () => {
 		for (const kit of designKitGroups.flatMap((group) => group.kits)) {
-			expect(designKitFilterIds(kit).length, kit.name).toBeGreaterThan(0);
 			if (kit.term) {
 				expect(termIds.has(kit.term.id), kit.name).toBe(true);
 				expect(kit.note, kit.name).toContain(kit.term.label);
@@ -52,8 +50,9 @@ describe('Design library', () => {
 		}
 	});
 
-	it('has a saved favicon for every kit and article author', () => {
+	it('has a saved favicon for every brand, kit and article author', () => {
 		const icons = [
+			...designBrands.map((brand) => ({ name: brand.name, icon: brand.id })),
 			...designKitGroups.flatMap((group) => group.kits),
 			...designArticles.map((article) => ({ name: article.title, icon: article.icon })),
 		];

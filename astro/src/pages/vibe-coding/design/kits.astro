@@ -1,12 +1,7 @@
 ---
 import DesignHead from '../../../components/DesignHead.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import {
-	designIcon,
-	designKitFilterIds,
-	designKitFilters,
-	designKitGroups,
-} from '../../../lib/designLibrary';
+import { designIcon, designKitGroups } from '../../../lib/designLibrary';
 import '../../../styles/design-library.css';
 ---
 
@@ -15,27 +10,12 @@ import '../../../styles/design-library.css';
 	description="做界面时可以直接拿来用的组件库：整套组件、无样式底层、单个组件和动效库，各写一句什么时候选它。"
 	section="vibe-coding"
 >
-	<div class="rr-page rr-page--wide" data-reading-directory>
-		<DesignHead current="kits">
-			<div class="rr-filters" role="group" aria-label="按框架">
-				<button type="button" data-reading-filter="" aria-pressed="true">全部</button>
-				{
-					designKitFilters.map((filter) => (
-						<button type="button" data-reading-filter={filter.id} aria-pressed="false">
-							{filter.label}
-						</button>
-					))
-				}
-			</div>
-		</DesignHead>
+	<div class="rr-page rr-page--wide">
+		<DesignHead current="kits" />
 
 		{
 			designKitGroups.map((group) => (
-				<section
-					class="rr-block"
-					data-reading-group={group.id}
-					aria-labelledby={`kits-${group.id}`}
-				>
+				<section class="rr-block" aria-labelledby={`kits-${group.id}`}>
 					<div class="rr-block__head">
 						<h2 class="rr-block__title" id={`kits-${group.id}`}>
 							{group.label}
@@ -43,37 +23,40 @@ import '../../../styles/design-library.css';
 					</div>
 					<ul class="design-links">
 						{group.kits.map((kit) => (
-							<li data-reading-item data-reading-tags={designKitFilterIds(kit).join(' ')}>
+							<li class="design-link">
 								<img
 									class="design-link__icon"
 									src={designIcon(kit.icon)}
 									alt=""
-									width="28"
-									height="28"
+									width="20"
+									height="20"
 									loading="lazy"
 									decoding="async"
 								/>
-								<div class="design-link__text">
-									<p class="design-link__head">
-										<a href={kit.url} target="_blank" rel="noopener noreferrer">
-											{kit.name}
-										</a>
-										<span class="design-link__by">
-											{kit.frameworks.join(' / ')} · {kit.by} ↗
-										</span>
-									</p>
-									<p class="design-link__note">
-										{kit.term ? (
-											<Fragment>
-												{kit.note.split(kit.term.label)[0]}
-												<a href={`/vibe-coding/terms/${kit.term.id}/`}>{kit.term.label}</a>
-												{kit.note.split(kit.term.label).slice(1).join(kit.term.label)}
-											</Fragment>
-										) : (
-											kit.note
-										)}
-									</p>
-								</div>
+								<p class="design-link__head">
+									<a
+										class="design-link__name"
+										href={kit.url}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{kit.name}
+									</a>
+									<span class="design-link__by">
+										{kit.frameworks.join(' / ')} · {kit.by} ↗
+									</span>
+								</p>
+								<p class="design-link__note">
+									{kit.term ? (
+										<Fragment>
+											{kit.note.split(kit.term.label)[0]}
+											<a href={`/vibe-coding/terms/${kit.term.id}/`}>{kit.term.label}</a>
+											{kit.note.split(kit.term.label).slice(1).join(kit.term.label)}
+										</Fragment>
+									) : (
+										kit.note
+									)}
+								</p>
 							</li>
 						))}
 					</ul>
@@ -82,7 +65,3 @@ import '../../../styles/design-library.css';
 		}
 	</div>
 </BaseLayout>
-
-<script>
-	import '../../../scripts/readingDirectory';
-</script>

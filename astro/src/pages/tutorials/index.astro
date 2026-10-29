@@ -1,16 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import {
-	loadDirectoryData,
-	seriesLessons,
-	TUTORIAL_SERIES,
-} from '../../lib/directories';
+import { loadDirectoryData, seriesLessons, TUTORIAL_SERIES } from '../../lib/directories';
+import { readingMinutes } from '../../lib/readingTime';
 
+// A contents page like Design 文章: each series is a part, lessons are numbered in reading order
+// with a dotted leader out to how long they take to read.
 const data = await loadDirectoryData();
 const series = TUTORIAL_SERIES.map((meta) => ({
 	...meta,
 	title: data.collection(meta.id)?.title ?? meta.id,
-	lessons: seriesLessons(data, meta.id),
+	lessons: seriesLessons(data, meta.id).map((lesson) => ({
+		...lesson,
+		minutes: readingMinutes(data.legacyByRoute.get(lesson.key)?.body ?? ''),
+	})),
 }));
 ---
 
@@ -23,27 +25,33 @@ const series = TUTORIAL_SERIES.map((meta) => ({
 			<h1 class="rr-title">教程</h1>
 		</header>
 
-		{
-			series.map((item) => (
-				<section class="rr-block" id={item.id} aria-labelledby={`series-${item.id}`}>
-					<div class="rr-block__head">
-						<h2 class="rr-block__title" id={`series-${item.id}`}>
+		<div class="rr-contents rr-contents--numbered">
+			{
+				series.map((item) => (
+					<section class="rr-contents__part" id={item.id} aria-labelledby={`series-${item.id}`}>
+						<h2 id={`series-${item.id}`}>
+							<span>{item.level}</span>
 							{item.title}
-							<span class="rr-count">{item.level}</span>
 						</h2>
-					</div>
-					<ol class="rr-rows rr-rows--plain">
-						{item.lessons.map((lesson, index) => (
-							<li>
-								<a class="rr-lesson" href={lesson.href}>
-									<span class="rr-lesson__mark">{String(index + 1).padStart(2, '0')}</span>
-									<span class="rr-lesson__title">{lesson.title}</span>
-								</a>
-							</li>
-						))}
-					</ol>
-				</section>
-			))
-		}
+						<ol class="rr-contents__list">
+							{item.lessons.map((lesson, index) => (
+								<li>
+									<a class="rr-contents__link" href={lesson.href}>
+										<span class="rr-contents__row">
+											<span class="rr-contents__num" aria-hidden="true">
+												{String(index + 1).padStart(2, '0')}
+											</span>
+											<span class="rr-contents__title">{lesson.title}</span>
+											<span class="rr-contents__dots" aria-hidden="true" />
+											<span class="rr-contents__side">{lesson.minutes} 分钟</span>
+										</span>
+									</a>
+								</li>
+							))}
+						</ol>
+					</section>
+				))
+			}
+		</div>
 	</div>
 </BaseLayout>
