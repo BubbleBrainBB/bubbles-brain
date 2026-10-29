@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { designBrands } from '../../../../data/designBrands';
+import { vibeCodingTermCategories } from '../../../../data/vibeCodingTerms';
+import {
+	designWorkHref,
+	designWorkImage,
+	designWorks,
+	type DesignWork,
+} from '../../../../lib/designLibrary';
+import '../../../../styles/design-library.css';
+
+export function getStaticPaths() {
+	return designWorks.map((work) => ({ params: { work: work.id }, props: { work } }));
+}
+
+interface Props {
+	work: DesignWork;
+}
+
+// One work, laid out like a Showcase work: the way back and the other works at the left
+// edge, the screenshot in the middle, and a narrow text column under it.
+const { work } = Astro.props;
+const next = designWorks[(designWorks.indexOf(work) + 1) % designWorks.length]!;
+const termsById = new Map(
+	vibeCodingTermCategories.flatMap((category) => category.terms).map((term) => [term.id, term]),
+);
+const terms = work.terms.flatMap((id) => {
+	const term = termsById.get(id);
+	return term ? [term] : [];
+});
+const brand = work.brandId ? designBrands.find((item) => item.id === work.brandId) : undefined;
+const [year, month] = work.shotAt.split('-');
+---
+
+<BaseLayout
+	title={`${work.name} · 作品 · Design · Bubble's Brain`}
+	description={`${work.name}：${work.note}`}
+	section="vibe-coding"
+>
+	<article class="design-work-page">
+		<div class="design-work-rail">
+			<a class="design-work-back" href="/vibe-coding/design/works/">← 作品</a>
+			<nav class="design-work-list" aria-label="其他作品">
+				{
+					designWorks.map((item) => (
+						<a href={designWorkHref(item)} aria-current={item.id === work.id ? 'page' : undefined}>
+							{item.name}
+						</a>
+					))
+				}
+			</nav>
+		</div>
+
+		<header class="design-work-head">
+			<h1>{work.name}</h1>
+			<p>
+				<span>{work.kind} · {work.by}</span>
+				<a href={work.url} target="_blank" rel="noopener noreferrer">打开网站 ↗</a>
+			</p>
+		</header>
+
+		<figure class="design-work-shot">
+			<img
+				src={designWorkImage(work)}
+				alt={`${work.name} 首屏截图`}
+				width="1440"
+				height="900"
+				decoding="async"
+			/>
+			<figcaption>截于 {year} 年 {Number(month)} 月，1440 宽</figcaption>
+		</figure>
+
+		<div class="design-work-text">
+			<h2>值得学的地方</h2>
+			<ol>
+				{work.takeaways.map((point) => <li>{point}</li>)}
+			</ol>
+
+			{
+				terms.length > 0 && (
+					<Fragment>
+						<h2>这一页里的界面词</h2>
+						<ul class="design-work-terms">
+							{terms.map((term) => (
+								<li>
+									<a href={`/vibe-coding/terms/${term.id}/`}>
+										{term.chineseName}
+										{term.chineseName !== term.name && <span lang="en">{term.name}</span>}
+									</a>
+								</li>
+							))}
+						</ul>
+					</Fragment>
+				)
+			}
+
+			<h2>想让 AI 做出这种感觉，可以这样说</h2>
+			<div class="design-work-prompt" data-design-prompt>
+				<p data-design-prompt-text>{work.prompt}</p>
+				<button type="button" data-design-prompt-copy hidden>复制</button>
+			</div>
+
+			{
+				brand && (
+					<Fragment>
+						<h2>同一家的品牌规范</h2>
+						<p>
+							<a href={`/vibe-coding/design/${brand.id}/`}>{brand.name} 的 DESIGN.md</a>
+							：色值、字号、圆角都拆好了，可以整份交给 AI。
+						</p>
+					</Fragment>
+				)
+			}
+
+			<nav class="design-work-pager" aria-label="下一个作品">
+				<a href="/vibe-coding/design/works/">
+					<span>← 回到</span>
+					<strong>作品</strong>
+				</a>
+				<a class="design-work-pager__next" href={designWorkHref(next)}>
+					<span>下一个 →</span>
+					<strong>{next.name}</strong>
+				</a>
+			</nav>
+		</div>
+	</article>
+</BaseLayout>
+
+<script>
+	import '../../../../scripts/designWorkPrompt';
+</script>

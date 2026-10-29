@@ -17,6 +17,19 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-29',
+		tag: 'Vibe Coding',
+		type: 'feature',
+		title: 'Design 扩成四页：品牌规范、组件库、作品、文章',
+		summary:
+			'Design 不只收 DESIGN.md 了。组件库分成套组件库、不带样式的组件库、单个组件、图标、动效几组，可以按 React、Vue 筛，每个写一句什么时候选它；作品收别人做得好的网页和组件，每个有截图、值得学的地方、页面里的界面词，和一段想让 AI 做出这种感觉时可以直接复制的说法；文章排成一本书的目录，分交互、动画、布局与阴影、别人怎么做四部分，鼠标停在标题上能看到文章封面。',
+		links: [
+			{ label: '组件库', href: '/vibe-coding/design/kits/' },
+			{ label: '作品', href: '/vibe-coding/design/works/' },
+			{ label: '文章', href: '/vibe-coding/design/reading/' },
+		],
+	},
+	{
 		date: '2026-10-23',
 		tag: '播客',
 		type: 'content',

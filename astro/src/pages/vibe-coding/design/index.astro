@@ -1,5 +1,7 @@
 ---
+import DesignHead from '../../../components/DesignHead.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/design-library.css';
 import { designBrandGroups, designBrands } from '../../../data/designBrands';
 
 const brandsById = new Map(designBrands.map((brand) => [brand.id, brand]));
@@ -17,14 +19,7 @@ const groups = designBrandGroups.map((group) => ({
 	description="大公司如何用 DESIGN.md 描述自己的视觉语言：色彩、字体、组件规则与设计哲学。"
 >
 	<div class="rr-page rr-page--wide" data-reading-directory>
-		<header class="rr-head">
-			<nav class="rr-crumbs" aria-label="位置"><a href="/vibe-coding/">Vibe Coding</a> / Design</nav>
-			<h1 class="rr-title" lang="en">Design</h1>
-			<label class="rr-search">
-				<i class="ph ph-magnifying-glass" aria-hidden="true"></i>
-				<span class="sr-only">搜索品牌</span>
-				<input type="search" placeholder="搜一个品牌" autocomplete="off" data-reading-search />
-			</label>
+		<DesignHead current="brands">
 			<div class="rr-filters" role="group" aria-label="按分组">
 				<button type="button" data-reading-filter="" aria-pressed="true">全部</button>
 				{
@@ -35,7 +30,7 @@ const groups = designBrandGroups.map((group) => ({
 					))
 				}
 			</div>
-		</header>
+		</DesignHead>
 
 		{
 			groups.map((group) => (
@@ -52,13 +47,12 @@ const groups = designBrandGroups.map((group) => ({
 					</div>
 					<ul class="rr-names rr-names--three">
 						{group.brands.map((brand) => (
-							<li
-								data-reading-item
-								data-search={`${brand.name} ${brand.category} ${brand.tagline}`.toLocaleLowerCase()}
-							>
+							<li data-reading-item>
 								<a class="rr-name rr-name--block" href={`/vibe-coding/design/${brand.id}/`}>
 									<span class="rr-name__main">{brand.name}</span>
-									<span class="rr-name__sub">{brand.category} · {brand.tagline}</span>
+									<span class="rr-name__sub">
+										{brand.category} · {brand.tagline}
+									</span>
 								</a>
 							</li>
 						))}
@@ -66,7 +60,6 @@ const groups = designBrandGroups.map((group) => ({
 				</section>
 			))
 		}
-		<p class="rr-empty" data-reading-empty hidden>没有找到这个品牌。</p>
 	</div>
 </BaseLayout>
 

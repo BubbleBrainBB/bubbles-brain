@@ -1,0 +1,106 @@
+---
+import DesignHead from '../../../components/DesignHead.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import {
+	designArticleCover,
+	designArticles,
+	designIcon,
+	designPeople,
+	designReadingParts,
+} from '../../../lib/designLibrary';
+import '../../../styles/design-library.css';
+
+// The reading list is laid out like a book's contents page: parts, then numbered titles with a
+// dotted leader running out to the author. With JS, hovering a title floats up the article's
+// cover and original title, and titles you've opened get a tick (kept in this browser).
+const articlesById = new Map(designArticles.map((article) => [article.id, article]));
+const partNames = ['第一部分', '第二部分', '第三部分', '第四部分', '第五部分', '第六部分'];
+let number = 0;
+const parts = designReadingParts.map((part, index) => ({
+	...part,
+	name: partNames[index] ?? `第 ${index + 1} 部分`,
+	items: part.articles.map((id) => ({ article: articlesById.get(id)!, number: ++number })),
+}));
+---
+
+<BaseLayout
+	title="文章 · Design · Vibe Coding · Bubble's Brain"
+	description="一份排成书目录的阅读清单：交互、动画、布局与阴影，和别人怎么做。"
+	section="vibe-coding"
+>
+	<div class="rr-page">
+		<DesignHead current="reading" />
+
+		<div class="design-contents" data-design-reading>
+			{
+				parts.map((part) => (
+					<section class="design-contents__part" aria-labelledby={`part-${part.id}`}>
+						<h2 id={`part-${part.id}`}>
+							<span>{part.name}</span>
+							{part.label}
+						</h2>
+						<ol>
+							{part.items.map(({ article, number }) => (
+								<li>
+									<a
+										class="design-contents__row"
+										href={article.url}
+										title={article.original}
+										data-design-article={article.id}
+										data-design-cover={designArticleCover(article)}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<span class="design-contents__num" aria-hidden="true">
+											{String(number).padStart(2, '0')}
+										</span>
+										<span class="design-contents__title" data-design-title>
+											{article.title}
+										</span>
+										<span class="design-contents__dots" aria-hidden="true" />
+										<span class="design-contents__by">
+											<img
+												src={designIcon(article.icon)}
+												alt=""
+												width="16"
+												height="16"
+												decoding="async"
+											/>
+											{article.source}
+										</span>
+									</a>
+								</li>
+							))}
+						</ol>
+					</section>
+				))
+			}
+		</div>
+
+		<p class="design-contents__progress" data-design-progress hidden>
+			读过 <span data-design-read-count>0</span> / {designArticles.length} 篇
+			<button type="button" data-design-reset>清空</button>
+		</p>
+		<figure class="design-contents__float" data-design-float aria-hidden="true" hidden>
+			<img alt="" />
+			<figcaption lang="en"></figcaption>
+		</figure>
+
+		<p class="design-reading__people">
+			常去他们的网站逛逛：{
+				designPeople.map((person, index) => (
+					<Fragment>
+						{index > 0 && '、'}
+						<a href={person.url} target="_blank" rel="noopener noreferrer">
+							{person.name}
+						</a>
+					</Fragment>
+				))
+			}。
+		</p>
+	</div>
+</BaseLayout>
+
+<script>
+	import '../../../scripts/designReadingList';
+</script>

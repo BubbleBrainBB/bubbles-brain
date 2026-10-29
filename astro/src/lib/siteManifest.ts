@@ -2,6 +2,7 @@ import { isRetiredDirectory } from './collectionRoutes';
 import { benchmarkLedger, benchmarkRoute, pick } from './benchmarks';
 import { legacyEntryIsRoutable, loadLegacyContent } from './legacyContent';
 import { designBrands } from '../data/designBrands';
+import { designTabs, designWorkHref, designWorks } from './designLibrary';
 import { showcaseHref, showcaseWorks } from '../data/showcase';
 import { podcastEpisodes } from '../data/podcasts';
 import { episodeHref, SHOWS_HREF, showHref, showOf, showsByRecent } from './podcasts';
@@ -189,6 +190,33 @@ export async function loadSiteManifest(): Promise<SiteRecord[]> {
 			route: `/vibe-coding/design/${brand.id}/`,
 			title: `${brand.name} 的设计语言`,
 			description: brand.tagline,
+			locale: 'zh-CN',
+			section: 'vibe-coding',
+			lastmod: null,
+		});
+	}
+
+	const designPages = {
+		kits: '做界面时可以直接拿来用的组件库，各写一句什么时候选它',
+		works: '别人做得好的网页和组件，附值得学的地方和给 AI 的说法',
+		reading: '排成书目录的阅读清单：交互、动画、布局与阴影，和别人怎么做',
+	} as const;
+	for (const tab of designTabs) {
+		if (tab.id === 'brands') continue;
+		records.push({
+			route: tab.href,
+			title: `Design · ${tab.label}`,
+			description: designPages[tab.id],
+			locale: 'zh-CN',
+			section: 'vibe-coding',
+			lastmod: null,
+		});
+	}
+	for (const work of designWorks) {
+		records.push({
+			route: designWorkHref(work),
+			title: `${work.name} · Design 作品`,
+			description: work.note,
 			locale: 'zh-CN',
 			section: 'vibe-coding',
 			lastmod: null,

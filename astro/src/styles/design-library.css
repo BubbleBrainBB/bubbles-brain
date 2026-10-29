@@ -1,0 +1,545 @@
+/* Design's collection pages: the four-tab head, component libraries (a two-column list with a
+   favicon), the reading list as a contents page, other people's work (screenshots), and a work's own page. */
+
+/* ------------------------------------------------------- linked lists */
+/* A mark, then the name with grey details beside it, then one line on when to pick it. */
+.design-links {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 28px 48px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.design-links > li {
+	display: flex;
+	gap: 14px;
+	align-items: flex-start;
+}
+.design-links > li[hidden] {
+	display: none;
+}
+/* Each site's own favicon. Many are white tiles, so a faint ring keeps them off the page. */
+.design-link__icon {
+	flex-shrink: 0;
+	width: 28px;
+	height: 28px;
+	margin-top: 1px;
+	border-radius: 7px;
+	object-fit: contain;
+	box-shadow: 0 0 0 1px rgb(0 0 0 / 6%);
+}
+.design-link__text {
+	display: grid;
+	gap: 4px;
+	min-width: 0;
+}
+.design-link__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 2px 8px;
+	margin: 0;
+	font-size: 17px;
+	line-height: 1.5;
+}
+.design-link__head a {
+	color: var(--ink);
+	text-decoration: none;
+}
+.design-link__head a:hover {
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 5px;
+}
+.design-link__by {
+	font-size: 13px;
+	color: var(--ink-faint);
+}
+.design-link__note {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.6;
+	color: var(--ink-soft);
+}
+.design-link__note a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 5px;
+}
+.design-link__note a:hover {
+	color: var(--ink);
+}
+
+/* ------------------------------------------------------------- reading */
+/* The reading list as a book's contents page: a part label, then numbered titles with a dotted
+   leader out to the author. Dots are type, not a rule, so they stay light. */
+.design-contents {
+	display: grid;
+	gap: 56px;
+	max-width: 760px;
+}
+.design-contents__part h2 {
+	display: flex;
+	align-items: baseline;
+	gap: 12px;
+	margin: 0 0 18px;
+	font-size: 24px;
+	font-weight: 600;
+}
+.design-contents__part h2 span {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--ink-faint);
+}
+.design-contents__part ol {
+	display: grid;
+	gap: 14px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.design-contents__row {
+	display: flex;
+	align-items: baseline;
+	font-size: 17px;
+	line-height: 1.6;
+	color: var(--ink);
+	text-decoration: none;
+}
+.design-contents__num {
+	flex-shrink: 0;
+	width: 44px;
+	font-size: 15px;
+	color: var(--ink-faint);
+	font-variant-numeric: tabular-nums;
+}
+/* On hover an ink line draws under the title, left to right. */
+.design-contents__title {
+	font-weight: 500;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0 100%;
+	background-size: 0 1px;
+	background-repeat: no-repeat;
+	transition: background-size 0.35s ease;
+}
+.design-contents__row:hover .design-contents__title,
+.design-contents__row:focus-visible .design-contents__title {
+	background-size: 100% 1px;
+}
+.design-contents__dots {
+	flex-grow: 1;
+	min-width: 24px;
+	height: 1em;
+	margin: 0 8px;
+	background-image: radial-gradient(circle, #c4c4c4 1px, transparent 1.2px);
+	background-size: 8px 8px;
+	background-position: 0 70%;
+	background-repeat: repeat-x;
+}
+.design-contents__by {
+	display: flex;
+	flex-shrink: 0;
+	align-self: center;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	color: var(--ink-faint);
+}
+.design-contents__by img {
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	object-fit: contain;
+}
+/* Titles already opened from this page: a little lighter, with a tick after the title. */
+.design-contents__row[data-read] .design-contents__title {
+	color: var(--ink-soft);
+	font-weight: 400;
+}
+.design-contents__row[data-read] .design-contents__title::after {
+	content: ' ✓';
+	font-size: 0.8em;
+	color: var(--ink-faint);
+}
+/* On a phone the author drops under the title and the leader goes. */
+@media (max-width: 640px) {
+	.design-contents__row {
+		flex-wrap: wrap;
+	}
+	.design-contents__title {
+		flex: 1 1 0;
+		min-width: 0;
+	}
+	.design-contents__dots {
+		display: none;
+	}
+	.design-contents__by {
+		flex-basis: 100%;
+		margin: 4px 0 0 44px;
+	}
+}
+
+/* The cover that floats over a hovered title, with the article's original title under it. */
+.design-contents__float {
+	position: fixed;
+	z-index: 20;
+	box-sizing: border-box;
+	width: 256px;
+	margin: 0;
+	padding: 8px 8px 10px;
+	border-radius: 12px;
+	background: var(--paper-raised, #fff);
+	box-shadow:
+		0 0 0 1px rgb(0 0 0 / 6%),
+		0 12px 32px rgb(0 0 0 / 12%);
+	pointer-events: none;
+	opacity: 0;
+	transform: translateY(4px) scale(0.98);
+	transform-origin: left bottom;
+	transition:
+		opacity 0.18s ease,
+		transform 0.18s ease;
+}
+.design-contents__float[data-side='above'] {
+	translate: 0 -100%;
+}
+.design-contents__float[data-open] {
+	opacity: 1;
+	transform: none;
+}
+.design-contents__float[hidden] {
+	display: none;
+}
+.design-contents__float img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	background: var(--rule);
+}
+.design-contents__float figcaption {
+	margin: 8px 2px 0;
+	font-size: 13px;
+	color: var(--ink-faint);
+}
+.design-contents__progress {
+	margin: 48px 0 0;
+	font-size: 13px;
+	color: var(--ink-faint);
+}
+.design-contents__progress[hidden] {
+	display: none;
+}
+.design-contents__progress button {
+	margin-left: 8px;
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: var(--ink-soft);
+	text-decoration: underline;
+	text-decoration-color: #c4c4c4;
+	text-underline-offset: 4px;
+	cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) {
+	.design-contents__title,
+	.design-contents__float {
+		transition: none;
+	}
+}
+
+.design-reading__people {
+	margin: 64px 0 0;
+	font-size: 15px;
+	line-height: 1.8;
+	color: var(--ink-soft);
+}
+.design-reading__people a {
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-color: #c4c4c4;
+	text-underline-offset: 4px;
+}
+.design-reading__people a:hover {
+	text-decoration-color: currentColor;
+}
+
+/* ---------------------------------------------------------------- works */
+.design-works > li[hidden] {
+	display: none;
+}
+.design-works .rr-thumb img {
+	aspect-ratio: 16 / 10;
+	object-position: top;
+	box-shadow: 0 0 0 1px var(--rule);
+}
+.design-work__caption {
+	display: grid;
+	gap: 4px;
+}
+.design-work__kind {
+	color: var(--ink-faint);
+}
+.design-work__note {
+	font-size: 13px;
+	line-height: 1.6;
+	color: var(--ink-faint);
+}
+
+/* ------------------------------------------------------------ work page */
+/* The Showcase work layout: the way back at the left edge, the screenshot stepping out past
+   a 540px text column. */
+.collection-site .design-work-page {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 540px) minmax(0, 1fr);
+	grid-template-areas:
+		'rail head .'
+		'rail shot .'
+		'rail text .';
+	column-gap: 40px;
+	align-items: start;
+	padding: 96px 80px 0;
+}
+.design-work-rail {
+	grid-area: rail;
+	position: sticky;
+	top: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	max-width: 200px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.design-work-back {
+	align-self: flex-start;
+	color: var(--ink-faint);
+	text-decoration: none;
+}
+.design-work-back:hover,
+.design-work-list a:hover {
+	color: var(--ink);
+}
+.design-work-list {
+	display: grid;
+	gap: 10px;
+}
+.design-work-list a {
+	color: var(--ink-faint);
+	text-decoration: none;
+}
+.design-work-list a[aria-current] {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+.design-work-head {
+	grid-area: head;
+}
+.design-work-head h1 {
+	margin: 0;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.01em;
+}
+.design-work-head p {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 16px;
+	margin: 8px 0 0;
+	font-size: 15px;
+	color: var(--ink-faint);
+}
+.design-work-head a {
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 5px;
+}
+
+.design-work-shot {
+	grid-area: shot;
+	margin: 36px 0 0;
+}
+@media (min-width: 1280px) {
+	.design-work-shot {
+		width: calc(100% + 280px);
+		margin-inline: -140px;
+	}
+}
+.design-work-shot img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 12px;
+	box-shadow: 0 0 0 1px var(--rule);
+}
+.design-work-shot figcaption {
+	margin-top: 12px;
+	font-size: 13px;
+	color: var(--ink-faint);
+}
+
+.design-work-text {
+	grid-area: text;
+	min-width: 0;
+	padding-top: 24px;
+	font-size: 16px;
+	line-height: 1.9;
+}
+.design-work-text h2 {
+	margin: 44px 0 12px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+.design-work-text p,
+.design-work-text ol {
+	margin: 0;
+}
+.design-work-text ol {
+	display: grid;
+	gap: 10px;
+	padding-left: 22px;
+}
+.design-work-text p a {
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 5px;
+}
+
+.design-work-terms {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 6px 24px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.design-work-terms a {
+	color: var(--ink);
+	text-decoration: none;
+}
+.design-work-terms a:hover {
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 5px;
+}
+.design-work-terms span {
+	margin-left: 6px;
+	font-size: 13px;
+	color: var(--ink-faint);
+}
+
+.design-work-prompt {
+	position: relative;
+	padding: 18px 20px;
+	border-radius: 12px;
+	background: var(--paper-muted);
+	font-size: 15px;
+	line-height: 1.8;
+}
+.design-work-prompt p {
+	padding-right: 64px;
+}
+.design-work-prompt button {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	height: 32px;
+	padding: 0 12px;
+	border: 0;
+	border-radius: 999px;
+	background: var(--paper);
+	box-shadow: 0 0 0 1px var(--rule-strong);
+	color: var(--ink);
+	font: inherit;
+	font-size: 13px;
+	cursor: pointer;
+}
+.design-work-prompt button[hidden] {
+	display: none;
+}
+
+.design-work-pager {
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	margin: 64px 0;
+	font-size: 14px;
+	line-height: 1.6;
+}
+.design-work-pager a {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-width: 48%;
+	color: var(--ink);
+	text-decoration: none;
+}
+.design-work-pager span {
+	color: var(--ink-faint);
+	font-size: 13px;
+}
+.design-work-pager strong {
+	font-weight: 400;
+}
+.design-work-pager a:hover strong {
+	text-decoration: underline;
+	text-decoration-color: #b5b5b5;
+	text-underline-offset: 5px;
+}
+.design-work-pager__next {
+	margin-left: auto;
+	text-align: right;
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+	.collection-site .design-work-page {
+		column-gap: 56px;
+		padding-inline: 40px;
+	}
+}
+
+/* Phones: back link, title, screenshot, then text; the list of other works steps aside. */
+@media (max-width: 900px) {
+	.design-links {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.collection-site .design-work-page {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas:
+			'back'
+			'head'
+			'shot'
+			'text';
+		max-width: 588px;
+		margin: 0 auto;
+		padding: 20px 24px 0;
+	}
+	.design-work-rail {
+		display: contents;
+	}
+	.design-work-back {
+		grid-area: back;
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+	.design-work-list {
+		display: none;
+	}
+	.design-work-shot {
+		margin-top: 24px;
+	}
+	.design-work-pager {
+		margin: 48px 0;
+	}
+}

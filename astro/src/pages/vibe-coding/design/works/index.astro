@@ -1,0 +1,64 @@
+---
+import DesignHead from '../../../../components/DesignHead.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import {
+	designWorkHref,
+	designWorkKinds,
+	designWorks,
+	designWorkThumb,
+} from '../../../../lib/designLibrary';
+import '../../../../styles/design-library.css';
+---
+
+<BaseLayout
+	title="作品 · Design · Vibe Coding · Bubble's Brain"
+	description="别人做得好的网页和组件：每个都写了值得学的地方，和想让 AI 做出这种感觉时可以怎么说。"
+	section="vibe-coding"
+>
+	<div class="rr-page rr-page--gallery" data-reading-directory>
+		<DesignHead current="works">
+			<div class="rr-filters" role="group" aria-label="按类型">
+				<button type="button" data-reading-filter="" aria-pressed="true">全部</button>
+				{
+					designWorkKinds.map((kind) => (
+						<button type="button" data-reading-filter={kind} aria-pressed="false">
+							{kind}
+						</button>
+					))
+				}
+			</div>
+		</DesignHead>
+
+		<section data-reading-group="works" aria-label="作品">
+			<ul class="rr-thumbs design-works">
+				{
+					designWorks.map((work) => (
+						<li data-reading-item data-reading-tags={work.kind}>
+							<a class="rr-thumb" href={designWorkHref(work)}>
+								<img
+									src={designWorkThumb(work)}
+									alt=""
+									width="720"
+									height="450"
+									loading="lazy"
+									decoding="async"
+								/>
+								<span class="design-work__caption">
+									<span class="rr-thumb__caption">
+										<span class="rr-thumb__title">{work.name}</span>
+										<span class="design-work__kind">{work.kind}</span>
+									</span>
+									<span class="design-work__note">{work.note}</span>
+								</span>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</div>
+</BaseLayout>
+
+<script>
+	import '../../../../scripts/readingDirectory';
+</script>

@@ -27,6 +27,14 @@ describe('site feeds', () => {
 				section: 'vibe-coding',
 			}),
 		);
+		for (const route of [
+			'/vibe-coding/design/kits/',
+			'/vibe-coding/design/works/',
+			'/vibe-coding/design/reading/',
+			'/vibe-coding/design/works/linear/',
+		]) {
+			expect(records.some((record) => record.route === route)).toBe(true);
+		}
 	});
 
 	it('publishes the Showcase gallery and its work pages', async () => {
