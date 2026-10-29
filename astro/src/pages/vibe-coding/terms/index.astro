@@ -67,7 +67,6 @@ const groupsOf = (terms: VibeCodingTerm[]) => {
 							<h2 id={`terms-${category.id}`}>
 								<a href={`/vibe-coding/terms/${category.id}/`}>{category.label}</a>
 							</h2>
-							<p class="terms-category__lede">{category.description}</p>
 							{groupsOf(category.terms).map((group) => (
 								<div class="terms-group" data-terms-sub>
 									{group.label && <h3>{group.label}</h3>}
