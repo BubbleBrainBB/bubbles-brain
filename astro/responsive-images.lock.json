@@ -2169,6 +2169,14 @@
 				"/_responsive/media/showcase/claude-opus-5.5-system-prompt-for-humans-960.webp"
 			]
 		},
+		"/media/showcase/claude-opus-5.5-tapestry-of-technology.webp": {
+			"source_sha256": "8d46cc7edaf51fa2ea499d929970a88ab6769d3d60c5d0f749e200ae083125f8",
+			"width": 640,
+			"variants": [
+				"/_responsive/media/showcase/claude-opus-5.5-tapestry-of-technology-640.avif",
+				"/_responsive/media/showcase/claude-opus-5.5-tapestry-of-technology-640.webp"
+			]
+		},
 		"/media/showcase/claude-opus-5.5-techhalla-bumper.webp": {
 			"source_sha256": "f6a59eb55479afbb6c2e4f0877d34867e05ce2f4d1bb0bf90eec201c7666f372",
 			"width": 1080,

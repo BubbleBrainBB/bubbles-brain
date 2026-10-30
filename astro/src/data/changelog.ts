@@ -17,6 +17,17 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-10-30',
+		tag: 'Vibe Coding',
+		type: 'content',
+		title: 'Showcase 新增作品：挂毯上的科技史',
+		summary:
+			'收录 @devteamdrew 用 Claude Opus 5.5 做的一部 11 分钟短片。画面仿照贝叶挂毯的针线刺绣，从敲石头、生火讲到蒸汽机、电灯和芯片。作者没有公开提示词，只说用了几百万 token 和好几轮提示词。',
+		links: [
+			{ label: '观看作品', href: '/vibe-coding/showcase/claude-opus-5.5-tapestry-of-technology/' },
+		],
+	},
+	{
 		date: '2026-10-29',
 		tag: '全站',
 		type: 'polish',
