@@ -18,6 +18,15 @@ export interface ChangelogItem {
 export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-30',
+		tag: '首页',
+		type: 'feature',
+		title: '首页加了「最近更新」',
+		summary:
+			'栏目下面列出全站最新的几篇：当天的 AI 动态、播客、精选阅读、教程和 Showcase，每个栏目最多两条，第一次来也能看到这里有什么、最近更新到哪天。原来夹在搜索框下面的栏目入口挪到了页面顶上，和其他页面一样；手机上还在搜索框下面。',
+		links: [{ label: '首页', href: '/' }],
+	},
+	{
+		date: '2026-10-30',
 		tag: '精选阅读',
 		type: 'content',
 		title: '新增精选阅读：你给 Claude 的提示词，多半写多了',

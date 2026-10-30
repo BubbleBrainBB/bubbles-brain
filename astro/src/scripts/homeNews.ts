@@ -3,7 +3,7 @@
  * closes them (Enter still searches, news included); Escape, clicking elsewhere or opening a story
  * closes them too. The feed is fetched once the page is idle, so the list is there on first focus,
  * and again on a later focus once it is over a minute old; if it cannot be read the box is just a
- * search box.
+ * search box. The day's newest story also heads 最近更新 under the sections.
  */
 import {
 	homeNews,
@@ -80,6 +80,24 @@ function hotRow(item: NewsItem, now: Date): HTMLLIElement {
 	return li;
 }
 
+/** The day's newest AI 动态 heads 最近更新, and the list's last row steps aside for it. */
+function fillRecentNews(feed: NewsFeed) {
+	const slot = document.querySelector<HTMLElement>('[data-home-recent-news]');
+	const day = feed.days[0];
+	const item = day?.items[0];
+	if (!slot || !day || !item) return;
+	const link = slot.querySelector<HTMLAnchorElement>('a');
+	const title = slot.querySelector<HTMLElement>('[data-home-recent-title]');
+	const date = slot.querySelector<HTMLElement>('[data-home-recent-date]');
+	if (!link || !title || !date) return;
+	link.href = item.url;
+	title.textContent = item.title;
+	date.textContent = day.day.slice(5).replace('-', '.');
+	slot.hidden = false;
+	const spare = document.querySelector<HTMLElement>('[data-home-recent-spare]');
+	if (spare) spare.hidden = true;
+}
+
 let stop: AbortController | null = null;
 
 function init() {
@@ -118,6 +136,7 @@ function init() {
 	const load = () =>
 		loadNewsFeed(url, FRESH_FOR).then((feed) => {
 			if (signal.aborted || !feed || feed === shown) return;
+			fillRecentNews(feed);
 			// Never swap rows out from under a reader moving through them with the keyboard.
 			if (panel.contains(document.activeElement)) return;
 			const now = new Date();
