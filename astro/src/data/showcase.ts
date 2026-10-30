@@ -1442,6 +1442,25 @@ Ask me for the inputs, capture my page, then show me stills at 0, 1.6, 2.5, 5, 6
 			platform: 'X',
 		},
 	},
+	{
+		id: 'claude-opus-5.5-tapestry-of-technology',
+		title: '挂毯上的科技史',
+		category: 'explainer',
+		medium: 'code-to-video',
+		model: 'Claude Opus 5.5',
+		video: '/media/showcase/claude-opus-5.5-tapestry-of-technology.mp4',
+		poster: '/media/showcase/claude-opus-5.5-tapestry-of-technology.webp',
+		width: 640,
+		height: 360,
+		duration: 708,
+		added: '2026-10-30',
+		note: '仿照贝叶挂毯，用针线刺绣的画面讲人类技术的演变，从敲石头、生火、青铜和文字，讲到瓦特的蒸汽机、电灯和芯片，最后一幕打出 “What comes next?”。作者说这部片用了几百万 token 和好几轮提示词。',
+		source: {
+			author: '@devteamdrew',
+			url: 'https://x.com/devteamdrew/status/2115559123253186606',
+			platform: 'X',
+		},
+	},
 ];
 
 export const showcaseHref = (work: Pick<ShowcaseWork, 'id'>) => `/vibe-coding/showcase/${work.id}/`;
