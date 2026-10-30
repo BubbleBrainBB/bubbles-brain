@@ -269,7 +269,6 @@ function buildVibeCodingItems(locale: LegacyLocale): KnowledgeSearchItem[] {
 			external: false,
 			search_text: normalizedSearchText(locale, [
 				title,
-				brand.heroTitle,
 				brand.tagline,
 				brand.lede,
 				brand.philosophy,

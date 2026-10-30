@@ -18,6 +18,15 @@ export interface ChangelogItem {
 export const changelog: ChangelogItem[] = [
 	{
 		date: '2026-10-29',
+		tag: 'Vibe Coding',
+		type: 'polish',
+		title: '品牌规范详情页改得更朴素',
+		summary:
+			'31 个品牌的详情页去掉了章节编号、等宽小字、全大写表头和一层层的边框，颜色按名字、色值、用途排成两列，字体样例下面直接写字号和字重。每个品牌的说明也重写成大白话，数字以原始 DESIGN.md 为准。',
+		links: [{ label: 'Stripe', href: '/vibe-coding/design/stripe/' }],
+	},
+	{
+		date: '2026-10-29',
 		tag: '全站',
 		type: 'polish',
 		title: '教程、精选阅读、Benchmarks 换成同一种目录',
