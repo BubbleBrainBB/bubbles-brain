@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "OpenAI Developers"
-  note: "OpenAI official blog post, reproduced in full."
 ---
 
 Coding agents have come a long way, and best practices are changing fast. With more capable models, what used to require a lot of handholding and scaffolding no longer does.

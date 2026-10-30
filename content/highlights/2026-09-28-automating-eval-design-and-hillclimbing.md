@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "claude.dev · Lance Martin"
-  note: "原文发表于 2026 年 9 月 28 日。本站为详细精读。"
 ---
 
 自动优化 Agent，首先需要一套值得相信的评测。否则，迭代越快，越可能把系统推向错误目标。这篇文章把工作分成两部分：用 `/claude-api build-eval` 建立评测，再用 `/claude-api hillclimb` 搜索更好的提示词、模型配置或执行方式。

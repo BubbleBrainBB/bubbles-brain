@@ -140,7 +140,7 @@ const articleIntro =
 	markdownCollection === 'highlights'
 		? (
 				markdownEntry?.data as {
-					articleIntro?: { author?: string; sourceName: string; note?: string };
+					articleIntro?: { author?: string; sourceName: string };
 				}
 			)?.articleIntro
 		: undefined;
@@ -656,17 +656,11 @@ const libraryApi =
 						)}
 
 						<footer class="article-ending">
-							{articleIntro && (
+							{articleIntro && sourceUrl && (
 								<p class="article-editorial-note">
-									{articleIntro.note}
-									{sourceUrl && (
-										<>
-											{articleIntro.note && ' '}
-											<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-												{isEnglish ? 'Read the original ↗' : '读英文原文 ↗'}
-											</a>
-										</>
-									)}
+									<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+										{isEnglish ? 'Read the original ↗' : '读英文原文 ↗'}
+									</a>
 								</p>
 							)}
 							{(newer || older) && (

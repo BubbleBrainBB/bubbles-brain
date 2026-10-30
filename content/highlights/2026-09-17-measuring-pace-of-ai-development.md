@@ -11,7 +11,6 @@ draft: false
 articleIntro:
   sourceName: "Anthropic Institute"
   author: "Marina Favaro、Phillie Wright"
-  note: "Anthropic 官方文章中文全译，保留原文图表、方法附录与脚注。"
 ---
 
 AI 系统正变得越来越强大，也越来越多地被用于构建自身的下一代版本。

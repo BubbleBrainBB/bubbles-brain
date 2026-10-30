@@ -11,7 +11,6 @@ draft: false
 articleIntro:
   sourceName: "Anthropic Institute"
   author: "Marina Favaro and Phillie Wright"
-  note: "Original English article, including the chart, methodology appendix, and footnotes."
 ---
 
 AI systems are getting more powerful, and they’re increasingly being used to build the next version of themselves.

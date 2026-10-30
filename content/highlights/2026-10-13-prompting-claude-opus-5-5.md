@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Claude 官方文档"
-  note: "2026 年 10 月 15 日按官方文档逐段译成中文并润色。示例提示词整段译出，effort、max_tokens、stop_reason 这些接口名保留英文。文末有一小段新手解读。"
 ---
 
 这篇指南讲的是 Claude Opus 5.5 特有的提示写法。模型能做什么、接口改了什么，看[《Claude Opus 5.5 的新功能》](https://platform.claude.com/docs/zh-CN/models/opus-5-5/whats-new-opus-5-5)。对现在所有 Claude 模型都适用的写法，看[《提示最佳实践》](https://platform.claude.com/docs/zh-CN/build-with-claude/prompt-engineering/claude-prompting-best-practices)。

@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Claude Docs"
-  note: "Summarized section by section on October 13, 2026, with notes for newcomers at the end. The guide's example instructions are paraphrased here; see the original for their exact wording."
 ---
 
 This official guide covers how Claude Opus 5.5 behaves differently from Opus 5, and how to adjust prompts and the harness (the layer that lets the model call tools and work in a loop). The headline: Opus 5.5 produces output faster and often finishes the same work with fewer tokens, and prompts written for Opus 5 still work well. There's no need to start over; **when you hit a specific problem, read the matching section**.
