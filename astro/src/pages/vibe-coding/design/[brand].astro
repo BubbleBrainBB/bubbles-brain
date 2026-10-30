@@ -1,15 +1,20 @@
 ---
-import '../../../styles/design-gallery.css';
-import DesignBrandPlate from '../../../components/DesignBrandPlate.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { designBrands } from '../../../data/designBrands';
+import { designBrandGroups, designBrands } from '../../../data/designBrands';
+import { designIcon } from '../../../lib/designLibrary';
+import '../../../styles/design-library.css';
 
 export function getStaticPaths() {
 	return designBrands.map((brand) => ({ params: { brand: brand.id }, props: { brand } }));
 }
 
+// One brand's DESIGN.md, read in order: what it looks like, its rules, colors, type, dos and
+// don'ts, then the file itself. The specimens wear the brand's own colors and type; everything
+// around them stays in the site's own type.
 const { brand } = Astro.props;
-const others = designBrands.filter((item) => item.id !== brand.id);
+const brandsById = new Map(designBrands.map((item) => [item.id, item]));
+const order = designBrandGroups.flatMap((group) => group.brandIds);
+const next = brandsById.get(order[(order.indexOf(brand.id) + 1) % order.length]!)!;
 
 const rawFiles = import.meta.glob('../../../data/design-md/*.md', {
 	query: '?raw',
@@ -22,144 +27,127 @@ const rawLineCount = rawContent ? rawContent.trimEnd().split('\n').length : 0;
 
 <BaseLayout
 	title={`${brand.name} 的设计语言 · Vibe Coding Design · Bubble's Brain`}
-	description={`${brand.name} DESIGN.md 拆解：${brand.tagline}。`}
+	description={`${brand.name} 的 DESIGN.md：${brand.lede}`}
 	canonicalPath={`/vibe-coding/design/${brand.id}/`}
 	section="vibe-coding"
 >
-	<div class="design-page design-detail">
-		<header class="design-hero">
-			<p class="design-kicker">
-				<a href="/vibe-coding/">Vibe Coding</a> / <a href="/vibe-coding/design/">Design</a> / {
-					brand.name
-				} · {brand.category}
-			</p>
-			<h1>{brand.heroTitle}</h1>
-			<p class="design-lede">{brand.lede}</p>
+	<article class="design-brand" data-design-brand>
+		<header class="design-brand__head">
+			<nav class="rr-crumbs" aria-label="位置">
+				<a href="/vibe-coding/">Vibe Coding</a> / <a href="/vibe-coding/design/">Design</a> / 品牌规范
+			</nav>
+			<div class="design-brand__title">
+				<img src={designIcon(brand.id)} alt="" width="32" height="32" />
+				<h1 lang="en">{brand.name}</h1>
+				<span>{brand.category}</span>
+			</div>
+			<p class="design-brand__lede">{brand.lede}</p>
 		</header>
 
-		<DesignBrandPlate brand={brand} />
+		{
+			brand.plate.strip && (
+				<figure
+					class:list={['design-brand__plate', brand.plate.bg !== '#ffffff' && 'is-filled']}
+					style={`background:${brand.plate.bg}`}
+				>
+					<i style={`background:${brand.plate.strip}`} aria-hidden="true" />
+					<span style={brand.plate.headlineStyle}>{brand.plate.headline}</span>
+				</figure>
+			)
+		}
 
-		<section class="design-section">
-			<p class="design-section-index">01 · 设计哲学</p>
-			<h2>它固执的四件事</h2>
-			<ol class="design-philosophy">
-				{brand.philosophy.map((point) => <li>{point}</li>)}
-			</ol>
-		</section>
-
-		<section class="design-section">
-			<p class="design-section-index">02 · Color Tokens</p>
-			<h2>每个颜色，各有岗位</h2>
-			<div class="design-token-sheet">
-				<table class="design-token-table">
-					<thead>
-						<tr>
-							<th scope="col">Token</th>
-							<th scope="col">Hex</th>
-							<th scope="col">Role</th>
-						</tr>
-					</thead>
-					<tbody>
-						{
-							brand.colors.map((color) => (
-								<tr>
-									<td class="design-token-name">
-										<i style={`background:${color.hex}`} aria-hidden="true" />
-										{color.name}
-									</td>
-									<td class="design-token-hex">
-										<button type="button" data-copy-hex={color.hex} title={`复制 ${color.hex}`}>
-											<code>{color.hex}</code>
-										</button>
-									</td>
-									<td class="design-token-role">{color.role}</td>
-								</tr>
-							))
-						}
-					</tbody>
-				</table>
+		<section class="design-brand__section" aria-labelledby="brand-points">
+			<h2 id="brand-points">设计要点</h2>
+			<div class="design-brand__points">
+				{brand.philosophy.map((point) => <p>{point}</p>)}
 			</div>
-			<p class="design-palette-hint">点击 hex 复制</p>
 		</section>
 
-		<section class="design-section">
-			<p class="design-section-index">03 · 字体层级</p>
-			<h2>按真实字号、字重、字距渲染</h2>
-			<div class="design-typestack" style={brand.typePanelStyle}>
+		<section class="design-brand__section" aria-labelledby="brand-colors">
+			<h2 id="brand-colors">颜色</h2>
+			<ul class="design-brand__colors">
+				{
+					brand.colors.map((color) => (
+						<li>
+							<i style={`background:${color.hex}`} aria-hidden="true" />
+							<span class="design-brand__color-head">
+								<span>{color.name}</span>
+								<button type="button" data-copy-hex={color.hex} title={`复制 ${color.hex}`}>
+									{color.hex}
+								</button>
+							</span>
+							<span class="design-brand__color-role">{color.role}</span>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="design-brand__section" aria-labelledby="brand-type">
+			<h2 id="brand-type">字体</h2>
+			<div class="design-brand__type" style={brand.typePanelStyle}>
 				{
 					brand.typeScale.map((row) => (
-						<div class="design-typerow">
+						<div>
 							<span style={row.style}>{row.sample}</span>
 							<small>{row.spec}</small>
 						</div>
 					))
 				}
 			</div>
-			<p class="design-palette-hint">专有字体以系统近似字体代演</p>
+			<p class="design-brand__note">品牌自己的专有字体，这里用系统字体近似显示。</p>
 		</section>
 
-		<section class="design-section">
-			<p class="design-section-index">04 · 守则</p>
-			<h2>Do's &amp; Don'ts</h2>
-			<div class="design-dodont">
-				<div class="design-do">
-					<h3>Do</h3>
-					<ul>
-						{brand.dos.map((item) => <li>{item}</li>)}
-					</ul>
+		<section class="design-brand__section" aria-labelledby="brand-rules">
+			<h2 id="brand-rules">该做和别做</h2>
+			<div class="design-brand__rules">
+				<div>
+					<h3>该做</h3>
+					<ul class="design-brand__do">{brand.dos.map((item) => <li>{item}</li>)}</ul>
 				</div>
-				<div class="design-dont">
-					<h3>Don't</h3>
-					<ul>
-						{brand.donts.map((item) => <li>{item}</li>)}
-					</ul>
+				<div>
+					<h3>别做</h3>
+					<ul class="design-brand__dont">{brand.donts.map((item) => <li>{item}</li>)}</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="design-section">
-			<p class="design-section-index">05 · 原文</p>
-			<h2>DESIGN.md</h2>
-			<p class="design-raw-note">
-				把它丢进项目根目录，让 Claude Code / Cursor 照着这套语言画你的界面——这正是 DESIGN.md
-				被发明出来的原因。
+		<section class="design-brand__section" aria-labelledby="brand-raw">
+			<h2 id="brand-raw">DESIGN.md 原文</h2>
+			<p>
+				{brand.sourceFile}/DESIGN.md，{rawLineCount} 行。放进项目根目录，Claude Code 和 Cursor 会照着它写界面。
 			</p>
-			<div class="design-rawfile">
-				<div class="design-raw-head">
-					<code>{brand.sourceFile}/DESIGN.md</code>
-					<span class="design-raw-lines">{rawLineCount} 行</span>
-					<button type="button" class="design-raw-copy" data-copy-raw>复制全文</button>
-				</div>
-				<details class="design-raw-details">
-					<summary>展开原文</summary>
-					<pre tabindex="0" data-raw-content>{rawContent}</pre>
-				</details>
+			<div class="design-brand__raw-actions">
+				<button type="button" class="design-brand__button is-primary" data-copy-raw>复制全文</button
+				>
+				<button type="button" class="design-brand__button" data-raw-toggle aria-expanded="false">
+					展开原文
+				</button>
 			</div>
-			<p class="design-credit">
-				出处：社区项目 <a
+			<pre class="design-brand__raw" tabindex="0" data-raw-content hidden>{rawContent}</pre>
+			<p class="design-brand__credit">
+				原文来自社区项目 <a
 					href="https://github.com/VoltAgent/awesome-design-md"
 					rel="noopener"
 					target="_blank">awesome-design-md</a
 				>（VoltAgent，MIT
-				协议）。这些文件是对品牌公开页面的第三方分析与致敬，并非官方资产；原文里品牌名刻意写作变体以示区分。本页中文导读为原创内容。
+				协议），是对品牌公开页面的第三方分析，不是官方资料，原文里的品牌名故意写成了变体。本页的中文说明是原创的。
 			</p>
 		</section>
 
-		<nav class="design-others" aria-label="其他品牌">
-			<p class="design-section-index">其他品牌</p>
-			<ol>
-				{
-					others.map((item) => (
-						<li>
-							<a href={`/vibe-coding/design/${item.id}/`}>
-								<span class="design-other-name">{item.name}</span>
-								<span class="design-other-cat">{item.category}</span>
-							</a>
-						</li>
-					))
-				}
-			</ol>
+		<nav class="design-work-pager" aria-label="下一个品牌">
+			<a href="/vibe-coding/design/">
+				<span>← 回到</span>
+				<strong>品牌规范</strong>
+			</a>
+			<a class="design-work-pager__next" href={`/vibe-coding/design/${next.id}/`}>
+				<span>下一个 →</span>
+				<strong>{next.name}</strong>
+			</a>
 		</nav>
-	</div>
-	<script is:inline type="module" src="/js/design-gallery.js"></script>
+	</article>
 </BaseLayout>
+
+<script>
+	import '../../../scripts/designBrandPage';
+</script>

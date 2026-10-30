@@ -447,3 +447,264 @@ a.design-link__name:hover {
 		margin: 48px 0;
 	}
 }
+
+/* ------------------------------------------------------------ a brand */
+/* One brand's DESIGN.md in the site's own type. Only the specimens (the brand's headline, its
+   swatches and type samples) wear the brand's colors and fonts. */
+.design-brand {
+	display: grid;
+	gap: 64px;
+	width: min(720px, calc(100% - 40px));
+	margin-inline: auto;
+	padding-top: 56px;
+}
+.design-brand__head {
+	display: grid;
+	gap: 14px;
+}
+.design-brand__title {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+.design-brand__title img {
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	object-fit: contain;
+	box-shadow: 0 0 0 0.5px rgb(0 0 0 / 14%);
+}
+.design-brand__title h1 {
+	margin: 0;
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+.design-brand__title span {
+	align-self: flex-end;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: var(--ink-faint);
+}
+.design-brand__lede {
+	margin: 0;
+	font-size: 17px;
+	line-height: 1.8;
+	color: var(--ink-soft);
+}
+/* The brand's own headline, with its gradient strip. On a white brand it sits on the page. */
+.design-brand__plate {
+	display: grid;
+	gap: 28px;
+	margin: 0;
+}
+.design-brand__plate.is-filled {
+	padding: 40px 48px;
+	border-radius: 16px;
+}
+.design-brand__plate i {
+	display: block;
+	height: 6px;
+	border-radius: 3px;
+}
+.design-brand__section h2 {
+	margin: 0 0 20px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+.design-brand__section > p,
+.design-brand__points p {
+	margin: 0;
+	font-size: 17px;
+	line-height: 1.8;
+}
+.design-brand__points {
+	display: grid;
+	gap: 14px;
+}
+/* Colors read like the brand list: a swatch, the token with its hex, one line on its use. */
+.design-brand__colors {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px 40px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.design-brand__colors li {
+	display: grid;
+	grid-template-columns: 34px minmax(0, 1fr);
+	align-content: start;
+	row-gap: 2px;
+}
+.design-brand__colors i {
+	align-self: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 6px;
+	box-shadow: 0 0 0 0.5px rgb(0 0 0 / 14%);
+}
+.design-brand__color-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 2px 10px;
+	min-width: 0;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.design-brand__color-head button {
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	font-size: 14px;
+	font-weight: 400;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink-faint);
+	cursor: pointer;
+}
+.design-brand__color-head button:hover {
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-color: #c4c4c4;
+	text-underline-offset: 4px;
+}
+.design-brand__color-role {
+	grid-column: 2;
+	font-size: 14px;
+	line-height: 1.7;
+	color: var(--ink-faint);
+}
+/* Type samples at the brand's sizes; a dark brand gets its own canvas behind them. */
+.design-brand__type {
+	display: grid;
+	gap: 28px;
+}
+.design-brand__type[style] {
+	padding: 40px 48px;
+	border-radius: 16px;
+}
+.design-brand__type > div {
+	display: grid;
+	gap: 6px;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+.design-brand__type small {
+	font-size: 14px;
+	color: var(--ink-faint);
+}
+.design-brand__type[style] small {
+	color: rgb(255 255 255 / 55%);
+}
+.design-brand__note {
+	margin: 14px 0 0;
+	font-size: 14px;
+	color: var(--ink-faint);
+}
+.design-brand__rules {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 40px;
+}
+.design-brand__rules h3 {
+	margin: 0 0 10px;
+	font-size: 17px;
+	font-weight: 600;
+}
+.design-brand__rules ul {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.design-brand__rules li {
+	display: flex;
+	gap: 12px;
+	font-size: 17px;
+	line-height: 1.7;
+}
+.design-brand__do li::before {
+	content: '✓';
+	color: #1a7f37;
+}
+.design-brand__dont li::before {
+	content: '✕';
+	color: #cf222e;
+}
+.design-brand__raw-actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 18px;
+}
+.design-brand__button {
+	height: 36px;
+	padding: 0 16px;
+	border: 0;
+	border-radius: 999px;
+	background: none;
+	box-shadow: inset 0 0 0 0.5px rgb(0 0 0 / 30%);
+	font: inherit;
+	font-size: 14px;
+	color: var(--ink);
+	cursor: pointer;
+}
+.design-brand__button:hover {
+	background: var(--paper-muted, #f5f5f5);
+}
+.design-brand__button.is-primary {
+	background: var(--ink);
+	box-shadow: none;
+	color: var(--paper, #fff);
+}
+.design-brand__raw {
+	max-height: 480px;
+	margin: 18px 0 0;
+	padding: 18px 20px;
+	overflow: auto;
+	border-radius: 12px;
+	background: var(--paper-muted, #f5f5f5);
+	font-size: 13px;
+	line-height: 1.7;
+	white-space: pre-wrap;
+}
+.design-brand__raw[hidden] {
+	display: none;
+}
+.design-brand__credit {
+	margin: 28px 0 0;
+	font-size: 13px;
+	line-height: 1.8;
+	color: var(--ink-faint);
+}
+.design-brand__credit a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: #c4c4c4;
+	text-underline-offset: 4px;
+}
+.design-brand .design-work-pager {
+	margin: 0 0 64px;
+}
+@media (max-width: 640px) {
+	.design-brand {
+		gap: 48px;
+		padding-top: 32px;
+	}
+	.design-brand__title h1 {
+		font-size: 32px;
+	}
+	.design-brand__colors,
+	.design-brand__rules {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.design-brand__plate.is-filled,
+	.design-brand__type[style] {
+		padding: 28px 24px;
+	}
+}
