@@ -20,7 +20,6 @@ const highlights = defineCollection({
 			.object({
 				author: z.string().min(1).optional(),
 				sourceName: z.string().min(1),
-				note: z.string().min(1),
 			})
 			.optional(),
 		cover: z.string().optional(),

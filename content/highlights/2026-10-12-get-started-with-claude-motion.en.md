@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Claude Help Center"
-  note: "Summarized on October 12, 2026, with notes for newcomers at the end. Motion is in beta, so check the original for the latest details."
 ---
 
 Claude Motion turns reports, data and images into animations that last a few dozen seconds: a short explainer for an all-hands, a chart that moves in a board deck, or a product walkthrough for new customers.

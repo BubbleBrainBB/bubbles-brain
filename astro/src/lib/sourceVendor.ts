@@ -85,6 +85,11 @@ const PORTRAITS: { image: string; handle?: string; hosts?: string[]; name?: RegE
 		name: /^dan shipper\b/i,
 		image: '/images/sources/dan-shipper.jpg',
 	},
+	{
+		handle: 'addyosmani',
+		name: /^addy osmani\b/i,
+		image: '/images/sources/addy-osmani.jpg',
+	},
 	{ hosts: ['sankalp.bearblog.dev'], image: '/images/sources/sankalp.jpg' },
 	{ handle: 'droid_35719', image: '/images/sources/theo.jpg' },
 	{ handle: 'hyperframes_', image: '/images/sources/hyperframes.jpg' },
