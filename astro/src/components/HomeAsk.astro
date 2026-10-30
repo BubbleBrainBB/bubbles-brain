@@ -1,6 +1,9 @@
 ---
+import { podcastEpisodes } from '../data/podcasts';
 import { AI_NEWS_FEED_URL } from '../lib/aiNews';
 import { homeQuestions } from '../lib/homeQuestions';
+import { homeRecent } from '../lib/homeRecent';
+import { buildKnowledgeSearchIndex } from '../lib/searchIndex';
 import { siteSections } from '../lib/siteSections';
 import '../styles/home.css';
 import '../styles/news-outlets.css';
@@ -10,6 +13,11 @@ const sections = siteSections('zh-CN');
 // Without JavaScript the first three show; the script picks a different three and types
 // another question into the box on every visit.
 const shown = 3;
+// Under the sections, the newest pieces across the site, so a first visit sees what is here and
+// that it is still being written. The day's first AI 动态 joins at the top in the browser and
+// the last row steps aside for it (scripts/homeNews.ts).
+const index = await buildKnowledgeSearchIndex({ locale: 'zh-CN' });
+const recent = homeRecent(index.items, podcastEpisodes);
 ---
 
 <div class="home home--ask">
@@ -64,6 +72,42 @@ const shown = 3;
 	<nav class="home-sections" aria-label="栏目">
 		{sections.map((section) => <a href={section.href}>{section.label}</a>)}
 	</nav>
+	<section class="rr-contents__part home-recent" aria-labelledby="home-recent-title">
+		<h2 id="home-recent-title">最近更新</h2>
+		<ol class="rr-contents__list">
+			<li data-home-recent-news hidden>
+				<a class="rr-contents__link" target="_blank" rel="noopener noreferrer">
+					<span class="rr-contents__row">
+						<span class="rr-contents__title" data-home-recent-title></span>
+						<span class="rr-contents__dots" aria-hidden="true"></span>
+						<span class="rr-contents__side">
+							AI 动态 <span class="rr-contents__date" data-home-recent-date></span>
+						</span>
+					</span>
+				</a>
+			</li>
+			{
+				recent.map((row, index) => (
+					<li data-home-recent-spare={index === recent.length - 1 ? '' : undefined}>
+						<a
+							class="rr-contents__link"
+							href={row.href}
+							target={row.external ? '_blank' : undefined}
+							rel={row.external ? 'noopener noreferrer' : undefined}
+						>
+							<span class="rr-contents__row">
+								<span class="rr-contents__title">{row.title}</span>
+								<span class="rr-contents__dots" aria-hidden="true" />
+								<span class="rr-contents__side">
+									{row.label} <span class="rr-contents__date">{row.date}</span>
+								</span>
+							</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
 </div>
 
 <script>

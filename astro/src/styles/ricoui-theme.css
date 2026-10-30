@@ -49,7 +49,8 @@
 	--lift: 0 0 0 1px var(--rule-strong), 0 6px 24px rgb(0 0 0 / 0.05);
 
 	/* Type: one family, two weights, six sizes */
-	--sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+	--sans:
+		-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
 		'Noto Sans SC', system-ui, sans-serif;
 	--serif: var(--sans);
 	--latin: var(--sans);
@@ -237,10 +238,10 @@ h3 {
 	border-radius: 12px;
 }
 
-/* The home page keeps only the quiet links, top right. */
+/* The home page has no logo or search in its header: the sections on the left, the quiet
+   links on the right. Phones get the sections under the box instead (styles/home.css). */
 .site-header--home {
-	grid-template-columns: minmax(0, 1fr);
-	justify-items: end;
+	grid-template-columns: minmax(0, 1fr) auto;
 	min-height: 80px;
 }
 
@@ -356,6 +357,7 @@ h3 {
 	}
 	.site-header--home {
 		grid-template-columns: minmax(0, 1fr);
+		justify-items: end;
 	}
 	.site-header--home .site-actions > a {
 		display: inline-flex;
