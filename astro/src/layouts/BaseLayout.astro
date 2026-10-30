@@ -100,6 +100,17 @@ const isSearchPage = Astro.url.pathname.replace(/\/$/, '') === '/search';
 			{
 				!immersive && home && (
 					<header class="site-header site-header--home">
+						{isEnglish ? (
+							<span aria-hidden="true" />
+						) : (
+							<nav class="site-sections" aria-label="栏目">
+								{sections.map((item) => (
+									<a href={item.href} data-nav-prefetch>
+										{item.label}
+									</a>
+								))}
+							</nav>
+						)}
 						<SiteActions locale={lang} languageHref={languageHref} home />
 					</header>
 				)

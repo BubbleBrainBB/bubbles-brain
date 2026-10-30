@@ -376,6 +376,12 @@
 .home--ask .home-sections {
 	margin-top: 64px;
 }
+/* On wider screens the sections sit in the header; this row is for phones. */
+@media (min-width: 961px) {
+	.home--ask .home-sections {
+		display: none;
+	}
+}
 .home-sections {
 	display: flex;
 	flex-wrap: wrap;
@@ -551,4 +557,19 @@
 	font-size: 13px;
 	font-weight: 500;
 	color: var(--ink-faint);
+}
+
+/* 最近更新: the site's contents rows (reading-room.css), across the column under the sections. */
+.home-recent {
+	width: 100%;
+	margin-top: 88px;
+	text-align: left;
+}
+.home-recent li[hidden] {
+	display: none;
+}
+@media (max-width: 640px) {
+	.home-recent {
+		margin-top: 56px;
+	}
 }
