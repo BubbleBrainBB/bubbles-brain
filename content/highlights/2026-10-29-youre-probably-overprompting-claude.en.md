@@ -11,7 +11,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Addy Osmani"
-  note: "Retold paragraph by paragraph on October 30, 2026 from the October 29 original, with every point, link and command kept. See the original for the exact wording."
 ---
 
 ![Title card: You're probably overprompting Claude, beside a card reading "The goal and how to verify it."](https://pbs.twimg.com/media/HVxuqqUagAA_bVB?format=jpg&name=large)

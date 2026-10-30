@@ -11,7 +11,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Addy Osmani"
-  note: "2026 年 10 月 30 日按 10 月 29 日的原文逐段译成中文。斜杠命令和链接保留原样，四张配图的说明里译出了图中文字。"
 ---
 
 ![标题图：你可能给 Claude 写了太多提示词（You're probably overprompting Claude）。旁边的卡片写着：目标，以及怎么验证。](https://pbs.twimg.com/media/HVxuqqUagAA_bVB?format=jpg&name=large)

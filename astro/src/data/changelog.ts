@@ -22,7 +22,7 @@ export const changelog: ChangelogItem[] = [
 		type: 'content',
 		title: '新增精选阅读：你给 Claude 的提示词，多半写多了',
 		summary:
-			'收录 Addy Osmani 10 月 29 日的长帖，按原文逐段译成中文：给 Claude 一个清楚的目标和验证办法就放手，定期删掉为旧模型写的指令，以及子智能体、云端会话、Projects 和代码审查各在什么时候用。四张配图的说明里译出了图中文字。',
+			'收录 Addy Osmani 10 月 29 日的长帖，按原文逐段译成中文：给 Claude 一个清楚的目标和验证办法就放手，定期删掉为旧模型写的指令，以及子智能体、云端会话、Projects 和代码审查各在什么时候用。',
 		links: [{ label: '阅读', href: '/highlights/2026-10-29-youre-probably-overprompting-claude/' }],
 	},
 	{

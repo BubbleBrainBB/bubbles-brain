@@ -140,7 +140,7 @@ const articleIntro =
 	markdownCollection === 'highlights'
 		? (
 				markdownEntry?.data as {
-					articleIntro?: { author?: string; sourceName: string; note: string };
+					articleIntro?: { author?: string; sourceName: string; note?: string };
 				}
 			)?.articleIntro
 		: undefined;
@@ -661,7 +661,7 @@ const libraryApi =
 									{articleIntro.note}
 									{sourceUrl && (
 										<>
-											{' '}
+											{articleIntro.note && ' '}
 											<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
 												{isEnglish ? 'Read the original ↗' : '读英文原文 ↗'}
 											</a>
