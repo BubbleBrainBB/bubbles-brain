@@ -144,6 +144,7 @@ const articleIntro =
 				}
 			)?.articleIntro
 		: undefined;
+const sourceIsChinese = sourceUrl ? /\/zh(?:-cn)?\//i.test(sourceUrl) : false;
 const readingMinutesFor = (body: string) => {
 	const units =
 		(body.match(/[\u3400-\u9fff]/g)?.length ?? 0) +
@@ -659,7 +660,7 @@ const libraryApi =
 							{articleIntro && sourceUrl && (
 								<p class="article-editorial-note">
 									<a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-										{isEnglish ? 'Read the original ↗' : '读英文原文 ↗'}
+										{isEnglish ? 'Read the original ↗' : sourceIsChinese ? '读原文 ↗' : '读英文原文 ↗'}
 									</a>
 								</p>
 							)}
