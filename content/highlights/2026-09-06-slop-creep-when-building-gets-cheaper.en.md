@@ -11,7 +11,6 @@ draft: false
 articleIntro:
   author: "Brandon Sovran"
   sourceName: "Awaiting Input"
-  note: "An editorial reading of the article's main arguments. The final section contains our own practical takeaways."
 ---
 
 Producing working software is getting easier. Deciding whether it deserves to exist still requires judgment. Brandon Sovran calls the gradual accumulation of insufficiently justified features, abstractions, and infrastructure **slop-creep**: agents make implementation cheap enough for additions to outpace scrutiny.

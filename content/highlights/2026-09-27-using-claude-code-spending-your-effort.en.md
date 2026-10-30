@@ -11,7 +11,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "@trq212"
-  note: "Originally published September 25, 2026. Editorial explanations are appended separately."
 ---
 
 ![Image](https://pbs.twimg.com/media/HTFFnvJaYAAoPxz?format=jpg&name=large)

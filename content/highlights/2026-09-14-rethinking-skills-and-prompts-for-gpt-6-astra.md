@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "OpenAI Developers"
-  note: "OpenAI 官方博文中文翻译，保留原文结构与全部示例。"
 ---
 
 编程 Agent 已经取得了长足进步，最佳实践也在迅速变化。随着模型能力增强，过去需要大量细致引导和辅助机制的工作，如今已经不再需要同样程度的扶持。

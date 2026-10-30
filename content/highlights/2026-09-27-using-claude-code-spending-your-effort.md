@@ -11,7 +11,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "@trq212"
-  note: "原文发表于 2026 年 9 月 25 日。保留原图、案例和数据，文末另附术语与实践解读。"
 ---
 
 ![Using Claude Code: Spending your effort 原文封面](https://pbs.twimg.com/media/HTFFnvJaYAAoPxz?format=jpg&name=large)

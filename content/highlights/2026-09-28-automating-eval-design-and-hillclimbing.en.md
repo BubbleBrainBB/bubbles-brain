@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "claude.dev · Lance Martin"
-  note: "Source published September 28, 2026. Detailed editorial reading notes with all nine source figures and key results. Commentary is editorial analysis; this is not a reproduction of the original text."
 ---
 
 Automated optimization depends on a reliable measurement process. Lance Martin describes `/claude-api build-eval` for constructing evaluations and `/claude-api hillclimb` for searching improvements. These editorial notes cover the workflow and experiments, with all nine source figures. Figure commentary and the final methodological caveats are editorial analysis.

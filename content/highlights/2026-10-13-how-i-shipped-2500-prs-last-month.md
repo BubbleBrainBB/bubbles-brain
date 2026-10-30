@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Lauren Tan（poteto）"
-  note: "2026 年 10 月 15 日按演讲再润色了一遍。这场演讲没有公开文字稿，所以这篇按她讲的顺序写成中文，不是逐句对照。标题里是 2,500 个 PR，演讲里说的是 2,000 个，都是她自己报的数字。"
 ---
 
 Lauren Tan 在 X 上叫 poteto，在 SpaceXAI 做 Grok Bot，之前在 Cursor 和 React 团队。她说自己上个月往生产环境发了 2,000 个 pull request（PR），但这从来不是她的目标：她做的所有技能、工具和代码库改造，最后都指向同一件事，**让自己敢信任智能体的产出，哪怕她不在旁边盯着**。

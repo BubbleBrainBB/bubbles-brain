@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Dan Shipper"
-  note: "Retold on October 16, 2026 from the October 15 original, section by section, with the interviews' claims, names, dates and figures kept. The original illustrations and the page's agent-reading and subscription controls are left out. Notes for newcomers are at the end."
 ---
 
 Dan Shipper can date the night he started to think OpenAI might lose the lead in AI coding that had looked untouchable since ChatGPT took off. It was the summer of 2025, the eve of the GPT-5 launch, in OpenAI's Mission Bay office. The building felt staged: lights like stage lights, people moving a little faster through rust and brown halls, the next day's launch pulling the room into its orbit. What he had come to say sat awkwardly in that mood.
