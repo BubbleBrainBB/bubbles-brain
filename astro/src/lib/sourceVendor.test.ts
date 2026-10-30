@@ -117,6 +117,14 @@ describe('sourceMark', () => {
 		expect(sourceMark('@felixrieseberg', 'https://x.com/felixrieseberg').image).toBe(image);
 	});
 
+	it('uses Addy Osmani’s portrait on the highlights source and on his X post', () => {
+		const image = '/images/sources/addy-osmani.jpg';
+		expect(
+			sourceMark('Addy Osmani', 'https://x.com/addyosmani/status/2115688494865465370').image,
+		).toBe(image);
+		expect(sourceMark('@addyosmani', 'https://x.com/addyosmani').image).toBe(image);
+	});
+
 	it('uses Dan Shipper’s portrait on the Every byline and on his X post', () => {
 		const image = '/images/sources/dan-shipper.jpg';
 		expect(sourceMark('Dan Shipper', 'https://every.to/p/how-codex-happened').image).toBe(image);

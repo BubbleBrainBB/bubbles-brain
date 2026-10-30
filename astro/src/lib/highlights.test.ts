@@ -5,6 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { legacyEntryIsRoutable, loadLegacyContent, type LegacyContentEntry } from './legacyContent';
 
 const expectedArticleRoutes = [
+	'/highlights/2026-10-29-youre-probably-overprompting-claude/',
+	'/en/highlights/2026-10-29-youre-probably-overprompting-claude/',
 	'/highlights/2026-10-15-how-codex-happened/',
 	'/en/highlights/2026-10-15-how-codex-happened/',
 	'/highlights/2026-10-15-how-to-be-more-ambitious/',
@@ -471,6 +473,41 @@ describe('unified highlights content', () => {
 
 		const chinese = records.find((entry) => entry.locale === 'zh-CN');
 		expect(chinese?.body).not.toMatch(/不是|而是|并非|而非|不像|不仅/u);
+	});
+
+	it('keeps the overprompting article complete in both languages', async () => {
+		const records = highlightRecords(await loadLegacyContent()).filter(
+			(entry) => entry.frontmatter.externalId === 'youre-probably-overprompting-claude',
+		);
+
+		expect(records.map((entry) => entry.locale).sort()).toEqual(['en', 'zh-CN']);
+		for (const entry of records) {
+			expect(entry.frontmatter.sourceUrl).toBe('https://x.com/addyosmani/status/2115688494865465370');
+			expect(entry.frontmatter.draft).toBe(false);
+			expect(entry.body.match(/https:\/\/pbs\.twimg\.com\/media\//g)).toHaveLength(4);
+			for (const evidence of [
+				'/effort medium',
+				'/goal',
+				'/doctor prompt-audit',
+				'/code-review',
+				'claude --cloud',
+				'80%',
+				'https://x.com/trq212/status/2080710971228918066',
+				'https://claude.com/resources/articles/auto-mode-default-in-claude-code',
+				'https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop',
+				'https://claude.dev/blog/claude-code-in-the-cloud/',
+				'https://code.claude.com/docs/en/claude-projects',
+				'https://x.com/ClaudeDevs/status/2100633571543367691',
+				'https://claude.dev/blog/solving-code-review-at-anthropic/',
+			]) {
+				expect(entry.body).toContain(evidence);
+			}
+		}
+
+		const chinese = records.find((entry) => entry.locale === 'zh-CN');
+		expect(chinese?.body).toContain('只把这些加回来');
+		expect(chinese?.body).toContain('PR 已就绪');
+		expect(chinese?.body).not.toContain('·');
 	});
 
 	it('keeps the Codex origin story complete in both languages', async () => {

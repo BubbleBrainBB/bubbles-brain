@@ -11,7 +11,6 @@ draft: false
 articleIntro:
   author: "Brandon Sovran"
   sourceName: "Awaiting Input"
-  note: "中文全译；文中“我”指作者，Slop-creep 译为“低质系统的蔓延”。"
 ---
 
 “这主意真不错！”“我们应该选 X，别用 Y。”“这里就该用 Z。”

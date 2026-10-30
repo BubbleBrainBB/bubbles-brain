@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Felix Rieseberg"
-  note: "Summarized on October 15, 2026 from the October 13 original, section by section, not line by line, with notes for newcomers at the end. The post opens with Goya's Modo de volar (A Way of Flying); that image is not included here."
 ---
 
 Felix Rieseberg works on Claude. Every day he hears about something done with or by Claude that he hadn't considered, didn't think possible, or simply lacked the curiosity and time to try. This month it may have helped discover a new planet. He has seen the first AI music video he really likes. And they are talking about a new era of math.

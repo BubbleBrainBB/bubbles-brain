@@ -10,7 +10,6 @@ featured: true
 draft: false
 articleIntro:
   sourceName: "Lauren Tan (poteto)"
-  note: "Summarized on October 13, 2026 from the talk video, section by section in her order, with notes for newcomers at the end. The title says 2,500 PRs; in the talk she says 2,000. Both are her own figures."
 ---
 
 Lauren Tan, poteto on X, works on Grok Bot at SpaceXAI, after time at Cursor and on the React team. She says she shipped 2,000 pull requests to production last month, though that was never her goal: every skill, tool and codebase change she made added up to one thing, **being able to trust her agents' work even when she isn't watching**.
