@@ -277,6 +277,7 @@ export function episodeProblems(episode: PodcastEpisode): string[] {
 		if (!outlineText.some((text) => text.includes(entry.term)))
 			problems.push(`${entry.term} is not in the outline`);
 	if (!/^\d{4}-\d{2}-\d{2}$/.test(episode.date)) problems.push(`bad date ${episode.date}`);
-	if (!/^https:\/\//.test(episode.audio)) problems.push('audio is not https');
+	if (!/^(https:\/\/|\/media\/podcasts\/)/.test(episode.audio))
+		problems.push('audio is neither https nor under /media/podcasts/');
 	return problems;
 }

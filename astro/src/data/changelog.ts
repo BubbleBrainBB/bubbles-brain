@@ -17,6 +17,15 @@ export interface ChangelogItem {
 
 export const changelog: ChangelogItem[] = [
 	{
+		date: '2026-11-01',
+		tag: '播客',
+		type: 'content',
+		title: '新增播客：Anthropic 怎么一天合并 3 万次代码改动',
+		summary:
+			'收录 AI Engineer 大会上 Sonar 的 Manish Kapur 和 Anthropic 的 Addy Osmani 的对话，这是新增的第五档节目。每天 3 万次改动之后，信心靠什么：让 Claude 先审，人查证据，每一圈循环都要验证。附中英文字稿。',
+		links: [{ label: '收听', href: '/podcasts/ai-engineer-anthropic-30000-changes/' }],
+	},
+	{
 		date: '2026-10-30',
 		tag: 'Vibe Coding',
 		type: 'content',

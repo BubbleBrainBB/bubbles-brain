@@ -17,6 +17,7 @@ const highTaste = podcastEpisodes.find(
 	(episode) => episode.id === 'latent-space-high-taste-testers',
 )!;
 const withTranscripts = new Set([
+	'ai-engineer-anthropic-30000-changes',
 	altman.id,
 	highTaste.id,
 	metaMuse.id,
@@ -340,6 +341,37 @@ describe('the High Taste Testers transcript', () => {
 		expect(said).not.toContain('opening eye is not');
 		expect(said).not.toContain('Hi 60s Testers');
 		expect(said).not.toContain('Johnny IV was');
+	});
+});
+
+describe('the Anthropic 30,000 changes transcript', () => {
+	const episode = podcastEpisodes.find(
+		(entry) => entry.id === 'ai-engineer-anthropic-30000-changes',
+	)!;
+
+	it('is corrected against the audio, with both speakers named, in Chinese throughout', () => {
+		const transcript = transcriptFor(episode);
+		expect(transcript).not.toBeNull();
+		expect(transcriptProblems(transcript!, episode)).toEqual([]);
+		expect(transcript!.source.type).toBe('caption-checked');
+		expect(new Set(transcript!.turns.map((turn) => turn.speaker))).toEqual(
+			new Set(['manish', 'addy']),
+		);
+		expect(transcript!.turns.every((turn) => turn.zh)).toBe(true);
+		const said = transcript!.turns.map((turn) => turn.text).join('\n');
+		expect(said).toContain('about 2,500 changes all the way back in May');
+		expect(said).toContain('Opus 5.5');
+		expect(said).not.toContain('Opus 55');
+		expect(said).not.toContain('cloud code');
+	});
+
+	it('puts the quote in the words of its speaker, at its minute', () => {
+		const transcript = transcriptFor(episode)!;
+		const turn = transcript.turns.find(({ text }) => text.includes(episode.quote!.text))!;
+		expect(turn.speaker).toBe('manish');
+		const at = 18 * 60;
+		expect(turn.at).toBeLessThanOrEqual(at);
+		expect(turn.end).toBeGreaterThan(at);
 	});
 });
 

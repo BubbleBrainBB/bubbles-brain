@@ -1,0 +1,423 @@
+{
+	"episodeId": "ai-engineer-anthropic-30000-changes",
+	"language": "en",
+	"source": {
+		"type": "caption-checked",
+		"video": "https://www.youtube.com/watch?v=AnsXWH2_EBU",
+		"note": "英文取自 YouTube 自动字幕，对照音频转写做了人工校对，说话人按内容标注。中文由 AI 翻译。"
+	},
+	"speakers": [
+		{
+			"id": "manish",
+			"name": "Manish Kapur",
+			"role": "Sonar 产品与开发者关系负责人"
+		},
+		{
+			"id": "addy",
+			"name": "Addy Osmani",
+			"role": "Anthropic，负责 Claude Code 开发者体验"
+		}
+	],
+	"turns": [
+		{
+			"at": 12,
+			"end": 29,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "I'm pretty excited to be here and talk about who verifies the software factory. Before we get started, can you give me a quick show of hands? Raise your hand if your coding agent has opened any pull request in the last one week.",
+			"zh": "很高兴来这里聊一聊：软件工厂由谁来验证。开始之前，大家能举个手吗？过去一周，你的编程 agent 开过 pull request 的请举手。"
+		},
+		{
+			"at": 29,
+			"end": 54.9,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Almost everyone. Thanks. And keep your hands raised up if you have merged pull requests and reviewed every line of code that was merged. Oh, I do see a few people. That's excellent. So what I'm going to talk about is the gap between the two camps: merging requests without reviewing manually, and merging requests after doing some reviews.",
+			"zh": "几乎所有人。谢谢。如果你合并 pull request 时，每一行合并的代码都审过，请继续举着手。哦，我确实看到几位，太好了。我要讲的就是这两个阵营之间的差距：一边是不经人工审查就合并，一边是审过一些之后再合并。"
+		},
+		{
+			"at": 54.9,
+			"end": 97,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So my name is Manish Kapur, and I lead the product and developer relations team at Sonar, and I'm excited to be here with my guest speaker Addy Osmani from Anthropic. Addy had been at Google for about 14 years. Most of you probably know him, and he's written lots and lots of content and articles. I learn a lot from Addy, so I'm really fortunate to have him here, stand next to me and share his wisdom with all of us here today. He recently joined Anthropic, and Addy, congratulations on your role at Anthropic. Would you like to tell the team what you're working on at Anthropic, what your role is?",
+			"zh": "我叫 Manish Kapur，在 Sonar 负责产品和开发者关系团队。很高兴和今天的嘉宾、Anthropic 的 Addy Osmani 一起来到这里。Addy 在 Google 待了大约 14 年，大家多半都认识他，他写过非常多的内容和文章。我从他那里学到很多，所以很幸运能请他站在我旁边，和大家分享他的经验。他最近加入了 Anthropic，Addy，恭喜你。能跟大家说说你在 Anthropic 做什么、是什么角色吗？"
+		},
+		{
+			"at": 97,
+			"end": 116.7,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Yeah, sure. So I'm responsible for making sure that you all have a really great developer experience building with Claude Code, and anytime that we discover there are opportunities to make it even smoother, we bring that right back into the product. We ship a couple of times every single day, and so we're very interested in trying to make sure that you have the best possible experience as often as possible.",
+			"zh": "好的。我负责让大家用 Claude Code 开发时有很好的体验，只要发现还有能做得更顺的地方，我们就直接改回产品里。我们每天都要发布好几次，所以很在意让大家尽可能经常地拿到最好的体验。"
+		},
+		{
+			"at": 116.7,
+			"end": 150.6,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Cool. Thank you. All right, so let's start with some problem and context-setting slide. There are two numbers on the slide. CircleCI analyzed 28 million CI workflows this year, and they noticed that the throughput jumped by about 59%, but yet three in ten attempts to merge that code into production are failing. And this is an independent stat from CircleCI, and I think I'm seeing the same trend for most of our customers that I speak to every day.",
+			"zh": "好，谢谢。我们先看一张交代问题和背景的幻灯片，上面有两个数字。CircleCI 今年分析了 2800 万条 CI 工作流，发现吞吐量涨了大约 59%，但把这些代码合并进生产的尝试，每十次仍有三次失败。这是 CircleCI 给出的独立数据，我每天接触的大多数客户身上也是同样的趋势。"
+		},
+		{
+			"at": 150.6,
+			"end": 175.5,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "This is a quote from Addy: a software factory is harnessing loops at scale. This resonated quite a bit for me, and if you have not read that article, you can look it up. It's a pretty educational article, talking about how the future will look like in terms of software factories. So Addy, would you like to expand on what you were thinking when you wrote this article about harnessing the loops at scale?",
+			"zh": "这是 Addy 的一句话：软件工厂就是大规模地驾驭循环。这句话很打动我，没读过那篇文章的可以去找来看，它很有启发，讲的是软件工厂的未来会是什么样。Addy，能展开说说你写这篇关于大规模驾驭循环的文章时是怎么想的吗？"
+		},
+		{
+			"at": 175.5,
+			"end": 208.4,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Yeah, absolutely. So a lot of folks here have probably heard this term software factories, and there's two types of factories that are at least worth keeping in mind. Software factories, harnessing loops at scale. A lights-on factory is one where you have agents that are helping you with planning, building, checking and shipping code again and again, but you as a person still apply your judgment and taste inside the picture. And then we have a dark software factory, which is a little bit closer to how a car factory with robotics might be working, where it's constantly doing the work.",
+			"zh": "当然。这里很多人大概都听过软件工厂这个词，至少有两种工厂值得记住。软件工厂就是大规模地驾驭循环。亮灯工厂是 agent 帮你一遍遍地规划、构建、检查和发布代码，但你作为人，还在其中运用自己的判断和品味。还有一种是熄灯的软件工厂，更接近用机器人的汽车工厂，它一直在不停地干活。"
+		},
+		{
+			"at": 208.4,
+			"end": 231.2,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "So it's scoping, building, checking, and you as the person move down further to thinking about intent, and you're pulled in when there are really the greatest of exceptions to the case. But that's sort of what I was thinking. I think a lot of teams are somewhere on this spectrum and are on this journey to figure out how do I get further and further into automation in a way that I can trust it.",
+			"zh": "它自己界定范围、构建、检查，而人退到更后面，只考虑意图，只有遇到最特殊的例外才被叫进来。我当时大概就是这么想的。我觉得很多团队都处在这条光谱的某个位置，都在摸索：怎样一步步走向更高的自动化，同时还能信得过它。"
+		},
+		{
+			"at": 231.2,
+			"end": 263.4,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Cool. So AI coding is now basically a solved problem. We all know agents are there. 85% of the organizations are already using coding agents. It will go to 95% and very soon to 100%. 76% of the developers that generate AI code are saying that code is being produced at a speed that it's impossible for them to verify it. So they are spending more and more time reviewing the code. So what do you think is the most pressing question that engineering leaders have right now?",
+			"zh": "好。AI 写代码现在基本算是解决了。agent 已经到位，85% 的组织已经在用编程 agent，接下来会到 95%，很快到 100%。生成 AI 代码的开发者里，有 76% 说代码产出的速度已经快到他们不可能验证。所以他们花在审代码上的时间越来越多。你觉得工程负责人现在最迫切的问题是什么？"
+		},
+		{
+			"at": 263.4,
+			"end": 298.3,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "So I think that teams have gotten better at working with agents over the last year. Models, harnesses have also gotten better. And what I see a lot of leaders being interested in is how do we enable you to ship code faster with confidence, and that confidence piece is very important. Agents can now generate ways for you to check your code much more cheaply than ever before. And if you think about the things that enabled us to call good code high quality, those were things like good tests, benchmarks, specs, anything that gives us confidence.",
+			"zh": "过去一年，团队和 agent 配合得更好了，模型和 harness 也更好了。我看到很多负责人关心的是：怎样让大家更快地交付代码，同时有信心，而信心这部分非常重要。现在 agent 能帮你生成检查代码的办法，成本比以往低得多。想想那些让我们敢说代码质量高的东西：好的测试、基准、规格说明，凡是能给我们信心的都算。"
+		},
+		{
+			"at": 298.3,
+			"end": 327.6,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "So agents are able to help us generate that a little bit more easily these days, a little bit more quickly. We can of course refine those things, but I think that those checks are one of the most important things we should be spending our time on these days. Like if you are hoping to get the best quality output from your agents, you need to give your agents a way to verify that the work is correct. If you've got that in place, and you can make sure that the code is both correct and complete, that can easily 2x to 3x the quality of your outcomes.",
+			"zh": "如今 agent 能帮我们更轻松、更快地生成这些东西，我们当然还可以再打磨。但我觉得，这些检查正是现在最该花时间的地方之一。如果你想从 agent 那里拿到质量最好的产出，就要给它一个验证工作是否正确的办法。做到这一点，并且能确保代码既正确又完整，结果的质量轻松就能提高两到三倍。"
+		},
+		{
+			"at": 327.6,
+			"end": 338.2,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Yep. Yep. Absolutely right, spot on. I think code confidence, we have been running an ad: code confidence is scarce. And you really need to build it up now that the coding problem is solved.",
+			"zh": "对，对，完全正确。关于代码信心，我们一直在打一句广告：代码信心是稀缺品。既然写代码这件事解决了，你真的需要把信心建立起来。"
+		},
+		{
+			"at": 338.2,
+			"end": 374.2,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So actually, yesterday night, so this might be a surprise question for you. Yesterday night I read a post from Anthropic, and I encourage all of you to read it. It talks about the scale at which Anthropic is operating. They are merging about 30,000 code changes every single day. They used to do about 2,500 or so code changes just a few months back. They have scaled from 2,500 code changes to 30,000 code changes per day. That is mind-boggling. So Addy, what does code review look like at Anthropic, with the Claude Code team that you're working with?",
+			"zh": "其实是昨天晚上，所以这个问题可能会让你有点意外。我昨晚读了 Anthropic 的一篇文章，也建议大家都读读。它讲了 Anthropic 现在的规模：每天合并大约 3 万次代码改动，而几个月前大概只有 2500 次。从每天 2500 次涨到 3 万次，太惊人了。Addy，在 Anthropic，在你们 Claude Code 团队，代码审查是什么样的？"
+		},
+		{
+			"at": 374.2,
+			"end": 395.4,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Yeah, these are great questions. So we were merging about 2,500 changes all the way back in May. And even for our recent refresh of Claude.ai, we put out a case study saying that we kind of 3x the performance of it. That was accomplished by merging about 3,000 pull requests in a very short space of time, with engineers, product designers, a number of different functions contributing to it.",
+			"zh": "好问题。回到 5 月，我们每天合并大约 2500 次改动。最近翻新 Claude.ai 时，我们发过一篇案例，说大概把性能提高到了三倍。那是在很短时间里合并了大约 3000 个 pull request 做到的，工程师、产品设计师和不少其他职能都有贡献。"
+		},
+		{
+			"at": 395.4,
+			"end": 422,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "So our workflow for being able to get verification and code review in place is that we first of all have Claude do a first-pass review. What's very important in there is making sure that it has a way to actually try the experience out, similar to a real user. So that can mean end-to-end tests, opening up the experience, checking it in a browser, running any tools, doing any linting, doing any other checks that are necessary to build up that confidence.",
+			"zh": "我们做验证和代码审查的流程是，先让 Claude 审第一遍。这里很重要的一点，是确保它有办法像真实用户那样把体验真的试一遍。这可以是端到端测试、把界面打开、在浏览器里检查、运行各种工具、做 lint，以及建立信心所需要的其他任何检查。"
+		},
+		{
+			"at": 422,
+			"end": 451.9,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "People usually ask us, okay, well, what happens if you discover a bug or a gap in functionality? Well, we have hooks that will then go and run on any edits. They will study the diffs and allow us to get this loop in place where we're correcting the PR as quickly as possible. So we have Claude Code doing the review. We have a code review product that you can also check out, that's pretty good. And the idea there is we're trying to automate code review as much as possible. This is something that we use ourselves.",
+			"zh": "大家常问：那要是发现 bug 或者功能缺口呢？我们有 hooks，任何编辑都会触发运行。它们会研究 diff，让这个循环转起来，尽快把 PR 改正。所以是 Claude Code 在做审查。我们还有一个代码审查产品，也可以去看看，相当不错。思路就是尽可能把代码审查自动化，这也是我们自己在用的。"
+		},
+		{
+			"at": 451.9,
+			"end": 472.1,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "And increasingly what's important is for your teams to be thinking about how can you, we talk about taste and judgment so much these days, right? It's important for you to be trying to codify what you consider best practice and taste in your team's shared CLAUDE.md, AGENTS.md, anywhere where the agent can then consult during code review.",
+			"zh": "越来越重要的是，团队要想清楚怎样，我们最近老在谈品味和判断，对吧？重要的是，要试着把你们认为的最佳实践和品味写下来，放进团队共享的 CLAUDE.md、AGENTS.md，放在任何 agent 审代码时能查到的地方。"
+		},
+		{
+			"at": 472.1,
+			"end": 501,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "And then people are responsible for checking on the agent's evidence. So how do we know? If I'm building out a piece of UI that's going to be used by a user in the browser, I want to make sure that it's tested in the browser, maybe generated me a video of that experience where it's been clicking around and gives me confidence. Well, okay, this works. If I care about the mobile or desktop experience, maybe it generates me screenshots or videos of that. But basically, you want to get to a place where the agent's giving you as much verification evidence as possible.",
+			"zh": "然后，人负责检查 agent 拿出来的证据。怎么才算知道呢？如果我在做一块用户会在浏览器里用的界面，我要确认它在浏览器里测过，也许还给我生成一段到处点击的视频，让我有信心：好，这行得通。如果我在意手机或桌面端的体验，也许它就生成对应的截图或视频。总之，要做到让 agent 给你尽可能多的验证证据。"
+		},
+		{
+			"at": 501,
+			"end": 509.8,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Cool. Yeah, verification is key. I think you need to verify everything that the software factories will produce, and that's what we are going to talk about today.",
+			"zh": "好。验证确实是关键。我觉得软件工厂产出的一切都要验证，这也是我们今天要聊的。"
+		},
+		{
+			"at": 509.8,
+			"end": 560.2,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So another, these stats by the way are from the State of Code survey report that will be coming out very soon from Sonar. We surveyed more than 1,000 developers, and we found some interesting data which will give us insights as to what's happening in the industry today and where we are headed. So 84% say AI gets features and fixes to production faster. The pull requests are getting larger and more complex. And yet only 31% more code is reaching production without review. So that's a little bit of a scary fact, particularly for applications in the regulated industries, in the mission-critical applications, where you absolutely need to verify that code and you're confident in the code that is being shipped.",
+			"zh": "另外，这些数字来自 Sonar 很快要发布的 State of Code 调查报告。我们调查了 1000 多名开发者，发现了一些有意思的数据，能看出行业现在的状况和方向。84% 的人说 AI 让功能和修复更快进入生产。pull request 变得更大、更复杂。而未经审查就进入生产的代码多了 31%。这有点吓人，特别是受监管行业和关键任务应用，那里绝对需要验证代码，对交付的代码有信心。"
+		},
+		{
+			"at": 560.2,
+			"end": 563.9,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So where are the next gains going to come from, Addy?",
+			"zh": "Addy，下一波收益会从哪里来？"
+		},
+		{
+			"at": 563.9,
+			"end": 602.4,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "I think the next gains are going to come from a combination of us really nailing verification, as well as model quality. But models are already, if you take a look at Opus 5.5, model quality has already gotten to a place where it's pretty good. And I would say that us being able to share best practices about that verification step is going to become increasingly more important, because if you tell people, yeah, just verify the work, their next question is, what does that even mean, right? And so I think that the conversation needs to evolve into specifically what kinds of tests are useful. We lean a lot on end-to-end tests, property tests, any visual verification tests, things that can help us just get that confidence to merge those changes in automatically.",
+			"zh": "我觉得下一波收益来自两件事的结合：真正把验证做好，还有模型质量。不过模型已经，你看 Opus 5.5，模型质量已经相当不错了。所以我认为，分享验证这一步的最佳实践会越来越重要。因为你要是跟人说「验证一下工作就行」，他们接着就会问：这到底是什么意思？所以讨论要进一步具体到，哪些测试才有用。我们很依赖端到端测试、属性测试和各种视觉验证测试，这些能给我们自动合并改动的信心。"
+		},
+		{
+			"at": 602.4,
+			"end": 629.2,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Cool. You mentioned light factories want to go dark, and that's the direction we are headed. Our survey results show that today 5% of the companies are using software factories. It will get to 34%, and surprisingly 39% in the financial services. How many of you are using software factories? Just curious. A handful of you. And how many are planning to use software factories by next year?",
+			"zh": "好。你提到亮灯工厂都想走向熄灯，方向确实如此。我们的调查显示，今天有 5% 的公司在用软件工厂，之后会到 34%，金融服务业竟然有 39%。大家有多少人在用软件工厂？只是好奇。有那么几位。那有多少人计划明年前用上？"
+		},
+		{
+			"at": 629.2,
+			"end": 633,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Yeah, that's a good question. How do you define a software factory? Would you like to take that question?",
+			"zh": "嗯，这是个好问题：软件工厂怎么定义？你来回答吗？"
+		},
+		{
+			"at": 633,
+			"end": 660.4,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Yeah, yeah, sure. So we talked about a definition of software factories just a little bit earlier. A software factory is basically loops at scale. And when we think about this, it's all about what end of the spectrum are you at, in terms of how much people are still involved in the process. The more that the agents are able to generate verification and give you confidence, the more that you can get to that place where you go dark. And I think that, yeah, most people are still somewhere in that spectrum and are not quite, as this data shows, at that dark point just yet.",
+			"zh": "好的。我们前面讲过软件工厂的定义，它基本上就是大规模的循环。想这件事时，关键在于你处在光谱的哪一端，也就是人还在流程里参与多少。agent 越能生成验证、给你信心，你就越能走到熄灯那一步。我觉得大多数人还在这条光谱的中间某处，正如这份数据显示的，还没到熄灯那一步。"
+		},
+		{
+			"at": 660.4,
+			"end": 698.3,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Yep. Just to add to what Addy said, I think software factory, think of it like a production line, where you start defining the intent and your specifications. Then you start writing the code. So it's an assembly line where each of these software development lifecycle steps happen, and automating them at scale. In a dark factory, there would be no lights on. It's fully autonomously working. A light factory is where people are involved in the process at every step or most steps, whereas in a dark factory the goal would be to turn off the lights and let the factory run independently 24 by 7.",
+			"zh": "对。补充一下 Addy 说的：可以把软件工厂想成一条生产线，先定义意图和规格，再开始写代码。它是一条装配线，软件开发生命周期的每一步都在上面发生，并被大规模地自动化。熄灯工厂里不开灯，完全自主地运转。亮灯工厂是每一步或大多数步骤都有人参与，而熄灯工厂的目标是关掉灯，让工厂 24 小时独立运行。"
+		},
+		{
+			"at": 698.3,
+			"end": 737.2,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "All right. So you talked about verification. I'll talk a little bit about what we think at Sonar about verification. If you saw our keynote earlier today from our CEO, he talked about verification should be multi-layered. We absolutely 100% believe that each company should adopt a zero-trust, multi-layered verification approach, and verification should be done in every loop. Whether you're operating inside the agentic loop, or whether you're working inside the CI verification loop, or whether you're doing code maintenance, in each and every loop it is important to verify the output of the factories, the code that the agents are producing.",
+			"zh": "好。你谈到了验证，我讲讲 Sonar 对验证的看法。今天早些时候我们 CEO 的主题演讲说过，验证应该是多层的。我们百分之百相信，每家公司都应该采用零信任的多层验证，而且每一圈循环都要验证。不管是在 agent 的循环里，还是在 CI 验证循环里，还是在做代码维护，每一圈都要验证工厂的产出，也就是 agent 写的代码。"
+		},
+		{
+			"at": 737.2,
+			"end": 799.8,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So we look at it in terms of layers. There's a first layer, which is a deterministic layer, which catches bugs, security issues, things like SQL injection, buffer overflow bugs, and all of those are caught. And then there's a second layer where agentic review happens, where agents are used, like Addy was talking about, to review that code. And in that agentic review, they catch logic and intent issues which the deterministic layer is not well suited to catch. So each layer is targeted at catching specific types of issues. And then the third layer could be a software supply chain security layer, where you look at all the CVEs, and all your malware detection and malicious package detection happens. So it's a layered approach where each layer is tuned and optimized to catch a certain type of issue. So we absolutely recommend doing multi-layered verification.",
+			"zh": "我们按层来看。第一层是确定性的一层，抓 bug 和安全问题，比如 SQL 注入、缓冲区溢出，这些都能抓到。第二层是 agent 审查，就像 Addy 讲的，让 agent 来审代码，它们抓逻辑和意图上的问题，这正是确定性那层不擅长的。所以每一层都针对特定类型的问题。第三层可以是软件供应链安全，看所有 CVE，做恶意软件和恶意包检测。这是一种分层做法，每层都调到专门抓某一类问题。所以我们强烈建议做多层验证。"
+		},
+		{
+			"at": 799.8,
+			"end": 817.5,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So there's another stat here: 28% of companies have approved agents and shared controls, and 5% are operating software factories autonomously. What are your thoughts there, Addy?",
+			"zh": "这里还有一个数字：28% 的公司有经过批准的 agent 和共享的管控措施，5% 在自主运行软件工厂。Addy，你怎么看？"
+		},
+		{
+			"at": 817.5,
+			"end": 858,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "So I've talked to so many companies where a couple of months ago, one of their biggest worries was they were allowing their engineering teams to go off and play around with agents, and they got to a place where there were hundreds, thousands of agents in some cases, and they just didn't know what they were doing. What are these agents actually doing? They're touching all of our systems, accessing all kinds of data, maybe they're deploying to production. And so a lot of enterprises think about concerns like agent identity and telemetry and being able to track what's actually happening. And I'd say that the three biggest things for a lot of companies are how do we think about control, how do we think about permissions, and how do we think about the sandbox, like how are we making sure that the agent isn't jumping out of the sandbox and doing things that it shouldn't be doing?",
+			"zh": "我和很多公司聊过，几个月前他们最担心的事情之一，是放手让工程团队去玩 agent，结果有的公司冒出几百上千个 agent，根本不知道它们在干什么。这些 agent 到底在做什么？它们碰着我们所有的系统，访问各种数据，也许还在往生产环境部署。所以很多企业关心 agent 身份、遥测，以及能不能追踪到底发生了什么。我觉得对很多公司来说，最大的三件事是：怎么控制，怎么管权限，还有沙箱怎么办，也就是怎样确保 agent 不会跳出沙箱，去做不该做的事。"
+		},
+		{
+			"at": 858,
+			"end": 882.1,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Yeah, at Sonar we call it guide rails. So instead of guard rails, we're thinking of calling it guide rails, where we guide the agents to follow the rail tracks, a specific path to take, and prevent them from going out of bounds, or so to say going out of the sandbox like Addy was saying. So it's very, very important to have guide rails for an agent and govern the agents that you're working with.",
+			"zh": "对，在 Sonar 我们管这叫 guide rails。不说 guard rails（护栏），而是打算叫 guide rails（导轨）：引导 agent 沿着轨道走，走一条特定的路，防止它越界，或者说像 Addy 讲的那样跳出沙箱。所以给 agent 配上导轨、把它们管起来，非常非常重要。"
+		},
+		{
+			"at": 882.1,
+			"end": 894.3,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "So we're coming to a close now. As my timer is telling me, we just have a few minutes left. Let's get into a lightning round: one-sentence response for each of these questions, and you have seen the questions already on the slide.",
+			"zh": "快结束了，计时器告诉我只剩几分钟。我们来个快问快答，每个问题一句话回答，问题你已经在幻灯片上看过了。"
+		},
+		{
+			"at": 894.3,
+			"end": 896.5,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Can these be long sentences?",
+			"zh": "可以是长句吗？"
+		},
+		{
+			"at": 896.5,
+			"end": 899,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "They can be as long as the time permits.",
+			"zh": "时间允许的话，多长都行。"
+		},
+		{
+			"at": 899,
+			"end": 900,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Perfect.",
+			"zh": "太好了。"
+		},
+		{
+			"at": 900,
+			"end": 903.7,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Light or dark factory for most teams by end of 2027? Yes or no?",
+			"zh": "到 2027 年底，大多数团队是亮灯工厂还是熄灯工厂？"
+		},
+		{
+			"at": 903.7,
+			"end": 912.8,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "I think we're going to see light factories with some dark corners. I don't think we're going to get to everybody in this room using dark factories entirely, but it's going to be something close to that.",
+			"zh": "我觉得我们会看到亮灯工厂，加上一些熄灯的角落。我不认为在座所有人都会完全用上熄灯工厂，但会接近那样。"
+		},
+		{
+			"at": 912.8,
+			"end": 919.4,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "I would guess Anthropic would do it this year or next year.",
+			"zh": "我猜 Anthropic 今年或明年就能做到。"
+		},
+		{
+			"at": 919.4,
+			"end": 926.1,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "All right. Second question: should agent-written code be labeled in the PR?",
+			"zh": "好。第二个问题：agent 写的代码要不要在 PR 里标出来？"
+		},
+		{
+			"at": 926.1,
+			"end": 964.4,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "I personally think it should. Historically, we have felt a great deal of ownership around our code, pride around the fact that, hey, I wrote this thing, I'm putting my name on it. And at Anthropic, we think about this a little bit differently. We've evolved to the point where we don't really mind so much if Claude is labeled as, hey, I'm the one that wrote this thing, because we're a little bit more focused on the outcomes, and making sure that the code, the features, what we're shipping to users is the right thing. And so I personally think it's fine for the code to be labeled as coming from an agent, and that can also help us with things like figuring out, okay, well, if the agent wrote it, what are some of the constraints and extra checks that we need to keep in place?",
+			"zh": "我个人觉得应该标。过去我们对自己的代码有很强的归属感，为「这是我写的，我要署上名」而自豪。在 Anthropic，我们的想法有点不一样。我们已经不太介意 Claude 被标成「这是我写的」，因为我们更关注结果，确保代码、功能、交付给用户的东西是对的。所以我个人觉得标明代码来自 agent 没问题，这也能帮我们判断：既然是 agent 写的，需要加哪些约束和额外的检查？"
+		},
+		{
+			"at": 964.4,
+			"end": 986.6,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "I have the same point of view, Addy. I think in the short run, at least in the foreseeable six to nine months, we should label the PRs till we are confident enough in our factories. We do want to know and track it, and it's also important for the financial customers here in terms of auditability. If you label it, you know who's writing the code, because we are at the end of the day still accountable.",
+			"zh": "我的看法一样，Addy。我觉得短期内，至少在可以预见的六到九个月里，应该给 PR 打标，直到我们对工厂足够有信心。我们确实想知道并跟踪这件事，这对在座的金融客户的可审计性也很重要。打了标，就知道代码是谁写的，毕竟归根结底，责任还在我们身上。"
+		},
+		{
+			"at": 986.6,
+			"end": 999.2,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Yeah, absolutely. Accountability is the most important part here. We still label who is the owner for this change. I might have kicked off a Claude run to complete a piece of work, but I'm still on the hook. If something goes wrong, I have to go and fix it.",
+			"zh": "对，完全同意。这里最重要的就是责任。我们仍然会标明这次改动的负责人是谁。我可能启动了一次 Claude 来完成一项工作，但责任还在我身上，出了问题，得我去修。"
+		},
+		{
+			"at": 999.2,
+			"end": 1011.2,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Yep, yep. Key point. The next question, actually I'll improvise it here, because this is a leadership session: what one skill should a junior developer or leader build on this year?",
+			"zh": "对，对，这是关键。下一个问题我临时改一下，因为这是一场面向管理者的分享：今年，初级开发者或管理者最该练哪一项技能？"
+		},
+		{
+			"at": 1011.2,
+			"end": 1038.7,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "I think that, if you're a leader, you should push your teams to really think hard about what verification means. How are you already approaching things like testing? What is the gap between that and you getting to a place where you're very comfortable with the agents being able to sign off on the code being good enough to merge on their own? And so figuring that out. If you're a junior, it's the other side of that: actually getting more experience in the different flavors of tests, whether it's end-to-end tests, property tests, et cetera.",
+			"zh": "如果你是管理者，应该推动团队认真想清楚验证到底意味着什么。你们现在是怎么做测试的？离「放心让 agent 自己判定代码够好、可以合并」还差多少？把这些想清楚。如果你是初级开发者，就是另一面：多积累各种测试的经验，比如端到端测试、属性测试等等。"
+		},
+		{
+			"at": 1038.7,
+			"end": 1055.5,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Yep. And the last, you're actually not following the rules, you're going beyond one sentence, but that's cool. We have 30 seconds left, I'm fine. We can go a minute over, I'm sure. The agent opened the PR. It is safe to merge when?",
+			"zh": "好。最后一个，你其实没守规则，超过一句话了，不过没关系。还剩 30 秒，我无所谓，多一分钟肯定也行。agent 开了 PR，什么时候合并才安全？"
+		},
+		{
+			"at": 1055.5,
+			"end": 1059.6,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "You have full confidence nothing's going to go wrong, or that you've mitigated that as much as possible.",
+			"zh": "当你完全确信不会出问题，或者已经尽可能把风险降下来的时候。"
+		},
+		{
+			"at": 1059.6,
+			"end": 1091.8,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Love it. All right. Here's my last slide and then we'll wrap it up. So what separates teams that are shipping fast but not shipping blind? I think there are three key takeaways for you. Writing code is the fastest part, and that is solved. Strong review and verification for all teams is what will help you maintain that speed. Fast to write is not fast to ship. You have to basically look at what is getting merged, and make sure it doesn't escape the sandbox and things like that before it gets into production.",
+			"zh": "说得好。这是最后一张幻灯片，然后就收尾。是什么让一些团队交付得快，又不是盲目地交付？我觉得有三点。写代码是最快的一部分，这已经解决了。所有团队都需要强有力的审查和验证，才能保持住这个速度。写得快，不等于交付得快。你基本上得看清楚合并了什么，确保它进生产之前不会跑出沙箱之类。"
+		},
+		{
+			"at": 1091.8,
+			"end": 1118,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Verify everything, and autonomy is earned. We will get to software factories very soon, if not next year. You need to put an independent automated verification inside each loop of your factory. Make sure that you can trust the output that the factory is producing. With that, I'll wrap it up. Thanks for attending our talk today, a conversation with Addy. Again, Addy, I appreciate you taking the time and joining us here in this conversation.",
+			"zh": "什么都要验证，自主权是挣来的。我们很快就会用上软件工厂，就算不是明年。要在工厂的每一圈循环里放进独立的自动验证，确保你信得过工厂的产出。就到这里。感谢大家来听今天这场和 Addy 的对话。Addy，再次感谢你抽时间来聊。"
+		},
+		{
+			"at": 1118,
+			"end": 1120,
+			"speaker": "addy",
+			"kind": "turn",
+			"text": "Of course. Thanks for having me.",
+			"zh": "应该的。谢谢邀请。"
+		},
+		{
+			"at": 1120,
+			"end": 1128,
+			"speaker": "manish",
+			"kind": "turn",
+			"text": "Visit us at the big red booth, the Sonar booth in the expo hall, if you have any further questions or would like to talk about it. Thank you again.",
+			"zh": "如果还有问题或者想聊聊，欢迎到展厅的 Sonar 展台，就是那个红色的大展台。再次感谢大家。"
+		}
+	]
+}
