@@ -13,6 +13,9 @@
 /media/showcase/*
   Cache-Control: public, max-age=31536000, immutable
 
+/media/podcasts/*.mp3
+  Content-Type: audio/mpeg
+
 /auth/*
   Cache-Control: no-store
   Referrer-Policy: no-referrer
