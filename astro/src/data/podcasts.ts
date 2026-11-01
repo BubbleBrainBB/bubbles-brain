@@ -2,8 +2,9 @@
  * 播客: AI podcast episodes picked by hand. Each has a Chinese headline, a two-sentence lede, one
  * line quoted from the episode, and an outline: the show's own chapters with our takeaways under
  * the chapters they come from, each at the minute it is said.
- * The audio is the show's own file from its public RSS feed, played as podcast apps play it: never
- * copied here. Only free, public episodes; the text is our own summary, never the transcript, and
+ * The audio is the show's own file from its public RSS feed, played as podcast apps play it: not
+ * copied here, except a show with no feed, whose file sits under /media/podcasts/. Only free, public
+ * episodes; the text is our own summary, never the transcript, and
  * a quote is one short line.
  * An episode can also have a brief, 一图读懂: the question it answers and the few places that answer
  * turns on, then 听完你能回答: a few questions it answers beyond the brief.
@@ -17,8 +18,8 @@ export interface PodcastShow {
 	language: '英文' | '中文';
 	/** Square artwork from the show's feed. */
 	cover: string;
-	/** The show's podcast RSS: where episode facts and audio come from. */
-	feed: string;
+	/** The show's podcast RSS: where episode facts and audio come from. Some shows have none. */
+	feed?: string;
 	/** The show's own site, then where to subscribe. */
 	site: string;
 	links: { label: string; url: string }[];
@@ -47,7 +48,7 @@ export interface PodcastEpisode {
 	/** Length in whole seconds, from the feed. */
 	duration: number;
 	language: '英文' | '中文';
-	/** The show's own audio file (the feed's enclosure). */
+	/** The show's own audio file (the feed's enclosure), or our copy when it has no feed. */
 	audio: string;
 	/** The episode page on the show's site, with show notes and transcript. */
 	source: string;
@@ -134,6 +135,15 @@ export const podcastShows: PodcastShow[] = [
 		],
 	},
 	{
+		id: 'ai-engineer',
+		name: 'AI Engineer',
+		description: 'AI Engineer 大会的演讲和对话：一线团队怎么用 agent 写代码、做产品。',
+		language: '英文',
+		cover: '/media/podcasts/ai-engineer.jpg',
+		site: 'https://www.ai.engineer',
+		links: [{ label: 'YouTube', url: 'https://www.youtube.com/@aiDotEngineer' }],
+	},
+	{
 		id: 'forward-future',
 		name: 'Forward Future',
 		description: 'Matthew Berman 请一线的人坐下来聊：模型、硬件、工作，以及 AI 会把生活带去哪。',
@@ -149,6 +159,166 @@ export const podcastShows: PodcastShow[] = [
 ];
 
 export const podcastEpisodes: PodcastEpisode[] = [
+	{
+		id: 'ai-engineer-anthropic-30000-changes',
+		show: 'ai-engineer',
+		title: 'Anthropic 怎么一天合并 3 万次代码改动',
+		originalTitle:
+			'How Anthropic Merges 30,000 Code Changes a Day - Manish Kapur, Sonar & Addy Osmani, Anthropic',
+		date: '2026-10-28',
+		people: [
+			{ name: 'Addy Osmani', org: 'Anthropic' },
+			{ name: 'Manish Kapur', org: 'Sonar', role: '主持' },
+		],
+		duration: 1132,
+		language: '英文',
+		audio: '/media/podcasts/ai-engineer-anthropic-30000-changes.mp3',
+		source: 'https://www.youtube.com/watch?v=AnsXWH2_EBU',
+		sourceLabel: '节目视频',
+		lede: 'Anthropic 每天合并的代码改动，从 5 月的约 2500 次涨到了 3 万次，人已经不可能一行行看。Sonar 的 Manish Kapur 和 Anthropic 的 Addy Osmani 在 AI Engineer 大会上聊，这时候信心从哪来：让 Claude 先审，人查它拿出来的证据。',
+		quote: {
+			text: 'Fast to write is not fast to ship.',
+			translation: '写得快，不等于交付得快。',
+			by: 'Manish Kapur',
+			at: '18:00',
+		},
+		points: [
+			{
+				at: '02:05',
+				text: 'CircleCI 分析了 2800 万条 CI 工作流：吞吐量涨了约 59%，但每十次合并进生产的尝试有三次失败。',
+			},
+			{
+				at: '03:03',
+				text: '软件工厂分两种：亮灯工厂里人还在用判断和品味，熄灯工厂像机器人车间，人只管意图和最特殊的例外。',
+			},
+			{
+				at: '05:10',
+				text: 'Addy 说，想要好产出，就得给 agent 一个验证工作是否正确的办法；做到了，质量轻松提高两到三倍。',
+			},
+			{
+				at: '05:50',
+				text: 'Anthropic 每天合并的改动，从 5 月的约 2500 次涨到约 3 万次。',
+			},
+			{
+				at: '06:35',
+				text: 'Claude 先审第一遍，还要像真实用户那样试一遍：端到端测试、开浏览器、跑工具和 lint。',
+			},
+			{
+				at: '07:31',
+				text: '把团队认可的最佳实践和品味写进 CLAUDE.md、AGENTS.md，agent 审代码时才查得到。',
+			},
+			{
+				at: '07:52',
+				text: '人负责查 agent 拿出来的证据：比如它在浏览器里点来点去的视频，或者手机端和桌面端的截图。',
+			},
+			{
+				at: '09:53',
+				text: '光说「验证一下」不够。Anthropic 很依赖端到端测试、属性测试和视觉验证测试。',
+			},
+			{
+				at: '10:08',
+				text: 'Sonar 的调查里，今天有 5% 的公司在用软件工厂，之后会到 34%，金融服务业是 39%。',
+			},
+			{
+				at: '12:17',
+				text: 'Sonar 主张分三层验证：确定性检查抓 bug 和安全问题，agent 审逻辑和意图，第三层查供应链。Sonar 自己就做代码质量工具。',
+			},
+			{
+				at: '14:06',
+				text: '企业最担心的是控制、权限和沙箱：有的公司冒出几百上千个 agent，却不知道它们在干什么。',
+			},
+		],
+		chapters: [
+			{ at: '00:00', title: '开场' },
+			{ at: '01:57', title: '吞吐量上去了，合并却在失败' },
+			{ at: '02:49', title: '亮灯工厂和熄灯工厂' },
+			{ at: '03:51', title: '写代码解决了，信心没有' },
+			{ at: '05:38', title: 'Anthropic 怎么审每天 3 万次改动' },
+			{ at: '08:29', title: 'State of Code 调查结果' },
+			{ at: '09:20', title: '下一波收益从哪来' },
+			{ at: '11:38', title: '多层验证' },
+			{ at: '13:19', title: '控制、权限和沙箱' },
+			{ at: '14:41', title: '快问快答' },
+			{ at: '17:40', title: '要点总结' },
+		],
+		brief: {
+			question: '代码多到人看不过来，合并的信心从哪来？',
+			answer: '让 agent 拿出证据，人来查证据，每一圈循环都有独立的验证。',
+			reasons: [
+				{
+					at: '05:10',
+					head: '先给验证办法',
+					text: '想要好产出，得让 agent 能自己确认工作是正确、完整的。',
+				},
+				{
+					at: '06:35',
+					head: 'Claude 先审一遍',
+					text: '不只看 diff，还要像真实用户一样试：跑端到端测试、开浏览器，出问题由 hooks 接着改。',
+				},
+				{
+					at: '12:17',
+					head: '验证要分层',
+					text: 'Sonar 的做法是确定性检查、agent 审查和供应链安全各抓一类问题。',
+				},
+			],
+		},
+		questions: [
+			{
+				question: '到 2027 年底，大多数团队能用上熄灯工厂吗？',
+				answer:
+					'Addy 觉得不会全黑，而是亮灯工厂加上一些熄灯的角落。Manish 开玩笑说，Anthropic 今年或明年就能做到。',
+				at: '15:03',
+			},
+			{
+				question: 'agent 写的代码要不要在 PR 里标出来？',
+				answer:
+					'两人都说要。Manish 看重审计，Addy 说标了能判断要加哪些检查，但改动还是要标明负责人：出了问题，得那个人去修。',
+				at: '15:26',
+			},
+			{
+				question: '今年该练什么？',
+				answer:
+					'管理者要想清楚验证意味着什么，以及离放心让 agent 自己判定还差多少；初级开发者要多积累各种测试的经验。',
+				at: '16:51',
+			},
+		],
+		topics: [
+			{ at: '00:00', title: '开场' },
+			{ at: '01:57', title: '两种工厂' },
+			{ at: '03:51', title: '信心' },
+			{ at: '05:38', title: '怎么审代码' },
+			{ at: '08:29', title: '调查和下一步' },
+			{ at: '11:38', title: '验证和管控' },
+			{ at: '14:41', title: '快问快答' },
+		],
+		glossary: [
+			{
+				term: 'CI 工作流',
+				meaning: '代码提交后自动跑的一串构建和测试。CI 是持续集成的缩写。',
+			},
+			{
+				term: '软件工厂',
+				meaning: 'Addy 的说法：大规模地驾驭循环，让 agent 反复规划、构建、检查和发布代码。',
+			},
+			{
+				term: '熄灯工厂',
+				meaning:
+					'整条流程由 agent 自主运行，只有最特殊的例外才找人，就像关了灯也能开工的自动化车间。',
+			},
+			{
+				term: '端到端测试',
+				meaning: '从头到尾模拟真实用户走完一遍流程，而不是只测某一段代码。',
+			},
+			{
+				term: '属性测试',
+				meaning: '不写具体的例子，而是写一条永远该成立的规则，让程序生成大量输入去验证。',
+			},
+			{
+				term: '沙箱',
+				meaning: '把 agent 关在隔离的环境里运行，它就碰不到不该碰的系统和数据。',
+			},
+		],
+	},
 	{
 		id: 'forward-future-sam-altman',
 		show: 'forward-future',
@@ -514,7 +684,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
 		glossary: [
 			{
 				term: 'Dots',
-				meaning: 'OpenAI 放在 ChatGPT 里的个人助手。这期里大家觉得它藏得太深，合上笔记本也够不着本地的脚本。',
+				meaning:
+					'OpenAI 放在 ChatGPT 里的个人助手。这期里大家觉得它藏得太深，合上笔记本也够不着本地的脚本。',
 			},
 			{
 				term: 'Codex',

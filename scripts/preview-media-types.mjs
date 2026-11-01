@@ -3,6 +3,7 @@ const PREVIEW_MEDIA_TYPES = new Set([
   "application/json",
   "application/octet-stream",
   "application/xml",
+  "audio/mpeg",
   "font/ttf",
   "font/woff",
   "font/woff2",

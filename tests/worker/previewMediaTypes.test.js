@@ -20,6 +20,10 @@ describe("Preview media-type contract", () => {
     },
   );
 
+  it("accepts podcast audio", () => {
+    expect(expectedPreviewMediaType("audio/mpeg")).toBe("audio/mpeg");
+  });
+
   it("fails closed for an undeclared media type", () => {
     expect(expectedPreviewMediaType("application/x-unknown")).toBeUndefined();
   });

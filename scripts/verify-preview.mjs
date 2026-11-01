@@ -238,6 +238,7 @@ async function verifyRecord(record, failures) {
     if (
       [
         "application/octet-stream",
+        "audio/mpeg",
         "image/avif",
         "image/png",
         "image/vnd.microsoft.icon",

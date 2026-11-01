@@ -4,7 +4,7 @@
  * `data-podcast-at="878"` jumps there and plays; a `data-podcast-progress` line on the episode's page
  * shows how far in it is and seeks. The bar persists across in-site navigation, so
  * listening carries on page to page; each episode resumes where the reader left it.
- * The audio is the show's own file, streamed from the show's host: nothing loads until play.
+ * The audio is the show's own file, streamed from its host or our own /media/: nothing loads until play.
  */
 import { clock, type PlayerEpisode } from '../lib/podcasts';
 

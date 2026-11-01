@@ -1,6 +1,7 @@
 /** 播客文字稿: a turn per span of speech, timed to the show's own audio so the
  *  player can follow along. Transcripts are optional: an episode has one when
  *  `transcriptFor` finds it, and the episode page then links to it. */
+import anthropicChanges from '../data/transcripts/ai-engineer-anthropic-30000-changes.json';
 import altman from '../data/transcripts/forward-future-sam-altman.json';
 import highTaste from '../data/transcripts/latent-space-high-taste-testers.json';
 import grokBot from '../data/transcripts/how-i-ai-grok-bot-designers.json';
@@ -41,8 +42,9 @@ export interface Transcript {
 		/** asr-diarization: we transcribed the audio ourselves. show-transcript: the show
 		 *  published its own transcript, and we only timed it to the audio.
 		 *  caption-corrected: public auto-captions, compared and corrected by hand,
-		 *  without speaker names. */
-		type: 'asr-diarization' | 'show-transcript' | 'caption-corrected';
+		 *  without speaker names. caption-checked: public auto-captions, corrected against
+		 *  a transcription of the audio, with speakers named from what they say. */
+		type: 'asr-diarization' | 'show-transcript' | 'caption-corrected' | 'caption-checked';
 		/** The video the transcription was checked against, when there is one. */
 		video?: string;
 		note: string;
@@ -53,6 +55,7 @@ export interface Transcript {
 
 /** Every transcript the site has, keyed by the episode it belongs to. */
 const transcripts: Record<string, Transcript> = {
+	'ai-engineer-anthropic-30000-changes': anthropicChanges as Transcript,
 	'forward-future-sam-altman': altman as Transcript,
 	'latent-space-high-taste-testers': highTaste as Transcript,
 	'how-i-ai-grok-bot-designers': grokBot as Transcript,
