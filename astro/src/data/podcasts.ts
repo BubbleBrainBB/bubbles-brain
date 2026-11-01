@@ -172,7 +172,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
 		],
 		duration: 1132,
 		language: '英文',
-		audio: '/media/podcasts/ai-engineer-anthropic-30000-changes.mp3',
+		// ?v=2: the edge cache kept this URL's first response, typed octet-stream, across revalidation.
+		audio: '/media/podcasts/ai-engineer-anthropic-30000-changes.mp3?v=2',
 		source: 'https://www.youtube.com/watch?v=AnsXWH2_EBU',
 		sourceLabel: '节目视频',
 		lede: 'Anthropic 每天合并的代码改动，从 5 月的约 2500 次涨到了 3 万次，人已经不可能一行行看。Sonar 的 Manish Kapur 和 Anthropic 的 Addy Osmani 在 AI Engineer 大会上聊，这时候信心从哪来：让 Claude 先审，人查它拿出来的证据。',
