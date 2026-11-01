@@ -12,6 +12,7 @@ import aaSkTelecom from '../components/benchmark-icons/aa-sk-telecom.svg?url';
 import aaLongcat from '../components/benchmark-icons/aa-longcat.svg?url';
 import aaStepfun from '../components/benchmark-icons/aa-stepfun.svg?url';
 import aaLgAiResearch from '../components/benchmark-icons/aa-lg-ai-research.png?url';
+import aaReflection from '../components/benchmark-icons/aa-reflection.svg?url';
 import aaKwaikat from '../components/benchmark-icons/aa-kwaikat.svg?url';
 import aaOpenbmb from '../components/benchmark-icons/aa-openbmb.svg?url';
 import aaIbm from '../components/benchmark-icons/aa-ibm.svg?url';
@@ -60,6 +61,7 @@ export const benchmarkIcons: Readonly<Record<string, string>> = {
 	LongCat: aaLongcat,
 	StepFun: aaStepfun,
 	'LG AI Research': aaLgAiResearch,
+	Reflection: aaReflection,
 	KwaiKAT: aaKwaikat,
 	OpenBMB: aaOpenbmb,
 	IBM: aaIbm,
