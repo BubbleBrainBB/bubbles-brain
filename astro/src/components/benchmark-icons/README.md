@@ -25,6 +25,7 @@ GDPval-AA additions: existing family icons are reused for SpaceXAI (Grok), Kimi 
 - `aa-longcat.svg` — LongCat: `https://artificialanalysis.ai/img/logos/longcat_small.svg`
 - `aa-stepfun.svg` — StepFun: `https://artificialanalysis.ai/img/logos/stepfun_small.svg`
 - `aa-lg-ai-research.png` — LG AI Research: `https://artificialanalysis.ai/img/logos/lg_small.png`
+- `aa-reflection.svg` — Reflection: `https://artificialanalysis.ai/img/logos/reflection.svg`
 - `aa-kwaikat.svg` — KwaiKAT: `https://artificialanalysis.ai/img/logos/kwaikat_small.svg`
 - `aa-openbmb.svg` — OpenBMB: `https://artificialanalysis.ai/img/logos/openbmb_small.svg`
 - `aa-ibm.svg` — IBM: `https://artificialanalysis.ai/img/logos/ibm_small.svg`

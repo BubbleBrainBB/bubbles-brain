@@ -150,14 +150,14 @@ describe('benchmark ledger', () => {
 
 	it('preserves the full GDPval-AA v2.1 Elo scale, its anchor and explicit evaluation configurations', () => {
 		const rows = rankedScores('gdpval-aa');
-		expect(rows).toHaveLength(295);
+		expect(rows).toHaveLength(308);
 		expect(rows[0]).toMatchObject({
 			model: { name: 'Claude Opus 5.5 (Max, Default Fallback)' },
 			score: { value: 1866, ci: 26, agent: 'Stirrup' },
 		});
 		expect(rows.at(-1)).toMatchObject({
 			model: { name: 'K2 Horizon 0.9B' },
-			score: { value: -409, ci: 21 },
+			score: { value: -402, ci: 20 },
 		});
 		expect(rows.filter(({ score }) => score.value < 0)).toHaveLength(28);
 		const anchors = rows.filter(({ score }) => score.ci === undefined);
@@ -174,11 +174,33 @@ describe('benchmark ledger', () => {
 		const benchmark = benchmarkLedger.benchmarks.find((entry) => entry.id === 'gdpval-aa')!;
 		expect(benchmark).toMatchObject({
 			category: 'general',
-			checked_at: '2026-10-16',
+			checked_at: '2026-11-01',
 			url: 'https://artificialanalysis.ai/evaluations/gdpval-aa',
 			format: 'integer',
 			score_label: { zh: 'Elo 评分', en: 'Elo rating' },
 		});
+	});
+
+	it('keeps the Intelligence Index v5.0 snapshot at the 45 cut-off, in official order', () => {
+		const rows = rankedScores('aa-index');
+		expect(rows).toHaveLength(23);
+		expect(rows.slice(0, 4).map(({ model, score }) => [model.name, score.value])).toEqual([
+			['Gemini 4 Carbon (high)', 59],
+			['Claude Opus 5.5 (max)', 58],
+			['Claude Opus 5.5 (xhigh)', 57],
+			['GPT-6 Astra (max)', 57],
+		]);
+		expect(rows.at(-1)).toMatchObject({
+			model: { name: 'GPT-6.1 Terra (xhigh)' },
+			score: { value: 45 },
+		});
+		for (const { model, score } of rows) {
+			expect(score.value).toBeGreaterThanOrEqual(45);
+			expect(benchmarkIcons[model.creator]).toBeTruthy();
+		}
+		const benchmark = benchmarkLedger.benchmarks.find((entry) => entry.id === 'aa-index')!;
+		expect(benchmark.checked_at).toBe('2026-11-01');
+		expect(benchmark.name.en).toContain('v5.0');
 	});
 
 	it('allows signed integer Elo without allowing negative values on other benchmarks', async () => {
