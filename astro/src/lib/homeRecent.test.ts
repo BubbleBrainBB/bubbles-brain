@@ -28,13 +28,21 @@ describe('homeRecent', () => {
 		]);
 	});
 
-	it('lets no section take more than its share', () => {
-		const showcase = ['1', '2', '3', '4', '5'].map((n) =>
-			item('vibe-coding-showcase', n, `2026-10-2${n}`),
+	it('keeps only the newest piece of each section', () => {
+		const recent = homeRecent(
+			[
+				item('vibe-coding-showcase', 'older showcase', '2026-10-21'),
+				item('vibe-coding-showcase', 'newer showcase', '2026-10-25'),
+				item('codex-tutorials', 'older tutorial', '2026-10-10'),
+				item('newbie-tutorials', 'newer tutorial', '2026-10-12'),
+			],
+			[episode('older', '2026-10-21'), episode('newer', '2026-10-28')],
 		);
-		const recent = homeRecent([...showcase, item('highlights', 'old', '2026-09-01')], [], 8, 3);
-		expect(recent.filter((row) => row.label === 'Showcase')).toHaveLength(3);
-		expect(recent.at(-1)?.title).toBe('old');
+		expect(recent.map((row) => row.title)).toEqual([
+			'播客 newer',
+			'newer showcase',
+			'newer tutorial',
+		]);
 	});
 
 	it('leaves out undated pieces and quiet sections like terms', () => {
