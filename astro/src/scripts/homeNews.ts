@@ -80,7 +80,7 @@ function hotRow(item: NewsItem, now: Date): HTMLLIElement {
 	return li;
 }
 
-/** The day's newest AI 动态 heads 最近更新, and the list's last row steps aside for it. */
+/** The day's newest AI 动态 heads 最近更新. */
 function fillRecentNews(feed: NewsFeed) {
 	const slot = document.querySelector<HTMLElement>('[data-home-recent-news]');
 	const day = feed.days[0];
@@ -94,8 +94,6 @@ function fillRecentNews(feed: NewsFeed) {
 	title.textContent = item.title;
 	date.textContent = day.day.slice(5).replace('-', '.');
 	slot.hidden = false;
-	const spare = document.querySelector<HTMLElement>('[data-home-recent-spare]');
-	if (spare) spare.hidden = true;
 }
 
 let stop: AbortController | null = null;

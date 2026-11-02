@@ -13,9 +13,9 @@ const sections = siteSections('zh-CN');
 // Without JavaScript the first three show; the script picks a different three and types
 // another question into the box on every visit.
 const shown = 3;
-// Under the sections, the newest pieces across the site, so a first visit sees what is here and
-// that it is still being written. The day's first AI 动态 joins at the top in the browser and
-// the last row steps aside for it (scripts/homeNews.ts).
+// Under the sections, the newest piece of each, so a first visit sees what is here and that it
+// is still being written. The day's first AI 动态 joins at the top in the browser
+// (scripts/homeNews.ts).
 const index = await buildKnowledgeSearchIndex({ locale: 'zh-CN' });
 const recent = homeRecent(index.items, podcastEpisodes);
 ---
@@ -87,8 +87,8 @@ const recent = homeRecent(index.items, podcastEpisodes);
 				</a>
 			</li>
 			{
-				recent.map((row, index) => (
-					<li data-home-recent-spare={index === recent.length - 1 ? '' : undefined}>
+				recent.map((row) => (
+					<li>
 						<a
 							class="rr-contents__link"
 							href={row.href}

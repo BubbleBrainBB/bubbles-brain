@@ -26,12 +26,10 @@ const SECTION_LABELS: Partial<Record<KnowledgeSearchItem['section'], string>> = 
 
 const monthDay = (date: string) => date.slice(5, 10).replace('-', '.');
 
-/** The newest pieces across sections, newest first, with no section taking more than `perLabel`. */
+/** The newest piece of each section, newest first. */
 export function homeRecent(
 	items: readonly KnowledgeSearchItem[],
 	episodes: readonly PodcastEpisode[],
-	limit = 8,
-	perLabel = 2,
 ): HomeRecentItem[] {
 	const pieces = [
 		...items.flatMap((item) => {
@@ -47,12 +45,11 @@ export function homeRecent(
 		})),
 	].sort((a, b) => b.date.localeCompare(a.date));
 
-	const taken = new Map<string, number>();
+	const taken = new Set<string>();
 	const recent: HomeRecentItem[] = [];
 	for (const piece of pieces) {
-		const count = taken.get(piece.label) ?? 0;
-		if (count >= perLabel) continue;
-		taken.set(piece.label, count + 1);
+		if (taken.has(piece.label)) continue;
+		taken.add(piece.label);
 		recent.push({
 			href: piece.href,
 			title: piece.title,
@@ -60,7 +57,6 @@ export function homeRecent(
 			date: monthDay(piece.date),
 			external: piece.external,
 		});
-		if (recent.length === limit) break;
 	}
 	return recent;
 }

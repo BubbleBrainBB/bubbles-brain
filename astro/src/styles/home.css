@@ -568,6 +568,17 @@
 .home-recent li[hidden] {
 	display: none;
 }
+/* Every row stays on one line: a long title ends in an ellipsis rather than wrapping, and the
+   grids hold their width instead of growing to fit it. */
+.home-recent .rr-contents__list,
+.home-recent .rr-contents__link {
+	grid-template-columns: minmax(0, 1fr);
+}
+.home-recent .rr-contents__title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 @media (max-width: 640px) {
 	.home-recent {
 		margin-top: 56px;
