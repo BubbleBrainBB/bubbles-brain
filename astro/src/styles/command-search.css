@@ -246,6 +246,12 @@
 	text-transform: none;
 }
 
+/* Esc leaves focus back on the trigger; do not show the focus ring for that
+   restored focus. Normal Tab navigation keeps the outline. */
+[data-search-return-focus]:focus-visible {
+	outline: none;
+}
+
 @media (max-width: 680px) {
 	.command-search-dialog {
 		width: calc(100% - 20px);
