@@ -286,7 +286,18 @@ function initCommandSearch(): void {
 		'close',
 		() => {
 			activeIndex = -1;
-			restoreFocus?.focus();
+			const target = restoreFocus;
+			if (!target) return;
+			// Closing with Esc makes the browser treat the restored focus as
+			// :focus-visible, leaving the heavy outline on the trigger. Mark the
+			// return focus so CSS can suppress only that ring; Tab focus stays visible.
+			target.setAttribute('data-search-return-focus', '');
+			target.focus();
+			target.addEventListener(
+				'blur',
+				() => target.removeAttribute('data-search-return-focus'),
+				{ once: true, signal },
+			);
 		},
 		{ signal },
 	);
