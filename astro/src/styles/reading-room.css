@@ -51,41 +51,6 @@
 	color: var(--ink-soft);
 }
 
-/* The in-page search: the same rounded box as the home page, a size smaller. */
-.rr-search {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	width: min(480px, 100%);
-	height: 46px;
-	box-sizing: border-box;
-	margin-top: 18px;
-	padding: 0 20px;
-	border-radius: 999px;
-	box-shadow: var(--lift);
-	color: var(--ink-faint);
-	font-size: 15px;
-	text-align: left;
-	transition: box-shadow 0.15s ease;
-}
-.rr-search:focus-within {
-	box-shadow:
-		0 0 0 1.5px var(--ink),
-		0 6px 24px rgb(0 0 0 / 0.06);
-}
-.rr-search input {
-	flex-grow: 1;
-	min-width: 0;
-	border: 0;
-	background: none;
-	font: inherit;
-	color: var(--ink);
-	outline: none;
-}
-.rr-search input::placeholder {
-	color: var(--ink-faint);
-}
-
 /* Filters are plain words; the chosen one turns black and bold. */
 .rr-filters {
 	display: flex;
@@ -382,7 +347,7 @@
 }
 
 /* The browser's own clear button, in grey instead of its default blue. */
-:is(.rr-search, .home-search) input::-webkit-search-cancel-button {
+.home-search input::-webkit-search-cancel-button {
 	filter: grayscale(1);
 	cursor: pointer;
 }
