@@ -262,7 +262,7 @@
 	text-wrap: balance;
 }
 
-/* Filters sit centred under the Benchmarks tabs: the search box, the task types as plain words,
+/* Filters sit centred under the Benchmarks tabs: the task types as plain words,
    then the model, year and sort menus in one quiet line. No bar, no rule. */
 .eval-toolbar {
 	display: flex;
@@ -273,9 +273,6 @@
 }
 .eval-toolbar[hidden] {
 	display: none;
-}
-.eval-toolbar .eval-search {
-	margin-top: 0;
 }
 .eval-toolbar .eval-types {
 	margin-top: 0;
